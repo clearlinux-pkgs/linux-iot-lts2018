@@ -3,12 +3,14 @@
 #  This kernel is an "enterprise style" kernel with a significant list of
 #  backported features
 #
-# There are two subpackages "sos" and "standard"
+# This package has a main package "standard" and a subpackage "sos"
+#
+# The "standard"  kernel  (the main package) is meant for running on
+#  bare metal systems as well as running as a "normal" guest in
+#  various hypervisors. This
 #
 # The "sos" kernel is specifically meant to run as DOM0 in an
 #  ACRN hypervisor setup.
-# The "standard"  kernel is meant for running on bare metal systems as well
-#  as running as a "normal" guest in various hypervisors
 #
 
 Name:           linux-iot-lts2018
@@ -19,35 +21,22 @@ Summary:        The Linux kernel
 Url:            http://www.kernel.org/
 Group:          kernel
 Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.14.73.tar.xz
-Source1:        config-iot-lts2018-sos
-Source2:        config-iot-lts2018-standard
-Source3:        cmdline-iot-lts2018-sos
-Source4:        cmdline-iot-lts2018-standard
+Source1:        config-iot-lts2018
+Source2:        config-iot-lts2018-sos
+Source3:        cmdline-iot-lts2018
+Source4:        cmdline-iot-lts2018-sos
 
 # kernel-lts-quilt: lts-v4.14.73-base-181002T012100Z
 # kernel-config: lts-v4.14.73-base-181002T012100Z
 
-%define ktarget0 iot-lts2018-sos
+%define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
-%define ktarget1 iot-lts2018-standard
+%define ktarget1 iot-lts2018-sos
 %define kversion1 %{version}-%{release}.%{ktarget1}
 
-BuildRequires:  bash >= 2.03
-BuildRequires:  bc
-BuildRequires:  binutils-dev
-BuildRequires:  elfutils-dev
-BuildRequires:  kernel-config
-BuildRequires:  make >= 3.78
-BuildRequires:  openssl-dev
-BuildRequires:  flex
-BuildRequires:  bison
-BuildRequires:  kmod
-BuildRequires:  linux-firmware
-BuildRequires:  lz4
+BuildRequires:  buildreq-kernel
 
 Requires: systemd-bin
-Requires: linux-iot-lts2018-sos
-Requires: linux-iot-lts2018-standard
 
 # don't strip .ko files!
 %global __os_install_post %{nil}
@@ -63,7 +52,7 @@ Requires: linux-iot-lts2018-standard
 # needs to add to PK series
 
 %description
-The Linux kernel.
+The Linux IOT LTS2018 kernel.
 
 %package sos
 License:        GPL-2.0
@@ -72,14 +61,6 @@ Group:          kernel
 
 %description sos
 The Linux kernel for Service OS
-
-%package standard
-License:        GPL-2.0
-Summary:        The Linux kernel for Linux as a Guest
-Group:          kernel
-
-%description standard
-The Linux kernel for Linux as a Guest
 
 %package extra
 License:        GPL-2.0
@@ -160,11 +141,6 @@ rm -rf %{buildroot}/usr/lib/firmware
 %files
 %dir /usr/lib/kernel
 %dir /usr/lib/modules/%{kversion0}
-%dir /usr/lib/modules/%{kversion1}
-
-%files sos
-%dir /usr/lib/kernel
-%dir /usr/lib/modules/%{kversion0}
 /usr/lib/kernel/config-%{kversion0}
 /usr/lib/kernel/cmdline-%{kversion0}
 /usr/lib/kernel/org.clearlinux.%{ktarget0}.%{version}-%{release}
@@ -172,7 +148,7 @@ rm -rf %{buildroot}/usr/lib/firmware
 /usr/lib/modules/%{kversion0}/kernel
 /usr/lib/modules/%{kversion0}/modules.*
 
-%files standard
+%files sos
 %dir /usr/lib/kernel
 %dir /usr/lib/modules/%{kversion1}
 /usr/lib/kernel/config-%{kversion1}
