@@ -20,7 +20,7 @@ License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://git.kernel.org/torvalds/t/linux-4.19-rc5.tar.gz
+Source0:        https://git.kernel.org/torvalds/t/linux-4.19-rc6.tar.gz
 Source1:        config-iot-lts2018
 Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
@@ -71,7 +71,7 @@ Group:          kernel
 Linux kernel extra files
 
 %prep
-%setup -q -n linux-4.19-rc5
+%setup -q -n linux-4.19-rc6
 
 #patchXXXX PK Series
 # End XXXX PK Series
