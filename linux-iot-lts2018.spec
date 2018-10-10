@@ -26,8 +26,8 @@ Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
 Source4:        cmdline-iot-lts2018-sos
 
-# kernel-lts-quilt: lts-v4.14.73-base-181002T012100Z
-# kernel-config: lts-v4.14.73-base-181002T012100Z
+# kernel-lts-quilt: a1de559d06d4a1856c936d996a32de5721716fe6
+# kernel-config: mainline-tracking-v4.19-rc6-181002T220531Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
