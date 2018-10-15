@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.0-rc6 Kernel Configuration
+# Linux/x86 4.19.0-rc7 Kernel Configuration
 #
 
 #
@@ -1682,6 +1682,7 @@ CONFIG_EEPROM_93CX6=m
 CONFIG_INTEL_MEI=m
 CONFIG_INTEL_MEI_ME=m
 CONFIG_INTEL_MEI_TXE=m
+# CONFIG_INTEL_MEI_SPD is not set
 # CONFIG_VMWARE_VMCI is not set
 
 #
@@ -2638,6 +2639,10 @@ CONFIG_TCG_INFINEON=m
 # CONFIG_TELCLOCK is not set
 CONFIG_DEVPORT=y
 # CONFIG_XILLYBUS is not set
+CONFIG_RPMB=y
+# CONFIG_RPMB_INTF_DEV is not set
+# CONFIG_RPMB_SIM is not set
+# CONFIG_VIRTIO_RPMB is not set
 # CONFIG_RANDOM_TRUST_CPU is not set
 
 #
@@ -4007,6 +4012,7 @@ CONFIG_SND_SOC_I2C_AND_SPI=y
 # CONFIG_SND_SOC_CS35L34 is not set
 # CONFIG_SND_SOC_CS35L35 is not set
 # CONFIG_SND_SOC_CS42L42 is not set
+# CONFIG_SND_SOC_SVFPGA_I2C is not set
 # CONFIG_SND_SOC_CS42L51_I2C is not set
 # CONFIG_SND_SOC_CS42L52 is not set
 # CONFIG_SND_SOC_CS42L56 is not set
@@ -5447,6 +5453,7 @@ CONFIG_STM_SOURCE_CONSOLE=y
 # CONFIG_INTEL_TH is not set
 # CONFIG_FPGA is not set
 CONFIG_PM_OPP=y
+# CONFIG_SDW is not set
 # CONFIG_UNISYS_VISORBUS is not set
 # CONFIG_SIOX is not set
 # CONFIG_SLIMBUS is not set
