@@ -20,13 +20,13 @@ License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://git.kernel.org/torvalds/t/linux-4.19-rc6.tar.gz
+Source0:        https://git.kernel.org/torvalds/t/linux-4.19-rc7.tar.gz
 Source1:        config-iot-lts2018
 Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
 Source4:        cmdline-iot-lts2018-sos
 
-# kernel-lts-quilt: a1de559d06d4a1856c936d996a32de5721716fe6
+# kernel-lts-quilt: mainline-tracking-v4.19-rc7-181012T051938Z
 # kernel-config: mainline-tracking-v4.19-rc6-181002T220531Z
 
 %define ktarget0 iot-lts2018
