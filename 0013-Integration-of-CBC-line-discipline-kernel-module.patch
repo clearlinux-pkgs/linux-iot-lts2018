@@ -1,7 +1,7 @@
-From 8979ee435a1a24673b0983d7ab2e6184da6c0f34 Mon Sep 17 00:00:00 2001
+From ffdf78cf3f65169e27ac78022f9e634d3ce75f6e Mon Sep 17 00:00:00 2001
 From: "G Jaya Kumaran, Vineetha" <vineetha.g.jaya.kumaran@intel.com>
 Date: Thu, 24 May 2018 18:45:28 +0800
-Subject: [PATCH 013/204] Integration of CBC line discipline kernel module
+Subject: [PATCH 013/546] Integration of CBC line discipline kernel module
 
 This patch enables the Carrier Board Communication (CBC)
 kernel module, which is implemented as a Linux kernel line

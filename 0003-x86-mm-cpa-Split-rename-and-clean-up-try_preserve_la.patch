@@ -1,7 +1,7 @@
-From b04884a5ab7a973ff8d25dfdb55d5496abfcb9f9 Mon Sep 17 00:00:00 2001
+From 87fc8b42e5e62780184df23e3f4c79c73926d0ad Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:08 +0200
-Subject: [PATCH 003/204] x86/mm/cpa: Split, rename and clean up
+Subject: [PATCH 003/546] x86/mm/cpa: Split, rename and clean up
  try_preserve_large_page()
 
 Avoid the extra variable and gotos by splitting the function into the

@@ -1,7 +1,7 @@
-From 77df5a36f46f50d934b2ca70caa515281f04dd0b Mon Sep 17 00:00:00 2001
+From 738ebe8b5c1e849b84f3a168f23eeb66447563e2 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:14 +0200
-Subject: [PATCH 009/204] x86/mm/cpa: Add sanity check for existing mappings
+Subject: [PATCH 009/546] x86/mm/cpa: Add sanity check for existing mappings
 
 With the range check it is possible to do a quick verification that the
 current mapping is correct vs. the static protection areas.
