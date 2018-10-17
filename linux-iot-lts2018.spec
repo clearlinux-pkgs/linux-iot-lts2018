@@ -592,7 +592,6 @@ Patch0544: 0544-drm-i915-Add-cp_downstream-property.patch
 Patch0545: 0545-REVERTME-IOTG-drm-i915-Add-GuC-v9.29-and-HuC-v1.07-f.patch
 Patch0546: 0546-test-configs-use-for-clean-and-android-bare-metal-BA.patch
 #END XXXX: PK Series
-Patch1059: 1059-serial-8250_port-properly-handle-runtime-PM-in-IRQ.patch
 
 # SEP and SoCWatch Series
 
@@ -1169,7 +1168,6 @@ Linux kernel extra files
 %patch0545 -p1
 %patch0546 -p1
 # End XXXX PK Series
-%patch1059 -p1
 
 # SEP and SoCWatch Series
 
