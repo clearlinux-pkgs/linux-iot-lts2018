@@ -1,7 +1,7 @@
-From 0487a06d2bcb40d52d89747c1b92d57e9438911e Mon Sep 17 00:00:00 2001
+From bfb618bfb8ff7cd86767ce1920b5642593a669d6 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:16 +0200
-Subject: [PATCH 011/551] x86/mm/cpa: Do the range check early
+Subject: [PATCH 011/550] x86/mm/cpa: Do the range check early
 
 To avoid excessive 4k wise checks in the common case do a quick check first
 whether the requested new page protections conflict with a static
