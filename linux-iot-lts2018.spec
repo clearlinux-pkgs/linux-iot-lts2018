@@ -15,20 +15,20 @@
 
 Name:           linux-iot-lts2018
 Version:        4.19.0
-Release:        9
+Release:        10
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://git.kernel.org/torvalds/t/linux-4.19-rc7.tar.gz
+Source0:        https://git.kernel.org/torvalds/t/linux-4.19-rc8.tar.gz
 Source1:        config-iot-lts2018
 Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
 Source4:        cmdline-iot-lts2018-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
-# quilt:  mainline-tracking-v4.19-rc7-181012T051938Z
-# config: mainline-tracking-v4.19-rc7-181012T051938Z
+# quilt:  mainline-tracking-v4.19-rc8-181017T004044Z
+# config: mainline-tracking-v4.19-rc8-181017T004044Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -623,7 +623,7 @@ Group:          kernel
 Linux kernel extra files
 
 %prep
-%setup -q -n linux-4.19-rc7
+%setup -q -n linux-4.19-rc8
 
 #patchXXXX PK Series
 %patch0001 -p1
