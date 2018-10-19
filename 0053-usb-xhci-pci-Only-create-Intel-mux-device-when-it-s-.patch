@@ -1,7 +1,7 @@
-From 9dace6196569947859c7bb2c8a3a506b77be0ca6 Mon Sep 17 00:00:00 2001
+From ba90f0905ada02a33c8ce557ba788531badd8b11 Mon Sep 17 00:00:00 2001
 From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
 Date: Wed, 4 Apr 2018 17:15:09 +0300
-Subject: [PATCH 053/546] usb: xhci: pci: Only create Intel mux device when
+Subject: [PATCH 053/551] usb: xhci: pci: Only create Intel mux device when
  it's needed
 
 Only create Intel role mux device if the platform has USB

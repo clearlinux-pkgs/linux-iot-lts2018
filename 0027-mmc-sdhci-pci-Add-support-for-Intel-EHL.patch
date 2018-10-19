@@ -1,7 +1,7 @@
-From 56c6aba1a45c17c18352a414bd4831507a6b77a7 Mon Sep 17 00:00:00 2001
+From 6d4c471a82c008cebd15f56e55addf1d81c3802d Mon Sep 17 00:00:00 2001
 From: Adrian Hunter <adrian.hunter@intel.com>
 Date: Mon, 13 Mar 2017 15:30:25 +0200
-Subject: [PATCH 027/546] mmc: sdhci-pci: Add support for Intel EHL
+Subject: [PATCH 027/551] mmc: sdhci-pci: Add support for Intel EHL
 
 Add PCI Ids for Intel EHL.
 

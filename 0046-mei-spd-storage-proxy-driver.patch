@@ -1,7 +1,7 @@
-From da8b72372eea25ae73d11c756d8f8356302ad2b0 Mon Sep 17 00:00:00 2001
+From e07fb3e4426f429c12cc2c5194dac70da28e3157 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Tue, 23 Dec 2014 17:18:37 +0200
-Subject: [PATCH 046/546] mei: spd: storage proxy driver
+Subject: [PATCH 046/551] mei: spd: storage proxy driver
 
 Host storage proxy driver enables ME FW to store its data on a storage
 devices such as eMMC or UFS via host interface on a dedicated partition.

@@ -1,7 +1,7 @@
-From 2a72b5666667dc9d29fe5c2c2d2920c0e8408d8f Mon Sep 17 00:00:00 2001
+From 6cfc16cb93f49cee2ea26b49f80247bfebd7c95a Mon Sep 17 00:00:00 2001
 From: Adrian Hunter <adrian.hunter@intel.com>
 Date: Tue, 28 Apr 2015 15:35:50 +0300
-Subject: [PATCH 017/546] brcmfmac: Prevent re-tuning conflicting with
+Subject: [PATCH 017/551] brcmfmac: Prevent re-tuning conflicting with
  'wake-up'
 
 If the device is in a custom sleep state, then re-tuning

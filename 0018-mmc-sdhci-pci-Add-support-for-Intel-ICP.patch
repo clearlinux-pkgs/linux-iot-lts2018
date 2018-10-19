@@ -1,7 +1,7 @@
-From 4a76155148aa21b1519aeb9859c189ddd4a8ecfc Mon Sep 17 00:00:00 2001
+From e718b2020ac12aa3fd064747aba381a32c1aafa3 Mon Sep 17 00:00:00 2001
 From: Adrian Hunter <adrian.hunter@intel.com>
 Date: Mon, 13 Mar 2017 15:30:25 +0200
-Subject: [PATCH 018/546] mmc: sdhci-pci: Add support for Intel ICP
+Subject: [PATCH 018/551] mmc: sdhci-pci: Add support for Intel ICP
 
 Add PCI Ids for Intel ICP.
 

@@ -1,7 +1,7 @@
-From 3f05f6120c4aadd69fa69c2498f69fe7f7f34898 Mon Sep 17 00:00:00 2001
+From 050885b47ef3f6ca0f9683b5c0cd3492757a9c27 Mon Sep 17 00:00:00 2001
 From: "Gross, Mark" <mark.gross@intel.com>
 Date: Fri, 14 Sep 2018 13:33:54 -0700
-Subject: [PATCH 050/546] fix some likely copy paste errors with some if blocks
+Subject: [PATCH 050/551] fix some likely copy paste errors with some if blocks
 
 gcc 7.3 flagged some iffy if statements with python indentation needing
 some brackets.  this patch adds them.

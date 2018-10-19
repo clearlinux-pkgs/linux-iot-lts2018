@@ -1,7 +1,7 @@
-From e77a6117408a3e20c60decaa4a31facebd6ead85 Mon Sep 17 00:00:00 2001
+From 11c071fe6a6a113398da397f7bb7a26b50054795 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:10 +0200
-Subject: [PATCH 005/546] x86/mm/cpa: Allow range check for static protections
+Subject: [PATCH 005/551] x86/mm/cpa: Allow range check for static protections
 
 Checking static protections only page by page is slow especially for huge
 pages. To allow quick checks over a complete range, add the ability to do

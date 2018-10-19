@@ -1,7 +1,7 @@
-From dac186c08be1a3f5e7d1334fef33d638f088dca2 Mon Sep 17 00:00:00 2001
+From fa858815f4eac2a850ea6a72643d3f011afa54fe Mon Sep 17 00:00:00 2001
 From: Adrian Hunter <adrian.hunter@intel.com>
 Date: Mon, 6 Nov 2017 11:01:30 +0200
-Subject: [PATCH 022/546] scsi: ufshdc-pci: Add yet more Intel PCI Ids
+Subject: [PATCH 022/551] scsi: ufshdc-pci: Add yet more Intel PCI Ids
 
 Add more Intel PCI Ids.
 

@@ -1,7 +1,7 @@
-From 6af1d380cd265a5901b44c981ebdb250ab4af239 Mon Sep 17 00:00:00 2001
+From ddbbe26045f60b1ce4c1dcce7abd7db3f8d0630d Mon Sep 17 00:00:00 2001
 From: Adrian Hunter <adrian.hunter@intel.com>
 Date: Tue, 14 Nov 2017 11:50:53 +0200
-Subject: [PATCH 021/546] HACK: mmc: sdhci-pci: Disable DCMD for CNP
+Subject: [PATCH 021/551] HACK: mmc: sdhci-pci: Disable DCMD for CNP
 
 DCMD will be fixed in PCH C0 refer HSD 1604306740
 

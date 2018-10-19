@@ -1,7 +1,7 @@
-From 19103f0c9e0b7b3efd5caff3842f3916750ae098 Mon Sep 17 00:00:00 2001
+From 28e4150244aecf243fa9dc8fe669cb6a70f0fbc8 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 1 Feb 2015 10:17:24 +0200
-Subject: [PATCH 029/546] rpmb: add Replay Protected Memory Block (RPMB)
+Subject: [PATCH 029/551] rpmb: add Replay Protected Memory Block (RPMB)
  subsystem
 
 Few storage technologies such is EMMC, UFS, and NVMe support RPMB
@@ -65,10 +65,10 @@ Tested-by: Avri Altman <avri.altman@sandisk.com>
  create mode 100644 include/linux/rpmb.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 48a65c3a4189..392cc9ba380d 100644
+index 6ac000cc006d..23918c8d72c8 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -12513,6 +12513,13 @@ F:	include/net/rose.h
+@@ -12514,6 +12514,13 @@ F:	include/net/rose.h
  F:	include/uapi/linux/rose.h
  F:	net/rose/
  

@@ -1,7 +1,7 @@
-From 28cb465ded85f6772f2100c19601cf9e31449dd5 Mon Sep 17 00:00:00 2001
+From f6b98cae24575b03981236db9030b5d67178fc25 Mon Sep 17 00:00:00 2001
 From: Adrian Hunter <adrian.hunter@intel.com>
 Date: Tue, 23 May 2017 10:40:09 +0300
-Subject: [PATCH 024/546] DEBUG: ufs: set bRefClkFreq to zero
+Subject: [PATCH 024/551] DEBUG: ufs: set bRefClkFreq to zero
 
 Signed-off-by: Adrian Hunter <adrian.hunter@intel.com>
 ---

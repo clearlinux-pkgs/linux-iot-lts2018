@@ -1,7 +1,7 @@
-From 758e03f22a6342c2d8d5c7a0cb78fdc46d80c4a1 Mon Sep 17 00:00:00 2001
+From d095c2ad37fd80506f4415d2399f622b7dd327f7 Mon Sep 17 00:00:00 2001
 From: Szymon Mielczarek <szymonx.mielczarek@intel.com>
 Date: Thu, 25 May 2017 11:29:04 +0200
-Subject: [PATCH 020/546] HACK: scsi: ufshc-intel-pci: Force Data Rate A for HS
+Subject: [PATCH 020/551] HACK: scsi: ufshc-intel-pci: Force Data Rate A for HS
  mode for CNP
 
 The M-PHY layer protocol defines two Data Rate series (A and B) of

@@ -1,7 +1,7 @@
-From 370d5e7a8804133a6ee81a6185d94d8e4f8f8d09 Mon Sep 17 00:00:00 2001
+From 8061b909e817e28dfa16aaee0fab0c69d1d529f3 Mon Sep 17 00:00:00 2001
 From: Kuppuswamy Sathyanarayanan <sathyanarayanan.kuppuswamy@linux.intel.com>
 Date: Wed, 10 Oct 2018 14:08:56 -0700
-Subject: [PATCH 057/546] usb: dwc3: Fix NULL pointer exception in
+Subject: [PATCH 057/551] usb: dwc3: Fix NULL pointer exception in
  dwc3_pci_remove()
 
 In dwc3_pci_quirks() function, gpiod lookup table is only registered for
