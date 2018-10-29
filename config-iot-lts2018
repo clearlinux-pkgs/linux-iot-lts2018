@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.0-rc8 Kernel Configuration
+# Linux/x86 4.19.0 Kernel Configuration
 #
 
 #
@@ -2865,6 +2865,7 @@ CONFIG_RPMB=y
 CONFIG_RPMB_INTF_DEV=y
 CONFIG_RPMB_SIM=m
 # CONFIG_VIRTIO_RPMB is not set
+CONFIG_RPMB_MUX=y
 # CONFIG_RANDOM_TRUST_CPU is not set
 
 #
