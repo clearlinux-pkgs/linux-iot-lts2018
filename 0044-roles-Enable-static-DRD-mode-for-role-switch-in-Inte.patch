@@ -1,7 +1,7 @@
-From 29bd9292fd465ab44eee2d48373db1c84cbeeafb Mon Sep 17 00:00:00 2001
+From 8f3426df373986fd4cdfd9fae35dbad692faf2cb Mon Sep 17 00:00:00 2001
 From: Saranya Gopal <saranya.gopal@intel.com>
 Date: Fri, 5 Oct 2018 15:20:15 +0530
-Subject: [PATCH 044/550] roles: Enable static DRD mode for role switch in
+Subject: [PATCH 044/559] roles: Enable static DRD mode for role switch in
  Intel platforms
 
 Enable static DRD mode in Intel platforms which guarantees
@@ -20,7 +20,7 @@ Signed-off-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
  1 file changed, 25 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/usb/roles/intel-xhci-usb-role-switch.c b/drivers/usb/roles/intel-xhci-usb-role-switch.c
-index 1fb3dd0f1dfa..8d9a5c2a45e9 100644
+index 277de96181f9..f9ed262c15b3 100644
 --- a/drivers/usb/roles/intel-xhci-usb-role-switch.c
 +++ b/drivers/usb/roles/intel-xhci-usb-role-switch.c
 @@ -19,6 +19,7 @@

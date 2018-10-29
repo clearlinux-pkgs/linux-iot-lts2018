@@ -1,7 +1,7 @@
-From f8ba137805060caeadd9d82650a1909fb626ffc3 Mon Sep 17 00:00:00 2001
+From bf161f511f4f1b73d7967f3e53768af10f166c17 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 7 Aug 2016 11:27:08 +0300
-Subject: [PATCH 017/550] rpmb: enable emmc specific read data fixup
+Subject: [PATCH 017/559] rpmb: enable emmc specific read data fixup
 
 For eMMC the block count of the RPMB read operation is not indicated in
 the original RPMB Data Read Request packet.

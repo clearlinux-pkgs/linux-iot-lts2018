@@ -1,7 +1,7 @@
-From 98188ff2fe1c85cfd83645db1f64df852720636d Mon Sep 17 00:00:00 2001
+From b6f00b1a4e3b0a67c4124aa5c2a10e9ec9892cde Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Tue, 29 Mar 2016 16:14:01 +0300
-Subject: [PATCH 032/550] block: export block_class to be used by class
+Subject: [PATCH 032/559] block: export block_class to be used by class
  interfaces
 
 Enable access to block devices via class_interface outside

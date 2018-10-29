@@ -1,7 +1,7 @@
-From a5c64ccd817012dc608dd7fd30217d31be6d1547 Mon Sep 17 00:00:00 2001
+From bc9771825fa9b0a5d894ed783f666f82d4dc9d23 Mon Sep 17 00:00:00 2001
 From: Lucas Rangit Magasweran <lucas.magasweran@ieee.org>
 Date: Sat, 14 Jul 2018 15:38:29 -0700
-Subject: [PATCH 046/550] ACPI: battery: use cache_time as cache "enabled"
+Subject: [PATCH 046/559] ACPI: battery: use cache_time as cache "enabled"
 
 When battery state is not cached the module parameter cache_time is 0
 and battery->update_time starts at 0. However, it set to jiffies in

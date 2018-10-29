@@ -1,14 +1,14 @@
-From 7c4072e101d2340910ec0479a2eb00d4cef50ab8 Mon Sep 17 00:00:00 2001
+From 4e6926619656dd8c3c30adeda9a74fca86a82101 Mon Sep 17 00:00:00 2001
 From: "G Jaya Kumaran, Vineetha" <vineetha.g.jaya.kumaran@intel.com>
 Date: Fri, 25 May 2018 14:24:11 +0800
-Subject: [PATCH 014/550] cbc: Avoid rx sequence counter mismatch warnings
+Subject: [PATCH 014/559] cbc: Avoid rx sequence counter mismatch warnings
 
 The receive sequence counter should only be incremented
 if the checksum passes, to avoid unnecessary spawning
 of receive sequence mismatch warnings.
 
 Change-Id: I8a595dd9365693e257e6f621c4ef26f0834488b9
-Signed-off-by: G Jaya Kumaran, Vineetha <vineetha.g.jaya.kumaran@intel.com>
+Signed-off-by: G Jaya Kumaran, Vineetha
 ---
  drivers/tty/cbc/cbc_link_layer.c | 30 ++++++++++++++----------------
  1 file changed, 14 insertions(+), 16 deletions(-)
