@@ -1,10 +1,9 @@
-From 60d947d8261fc8ed8963b94a5831569f4080ed1b Mon Sep 17 00:00:00 2001
+From c310edc5fc99d74f64a40cb261b41434fa924f66 Mon Sep 17 00:00:00 2001
 From: Yi Yao <yi.yao@intel.com>
 Date: Sat, 20 Oct 2018 15:05:11 +0800
-Subject: [PATCH 048/559] Turbo CPU freq before kernel decompress
+Subject: [PATCH 048/593] Turbo CPU freq before kernel decompress
 
 Change-Id: I7563991f8884f0b8795cb72c24abf3c1f34140a9
-Tracked-On:
 Signed-off-by: Yi Yao <yi.yao@intel.com>
 ---
  arch/x86/boot/compressed/misc.c | 64 +++++++++++++++++++++++++++++++++

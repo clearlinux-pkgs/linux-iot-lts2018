@@ -1,7 +1,7 @@
-From 9918526822603392bf09a0d904f8189275870ad7 Mon Sep 17 00:00:00 2001
+From 6882f4a7aefde5c0d5feb688e4660ef5b464cb81 Mon Sep 17 00:00:00 2001
 From: "Huang, Yang" <yang.huang@intel.com>
 Date: Tue, 24 Jul 2018 13:52:54 +0800
-Subject: [PATCH 035/559] rpmb: add rpmb multiplexor kernel module
+Subject: [PATCH 035/593] rpmb: add rpmb multiplexor kernel module
 
 This module owns RPMB authentication key in ACRN SOS kernel.
 It receives the requests from SOS/DM and replaces with real

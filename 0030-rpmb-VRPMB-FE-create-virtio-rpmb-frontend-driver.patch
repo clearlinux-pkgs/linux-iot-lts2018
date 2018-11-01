@@ -1,7 +1,7 @@
-From 9b7db95dbd3590e2ffc3326b5fc8e952dd892a52 Mon Sep 17 00:00:00 2001
+From 2797ac83e51d318b75d1006eaabd286ac4c102dd Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Thu, 24 May 2018 14:57:02 +0300
-Subject: [PATCH 030/559] rpmb: VRPMB-FE create virtio rpmb frontend driver
+Subject: [PATCH 030/593] rpmb: VRPMB-FE create virtio rpmb frontend driver
 
 This patch implements virtio rpmb frontend driver.
 The driver will work with RPMB VBS-U together to

@@ -1,7 +1,7 @@
-From 0bba4b06ea0cba7733da25721635cb5318f8de0d Mon Sep 17 00:00:00 2001
+From 996e79f9390da79a2ca881a2ea03d960cdea8a52 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 13 Mar 2016 13:36:52 +0200
-Subject: [PATCH 018/559] rpmb: add sysfs-class ABI documentation
+Subject: [PATCH 018/593] rpmb: add sysfs-class ABI documentation
 
 V2: resend
 V3: add more verbose description

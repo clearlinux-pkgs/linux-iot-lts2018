@@ -1,7 +1,7 @@
-From f64d81c801945d42223195ac4fb68ebcbc6d5ec9 Mon Sep 17 00:00:00 2001
+From b3102dd1f1ffce1b7b28166f781acbe86fc8e03e Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 1 Feb 2015 10:17:24 +0200
-Subject: [PATCH 016/559] rpmb: add Replay Protected Memory Block (RPMB)
+Subject: [PATCH 016/593] rpmb: add Replay Protected Memory Block (RPMB)
  subsystem
 
 Few storage technologies such is EMMC, UFS, and NVMe support RPMB

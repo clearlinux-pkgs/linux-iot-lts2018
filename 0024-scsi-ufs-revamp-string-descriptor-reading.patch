@@ -1,7 +1,7 @@
-From 7aa55a517c7a915d704569898d61681eecd28e41 Mon Sep 17 00:00:00 2001
+From a5ca58435995514ad96894104b456c63a163b1af Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 4 Jan 2017 14:14:21 +0200
-Subject: [PATCH 024/559] scsi: ufs: revamp string descriptor reading
+Subject: [PATCH 024/593] scsi: ufs: revamp string descriptor reading
 
 Define new a type: uc_string_id for easier string
 handling and less casting. Reduce number or string
