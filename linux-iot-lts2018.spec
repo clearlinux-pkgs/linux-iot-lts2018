@@ -15,7 +15,7 @@
 
 Name:           linux-iot-lts2018
 Version:        4.19.0
-Release:        15
+Release:        16
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
