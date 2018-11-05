@@ -1,7 +1,7 @@
-From 4dd9b872717cb8ac634ac09155d5b60b07bbb9a1 Mon Sep 17 00:00:00 2001
+From 5a6e4879852c72987816dc112961dfaf49b1fdce Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:15 +0200
-Subject: [PATCH 010/593] x86/mm/cpa: Optimize same protection check
+Subject: [PATCH 010/714] x86/mm/cpa: Optimize same protection check
 
 When the existing mapping is correct and the new requested page protections
 are the same as the existing ones, then further checks can be omitted and the

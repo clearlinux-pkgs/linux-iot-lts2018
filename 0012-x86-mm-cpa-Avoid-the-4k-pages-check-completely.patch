@@ -1,7 +1,7 @@
-From 2055c92b330527741b3f7ac2bb272ca8636a3e2b Mon Sep 17 00:00:00 2001
+From 8a1a9bdf91ff8eb1aa9f1a2fb55a8aec8820b927 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:17 +0200
-Subject: [PATCH 012/593] x86/mm/cpa: Avoid the 4k pages check completely
+Subject: [PATCH 012/714] x86/mm/cpa: Avoid the 4k pages check completely
 
 The extra loop which tries hard to preserve large pages in case of conflicts
 with static protection regions turns out to be not preserving anything, at

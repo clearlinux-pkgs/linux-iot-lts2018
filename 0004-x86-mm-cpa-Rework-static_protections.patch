@@ -1,7 +1,7 @@
-From 4a8c4d6453d3dc45d9ecf18f2ba214507ad67ac5 Mon Sep 17 00:00:00 2001
+From bea65b914313e08c7afea35ef36c55f9d5fcc93b Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:09 +0200
-Subject: [PATCH 004/593] x86/mm/cpa: Rework static_protections()
+Subject: [PATCH 004/714] x86/mm/cpa: Rework static_protections()
 
 static_protections() is pretty unreadable. Split it up into separate checks
 for each protection area.

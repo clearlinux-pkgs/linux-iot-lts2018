@@ -1,7 +1,7 @@
-From 57896e0ba25dbd15689191960392a2404a7e21bb Mon Sep 17 00:00:00 2001
+From 5576827888a0081fb8c3d59eb6108485f294fbd3 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Thu, 14 May 2015 00:00:59 +0300
-Subject: [PATCH 026/593] scsi: ufs: store device serial number.
+Subject: [PATCH 026/714] scsi: ufs: store device serial number.
 
 Retrieve device serial number and store it for RPMB subsystem use.
 
