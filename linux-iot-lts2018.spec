@@ -15,7 +15,7 @@
 
 Name:           linux-iot-lts2018
 Version:        4.19.0
-Release:        17
+Release:        18
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -28,7 +28,7 @@ Source4:        cmdline-iot-lts2018-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt:  mainline-tracking-v4.19-181106T233210Z
-# config: mainline-tracking-v4.19-181106T003233Z
+# config: mainline-tracking-v4.19-181106T233210Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
