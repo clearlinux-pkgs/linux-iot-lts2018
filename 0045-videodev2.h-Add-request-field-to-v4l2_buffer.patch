@@ -1,7 +1,7 @@
-From f594b97f60356f00253585fc07e15b373ad6533a Mon Sep 17 00:00:00 2001
+From b82005b2c190a4afd912f4bd2c148aaba16b8e0a Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:04 +0800
-Subject: [PATCH 045/714] videodev2.h: Add request field to v4l2_buffer
+Subject: [PATCH 045/725] videodev2.h: Add request field to v4l2_buffer
 
 When queuing buffers allow for passing the request ID that
 should be associated with this buffer.

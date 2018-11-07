@@ -1,7 +1,7 @@
-From 3be73b976e7f79de9c2ef787be116d44e6986dbb Mon Sep 17 00:00:00 2001
+From 4631b35542e928ec2ac7a1758f8c0e61ea8fb549 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Thu, 5 Nov 2015 10:22:44 +0200
-Subject: [PATCH 025/714] scsi: ufs: connect to RPMB subsystem
+Subject: [PATCH 025/725] scsi: ufs: connect to RPMB subsystem
 
 Register UFS RPMB LUN with the RPMB subsystem and provide
 implementation for the RPMB access operations. RPMB partition is

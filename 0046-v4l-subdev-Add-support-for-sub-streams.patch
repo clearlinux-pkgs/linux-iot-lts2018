@@ -1,7 +1,7 @@
-From 7c79bae4671af681dbca70acb72af7b2e99612e1 Mon Sep 17 00:00:00 2001
+From 55eea5296ee8e12fb04c8da20aa0eae80d332afa Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:10 +0800
-Subject: [PATCH 046/714] v4l: subdev: Add support for sub-streams
+Subject: [PATCH 046/725] v4l: subdev: Add support for sub-streams
 
 The stream id tells which stream the IOCTLs address.
 

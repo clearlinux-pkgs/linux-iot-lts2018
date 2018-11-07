@@ -1,7 +1,7 @@
-From 8ae90ba44c640d476c05b5dc95af14f479f21dec Mon Sep 17 00:00:00 2001
+From 42844ac84f278df42caceb0c4c4b02a77fcd93ed Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:44 +0800
-Subject: [PATCH 054/714] media: i2c: crlmodule: common register list based
+Subject: [PATCH 054/725] media: i2c: crlmodule: common register list based
  sensor driver
 
 Common register list based driver is based on a sensor configuration

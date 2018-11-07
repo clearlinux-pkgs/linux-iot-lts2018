@@ -1,7 +1,7 @@
-From 362dc71483672ee1e2a5d76cc6b917fccd8e2d80 Mon Sep 17 00:00:00 2001
+From 94edf2eb9d9d3be5227a380ad976da4994bdfb9f Mon Sep 17 00:00:00 2001
 From: Qi Yadong <yadong.qi@intel.com>
 Date: Wed, 17 Oct 2018 15:10:41 +0800
-Subject: [PATCH 037/714] rpmb: mux: add key retrieval for RPMB multiplexor
+Subject: [PATCH 037/725] rpmb: mux: add key retrieval for RPMB multiplexor
 
 Retrieve a RPMB key from a bootloader.
 Currently automotive bootloader and slim bootloader are

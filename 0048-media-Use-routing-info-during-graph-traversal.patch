@@ -1,7 +1,7 @@
-From e8d5e0c69800bb5b393d4a79bf252612dc018d19 Mon Sep 17 00:00:00 2001
+From 8adb5c61fa2df5cf0c372f7cf32bdc781c05a322 Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:19 +0800
-Subject: [PATCH 048/714] media: Use routing info during graph traversal
+Subject: [PATCH 048/725] media: Use routing info during graph traversal
 
 Take internal routing information as reported
 by the entity has_route operation into account

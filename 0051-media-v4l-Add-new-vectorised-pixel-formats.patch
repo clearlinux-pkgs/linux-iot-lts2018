@@ -1,7 +1,7 @@
-From a538e46443814f2bb4d18f46dffbc7c90657e857 Mon Sep 17 00:00:00 2001
+From 51e69307e893bc491222c0f13aedb629ec4b7987 Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:32 +0800
-Subject: [PATCH 051/714] media: v4l: Add new vectorised pixel formats
+Subject: [PATCH 051/725] media: v4l: Add new vectorised pixel formats
 
 Signed-off-by: Chang Ying <ying.chang@intel.com>
 Signed-off-by: Meng Wei <wei.meng@intel.com>

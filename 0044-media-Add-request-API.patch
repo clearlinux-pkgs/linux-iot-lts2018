@@ -1,7 +1,7 @@
-From 768d85ddf5b30b79f57520e9b58600b744914434 Mon Sep 17 00:00:00 2001
+From fefcaa828a6763786b0ee7525192566a9914c207 Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:51:54 +0800
-Subject: [PATCH 044/714] media: Add request API
+Subject: [PATCH 044/725] media: Add request API
 
 The request API allows bundling media device parameters with request
 objects and applying them atomically, either synchronously or

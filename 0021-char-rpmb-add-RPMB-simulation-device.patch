@@ -1,7 +1,7 @@
-From e711455907890f450e64c975f7e26f82ff86bbbe Mon Sep 17 00:00:00 2001
+From 285650031c29cb7e17922e0b53ee7e7ecc056d6e Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 28 Feb 2016 10:36:13 +0200
-Subject: [PATCH 021/714] char: rpmb: add RPMB simulation device
+Subject: [PATCH 021/725] char: rpmb: add RPMB simulation device
 
 The RPMB partition simulation device is a virtual device that
 provides simulation of the RPMB protocol and use kernel memory

@@ -1,7 +1,7 @@
-From 78795aa798be11c13aa7321e06715e506537cabf Mon Sep 17 00:00:00 2001
+From 8ab15d721ccfb347e54e38caa27a12ff4040edf6 Mon Sep 17 00:00:00 2001
 From: Qi Yadong <yadong.qi@intel.com>
 Date: Thu, 18 Oct 2018 15:41:11 +0800
-Subject: [PATCH 036/714] rpmb: mux: add HKDF for RPMB Mux module
+Subject: [PATCH 036/725] rpmb: mux: add HKDF for RPMB Mux module
 
 Implement a HKDF (hash based key derivation function)
 for RPMB key derivation.

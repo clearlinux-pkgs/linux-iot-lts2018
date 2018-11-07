@@ -1,7 +1,7 @@
-From 3c094dae105ea394e06888692d61bc1b9b10148f Mon Sep 17 00:00:00 2001
+From 421cc2706c288632e708eed78e3bcbe38e374760 Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:36 +0800
-Subject: [PATCH 052/714] v4l2-ctrl: Add platform specific v4l2 control
+Subject: [PATCH 052/725] v4l2-ctrl: Add platform specific v4l2 control
 
 Signed-off-by: Chang Ying <ying.chang@intel.com>
 Signed-off-by: Meng Wei <wei.meng@intel.com>

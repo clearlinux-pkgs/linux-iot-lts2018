@@ -1,7 +1,7 @@
-From 2b5d933f65abb69ff6966907d9af424d81ca2837 Mon Sep 17 00:00:00 2001
+From 1753f83343f30fd265a317c36375a40147151a99 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sat, 28 Apr 2018 22:01:32 +0300
-Subject: [PATCH 027/714] rpmb: add nvme rpmb frame type
+Subject: [PATCH 027/725] rpmb: add nvme rpmb frame type
 
 The NVMe RPMB frame differs in layout and endianity
 from the one defined by JDEC.

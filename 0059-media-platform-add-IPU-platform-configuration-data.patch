@@ -1,7 +1,7 @@
-From 68d70b40cf8e5ccd448eeeae49c1517988e99bd8 Mon Sep 17 00:00:00 2001
+From b9af5aac28460513908f99451bcc28b09937ee29 Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:53:06 +0800
-Subject: [PATCH 059/714] media: platform: add IPU platform configuration data
+Subject: [PATCH 059/725] media: platform: add IPU platform configuration data
 
 These data are used for i2c device detection and resource
 revervation.

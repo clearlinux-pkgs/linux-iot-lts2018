@@ -1,7 +1,7 @@
-From 5701bd438db5e6ce2276786a9ac08e6165e1aeca Mon Sep 17 00:00:00 2001
+From 3ee43014dfafcb5bea2e3a2482c610497cfcd23e Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:23 +0800
-Subject: [PATCH 049/714] v4l: for multiplex pad add routing informaion in link
+Subject: [PATCH 049/725] v4l: for multiplex pad add routing informaion in link
  validation
 
 for links have 2 multiplexed pad, validating all active

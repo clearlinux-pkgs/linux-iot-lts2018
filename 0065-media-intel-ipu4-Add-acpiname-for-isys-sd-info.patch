@@ -1,7 +1,7 @@
-From 17a034d530b7194a65e997d4b9243964031c5fb7 Mon Sep 17 00:00:00 2001
+From ea4abaf91583b73558c3e77b6574f147327eeb63 Mon Sep 17 00:00:00 2001
 From: "Yew, Chang Ching" <chang.ching.yew@intel.com>
 Date: Tue, 23 Oct 2018 17:03:22 +0800
-Subject: [PATCH 065/714] media: intel-ipu4: Add acpiname for isys sd info
+Subject: [PATCH 065/725] media: intel-ipu4: Add acpiname for isys sd info
 
 ACPI support is still required for ACRN SOS for sensor enumeration
 Therefore the acpiname field is added back to isys subdev info
