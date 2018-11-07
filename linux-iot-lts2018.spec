@@ -28,7 +28,7 @@ Source4:        cmdline-iot-lts2018-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt:  mainline-tracking-v4.19-181106T003233Z
-# config: mainline-tracking-v4.19-181103T052857Z
+# config: mainline-tracking-v4.19-181106T003233Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
