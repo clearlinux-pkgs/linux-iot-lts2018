@@ -1,19 +1,19 @@
-From 171389dae7fa96200828b78450393919b683cac3 Mon Sep 17 00:00:00 2001
+From 67e3ffb59ab760a93221d9ddc6f32c67c50b6ae1 Mon Sep 17 00:00:00 2001
 From: sys_oak <sys_oak@intel.com>
-Date: Tue, 6 Nov 2018 16:02:27 -0800
-Subject: [PATCH 725/725] test configs use for clean and android bare metal BAT
- testing for kernel version: v4.19
+Date: Wed, 7 Nov 2018 00:47:29 -0800
+Subject: [PATCH] test configs use for clean and android bare metal BAT testing
+ for kernel version: v4.19
 
 ---
- arch/x86/configs/android_test_defconfig | 6332 ++++++++++++++++++++++
- arch/x86/configs/test_defconfig         | 6499 +++++++++++++++++++++++
+ arch/x86/configs/android_test_defconfig | 6332 ++++++++++++++++++++++++++++++
+ arch/x86/configs/test_defconfig         | 6499 +++++++++++++++++++++++++++++++
  2 files changed, 12831 insertions(+)
  create mode 100644 arch/x86/configs/android_test_defconfig
  create mode 100644 arch/x86/configs/test_defconfig
 
 diff --git a/arch/x86/configs/android_test_defconfig b/arch/x86/configs/android_test_defconfig
 new file mode 100644
-index 000000000000..344827bc30d6
+index 0000000..41da564
 --- /dev/null
 +++ b/arch/x86/configs/android_test_defconfig
 @@ -0,0 +1,6332 @@
@@ -2016,9 +2016,9 @@ index 000000000000..344827bc30d6
 +CONFIG_E1000=y
 +CONFIG_E1000E=y
 +CONFIG_E1000E_HWTS=y
-+CONFIG_IGB=y
++CONFIG_IGB=m
 +CONFIG_IGB_HWMON=y
-+CONFIG_IGBVF=y
++CONFIG_IGBVF=m
 +# CONFIG_IXGB is not set
 +# CONFIG_IXGBE is not set
 +CONFIG_IXGBEVF=y
@@ -6351,7 +6351,7 @@ index 000000000000..344827bc30d6
 +# CONFIG_UNWINDER_GUESS is not set
 diff --git a/arch/x86/configs/test_defconfig b/arch/x86/configs/test_defconfig
 new file mode 100644
-index 000000000000..00ca5fb6c1b4
+index 0000000..00ca5fb
 --- /dev/null
 +++ b/arch/x86/configs/test_defconfig
 @@ -0,0 +1,6499 @@
@@ -12855,5 +12855,5 @@ index 000000000000..00ca5fb6c1b4
 +# CONFIG_UNWINDER_FRAME_POINTER is not set
 +# CONFIG_UNWINDER_GUESS is not set
 -- 
-2.19.1
+2.7.4
 
