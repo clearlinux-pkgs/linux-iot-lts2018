@@ -1,4 +1,4 @@
-From 4631b35542e928ec2ac7a1758f8c0e61ea8fb549 Mon Sep 17 00:00:00 2001
+From 9aa2107c491aa56cf0dd96a99fbace65c9ef72fb Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Thu, 5 Nov 2015 10:22:44 +0200
 Subject: [PATCH 025/725] scsi: ufs: connect to RPMB subsystem

@@ -1,4 +1,4 @@
-From 218a66f81a266fa2136fa7908efba0d3a19ab3ab Mon Sep 17 00:00:00 2001
+From f3426c1b9f1cd82e159aa618d8be3fb616baed70 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:06 +0300
 Subject: [PATCH 723/725] stm class: Use memcat_p()

@@ -1,4 +1,4 @@
-From fa9de0d3af08cc8fb5c3d7c3ab5b4ee3abc37932 Mon Sep 17 00:00:00 2001
+From 7c2483c3138e0169cea3c75316f0170790397f70 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:56 +0300
 Subject: [PATCH 713/725] stm class: Factor out default framing protocol

@@ -1,4 +1,4 @@
-From 7909ded39bf40d2440da796df800566de536925b Mon Sep 17 00:00:00 2001
+From 35f5c00a928b9946ac34daa62e9eee3452810a6f Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:59 +0300
 Subject: [PATCH 716/725] stm class: p_sys-t: Add support for CLOCKSYNC packets

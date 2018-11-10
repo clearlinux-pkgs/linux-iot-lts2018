@@ -1,4 +1,4 @@
-From ccdb5de168db0ac39a47fa00dcf0eba8418ec506 Mon Sep 17 00:00:00 2001
+From 42ac3a8a29cad460c40934264e295dac88d4f8ca Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:54 +0300
 Subject: [PATCH 711/725] stm class: Introduce framing protocol drivers

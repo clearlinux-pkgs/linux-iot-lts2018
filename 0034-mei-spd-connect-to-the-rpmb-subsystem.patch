@@ -1,4 +1,4 @@
-From a3435f5eeb354f5482e92ee41b58d01f24e36240 Mon Sep 17 00:00:00 2001
+From d5796b4905387682c294eda268b9baa9e7f3f60f Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Mon, 9 Feb 2015 17:13:20 +0200
 Subject: [PATCH 034/725] mei: spd: connect to the rpmb subsystem

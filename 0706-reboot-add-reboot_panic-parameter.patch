@@ -1,4 +1,4 @@
-From 12bfe67e9dde4e4636f351e2f20b5e12f3296a60 Mon Sep 17 00:00:00 2001
+From ce59082be0e78c1b9c4e99d5ba14d824110c90c3 Mon Sep 17 00:00:00 2001
 From: Jeremy Rocher <jeremy.rocher@intel.com>
 Date: Wed, 20 Jul 2016 10:00:44 +0200
 Subject: [PATCH 706/725] reboot: add reboot_panic parameter

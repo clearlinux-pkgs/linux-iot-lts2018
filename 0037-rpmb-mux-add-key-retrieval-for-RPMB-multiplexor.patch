@@ -1,4 +1,4 @@
-From 94edf2eb9d9d3be5227a380ad976da4994bdfb9f Mon Sep 17 00:00:00 2001
+From 3e3bd6e2618311f58c8f96d1cba64c25cefb3961 Mon Sep 17 00:00:00 2001
 From: Qi Yadong <yadong.qi@intel.com>
 Date: Wed, 17 Oct 2018 15:10:41 +0800
 Subject: [PATCH 037/725] rpmb: mux: add key retrieval for RPMB multiplexor

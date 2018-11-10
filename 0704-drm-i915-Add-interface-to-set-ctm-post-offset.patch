@@ -1,4 +1,4 @@
-From 50e236d5b55c1b6e10d129ec5182c5fd027c9bf8 Mon Sep 17 00:00:00 2001
+From e1d207877a32bd10c45b271f37259386cec4cb19 Mon Sep 17 00:00:00 2001
 From: "Fan, Yugang" <yugang.fan@intel.com>
 Date: Wed, 17 Oct 2018 10:39:24 +0800
 Subject: [PATCH 704/725] drm/i915: Add interface to set ctm post offset

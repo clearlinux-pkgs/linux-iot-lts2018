@@ -1,4 +1,4 @@
-From b7b4631ef6a6828d07060d1efe861332fab098c5 Mon Sep 17 00:00:00 2001
+From 58383945f3b969801860676c1e60c77706a48eec Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 4 Jan 2017 14:14:21 +0200
 Subject: [PATCH 024/725] scsi: ufs: revamp string descriptor reading

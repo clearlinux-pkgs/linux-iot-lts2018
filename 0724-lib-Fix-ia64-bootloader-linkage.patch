@@ -1,4 +1,4 @@
-From d4e0b92514b65fd1ebe41cbf8bdf0e5599f31e98 Mon Sep 17 00:00:00 2001
+From 56e55444d8b27f78acf90e210ddd753bc32d5e0d Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Tue, 16 Oct 2018 14:13:40 +0300
 Subject: [PATCH 724/725] lib: Fix ia64 bootloader linkage

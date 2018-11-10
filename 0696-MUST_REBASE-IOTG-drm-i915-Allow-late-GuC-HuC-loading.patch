@@ -1,4 +1,4 @@
-From 0e9bb6ed3ad7a2dce6c0da3024c7a93455f3c41a Mon Sep 17 00:00:00 2001
+From 5600ebd5f7ce9ae2f062e7701fbeba2760a576f9 Mon Sep 17 00:00:00 2001
 From: Badiuzzaman Iskhandar <badiuzzaman.azzarfan.bin.iskhandar@intel.com>
 Date: Tue, 9 Oct 2018 15:51:18 +0800
 Subject: [PATCH 696/725] MUST_REBASE [IOTG]: drm/i915: Allow late GuC/HuC

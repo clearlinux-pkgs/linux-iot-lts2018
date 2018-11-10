@@ -1,4 +1,4 @@
-From 8b61caee047630bfc9d77b8e83a56713e377c638 Mon Sep 17 00:00:00 2001
+From eafdb62fdcb63bc3949deb1afb9f0a469967ee98 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:57 +0300
 Subject: [PATCH 714/725] stm class: Switch over to the protocol driver

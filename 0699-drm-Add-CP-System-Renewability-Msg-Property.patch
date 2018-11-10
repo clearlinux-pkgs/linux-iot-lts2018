@@ -1,4 +1,4 @@
-From c98561389d8c68fce82d5e029d78fc7e53d79c65 Mon Sep 17 00:00:00 2001
+From 53015fd26b5ff7800608e643bdeeb521b73cbb8d Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Fri, 12 Oct 2018 19:39:37 +0800
 Subject: [PATCH 699/725] drm: Add CP System Renewability Msg Property

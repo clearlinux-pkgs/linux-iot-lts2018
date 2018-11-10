@@ -1,4 +1,4 @@
-From bedfce87bc5a08b00a1da333fb05013e7e29d4d3 Mon Sep 17 00:00:00 2001
+From f432952f3a2f50f5e42fa478ac0e865ff2ce208d Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 20 Mar 2016 11:32:42 +0200
 Subject: [PATCH 022/725] tools rpmb: add RPBM access tool

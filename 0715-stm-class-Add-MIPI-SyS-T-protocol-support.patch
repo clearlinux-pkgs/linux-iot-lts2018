@@ -1,4 +1,4 @@
-From ed01d9d10a6cab12bb28137844b72959d43fe7fd Mon Sep 17 00:00:00 2001
+From 132be2dc47f187546748a9daaf2c49b6a48bff3a Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:58 +0300
 Subject: [PATCH 715/725] stm class: Add MIPI SyS-T protocol support

@@ -1,4 +1,4 @@
-From f1adced5c3b8d3edf4f12dabfafb8c4022eaa57b Mon Sep 17 00:00:00 2001
+From b152e3acddc6dba933b22f1f4f895bd5776f5e16 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Wed, 19 Sep 2018 14:18:50 +0800
 Subject: [PATCH 695/725] drm/i915: Commit CP without modeset

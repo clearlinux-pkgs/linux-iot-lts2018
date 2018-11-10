@@ -1,4 +1,4 @@
-From fc7358091c6fc3ddebf1021eac82db59f584f941 Mon Sep 17 00:00:00 2001
+From 6c6d3be7a650571776de7195c3c9ff41ccf89b78 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Wed, 13 Dec 2017 23:23:08 +0530
 Subject: [PATCH 698/725] drm: Add CP downstream_info property

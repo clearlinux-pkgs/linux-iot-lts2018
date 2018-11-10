@@ -1,4 +1,4 @@
-From 4b21cb69428d54fd3cadcd7002727cc60f380aa2 Mon Sep 17 00:00:00 2001
+From c433f0859571a21f59ef50901d8bad03f83b7f86 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:02 +0300
 Subject: [PATCH 719/725] stm class: Update documentation to match the new

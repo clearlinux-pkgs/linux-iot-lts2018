@@ -1,4 +1,4 @@
-From b63f7ea1e791307a2eaeab261106f3994b2d3aa1 Mon Sep 17 00:00:00 2001
+From 5699a8540e5682622a4c83fd20e6f00db4352457 Mon Sep 17 00:00:00 2001
 From: "Yang, Dong" <dong.yang@intel.com>
 Date: Tue, 23 Oct 2018 16:22:43 +0800
 Subject: [PATCH 705/725] Allow RenderNode to be used for kms getters.

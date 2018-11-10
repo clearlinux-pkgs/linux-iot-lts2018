@@ -1,4 +1,4 @@
-From f2e7769883efc93706e58c55a51b5d1da5105362 Mon Sep 17 00:00:00 2001
+From c346df1bb70fbe7a610d4b73b0cdd5014cc71c2f Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 28 Feb 2016 23:59:39 +0200
 Subject: [PATCH 019/725] char: rpmb: add device attributes

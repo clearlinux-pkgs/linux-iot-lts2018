@@ -1,4 +1,4 @@
-From bfd1e40e30fb21c8122e8e14b0fbe5526cba7eb0 Mon Sep 17 00:00:00 2001
+From 71e8413fe973d946a577d2c791e52ad6e8819fa0 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:00 +0300
 Subject: [PATCH 717/725] stm class: p_sys-t: Document the configfs interface

@@ -1,4 +1,4 @@
-From dba5fd6959462b487d993cdbd84edcf8b4e669e7 Mon Sep 17 00:00:00 2001
+From 1ff422b6532fefc920d344919cbfbe17f76f70b0 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Tue, 16 Oct 2018 11:38:41 +0800
 Subject: [PATCH 702/725] i915: Add cp_downstream property
