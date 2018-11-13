@@ -772,6 +772,10 @@ Patch0724: 0724-lib-Fix-ia64-bootloader-linkage.patch
 Patch0725: 0725-test-configs-use-for-clean-and-android-bare-metal-BA.patch
 #END XXXX: PK Series
 
+# Clear Linux Series
+Patch9001: 9001-init-wait-for-partition-and-retry-scan.patch
+Patch9002: 9002-Add-boot-option-to-allow-unsigned-modules.patch
+
 %description
 The Linux IOT LTS2018 kernel.
 
@@ -1521,6 +1525,10 @@ Linux kernel extra files
 %patch0724 -p1
 %patch0725 -p1
 # End XXXX PK Series
+
+# Clear Linux Series
+%patch9001 -p1
+%patch9002 -p1
 
 cp %{SOURCE1} .
 cp %{SOURCE2} .
