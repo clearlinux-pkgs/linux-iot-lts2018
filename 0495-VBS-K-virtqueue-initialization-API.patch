@@ -1,7 +1,7 @@
-From 9cbf0d167b08ed5df65a521a78cab9f5545e62d9 Mon Sep 17 00:00:00 2001
+From c8aafd21599de1b0d4ebf03dfdf39996f34e241f Mon Sep 17 00:00:00 2001
 From: Hao Li <hao.l.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:56 +0800
-Subject: [PATCH 495/725] VBS-K: virtqueue initialization API.
+Subject: [PATCH 495/728] VBS-K: virtqueue initialization API.
 
 This patch added the following to the VBS-K framework:
  - virtqueue data structures shared between VBS-K and its
@@ -500,5 +500,5 @@ index 000000000000..55ff810fa094
 +
 +#endif
 -- 
-2.19.1
+2.19.2
 

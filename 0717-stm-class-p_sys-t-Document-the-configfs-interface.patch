@@ -1,7 +1,7 @@
-From 71e8413fe973d946a577d2c791e52ad6e8819fa0 Mon Sep 17 00:00:00 2001
+From 0d9be22604eb1f484dab350045bb3b16ff2e470a Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:00 +0300
-Subject: [PATCH 717/725] stm class: p_sys-t: Document the configfs interface
+Subject: [PATCH 717/728] stm class: p_sys-t: Document the configfs interface
 
 This adds ABI documentation for the new configfs attributes that come
 with the MIPI SyS-T protocol driver.
@@ -62,5 +62,5 @@ index 000000000000..b290d1c00dcf
 +		use this option with sources that generate constant and/or
 +		periodic data, like stm_heartbeat.
 -- 
-2.19.1
+2.19.2
 

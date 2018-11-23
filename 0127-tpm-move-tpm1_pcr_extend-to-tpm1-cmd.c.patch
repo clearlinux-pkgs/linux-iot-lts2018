@@ -1,7 +1,7 @@
-From 039c707dd83e5a68292f6e155becb6a12b2a3b40 Mon Sep 17 00:00:00 2001
+From ac8669d3829126a109368157d3b4bdf651d9d7c0 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Tue, 6 Mar 2018 09:36:11 +0200
-Subject: [PATCH 127/725] tpm: move tpm1_pcr_extend to tpm1-cmd.c
+Subject: [PATCH 127/728] tpm: move tpm1_pcr_extend to tpm1-cmd.c
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -114,5 +114,5 @@ index 978946748ea3..ec242397e6dc 100644
 +	return rc;
 +}
 -- 
-2.19.1
+2.19.2
 

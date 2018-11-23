@@ -1,7 +1,7 @@
-From 6525cf83f9222a3eb707bcfcf9a0713f3735ef39 Mon Sep 17 00:00:00 2001
+From 2d26da4aef436e2493f70f121d3f75bdf077d2d2 Mon Sep 17 00:00:00 2001
 From: Mateusz Polrola <mateuszx.potrola@intel.com>
 Date: Tue, 21 Aug 2018 11:19:53 +0200
-Subject: [PATCH 650/725] hyper_dmabuf/virtio: bugfix on
+Subject: [PATCH 650/728] hyper_dmabuf/virtio: bugfix on
  acrn_ioreq_add_iorange() usage
 
 Align usage of acrn_ioreq_add_iorange according to description
@@ -58,5 +58,5 @@ index a89d557c7c4c..c84b2dd746a3 100644
  		acrn_ioreq_destroy_client(fe_info->client_id);
  		virtio_fe_remove(fe_info->client_id);
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 0f7e2d05d5ca2a835fea5c6ba35e0f71def8b052 Mon Sep 17 00:00:00 2001
+From 83b639138babd6dd33ee0ab7fd3eab4dd9a317cd Mon Sep 17 00:00:00 2001
 From: Puneeth Prabhu <puneethx.prabhu@intel.com>
 Date: Mon, 7 May 2018 16:38:11 +0530
-Subject: [PATCH 446/725] ASoC: Intel: Skylake: Add RSE, HU, M3 and generic
+Subject: [PATCH 446/728] ASoC: Intel: Skylake: Add RSE, HU, M3 and generic
  machine driver entry
 
 This patch adds driver names of RSE, HU, M3 and generic machine drivers
@@ -51,5 +51,5 @@ index 5a442ee5af64..293a1b98b8db 100644
  	{
  		.id = "DLGS7219",
 -- 
-2.19.1
+2.19.2
 

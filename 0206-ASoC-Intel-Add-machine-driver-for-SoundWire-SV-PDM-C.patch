@@ -1,7 +1,7 @@
-From 5f0a2a9276dea91082a0520fd24ee9f0889bc2f2 Mon Sep 17 00:00:00 2001
+From 15342027083cec33d5ac9789553c4b27cc2b825a Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Sat, 23 Apr 2016 18:58:44 +0530
-Subject: [PATCH 206/725] ASoC:Intel: Add machine driver for SoundWire SV PDM
+Subject: [PATCH 206/728] ASoC:Intel: Add machine driver for SoundWire SV PDM
  Codec.
 
 This patch is for testing. Not to be upstreamed.
@@ -335,5 +335,5 @@ index 000000000000..312c0437ac15
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:cnl_svfpga");
 -- 
-2.19.1
+2.19.2
 

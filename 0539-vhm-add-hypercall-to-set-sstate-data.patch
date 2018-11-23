@@ -1,7 +1,7 @@
-From e4e84e632dc10b3e2bb927a1ac060ce89a7f6031 Mon Sep 17 00:00:00 2001
+From a4fe9f05c61bf8643f45a2734e4c8516828bb0a5 Mon Sep 17 00:00:00 2001
 From: Victor Sun <victor.sun@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 539/725] vhm: add hypercall to set sstate data
+Subject: [PATCH 539/728] vhm: add hypercall to set sstate data
 
 The host ACPI State data which needed by S3/S5 implementation will
 be parsed in userspace, add one hypercall api to pass these information
@@ -124,5 +124,5 @@ index 028096bde2ec..a9e71616cc80 100644
  /**
   * struct vm_memseg - memory segment info for guest
 -- 
-2.19.1
+2.19.2
 

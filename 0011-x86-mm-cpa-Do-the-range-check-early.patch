@@ -1,7 +1,7 @@
-From d669df44ca47a693954dc30e7d188db3e5b799e9 Mon Sep 17 00:00:00 2001
+From 60d5a763a52e28c52fb8aa7d561c6e0893416497 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:16 +0200
-Subject: [PATCH 011/725] x86/mm/cpa: Do the range check early
+Subject: [PATCH 011/728] x86/mm/cpa: Do the range check early
 
 To avoid excessive 4k wise checks in the common case do a quick check first
 whether the requested new page protections conflict with a static
@@ -92,5 +92,5 @@ index 5160334f9095..bbc5eb5cbc9d 100644
  	new_pte = pfn_pte(old_pfn, new_prot);
  	__set_pmd_pte(kpte, address, new_pte);
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From be8b55c03da0c86c04ae3a2db9bb5111533ae294 Mon Sep 17 00:00:00 2001
+From 271f907025cbfe6fc09c8f09bec97991eeab7c41 Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Thu, 17 Mar 2016 10:17:13 +0530
-Subject: [PATCH 200/725] SoundWire:Intel: Register 4 master controller to the
+Subject: [PATCH 200/728] SoundWire:Intel: Register 4 master controller to the
  bus.
 
 This patch registers the 4 master controller to the bus.
@@ -27,5 +27,5 @@ index 335ec68b6a32..c90870ee8a61 100644
  			(sizeof(*master) * dsp->num_sdw_controllers),
  			GFP_KERNEL);
 -- 
-2.19.1
+2.19.2
 

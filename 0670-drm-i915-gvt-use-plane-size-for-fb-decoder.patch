@@ -1,7 +1,7 @@
-From 4798bab53ae41d80d571972439ac9f3fc4554afc Mon Sep 17 00:00:00 2001
+From 8cf26abd75c6de152f14872a2c7322ff417cfb60 Mon Sep 17 00:00:00 2001
 From: Zhipeng Gong <zhipeng.gong@intel.com>
 Date: Thu, 20 Sep 2018 13:10:45 +0800
-Subject: [PATCH 670/725] drm/i915/gvt: use plane size for fb decoder
+Subject: [PATCH 670/728] drm/i915/gvt: use plane size for fb decoder
 
 Current fb decoder returns pipe src size to user space,
 while ggtt surface sharing only show primary plane framebuffer.
@@ -74,5 +74,5 @@ index fe723099788d..f482eceb5c7f 100644
  	if (args->start & (PAGE_SIZE - 1)) {
  		DRM_DEBUG_DRIVER("GVT_GEM: Not aligned fb start address: "
 -- 
-2.19.1
+2.19.2
 

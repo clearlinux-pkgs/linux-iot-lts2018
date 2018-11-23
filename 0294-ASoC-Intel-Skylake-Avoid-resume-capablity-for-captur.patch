@@ -1,7 +1,7 @@
-From 52fd569ddfd1dfb66924ad609a85e43b01e19697 Mon Sep 17 00:00:00 2001
+From a22b6b9b60b22a3bc103965428a0bae2feada666 Mon Sep 17 00:00:00 2001
 From: "R, Dharageswari" <dharageswari.r@intel.com>
 Date: Fri, 26 Feb 2016 20:00:57 +0530
-Subject: [PATCH 294/725] ASoC: Intel: Skylake: Avoid resume capablity for
+Subject: [PATCH 294/728] ASoC: Intel: Skylake: Avoid resume capablity for
  capture streams
 
 DMA resume capability is not supported by the HW.
@@ -38,5 +38,5 @@ index a6901c223652..a7b8df50aa9b 100644
  			 * enable DMA Resume enable bit for the stream, set the
  			 * dpib & lpib position to resume before starting the
 -- 
-2.19.1
+2.19.2
 

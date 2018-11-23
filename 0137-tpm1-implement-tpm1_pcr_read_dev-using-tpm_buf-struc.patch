@@ -1,7 +1,7 @@
-From 1d6f31a05137666a64052f0371786a4e3dad6b27 Mon Sep 17 00:00:00 2001
+From 9f8a593bbeb0088cfec6b4f5b51906cbc586fc74 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 16 Sep 2018 09:41:30 +0300
-Subject: [PATCH 137/725] tpm1: implement tpm1_pcr_read_dev() using tpm_buf
+Subject: [PATCH 137/728] tpm1: implement tpm1_pcr_read_dev() using tpm_buf
  structure
 
 Implement tpm1_pcr_read_dev() using tpm_buf and remove
@@ -113,5 +113,5 @@ index b5c4fa158c30..d30f336518f6 100644
  }
  
 -- 
-2.19.1
+2.19.2
 

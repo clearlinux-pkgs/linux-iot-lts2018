@@ -1,7 +1,7 @@
-From a8a244b1ffbc4d948622b76625154b91ed6ea693 Mon Sep 17 00:00:00 2001
+From 54ea1acfd646f4f9f3c07d10dc1f6127153f9871 Mon Sep 17 00:00:00 2001
 From: Zhipeng Gong <zhipeng.gong@intel.com>
 Date: Fri, 14 Sep 2018 16:10:21 +0800
-Subject: [PATCH 635/725] drm/i915/gvt: notify global gtt update through g2v
+Subject: [PATCH 635/728] drm/i915/gvt: notify global gtt update through g2v
 
 This patch extends g2v notification to notify host GVT-g of
 ggtt update from guest, including ggtt_insert_entries and
@@ -142,5 +142,5 @@ index 82ab32e87805..c15d4578bb5f 100644
  
  /*
 -- 
-2.19.1
+2.19.2
 

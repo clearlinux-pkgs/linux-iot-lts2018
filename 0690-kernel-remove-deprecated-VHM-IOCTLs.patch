@@ -1,7 +1,7 @@
-From 7dfec05f5f0300777c3116a178e292497c99058c Mon Sep 17 00:00:00 2001
+From cd966c72f34b17762ce0e8fbf333a4aaafc48976 Mon Sep 17 00:00:00 2001
 From: Yonghua Huang <yonghua.huang@intel.com>
 Date: Sat, 27 Oct 2018 02:10:21 +0800
-Subject: [PATCH 690/725] kernel: remove deprecated VHM IOCTLs
+Subject: [PATCH 690/728] kernel: remove deprecated VHM IOCTLs
 
 below IOCTLs are wrapped into IC_SET_IRQLINE:
 
@@ -172,5 +172,5 @@ index 73be2dde243d..19ebf54e57f3 100644
  #define IC_VM_INTR_MONITOR             _IC_ID(IC_ID, IC_ID_IRQ_BASE + 0x04)
  #define IC_SET_IRQLINE                 _IC_ID(IC_ID, IC_ID_IRQ_BASE + 0x05)
 -- 
-2.19.1
+2.19.2
 

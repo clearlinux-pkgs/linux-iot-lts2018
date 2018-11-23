@@ -1,7 +1,7 @@
-From 8f113b4f1bdfc6386cdf24f53fa9d2f51c944970 Mon Sep 17 00:00:00 2001
+From 808f4f8e23a275bc921c9a4192baacdf9102aa86 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:58:55 +0800
-Subject: [PATCH 486/725] VHM: add API to do guest gpa2hpa translation
+Subject: [PATCH 486/728] VHM: add API to do guest gpa2hpa translation
 
 Added API vhm_vm_gpa2hpa: do translation between gpa and hpa for
 corresponding guest.
@@ -138,5 +138,5 @@ index 77c21c4bba7a..5edacb31dc1b 100644
  void vm_list_add(struct list_head *list);
  void vm_mutex_lock(struct mutex *mlock);
 -- 
-2.19.1
+2.19.2
 

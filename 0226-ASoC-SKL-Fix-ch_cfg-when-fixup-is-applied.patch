@@ -1,7 +1,7 @@
-From 831a6d8e5a696fc42094fcd47bdc4c8ef3760e12 Mon Sep 17 00:00:00 2001
+From 303af4923159cf73a308418e9d684b7a8218d09e Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Wed, 17 Aug 2016 13:17:48 +0530
-Subject: [PATCH 226/725] ASoC: SKL: Fix ch_cfg when fixup is applied
+Subject: [PATCH 226/728] ASoC: SKL: Fix ch_cfg when fixup is applied
 
 Change-Id: I3d1198ea3ff0120f28736a7e7a81029887164634
 Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
@@ -26,5 +26,5 @@ index 413a72dada50..80934faa70d8 100644
  	if (fixup & SKL_FMT_FIXUP_MASK) {
  		fmt->valid_bit_depth = skl_get_bit_depth(params->s_fmt);
 -- 
-2.19.1
+2.19.2
 

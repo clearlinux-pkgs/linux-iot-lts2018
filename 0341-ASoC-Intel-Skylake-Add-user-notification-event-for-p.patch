@@ -1,7 +1,7 @@
-From 21ae5268afa2148615ce523f430214b488a9ea7b Mon Sep 17 00:00:00 2001
+From 9a235255efbdbf3000f42ea76f7bb25532bebac9 Mon Sep 17 00:00:00 2001
 From: Anamika Lal <anamikax.lal@intel.com>
 Date: Wed, 3 May 2017 01:20:41 +0530
-Subject: [PATCH 341/725] ASoC: Intel: Skylake: Add user notification event for
+Subject: [PATCH 341/728] ASoC: Intel: Skylake: Add user notification event for
  pipe creation/deletion
 
 This patch provides kernel event generation on pipeline creation/deletion
@@ -181,5 +181,5 @@ index 10a414d77cb2..66f34ceae74e 100644
  
  #endif /* __SOUND_SOC_SKL_H */
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 0245e9866e0600deee35d8b9affc65e7ac6820b0 Mon Sep 17 00:00:00 2001
+From a508feefe1deeb5396fd9e8531f1c64b369d075b Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:01 +0300
-Subject: [PATCH 718/725] stm class: Document the MIPI SyS-T protocol usage
+Subject: [PATCH 718/728] stm class: Document the MIPI SyS-T protocol usage
 
 Add a document describing MIPI SyS-T protocol driver usage.
 
@@ -82,5 +82,5 @@ index 000000000000..3d8eb92735e9
 +
 +* [1] https://www.mipi.org/specifications/sys-t
 -- 
-2.19.1
+2.19.2
 

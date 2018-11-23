@@ -1,7 +1,7 @@
-From e095cbaab2628b423d079459d88d85f5bf50bcfa Mon Sep 17 00:00:00 2001
+From 2f557fc1be2e578f7353972dedf70cd8b723bcb0 Mon Sep 17 00:00:00 2001
 From: Puneeth Prabhu <puneethx.prabhu@intel.com>
 Date: Thu, 23 Nov 2017 20:52:05 +0530
-Subject: [PATCH 439/725] ASoC: Intel: Skylake: Add kabylake R machine driver
+Subject: [PATCH 439/728] ASoC: Intel: Skylake: Add kabylake R machine driver
  entry
 
 This patch adds acpi entry for kabylake R I2S machine driver,
@@ -35,5 +35,5 @@ index 99f8cdf0cc07..5a442ee5af64 100644
  	},
  	{
 -- 
-2.19.1
+2.19.2
 

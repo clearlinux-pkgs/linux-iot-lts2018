@@ -1,8 +1,8 @@
-From 4246323830024584c0d9f47178e148dec4991998 Mon Sep 17 00:00:00 2001
+From 523272462a361882ba49869a687759ffb3ea4d3a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Amadeusz=20S=C5=82awi=C5=84ski?=
  <amadeuszx.slawinski@intel.com>
 Date: Thu, 12 Jul 2018 12:55:26 +0200
-Subject: [PATCH 455/725] ASoC: Intel: Skylake: pipeline needs to be reset
+Subject: [PATCH 455/728] ASoC: Intel: Skylake: pipeline needs to be reset
  before disconnect
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
@@ -64,5 +64,5 @@ index bc8d3afcf7d1..c01875a2a61d 100644
  	ret = skl_ipc_delete_pipeline(&ctx->ipc, pipe->ppl_id);
  	if (ret < 0) {
 -- 
-2.19.1
+2.19.2
 

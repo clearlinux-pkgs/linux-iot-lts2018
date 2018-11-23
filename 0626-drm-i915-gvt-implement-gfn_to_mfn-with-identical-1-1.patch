@@ -1,7 +1,7 @@
-From c0a68b311ea171cb300cabee7fb891582d6a8ae5 Mon Sep 17 00:00:00 2001
+From b4fa3932035835b1e664992f44de7008d285452e Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Tue, 31 Jul 2018 12:06:29 +0800
-Subject: [PATCH 626/725] drm/i915/gvt: implement gfn_to_mfn with identical 1:1
+Subject: [PATCH 626/728] drm/i915/gvt: implement gfn_to_mfn with identical 1:1
  mapping check
 
 If hypervisor is implementing identical 1:1 memory mapping for sos kernel,
@@ -56,5 +56,5 @@ index c6fff10a1679..abde541b76f8 100644
  }
  
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From d81ab598be8f3aee9c05ba7556fb727c5be991fa Mon Sep 17 00:00:00 2001
+From cae760ceefac297a0e515afc97b184ccd560c781 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 10 May 2018 13:47:57 -0700
-Subject: [PATCH 090/725] SELinux: Abstract use of cred security blob
+Subject: [PATCH 090/728] SELinux: Abstract use of cred security blob
 
 Don't use the cred->security pointer directly.
 Provide a helper function that provides the security blob pointer.
@@ -282,5 +282,5 @@ index 91dc3783ed94..8ffe7e1053c4 100644
  	if (!ctx)
  		return 0;
 -- 
-2.19.1
+2.19.2
 

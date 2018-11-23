@@ -1,7 +1,7 @@
-From d66601806457d83e970b1a7e9c0f574be834e86a Mon Sep 17 00:00:00 2001
+From cdaa6a241bf0e6aa0326deafbc6c52a4a8bb6fe8 Mon Sep 17 00:00:00 2001
 From: "Schweikhardt, Markus" <markus.schweikhardt@intel.com>
 Date: Tue, 9 May 2017 23:00:20 +0530
-Subject: [PATCH 350/725] ASoC: Intel: Board: Add BXTP MRB machine driver for
+Subject: [PATCH 350/728] ASoC: Intel: Board: Add BXTP MRB machine driver for
  NXP TDF8532
 
 This is the machine driver for NXP TDF8532
@@ -278,5 +278,5 @@ index 000000000000..027060b17322
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:gpmrb_machine");
 -- 
-2.19.1
+2.19.2
 

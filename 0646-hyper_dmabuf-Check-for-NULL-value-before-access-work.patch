@@ -1,7 +1,7 @@
-From 7436a5e2840d02b228d2001145335c0d56dc6e1f Mon Sep 17 00:00:00 2001
+From 9a9f19661450a8cdac78e22f14176ef28a01bf37 Mon Sep 17 00:00:00 2001
 From: Kuppuswamy Sathyanarayanan <sathyanarayanan.kuppuswamy@linux.intel.com>
 Date: Tue, 31 Jul 2018 14:39:39 -0700
-Subject: [PATCH 646/725] hyper_dmabuf: Check for NULL value before access work
+Subject: [PATCH 646/728] hyper_dmabuf: Check for NULL value before access work
  pointer.
 
 In delayed_unexport() check for work pointer NULL value before accessing
@@ -37,5 +37,5 @@ index e9f1d64ee60b..66cdcf6eff78 100644
  		"Marking buffer {id:%d key:%d %d %d} as invalid\n",
  		exported->hid.id, exported->hid.rng_key[0],
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 23f27e19e0ea1dbeaeb5b34f5160325da4a2260c Mon Sep 17 00:00:00 2001
+From 948cc3a2da091023a608bfc70d7257ce1c6513a0 Mon Sep 17 00:00:00 2001
 From: "Kareem,Shaik" <kareem.m.shaik@intel.com>
 Date: Wed, 30 Aug 2017 16:46:40 +0530
-Subject: [PATCH 376/725] ASoC: Intel: Board: Add pm_ops to fix suspend/resume
+Subject: [PATCH 376/728] ASoC: Intel: Board: Add pm_ops to fix suspend/resume
  issue
 
 Audio playback not resumed after it is suspended. Add snd_soc_pm_ops to
@@ -34,5 +34,5 @@ index 325b59adaf1c..c7b7fe3f9ed7 100644
  };
  
 -- 
-2.19.1
+2.19.2
 

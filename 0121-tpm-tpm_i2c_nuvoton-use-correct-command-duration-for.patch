@@ -1,7 +1,7 @@
-From ee530b365a75db519daff72d8b4a46cb8f158ba8 Mon Sep 17 00:00:00 2001
+From 6dd1c7d1985579cdbead8d17ecd8e4c397c3045f Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 17 Oct 2018 19:23:18 +0300
-Subject: [PATCH 121/725] tpm: tpm_i2c_nuvoton: use correct command duration
+Subject: [PATCH 121/728] tpm: tpm_i2c_nuvoton: use correct command duration
  for TPM 2.x
 
 tpm_i2c_nuvoton calculated commands duration using TPM 1.x
@@ -48,5 +48,5 @@ index caa86b19c76d..f74f451baf6a 100644
  		dev_err(dev, "%s() timeout command duration\n", __func__);
  		i2c_nuvoton_ready(chip);
 -- 
-2.19.1
+2.19.2
 

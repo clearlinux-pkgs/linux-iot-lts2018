@@ -1,7 +1,7 @@
-From e6a97e222d717bc36418aec9e278c1bd2e70f77c Mon Sep 17 00:00:00 2001
+From 8974b7116c6252960781034163bf0c95f3f08656 Mon Sep 17 00:00:00 2001
 From: Zhipeng Gong <zhipeng.gong@intel.com>
 Date: Mon, 22 Oct 2018 16:53:59 +0800
-Subject: [PATCH 680/725] drm/i915/gvt: Support vgpu workload priority config
+Subject: [PATCH 680/728] drm/i915/gvt: Support vgpu workload priority config
 
 Add support to configure vgpu workload priority, make the param
 writable to facilitate performance issue debug.
@@ -84,5 +84,5 @@ index d902bedad72a..a0d1d7e7a3ac 100644
  	param(bool, enable_conformance_check, true)
  
 -- 
-2.19.1
+2.19.2
 

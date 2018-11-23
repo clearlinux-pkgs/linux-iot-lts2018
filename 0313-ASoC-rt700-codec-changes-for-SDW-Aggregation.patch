@@ -1,7 +1,7 @@
-From 9794338feecafb7590006aa7c8de19289c196a82 Mon Sep 17 00:00:00 2001
+From 8c255648675275da7f0fa2cb9aa9582792f3d965 Mon Sep 17 00:00:00 2001
 From: "Jayanti, Satya Charitardha" <satya.charitardha.jayanti@intel.com>
 Date: Wed, 4 Jan 2017 20:32:35 +0530
-Subject: [PATCH 313/725] ASoC: rt700: codec changes for SDW Aggregation
+Subject: [PATCH 313/728] ASoC: rt700: codec changes for SDW Aggregation
 
 Add stream aggregation changes to codec driver.
 Playback and capture can be performed using two
@@ -365,5 +365,5 @@ index 3ad8b84f60f7..bcfb86340112 100644
  int hda_to_sdw(unsigned int nid, unsigned int verb, unsigned int payload,
  		unsigned int *sdw_addr_h, unsigned int *sdw_data_h,
 -- 
-2.19.1
+2.19.2
 

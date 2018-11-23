@@ -1,7 +1,7 @@
-From 13b0d32a604a4bb40020edd55761e84706b08e29 Mon Sep 17 00:00:00 2001
+From 2fe817acdb23110df2e8141773f42f81afd2fd02 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Tue, 19 Jul 2016 00:08:05 +0300
-Subject: [PATCH 031/725] char: rpmb: Document Replay Protected Memory Block
+Subject: [PATCH 031/728] char: rpmb: Document Replay Protected Memory Block
  (RPMB) subsystem
 
 Add rpmb documentatin in sphinx format.
@@ -261,5 +261,5 @@ index 861ef1fb8e6c..37f70a707519 100644
  
  RTL2830 MEDIA DRIVER
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 0ea1670b5c6ffb1dd5c6350034f6089d5ccc85f2 Mon Sep 17 00:00:00 2001
+From ae71226ce53052391a4397ad1562dcee52870be1 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 10 May 2018 14:04:35 -0700
-Subject: [PATCH 093/725] LSM: Infrastructure management of the file security
+Subject: [PATCH 093/728] LSM: Infrastructure management of the file security
  blob
 
 Move management of the file->f_security blob out of the
@@ -358,5 +358,5 @@ index a06ea8aa89c4..d1430341798f 100644
  	LSM_HOOK_INIT(file_lock, smack_file_lock),
  	LSM_HOOK_INIT(file_fcntl, smack_file_fcntl),
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 68ff041f1b6f3c63137ed3d89921d1fbfecf4289 Mon Sep 17 00:00:00 2001
+From 963c1906e5f2dffc4d9fee4b219cd4aaf18bbb42 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:07 +0200
-Subject: [PATCH 002/725] x86/mm/init32: Mark text and rodata RO in one go
+Subject: [PATCH 002/728] x86/mm/init32: Mark text and rodata RO in one go
 
 The sequence of marking text and rodata read-only in 32bit init is:
 
@@ -77,5 +77,5 @@ index 979e0a02cbe1..142c7d9f89cc 100644
  #endif
  	mark_nxdata_nx();
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 741d68767ea5109640515660ddc4876b251fef7e Mon Sep 17 00:00:00 2001
+From 2a949065c8a4082f84d909e3fad52e4faac0dd1c Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Tue, 16 Oct 2018 09:02:33 +0300
-Subject: [PATCH 171/725] mei: virtio: [V13] virtualization frontend driver
+Subject: [PATCH 171/728] mei: virtio: [V13] virtualization frontend driver
 
 This frontend driver implements MEI hw interface based on virtio
 framework to let MEI driver work without changes under virtualization.
@@ -977,5 +977,5 @@ index 000000000000..96858db5463d
 +MODULE_DESCRIPTION("Virtio MEI frontend driver");
 +MODULE_LICENSE("Dual BSD/GPL");
 -- 
-2.19.1
+2.19.2
 

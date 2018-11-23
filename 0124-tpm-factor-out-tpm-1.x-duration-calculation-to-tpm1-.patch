@@ -1,7 +1,7 @@
-From 059befcf47542af1264c229abb4e2f05cb57922a Mon Sep 17 00:00:00 2001
+From 491ca074a1c110eb8a0739b2bcea1cdb83f0b3d1 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Mon, 5 Mar 2018 20:13:35 +0200
-Subject: [PATCH 124/725] tpm: factor out tpm 1.x duration calculation to
+Subject: [PATCH 124/728] tpm: factor out tpm 1.x duration calculation to
  tpm1-cmd.c
 
 Factor out TPM 1.x commands calculation into tpm1-cmd.c file.
@@ -744,5 +744,5 @@ index b150f87f38f5..77097229bf49 100644
  	if (wait_for_tpm_stat(chip, VTPM_STATUS_IDLE, duration,
  			&priv->read_queue, true) < 0) {
 -- 
-2.19.1
+2.19.2
 

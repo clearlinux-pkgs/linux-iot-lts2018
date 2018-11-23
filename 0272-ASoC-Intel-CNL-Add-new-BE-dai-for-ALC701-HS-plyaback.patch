@@ -1,7 +1,7 @@
-From c36cba07fa15d4990c08a9c2fa0377f38c1f80ab Mon Sep 17 00:00:00 2001
+From 50cc700316254b8bebe7675d9b9a169e8a633a0f Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Mon, 26 Jun 2017 12:12:48 +0530
-Subject: [PATCH 272/725] ASoC: Intel: CNL: Add new BE dai for ALC701 HS
+Subject: [PATCH 272/728] ASoC: Intel: CNL: Add new BE dai for ALC701 HS
  plyaback
 
 Change-Id: I64ef09b6147472ce8a78e5a689413b8f4384132c
@@ -44,5 +44,5 @@ index 3ac58520240a..09899a05975f 100644
  	/* Currently adding 1 capture pin, for PDM ideally it
  	 * should be coming from CLT based on endpoints to be supported
 -- 
-2.19.1
+2.19.2
 

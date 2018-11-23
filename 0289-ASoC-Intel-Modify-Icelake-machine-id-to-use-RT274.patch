@@ -1,7 +1,7 @@
-From 20b6d29f5abbbf1b980992b5b141a849a0791a87 Mon Sep 17 00:00:00 2001
+From 76f0cfcacf103d70906b5897799baf3298bdb668 Mon Sep 17 00:00:00 2001
 From: Dharageswari R <dharageswari.r@intel.com>
 Date: Fri, 15 Dec 2006 12:19:15 +0530
-Subject: [PATCH 289/725] ASoC: Intel: Modify Icelake machine id to use RT274
+Subject: [PATCH 289/728] ASoC: Intel: Modify Icelake machine id to use RT274
 
 Icelake features rt274 codec. Hence updating to use the
 right machine driver
@@ -37,5 +37,5 @@ index e3965a15e7d2..879be20b361a 100644
  };
  
 -- 
-2.19.1
+2.19.2
 

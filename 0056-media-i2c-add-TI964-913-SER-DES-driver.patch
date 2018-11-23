@@ -1,7 +1,7 @@
-From c32509f65bde842e3bfd9314f3ca83edc1ca8445 Mon Sep 17 00:00:00 2001
+From ada3562cb6ced2ece1e1e2ba566f33c0ec4f202c Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:48 +0800
-Subject: [PATCH 056/725] media: i2c: add TI964/913 SER/DES driver
+Subject: [PATCH 056/728] media: i2c: add TI964/913 SER/DES driver
 
 TI964 is a versatile camera hub capable of connecting
 serialized camera data received from 4 independent video
@@ -1620,5 +1620,5 @@ index 000000000000..ab5ee210efe4
 +
 +#endif
 -- 
-2.19.1
+2.19.2
 

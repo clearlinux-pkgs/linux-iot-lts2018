@@ -1,7 +1,7 @@
-From 7a538e9967bc28281b713ef1b6ccdc540c4f89bb Mon Sep 17 00:00:00 2001
+From 8e0929ade16c88d41077daa7461380fbb58095dc Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Fri, 14 Sep 2018 16:10:17 +0800
-Subject: [PATCH 595/725] drm/i915/gvt: added option to disable wa_ctx
+Subject: [PATCH 595/728] drm/i915/gvt: added option to disable wa_ctx
  shadowing
 
 This patch add an option in GVTg to disable shadowing wa_ctx. In current
@@ -72,5 +72,5 @@ index f0f0ada705cd..9d8f0bfc434c 100644
  
  	if (workload->status || (vgpu->resetting_eng & ENGINE_MASK(ring_id))) {
 -- 
-2.19.1
+2.19.2
 

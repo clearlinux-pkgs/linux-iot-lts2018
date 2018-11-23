@@ -1,7 +1,7 @@
-From aee2c5ddc797c678d3ad249d2d642dd1a62cd895 Mon Sep 17 00:00:00 2001
+From 69b378dce50281e4e066692fc4f8e7c2393061bd Mon Sep 17 00:00:00 2001
 From: "Shaik, Kareem M" <kareem.m.shaik@intel.com>
 Date: Thu, 6 Oct 2016 16:23:09 +0530
-Subject: [PATCH 393/725] ASoC: Intel: Skylake: Fix Max DSP MCPS value
+Subject: [PATCH 393/728] ASoC: Intel: Skylake: Fix Max DSP MCPS value
 
 Currently Max MCPS is specified as 30M, but it should be 350M.
 However actual MCPS is 400M, since module CPS are simulated on
@@ -37,5 +37,5 @@ index 451b28a21585..1931d4ed73f5 100644
  
  /*
 -- 
-2.19.1
+2.19.2
 

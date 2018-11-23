@@ -1,7 +1,7 @@
-From 6442ebf11789032f1981e213ba4d3f8eafe57c2c Mon Sep 17 00:00:00 2001
+From bd30d8e830ccfdcc8c151a7b7e04af9e3acee24e Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey.schaufler@intel.com>
 Date: Fri, 7 Sep 2018 12:21:46 -0700
-Subject: [PATCH 111/725] LSM: Fix secid initialization in security.h
+Subject: [PATCH 111/728] LSM: Fix secid initialization in security.h
 
 The secid initialization for the case where security
 modules are disabled uses a non-existent field.
@@ -44,5 +44,5 @@ index 35f08a886d12..5324f520dc5b 100644
  
  static inline int security_msg_msg_alloc(struct msg_msg *msg)
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 3983cd9a32e6d1a0cefbdb5e8e20ddc22e3ce90d Mon Sep 17 00:00:00 2001
+From 747dfa8083c342d53f3ca7c091dd095c4276994c Mon Sep 17 00:00:00 2001
 From: Wei Liu <weix.w.liu@intel.com>
 Date: Thu, 19 Jul 2018 15:04:40 +0800
-Subject: [PATCH 643/725] kernel/hyper_dmabuf: disable hyper_dmabuf on arch
+Subject: [PATCH 643/728] kernel/hyper_dmabuf: disable hyper_dmabuf on arch
  arm64
 
 hyper_dmabuf should not be enabled while make allyesconfig
@@ -27,5 +27,5 @@ index 999900b97625..1d91a114ba61 100644
  choice
  	prompt "Hypervisor"
 -- 
-2.19.1
+2.19.2
 

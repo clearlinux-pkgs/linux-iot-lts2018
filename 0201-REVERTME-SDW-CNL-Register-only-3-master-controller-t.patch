@@ -1,7 +1,7 @@
-From 0c59ef54847e23264062d55e5e718c85822182e6 Mon Sep 17 00:00:00 2001
+From 08cfd2b2217c51ac6f7d1cf33edee52f4db9817a Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Thu, 17 Mar 2016 11:19:29 +0530
-Subject: [PATCH 201/725] REVERTME:SDW:CNL: Register only 3 master controller
+Subject: [PATCH 201/728] REVERTME:SDW:CNL: Register only 3 master controller
  to bus.
 
 There is constant BUS errors from the slaves on the 4th
@@ -33,5 +33,5 @@ index c90870ee8a61..e4d531680a5a 100644
  			(sizeof(*master) * dsp->num_sdw_controllers),
  			GFP_KERNEL);
 -- 
-2.19.1
+2.19.2
 

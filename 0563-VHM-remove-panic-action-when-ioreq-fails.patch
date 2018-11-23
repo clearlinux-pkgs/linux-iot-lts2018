@@ -1,7 +1,7 @@
-From c1ec5bb06dc31335829eb5a204d50897a1f7e807 Mon Sep 17 00:00:00 2001
+From c783c68aef26878949dc8a81ce352cfc29c83b89 Mon Sep 17 00:00:00 2001
 From: Minggui Cao <minggui.cao@intel.com>
 Date: Fri, 31 Aug 2018 10:59:03 +0800
-Subject: [PATCH 563/725] VHM: remove panic action when ioreq fails.
+Subject: [PATCH 563/728] VHM: remove panic action when ioreq fails.
 
 handle the ioreq failed cases instead of calling BUG(), which
 will cause system panic directly.
@@ -42,5 +42,5 @@ index 960723b1778d..da61069b8d01 100644
  				req->client = client->id;
  				atomic_set(&req->processed, REQ_STATE_PROCESSING);
 -- 
-2.19.1
+2.19.2
 

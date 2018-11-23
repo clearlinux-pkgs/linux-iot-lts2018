@@ -1,7 +1,7 @@
-From 4b52487555c1c3de57da3ec96d50bbb11122eadf Mon Sep 17 00:00:00 2001
+From 6d01f2560869512e7a643926a85b1c06b1d4386e Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:19 +0800
-Subject: [PATCH 049/725] media: Use routing info during graph traversal
+Subject: [PATCH 049/728] media: Use routing info during graph traversal
 
 Take internal routing information as reported
 by the entity has_route operation into account
@@ -207,5 +207,5 @@ index 3aa3d58d1d58..0faaf936302b 100644
   * media_graph_walk_start - Start walking the media graph at a
   *	given entity
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From d39b4ebdaaf8539ad4c72abd2873d298d2f12d6e Mon Sep 17 00:00:00 2001
+From bd2811456564b0edce24b0d8f533be6b382e90fb Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Tue, 14 Aug 2018 12:41:13 +0200
-Subject: [PATCH 464/725] ASoC: Intel: Move icl machine drv tables to common
+Subject: [PATCH 464/728] ASoC: Intel: Move icl machine drv tables to common
  directory.
 
 Align with machine-drv-tables declaration model present on upstream.
@@ -145,5 +145,5 @@ index eb26714a128a..efa24a9e58fe 100644
  };
  MODULE_DEVICE_TABLE(pci, skl_ids);
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 01be157361b86ff4d1634d2f1755d8baa5f22dde Mon Sep 17 00:00:00 2001
+From b8a6af97605087cb47519ea89f6bfa27f7ebec67 Mon Sep 17 00:00:00 2001
 From: Mohit Sinha <mohit.sinha@intel.com>
 Date: Thu, 16 Nov 2017 21:35:07 +0530
-Subject: [PATCH 403/725] ASoC: Intel: Skylake: Poll on ADSPCS.CSTALL bit to
+Subject: [PATCH 403/728] ASoC: Intel: Skylake: Poll on ADSPCS.CSTALL bit to
  confirm stall state change.
 
 ADSPCS.CSTALL bit should be set/cleared in order to stall/ un-stall
@@ -74,5 +74,5 @@ index 71e31ad0bb3f..4b16e0002cd4 100644
  		skl_dsp_reset_core(ctx, core_mask);
  		dev_err(ctx->dev, "DSP start core failed: core_mask %x\n",
 -- 
-2.19.1
+2.19.2
 

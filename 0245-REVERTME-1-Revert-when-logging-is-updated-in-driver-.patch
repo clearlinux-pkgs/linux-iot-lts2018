@@ -1,7 +1,7 @@
-From 65b63aaef0c53f29547582deee49e519c5e5b3cf Mon Sep 17 00:00:00 2001
+From 1251a2c6c37138997d6ad3a3f95a03b244b0fd97 Mon Sep 17 00:00:00 2001
 From: "Panwar, Ashish" <ashish.panwar@intel.com>
 Date: Sat, 19 Mar 2016 08:44:11 +0530
-Subject: [PATCH 245/725] REVERTME-1: Revert when logging is updated in
+Subject: [PATCH 245/728] REVERTME-1: Revert when logging is updated in
  driver/firmware.
 
 Core 0 is currently using entire 8KB window for logging.
@@ -63,5 +63,5 @@ index 36c22c57cf90..d34ff3ffeced 100644
  	/* move to the source dsp tracing window */
  	base += (core * size);
 -- 
-2.19.1
+2.19.2
 

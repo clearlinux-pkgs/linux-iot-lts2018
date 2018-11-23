@@ -1,7 +1,7 @@
-From 72d83f560a4d209086866c94f80e6191c9b5e642 Mon Sep 17 00:00:00 2001
+From 9041a3b4280a97d5894cf3e8844b95b5fc98c1fc Mon Sep 17 00:00:00 2001
 From: "Diwakar, Praveen" <praveen.diwakar@intel.com>
 Date: Wed, 28 Jun 2017 16:42:00 +0530
-Subject: [PATCH 339/725] ASoC: Intel: Skylake: Add support for getting hw
+Subject: [PATCH 339/728] ASoC: Intel: Skylake: Add support for getting hw
  config from DSP
 
 This patch gets hw config from DSP by sending hw config ipc.
@@ -227,5 +227,5 @@ index 0eaa88e6ae61..7288893ce61a 100644
  {
  	struct uuid_module *uuid, *_uuid;
 -- 
-2.19.1
+2.19.2
 

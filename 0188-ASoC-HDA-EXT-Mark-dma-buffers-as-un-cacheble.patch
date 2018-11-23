@@ -1,7 +1,7 @@
-From 6c98a80ac1c13bf0b6f3270f336bc75e2b7ddbae Mon Sep 17 00:00:00 2001
+From ed6dedbdd0f607266b6617a2248e0e09464458d9 Mon Sep 17 00:00:00 2001
 From: Ramesh Babu <ramesh.babu@intel.com>
 Date: Tue, 17 Nov 2015 02:33:39 +0530
-Subject: [PATCH 188/725] ASoC: HDA: EXT: Mark dma buffers as un-cacheble
+Subject: [PATCH 188/728] ASoC: HDA: EXT: Mark dma buffers as un-cacheble
 
 Driver shouldn't not assume HDA DMA has snooping
 enabled. Driver should always allocate non-cached
@@ -99,5 +99,5 @@ index 9c37d9af3023..3e63fcfd6cd8 100644
  
  /**
 -- 
-2.19.1
+2.19.2
 

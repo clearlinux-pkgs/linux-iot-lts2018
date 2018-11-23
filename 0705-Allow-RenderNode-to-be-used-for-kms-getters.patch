@@ -1,7 +1,7 @@
-From 5699a8540e5682622a4c83fd20e6f00db4352457 Mon Sep 17 00:00:00 2001
+From 1419cb0deaa2628e869523b78589493325b21f28 Mon Sep 17 00:00:00 2001
 From: "Yang, Dong" <dong.yang@intel.com>
 Date: Tue, 23 Oct 2018 16:22:43 +0800
-Subject: [PATCH 705/725] Allow RenderNode to be used for kms getters.
+Subject: [PATCH 705/728] Allow RenderNode to be used for kms getters.
 
 Minigbm relies on this to query if a particular format
 can be scanned out or not.
@@ -58,5 +58,5 @@ index ea10e9a26aad..248dfa53fce1 100644
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_CURSOR2, drm_mode_cursor2_ioctl, DRM_MASTER|DRM_UNLOCKED),
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_ATOMIC, drm_mode_atomic_ioctl, DRM_MASTER|DRM_UNLOCKED),
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 56822626d3f29bb183d838bfec4a2fee7cae339d Mon Sep 17 00:00:00 2001
+From 27b76051ab70d2e17634fc034b67c5e3a50af76b Mon Sep 17 00:00:00 2001
 From: Shuo Liu <shuo.a.liu@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 553/725] vhm: Add vcpu_num to record vcpu number of each VM
+Subject: [PATCH 553/728] vhm: Add vcpu_num to record vcpu number of each VM
 
 Add a new field 'vcpu_num' in vhm_vm struct to count the number of vcpu
 of this VM. And uses atomic operation to avoid lock.
@@ -68,5 +68,5 @@ index 29fee8fe0a7b..d3b26bdbc675 100644
  	spinlock_t ioreq_client_lock;
  	struct list_head ioreq_client_list;
 -- 
-2.19.1
+2.19.2
 

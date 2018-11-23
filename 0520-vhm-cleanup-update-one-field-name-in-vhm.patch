@@ -1,7 +1,7 @@
-From d775c94de951927d7e380b0f48e7cbbbd3bd1c08 Mon Sep 17 00:00:00 2001
+From 0eaec9b88d4df8f10373a63619fca88d00a5d836 Mon Sep 17 00:00:00 2001
 From: Yin Fengwei <fengwei.yin@intel.com>
 Date: Fri, 31 Aug 2018 10:58:59 +0800
-Subject: [PATCH 520/725] vhm cleanup: update one field name in vhm
+Subject: [PATCH 520/728] vhm cleanup: update one field name in vhm
 
 Change-Id: Ib125147ff72b566b183d20496251fa74244d7970
 Tracked-On: 212688
@@ -27,5 +27,5 @@ index 494213a9f9f0..9f2f21acbbe3 100644
  		struct {
  			/* IN: vector count of MSI/MSIX,
 -- 
-2.19.1
+2.19.2
 

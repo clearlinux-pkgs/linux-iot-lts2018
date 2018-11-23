@@ -1,7 +1,7 @@
-From d9e737b586fcdbdfecb91cb59af2ca53a1b56dd9 Mon Sep 17 00:00:00 2001
+From bacfe8eee34505b5eef78853af158300c4145018 Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:57 +0800
-Subject: [PATCH 058/725] media: i2c: add TI960/953 SER/DES driver
+Subject: [PATCH 058/728] media: i2c: add TI960/953 SER/DES driver
 
 TI960 is a versatile sensor hub capable of connecting
 serialized sensor data received from four independent
@@ -1680,5 +1680,5 @@ index 000000000000..60e134fce6c5
 +
 +#endif
 -- 
-2.19.1
+2.19.2
 

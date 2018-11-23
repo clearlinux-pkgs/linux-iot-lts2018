@@ -1,7 +1,7 @@
-From 4f478ae343c0a4d77730e5a6583b2744080db39f Mon Sep 17 00:00:00 2001
+From 095128be00a5a32af308a5907aa81f23326cd596 Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Thu, 10 Mar 2016 10:33:33 +0530
-Subject: [PATCH 194/725] ASoC: CNL: Register soundwire controller to bus
+Subject: [PATCH 194/728] ASoC: CNL: Register soundwire controller to bus
  driver.
 
 This patch registers the SoundWire controller to the
@@ -241,5 +241,5 @@ index f74f040dfd83..10a486939515 100644
  
  struct skl_ipc_init_instance_msg {
 -- 
-2.19.1
+2.19.2
 

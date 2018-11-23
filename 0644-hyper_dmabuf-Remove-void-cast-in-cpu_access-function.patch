@@ -1,7 +1,7 @@
-From b12968b01bca9f780b39aa071535139907783e12 Mon Sep 17 00:00:00 2001
+From 198fa8a2d43c656adbb2f3c8579650396bf58941 Mon Sep 17 00:00:00 2001
 From: Kuppuswamy Sathyanarayanan <sathyanarayanan.kuppuswamy@linux.intel.com>
 Date: Tue, 31 Jul 2018 14:39:37 -0700
-Subject: [PATCH 644/725] hyper_dmabuf: Remove void* cast in cpu_access
+Subject: [PATCH 644/728] hyper_dmabuf: Remove void* cast in cpu_access
  function pointers
 
 In dma_buf_ops structure init, hyper_dmabuf_ops_begin_cpu_access() and
@@ -31,5 +31,5 @@ index 915743741897..e2bdab75a7cf 100644
  	.unmap_atomic = hyper_dmabuf_ops_kunmap_atomic,
  	.map = hyper_dmabuf_ops_kmap,
 -- 
-2.19.1
+2.19.2
 

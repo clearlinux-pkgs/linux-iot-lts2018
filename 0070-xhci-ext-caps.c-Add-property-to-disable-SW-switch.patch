@@ -1,7 +1,7 @@
-From e079deba9124cf82b9c42a26131fc730a51bdae5 Mon Sep 17 00:00:00 2001
+From 85e8f3ba6eb149170f161c0caa50f25396824bf7 Mon Sep 17 00:00:00 2001
 From: Saranya Gopal <saranya.gopal@intel.com>
 Date: Fri, 5 Oct 2018 15:19:47 +0530
-Subject: [PATCH 070/725] xhci-ext-caps.c: Add property to disable SW switch
+Subject: [PATCH 070/728] xhci-ext-caps.c: Add property to disable SW switch
 
 In platforms like Cherrytrail, 'SW switch enable' bit
 should not be enabled for role switch. This patch
@@ -66,5 +66,5 @@ index 399113f9fc5c..b4129dd6a64a 100644
  
  	ret = platform_device_add(pdev);
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 92f2d6d47faf0bb99fa0ea7d269dddbcb08c5c58 Mon Sep 17 00:00:00 2001
+From 13c0c8e45d7521e6d940fada205c7aab484e2ae7 Mon Sep 17 00:00:00 2001
 From: Shiqing Gao <shiqing.gao@intel.com>
 Date: Fri, 31 Aug 2018 10:58:59 +0800
-Subject: [PATCH 521/725] sos: add a config for VHM
+Subject: [PATCH 521/728] sos: add a config for VHM
 
 seperate the config for ACRN and VHM
 
@@ -110,5 +110,5 @@ index 000000000000..0b0faeeff74a
 +
 +		If unsure, say N.
 -- 
-2.19.1
+2.19.2
 

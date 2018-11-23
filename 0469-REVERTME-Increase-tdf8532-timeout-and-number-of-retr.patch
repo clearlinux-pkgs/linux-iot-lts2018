@@ -1,7 +1,7 @@
-From 01bcf59c4957d51007ec454606be97fea6c263d7 Mon Sep 17 00:00:00 2001
+From c020a252dfd9a741ceb777345a34b2de0989a21b Mon Sep 17 00:00:00 2001
 From: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
 Date: Mon, 17 Sep 2018 11:27:02 +0200
-Subject: [PATCH 469/725] REVERTME: Increase tdf8532 timeout and number of
+Subject: [PATCH 469/728] REVERTME: Increase tdf8532 timeout and number of
  retries for audio ROM
 
 This is WA for delays in ROM init and ACK timeout for tdf8532 codec.
@@ -46,5 +46,5 @@ index 76266d3945e7..f66aae4c229f 100644
  #define GET_SSP_BASE(N)	(N > 4 ? 0x2000 : 0x4000)
  
 -- 
-2.19.1
+2.19.2
 

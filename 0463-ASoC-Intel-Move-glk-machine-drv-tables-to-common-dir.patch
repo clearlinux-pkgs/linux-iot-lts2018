@@ -1,7 +1,7 @@
-From 3ab87b7abc4c3a354aa5d30136e3c7faf5f0ad20 Mon Sep 17 00:00:00 2001
+From 48de7fdb8fe29fc9f58d0cce36936015ebf2836b Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Tue, 14 Aug 2018 12:15:45 +0200
-Subject: [PATCH 463/725] ASoC: Intel: Move glk machine drv tables to common
+Subject: [PATCH 463/728] ASoC: Intel: Move glk machine drv tables to common
  directory.
 
 Align with machine-drv-tables declaration model present on upstream.
@@ -38,5 +38,5 @@ index 815fa5541444..eb26714a128a 100644
  #if !IS_ENABLED(CONFIG_SND_SOC_RT700)
  	{
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 329d1d70a0eb01fdab7832cfb31757bba8de72e7 Mon Sep 17 00:00:00 2001
+From 5c3f3cbc9fedf7ac48a7aef977ad11a5a0943b5e Mon Sep 17 00:00:00 2001
 From: "Pawse, GuruprasadX" <guruprasadx.pawse@intel.com>
 Date: Mon, 11 Jul 2016 18:29:27 +0530
-Subject: [PATCH 357/725] ASoC: Intel: Skylake: Probe sequence changes based on
+Subject: [PATCH 357/728] ASoC: Intel: Skylake: Probe sequence changes based on
  state transition
 
 PROBE STATE TRANSITIONS:
@@ -1019,5 +1019,5 @@ index 0c6b5c6b9c99..02256d70f60f 100644
  			u32 param_id, struct skl_module_cfg *mcfg);
  int skl_get_module_params(struct skl_sst *ctx, u32 *params, int size,
 -- 
-2.19.1
+2.19.2
 

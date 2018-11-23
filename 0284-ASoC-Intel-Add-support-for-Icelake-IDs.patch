@@ -1,7 +1,7 @@
-From e0903ae54a78ac58fbd04678027692af9ef75c49 Mon Sep 17 00:00:00 2001
+From 1bbfcc2fb43575d76ac7899b7ceff832e17ea57c Mon Sep 17 00:00:00 2001
 From: Jeeja KP <jeeja.kp@intel.com>
 Date: Wed, 6 Dec 2006 11:28:06 +0530
-Subject: [PATCH 284/725] ASoC: Intel: Add support for Icelake IDs
+Subject: [PATCH 284/728] ASoC: Intel: Add support for Icelake IDs
 
 Icelake is next gen SoC, so add the IDs for Icelake
 
@@ -66,5 +66,5 @@ index 19ee283f9586..e4eb58c7a747 100644
  };
  MODULE_DEVICE_TABLE(pci, skl_ids);
 -- 
-2.19.1
+2.19.2
 

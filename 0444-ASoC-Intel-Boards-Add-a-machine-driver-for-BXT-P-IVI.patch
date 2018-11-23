@@ -1,7 +1,7 @@
-From 80a06c4fb28b6c400f9dcfb5ea3418eba7325389 Mon Sep 17 00:00:00 2001
+From 44b3c5a158778770655ec02a9a2b8092f9822355 Mon Sep 17 00:00:00 2001
 From: Pardha Saradhi K <pardha.saradhi.kesapragada@intel.com>
 Date: Wed, 3 Jan 2018 19:52:29 +0530
-Subject: [PATCH 444/725] ASoC: Intel: Boards: Add a machine driver for BXT-P
+Subject: [PATCH 444/728] ASoC: Intel: Boards: Add a machine driver for BXT-P
  IVI M3
 
 This patch adds support for a machine driver for Validation
@@ -400,5 +400,5 @@ index 000000000000..5dcafb979a49
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:bxt_ivi_m3_i2s");
 -- 
-2.19.1
+2.19.2
 

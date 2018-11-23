@@ -1,7 +1,7 @@
-From 4237c1d1d2f2e537df47c281a1d48d23909ea3c2 Mon Sep 17 00:00:00 2001
+From 932f06370e3ccbcffac8f7c155059f5cc6ae57b0 Mon Sep 17 00:00:00 2001
 From: Divya Prakash <divya1.prakash@intel.com>
 Date: Wed, 20 Apr 2016 10:08:03 +0530
-Subject: [PATCH 254/725] ASoC: Intel: Add Probe compress APIs
+Subject: [PATCH 254/728] ASoC: Intel: Add Probe compress APIs
 
 Using the compress framework, introduce probe
 compress dai APIs to open, set parameters, start,
@@ -1530,5 +1530,5 @@ index 2d0efe8233a4..feb4ab5fc9b4 100644
  
  static irqreturn_t skl_interrupt(int irq, void *dev_id)
 -- 
-2.19.1
+2.19.2
 

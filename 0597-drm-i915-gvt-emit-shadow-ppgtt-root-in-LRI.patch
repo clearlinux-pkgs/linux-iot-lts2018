@@ -1,7 +1,7 @@
-From 3ae814d078cf4651c2c3854cdf658e4df7c5859a Mon Sep 17 00:00:00 2001
+From ded51b9bba308a51cad44673bba38e4c66b26a8b Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Fri, 14 Sep 2018 16:10:17 +0800
-Subject: [PATCH 597/725] drm/i915/gvt: emit shadow ppgtt root in LRI
+Subject: [PATCH 597/728] drm/i915/gvt: emit shadow ppgtt root in LRI
 
 Usually the PDP/PML4 root poiners should be updated through the context,
 however, on BXT, we found that sometimes the PDP/PML4 root pointers will
@@ -91,5 +91,5 @@ index 9d8f0bfc434c..7243324cb93c 100644
  	if (ret) {
  		gvt_vgpu_err("fail to generate request\n");
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 9c5c5d24ff11bddb04ba0c1fc88c3df43d62d75b Mon Sep 17 00:00:00 2001
+From 6fdc889c245b6a5b8dea913ae494ddfc7cab6ef7 Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Tue, 10 Jul 2018 09:55:30 +0800
-Subject: [PATCH 622/725] drm/i915/gvt: don't treat EINVAL if trap pci_command
+Subject: [PATCH 622/728] drm/i915/gvt: don't treat EINVAL if trap pci_command
  and pci_status together
 
 Previously we only support single pci_command writing trap. While when
@@ -43,5 +43,5 @@ index 707b0a50da3c..f6bcfcb571b7 100644
  
  	switch (rounddown(offset, 4)) {
 -- 
-2.19.1
+2.19.2
 

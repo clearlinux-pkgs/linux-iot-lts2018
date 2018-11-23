@@ -1,7 +1,7 @@
-From 36b497038c9b83ced8d4f2c6175ce5a06de5de48 Mon Sep 17 00:00:00 2001
+From 62103cbbbdb53ec1076ec344915c2f46c35bfdb6 Mon Sep 17 00:00:00 2001
 From: Puneeth Prabhu <puneethx.prabhu@intel.com>
 Date: Wed, 2 May 2018 12:55:39 +0530
-Subject: [PATCH 442/725] ASoC: Intel: Boards: Add machine driver for RSE
+Subject: [PATCH 442/728] ASoC: Intel: Boards: Add machine driver for RSE
  topology
 
 This patch adds I2S machine driver for IVI RSE topology
@@ -423,5 +423,5 @@ index 000000000000..25917c4a39d2
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:bxt_ivi_rse_i2s");
 -- 
-2.19.1
+2.19.2
 

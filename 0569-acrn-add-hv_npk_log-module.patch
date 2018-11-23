@@ -1,7 +1,7 @@
-From 345839217e559b1cc8de95b9df4357286d34134b Mon Sep 17 00:00:00 2001
+From 08f181dbb3797f4e85aa008ff363bb7eee859c11 Mon Sep 17 00:00:00 2001
 From: Zhi Jin <zhi.jin@intel.com>
 Date: Wed, 1 Aug 2018 14:58:50 +0800
-Subject: [PATCH 569/725] acrn: add hv_npk_log module
+Subject: [PATCH 569/728] acrn: add hv_npk_log module
 
 The hv_npk_log driver is used to enable/disable/configure the
 hypervisor NPK log via the hypercall HC_SETUP_HV_NPK_LOG.
@@ -549,5 +549,5 @@ index 000000000000..68bd68286522
 +
 +#endif /* _HV_NPK_LOG_H_ */
 -- 
-2.19.1
+2.19.2
 

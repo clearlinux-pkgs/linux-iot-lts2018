@@ -1,7 +1,7 @@
-From d0923464062cacb38bdac2aafe1f33e7c9d711cb Mon Sep 17 00:00:00 2001
+From b99b637c37f861d35064698a473db5233634176f Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Mon, 3 Sep 2018 14:42:21 +0200
-Subject: [PATCH 467/725] ASoC: Intel: Replace hdac_ext_bus usage with
+Subject: [PATCH 467/728] ASoC: Intel: Replace hdac_ext_bus usage with
  hdac_bus.
 
 This patch updates CoE against following change:
@@ -593,5 +593,5 @@ index afcb2cfaf551..2a71d8e04f5b 100644
  		if (ret < 0) {
  			dev_err(rtd->dev,
 -- 
-2.19.1
+2.19.2
 

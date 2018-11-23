@@ -1,7 +1,7 @@
-From 0491b2d668316b5f3fb68b5fc70423cb5f0e49ca Mon Sep 17 00:00:00 2001
+From 41c3f411ed61cd2c1ca4da0a37f57c96978b1b72 Mon Sep 17 00:00:00 2001
 From: Puneeth Prabhu <puneethx.prabhu@intel.com>
 Date: Fri, 12 Jan 2018 15:50:50 +0530
-Subject: [PATCH 441/725] ASoC: rt298: Set jack combo for kabylake R
+Subject: [PATCH 441/728] ASoC: rt298: Set jack combo for kabylake R
 
 This patch adds DMI information of Kabylake R to
 force_combo_jack_table[].
@@ -37,5 +37,5 @@ index 06cdba4edfe2..47f7d14f1413 100644
  };
  
 -- 
-2.19.1
+2.19.2
 

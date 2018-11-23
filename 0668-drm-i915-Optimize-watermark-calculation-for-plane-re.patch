@@ -1,7 +1,7 @@
-From d022919e4c7b4562e5ab7e8361e59b1dc02187f4 Mon Sep 17 00:00:00 2001
+From b4d29d6cd9234b117de51d4fccddea9524a8a63b Mon Sep 17 00:00:00 2001
 From: Satyeshwar Singh <satyeshwar.singh@intel.com>
 Date: Fri, 5 Oct 2018 13:52:11 -0700
-Subject: [PATCH 668/725] drm/i915: Optimize watermark calculation for plane
+Subject: [PATCH 668/728] drm/i915: Optimize watermark calculation for plane
  restrictions
 
 The same code was being used in skl_build_plane_wm and
@@ -174,5 +174,5 @@ index 27554caeca6b..07a8f8dc4935 100644
  
  	pipe_wm->linetime = skl_compute_linetime_wm(cstate);
 -- 
-2.19.1
+2.19.2
 

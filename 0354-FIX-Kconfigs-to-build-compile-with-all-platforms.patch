@@ -1,7 +1,7 @@
-From ccbe80e36b7ef5cb3d6798341c8b344173579556 Mon Sep 17 00:00:00 2001
+From 59bafcee921476b67057de4e4e251bdfbd940279 Mon Sep 17 00:00:00 2001
 From: Anamika Lal <anamikax.lal@intel.com>
 Date: Thu, 29 Jun 2017 11:57:13 +0530
-Subject: [PATCH 354/725] FIX Kconfigs to build compile with all platforms
+Subject: [PATCH 354/728] FIX Kconfigs to build compile with all platforms
 
 Change-Id: I4e29037b8c4d2068c244b30668133ae243cb957b
 Signed-off-by: Anamika Lal <anamikax.lal@intel.com>
@@ -80,5 +80,5 @@ index 006be9a90286..934bd6e4c53f 100644
  	select SND_HDA_EXT_CORE
  	select SND_PCM_ELD
 -- 
-2.19.1
+2.19.2
 

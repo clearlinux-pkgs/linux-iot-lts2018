@@ -1,7 +1,7 @@
-From 9fb7cca660e4a7f1f12a5ec18bcffa21b3271bd4 Mon Sep 17 00:00:00 2001
+From 794784f0a933ccdf0007ea0f5c124a4b82b25336 Mon Sep 17 00:00:00 2001
 From: Leoni Prodduvaka <leoni.prodduvaka@intel.com>
 Date: Mon, 6 Feb 2017 22:24:18 +0530
-Subject: [PATCH 319/725] ASoC: Intel: Skylake: Check for memory reclaim bit
+Subject: [PATCH 319/728] ASoC: Intel: Skylake: Check for memory reclaim bit
 
 Memory reclaim bit indicates whether legacy DMA memory
 is managed by FW. It would be set by firmware if DMA
@@ -58,5 +58,5 @@ index 790af2489d0e..d5e2c32b3f83 100644
  
  cnl_load_base_firmware_failed:
 -- 
-2.19.1
+2.19.2
 

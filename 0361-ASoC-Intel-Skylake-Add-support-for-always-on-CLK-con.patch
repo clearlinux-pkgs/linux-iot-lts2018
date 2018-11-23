@@ -1,7 +1,7 @@
-From 213ae1769c7c026cb2a1d23bff7ca626bd4a85c1 Mon Sep 17 00:00:00 2001
+From b204ca181db243396e94ea8aff8950f388d938aa Mon Sep 17 00:00:00 2001
 From: "Kareem,Shaik" <kareem.m.shaik@intel.com>
 Date: Thu, 15 Jun 2017 13:40:04 +0530
-Subject: [PATCH 361/725] ASoC: Intel: Skylake: Add support for always on CLK
+Subject: [PATCH 361/728] ASoC: Intel: Skylake: Add support for always on CLK
  configuration
 
 For some platforms it is required that ADSP generate BCLK, Frame_sync
@@ -249,5 +249,5 @@ index 51cc193c3353..318b3c54c44e 100644
  int skl_get_dmic_geo(struct skl *skl);
  int skl_nhlt_update_topology_bin(struct skl *skl);
 -- 
-2.19.1
+2.19.2
 

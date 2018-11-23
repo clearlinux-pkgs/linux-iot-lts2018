@@ -1,7 +1,7 @@
-From 5213d8a21f23e7e28b0c113ac372cc20cda4ebaa Mon Sep 17 00:00:00 2001
+From 3d86076a71ae7d10e43b48b2b3f58e417ddfb9fc Mon Sep 17 00:00:00 2001
 From: Hao Li <hao.l.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:56 +0800
-Subject: [PATCH 494/725] VBS-K (Virtio Backend Service in Kernel): a
+Subject: [PATCH 494/728] VBS-K (Virtio Backend Service in Kernel): a
  kernel-level virtio framework for ACRN hypervisor.
 
 This patch added the basic VBS-K framework including the following:
@@ -410,5 +410,5 @@ index 000000000000..78b36a6c58c8
 +
 +#endif
 -- 
-2.19.1
+2.19.2
 

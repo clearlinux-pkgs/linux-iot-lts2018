@@ -1,7 +1,7 @@
-From c702b85394a7d99c64e4748e4e83c8a10920f09f Mon Sep 17 00:00:00 2001
+From 1bfc97d2d7a3d76758264f9ae0f2914a694369e4 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey.schaufler@intel.com>
 Date: Thu, 20 Sep 2018 15:58:32 -0700
-Subject: [PATCH 112/725] LSM: fix for security_inode_init_security and IMA
+Subject: [PATCH 112/728] LSM: fix for security_inode_init_security and IMA
 
 Correct the initialization of inodes with regard to IMA.
 
@@ -39,5 +39,5 @@ index e5818936782d..cf79a0760083 100644
  }
  EXPORT_SYMBOL(security_inode_init_security);
 -- 
-2.19.1
+2.19.2
 

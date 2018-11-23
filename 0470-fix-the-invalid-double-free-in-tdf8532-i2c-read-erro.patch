@@ -1,7 +1,7 @@
-From 4b56e8facbcededcdd3a57e0caca07ea01e0ac04 Mon Sep 17 00:00:00 2001
+From 4f04ae0d396377efa666ef19053f55bf64ca3507 Mon Sep 17 00:00:00 2001
 From: "he, bo" <bo.he@intel.com>
 Date: Sat, 29 Sep 2018 14:18:12 +0800
-Subject: [PATCH 470/725] fix the invalid double free in tdf8532 i2c read error
+Subject: [PATCH 470/728] fix the invalid double free in tdf8532 i2c read error
 
 tdf8532_single_read() is defined as return uint8_t, the error
 ret is defined as int, when it run into the error case,
@@ -32,5 +32,5 @@ index f306b597b42d..02e63f95512b 100644
  {
  	uint8_t ack_repl[HEADER_SIZE] = {0, 0, 0};
 -- 
-2.19.1
+2.19.2
 

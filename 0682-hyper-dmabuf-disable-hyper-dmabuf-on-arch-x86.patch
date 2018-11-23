@@ -1,7 +1,7 @@
-From 7eb6db4b6258c2dcdb405c062a19363e58b62918 Mon Sep 17 00:00:00 2001
+From 86d49a636540d79fd4a3e79d393677bfa7817860 Mon Sep 17 00:00:00 2001
 From: Wei Liu <weix.w.liu@intel.com>
 Date: Wed, 24 Oct 2018 10:25:38 +0800
-Subject: [PATCH 682/725] hyper-dmabuf: disable hyper-dmabuf on arch x86
+Subject: [PATCH 682/728] hyper-dmabuf: disable hyper-dmabuf on arch x86
 
 Since hyper-dmabuf enabled treat warnings message as error.
 And the warnings will be generated when make target as i386.
@@ -28,5 +28,5 @@ index f15a8cdf9250..17ea5b8323da 100644
  if HYPER_DMABUF
  
 -- 
-2.19.1
+2.19.2
 

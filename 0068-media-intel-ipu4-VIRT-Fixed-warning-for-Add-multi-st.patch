@@ -1,7 +1,7 @@
-From 28db69aa9dc0ebeb539254b25730c71f529cd8e7 Mon Sep 17 00:00:00 2001
+From f446939adac851644cfc3a04f68cedbe09156425 Mon Sep 17 00:00:00 2001
 From: Ong Hock Yu <ong.hock.yu@intel.com>
 Date: Tue, 6 Nov 2018 18:59:34 +0000
-Subject: [PATCH 068/725] media: intel-ipu4: [VIRT] Fixed warning for "Add
+Subject: [PATCH 068/728] media: intel-ipu4: [VIRT] Fixed warning for "Add
  multi streaming support on guest OS" patch.
 
 Change-Id: I812a79ecb9f946dbf985d4595f1db42d7630877d
@@ -61,5 +61,5 @@ index 4359d7b99c70..cb642f41e4b6 100644
  		if (iov.iov_len != sizeof(struct ipu4_virtio_req)) {
  			if (iov.iov_len == sizeof(int)) {
 -- 
-2.19.1
+2.19.2
 

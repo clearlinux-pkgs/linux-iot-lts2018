@@ -1,7 +1,7 @@
-From de01c872dc808e630df4764d3ddae1fd6c617247 Mon Sep 17 00:00:00 2001
+From cd5a6f2b1d484b696432abd92c8d00e0755c0fd8 Mon Sep 17 00:00:00 2001
 From: Shreyas NC <shreyas.nc@intel.com>
 Date: Wed, 8 Mar 2017 03:09:33 +0530
-Subject: [PATCH 310/725] ASoC: Intel: Skylake: Parse tokens to support
+Subject: [PATCH 310/728] ASoC: Intel: Skylake: Parse tokens to support
  aggregation
 
 To support aggregation, we need to parse the aggregation
@@ -64,5 +64,5 @@ index 629f420b58de..711629143aa3 100644
  		mconfig->dma_buffer_size = tkn_elem->value;
  		break;
 -- 
-2.19.1
+2.19.2
 

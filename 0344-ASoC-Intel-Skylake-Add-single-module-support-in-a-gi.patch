@@ -1,7 +1,7 @@
-From 35d12fb8b696aee6689d9ee52776153deb6309d2 Mon Sep 17 00:00:00 2001
+From f279d64c839e0eff98e8d0c74c059b90ebdac92d Mon Sep 17 00:00:00 2001
 From: "Diwakar, Praveen" <praveen.diwakar@intel.com>
 Date: Tue, 25 Apr 2017 06:24:38 +0530
-Subject: [PATCH 344/725] ASoC: Intel: Skylake: Add single module support in a
+Subject: [PATCH 344/728] ASoC: Intel: Skylake: Add single module support in a
  given pipeline
 
 Single pipeline module will be modelled as PGA leaf. Decision to model
@@ -225,5 +225,5 @@ index adf35fa0d75c..0c6b5c6b9c99 100644
  #define MAX_TS_GROUPS 8
  #define MAX_DMIC_TS_GROUPS 4
 -- 
-2.19.1
+2.19.2
 

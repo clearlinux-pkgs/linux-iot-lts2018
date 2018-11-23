@@ -1,7 +1,7 @@
-From e16fbf33ef0cda4218bb1b18e11991af7a4acf91 Mon Sep 17 00:00:00 2001
+From 85193d98a6d5378c40d2a76c3024f24b81a85ffc Mon Sep 17 00:00:00 2001
 From: Yael Samet <yael.samet@intel.com>
 Date: Mon, 14 Aug 2017 11:27:26 +0300
-Subject: [PATCH 173/725] mei: dal: add bh plugin code
+Subject: [PATCH 173/728] mei: dal: add bh plugin code
 
 bh plugin defines and implements the protocol of managing applets in DAL.
 (view to bh_command_id enum for all options)
@@ -1898,5 +1898,5 @@ index 000000000000..e50065b647e0
 +void bh_prep_session_close_cmd(void *cmdbuf, u64 ta_session_id);
 +#endif /* __BH_INTERNAL_H */
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From e57bd3d58b8d83250ed00e5bc31edcd2832cddf5 Mon Sep 17 00:00:00 2001
+From 97ab14a93d9e2bf3dfdf6d532c4ec964acfc1932 Mon Sep 17 00:00:00 2001
 From: Vinod Koul <vinod.koul@intel.com>
 Date: Wed, 17 Jan 2018 09:56:04 +0530
-Subject: [PATCH 424/725] ASoC: Intel: kconfig: Make drivers build on x86 only
+Subject: [PATCH 424/728] ASoC: Intel: kconfig: Make drivers build on x86 only
 
 The drivers are designed to build and run for X86 arch only. The current
 depends on ACPI was okay earlier but now we have ACPI on non X86 systems too
@@ -50,5 +50,5 @@ index c08d87821c9f..e6334dda6237 100644
  	select SND_HDA_DSP_LOADER
  	select SND_SOC_TOPOLOGY
 -- 
-2.19.1
+2.19.2
 

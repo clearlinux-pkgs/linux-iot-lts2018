@@ -1,7 +1,7 @@
-From 58383945f3b969801860676c1e60c77706a48eec Mon Sep 17 00:00:00 2001
+From ec1e3d59820580e686ceb724956783b6b0233673 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 4 Jan 2017 14:14:21 +0200
-Subject: [PATCH 024/725] scsi: ufs: revamp string descriptor reading
+Subject: [PATCH 024/728] scsi: ufs: revamp string descriptor reading
 
 Define new a type: uc_string_id for easier string
 handling and less casting. Reduce number or string
@@ -361,5 +361,5 @@ index 33fdd3f281ae..c04bdbb1ea57 100644
  int ufshcd_hold(struct ufs_hba *hba, bool async);
  void ufshcd_release(struct ufs_hba *hba);
 -- 
-2.19.1
+2.19.2
 

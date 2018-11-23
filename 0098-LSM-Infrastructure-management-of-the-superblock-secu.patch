@@ -1,7 +1,7 @@
-From 8d699db470586334707c58f1603522815815fa1f Mon Sep 17 00:00:00 2001
+From 397a974ef06bbac2c45c96f95cc69fa8a944b4a3 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 10 May 2018 14:25:23 -0700
-Subject: [PATCH 098/725] LSM: Infrastructure management of the superblock
+Subject: [PATCH 098/728] LSM: Infrastructure management of the superblock
  security blob
 
 Move management of the superblock->sb_security blob out
@@ -475,5 +475,5 @@ index 6617abb51732..472d1a993533 100644
  	LSM_HOOK_INIT(sb_kern_mount, smack_sb_kern_mount),
  	LSM_HOOK_INIT(sb_statfs, smack_sb_statfs),
 -- 
-2.19.1
+2.19.2
 

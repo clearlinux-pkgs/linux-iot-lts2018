@@ -1,7 +1,7 @@
-From 82b3879af9b01935774de57f89fcacc92f453039 Mon Sep 17 00:00:00 2001
+From 1cca9b8d91bbace7d1560883d2b4d1378209fa48 Mon Sep 17 00:00:00 2001
 From: "Pawse, GuruprasadX" <guruprasadx.pawse@intel.com>
 Date: Wed, 11 Jan 2017 18:43:31 +0530
-Subject: [PATCH 299/725] ASoC: Intel: Add Icelake machine id to use WM8281
+Subject: [PATCH 299/728] ASoC: Intel: Add Icelake machine id to use WM8281
 
 Icelake supports WM8281 codec as well, hence updating
 the machine id list.
@@ -36,5 +36,5 @@ index 9bcd376ec445..dbff367fb3d0 100644
  	{
  		.id = "dummy",
 -- 
-2.19.1
+2.19.2
 

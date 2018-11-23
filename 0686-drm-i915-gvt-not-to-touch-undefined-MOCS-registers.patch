@@ -1,7 +1,7 @@
-From 7f5b3d7b5e61d5c84037b3af20897d6c6bec37f8 Mon Sep 17 00:00:00 2001
+From 56fedb594dd713c6bf6d236b7fb21f98feafcecb Mon Sep 17 00:00:00 2001
 From: Xinyun Liu <xinyun.liu@intel.com>
 Date: Mon, 29 Oct 2018 10:02:48 +0800
-Subject: [PATCH 686/725] drm/i915/gvt: not to touch undefined MOCS registers
+Subject: [PATCH 686/728] drm/i915/gvt: not to touch undefined MOCS registers
 
 Some engines are not available for all Gens, so need to add check before
 access them.
@@ -27,5 +27,5 @@ index dc0a14729b88..4e99cd0e4fbe 100644
  		for (i = 0; i < GEN9_MOCS_SIZE; i++) {
  			gen9_render_mocs.control_table[ring_id][i] =
 -- 
-2.19.1
+2.19.2
 

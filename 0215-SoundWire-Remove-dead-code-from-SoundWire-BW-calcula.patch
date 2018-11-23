@@ -1,7 +1,7 @@
-From df238210336f69ce19e947e79bc447e35c7eff03 Mon Sep 17 00:00:00 2001
+From a6351329991f68a2e27cdd80148939f6e4fa0ca6 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Sun, 20 Nov 2016 20:18:36 +0530
-Subject: [PATCH 215/725] SoundWire: Remove dead code from SoundWire BW
+Subject: [PATCH 215/728] SoundWire: Remove dead code from SoundWire BW
  calculation
 
 Remove some of the dead code from SoundWire BW calculation
@@ -64,5 +64,5 @@ index b76ace3b0de7..ea080f101d0f 100644
  		mstr_rt_strm->rt_state = SDW_STATE_ENABLE_RT;
  	else if (!chn_en->is_bank_sw)
 -- 
-2.19.1
+2.19.2
 

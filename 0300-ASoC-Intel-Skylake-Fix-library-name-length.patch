@@ -1,7 +1,7 @@
-From a8d862b1586a3fa3b6ecd4612084d0cbe727b8ce Mon Sep 17 00:00:00 2001
+From 3e47b995fe52c0a8adef7e54d482186c48d50700 Mon Sep 17 00:00:00 2001
 From: Shreyas NC <shreyas.nc@intel.com>
 Date: Wed, 15 Feb 2017 06:04:04 +0530
-Subject: [PATCH 300/725] ASoC: Intel: Skylake: Fix library name length
+Subject: [PATCH 300/728] ASoC: Intel: Skylake: Fix library name length
 
 Topology framework allows a maximum string length of 44 bytes.
 
@@ -32,5 +32,5 @@ index 0cde541f900c..6c037d2c8a3c 100644
  
  struct skl_lib_info {
 -- 
-2.19.1
+2.19.2
 

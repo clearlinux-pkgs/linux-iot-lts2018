@@ -1,7 +1,7 @@
-From 68608e58e78b4f6c23ccbba6f952e998640bdd49 Mon Sep 17 00:00:00 2001
+From 88023891baaeac7b54caeae27ff07ba52a0c3705 Mon Sep 17 00:00:00 2001
 From: Hao Li <hao.l.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:59 +0800
-Subject: [PATCH 523/725] api doc: update ACRN VBS API docs
+Subject: [PATCH 523/728] api doc: update ACRN VBS API docs
 
 Change-Id: I9e56502a114019297ac04d7e8a2a07230e7adcfe
 Tracked-On: 220254
@@ -79,5 +79,5 @@ index 9e865b8dff05..647466567db4 100644
  void virtio_vq_endchains(struct virtio_vq_info *vq, int used_all_avail);
  
 -- 
-2.19.1
+2.19.2
 

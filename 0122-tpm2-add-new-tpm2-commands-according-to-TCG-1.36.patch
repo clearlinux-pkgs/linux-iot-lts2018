@@ -1,7 +1,7 @@
-From 42950680e7f8e6c70328fd773e617487057dcc13 Mon Sep 17 00:00:00 2001
+From cec18600c76530b1856a768f442beb4fb64f01c2 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Thu, 1 Mar 2018 14:53:59 +0200
-Subject: [PATCH 122/725] tpm2: add new tpm2 commands according to TCG 1.36
+Subject: [PATCH 122/728] tpm2: add new tpm2 commands according to TCG 1.36
 
 1. TPM2_CC_LAST has moved from 182 to 193
 2. Convert tpm2_ordinal_duration from an array into a switch statement,
@@ -338,5 +338,5 @@ index 3acf4fd4e5a5..d26b439976bc 100644
   * tpm2_do_selftest() - ensure that all self tests have passed
   *
 -- 
-2.19.1
+2.19.2
 

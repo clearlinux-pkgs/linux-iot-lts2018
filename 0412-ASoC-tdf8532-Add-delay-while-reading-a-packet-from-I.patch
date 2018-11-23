@@ -1,7 +1,7 @@
-From de21a082b7914b0d096567166139dfb9714d102a Mon Sep 17 00:00:00 2001
+From 930b6fac2d578cf296d2e0e5316b4cbac2f5e3d9 Mon Sep 17 00:00:00 2001
 From: "Gogineni, GiribabuX" <giribabux.gogineni@intel.com>
 Date: Tue, 2 Jan 2018 23:53:39 +0530
-Subject: [PATCH 412/725] ASoC: tdf8532: Add delay while reading a packet from
+Subject: [PATCH 412/728] ASoC: tdf8532: Add delay while reading a packet from
  I2C
 
 While doing the continuous play and stop, the codec
@@ -35,5 +35,5 @@ index e723ffebed0f..a5e2a028338c 100644
  		ret = i2c_master_recv(dev_data->i2c, ack_repl, HEADER_SIZE);
  		if (ret < 0)
 -- 
-2.19.1
+2.19.2
 

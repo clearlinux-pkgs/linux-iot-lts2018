@@ -1,7 +1,7 @@
-From 4743c6ec5bb12226c139e875c1dfc00173ec66ad Mon Sep 17 00:00:00 2001
+From 4709069834dbd06d4e4acf47d31972604df34db5 Mon Sep 17 00:00:00 2001
 From: "R, Dharageswari" <dharageswari.r@intel.com>
 Date: Mon, 25 Dec 2017 07:07:11 +0530
-Subject: [PATCH 416/725] ASoC: Intel: Skylake: Fix the is_dsp_running() to
+Subject: [PATCH 416/728] ASoC: Intel: Skylake: Fix the is_dsp_running() to
  return core0 state
 
 DSP state is mainly dependent on the core0 state.
@@ -64,5 +64,5 @@ index 0b1cc44c901d..485c8b8c38a1 100644
  }
  EXPORT_SYMBOL_GPL(is_skl_dsp_running);
 -- 
-2.19.1
+2.19.2
 

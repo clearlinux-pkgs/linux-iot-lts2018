@@ -1,7 +1,7 @@
-From 5600ebd5f7ce9ae2f062e7701fbeba2760a576f9 Mon Sep 17 00:00:00 2001
+From e4aff501ba1115a6936b8d653009e1932f791568 Mon Sep 17 00:00:00 2001
 From: Badiuzzaman Iskhandar <badiuzzaman.azzarfan.bin.iskhandar@intel.com>
 Date: Tue, 9 Oct 2018 15:51:18 +0800
-Subject: [PATCH 696/725] MUST_REBASE [IOTG]: drm/i915: Allow late GuC/HuC
+Subject: [PATCH 696/728] MUST_REBASE [IOTG]: drm/i915: Allow late GuC/HuC
  loading
 
 This patch allows for the GuC and HuC to be loaded until the first
@@ -208,5 +208,5 @@ index 74bf76f3fddc..5ff877ed7b12 100644
  }
  
 -- 
-2.19.1
+2.19.2
 

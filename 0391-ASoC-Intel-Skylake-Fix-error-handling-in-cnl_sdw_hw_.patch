@@ -1,7 +1,7 @@
-From f608ae840ae620ebf1f567ea63f2fc2352196bd4 Mon Sep 17 00:00:00 2001
+From bbac0a24b4743e55465281de2dbc663e9e69e8f6 Mon Sep 17 00:00:00 2001
 From: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
 Date: Wed, 6 Sep 2017 14:04:58 +0530
-Subject: [PATCH 391/725] ASoC: Intel: Skylake: Fix error handling in
+Subject: [PATCH 391/728] ASoC: Intel: Skylake: Fix error handling in
  cnl_sdw_hw_params()
 
 There are bunch of error paths where allocated resources are not freed
@@ -110,5 +110,5 @@ index 955c952cc4bb..fb3186a5a35f 100644
  
  int cnl_sdw_hw_free(struct snd_pcm_substream *substream,
 -- 
-2.19.1
+2.19.2
 

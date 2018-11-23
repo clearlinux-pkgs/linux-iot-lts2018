@@ -1,7 +1,7 @@
-From 4edcfb818784217fe0560f8197e0240dc045650b Mon Sep 17 00:00:00 2001
+From 2c408644bcdb64ba13b34383b1dfe9218ab5a16f Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Fri, 14 Sep 2018 16:10:22 +0800
-Subject: [PATCH 667/725] drm/i915: to limit the supported modifiers for plane
+Subject: [PATCH 667/728] drm/i915: to limit the supported modifiers for plane
  restriction
 
 In GVT-g environment, to ensure all the OS's have enough DDB to
@@ -69,5 +69,5 @@ index e10a64a6265c..7b8e2c7c9f8d 100644
  	} else if (IS_VALLEYVIEW(dev_priv) || IS_CHERRYVIEW(dev_priv)) {
  		intel_plane->can_scale = false;
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 45f15fc75a1cc9be6909e9767e9d39abd689cbd9 Mon Sep 17 00:00:00 2001
+From efe482e52df361feb3f08ae332b0df4769edd01a Mon Sep 17 00:00:00 2001
 From: Zhang Yanmin <yanmin.zhang@intel.com>
 Date: Thu, 12 Apr 2018 16:42:28 +0530
-Subject: [PATCH 433/725] ASoC: Intel: Skylake: Set dsp cores off during
+Subject: [PATCH 433/728] ASoC: Intel: Skylake: Set dsp cores off during
  shutdown
 
 When the cores.usage_count is equal to 0, driver puts dsp cores to
@@ -60,5 +60,5 @@ index 29e6c5a22f51..a0d41441a7a4 100644
  		stream = stream_to_hdac_ext_stream(s);
  		snd_hdac_ext_stream_decouple(bus, stream, false);
 -- 
-2.19.1
+2.19.2
 

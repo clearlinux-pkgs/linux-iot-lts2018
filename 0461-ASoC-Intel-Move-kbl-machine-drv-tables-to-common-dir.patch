@@ -1,7 +1,7 @@
-From e6d07b1204014921c45c3c8f7c5544cfe54ba822 Mon Sep 17 00:00:00 2001
+From f75c8ba3eada752cd01ed0871431cf76fdbe044b Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Tue, 14 Aug 2018 12:02:26 +0200
-Subject: [PATCH 461/725] ASoC: Intel: Move kbl machine drv tables to common
+Subject: [PATCH 461/728] ASoC: Intel: Move kbl machine drv tables to common
  directory.
 
 Align with machine-drv-tables declaration model present on upstream.
@@ -132,5 +132,5 @@ index 6dc99d4961ae..f661ffc4a33a 100644
  	{
  		.id = "INT343A",
 -- 
-2.19.1
+2.19.2
 

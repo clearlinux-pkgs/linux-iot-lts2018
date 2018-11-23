@@ -1,7 +1,7 @@
-From 46f6d7383ac9eaf34f1ff6e200c8d1c504a41183 Mon Sep 17 00:00:00 2001
+From c4cb0f25cccd95fdac55adb5d06a15ac03ae8c51 Mon Sep 17 00:00:00 2001
 From: Shuo Liu <shuo.a.liu@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 555/725] vhm: use correct string length
+Subject: [PATCH 555/728] vhm: use correct string length
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -31,5 +31,5 @@ index c91a60598114..5cb15b5badd8 100644
  	INIT_LIST_HEAD(&client->range_list);
  	init_waitqueue_head(&client->wq);
 -- 
-2.19.1
+2.19.2
 

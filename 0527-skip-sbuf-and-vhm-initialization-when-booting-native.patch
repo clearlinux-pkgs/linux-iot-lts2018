@@ -1,7 +1,7 @@
-From 972dcf8dbf85d22c40af1c0d0867b2648c5e9261 Mon Sep 17 00:00:00 2001
+From 6549f13e546f038b39a276ea757e3a6f350d98e3 Mon Sep 17 00:00:00 2001
 From: Jack Ren <jack.ren@intel.com>
 Date: Fri, 31 Aug 2018 10:59:00 +0800
-Subject: [PATCH 527/725] skip sbuf and vhm initialization when booting
+Subject: [PATCH 527/728] skip sbuf and vhm initialization when booting
  natively
 
 Change-Id: Ib5cd72c208f6e7cc905418671cd655054132806f
@@ -56,5 +56,5 @@ index b724c9e7bce2..8590d69fa4e6 100644
  	if (hcall_get_api_version(virt_to_phys(&api_version)) < 0) {
  		pr_err("vhm: failed to get api version from Hypervisor !\n");
 -- 
-2.19.1
+2.19.2
 

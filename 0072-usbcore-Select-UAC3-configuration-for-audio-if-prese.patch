@@ -1,7 +1,7 @@
-From a45e411de91b349286dbc1731b2ba9c19de83bb4 Mon Sep 17 00:00:00 2001
+From 4d41905e010f3248790ca2e08ccc353ede9cb5ea Mon Sep 17 00:00:00 2001
 From: Saranya Gopal <saranya.gopal@intel.com>
 Date: Wed, 12 Sep 2018 01:03:57 +0530
-Subject: [PATCH 072/725] usbcore: Select UAC3 configuration for audio if
+Subject: [PATCH 072/728] usbcore: Select UAC3 configuration for audio if
  present
 
 USB audio class 3.0 specification introduced many significant
@@ -79,5 +79,5 @@ index bc8242bc4564..df38d5a32e95 100644
  		 * first interface is for a non-vendor-specific class.
  		 * Reason: Linux is more likely to have a class driver
 -- 
-2.19.1
+2.19.2
 

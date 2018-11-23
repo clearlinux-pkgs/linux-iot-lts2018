@@ -1,7 +1,7 @@
-From d237fe5afd72c50628ebf68e81891135f32d3ae9 Mon Sep 17 00:00:00 2001
+From 0440d318213b854e6a3d1203a09fe71845ad5536 Mon Sep 17 00:00:00 2001
 From: Xinyun Liu <xinyun.liu@intel.com>
 Date: Thu, 24 May 2018 11:52:44 +0800
-Subject: [PATCH 689/725] drm/i915/gvt: check msg length before use it
+Subject: [PATCH 689/728] drm/i915/gvt: check msg length before use it
 
 Spec said `Message Size` should be (0, 20]. Add check code and make
 static analysis happy also.
@@ -39,5 +39,5 @@ index fb690a4f55a0..c4bf4800f72f 100644
  		intel_dp_unpack_aux(vgpu_vreg(vgpu, offset + 4 + rxsize),
  				rxbuf + rxsize, msg_length - rxsize);
 -- 
-2.19.1
+2.19.2
 

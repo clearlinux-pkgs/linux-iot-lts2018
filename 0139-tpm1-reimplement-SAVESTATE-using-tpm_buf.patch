@@ -1,7 +1,7 @@
-From 0d2819bab5c2fb35f4ce8f4cd83c0104b9e21274 Mon Sep 17 00:00:00 2001
+From ff885f2b00cce3462f37e785b14aa9a59102a27f Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 16 Sep 2018 11:26:30 +0300
-Subject: [PATCH 139/725] tpm1: reimplement SAVESTATE using tpm_buf
+Subject: [PATCH 139/728] tpm1: reimplement SAVESTATE using tpm_buf
 
 In tpm1_pm_suspend() function reimplement,
 TPM_ORD_SAVESTATE comamnd using tpm_buf.
@@ -80,5 +80,5 @@ index 05b772477bac..d418a27a75e0 100644
  }
  
 -- 
-2.19.1
+2.19.2
 

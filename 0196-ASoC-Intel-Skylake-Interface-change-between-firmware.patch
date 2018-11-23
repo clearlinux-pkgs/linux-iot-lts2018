@@ -1,7 +1,7 @@
-From 61d48bf095fca2f72ecb904244342c35f861e3b6 Mon Sep 17 00:00:00 2001
+From 25d230eec815086117ef480e18c6862eaa360537 Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Thu, 10 Mar 2016 11:32:51 +0530
-Subject: [PATCH 196/725] ASoC: Intel: Skylake: Interface change between
+Subject: [PATCH 196/728] ASoC: Intel: Skylake: Interface change between
  firmware and driver.
 
 Copier interface changed between the firmware and driver.
@@ -29,5 +29,5 @@ index d94709ffd323..353c90cbd336 100644
  };
  
 -- 
-2.19.1
+2.19.2
 

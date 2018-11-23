@@ -1,7 +1,7 @@
-From f9d2622e783d954e9f30d14410e833e7c4c76b60 Mon Sep 17 00:00:00 2001
+From 3a52a5e780537fe4aa3e709a5e32a4288193972f Mon Sep 17 00:00:00 2001
 From: "Diwakar, Praveen" <praveen.diwakar@intel.com>
 Date: Tue, 6 Jun 2017 21:04:21 +0530
-Subject: [PATCH 346/725] ASoC: Intel: Skylake: Create SSP BE dais dynamically
+Subject: [PATCH 346/728] ASoC: Intel: Skylake: Create SSP BE dais dynamically
 
 This patch creates BE SSP dai dynamically, by getting SSP
 link information from NHLT.
@@ -334,5 +334,5 @@ index 01d54513b029..2883d86d56fe 100644
  void skl_nhlt_free(struct nhlt_acpi_table *addr);
  struct nhlt_specific_cfg *skl_get_ep_blob(struct skl *skl, u32 instance,
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From d681ce6b3a03836eb6732ff12e1f0278223cf902 Mon Sep 17 00:00:00 2001
+From 20eec4d86c28a3335be794e3aaf0e881022ebe65 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Thu, 20 Oct 2016 02:12:10 +0300
-Subject: [PATCH 149/725] mei: dma ring buffers allocation
+Subject: [PATCH 149/728] mei: dma ring buffers allocation
 
 Allocate DMA ring buffers from managed coherent memory.
 
@@ -216,5 +216,5 @@ index 377397e1b5a5..a6796e3f712b 100644
   *  MEI interrupt functions prototype
   */
 -- 
-2.19.1
+2.19.2
 

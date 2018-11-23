@@ -1,7 +1,7 @@
-From c225dce656a915de23404caf3cfe73cd9853e5c1 Mon Sep 17 00:00:00 2001
+From b0d0660063bd591b309f4501671e66cb143bbd0a Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:11 +0200
-Subject: [PATCH 006/725] x86/mm/cpa: Add debug mechanism
+Subject: [PATCH 006/728] x86/mm/cpa: Add debug mechanism
 
 The whole static protection magic is silently fixing up anything which is
 handed in. That's just wrong. The offending call sites need to be fixed.
@@ -133,5 +133,5 @@ index 61ff27848452..1f2519055b30 100644
  		new_prot = pgprot_clear_protnone_bits(new_prot);
  
 -- 
-2.19.1
+2.19.2
 

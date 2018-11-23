@@ -1,7 +1,7 @@
-From 4e0c051e10ad47ae1b0e064b3247e4ac870f2aa7 Mon Sep 17 00:00:00 2001
+From 8091d7cf7fd065e90a0c3c56f5b2eb2bd1700391 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Wed, 24 Oct 2018 14:30:40 +0300
-Subject: [PATCH 167/725] mei: bus: use zero vtag for bus clients.
+Subject: [PATCH 167/728] mei: bus: use zero vtag for bus clients.
 
 Once vtags are enabled a zero vtag is required
 for the read flow to work for also for devices on mei client bus.
@@ -176,5 +176,5 @@ index 7e6c3586cbcf..59a6a7a19621 100644
  
  		/* replace cl with acquired one */
 -- 
-2.19.1
+2.19.2
 

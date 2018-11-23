@@ -1,7 +1,7 @@
-From 1bf2a04d4438dfb09ba7a2d18e4de9ee9030b6fd Mon Sep 17 00:00:00 2001
+From 978683a4daddaff9e068cf18d059bb84ff50bd03 Mon Sep 17 00:00:00 2001
 From: "Huang, Yang" <yang.huang@intel.com>
 Date: Tue, 24 Jul 2018 13:52:54 +0800
-Subject: [PATCH 035/725] rpmb: add rpmb multiplexor kernel module
+Subject: [PATCH 035/728] rpmb: add rpmb multiplexor kernel module
 
 This module owns RPMB authentication key in ACRN SOS kernel.
 It receives the requests from SOS/DM and replaces with real
@@ -821,5 +821,5 @@ index 000000000000..55901197d0a5
 +MODULE_DESCRIPTION("RPMB Mux kernel module");
 +MODULE_LICENSE("Dual BSD/GPL");
 -- 
-2.19.1
+2.19.2
 

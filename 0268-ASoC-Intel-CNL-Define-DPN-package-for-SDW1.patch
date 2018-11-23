@@ -1,7 +1,7 @@
-From eca127d76a8d4ff6e860b2556db715b9cd9e8076 Mon Sep 17 00:00:00 2001
+From 3b2285b5e41a4100ba644b7843a34004bcf8944e Mon Sep 17 00:00:00 2001
 From: Anil Bhawangirkar <anil.k.bhawangirkar@intel.com>
 Date: Wed, 17 Aug 2016 12:23:35 +0530
-Subject: [PATCH 268/725] ASoC: Intel: CNL: Define DPN package for SDW1.
+Subject: [PATCH 268/728] ASoC: Intel: CNL: Define DPN package for SDW1.
 
 As DPN package entries are not defined in the BIOS for SoundWire
 device 1(SDW1), the capability data-port-type can not be mapped
@@ -38,5 +38,5 @@ index c5ad9fde2fed..18be70b87728 100644
  			dpn_cap->port_number = j;
  			dpn_cap->max_word_length = 32;
 -- 
-2.19.1
+2.19.2
 

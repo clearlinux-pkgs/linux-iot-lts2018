@@ -1,7 +1,7 @@
-From 4729e2f21db3a6b0bc5397ef105b7d7aebe7355f Mon Sep 17 00:00:00 2001
+From c18e15aa286ba770da238b7b3c4e43d01a8cf6ef Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:57 +0800
-Subject: [PATCH 504/725] ACRNTrace: add acrn trace module
+Subject: [PATCH 504/728] ACRNTrace: add acrn trace module
 
 Change-Id: I9bf3a0a13e411e15063eb50905875e86e5731d1b
 Tracked-On: https://rtc.intel.com/ccm0001001/resource/itemName/com.ibm.team.workitem.WorkItem/216912
@@ -341,5 +341,5 @@ index 000000000000..31470a3de6ac
 +MODULE_DESCRIPTION("Driver for the Intel ACRN Hypervisor Trace");
 +MODULE_VERSION("0.1");
 -- 
-2.19.1
+2.19.2
 

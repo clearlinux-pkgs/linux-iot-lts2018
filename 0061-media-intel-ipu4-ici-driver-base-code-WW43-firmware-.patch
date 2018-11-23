@@ -1,7 +1,7 @@
-From b962127337e006368a5934308b899c24e81a55aa Mon Sep 17 00:00:00 2001
+From d5eeca33bee1057634cecf634840d648aa1c9876 Mon Sep 17 00:00:00 2001
 From: "Yew, Chang Ching" <chang.ching.yew@intel.com>
 Date: Tue, 23 Oct 2018 13:23:05 +0800
-Subject: [PATCH 061/725] media: intel-ipu4: ici driver base code; WW43
+Subject: [PATCH 061/728] media: intel-ipu4: ici driver base code; WW43
  firmware f61e455.
 
 Base code for IPU ICI driver (Image Capture Interface).
@@ -8974,5 +8974,5 @@ index 000000000000..92cf555aabc8
 +
 +#endif // _UAPI_LINUX_ICI_H
 -- 
-2.19.1
+2.19.2
 

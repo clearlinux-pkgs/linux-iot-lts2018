@@ -1,7 +1,7 @@
-From 962d1d8929898ae0f57b82098e601ad268aeb199 Mon Sep 17 00:00:00 2001
+From 6d67c0feccbd6cb4bcea4d17d71d6827af32b862 Mon Sep 17 00:00:00 2001
 From: Felipe Balbi <felipe.balbi@linux.intel.com>
 Date: Wed, 1 Aug 2018 13:42:29 +0300
-Subject: [PATCH 079/725] usb: dwc3: gadget: extract dwc3_gadget_ep_skip_trbs()
+Subject: [PATCH 079/728] usb: dwc3: gadget: extract dwc3_gadget_ep_skip_trbs()
 
 Extract the logic for skipping over TRBs to its own function. This
 makes the code slightly more readable and makes it easier to move this
@@ -101,5 +101,5 @@ index e8efa7447ff6..e5cc41b3b20d 100644
  		}
  		dev_err(dwc->dev, "request %pK was not queued to %s\n",
 -- 
-2.19.1
+2.19.2
 

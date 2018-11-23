@@ -1,7 +1,7 @@
-From ce59082be0e78c1b9c4e99d5ba14d824110c90c3 Mon Sep 17 00:00:00 2001
+From b7dbf7875721754fecb8fe0aef20b3ec99ff7b0a Mon Sep 17 00:00:00 2001
 From: Jeremy Rocher <jeremy.rocher@intel.com>
 Date: Wed, 20 Jul 2016 10:00:44 +0200
-Subject: [PATCH 706/725] reboot: add reboot_panic parameter
+Subject: [PATCH 706/728] reboot: add reboot_panic parameter
 
 This "reboot_panic" kernel cmdline parameter allow to change the
 reboot mode in case of panic only. It use the same format as the
@@ -80,5 +80,5 @@ index 8fb44dec9ad7..ec0108927785 100644
 +}
 +__setup("reboot_panic=", reboot_panic_setup);
 -- 
-2.19.1
+2.19.2
 

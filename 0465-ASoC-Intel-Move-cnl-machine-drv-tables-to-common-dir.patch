@@ -1,7 +1,7 @@
-From 081934ce1342fd5f2d949a759ea1e56e927403ec Mon Sep 17 00:00:00 2001
+From 050c8beb287c559d076cc968531f846f38c0fea5 Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Tue, 14 Aug 2018 12:34:29 +0200
-Subject: [PATCH 465/725] ASoC: Intel: Move cnl machine drv tables to common
+Subject: [PATCH 465/728] ASoC: Intel: Move cnl machine drv tables to common
  directory.
 
 Align with machine-drv-tables declaration model present on upstream.
@@ -78,5 +78,5 @@ index efa24a9e58fe..31d214a0db85 100644
  static const struct pci_device_id skl_ids[] = {
  	/* Sunrise Point-LP */
 -- 
-2.19.1
+2.19.2
 

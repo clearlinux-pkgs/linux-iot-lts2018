@@ -1,7 +1,7 @@
-From 56e55444d8b27f78acf90e210ddd753bc32d5e0d Mon Sep 17 00:00:00 2001
+From d24d940cb37b884e0c2950f2a07350edfd119522 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Tue, 16 Oct 2018 14:13:40 +0300
-Subject: [PATCH 724/725] lib: Fix ia64 bootloader linkage
+Subject: [PATCH 724/728] lib: Fix ia64 bootloader linkage
 
 kbuild robot reports that since commit ce76d938dd98 ("lib: Add memcat_p():
 paste 2 pointer arrays together") the ia64/hp/sim/boot fails to link:
@@ -142,5 +142,5 @@ index 2b163a749ecb..849c477d49d0 100644
  #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
  
 -- 
-2.19.1
+2.19.2
 

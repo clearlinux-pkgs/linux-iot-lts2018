@@ -1,7 +1,7 @@
-From e93d7cc1f755e1f8efa993677bf6f977218fb1b5 Mon Sep 17 00:00:00 2001
+From d9ffe00a6cb0f87ba99bd136ceff9ed98f1de1c6 Mon Sep 17 00:00:00 2001
 From: Zhao Yakui <yakui.zhao@intel.com>
 Date: Fri, 14 Sep 2018 16:10:20 +0800
-Subject: [PATCH 621/725] drm/i915: Use 64-bit write to optimize writing
+Subject: [PATCH 621/728] drm/i915: Use 64-bit write to optimize writing
  fence_reg
 
 On VGPU scenario the read/write operation of fence_reg will be trapped
@@ -55,5 +55,5 @@ index d548ac05ccd7..317e376cc2da 100644
  		 * we split the 64-bit update into two 32-bit writes. In order
  		 * for a partial fence not to be evaluated between writes, we
 -- 
-2.19.1
+2.19.2
 

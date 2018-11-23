@@ -1,7 +1,7 @@
-From 10e0be4afeef6fb9d1df9ab995da71ffc177b297 Mon Sep 17 00:00:00 2001
+From 6d2e6aedf72a33b79ccd55d8362606be06b324e7 Mon Sep 17 00:00:00 2001
 From: Shahina Shaik <shahinax.shaik@intel.com>
 Date: Mon, 30 Apr 2018 18:47:02 +0530
-Subject: [PATCH 432/725] ASoC: Intel: Boards: Replace codec to component in
+Subject: [PATCH 432/728] ASoC: Intel: Boards: Replace codec to component in
  RT274 machine driver
 
 As the framework is changed in kernel 4.17 version,
@@ -37,5 +37,5 @@ index 5570474806ab..890e474ce597 100644
  	/* TDM 4 slots 24 bit, set Rx & Tx bitmask to 4 active slots */
  	ret = snd_soc_dai_set_tdm_slot(codec_dai, 0xF, 0xF, 4, 24);
 -- 
-2.19.1
+2.19.2
 

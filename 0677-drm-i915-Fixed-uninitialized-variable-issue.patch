@@ -1,7 +1,7 @@
-From 4b470df2cdc57426305a75d2b930a26601cd56f7 Mon Sep 17 00:00:00 2001
+From 953091034866af832e7ad38775bb6ab7e2594179 Mon Sep 17 00:00:00 2001
 From: Satyeshwar Singh <satyeshwar.singh@intel.com>
 Date: Sun, 14 Oct 2018 16:40:07 -0700
-Subject: [PATCH 677/725] drm/i915: Fixed uninitialized variable issue
+Subject: [PATCH 677/728] drm/i915: Fixed uninitialized variable issue
 
 There could be a circumstance in which ret may not be initialized
 and checking for its value may yield unexpected results.
@@ -27,5 +27,5 @@ index 695a97bed66a..5d2bf527cda2 100644
  		if (!i915_modparams.avail_planes_per_pipe) {
  			ret = intel_crtc_init(dev_priv, pipe);
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 358a6263d1bb01fdd96285553350c6f1403f848b Mon Sep 17 00:00:00 2001
+From 829d3b13073ec2924321176ded90ce1358da1251 Mon Sep 17 00:00:00 2001
 From: Ramesh Babu <ramesh.babu@intel.com>
 Date: Mon, 2 Nov 2015 07:06:38 +0530
-Subject: [PATCH 233/725] WORKAROUND: Remove size check for DMIC blob
+Subject: [PATCH 233/728] WORKAROUND: Remove size check for DMIC blob
 
 Change-Id: Ic7c70d4f0b1bf137c8bfbfbb9ef9962fdad8daf9
 Signed-off-by: Ramesh Babu <ramesh.babu@intel.com>
@@ -25,5 +25,5 @@ index 52b65bb096ab..f9db7ea363ef 100644
  		/* allocate mem for blob */
  		blob->cfg = kzalloc(count, GFP_KERNEL);
 -- 
-2.19.1
+2.19.2
 

@@ -27,7 +27,7 @@ Source3:        cmdline-iot-lts2018
 Source4:        cmdline-iot-lts2018-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
-# quilt:  mainline-tracking-v4.19-181109T214049Z
+# quilt:  4.19/lts/base-v4.19-181115T003542Z
 # config: mainline-tracking-v4.19-181106T233210Z
 
 %define ktarget0 iot-lts2018
@@ -769,7 +769,10 @@ Patch0721: 0721-stm-class-heartbeat-Fix-whitespace.patch
 Patch0722: 0722-lib-Add-memcat_p-paste-2-pointer-arrays-together.patch
 Patch0723: 0723-stm-class-Use-memcat_p.patch
 Patch0724: 0724-lib-Fix-ia64-bootloader-linkage.patch
-Patch0725: 0725-test-configs-use-for-clean-and-android-bare-metal-BA.patch
+Patch0725: 0725-platform-x86-add-sep-and-socwatch-drivers-without-so.patch
+Patch0726: 0726-Fix-for-socwatch-build-error-that-occurs-if-CONFIG_T.patch
+Patch0727: 0727-SEP-some-cleanup.patch
+Patch0728: 0728-test-configs-use-for-clean-and-android-bare-metal-BA.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1524,6 +1527,9 @@ Linux kernel extra files
 %patch0723 -p1
 %patch0724 -p1
 %patch0725 -p1
+%patch0726 -p1
+%patch0727 -p1
+%patch0728 -p1
 # End XXXX PK Series
 
 # Clear Linux Series

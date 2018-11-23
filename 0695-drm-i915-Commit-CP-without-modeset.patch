@@ -1,7 +1,7 @@
-From b152e3acddc6dba933b22f1f4f895bd5776f5e16 Mon Sep 17 00:00:00 2001
+From 6951d066263468fcaae011ede876065237e4717f Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Wed, 19 Sep 2018 14:18:50 +0800
-Subject: [PATCH 695/725] drm/i915: Commit CP without modeset
+Subject: [PATCH 695/728] drm/i915: Commit CP without modeset
 
 This patch commits the content protection change of a connector,
 without crtc modeset.
@@ -148,5 +148,5 @@ index ea938b9146b0..7f87667753b3 100644
  
  /* Implements Part 3 of the HDCP authorization procedure */
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 249cb872358cd4ab09658b3b1ef34724cfd4f6c6 Mon Sep 17 00:00:00 2001
+From b3c9443fbef40158803075521a84e48c5dd8ae2e Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Mon, 13 Aug 2018 15:29:19 +0200
-Subject: [PATCH 459/725] ASoC: Intel: Skylake: Align with v4.18-rc1 linux
+Subject: [PATCH 459/728] ASoC: Intel: Skylake: Align with v4.18-rc1 linux
  kernel base.
 
 File skl-tplg-interface.h no longer present, relocated to uapi.
@@ -40,5 +40,5 @@ index e86b84e9868d..c0ef5e78dbfa 100644
  			unsigned int __user *data, unsigned int size);
  struct snd_kcontrol *skl_search_notify_kctl(struct skl_sst *skl,
 -- 
-2.19.1
+2.19.2
 

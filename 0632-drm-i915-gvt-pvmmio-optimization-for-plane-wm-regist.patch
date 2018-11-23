@@ -1,7 +1,7 @@
-From 5dcda36ddccaa3335e85db5e94f5eb8b7c17a792 Mon Sep 17 00:00:00 2001
+From 27ac73aeedf16143adb3d82af310e2f9d02aae2e Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Wed, 29 Aug 2018 11:49:44 +0800
-Subject: [PATCH 632/725] drm/i915/gvt: pvmmio optimization for plane wm
+Subject: [PATCH 632/728] drm/i915/gvt: pvmmio optimization for plane wm
  register update
 
 It is performance optimization to reduce plane wm related register trap
@@ -159,5 +159,5 @@ index 01d0f4d3653a..affd3e821687 100644
  		skl_write_wm_level(dev_priv, PLANE_WM(pipe, plane_id, level),
  				   &wm->wm[level]);
 -- 
-2.19.1
+2.19.2
 

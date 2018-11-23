@@ -1,7 +1,7 @@
-From cdc03e7fcb90acaa29aebc27bb0c9d938bde8225 Mon Sep 17 00:00:00 2001
+From bdeb49278741d6947637fc634b92770915ca608a Mon Sep 17 00:00:00 2001
 From: Omair M Abdullah <omair.m.abdullah@intel.com>
 Date: Tue, 15 Sep 2015 17:46:57 +0530
-Subject: [PATCH 232/725] ASoC: Intel: Skylake: add ssp blob override support
+Subject: [PATCH 232/728] ASoC: Intel: Skylake: add ssp blob override support
  for capture
 
 Capture on SSP can have different blob, so add support for different blobs for
@@ -113,5 +113,5 @@ index 05561be0efe6..4056ea3de714 100644
  	return NULL;
  }
 -- 
-2.19.1
+2.19.2
 

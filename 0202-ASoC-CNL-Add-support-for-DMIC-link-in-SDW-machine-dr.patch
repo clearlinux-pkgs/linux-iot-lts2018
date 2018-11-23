@@ -1,7 +1,7 @@
-From d864733cac91bfbbf83f99bd439f590b27093640 Mon Sep 17 00:00:00 2001
+From 20cbfc51c5c21eba01520ba424be8ff5deabc45f Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Thu, 17 Mar 2016 17:44:39 +0530
-Subject: [PATCH 202/725] ASoC:CNL: Add support for DMIC link in SDW machine
+Subject: [PATCH 202/728] ASoC:CNL: Add support for DMIC link in SDW machine
  driver.
 
 Add support for DMIC link in the SoundWire machine driver.
@@ -52,5 +52,5 @@ index 78fb9cc1389e..879aa4e552f3 100644
  	{
  		.name = "Bxtn Audio Port",
 -- 
-2.19.1
+2.19.2
 

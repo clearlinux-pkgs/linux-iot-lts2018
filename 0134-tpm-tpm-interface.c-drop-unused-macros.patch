@@ -1,7 +1,7 @@
-From eaf3b3b75b395786c30dc8148178276f688ca74e Mon Sep 17 00:00:00 2001
+From b3ff344ff126aafe1918ad90f3cecaccb77f48a9 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sat, 15 Sep 2018 22:06:46 +0300
-Subject: [PATCH 134/725] tpm: tpm-interface.c drop unused macros
+Subject: [PATCH 134/728] tpm: tpm-interface.c drop unused macros
 
 The commit:
 "tpm_tis: further simplify calculation of ordinal duration"
@@ -39,5 +39,5 @@ index 69e007a198ce..ba50554e34d3 100644
   * Bug workaround - some TPM's don't flush the most
   * recently changed pcr on suspend, so force the flush
 -- 
-2.19.1
+2.19.2
 

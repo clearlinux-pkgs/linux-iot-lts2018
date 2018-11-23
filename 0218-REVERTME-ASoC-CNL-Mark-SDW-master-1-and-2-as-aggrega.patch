@@ -1,7 +1,7 @@
-From 5e2c0e2a18e652a7760ab6f8745c8a9766314955 Mon Sep 17 00:00:00 2001
+From d9a124d2eac49dd277b2f7756b83ef8b24f528ef Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Fri, 29 Apr 2016 16:41:26 +0530
-Subject: [PATCH 218/725] REVERTME:ASoC:CNL: Mark SDW master 1 and 2 as
+Subject: [PATCH 218/728] REVERTME:ASoC:CNL: Mark SDW master 1 and 2 as
  aggregated.
 
 This patch is to to test the aggregation. Mark the master1
@@ -49,5 +49,5 @@ index e4d531680a5a..0caf9bf070a3 100644
  		case 2:
  			p_data->sdw_regs = mmio_base + CNL_SDW_LINK_2_BASE;
 -- 
-2.19.1
+2.19.2
 

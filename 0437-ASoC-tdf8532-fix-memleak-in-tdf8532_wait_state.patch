@@ -1,7 +1,7 @@
-From 3b849cf5302092fd3582d8e327e142a36250c2b5 Mon Sep 17 00:00:00 2001
+From 6ca4e16fd4d02a95d0973322a1f6590f54f588e6 Mon Sep 17 00:00:00 2001
 From: Liu Changcheng <changcheng.liu@intel.com>
 Date: Fri, 11 May 2018 17:24:01 +0800
-Subject: [PATCH 437/725] ASoC: tdf8532: fix memleak in tdf8532_wait_state
+Subject: [PATCH 437/728] ASoC: tdf8532: fix memleak in tdf8532_wait_state
 
 Fix kmemleak issue in tdf8532_wait_state function by releasing
 the memory getting allocated continuosly in instance of get_dev_status_repl
@@ -82,5 +82,5 @@ index a5e2a028338c..dd4cebec5cf9 100644
  }
  
 -- 
-2.19.1
+2.19.2
 

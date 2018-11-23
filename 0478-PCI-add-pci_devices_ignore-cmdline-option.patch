@@ -1,7 +1,7 @@
-From e293a20bdae56f7ef1f69d75158435626cf73320 Mon Sep 17 00:00:00 2001
+From 70bb7526d019f1d5d962753a02a93d6cbd4f5675 Mon Sep 17 00:00:00 2001
 From: Yonghua Huang <yonghua.huang@intel.com>
 Date: Fri, 31 Aug 2018 10:58:54 +0800
-Subject: [PATCH 478/725] PCI: add pci_devices_ignore cmdline option
+Subject: [PATCH 478/728] PCI: add pci_devices_ignore cmdline option
 
 some PCI devices may be occupied by hypervisor and do not want to
 enable in linux guest.
@@ -108,5 +108,5 @@ index 201f9e5ff55c..b9dda363aea6 100644
  	if (!dev)
  		return NULL;
 -- 
-2.19.1
+2.19.2
 

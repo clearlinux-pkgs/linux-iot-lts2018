@@ -1,7 +1,7 @@
-From b5d573cc91be28b04b8b03c5c3759def3c773775 Mon Sep 17 00:00:00 2001
+From 7c29269e1070399d7206ca2233afd88f62f3d279 Mon Sep 17 00:00:00 2001
 From: liang ding <liang.ding@intel.com>
 Date: Fri, 29 Dec 2017 16:38:20 +0800
-Subject: [PATCH 484/725] VHM: add interrupt injection support
+Subject: [PATCH 484/728] VHM: add interrupt injection support
 
 VHM provides interrupt injection service for emulated devices.
 this patch added interrupt injection support APIs.
@@ -288,5 +288,5 @@ index eb410024157f..fb02c00ec5e2 100644
  void vm_list_add(struct list_head *list);
  void vm_mutex_lock(struct mutex *mlock);
 -- 
-2.19.1
+2.19.2
 

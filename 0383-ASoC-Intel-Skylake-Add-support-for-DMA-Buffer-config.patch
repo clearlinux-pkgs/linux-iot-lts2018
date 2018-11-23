@@ -1,7 +1,7 @@
-From fc451fc6c62066add39b6d563ede2d702bff9df5 Mon Sep 17 00:00:00 2001
+From d6073a28586cdfef122f0cc4db3b646d5daa2a54 Mon Sep 17 00:00:00 2001
 From: Pardha Saradhi K <pardha.saradhi.kesapragada@intel.com>
 Date: Tue, 5 Sep 2017 19:57:00 +0530
-Subject: [PATCH 383/725] ASoC: Intel: Skylake: Add support for DMA Buffer
+Subject: [PATCH 383/728] ASoC: Intel: Skylake: Add support for DMA Buffer
  configuration
 
 DMA buffer configuration is to manage the HW Buffers
@@ -250,5 +250,5 @@ index 318b3c54c44e..c8a2c27d971d 100644
  	struct skl_astate_config *astate_cfg;
  };
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 4d974e854be1c7a2f650697a1377271327a5de4e Mon Sep 17 00:00:00 2001
+From 49c9ada72ec5c6a115c210c02637621221374cc2 Mon Sep 17 00:00:00 2001
 From: "R, Dharageswari" <dharageswari.r@intel.com>
 Date: Mon, 25 Dec 2017 07:17:03 +0530
-Subject: [PATCH 417/725] ASoC: Intel: Skylake: Avoid sending IPCs during the
+Subject: [PATCH 417/728] ASoC: Intel: Skylake: Avoid sending IPCs during the
  crash recovery
 
 Stream is put to suspend as a part of firmware crash recovery. This in
@@ -64,5 +64,5 @@ index 8026abf99ae8..c09f03c9da4d 100644
  	}
  
 -- 
-2.19.1
+2.19.2
 

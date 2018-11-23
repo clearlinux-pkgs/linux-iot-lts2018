@@ -1,7 +1,7 @@
-From 559dc7229f9a4237fd6aa4e35981c8368955c4f2 Mon Sep 17 00:00:00 2001
+From 79e72acd613e9fc0ede07cd590ed292074475343 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:58:55 +0800
-Subject: [PATCH 488/725] x86:acrn: add write_msi pv ops to intercept pci msi
+Subject: [PATCH 488/728] x86:acrn: add write_msi pv ops to intercept pci msi
  write with pv method
 
 added pv ops write_msi into pv_irq_ops, the function write_msi_msg_paravirt
@@ -404,5 +404,5 @@ index 000000000000..059e97a0e543
 +
 +#endif
 -- 
-2.19.1
+2.19.2
 

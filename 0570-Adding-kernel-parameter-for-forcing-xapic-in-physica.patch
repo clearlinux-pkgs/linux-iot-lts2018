@@ -1,7 +1,7 @@
-From 4af6dc50a5fa6280f6f61cb4a416b5e922223576 Mon Sep 17 00:00:00 2001
+From ad159d895f1d2fd778ce77a3042eaf673a430cfe Mon Sep 17 00:00:00 2001
 From: Sainath Grandhi <sainath.grandhi@intel.com>
 Date: Thu, 13 Sep 2018 16:14:53 +0800
-Subject: [PATCH 570/725] Adding kernel parameter for forcing xapic in physical
+Subject: [PATCH 570/728] Adding kernel parameter for forcing xapic in physical
  mode
 
 This patch does the following
@@ -46,5 +46,5 @@ index e84c9eb4e5b4..9ba0ac0c8c1f 100644
  	    jailhouse_paravirt())
  		return 1;
 -- 
-2.19.1
+2.19.2
 

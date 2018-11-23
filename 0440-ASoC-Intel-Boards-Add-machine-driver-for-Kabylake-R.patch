@@ -1,7 +1,7 @@
-From 6dd5272f55f29f3ee5885eaf3d1eb98f7c5baeb9 Mon Sep 17 00:00:00 2001
+From 9f714be1384eb0b36cf4db9cce0149bfa426f2fc Mon Sep 17 00:00:00 2001
 From: Puneeth Prabhu <puneethx.prabhu@intel.com>
 Date: Wed, 31 Jan 2018 12:31:27 +0530
-Subject: [PATCH 440/725] ASoC: Intel: Boards: Add machine driver for Kabylake
+Subject: [PATCH 440/728] ASoC: Intel: Boards: Add machine driver for Kabylake
  R
 
 This patch adds I2S machine driver for Kabylake R platform
@@ -616,5 +616,5 @@ index 000000000000..1007e0239bb9
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:kblr_alc298s_i2s");
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From f717b23dad985ac9bb8c9cd59bd8838a0bbf7758 Mon Sep 17 00:00:00 2001
+From 9dbd142bac1661655a6362f896ed0c34c6e9e6a5 Mon Sep 17 00:00:00 2001
 From: Mousumi Jana <mousumix.jana@intel.com>
 Date: Thu, 20 Jul 2017 16:39:00 +0530
-Subject: [PATCH 370/725] ASoC: Intel: Skylake: Notify topology changes
+Subject: [PATCH 370/728] ASoC: Intel: Skylake: Notify topology changes
 
 Some events like pipeline start, pipeline delete, DSP D0/D3
 need to be notified to the user in order to convey a
@@ -353,5 +353,5 @@ index b3a15ed76122..ce4069607dda 100644
 +			unsigned int __user *data, unsigned int size);
  #endif
 -- 
-2.19.1
+2.19.2
 

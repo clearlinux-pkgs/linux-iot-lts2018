@@ -1,7 +1,7 @@
-From ee461e83b5fba250bd81d9f8e98bee8f066013a4 Mon Sep 17 00:00:00 2001
+From 9949ae7ac6ff2db0c6cbff2f868cc3d1b69c5e1f Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:58:58 +0800
-Subject: [PATCH 510/725] VHM: sync public header file acrn_common.h
+Subject: [PATCH 510/728] VHM: sync public header file acrn_common.h
 
 Change-Id: I1e0ac4d26b22cda4d1db81a83dca8d8806405a8c
 Tracked-On: 212688
@@ -38,5 +38,5 @@ index a6f46648c853..f27feb7a3e57 100644
 +
  #endif /* ACRN_COMMON_H */
 -- 
-2.19.1
+2.19.2
 

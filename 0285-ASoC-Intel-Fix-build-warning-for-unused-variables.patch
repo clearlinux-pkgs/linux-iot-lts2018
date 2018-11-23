@@ -1,7 +1,7 @@
-From a777fadbbbfca310d0f0477993259badf3e5c9ca Mon Sep 17 00:00:00 2001
+From d3d8620b543fe2dd1db01bcefdc8aba377cb04fc Mon Sep 17 00:00:00 2001
 From: Jaikrishna Nemallapudi <jaikrishnax.nemallapudi@intel.com>
 Date: Wed, 14 Dec 2016 17:12:45 +0530
-Subject: [PATCH 285/725] ASoC: Intel: Fix build warning for unused variables
+Subject: [PATCH 285/728] ASoC: Intel: Fix build warning for unused variables
 
 This patch initialize uninitialized variables reported as build warnings.
 
@@ -133,5 +133,5 @@ index e4eb58c7a747..41f0d77f470b 100644
  	/* Turned OFF in HDMI codec driver after codec reconfiguration */
  	if (IS_ENABLED(CONFIG_SND_SOC_HDAC_HDMI)) {
 -- 
-2.19.1
+2.19.2
 

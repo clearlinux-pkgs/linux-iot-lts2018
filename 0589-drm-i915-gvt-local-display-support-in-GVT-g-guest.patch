@@ -1,7 +1,7 @@
-From d36fae431685cbcfeb17122c5439e717b26283b3 Mon Sep 17 00:00:00 2001
+From 36360a1de2fda34fb3c7ab3bad93fc797ab4bcf5 Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Thu, 28 Dec 2017 12:21:16 +0800
-Subject: [PATCH 589/725] drm/i915/gvt: local display support in GVT-g guest
+Subject: [PATCH 589/728] drm/i915/gvt: local display support in GVT-g guest
 
 This patch includes below features in GVT-g guest
 1. DP on port A will be treated as external DP
@@ -103,5 +103,5 @@ index 37c08c71fdf6..23a94eedb896 100644
  				    5000))
  		DRM_ERROR("Panel status timeout: status %08x control %08x\n",
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From bf01b3e01e05abf078028defad546f7b1008e6da Mon Sep 17 00:00:00 2001
+From d41a4b8051200ecd7ca05bd3ea087777643c105b Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Fri, 14 Sep 2018 16:10:19 +0800
-Subject: [PATCH 614/725] drm/i915/gvt: add scaler owner to support guest plane
+Subject: [PATCH 614/728] drm/i915/gvt: add scaler owner to support guest plane
  scaling
 
 It is to support plane scaling feature, add scaler owner to
@@ -130,5 +130,5 @@ index b64da5510f67..098c2886cf7e 100644
  
  struct intel_crtc_scaler_state {
 -- 
-2.19.1
+2.19.2
 

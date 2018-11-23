@@ -1,7 +1,7 @@
-From f7e712a2518e98991fb61b7b696d38c12ce6430a Mon Sep 17 00:00:00 2001
+From 71535a8e40f5a46983548b722882c846b5611e01 Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:58 +0800
-Subject: [PATCH 516/725] HVLog: reserve memory for ACRN HVLog
+Subject: [PATCH 516/728] HVLog: reserve memory for ACRN HVLog
 
 Change-Id: Ic87c83510d1405c791ce9c47872b960f801d45c2
 Tracked-On: 220304
@@ -128,5 +128,5 @@ index 000000000000..9c30fba58faf
 +}
 +early_param("hvlog", early_hvlog);
 -- 
-2.19.1
+2.19.2
 

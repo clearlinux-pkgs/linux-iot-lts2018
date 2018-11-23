@@ -1,7 +1,7 @@
-From 751d031275c9357a018b0e3814877756d19c72f9 Mon Sep 17 00:00:00 2001
+From bb24cf8fd77c48e95670f7f40b172a0dec38ae4e Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Tue, 14 Aug 2018 11:38:49 +0200
-Subject: [PATCH 460/725] ASoC: Intel: Move bxt machine drv tables to common
+Subject: [PATCH 460/728] ASoC: Intel: Move bxt machine drv tables to common
  directory.
 
 Align with machine-drv-tables declaration model present on upstream.
@@ -169,5 +169,5 @@ index 199cbfe1d00d..6dc99d4961ae 100644
  	{
  		.id = "INT343A",
 -- 
-2.19.1
+2.19.2
 

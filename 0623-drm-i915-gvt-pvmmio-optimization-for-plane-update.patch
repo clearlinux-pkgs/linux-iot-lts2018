@@ -1,7 +1,7 @@
-From 1830657a523342c2adc220f77e4679e6d30d3209 Mon Sep 17 00:00:00 2001
+From 35ab1d6fe4962e7173b9f40a331bd0911453ec13 Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Fri, 14 Sep 2018 16:10:20 +0800
-Subject: [PATCH 623/725] drm/i915/gvt: pvmmio optimization for plane update
+Subject: [PATCH 623/728] drm/i915/gvt: pvmmio optimization for plane update
 
 It is performance optimization to reduce plane related register trap
 counter. When update plane, multiple plane related registers are updated
@@ -158,5 +158,5 @@ index 11b7afc0a0d3..4b89ba3e021c 100644
  
  	if (INTEL_GEN(dev_priv) >= 10 || IS_GEMINILAKE(dev_priv))
 -- 
-2.19.1
+2.19.2
 

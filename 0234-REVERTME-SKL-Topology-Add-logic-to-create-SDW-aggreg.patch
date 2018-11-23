@@ -1,7 +1,7 @@
-From c987e489e092a69f5674bcbea75de31c8d3bb3e0 Mon Sep 17 00:00:00 2001
+From 6ed414439c29f5cccc36085310cf40dca445a936 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Fri, 20 May 2016 14:42:17 +0530
-Subject: [PATCH 234/725] REVERTME:SKL:Topology: Add logic to create SDW
+Subject: [PATCH 234/728] REVERTME:SKL:Topology: Add logic to create SDW
  aggregation blob.
 
 Blob needs to be sent to copier for SDW aggregation. Normally
@@ -89,5 +89,5 @@ index d6a3a6f43c91..80c82d97d226 100644
  	if (!skl->nhlt_override) {
  		cfg = skl_get_ep_blob(skl, mconfig->vbus_id, link_type,
 -- 
-2.19.1
+2.19.2
 

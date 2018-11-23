@@ -1,7 +1,7 @@
-From 0689059afe503ccb461ffca8e224471c3b93c8b6 Mon Sep 17 00:00:00 2001
+From 7ba4e73e4c0a2620b90a2f81f0652029f1892ef0 Mon Sep 17 00:00:00 2001
 From: Fei Yang <fei.yang@intel.com>
 Date: Fri, 21 Sep 2018 09:52:17 +0800
-Subject: [PATCH 571/725] VHM: Add EXPORT_SYMBOL for VHM API function so that
+Subject: [PATCH 571/728] VHM: Add EXPORT_SYMBOL for VHM API function so that
  it can be used by other module
 
 The following symbols were not exported causing link error when building
@@ -174,5 +174,5 @@ index 8f1a00777dd4..c186b97a3c09 100644
  void vm_list_add(struct list_head *list)
  {
 -- 
-2.19.1
+2.19.2
 

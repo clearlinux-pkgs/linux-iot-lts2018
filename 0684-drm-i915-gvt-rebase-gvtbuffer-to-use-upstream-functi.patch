@@ -1,7 +1,7 @@
-From 393d7ea090fc37b21f704a4cae33cca8dc5527da Mon Sep 17 00:00:00 2001
+From e520b53605729acab8e139cc942e42e3e6331f11 Mon Sep 17 00:00:00 2001
 From: Zhipeng Gong <zhipeng.gong@intel.com>
 Date: Tue, 23 Oct 2018 11:02:11 +0800
-Subject: [PATCH 684/725] drm/i915/gvt: rebase gvtbuffer to use upstream
+Subject: [PATCH 684/728] drm/i915/gvt: rebase gvtbuffer to use upstream
  functions.
 
 Upstream code ignores pipe id passed from user space and detect
@@ -261,5 +261,5 @@ index 6e58fa1fb1d2..fb1ced042a4e 100644
  	} else {
  		DRM_DEBUG_DRIVER("GVT_GEM: Invalid plaine_id: %d\n",
 -- 
-2.19.1
+2.19.2
 

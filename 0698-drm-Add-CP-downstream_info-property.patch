@@ -1,7 +1,7 @@
-From 6c6d3be7a650571776de7195c3c9ff41ccf89b78 Mon Sep 17 00:00:00 2001
+From af2be1c847ad2feabbfd8420b1cf76755e55e78d Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Wed, 13 Dec 2017 23:23:08 +0530
-Subject: [PATCH 698/725] drm: Add CP downstream_info property
+Subject: [PATCH 698/728] drm: Add CP downstream_info property
 
 This patch adds a optional CP downstream info blob property to the
 connectors. This enables the Userspace to read the information of HDCP
@@ -224,5 +224,5 @@ index 8d67243952f4..926d80323b55 100644
  	__u32 clock;
  	__u16 hdisplay;
 -- 
-2.19.1
+2.19.2
 

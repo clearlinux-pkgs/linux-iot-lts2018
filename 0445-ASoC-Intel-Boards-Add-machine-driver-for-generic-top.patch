@@ -1,7 +1,7 @@
-From 8a6c7efe2958aadc7df94322e3361e02a8f163f0 Mon Sep 17 00:00:00 2001
+From 1d89a91847335b6a1a73acb9196af3f6025dc4d5 Mon Sep 17 00:00:00 2001
 From: Puneeth Prabhu <puneethx.prabhu@intel.com>
 Date: Fri, 11 May 2018 11:32:53 +0530
-Subject: [PATCH 445/725] ASoC: Intel: Boards: Add machine driver for generic
+Subject: [PATCH 445/728] ASoC: Intel: Boards: Add machine driver for generic
  topology
 
 This patch adds I2S machine driver for IVI generic topology
@@ -434,5 +434,5 @@ index 000000000000..e256a4bf173b
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:bxt_ivi_generic_i2s");
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 9fab323383fb100b66e7ac77bb85eb63091fada5 Mon Sep 17 00:00:00 2001
+From bdad9af9e73e10b576836c0ea21b79019af75545 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Mon, 27 Aug 2018 15:16:06 -0700
-Subject: [PATCH 091/725] LSM: Infrastructure management of the cred security
+Subject: [PATCH 091/728] LSM: Infrastructure management of the cred security
  blob
 
 Move management of the cred security blob out of the
@@ -1013,5 +1013,5 @@ index 9f932e2d6852..bb84e6ec3886 100644
  	return 0;
  }
 -- 
-2.19.1
+2.19.2
 

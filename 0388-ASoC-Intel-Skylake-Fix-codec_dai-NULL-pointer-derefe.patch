@@ -1,7 +1,7 @@
-From 92d7b4f56dce7226ec3e18a706fcce2a1f9e80f7 Mon Sep 17 00:00:00 2001
+From 94910eba9e7df18177c41dfa69a29a378aff6252 Mon Sep 17 00:00:00 2001
 From: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
 Date: Wed, 6 Sep 2017 14:04:55 +0530
-Subject: [PATCH 388/725] ASoC: Intel: Skylake: Fix codec_dai NULL pointer
+Subject: [PATCH 388/728] ASoC: Intel: Skylake: Fix codec_dai NULL pointer
  dereferening
 
 Pointer 'codec_dai' returned from call to cnl_get_codec_dai() can be
@@ -34,5 +34,5 @@ index 07a876f4f3b2..5570474806ab 100644
  	/* Codec needs clock for Jack detection and button press */
  	ret = snd_soc_dai_set_sysclk(codec_dai, RT274_SCLK_S_PLL2,
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From d1faa148ffb6325a2f8def262ad2be7b992344cf Mon Sep 17 00:00:00 2001
+From 50b1227535a68aed9d2c7e9143bf7309865182a7 Mon Sep 17 00:00:00 2001
 From: Mateusz Polrola <mateuszx.potrola@intel.com>
 Date: Wed, 22 Aug 2018 14:27:16 +0200
-Subject: [PATCH 648/725] hyper_dmabuf/virtio: Protect virtqueue operations
+Subject: [PATCH 648/728] hyper_dmabuf/virtio: Protect virtqueue operations
  with spinlock.
 
 virtqueue_add_*/virtqueue_get_buf are not safe to run in parallel as
@@ -93,5 +93,5 @@ index 9ae290435d70..5ef8801eb085 100644
  	if (wait) {
  		while (timeout--) {
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 3fb567d367b09299421b45f874e3c21e00184bc7 Mon Sep 17 00:00:00 2001
+From 29d115879b6bfb9e60ae5916892f3d20bcb790da Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Fri, 17 Feb 2017 11:58:27 +0530
-Subject: [PATCH 306/725] ASoC: Intel: Update device type entry for SoundWire
+Subject: [PATCH 306/728] ASoC: Intel: Update device type entry for SoundWire
  device
 
 SoundWire device type is updated as SoundWire PCM and SoundWire
@@ -83,5 +83,5 @@ index 2e4a894f58a4..629f420b58de 100644
  		break;
  	default:
 -- 
-2.19.1
+2.19.2
 

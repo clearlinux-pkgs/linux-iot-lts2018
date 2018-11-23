@@ -1,7 +1,7 @@
-From 3c3647031b723e9659c3044c54c0ebe33ee037b7 Mon Sep 17 00:00:00 2001
+From f0bed43d618a219982a325243e0ba5011513ddc4 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 13 Mar 2016 13:36:52 +0200
-Subject: [PATCH 018/725] rpmb: add sysfs-class ABI documentation
+Subject: [PATCH 018/728] rpmb: add sysfs-class ABI documentation
 
 V2: resend
 V3: add more verbose description
@@ -60,5 +60,5 @@ index 3c99a53c4590..070cb20bcf78 100644
  RTL2830 MEDIA DRIVER
  M:	Antti Palosaari <crope@iki.fi>
 -- 
-2.19.1
+2.19.2
 

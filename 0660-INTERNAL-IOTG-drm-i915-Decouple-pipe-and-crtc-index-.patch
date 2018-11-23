@@ -1,7 +1,7 @@
-From 00d505952898f1aa76e3959a5d3529b281810b8a Mon Sep 17 00:00:00 2001
+From 4fab0127ec57558722042ef35ca8de021d56cdce Mon Sep 17 00:00:00 2001
 From: Vivek Kasireddy <vivek.kasireddy@intel.com>
 Date: Thu, 8 Mar 2018 15:10:34 -0800
-Subject: [PATCH 660/725] INTERNAL [IOTG] drm/i915: Decouple pipe and crtc
+Subject: [PATCH 660/728] INTERNAL [IOTG] drm/i915: Decouple pipe and crtc
  index dependencies
 
 i915 driver had assumptions that pipe and the crtc index always
@@ -357,5 +357,5 @@ index c7c7b5e78330..1884b8140131 100644
  
  	if (crtc->base.state->adjusted_mode.flags & DRM_MODE_FLAG_INTERLACE)
 -- 
-2.19.1
+2.19.2
 

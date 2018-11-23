@@ -1,7 +1,7 @@
-From 8c22203bb2a61d9daec13a107717aa9c465d3544 Mon Sep 17 00:00:00 2001
+From 251e386550adbcba2b08810e0f37cbe4bf4c322b Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:58:57 +0800
-Subject: [PATCH 498/725] hypercall: refine hypercall interfaces
+Subject: [PATCH 498/728] hypercall: refine hypercall interfaces
 
 - HC_VM_SET_MEMMAP: remove MAP_UPDATE, refine API structure
 - HC_NOTIFY_REQUEST_FINISH: use vcpu_id instead of vcpu_mask
@@ -725,5 +725,5 @@ index df07e3c93467..79d91a858226 100644
 +
  #endif /* VHM_IOCTL_DEFS_H */
 -- 
-2.19.1
+2.19.2
 

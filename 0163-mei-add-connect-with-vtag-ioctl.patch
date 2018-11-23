@@ -1,7 +1,7 @@
-From 81ca1e3413dc5429b9b7cc810549768a04c9c1a2 Mon Sep 17 00:00:00 2001
+From 25e49ea7399c1cfd0bb2bf48b3720c8f5cc791b3 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Thu, 2 Aug 2018 14:54:47 +0300
-Subject: [PATCH 163/725] mei: add connect with vtag ioctl
+Subject: [PATCH 163/728] mei: add connect with vtag ioctl
 
 Change-Id: I3d68af4fd71bacac1180b80ace6d3b843142069c
 Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
@@ -587,5 +587,5 @@ index 0f681cbd38d3..0bc184bc0f46 100644
 +
  #endif /* _LINUX_MEI_H  */
 -- 
-2.19.1
+2.19.2
 

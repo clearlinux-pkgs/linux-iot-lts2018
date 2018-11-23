@@ -1,7 +1,7 @@
-From 1d3082fff9ba5b9545d87adbe16935895dd1b53a Mon Sep 17 00:00:00 2001
+From cab3b4173840226f09f560f9c42dd5c10a8853b1 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Fri, 29 Apr 2016 12:14:37 +0530
-Subject: [PATCH 209/725] REVERTME:SDW: Increment the dev_id for every slave
+Subject: [PATCH 209/728] REVERTME:SDW: Increment the dev_id for every slave
  register to bus.
 
 Ideally every slave getting registered to bus should have separate
@@ -38,5 +38,5 @@ index 6a1ff5e59401..71f1532657da 100644
  program_slv_failed:
  	device_unregister(&sdw_slv->dev);
 -- 
-2.19.1
+2.19.2
 

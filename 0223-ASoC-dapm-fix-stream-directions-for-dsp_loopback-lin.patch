@@ -1,7 +1,7 @@
-From 7c50c4784312dcc7d81339a6a08cba5cc477b03d Mon Sep 17 00:00:00 2001
+From d0f29b40c93fe40d1a990239c83fe3424523e6fa Mon Sep 17 00:00:00 2001
 From: Omair M Abdullah <omair.m.abdullah@intel.com>
 Date: Fri, 18 Sep 2015 20:23:30 +0530
-Subject: [PATCH 223/725] ASoC: dapm: fix stream directions for dsp_loopback
+Subject: [PATCH 223/728] ASoC: dapm: fix stream directions for dsp_loopback
  links
 
 DSP loopback links have directions reversed for the source and sink widgets.
@@ -36,5 +36,5 @@ index 461d951917c0..7e3ec95f985f 100644
  			ret = sink->driver->ops->startup(&substream, sink);
  			if (ret < 0) {
 -- 
-2.19.1
+2.19.2
 

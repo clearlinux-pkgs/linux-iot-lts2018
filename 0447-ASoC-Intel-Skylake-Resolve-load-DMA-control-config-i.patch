@@ -1,7 +1,7 @@
-From c69ce012acf52cde7d6bd598458a5453668ef8e7 Mon Sep 17 00:00:00 2001
+From 32698326f023a9545439899abefb3ec74b09e049 Mon Sep 17 00:00:00 2001
 From: "Shaik, ShahinaX" <shahinax.shaik@intel.com>
 Date: Wed, 23 May 2018 21:17:13 +0530
-Subject: [PATCH 447/725] ASoC: Intel: Skylake: Resolve load DMA control config
+Subject: [PATCH 447/728] ASoC: Intel: Skylake: Resolve load DMA control config
  issue
 
 Audio driver doesn't load dmactrl_cfg after adding it
@@ -37,5 +37,5 @@ index b91c4ea88002..c80ad4558ba6 100644
  			hdr->data_size = 0;
  			dev_err(dev, "Invalid dmactrl info \n");
 -- 
-2.19.1
+2.19.2
 

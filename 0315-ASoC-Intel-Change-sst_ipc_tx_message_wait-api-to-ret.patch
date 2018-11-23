@@ -1,7 +1,7 @@
-From 996c5c5a1f97f14737869916ff89049721505915 Mon Sep 17 00:00:00 2001
+From bd5fa04d80e022f4b96210b62af81bef28370b78 Mon Sep 17 00:00:00 2001
 From: Leoni Prodduvaka <leoni.prodduvaka@intel.com>
 Date: Thu, 16 Mar 2017 21:49:33 +0530
-Subject: [PATCH 315/725] ASoC: Intel: Change sst_ipc_tx_message_wait api to
+Subject: [PATCH 315/728] ASoC: Intel: Change sst_ipc_tx_message_wait api to
  return valid data
 
 Since the firmware returns the rx_bytes as a part of ipc response
@@ -532,5 +532,5 @@ index 6c037d2c8a3c..bc02740e5525 100644
  int skl_sst_ipc_load_library(struct sst_generic_ipc *ipc,
  			u8 dma_id, u8 table_id, bool wait);
 -- 
-2.19.1
+2.19.2
 

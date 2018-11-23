@@ -1,7 +1,7 @@
-From d9193ff8e6f225b50e40b42fc77410b671ead98d Mon Sep 17 00:00:00 2001
+From fa88836c136d8bcb8388c1fd2c8732a51d68792d Mon Sep 17 00:00:00 2001
 From: "Yadav, PramodX K" <pramodx.k.yadav@intel.com>
 Date: Fri, 15 Jul 2016 20:01:42 +0530
-Subject: [PATCH 269/725] ASoC: Intel: Skylake: Support for 24KHz SoC DMIC
+Subject: [PATCH 269/728] ASoC: Intel: Skylake: Support for 24KHz SoC DMIC
  capture
 
 Change-Id: I69a1dc19badb335747a15c2b8e0994f81ac95116
@@ -35,5 +35,5 @@ index 228f00763094..3ac58520240a 100644
  		.sig_bits = 32,
  	},
 -- 
-2.19.1
+2.19.2
 

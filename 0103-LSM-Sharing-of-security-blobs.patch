@@ -1,7 +1,7 @@
-From eae3887ed83f2f0802402b37b7cd09c668f3af3d Mon Sep 17 00:00:00 2001
+From 7fd64c334254983c358dd2e14755ab9c19adf90f Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 12 Jul 2018 15:29:30 -0700
-Subject: [PATCH 103/725] LSM: Sharing of security blobs
+Subject: [PATCH 103/728] LSM: Sharing of security blobs
 
 Augment the security modules that use security blobs
 ("Major" security modules) to allow sharing of the
@@ -656,5 +656,5 @@ index bb84e6ec3886..fa121ad8534a 100644
  		return 0;
  	}
 -- 
-2.19.1
+2.19.2
 

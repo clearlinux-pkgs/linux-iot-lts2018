@@ -1,7 +1,7 @@
-From 05e192adecae4c6b483d2a6746d09b4a9616439f Mon Sep 17 00:00:00 2001
+From be5e645ebbc4496f135a64e168bfe48ba8a68c38 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Tue, 28 Aug 2018 09:49:03 -0700
-Subject: [PATCH 104/725] LSM: Allow mount options from multiple security
+Subject: [PATCH 104/728] LSM: Allow mount options from multiple security
  modules
 
 Both SELinux and Smack use mount options that apply to
@@ -481,5 +481,5 @@ index 91d1aa1b0480..9529a781a60b 100644
  				return PTR_ERR(skp);
  			sp->smk_root = skp;
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 6f0066a80c54d76bc8a2bb1add92751bf9e4d5b4 Mon Sep 17 00:00:00 2001
+From 016f0340db06aeafd6ce2b0076db523920ca7d53 Mon Sep 17 00:00:00 2001
 From: Xinyun Liu <xinyun.liu@intel.com>
 Date: Wed, 19 Sep 2018 15:28:53 +0800
-Subject: [PATCH 679/725] drm/i915/gvt: correct mask setting for CSFE_CHICKEN1
+Subject: [PATCH 679/728] drm/i915/gvt: correct mask setting for CSFE_CHICKEN1
 
 CSFE_CHICKEN1(0x20d4) needs access with mask. This is caught in AcrnGT
 conformance check test:
@@ -29,5 +29,5 @@ index e6c592f44b39..dc0a14729b88 100644
  	{RCS, GEN8_GARBCNTL, 0x0, false}, /* 0xb004 */
  	{RCS, GEN7_FF_THREAD_MODE, 0x0, false}, /* 0x20a0 */
 -- 
-2.19.1
+2.19.2
 

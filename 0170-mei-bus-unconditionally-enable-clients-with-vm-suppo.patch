@@ -1,7 +1,7 @@
-From 3a2fab2e262a36cd1e39494584464654a6d3ccc1 Mon Sep 17 00:00:00 2001
+From 949d003314484c2a759bf8c795bb89d0abbe4c3d Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Sun, 16 Sep 2018 10:22:51 +0300
-Subject: [PATCH 170/725] mei: bus: unconditionally enable clients with vm
+Subject: [PATCH 170/728] mei: bus: unconditionally enable clients with vm
  support
 
 Change-Id: I9d3677d7cf1486ce4d15560a08fed3c6265b603a
@@ -43,5 +43,5 @@ index 80215c312f0e..5945e7d48271 100644
  
  /**
 -- 
-2.19.1
+2.19.2
 

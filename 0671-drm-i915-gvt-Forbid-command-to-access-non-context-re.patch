@@ -1,7 +1,7 @@
-From d62a9d47398af1e7cdc98d3332f38ba1701bb421 Mon Sep 17 00:00:00 2001
+From 597639c0dbef65d18301eac3d33fd0ff1da6f6ab Mon Sep 17 00:00:00 2001
 From: Ping Gao <ping.a.gao@intel.com>
 Date: Wed, 30 Aug 2017 14:59:22 +0800
-Subject: [PATCH 671/725] drm/i915/gvt: Forbid command to access non-context
+Subject: [PATCH 671/728] drm/i915/gvt: Forbid command to access non-context
  registers
 
 After MMIO save/restore removing, the guest cannot access non-context
@@ -156,5 +156,5 @@ index c15d4578bb5f..fd26872f15b6 100644
   * The following structure pages are defined in GEN MMIO space
   * for virtualization. (One page for now)
 -- 
-2.19.1
+2.19.2
 

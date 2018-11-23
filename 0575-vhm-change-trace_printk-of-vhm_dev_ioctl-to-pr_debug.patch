@@ -1,7 +1,7 @@
-From 0b68e0413873b8d7725495894d5b4943538de9fe Mon Sep 17 00:00:00 2001
+From 366a22b26a3f9974cadd10a6e7ad7f903a345a44 Mon Sep 17 00:00:00 2001
 From: Shuo Liu <shuo.a.liu@intel.com>
 Date: Sat, 29 Sep 2018 11:00:46 +0800
-Subject: [PATCH 575/725] vhm: change trace_printk of vhm_dev_ioctl to pr_debug
+Subject: [PATCH 575/728] vhm: change trace_printk of vhm_dev_ioctl to pr_debug
 
 trace_printk will write into the ring buffer by default. Actually, we
 don't need this trace entry as there are many vhm ioctls happen at
@@ -28,5 +28,5 @@ index 0d25f732da5b..987c7ceea261 100644
  	if (ioctl_num == IC_GET_API_VERSION) {
  		struct api_version api_version;
 -- 
-2.19.1
+2.19.2
 

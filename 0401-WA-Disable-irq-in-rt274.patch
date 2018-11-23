@@ -1,7 +1,7 @@
-From 9a8a8c6502ed3bfdc5c94440c5d3af0b6da65502 Mon Sep 17 00:00:00 2001
+From 1e192131d3844876fded2c81fcf73a535f3ee8ee Mon Sep 17 00:00:00 2001
 From: "Subhransu S. Prusty" <subhransu.s.prusty@intel.com>
 Date: Thu, 30 Nov 2017 20:11:42 +0530
-Subject: [PATCH 401/725] WA: Disable irq in rt274
+Subject: [PATCH 401/728] WA: Disable irq in rt274
 
 Signed-off-by: Subhransu S. Prusty <subhransu.s.prusty@intel.com>
 ---
@@ -29,5 +29,5 @@ index c5c3ee4d3182..6b03996c410e 100644
  	ret = devm_snd_soc_register_component(&i2c->dev,
  				     &soc_component_dev_rt274,
 -- 
-2.19.1
+2.19.2
 

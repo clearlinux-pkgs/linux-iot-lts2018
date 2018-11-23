@@ -1,7 +1,7 @@
-From dcde9dd5b6866e8227c5d7288c25fb8000ee6772 Mon Sep 17 00:00:00 2001
+From 7f36d2d6603dfd6e98f4afb647b1b0b70ab58345 Mon Sep 17 00:00:00 2001
 From: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
 Date: Wed, 28 Feb 2018 15:38:13 +0530
-Subject: [PATCH 431/725] ASoC: Intel: Skylake: Replace strcpy with strlcpy
+Subject: [PATCH 431/728] ASoC: Intel: Skylake: Replace strcpy with strlcpy
 
 Replace strcpy with strlcpy, as it avoids a possible buffer overflow.
 
@@ -25,5 +25,5 @@ index 1bee574f2ab8..bda94640d966 100644
  	if (!m_cap) {
  		dev_err(dev, "SoundWire controller mapping failed...\n");
 -- 
-2.19.1
+2.19.2
 

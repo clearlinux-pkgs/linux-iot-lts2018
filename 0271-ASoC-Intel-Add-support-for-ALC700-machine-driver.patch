@@ -1,7 +1,7 @@
-From 1bd36bd81af88ec7dfbfca661a57e70e141ee9c7 Mon Sep 17 00:00:00 2001
+From ff9099b1cf18c97466600bff86d0cf6e1f6bdc91 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Tue, 28 Jun 2016 15:48:56 +0530
-Subject: [PATCH 271/725] ASoC:Intel: Add support for ALC700 machine driver
+Subject: [PATCH 271/728] ASoC:Intel: Add support for ALC700 machine driver
 
 Change-Id: Idcec9e08faaedbb92f714548d9fea15af4de6b91
 Signed-off-by: Hardik Shah <hardik.t.shah@intel.com>
@@ -566,5 +566,5 @@ index feb4ab5fc9b4..19ee283f9586 100644
  static const struct pci_device_id skl_ids[] = {
  	/* Sunrise Point-LP */
 -- 
-2.19.1
+2.19.2
 

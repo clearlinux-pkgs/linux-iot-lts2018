@@ -1,7 +1,7 @@
-From e1a1288ecdd44c58ce8981b0f514778a510006ce Mon Sep 17 00:00:00 2001
+From 25557e572713db451d46101d0df89e39d09c21e5 Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Fri, 14 Sep 2018 16:10:20 +0800
-Subject: [PATCH 624/725] drm/i915/gvt: handling pvmmio update of plane
+Subject: [PATCH 624/728] drm/i915/gvt: handling pvmmio update of plane
  registers in GVT-g
 
 When pvmmio level PVMMIO_PLANE_UPDATE is enabled, need handle multiple
@@ -101,5 +101,5 @@ index 14a75c6dff4d..afa15c0bb347 100644
  	vgpu_vreg_t(vgpu, reg_1ac) = vgpu_vreg(vgpu, offset);
  
 -- 
-2.19.1
+2.19.2
 

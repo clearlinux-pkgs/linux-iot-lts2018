@@ -1,7 +1,7 @@
-From 40eab9b68e57a3f7c84a137d9c59d7edf24b77d8 Mon Sep 17 00:00:00 2001
+From ec477552fe143cf8d530c8e4d19d37cb6e6eae01 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:00 +0800
-Subject: [PATCH 536/725] vhm: use set memmaps hypercall for hugetlb
+Subject: [PATCH 536/728] vhm: use set memmaps hypercall for hugetlb
 
 If hugetlb is using 2M pages, there may be too many memmap hypercall for
 ept mapping. To avoid such kind of performance drop, this patch enabled
@@ -120,5 +120,5 @@ index afab8ab52567..9c39f9167f77 100644
  
  void hugepage_free_guest(struct vhm_vm *vm)
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 9c9be49b7c0de5533387988e051962fb14748985 Mon Sep 17 00:00:00 2001
+From 8da3fda4a2828c7511b2f864852b88c58789e3a1 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 11 Mar 2018 09:55:27 +0200
-Subject: [PATCH 125/725] tpm: add tpm_calc_ordinal_duration() wrapper
+Subject: [PATCH 125/728] tpm: add tpm_calc_ordinal_duration() wrapper
 
 Add convenient wrapper for ordinal duration computation
 to remove boiler plate if else statement over TPM2.
@@ -166,5 +166,5 @@ index 77097229bf49..b150f87f38f5 100644
  	if (wait_for_tpm_stat(chip, VTPM_STATUS_IDLE, duration,
  			&priv->read_queue, true) < 0) {
 -- 
-2.19.1
+2.19.2
 

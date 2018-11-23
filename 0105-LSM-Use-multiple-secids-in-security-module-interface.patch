@@ -1,7 +1,7 @@
-From 158ea31ef4153bd00e5b8e49931a5eff0bb80870 Mon Sep 17 00:00:00 2001
+From 0ad4c0423978c7020b0cdb871aa1fa7962ae3bdf Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Tue, 28 Aug 2018 11:40:43 -0700
-Subject: [PATCH 105/725] LSM: Use multiple secids in security module
+Subject: [PATCH 105/728] LSM: Use multiple secids in security module
  interfaces
 
 This is the first of two parts required to change the
@@ -1487,5 +1487,5 @@ index 9d2dde608298..0a075c80abb4 100644
  				&skp->smk_netlabel, strlen(skp->smk_known));
  }
 -- 
-2.19.1
+2.19.2
 

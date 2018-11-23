@@ -1,7 +1,7 @@
-From 4bb4db8b8012c5d1dedce15ecdbe64250630f2d4 Mon Sep 17 00:00:00 2001
+From d4f8fa82dde830d8d80c36959991903aeca5c125 Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Tue, 16 Aug 2016 16:26:31 +0530
-Subject: [PATCH 225/725] ASoC: core: Do not return for dummy codec in
+Subject: [PATCH 225/728] ASoC: core: Do not return for dummy codec in
  soc_probe_component
 
 Change-Id: I1bcf17ab9731675e4586382054e5d44645cb18f9
@@ -28,5 +28,5 @@ index 2ecf3442c965..f41ff22e1317 100644
  		if (component->card != card) {
  			dev_err(component->dev,
 -- 
-2.19.1
+2.19.2
 

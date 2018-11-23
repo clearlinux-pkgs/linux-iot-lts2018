@@ -1,7 +1,7 @@
-From e1d207877a32bd10c45b271f37259386cec4cb19 Mon Sep 17 00:00:00 2001
+From fb1f38cede4a9e124d09fe2bc33c4f6b9fa619fe Mon Sep 17 00:00:00 2001
 From: "Fan, Yugang" <yugang.fan@intel.com>
 Date: Wed, 17 Oct 2018 10:39:24 +0800
-Subject: [PATCH 704/725] drm/i915: Add interface to set ctm post offset
+Subject: [PATCH 704/728] drm/i915: Add interface to set ctm post offset
 
 In Android a 4x4 color transform matrix is provided to set color
 correction and color inversion, a post offset vector is also in
@@ -246,5 +246,5 @@ index 926d80323b55..6e9e2d66a83b 100644
  	/*
  	 * Data is U0.16 fixed point format.
 -- 
-2.19.1
+2.19.2
 

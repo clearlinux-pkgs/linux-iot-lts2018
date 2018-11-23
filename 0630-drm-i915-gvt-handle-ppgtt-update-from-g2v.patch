@@ -1,7 +1,7 @@
-From df57ed69d7a1d3786bc0c9c762bac1c0be96f379 Mon Sep 17 00:00:00 2001
+From 357f569d53cb97885618242378ec92ee2610d555 Mon Sep 17 00:00:00 2001
 From: Zhipeng Gong <zhipeng.gong@intel.com>
 Date: Fri, 14 Sep 2018 16:10:21 +0800
-Subject: [PATCH 630/725] drm/i915/gvt: handle ppgtt update from g2v
+Subject: [PATCH 630/728] drm/i915/gvt: handle ppgtt update from g2v
 
 This patch handles ppgtt update from g2v notification.
 It read out ppgtt pte entries from guest pte tables
@@ -475,5 +475,5 @@ index afa15c0bb347..d1870e0a97f4 100644
  	case VGT_G2V_EXECLIST_CONTEXT_DESTROY:
  	case 1:	/* Remove this in guest driver. */
 -- 
-2.19.1
+2.19.2
 

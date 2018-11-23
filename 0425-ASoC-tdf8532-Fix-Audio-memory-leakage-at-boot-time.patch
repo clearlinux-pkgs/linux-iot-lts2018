@@ -1,7 +1,7 @@
-From 58fab80b0cb232033e8d9ea70fb6db8037d34c4f Mon Sep 17 00:00:00 2001
+From 74d3e883da7d186573189d7c44c344e196256cf9 Mon Sep 17 00:00:00 2001
 From: "Shaik, ShahinaX" <shahinax.shaik@intel.com>
 Date: Mon, 2 Apr 2018 23:37:54 +0530
-Subject: [PATCH 425/725] ASoC: tdf8532: Fix Audio memory leakage at boot time
+Subject: [PATCH 425/728] ASoC: tdf8532: Fix Audio memory leakage at boot time
 
 Fix kmemleak issue in tdf8532_get_state function by
 relasing the local allocated memory before exiting
@@ -60,5 +60,5 @@ index a5e2a028338c..68decd023a9d 100644
  }
  
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From da0bc8c7de2355f71ffe308fd5e6427a9f126856 Mon Sep 17 00:00:00 2001
+From 14787d99da15150f055206dd1a4e50bfd2c323fa Mon Sep 17 00:00:00 2001
 From: Senthilnathan Veppur <senthilnathanx.veppur@intel.com>
 Date: Wed, 23 Mar 2016 16:46:08 +0530
-Subject: [PATCH 329/725] ASoC: Intel: Skylake: Add check for buffer overflow
+Subject: [PATCH 329/728] ASoC: Intel: Skylake: Add check for buffer overflow
 
 Return error if source buffer would overflow in strncpy.
 
@@ -34,5 +34,5 @@ index 8f6d11d49dd6..6dc4ef3d7e8e 100644
  			buf[j] = '\0';
  			tx_param = 1;
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 91e6ed27debb3cc13ea7587ec6235d083d469b3a Mon Sep 17 00:00:00 2001
+From 288632e0accc2a56e56e9b68eaee33ccb58fa9a4 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Mon, 27 Aug 2018 15:53:14 -0700
-Subject: [PATCH 095/725] SELinux: Abstract use of inode security blob
+Subject: [PATCH 095/728] SELinux: Abstract use of inode security blob
 
 Don't use the inode->i_security pointer directly.
 Provide a helper function that provides the security blob pointer.
@@ -171,5 +171,5 @@ index b5665bdc29fc..cc434e45eaae 100644
  	isec->sclass = SECCLASS_CHR_FILE;
  	isec->initialized = LABEL_INITIALIZED;
 -- 
-2.19.1
+2.19.2
 

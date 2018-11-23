@@ -1,7 +1,7 @@
-From d5796b4905387682c294eda268b9baa9e7f3f60f Mon Sep 17 00:00:00 2001
+From dbee303f02e3832b2d5665fa9a0b591b925faccf Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Mon, 9 Feb 2015 17:13:20 +0200
-Subject: [PATCH 034/725] mei: spd: connect to the rpmb subsystem
+Subject: [PATCH 034/728] mei: spd: connect to the rpmb subsystem
 
 Connect SPD to RPMB subsystem and implement RPMB storage commands.
 
@@ -422,5 +422,5 @@ index cd30d0ed18ae..b919a5cb7a4c 100644
  int mei_spd_dbgfs_register(struct mei_spd *spd, const char *name);
  void mei_spd_dbgfs_deregister(struct mei_spd *spd);
 -- 
-2.19.1
+2.19.2
 

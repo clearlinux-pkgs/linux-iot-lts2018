@@ -1,7 +1,7 @@
-From bae18a06f15fbce7ee14f1e93d4c4c4229f2895a Mon Sep 17 00:00:00 2001
+From 5c1c5769e467c701e7fb8f105b1e6ae135fbeadf Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:00 +0800
-Subject: [PATCH 530/725] VHM: add hash table support for huge pages
+Subject: [PATCH 530/728] VHM: add hash table support for huge pages
 
 use HUGEPAGE_2M_HLIST_ARRAY_SIZE(16) for 2M hash table size,
 HUGEPAGE_1G_HLIST_ARRAY_SIZE(1) for 1G hash table size.
@@ -514,5 +514,5 @@ index 306bd54c4103..f0a7e1cf7b05 100644
  	spinlock_t ioreq_client_lock;
  	struct list_head ioreq_client_list;
 -- 
-2.19.1
+2.19.2
 

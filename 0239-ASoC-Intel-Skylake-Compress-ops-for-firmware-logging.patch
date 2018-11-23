@@ -1,7 +1,7 @@
-From dad32e2511f8cec27dd43541c100423919ef2c8b Mon Sep 17 00:00:00 2001
+From 5df2d5a5c608c5b2841962b508e897687a9395b0 Mon Sep 17 00:00:00 2001
 From: "Panwar, Ashish" <ashish.panwar@intel.com>
 Date: Wed, 20 Jan 2016 19:22:05 +0530
-Subject: [PATCH 239/725] ASoC: Intel: Skylake: Compress ops for firmware
+Subject: [PATCH 239/728] ASoC: Intel: Skylake: Compress ops for firmware
  logging.
 
 Implementation of compress ops for firmware logging. These ops are
@@ -286,5 +286,5 @@ index 10a486939515..a8de8cfac6ee 100644
  void skl_ipc_op_int_enable(struct sst_dsp *ctx);
  void skl_ipc_op_int_disable(struct sst_dsp *ctx);
 -- 
-2.19.1
+2.19.2
 

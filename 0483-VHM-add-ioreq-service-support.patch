@@ -1,7 +1,7 @@
-From a2dc8e908be3b7b1bfe57e281e64893b4d42ab82 Mon Sep 17 00:00:00 2001
+From c5f8d9c27e25ba4d46d0f01744571c9a1126ab75 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:58:55 +0800
-Subject: [PATCH 483/725] VHM: add ioreq service support
+Subject: [PATCH 483/728] VHM: add ioreq service support
 
 Once there is an IO request, a virtual irq will be injected into service
 OS by ACRN hypervisor.
@@ -1467,5 +1467,5 @@ index 4f1a0db2c54d..eb410024157f 100644
  
  struct vhm_vm *find_get_vm(unsigned long vmid);
 -- 
-2.19.1
+2.19.2
 

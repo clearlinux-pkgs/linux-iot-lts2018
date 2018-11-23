@@ -1,7 +1,7 @@
-From 38abda3f18ffe080e88e6c9f82a236baf6006adc Mon Sep 17 00:00:00 2001
+From 82a70dddd0ee1d96c2d949978aea145c1bedc492 Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Thu, 14 Apr 2016 12:02:14 +0530
-Subject: [PATCH 183/725] Load nhlt from firmware instead of debugfs
+Subject: [PATCH 183/728] Load nhlt from firmware instead of debugfs
 
 Change-Id: I316804db785699f28359b35455790c95cccacd10
 Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
@@ -62,5 +62,5 @@ index 1d17be0f78a0..2d0efe8233a4 100644
  	/* check if dsp is there */
  	if (bus->ppcap) {
 -- 
-2.19.1
+2.19.2
 

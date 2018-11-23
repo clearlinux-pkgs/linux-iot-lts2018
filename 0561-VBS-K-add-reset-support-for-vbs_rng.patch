@@ -1,7 +1,7 @@
-From 17fad11c3c3a9dd29e711155aa511a39124e7a4a Mon Sep 17 00:00:00 2001
+From 75e0e5043a9418437cfb2d79d4af0c976e3418e1 Mon Sep 17 00:00:00 2001
 From: Jian Jun Chen <jian.jun.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:03 +0800
-Subject: [PATCH 561/725] VBS-K: add reset support for vbs_rng
+Subject: [PATCH 561/728] VBS-K: add reset support for vbs_rng
 
 Add reset support for vbs_rng, it acts as an example about how to
 support D3.
@@ -69,5 +69,5 @@ index 569d1d5d689c..45e17b086c29 100644
  
  /* device specific function */
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 7b32188d8c7822e775a0367f3fce8ba5b142701b Mon Sep 17 00:00:00 2001
+From b9674b99b2b1c690f12b1b2a026d3bb9212f8753 Mon Sep 17 00:00:00 2001
 From: "Vyas, Tarun" <tarun.vyas@intel.com>
 Date: Thu, 4 Oct 2018 16:53:20 +0000
-Subject: [PATCH 042/725] staging: igb_avb: Remove non-UTF chars to unbreak
+Subject: [PATCH 042/728] staging: igb_avb: Remove non-UTF chars to unbreak
  scripts
 
 Signed-off-by: Tarun Vyas <tarun.vyas@intel.com>
@@ -23,5 +23,5 @@ index ed8dba1036ad..d17b3de3c61e 100755
    which packets arrive do not allow the system to enter a lower power state. 
    DMA Coalescing allows the adapter to collect packets before it initiates a 
 -- 
-2.19.1
+2.19.2
 

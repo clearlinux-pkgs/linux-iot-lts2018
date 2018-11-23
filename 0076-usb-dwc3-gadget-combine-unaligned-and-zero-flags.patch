@@ -1,7 +1,7 @@
-From 2c952c6d566d513e98d236db8758138afd8b0c88 Mon Sep 17 00:00:00 2001
+From 03c97af37238ae22ff63b68bd95dd24c7366df3d Mon Sep 17 00:00:00 2001
 From: Felipe Balbi <felipe.balbi@linux.intel.com>
 Date: Wed, 1 Aug 2018 13:15:05 +0300
-Subject: [PATCH 076/725] usb: dwc3: gadget: combine unaligned and zero flags
+Subject: [PATCH 076/728] usb: dwc3: gadget: combine unaligned and zero flags
 
 Both flags are used for the same purpose in dwc3: appending an extra
 TRB at the end to deal with controller requirements. By combining both
@@ -118,5 +118,5 @@ index b754ce5bfaff..d80c4e7323e3 100644
  
  	req->request.actual = req->request.length - req->remaining;
 -- 
-2.19.1
+2.19.2
 

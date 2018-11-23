@@ -1,7 +1,7 @@
-From e2aed8c6cc8ee2f1865f753b14f113829e17639b Mon Sep 17 00:00:00 2001
+From 06479f12481b1c9a87466a209ca62b7b90eadb9c Mon Sep 17 00:00:00 2001
 From: Xinyun Liu <xinyun.liu@intel.com>
 Date: Wed, 24 Oct 2018 19:50:08 +0800
-Subject: [PATCH 688/725] drm/i915/gvt: check the pointer before using
+Subject: [PATCH 688/728] drm/i915/gvt: check the pointer before using
 
 fix issues reported by smatch:
 
@@ -98,5 +98,5 @@ index d4510a5504e1..eb3a0a387469 100644
  		switch (wp->cpp) {
  		case 1:
 -- 
-2.19.1
+2.19.2
 

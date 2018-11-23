@@ -1,7 +1,7 @@
-From bfedf6b6689ffbdb7e85b0586aa0f55b72a902bd Mon Sep 17 00:00:00 2001
+From 93157a0b8800cf0e2ae923a2ceb98cfc8cc28c7d Mon Sep 17 00:00:00 2001
 From: Yonghua Huang <yonghua.huang@intel.com>
 Date: Thu, 27 Sep 2018 00:24:18 +0800
-Subject: [PATCH 578/725] vhm: add ioctl for set/clear IRQ line
+Subject: [PATCH 578/728] vhm: add ioctl for set/clear IRQ line
 
   ASSERT/DEASSERT/PULSE IRQ line ioctl commands
   will be deprecated.
@@ -91,5 +91,5 @@ index 2007d58faa3f..fb7b154dbd6b 100644
  /* DM ioreq management */
  #define IC_ID_IOREQ_BASE                0x30UL
 -- 
-2.19.1
+2.19.2
 

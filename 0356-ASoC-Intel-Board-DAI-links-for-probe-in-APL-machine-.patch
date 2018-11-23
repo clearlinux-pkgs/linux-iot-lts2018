@@ -1,7 +1,7 @@
-From fc1963ce5a249859e66b3e1adf15df59bcd5855a Mon Sep 17 00:00:00 2001
+From af9380bd0083f037469a70db7e72b110631123fc Mon Sep 17 00:00:00 2001
 From: Pramod Kumar Yadav <pramodx.k.yadav@intel.com>
 Date: Tue, 26 Apr 2016 15:49:45 +0530
-Subject: [PATCH 356/725] ASoC: Intel: Board: DAI links for probe in APL
+Subject: [PATCH 356/728] ASoC: Intel: Board: DAI links for probe in APL
  machine driver
 
 Added two DAI link, one for each playback & capture, for probe
@@ -49,5 +49,5 @@ index a06f50464f54..9d40c403ac5c 100644
  	{
  		.name = "Bxt Trace Buffer0",
 -- 
-2.19.1
+2.19.2
 

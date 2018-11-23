@@ -1,7 +1,7 @@
-From 4178393051c36dd9e32b21d0650bc1f968f05b73 Mon Sep 17 00:00:00 2001
+From d64e72445d2850fc70483b764febcdd8aab1d86c Mon Sep 17 00:00:00 2001
 From: Sameer Sharma <sameerx.sharma@intel.com>
 Date: Thu, 7 Jun 2018 17:28:42 +0530
-Subject: [PATCH 452/725] ASoC: Intel: board: Add support for FE dynamic dai
+Subject: [PATCH 452/728] ASoC: Intel: board: Add support for FE dynamic dai
  for ULL
 
 FE dai links now come from the topology, so removing them
@@ -87,5 +87,5 @@ index 22ae8ab30a1d..fe9e28598bbe 100644
  	{
  		.name = "Bxt Compress Probe playback",
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From bf9fa36d1dea791d98652a3b9a44038e5dca76aa Mon Sep 17 00:00:00 2001
+From c7e8af2f449d82b7255b730dda61f162764d83a8 Mon Sep 17 00:00:00 2001
 From: Shuo Liu <shuo.a.liu@intel.com>
 Date: Thu, 12 Jul 2018 15:40:52 +0800
-Subject: [PATCH 577/725] vhm: add irqfd support for ACRN hypervisor service
+Subject: [PATCH 577/728] vhm: add irqfd support for ACRN hypervisor service
  module
 
 irqfd which is based on eventfd, provides a pipe for injecting guest
@@ -495,5 +495,5 @@ index 4ab6b02aced8..2007d58faa3f 100644
 +
  #endif /* VHM_IOCTL_DEFS_H */
 -- 
-2.19.1
+2.19.2
 

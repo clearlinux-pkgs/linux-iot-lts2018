@@ -1,7 +1,7 @@
-From 0b09137eb1ab3da0b04a3d9c031cda94692a8097 Mon Sep 17 00:00:00 2001
+From d3de8f4b215251436584974c51ddbe12996e7b5d Mon Sep 17 00:00:00 2001
 From: Felipe Balbi <felipe.balbi@linux.intel.com>
 Date: Wed, 1 Aug 2018 13:54:25 +0300
-Subject: [PATCH 081/725] usb: dwc3: gadget: move requests to cancelled_list
+Subject: [PATCH 081/728] usb: dwc3: gadget: move requests to cancelled_list
 
 Whenever we have a request in flight, we can move it to the cancelled
 list and later simply iterate over that list and skip over any TRBs we
@@ -55,5 +55,5 @@ index 8e235417027f..987704ede3a0 100644
  
  out0:
 -- 
-2.19.1
+2.19.2
 

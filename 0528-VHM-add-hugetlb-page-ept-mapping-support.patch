@@ -1,7 +1,7 @@
-From bda448ca43c6cc1a89c99529bc959cd2d909f23e Mon Sep 17 00:00:00 2001
+From 455f4cbc4fe51ba3179107eca2183dbd10bbb38a Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:00 +0800
-Subject: [PATCH 528/725] VHM: add hugetlb page ept mapping support
+Subject: [PATCH 528/728] VHM: add hugetlb page ept mapping support
 
 unlike cma, hugetlb allocates hugepage under user space, so VHM only
 need take care of ept mapping for these allocated huge pages.
@@ -257,5 +257,5 @@ index e7bc8b2372f7..306bd54c4103 100644
  
  /**
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 3c335b98c8002daed7eb000e4cde348849ef1a4e Mon Sep 17 00:00:00 2001
+From 6730601d9997899c05b47a3d7ac0a6623d3f888e Mon Sep 17 00:00:00 2001
 From: Jian Jun Chen <jian.jun.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:03 +0800
-Subject: [PATCH 560/725] VBS-K: Check whether vhm_client_id is valid before
+Subject: [PATCH 560/728] VBS-K: Check whether vhm_client_id is valid before
  deregister
 
 Need to check whether vhm_client_id is valid before trying to
@@ -45,5 +45,5 @@ index 7427942c12f7..c2d8a5262a8d 100644
  }
  EXPORT_SYMBOL_GPL(virtio_dev_init);
 -- 
-2.19.1
+2.19.2
 

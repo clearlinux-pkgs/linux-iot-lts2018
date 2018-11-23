@@ -1,7 +1,7 @@
-From c0f391390c6a524a1faa1603d40227a005da622d Mon Sep 17 00:00:00 2001
+From 9f473a9d2310d9a070000f3d2d46d1a042f8c7e4 Mon Sep 17 00:00:00 2001
 From: Michal Wasko <michal.wasko@intel.com>
 Date: Fri, 12 Oct 2018 14:23:43 +0200
-Subject: [PATCH 477/725] ASoC: Intel: Skylake: Set DUM bit in EM2 register on
+Subject: [PATCH 477/728] ASoC: Intel: Skylake: Set DUM bit in EM2 register on
  skl resume
 
 Issue fix the IP bug of incorrect position
@@ -26,5 +26,5 @@ index 8d7305133424..73b70cea74d7 100644
  		/* turn off the links which are off before suspend */
  		list_for_each_entry(hlink, &bus->hlink_list, list) {
 -- 
-2.19.1
+2.19.2
 

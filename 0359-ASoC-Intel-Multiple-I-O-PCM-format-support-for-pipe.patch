@@ -1,7 +1,7 @@
-From c23873dcee593f93bfe6f6196e3e4b808bfad75f Mon Sep 17 00:00:00 2001
+From d0c3876c84d5e88baf480ad5adaad6ba66c717b8 Mon Sep 17 00:00:00 2001
 From: "S, Pavan K" <pavan.k.s@intel.com>
 Date: Fri, 30 Jun 2017 20:52:37 +0530
-Subject: [PATCH 359/725] ASoC: Intel: Multiple I/O PCM format support for pipe
+Subject: [PATCH 359/728] ASoC: Intel: Multiple I/O PCM format support for pipe
 
 If a pipe supports multiple input/output formats, kcontrol is
 created and selection of pipe input and output configuration
@@ -199,5 +199,5 @@ index 02256d70f60f..07d041fc8b72 100644
  
  enum skl_module_state {
 -- 
-2.19.1
+2.19.2
 

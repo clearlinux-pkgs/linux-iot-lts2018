@@ -1,7 +1,7 @@
-From c04a2f34b63c4330f34cdf96f8b54bd39042adf4 Mon Sep 17 00:00:00 2001
+From bda2107081d243f570ed23a694c67e3b387b9bad Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Thu, 10 Mar 2016 11:25:19 +0530
-Subject: [PATCH 195/725] ASoC: Intel: Add support for SoundWire link in
+Subject: [PATCH 195/728] ASoC: Intel: Add support for SoundWire link in
  copier.
 
 This patch adds the support for the SoundWire link
@@ -79,5 +79,5 @@ index 82282cac9751..d94709ffd323 100644
  	struct skl_module_pin *m_out_pin;
  	enum skl_module_type m_type;
 -- 
-2.19.1
+2.19.2
 

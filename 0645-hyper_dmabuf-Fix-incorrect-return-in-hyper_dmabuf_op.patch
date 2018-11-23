@@ -1,7 +1,7 @@
-From 6906c052f7f14b683289b298bab69deba17738a3 Mon Sep 17 00:00:00 2001
+From 6bf2a98cc07316e1f25e3f47cb68f52da001d92b Mon Sep 17 00:00:00 2001
 From: Kuppuswamy Sathyanarayanan <sathyanarayanan.kuppuswamy@linux.intel.com>
 Date: Tue, 31 Jul 2018 14:39:38 -0700
-Subject: [PATCH 645/725] hyper_dmabuf: Fix incorrect return in
+Subject: [PATCH 645/728] hyper_dmabuf: Fix incorrect return in
  hyper_dmabuf_ops_end_cpu_access()
 
 In hyper_dmabuf_ops_end_cpu_access(), currently we don't check for
@@ -37,5 +37,5 @@ index e2bdab75a7cf..a8207b4be20f 100644
  
  static void *hyper_dmabuf_ops_kmap_atomic(struct dma_buf *dmabuf,
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 4da43e1cfdaff4bc635646305d455a8c75e8a9e2 Mon Sep 17 00:00:00 2001
+From 3820d0eb0c9c6d41e0fb11f2691235075cac44e4 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Tue, 9 Oct 2018 19:02:37 +0800
-Subject: [PATCH 697/725] drm/i915: Passing the intel_connector to HDCP auth
+Subject: [PATCH 697/728] drm/i915: Passing the intel_connector to HDCP auth
 
 Reference of Intel_connector is needed at generic authentication flow
 for upcoming revocation check and downstream topology info gathering
@@ -213,5 +213,5 @@ index 7f87667753b3..a03a745544e2 100644
  			connector->hdcp_value =
  					DRM_MODE_CONTENT_PROTECTION_ENABLED;
 -- 
-2.19.1
+2.19.2
 

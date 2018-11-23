@@ -1,7 +1,7 @@
-From 3a1d71e9c94f2b3fa3f4601a09083100d9859fd0 Mon Sep 17 00:00:00 2001
+From c626a1795723d13aa40170a59f273526d55ab2b2 Mon Sep 17 00:00:00 2001
 From: Shiqing Gao <shiqing.gao@intel.com>
 Date: Fri, 31 Aug 2018 10:58:57 +0800
-Subject: [PATCH 505/725] sos: fix potential bugs in ptdev msi-x access
+Subject: [PATCH 505/728] sos: fix potential bugs in ptdev msi-x access
 
 - delete the node in the 'table_iomems' list for msi-x table
    when the pass-through device is deinited.
@@ -90,5 +90,5 @@ index d3fd572c1642..7894297ca872 100644
  
  			msix_entry = (void __iomem *) (ptr->mmap_addr +
 -- 
-2.19.1
+2.19.2
 

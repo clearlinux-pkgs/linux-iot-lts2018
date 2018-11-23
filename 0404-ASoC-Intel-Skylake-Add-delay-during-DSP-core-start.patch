@@ -1,7 +1,7 @@
-From f61025aececca355ae5655a7820ade1cf2b78e2b Mon Sep 17 00:00:00 2001
+From 8217c7fbb94265b4aa45e8105f0523d44ca9b482 Mon Sep 17 00:00:00 2001
 From: Mohit Sinha <mohit.sinha@intel.com>
 Date: Thu, 16 Nov 2017 23:01:21 +0530
-Subject: [PATCH 404/725] ASoC: Intel: Skylake: Add delay during DSP core start
+Subject: [PATCH 404/728] ASoC: Intel: Skylake: Add delay during DSP core start
 
 1msec delay is required in power-up sequence of DSP core.
 
@@ -51,5 +51,5 @@ index 4b16e0002cd4..b34f7b73e24e 100644
  		skl_dsp_reset_core(ctx, core_mask);
  		dev_err(ctx->dev, "DSP start core failed: core_mask %x\n",
 -- 
-2.19.1
+2.19.2
 

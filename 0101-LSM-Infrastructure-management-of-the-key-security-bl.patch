@@ -1,7 +1,7 @@
-From a3d879b9913de6f4a67a872fe2dc78ec66f2cc6c Mon Sep 17 00:00:00 2001
+From cd0f36f1bc817fd2c1a4f2e591c106cd012774d4 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 10 May 2018 14:32:32 -0700
-Subject: [PATCH 101/725] LSM: Infrastructure management of the key security
+Subject: [PATCH 101/728] LSM: Infrastructure management of the key security
  blob
 
 Move management of the key->security blob out of the
@@ -312,5 +312,5 @@ index b24909a697e3..557bacb0568e 100644
  	LSM_HOOK_INIT(key_getsecurity, smack_key_getsecurity),
  #endif /* CONFIG_KEYS */
 -- 
-2.19.1
+2.19.2
 

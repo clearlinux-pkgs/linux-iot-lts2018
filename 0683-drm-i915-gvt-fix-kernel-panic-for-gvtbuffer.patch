@@ -1,7 +1,7 @@
-From b4d450179acf391200234b5c5091f7acafaaab17 Mon Sep 17 00:00:00 2001
+From cee0f71d152e3ca4e706b662ddfecf7240401833 Mon Sep 17 00:00:00 2001
 From: Zhipeng Gong <zhipeng.gong@intel.com>
 Date: Tue, 23 Oct 2018 16:36:52 +0800
-Subject: [PATCH 683/725] drm/i915/gvt: fix kernel panic for gvtbuffer
+Subject: [PATCH 683/728] drm/i915/gvt: fix kernel panic for gvtbuffer
 
 The obj created in i915_gem_object_create_gvtbuffer does not init
 obj->mm.link. when __i915_gem_free_objects call
@@ -42,5 +42,5 @@ index f482eceb5c7f..6e58fa1fb1d2 100644
  }
  
 -- 
-2.19.1
+2.19.2
 

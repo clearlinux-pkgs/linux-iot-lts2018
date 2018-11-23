@@ -1,7 +1,7 @@
-From e4b1e6ef203b17ffe4dac3c7c760aa0c6e6bfabf Mon Sep 17 00:00:00 2001
+From b419b2c9d9bb7c6bf35b12d9e8df213bdd834d3b Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Mon, 2 May 2016 15:09:22 +0530
-Subject: [PATCH 220/725] ASoC:CNL: Add support for aggregated gateways.
+Subject: [PATCH 220/728] ASoC:CNL: Add support for aggregated gateways.
 
 Gateway Link copier needs to be programmed differently
 for aggregated case. Add support for SoundWire aggregated
@@ -63,5 +63,5 @@ index 353c90cbd336..44e4109ba4dc 100644
  	struct skl_module_pin *m_out_pin;
  	enum skl_module_type m_type;
 -- 
-2.19.1
+2.19.2
 

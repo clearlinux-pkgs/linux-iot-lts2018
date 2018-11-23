@@ -1,7 +1,7 @@
-From b13cb3fa406f2af88f2134163ac7adee8d3a7cf8 Mon Sep 17 00:00:00 2001
+From 9b5625c5fcc5d4ddf94d945d76ef206e54723849 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Fri, 20 May 2016 15:02:36 +0530
-Subject: [PATCH 236/725] REVERTME:SKL:PCM: Enable aggregation for the Maxim
+Subject: [PATCH 236/728] REVERTME:SKL:PCM: Enable aggregation for the Maxim
  codec.
 
 Set the aggregation parameters if Maxim codec is enabled.
@@ -75,5 +75,5 @@ index 504228e2cba5..e41a3b38aa81 100644
  	if (!m_cfg->sdw_agg_enable)
  		m_cfg->sdw_stream_num = dma->port->pdi_stream->sdw_pdi_num;
 -- 
-2.19.1
+2.19.2
 

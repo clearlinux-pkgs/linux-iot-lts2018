@@ -1,7 +1,7 @@
-From 6cd9d1177b1a10eaa0abc1f27b8b7cb3234a8512 Mon Sep 17 00:00:00 2001
+From ac650dda768c4adb3ac1fd6fceaf39954ed41c33 Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Thu, 9 Jun 2016 17:35:39 +0530
-Subject: [PATCH 248/725] ASoC: Intel: SKL: Remove SDW aggregation hardcode
+Subject: [PATCH 248/728] ASoC: Intel: SKL: Remove SDW aggregation hardcode
  data
 
 Change-Id: I6601af59781950f4fcf2a13e93be6e3014957c69
@@ -45,5 +45,5 @@ index e41a3b38aa81..ea9a3e14434a 100644
  	if (!m_cfg->sdw_agg_enable)
  		m_cfg->sdw_stream_num = dma->port->pdi_stream->sdw_pdi_num;
 -- 
-2.19.1
+2.19.2
 

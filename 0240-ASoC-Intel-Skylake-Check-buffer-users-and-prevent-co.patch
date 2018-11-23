@@ -1,7 +1,7 @@
-From d52a62d32846db1f1e21cc40e828c0bf70602a2d Mon Sep 17 00:00:00 2001
+From 40862288ec8c811a5077cae2d3a1fa4f1dd538f5 Mon Sep 17 00:00:00 2001
 From: "Panwar, Ashish" <ashish.panwar@intel.com>
 Date: Fri, 26 Feb 2016 02:02:48 +0530
-Subject: [PATCH 240/725] ASoC: Intel: Skylake: Check buffer users and prevent
+Subject: [PATCH 240/728] ASoC: Intel: Skylake: Check buffer users and prevent
  concurrent writers
 
 More than one writer on log buffer will cause data corruption.
@@ -66,5 +66,5 @@ index 9864801e9ed1..36c22c57cf90 100644
  	size = sst->trace_wind.size/sst->trace_wind.nr_dsp;
  	base = (u8 *)sst->trace_wind.addr;
 -- 
-2.19.1
+2.19.2
 

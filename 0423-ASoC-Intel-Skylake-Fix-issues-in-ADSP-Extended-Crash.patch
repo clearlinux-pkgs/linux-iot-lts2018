@@ -1,7 +1,7 @@
-From 553e535898a0f5f92b97824733a842fff287892c Mon Sep 17 00:00:00 2001
+From a543ad2cb3f1d075a7c40fdb3530abc067e3d58b Mon Sep 17 00:00:00 2001
 From: Pardha Saradhi K <pardha.saradhi.kesapragada@intel.com>
 Date: Thu, 8 Mar 2018 00:45:37 +0530
-Subject: [PATCH 423/725] ASoC: Intel: Skylake: Fix issues in ADSP Extended
+Subject: [PATCH 423/728] ASoC: Intel: Skylake: Fix issues in ADSP Extended
  Crash Dump feature
 
 Extended crash data along with Header and footer tags is written
@@ -74,5 +74,5 @@ index a420d702f689..668e7d020a9c 100644
  	}
  
 -- 
-2.19.1
+2.19.2
 

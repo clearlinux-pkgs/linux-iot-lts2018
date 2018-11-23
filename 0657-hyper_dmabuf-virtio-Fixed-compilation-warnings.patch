@@ -1,7 +1,7 @@
-From ba658d2a6cc5eed2cec399b287bf4b27e7ada684 Mon Sep 17 00:00:00 2001
+From 7b49a049c3f7a8cb087f289eab68ea3e7654da5a Mon Sep 17 00:00:00 2001
 From: Mateusz Polrola <mateuszx.potrola@intel.com>
 Date: Thu, 20 Sep 2018 14:09:37 +0200
-Subject: [PATCH 657/725] hyper_dmabuf/virtio: Fixed compilation warnings
+Subject: [PATCH 657/728] hyper_dmabuf/virtio: Fixed compilation warnings
 
 Added missing return in vbs_k_reset.
 Initialized return value in vbs_k_ioctl.
@@ -34,5 +34,5 @@ index 67c79683407b..b308d7e00d18 100644
  	if (priv == NULL) {
  		dev_err(hy_drv_priv->dev,
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 20aeb3668d0c7ac576dc213c29b96e802abf39c1 Mon Sep 17 00:00:00 2001
+From b6bb2d5a8dc266c7516a09af1d8a717b43b8f8eb Mon Sep 17 00:00:00 2001
 From: Xinyun Liu <xinyun.liu@intel.com>
 Date: Tue, 23 Oct 2018 11:31:17 +0800
-Subject: [PATCH 687/725] drm/i915/gvt: use snprintf instead of sprintf
+Subject: [PATCH 687/728] drm/i915/gvt: use snprintf instead of sprintf
 
 To use snprintf to avoid potential overflow, although vgpu->id is
 guaranteed in the range of [0, GVT_MAX_VGPU] and should have no real
@@ -32,5 +32,5 @@ index 2ec89bcb59f1..c41e1e245789 100644
  	if (!vgpu->debugfs)
  		return -ENOMEM;
 -- 
-2.19.1
+2.19.2
 

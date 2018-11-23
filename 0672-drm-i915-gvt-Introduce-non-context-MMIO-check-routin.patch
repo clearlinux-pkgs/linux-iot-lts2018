@@ -1,7 +1,7 @@
-From f93ee7c9f092466d8f4b141288403b62f92acd58 Mon Sep 17 00:00:00 2001
+From 3793e31fddf03a17c2ae240edc0fca843cf8e265 Mon Sep 17 00:00:00 2001
 From: Ping Gao <ping.a.gao@intel.com>
 Date: Thu, 31 Aug 2017 10:45:05 +0800
-Subject: [PATCH 672/725] drm/i915/gvt: Introduce non-context MMIO check
+Subject: [PATCH 672/728] drm/i915/gvt: Introduce non-context MMIO check
  routines
 
 Guest conformance check can be implemented by verifying whether the
@@ -169,5 +169,5 @@ index 0221e87f34db..99b01ab60dc3 100644
   * intel_gvt_init_engine_mmio_context - Initiate the engine mmio list
   * @gvt: GVT device
 -- 
-2.19.1
+2.19.2
 

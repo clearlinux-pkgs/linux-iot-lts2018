@@ -1,7 +1,7 @@
-From c7a182111dc23231c396fe329fa69af1e1936a9d Mon Sep 17 00:00:00 2001
+From 1415890f8ea8c17b640aaac746bc100f2cfff64d Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Mon, 30 Apr 2018 12:57:51 +0300
-Subject: [PATCH 028/725] tools/rpmb: add support for nvme device
+Subject: [PATCH 028/728] tools/rpmb: add support for nvme device
 
 Change-Id: Iab3171a22d3f502b11beed1496959bfd8f47d568
 Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
@@ -1135,5 +1135,5 @@ index 1a507db2739e..28b2280776d5 100644
  	free(frames_in);
  	free(frame_out);
 -- 
-2.19.1
+2.19.2
 

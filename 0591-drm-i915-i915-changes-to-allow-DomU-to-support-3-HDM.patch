@@ -1,7 +1,7 @@
-From a7c5250027f5f31e7cde8d6e75cf2b3085a04438 Mon Sep 17 00:00:00 2001
+From bfbc984ab22a1af04994f857730af08026f34119 Mon Sep 17 00:00:00 2001
 From: Michael Byrne <michaelx.byrne@intel.com>
 Date: Wed, 25 Oct 2017 13:12:34 +0200
-Subject: [PATCH 591/725] drm/i915: i915 changes to allow DomU to support 3
+Subject: [PATCH 591/728] drm/i915: i915 changes to allow DomU to support 3
  HDMI displays.
 
 If vgpu is active;
@@ -91,5 +91,5 @@ index 192972a7d287..a3b6d078ca24 100644
  	intel_encoder->hpd_pin = intel_hpd_pin_default(dev_priv, port);
  
 -- 
-2.19.1
+2.19.2
 

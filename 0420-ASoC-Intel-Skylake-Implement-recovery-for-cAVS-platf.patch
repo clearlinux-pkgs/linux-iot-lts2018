@@ -1,7 +1,7 @@
-From dc33c671e11954bb5e96fd8385e1b54ac6d880f2 Mon Sep 17 00:00:00 2001
+From ded3c6e122027e88719500048e515b33c47c49d7 Mon Sep 17 00:00:00 2001
 From: "R, Dharageswari" <dharageswari.r@intel.com>
 Date: Thu, 28 Dec 2017 08:31:45 +0530
-Subject: [PATCH 420/725] ASoC: Intel: Skylake: Implement recovery for cAVS
+Subject: [PATCH 420/728] ASoC: Intel: Skylake: Implement recovery for cAVS
  platforms
 
 This patch implements the Audio dsp crash recovery for cAVS platforms
@@ -252,5 +252,5 @@ index 7532c11ee1f0..29e6c5a22f51 100644
  	 * Do not suspend if streams which are marked ignore suspend are
  	 * running, we need to save the state for these and continue
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 9a72ed2289ad4a4d2e56e58b69d11b5c91e7f21d Mon Sep 17 00:00:00 2001
+From d595c25ae880ba89e9c9bf388d74d7017c00277d Mon Sep 17 00:00:00 2001
 From: Michael Byrne <michaelx.byrne@intel.com>
 Date: Fri, 14 Sep 2018 16:10:16 +0800
-Subject: [PATCH 590/725] drm/i915/gvt: Change DomU to support 3 HDMI displays.
+Subject: [PATCH 590/728] drm/i915/gvt: Change DomU to support 3 HDMI displays.
 
 Request DomU supports 3 virtual HDMI displays.
 
@@ -137,5 +137,5 @@ index 4785b8a10619..fb690a4f55a0 100644
  }
  
 -- 
-2.19.1
+2.19.2
 

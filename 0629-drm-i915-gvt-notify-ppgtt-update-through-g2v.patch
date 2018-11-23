@@ -1,7 +1,7 @@
-From 2e04d2e0d97f24bc3fa9b41dca2ab08e9ccfd32c Mon Sep 17 00:00:00 2001
+From e93b7638bd629f7e791a11771b55002c2f6d0a70 Mon Sep 17 00:00:00 2001
 From: Zhipeng Gong <zhipeng.gong@intel.com>
 Date: Fri, 14 Sep 2018 16:10:20 +0800
-Subject: [PATCH 629/725] drm/i915/gvt: notify ppgtt update through g2v
+Subject: [PATCH 629/728] drm/i915/gvt: notify ppgtt update through g2v
 
 This patch extends g2v notification to notify host GVT-g of
 ppgtt update from guest, including alloc_4lvl, clear_4lv4 and
@@ -156,5 +156,5 @@ index 740b2da14186..9c76cab07010 100644
  
  /*
 -- 
-2.19.1
+2.19.2
 

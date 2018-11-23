@@ -1,7 +1,7 @@
-From 211d210145dfe4eec9906946386b18b340144bd0 Mon Sep 17 00:00:00 2001
+From 619e2450cc566bd2859ed7cc1827b66dbe169e59 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:14 +0200
-Subject: [PATCH 009/725] x86/mm/cpa: Add sanity check for existing mappings
+Subject: [PATCH 009/728] x86/mm/cpa: Add sanity check for existing mappings
 
 With the range check it is possible to do a quick verification that the
 current mapping is correct vs. the static protection areas.
@@ -183,5 +183,5 @@ index 8f9083eb21ac..19781b0ab4b4 100644
  	if (virt_addr_valid(address)) {
  		unsigned long pfn = PFN_DOWN(__pa(address));
 -- 
-2.19.1
+2.19.2
 

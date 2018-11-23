@@ -1,7 +1,7 @@
-From bab2528a8397a162eb2f1ea5d8aa4ea8bf9e9e12 Mon Sep 17 00:00:00 2001
+From 76472c655d923bcfb0ea0dc3ad7117d7d383dab2 Mon Sep 17 00:00:00 2001
 From: Pardha Saradhi K <pardha.saradhi.kesapragada@intel.com>
 Date: Thu, 25 Feb 2016 12:06:18 +0530
-Subject: [PATCH 327/725] ASoC: Intel: Skylake: DebugFs changes to suit FDK
+Subject: [PATCH 327/728] ASoC: Intel: Skylake: DebugFs changes to suit FDK
 
 Following changes have been made in the generic ipc
 debugfs interface to better suit the FDK implementation
@@ -149,5 +149,5 @@ index 2041e3387c03..587fcac48ec0 100644
  	/* Userspace has been fiddling around behind the kernel's back */
  	add_taint(TAINT_USER, LOCKDEP_NOW_UNRELIABLE);
 -- 
-2.19.1
+2.19.2
 

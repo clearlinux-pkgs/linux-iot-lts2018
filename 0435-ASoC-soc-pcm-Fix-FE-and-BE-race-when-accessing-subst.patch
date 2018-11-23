@@ -1,7 +1,7 @@
-From c09f1fd83248aa3158511112480418b1690acbb4 Mon Sep 17 00:00:00 2001
+From 333bd193abc6f4423e2b4354f4353fae08a048b6 Mon Sep 17 00:00:00 2001
 From: xiao jin <jin.xiao@intel.com>
 Date: Thu, 12 Apr 2018 17:32:04 +0530
-Subject: [PATCH 435/725] ASoC: soc-pcm: Fix FE and BE race when accessing
+Subject: [PATCH 435/728] ASoC: soc-pcm: Fix FE and BE race when accessing
  substream->runtime
 
 After start of FE and BE, FE might close without triggering
@@ -51,5 +51,5 @@ index e8b98bfd4cf1..afcb2cfaf551 100644
  		if (err < 0) {
  			dev_err(be->dev, "ASoC: BE open failed %d\n", err);
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From c5076fec1aeed845d42eba5374688a79813e9378 Mon Sep 17 00:00:00 2001
+From f73614675aa4b9ab3f4a1093d4bfc8157d5d6afc Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 21 Jun 2018 13:17:29 -0700
-Subject: [PATCH 100/725] LSM: Infrastructure management of the ipc security
+Subject: [PATCH 100/728] LSM: Infrastructure management of the ipc security
  blob
 
 Move management of the kern_ipc_perm->security and
@@ -634,5 +634,5 @@ index 05cdb7f22607..b24909a697e3 100644
  	LSM_HOOK_INIT(sem_semctl, smack_sem_semctl),
  	LSM_HOOK_INIT(sem_semop, smack_sem_semop),
 -- 
-2.19.1
+2.19.2
 

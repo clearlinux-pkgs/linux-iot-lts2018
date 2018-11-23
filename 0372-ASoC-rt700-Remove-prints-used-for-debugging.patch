@@ -1,7 +1,7 @@
-From d2def354111158973d14d1327bdd054b4ce56ede Mon Sep 17 00:00:00 2001
+From 0bb75cd02abe8436e451158005f9e6600f4ac2ec Mon Sep 17 00:00:00 2001
 From: Anamika Lal <anamikax.lal@intel.com>
 Date: Thu, 10 Aug 2017 12:24:43 +0530
-Subject: [PATCH 372/725] ASoC: rt700: Remove prints used for debugging.
+Subject: [PATCH 372/728] ASoC: rt700: Remove prints used for debugging.
 
 While integrating rt700 codec driver prints were added for debugging
 purpose. Hence removing them.
@@ -260,5 +260,5 @@ index 03bab55537b6..a654c092b8c5 100644
  
  	/* Enable Jack Detection */
 -- 
-2.19.1
+2.19.2
 

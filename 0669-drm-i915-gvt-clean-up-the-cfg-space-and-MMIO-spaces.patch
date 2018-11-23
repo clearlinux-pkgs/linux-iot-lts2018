@@ -1,7 +1,7 @@
-From aa455ba0bc0c2f1ea4c6139de26b1a40483f59f8 Mon Sep 17 00:00:00 2001
+From 54e93326ac0ceadc09b11cf4d7e5aee7d8ac484a Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Tue, 4 Sep 2018 01:00:01 +0000
-Subject: [PATCH 669/725] drm/i915/gvt: clean up the cfg space and MMIO spaces
+Subject: [PATCH 669/728] drm/i915/gvt: clean up the cfg space and MMIO spaces
 
 When vgpu instance is destroyed, we need to clean up the MMIO and
 aperture regions, which is missing in current code.
@@ -94,5 +94,5 @@ index 9e4a0b2b5f22..511681b24c59 100644
  	intel_vgpu_dmabuf_cleanup(vgpu);
  	mutex_unlock(&vgpu->vgpu_lock);
 -- 
-2.19.1
+2.19.2
 

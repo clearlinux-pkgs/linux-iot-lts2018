@@ -1,7 +1,7 @@
-From 6d63eb42abbaa07832b3d9351ec3e5d8a1b4bcb9 Mon Sep 17 00:00:00 2001
+From 3374cc0f4788beb4e34ad9b0c90b1aea2db731ef Mon Sep 17 00:00:00 2001
 From: Felipe Balbi <felipe.balbi@linux.intel.com>
 Date: Wed, 1 Aug 2018 13:32:07 +0300
-Subject: [PATCH 077/725] usb: dwc3: gadget: track number of TRBs per request
+Subject: [PATCH 077/728] usb: dwc3: gadget: track number of TRBs per request
 
 This will help us remove the wait_event() from our ->dequeue().
 
@@ -78,5 +78,5 @@ index d80c4e7323e3..4091121d3ff5 100644
  	/*
  	 * If we're in the middle of series of chained TRBs and we
 -- 
-2.19.1
+2.19.2
 

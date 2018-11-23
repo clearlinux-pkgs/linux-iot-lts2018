@@ -1,7 +1,7 @@
-From e96426b7562476a3a87570e4ef57a664cf5d7f24 Mon Sep 17 00:00:00 2001
+From 5ffc02de893172067823d67f1484898a9c0a8087 Mon Sep 17 00:00:00 2001
 From: Jeremy Compostella <jeremy.compostella@intel.com>
 Date: Thu, 8 Nov 2018 11:11:00 +0530
-Subject: [PATCH 038/725] serial: 8250_dma: stop ongoing RX DMA on exception
+Subject: [PATCH 038/728] serial: 8250_dma: stop ongoing RX DMA on exception
 
 If we get an exeption interrupt. i.e. UART_IIR_RLSI, stop
 any ongoing RX DMA transfer otherwise it might generate
@@ -36,5 +36,5 @@ index 3f779d25ec0c..bc5af52ea932 100644
  	}
  	return up->dma->rx_dma(up);
 -- 
-2.19.1
+2.19.2
 

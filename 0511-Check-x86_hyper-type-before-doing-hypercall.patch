@@ -1,7 +1,7 @@
-From f229e23e04b788e9a58010de0e4f803361a8452f Mon Sep 17 00:00:00 2001
+From 627d2eda192fd1b425f42ae086e641931d22ea05 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:58:58 +0800
-Subject: [PATCH 511/725] Check x86_hyper type before doing hypercall
+Subject: [PATCH 511/728] Check x86_hyper type before doing hypercall
 
 this is to fix native boot failure issue with CONFIG_ACRN
 
@@ -64,5 +64,5 @@ index 27844c87a41f..b724c9e7bce2 100644
  		pr_err("vhm: failed to get api version from Hypervisor !\n");
  		return -EINVAL;
 -- 
-2.19.1
+2.19.2
 

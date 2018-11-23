@@ -1,7 +1,7 @@
-From 3db527508e72c8ea8b4c4f47c6047e5710e1454c Mon Sep 17 00:00:00 2001
+From 1ee07df397cbefd1e94eef1a6dda1b4d42e40663 Mon Sep 17 00:00:00 2001
 From: "R, Dharageswari" <dharageswari.r@intel.com>
 Date: Mon, 25 Dec 2017 07:03:56 +0530
-Subject: [PATCH 414/725] ASoC: Intel: Skylake: Add API to reset private
+Subject: [PATCH 414/728] ASoC: Intel: Skylake: Add API to reset private
  instance id of modules
 
 When the Audio DSP becomes unresponsive, DSP will be reset and
@@ -63,5 +63,5 @@ index f20b842af4e4..8f4056ebf670 100644
  int skl_dsp_crash_dump_read(struct skl_sst *ctx, int stack_size)
  {
 -- 
-2.19.1
+2.19.2
 

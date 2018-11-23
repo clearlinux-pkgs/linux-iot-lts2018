@@ -1,7 +1,7 @@
-From bc83b3cb03d916981059493e1055d7a464ebf6db Mon Sep 17 00:00:00 2001
+From 4c80998f43692ec4a7b1b51e3cc906287aa4a496 Mon Sep 17 00:00:00 2001
 From: Leoni Prodduvaka <leoni.prodduvaka@intel.com>
 Date: Tue, 18 Apr 2017 23:02:20 +0530
-Subject: [PATCH 336/725] ASoC: rt700: Added support for ICL FPGA SDW
+Subject: [PATCH 336/728] ASoC: rt700: Added support for ICL FPGA SDW
  Aggregation
 
 Adding RT700 codec slave id connected to Master 1 used for aggregation
@@ -42,5 +42,5 @@ index 1c935e3a05e2..8a7fbc5a40c7 100644
  };
  
 -- 
-2.19.1
+2.19.2
 

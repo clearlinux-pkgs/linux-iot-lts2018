@@ -1,7 +1,7 @@
-From 28dfc12be6c96899e650066f082266c082ea0e33 Mon Sep 17 00:00:00 2001
+From be49e98cdb75982bf3a63157dfd944fd49b5fb8b Mon Sep 17 00:00:00 2001
 From: Yin Fengwei <fengwei.yin@intel.com>
 Date: Thu, 23 Aug 2018 07:29:24 +0000
-Subject: [PATCH 579/725] sos: vhm: add hypercall to set guest vcpu registers
+Subject: [PATCH 579/728] sos: vhm: add hypercall to set guest vcpu registers
 
 DM will use this hypercall to set the BSP registers of UOS.
 To avoid the hypervisor involving for UOS boot.
@@ -151,5 +151,5 @@ index fb7b154dbd6b..73be2dde243d 100644
  /* IRQ and Interrupts */
  #define IC_ID_IRQ_BASE                 0x20UL
 -- 
-2.19.1
+2.19.2
 

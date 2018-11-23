@@ -1,7 +1,7 @@
-From 5f535b6c2331455224d760a1e1d1b3c6e793814c Mon Sep 17 00:00:00 2001
+From 93d2f727c04c3438fa21eb4c8bf1a73231045751 Mon Sep 17 00:00:00 2001
 From: Pei Zhang <pei.zhang@intel.com>
 Date: Fri, 14 Sep 2018 16:10:19 +0800
-Subject: [PATCH 618/725] drm/i915: implement pvmmio in guest i915
+Subject: [PATCH 618/728] drm/i915: implement pvmmio in guest i915
 
 If pvmmio is enabled in i915 host driver, guest i915 will read most MMIO
 register directly, which won't be trapped to host GVT. A small range
@@ -190,5 +190,5 @@ index 5dde7253c963..b937f9f05e6a 100644
  	if (execlists->ctrl_reg)
  		writel(EL_CTRL_LOAD, execlists->ctrl_reg);
 -- 
-2.19.1
+2.19.2
 

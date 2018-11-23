@@ -1,7 +1,7 @@
-From b72c461d882fc5f00865191dbcc7a02f81b4d98c Mon Sep 17 00:00:00 2001
+From e0346a419154b46055089b689311a41cbe754441 Mon Sep 17 00:00:00 2001
 From: Leoni Prodduvaka <leoni.prodduvaka@intel.com>
 Date: Thu, 18 May 2017 21:56:06 +0530
-Subject: [PATCH 342/725] ASoC: Intel: Extract the "nhlt-version" from DSDT
+Subject: [PATCH 342/728] ASoC: Intel: Extract the "nhlt-version" from DSDT
  table
 
 This patch extracts the "nhlt-version" from the DSDT table present at
@@ -87,5 +87,5 @@ index 66f34ceae74e..01d54513b029 100644
  void skl_nhlt_free(struct nhlt_acpi_table *addr);
  struct nhlt_specific_cfg *skl_get_ep_blob(struct skl *skl, u32 instance,
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From f8a4eac2766473a4757654dbcaf6648f15d9a8b5 Mon Sep 17 00:00:00 2001
+From 1b01c17233edcc1270ef787fbc071df2ec2dea77 Mon Sep 17 00:00:00 2001
 From: Shuo Liu <shuo.a.liu@intel.com>
 Date: Fri, 31 Aug 2018 10:59:03 +0800
-Subject: [PATCH 557/725] vhm: Add error handling for IC_CREATE_VM ioctl
+Subject: [PATCH 557/728] vhm: Add error handling for IC_CREATE_VM ioctl
 
 If returned with error after hypervisor creating the VM, then we have no
 chance to destroy it. Add the error handling to destroy the VM if fail.
@@ -51,5 +51,5 @@ index 5884fd2b259e..1286f7750906 100644
  
  	case IC_START_VM: {
 -- 
-2.19.1
+2.19.2
 

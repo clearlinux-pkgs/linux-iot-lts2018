@@ -1,7 +1,7 @@
-From fe7715ecc8e175d44f53b63b4f95018dfe6158b2 Mon Sep 17 00:00:00 2001
+From 697d1ac18443502e93619784946281bc1f9f7feb Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sat, 15 Sep 2018 23:36:29 +0300
-Subject: [PATCH 136/725] tpm: tpm1: rewrite tpm1_get_random() using tpm_buf
+Subject: [PATCH 136/728] tpm: tpm1: rewrite tpm1_get_random() using tpm_buf
  structure
 
 1. Use tpm_buf in tpm1_get_random()
@@ -172,5 +172,5 @@ index 8a84db315676..b5c4fa158c30 100644
  
  #define TPM_ORDINAL_PCRREAD 21
 -- 
-2.19.1
+2.19.2
 

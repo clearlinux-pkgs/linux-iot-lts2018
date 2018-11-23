@@ -1,7 +1,7 @@
-From 7e9828e38d3ad1bfcf7407edd3ff4082d2dec9a5 Mon Sep 17 00:00:00 2001
+From 7a186dd57576c1bab1dbef169f729bfb68422389 Mon Sep 17 00:00:00 2001
 From: Igor Stoppa <igor.stoppa@gmail.com>
 Date: Wed, 5 Sep 2018 23:34:43 +0300
-Subject: [PATCH 110/725] seccomp: remove unnecessary unlikely()
+Subject: [PATCH 110/728] seccomp: remove unnecessary unlikely()
 
 WARN_ON() already contains an unlikely(), so it's not necessary to wrap it
 into another.
@@ -38,5 +38,5 @@ index fd023ac24e10..5a2a9af4663e 100644
  		return failed;
  	}
 -- 
-2.19.1
+2.19.2
 

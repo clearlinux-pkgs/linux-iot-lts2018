@@ -1,7 +1,7 @@
-From d50868a0350627342e2a4ea11820bd1147052ee8 Mon Sep 17 00:00:00 2001
+From 4925f8c578a69bbd19e4a96c676594e1e1b10ee6 Mon Sep 17 00:00:00 2001
 From: Pardha Saradhi K <pardha.saradhi.kesapragada@intel.com>
 Date: Thu, 8 Mar 2018 00:35:50 +0530
-Subject: [PATCH 422/725] ASoC: Intel: Skylake: Read extended crash dump info
+Subject: [PATCH 422/728] ASoC: Intel: Skylake: Read extended crash dump info
  from DSP
 
 When DSP encounters an exception, besides providing basic info
@@ -220,5 +220,5 @@ index 8f4056ebf670..a420d702f689 100644
  }
  
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 92fc90a03d175792848a3609f1448e7dea5bf464 Mon Sep 17 00:00:00 2001
+From 078d962e1478464b9ac05f12ad236c0b065cf5a1 Mon Sep 17 00:00:00 2001
 From: Leoni Prodduvaka <leoni.prodduvaka@intel.com>
 Date: Tue, 18 Apr 2017 23:02:32 +0530
-Subject: [PATCH 337/725] ASoC: Intel: Boards: Add support for ICL FPGA SDW
+Subject: [PATCH 337/728] ASoC: Intel: Boards: Add support for ICL FPGA SDW
  Aggregation
 
 Aggregation is performed on ICL FPGA with Master 1 and Master2
@@ -38,5 +38,5 @@ index ee8fe3934571..dcb02b08a91c 100644
  static const char cname[] = "sdw-slave1-10:02:5d:07:00:01";
  #endif
 -- 
-2.19.1
+2.19.2
 

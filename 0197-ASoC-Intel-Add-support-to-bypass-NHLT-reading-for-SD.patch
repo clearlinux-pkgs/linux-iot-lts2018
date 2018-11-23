@@ -1,7 +1,7 @@
-From aefdc261c569299c113eb54a440d618f3cfc5653 Mon Sep 17 00:00:00 2001
+From dff897ca7a7a937e5b97ff1ee399b18d8de8df8b Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Thu, 10 Mar 2016 12:55:38 +0530
-Subject: [PATCH 197/725] ASoC: Intel: Add support to bypass NHLT reading for
+Subject: [PATCH 197/728] ASoC: Intel: Add support to bypass NHLT reading for
  SDW link.
 
 NHLT reading is not required for the SDW link. So bypass
@@ -51,5 +51,5 @@ index 2620d77729c5..413a72dada50 100644
  
  	/* update the blob based on virtual bus_id*/
 -- 
-2.19.1
+2.19.2
 

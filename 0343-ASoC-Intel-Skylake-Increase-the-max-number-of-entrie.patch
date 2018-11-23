@@ -1,7 +1,7 @@
-From f12232ef073757433efbb58e0b314cfb18393ce6 Mon Sep 17 00:00:00 2001
+From 05c938f297d1a5e2a1bada92f68fd764ef1fce63 Mon Sep 17 00:00:00 2001
 From: Puneeth Prabhu <puneethx.prabhu@intel.com>
 Date: Wed, 17 May 2017 12:05:30 +0530
-Subject: [PATCH 343/725] ASoC: Intel: Skylake: Increase the max number of
+Subject: [PATCH 343/728] ASoC: Intel: Skylake: Increase the max number of
  entries for resources, path configs and formats
 
 To support multi-format playback/capture, 0.7 xml has more
@@ -44,5 +44,5 @@ index 676a769374ae..adf35fa0d75c 100644
  
  enum skl_channel_index {
 -- 
-2.19.1
+2.19.2
 

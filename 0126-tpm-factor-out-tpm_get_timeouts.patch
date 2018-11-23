@@ -1,7 +1,7 @@
-From 47acc3e8db602b059d55be13ff2d5d900ee76bbd Mon Sep 17 00:00:00 2001
+From 9341ac2bde7f82783cd96ebba2600a6fef628bac Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Mon, 5 Mar 2018 21:48:35 +0200
-Subject: [PATCH 126/725] tpm: factor out tpm_get_timeouts()
+Subject: [PATCH 126/728] tpm: factor out tpm_get_timeouts()
 
 Factor out tpm_get_timeouts() into tpm2_get_timeouts()
 and tpm1_get_timeouts()
@@ -332,5 +332,5 @@ index 3eef5565286d..dd2e98f4de08 100644
   * tpm2_ordinal_duration_index() - returns an index to the chip duration table
   * @ordinal: TPM command ordinal.
 -- 
-2.19.1
+2.19.2
 

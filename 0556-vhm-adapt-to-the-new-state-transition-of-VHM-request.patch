@@ -1,7 +1,7 @@
-From a5b229a906a1fc455bff49acd87eb0e12f547fa3 Mon Sep 17 00:00:00 2001
+From 7d6e459ddb361a330264daf72c1b443d506afa80 Mon Sep 17 00:00:00 2001
 From: Junjie Mao <junjie.mao@intel.com>
 Date: Fri, 31 Aug 2018 10:59:03 +0800
-Subject: [PATCH 556/725] vhm: adapt to the new state transition of VHM
+Subject: [PATCH 556/728] vhm: adapt to the new state transition of VHM
  requests
 
 This is the counter-part of VHM request state transition update.
@@ -260,5 +260,5 @@ index 91951b7e1fc3..6269b07dcea4 100644
  
  struct vhm_request_buffer {
 -- 
-2.19.1
+2.19.2
 

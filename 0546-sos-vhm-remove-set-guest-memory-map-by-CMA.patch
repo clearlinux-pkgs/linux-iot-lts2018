@@ -1,7 +1,7 @@
-From 9b9f2c6ed2da61052591ba9c8cf30f0387c6cad5 Mon Sep 17 00:00:00 2001
+From 196ba65e8923e09db71abdcc080b7ca2f763836e Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 546/725] sos: vhm: remove set guest memory map by CMA
+Subject: [PATCH 546/728] sos: vhm: remove set guest memory map by CMA
 
 We removed CMA Device Manager memory allocation mechanisms and use
 hugetlb as the only Device Manager memory allocation mechanism.
@@ -455,5 +455,5 @@ index e89b78c7fff5..91cd13dad69a 100644
  	struct hlist_head hugepage_hlist[HUGEPAGE_HLIST_ARRAY_SIZE];
  	int max_gfn;
 -- 
-2.19.1
+2.19.2
 

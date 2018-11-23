@@ -1,7 +1,7 @@
-From 81d680f9af7fee43369313f00a415e9549d058d7 Mon Sep 17 00:00:00 2001
+From de75a3d6cd6054a1d7198b4df28370ecd148ad18 Mon Sep 17 00:00:00 2001
 From: Mousumi Jana <mousumix.jana@intel.com>
 Date: Wed, 25 Nov 2015 22:52:40 +0530
-Subject: [PATCH 275/725] ASoC: Intel: Skylake: generic IPC message support
+Subject: [PATCH 275/728] ASoC: Intel: Skylake: generic IPC message support
 
 Debugfs provides an interface to send generic ipc message.
 This feature can be used to send any IPC command by
@@ -242,5 +242,5 @@ index 4056ea3de714..4c7cb272a029 100644
  
  #define skl_to_bus(s)  (&(s)->hbus)
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From b67ab1125cec58c5fc77b091f535507e146ae803 Mon Sep 17 00:00:00 2001
+From f74e140a3461537e4d4dc9f9d4e0c9ad6e063c20 Mon Sep 17 00:00:00 2001
 From: zhong jiang <zhongjiang@huawei.com>
 Date: Tue, 18 Sep 2018 16:59:34 +0800
-Subject: [PATCH 143/725] misc: remove redundant include moduleparam.h
+Subject: [PATCH 143/728] misc: remove redundant include moduleparam.h
 
 module.h already contains moduleparam.h,  so it is safe to remove
 the redundant include.
@@ -41,5 +41,5 @@ index 83e0c95d20a4..be732e5ead75 100644
  #include <linux/interrupt.h>
  #include <linux/highmem.h>
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 22a3a08a9216c2b4d05b1ba0cfa1fa0dc9869821 Mon Sep 17 00:00:00 2001
+From 93cf1722b473b956cd8f42d68bb8854419b51296 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Sun, 6 May 2018 15:36:13 +0300
-Subject: [PATCH 157/725] mei: restrict vm tag support to hbm version 2.2
+Subject: [PATCH 157/728] mei: restrict vm tag support to hbm version 2.2
 
 Only a firmware with version 2.2 and above supports vm tag feature.
 
@@ -83,5 +83,5 @@ index 685b78ce30a5..1187522284d5 100644
  	struct mei_fw_version fw_ver[MEI_MAX_FW_VER_BLOCKS];
  
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 78fbc812e5008c14686084161a4b10958d163d6b Mon Sep 17 00:00:00 2001
+From 98d200ddde244d37e7397235886bafb8d2dcc8b6 Mon Sep 17 00:00:00 2001
 From: Zhao Yakui <yakui.zhao@intel.com>
 Date: Tue, 16 Oct 2018 13:38:22 +0800
-Subject: [PATCH 581/725] VHM: Add one hypercall to configure the up-notifier
+Subject: [PATCH 581/728] VHM: Add one hypercall to configure the up-notifier
  interrupt vector
 
 Currently the acrn-hypervisor is using the PLATFORM_IPI vector to notify
@@ -64,5 +64,5 @@ index 7f8b6bcecd09..130069926786 100644
  inline long hcall_start_vm(unsigned long vmid);
  inline long hcall_pause_vm(unsigned long vmid);
 -- 
-2.19.1
+2.19.2
 

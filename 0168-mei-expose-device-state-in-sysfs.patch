@@ -1,7 +1,7 @@
-From 7aab5d7560009dc40f1d66c5d44f1ea970435dc5 Mon Sep 17 00:00:00 2001
+From 52e7b1ab0dda3e1198ac80634240f01a302a11fd Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Thu, 20 Apr 2017 10:02:34 +0300
-Subject: [PATCH 168/725] mei: expose device state in sysfs
+Subject: [PATCH 168/728] mei: expose device state in sysfs
 
 Expose mei device state to user-space through sysfs.
 This gave indication to applications that driver is in transition,
@@ -236,5 +236,5 @@ index 384f1b6bca96..96232c43c216 100644
  void mei_dmam_ring_free(struct mei_device *dev);
  bool mei_dma_ring_is_allocated(struct mei_device *dev);
 -- 
-2.19.1
+2.19.2
 

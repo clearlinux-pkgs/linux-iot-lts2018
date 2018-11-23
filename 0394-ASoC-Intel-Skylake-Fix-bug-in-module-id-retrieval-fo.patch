@@ -1,7 +1,7 @@
-From 8d659da06ebf8cd988335c35a32a83dbdd8d5c59 Mon Sep 17 00:00:00 2001
+From a3eb694688907fc5d74c447861f0b3c2bf1a6065 Mon Sep 17 00:00:00 2001
 From: "Mallikarjun, chippalkatti" <mallikarjunx.chippalkatti@intel.com>
 Date: Mon, 19 Jun 2017 09:33:05 +0530
-Subject: [PATCH 394/725] ASoC: Intel: Skylake: Fix bug in module id retrieval
+Subject: [PATCH 394/728] ASoC: Intel: Skylake: Fix bug in module id retrieval
  for link copier
 
 This was a copy paste mistake introduced in commit e3bd94ea9644
@@ -37,5 +37,5 @@ index ba60269255f6..891e24842be3 100644
  	link_cpr_cfg->id.instance_id = 3;
  	link_cpr_cfg->id.pvt_id = skl_get_pvt_id(ctx,
 -- 
-2.19.1
+2.19.2
 

@@ -1,7 +1,7 @@
-From 53015fd26b5ff7800608e643bdeeb521b73cbb8d Mon Sep 17 00:00:00 2001
+From fbf843b8076a8f11e2d3fe2b357df1c3c6517bd7 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Fri, 12 Oct 2018 19:39:37 +0800
-Subject: [PATCH 699/725] drm: Add CP System Renewability Msg Property
+Subject: [PATCH 699/728] drm: Add CP System Renewability Msg Property
 
 This patch adds a drm blob property to the selected connector.
 This property will be used to pass the SRM Blob ID from userspace
@@ -126,5 +126,5 @@ index 9fd96c96d598..dc5f4d217bc0 100644
  int drm_mode_create_content_type_property(struct drm_device *dev);
  void drm_hdmi_avi_infoframe_content_type(struct hdmi_avi_infoframe *frame,
 -- 
-2.19.1
+2.19.2
 

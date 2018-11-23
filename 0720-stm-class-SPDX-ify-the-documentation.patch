@@ -1,7 +1,7 @@
-From 3f4023e378b0c3f6fff35b475fe93056e76e491a Mon Sep 17 00:00:00 2001
+From 514a469d2d4fa462ce89639845bd5dbf33dbe301 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:03 +0300
-Subject: [PATCH 720/725] stm class: SPDX-ify the documentation
+Subject: [PATCH 720/728] stm class: SPDX-ify the documentation
 
 Add the SPDX header to the STM class documentation.
 
@@ -23,5 +23,5 @@ index 944994fd6368..99f99963e5e7 100644
  System Trace Module
  ===================
 -- 
-2.19.1
+2.19.2
 

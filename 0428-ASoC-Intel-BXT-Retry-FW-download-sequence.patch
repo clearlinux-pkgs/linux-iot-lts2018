@@ -1,7 +1,7 @@
-From 2031042b510b7234106518664edb22f9d8fac9ee Mon Sep 17 00:00:00 2001
+From a23e7455a7d69d4417349006f066d1442d36fd84 Mon Sep 17 00:00:00 2001
 From: "Shaik, Kareem M" <kareem.m.shaik@intel.com>
 Date: Fri, 1 Dec 2017 00:46:21 +0530
-Subject: [PATCH 428/725] ASoC: Intel: BXT: Retry FW download sequence
+Subject: [PATCH 428/728] ASoC: Intel: BXT: Retry FW download sequence
 
 In FW download failure case, the recommended solution is to repeat
 complete download sequence in multiple iterations.FW download
@@ -99,5 +99,5 @@ index 2eb57d75f1b1..47b2a24f84dc 100644
  		dev_dbg(ctx->dev, "Firmware download successful\n");
  		ret = wait_event_timeout(skl->boot_wait, skl->boot_complete,
 -- 
-2.19.1
+2.19.2
 

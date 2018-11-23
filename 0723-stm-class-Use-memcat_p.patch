@@ -1,7 +1,7 @@
-From f3426c1b9f1cd82e159aa618d8be3fb616baed70 Mon Sep 17 00:00:00 2001
+From fbd6849b4df518ad6153183cd50f3166ddd7b06f Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:06 +0300
-Subject: [PATCH 723/725] stm class: Use memcat_p()
+Subject: [PATCH 723/728] stm class: Use memcat_p()
 
 Instead of a local copy, use the memcat_p() helper to merge policy
 node attributes.
@@ -61,5 +61,5 @@ index 5e51bed0787b..0910ec807187 100644
  		kfree(type);
  		return NULL;
 -- 
-2.19.1
+2.19.2
 

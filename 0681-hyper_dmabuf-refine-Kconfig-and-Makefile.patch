@@ -1,7 +1,7 @@
-From d1fb3b69dd567128ce1a6cb2d43dae2d6d794170 Mon Sep 17 00:00:00 2001
+From 3296dfe2c05197c326f5827461b1dd4467a17775 Mon Sep 17 00:00:00 2001
 From: Dongwon Kim <dongwon.kim@intel.com>
 Date: Thu, 18 Oct 2018 11:43:57 -0700
-Subject: [PATCH 681/725] hyper_dmabuf: refine Kconfig and Makefile
+Subject: [PATCH 681/728] hyper_dmabuf: refine Kconfig and Makefile
 
 Make sure CONFIG_VIRTIO is selected if hyper_dmabuf is built
 for ACRN. Also all unused portion is removed from Makefile.
@@ -164,5 +164,5 @@ index f63967cc99f6..4ad8dc70234b 100644
 +			 virtio/hyper_dmabuf_virtio_comm_ring.o
  endif
 -- 
-2.19.1
+2.19.2
 

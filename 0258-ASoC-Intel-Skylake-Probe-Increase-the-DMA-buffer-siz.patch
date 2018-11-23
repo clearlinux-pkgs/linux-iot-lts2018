@@ -1,7 +1,7 @@
-From 54ec5ced590bec25269a9b63e992ca8dc7a6f997 Mon Sep 17 00:00:00 2001
+From 7b3d603e4968ffc600271ad3e93da903a189a5e5 Mon Sep 17 00:00:00 2001
 From: "Pawse, GuruprasadX" <guruprasadx.pawse@intel.com>
 Date: Tue, 14 Jun 2016 16:37:20 +0530
-Subject: [PATCH 258/725] ASoC: Intel: Skylake:Probe-Increase the DMA buffer
+Subject: [PATCH 258/728] ASoC: Intel: Skylake:Probe-Increase the DMA buffer
  size
 
 DMA buffer size needed for 48KHz, 4 channel, 32 bit data scheduled
@@ -48,5 +48,5 @@ index 507513eabbd6..9c4d96ecc762 100644
  		pconfig->estream = hdac_ext_host_stream_compr_assign(ebus,
  								substream,
 -- 
-2.19.1
+2.19.2
 

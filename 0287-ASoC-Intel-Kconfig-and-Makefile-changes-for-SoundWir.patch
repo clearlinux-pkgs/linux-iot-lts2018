@@ -1,7 +1,7 @@
-From d9bec2f9fe6d48475cc810b6139df64635bab626 Mon Sep 17 00:00:00 2001
+From daef024e5f4579db5ce18ec6eaad810ff66687d1 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Tue, 13 Dec 2016 11:17:20 +0530
-Subject: [PATCH 287/725] ASoC: Intel: Kconfig and Makefile changes for
+Subject: [PATCH 287/728] ASoC: Intel: Kconfig and Makefile changes for
  SoundWire
 
 This patch selects SoundWire Bus and SoundWire Master driver
@@ -50,5 +50,5 @@ index 7b8cf119aeae..f36c0bb6e6c2 100644
  obj-$(CONFIG_SND_SOC_INTEL_SKYLAKE) += snd-soc-skl-ipc.o
  
 -- 
-2.19.1
+2.19.2
 

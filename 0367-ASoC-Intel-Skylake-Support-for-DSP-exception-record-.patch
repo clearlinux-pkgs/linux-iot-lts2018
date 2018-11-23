@@ -1,7 +1,7 @@
-From 006ad14d9d80e079e3379825d744e7bdde98aa30 Mon Sep 17 00:00:00 2001
+From 847b1ce10ebcc32b2f1624b577e4885f7e1d4747 Mon Sep 17 00:00:00 2001
 From: Mousumi Jana <mousumix.jana@intel.com>
 Date: Tue, 4 Jul 2017 18:39:18 +0530
-Subject: [PATCH 367/725] ASoC: Intel: Skylake: Support for DSP exception
+Subject: [PATCH 367/728] ASoC: Intel: Skylake: Support for DSP exception
  record dump
 
 In the cases where the DSP encounters an exception
@@ -266,5 +266,5 @@ index 8dbe73ee3d59..b3a15ed76122 100644
 +int skl_dsp_crash_dump_read(struct skl_sst *ctx);
  #endif
 -- 
-2.19.1
+2.19.2
 

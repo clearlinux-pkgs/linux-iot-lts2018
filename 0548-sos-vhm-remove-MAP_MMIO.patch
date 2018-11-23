@@ -1,7 +1,7 @@
-From 1146d7ac3d41bf075c949ecee99ed768db4abade Mon Sep 17 00:00:00 2001
+From 859508894d411f48038298d3d5d369b27ec7fadb Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 548/725] sos: vhm: remove MAP_MMIO
+Subject: [PATCH 548/728] sos: vhm: remove MAP_MMIO
 
 Now the MAP_MMIO has no difference with MAP_MEM. So there's no needs
 to keep it.
@@ -48,5 +48,5 @@ index f51f56b58147..31cdebefedf2 100644
  	uint32_t type;
  
 -- 
-2.19.1
+2.19.2
 

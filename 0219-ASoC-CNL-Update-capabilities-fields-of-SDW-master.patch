@@ -1,7 +1,7 @@
-From b79fd05016f4bb05ff996399e0666073fa82440c Mon Sep 17 00:00:00 2001
+From 19bde06017c7157ef31b4e39c72eea9c19dfc278 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Mon, 2 May 2016 00:14:23 +0530
-Subject: [PATCH 219/725] ASoC:CNL: Update capabilities fields of SDW master
+Subject: [PATCH 219/728] ASoC:CNL: Update capabilities fields of SDW master
 
 Capabilities fields are missing while updating master controller
 update the fields based on hardware/topology capability
@@ -28,5 +28,5 @@ index 0caf9bf070a3..f70d70d0822a 100644
  		m_cap->num_data_ports = CNL_SDW_MAX_PORTS;
  		dp0_cap->max_word_length = 32;
 -- 
-2.19.1
+2.19.2
 

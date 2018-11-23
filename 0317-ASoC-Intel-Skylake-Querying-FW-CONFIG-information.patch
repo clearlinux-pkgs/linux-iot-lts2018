@@ -1,7 +1,7 @@
-From f018922e5699c4217c5309e7e04c450c88813229 Mon Sep 17 00:00:00 2001
+From 0c1ea536d9f2b6ce50ca50efc857fbab09ed9ad3 Mon Sep 17 00:00:00 2001
 From: Leoni Prodduvaka <leoni.prodduvaka@intel.com>
 Date: Tue, 7 Feb 2017 18:42:40 +0530
-Subject: [PATCH 317/725] ASoC: Intel: Skylake: Querying FW CONFIG information
+Subject: [PATCH 317/728] ASoC: Intel: Skylake: Querying FW CONFIG information
 
 FW Config information is queried from the firmware.
 This information is useful to set the behavior of the driver.
@@ -125,5 +125,5 @@ index 00265245beee..676a769374ae 100644
  	u32 replysz;
  	u32 adsp_id;
 -- 
-2.19.1
+2.19.2
 

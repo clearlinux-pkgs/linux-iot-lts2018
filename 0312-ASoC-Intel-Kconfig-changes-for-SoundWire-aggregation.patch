@@ -1,7 +1,7 @@
-From d5c30118074709d2684ff137f2fb4125e5006bc0 Mon Sep 17 00:00:00 2001
+From 5561467471ba805c22a0d7606cd08b38c183bea5 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Fri, 6 Jan 2017 16:12:13 +0530
-Subject: [PATCH 312/725] ASoC: Intel: Kconfig changes for SoundWire
+Subject: [PATCH 312/728] ASoC: Intel: Kconfig changes for SoundWire
  aggregation support
 
 This patch adds SoundWire aggregation config.
@@ -36,5 +36,5 @@ index 487e4445f6a0..9d2be10e484c 100644
  
  
 -- 
-2.19.1
+2.19.2
 

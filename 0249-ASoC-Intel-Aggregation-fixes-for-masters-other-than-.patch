@@ -1,7 +1,7 @@
-From a2dd607d1e7545f1603619b985095ec734898ed3 Mon Sep 17 00:00:00 2001
+From 0d393b911f86aef0a40e29158a0f87990af4ff8f Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Fri, 5 Aug 2016 16:35:34 +0530
-Subject: [PATCH 249/725] ASoC: Intel: Aggregation fixes for masters other than
+Subject: [PATCH 249/728] ASoC: Intel: Aggregation fixes for masters other than
  0 and 1
 
 Change-Id: Ie26608b30f75c69d039ee17c5703ad1f79e88f00
@@ -46,5 +46,5 @@ index 5c5e3c45008d..35c0ec938a18 100644
  		}
  		sdw_cfg->count = mconfig->sdw_agg.num_masters;
 -- 
-2.19.1
+2.19.2
 
