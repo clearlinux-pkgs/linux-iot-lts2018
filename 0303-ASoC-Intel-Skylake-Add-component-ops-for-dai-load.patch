@@ -1,7 +1,7 @@
-From 0ccc7012e8ca8a19515e287697d7b14f6f08f72b Mon Sep 17 00:00:00 2001
+From 75514a2d85900c1c463c4570df1df3665a340b84 Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Mon, 6 Mar 2017 09:56:10 +0530
-Subject: [PATCH 303/728] ASoC: Intel: Skylake: Add component ops for dai load
+Subject: [PATCH 303/743] ASoC: Intel: Skylake: Add component ops for dai load
 
 Since FE dais can come from topology, add component ops
 for the same.

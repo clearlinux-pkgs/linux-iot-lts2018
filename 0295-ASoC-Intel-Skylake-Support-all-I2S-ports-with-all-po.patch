@@ -1,7 +1,7 @@
-From 8a11b099ffdb49a6d246365818d3c5bc28b3e04b Mon Sep 17 00:00:00 2001
+From 620ec594c88567d1ef875f9beb6a802b72ae32e9 Mon Sep 17 00:00:00 2001
 From: "Pawse, GuruprasadX" <guruprasadx.pawse@intel.com>
 Date: Wed, 18 Jan 2017 15:53:24 +0530
-Subject: [PATCH 295/728] ASoC: Intel: Skylake: Support all I2S ports with all
+Subject: [PATCH 295/743] ASoC: Intel: Skylake: Support all I2S ports with all
  possible capabilities
 
 This patch adds all possible capabilities that the platform supports. This is

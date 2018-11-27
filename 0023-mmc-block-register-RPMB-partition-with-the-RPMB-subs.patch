@@ -1,7 +1,7 @@
-From 08b0348e5d9306f7c5c594f47965e214f72b28fa Mon Sep 17 00:00:00 2001
+From bd0e3abd1d610edab929fc21271f36a809b8e8b0 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 28 Jan 2015 17:01:34 +0200
-Subject: [PATCH 023/728] mmc: block: register RPMB partition with the RPMB
+Subject: [PATCH 023/743] mmc: block: register RPMB partition with the RPMB
  subsystem
 
 Register eMMC RPMB partition with the RPMB subsystem and provide

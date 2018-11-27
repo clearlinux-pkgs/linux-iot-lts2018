@@ -1,7 +1,7 @@
-From 9d91e297fb8646961e04a723be6b31a302f3fd51 Mon Sep 17 00:00:00 2001
+From a12a928c5a87e6cde138cf6a8085a1b361f71258 Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Wed, 20 Sep 2017 14:29:38 +0530
-Subject: [PATCH 402/728] ASoC: Intel: Skylake: Replace modulus operator with
+Subject: [PATCH 402/743] ASoC: Intel: Skylake: Replace modulus operator with
  div_u64_rem.
 
 Linking errors are observed when compiled for 32 bit architecture as

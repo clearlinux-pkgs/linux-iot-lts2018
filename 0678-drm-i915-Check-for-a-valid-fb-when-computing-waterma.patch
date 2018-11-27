@@ -1,7 +1,7 @@
-From 07a0fe95f178cb7760c5c1ae80568d04f31ccd85 Mon Sep 17 00:00:00 2001
+From 219b4f70d0028f270a46d2a48cc0f380a777362a Mon Sep 17 00:00:00 2001
 From: Satyeshwar Singh <satyeshwar.singh@intel.com>
 Date: Sun, 14 Oct 2018 16:41:07 -0700
-Subject: [PATCH 678/728] drm/i915: Check for a valid fb when computing
+Subject: [PATCH 678/743] drm/i915: Check for a valid fb when computing
  watermarks
 
 fb must be valid when we are computing watermarks for a plane or

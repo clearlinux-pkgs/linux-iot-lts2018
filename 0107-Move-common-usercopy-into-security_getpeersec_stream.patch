@@ -1,7 +1,7 @@
-From d25994c2fda706942e7c89c76a6665e31a53b07b Mon Sep 17 00:00:00 2001
+From f49cd1478f6eba44e5bc1f753965d62beca77bf7 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 5 Jul 2018 11:37:39 -0700
-Subject: [PATCH 107/728] Move common usercopy into security_getpeersec_stream
+Subject: [PATCH 107/743] Move common usercopy into security_getpeersec_stream
 
 The modules implementing hook for getpeersec_stream
 don't need to be duplicating the copy-to-user checks.

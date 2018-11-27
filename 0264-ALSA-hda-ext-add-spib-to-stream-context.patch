@@ -1,7 +1,7 @@
-From 4ce497ba4c7ccade92b9ad77064efcc96195909b Mon Sep 17 00:00:00 2001
+From 1340337bfa883684f4bf78f91379e258d6e08fdf Mon Sep 17 00:00:00 2001
 From: Ramesh Babu <ramesh.babu@intel.com>
 Date: Mon, 6 Jun 2016 13:13:15 +0530
-Subject: [PATCH 264/728] ALSA: hda: ext: add spib to stream context.
+Subject: [PATCH 264/743] ALSA: hda: ext: add spib to stream context.
 
 Platforms like skylake support SPIB (software position index in
 Buffer) capability, through which application pointer can be

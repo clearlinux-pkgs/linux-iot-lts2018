@@ -1,7 +1,7 @@
-From d306ec5e37e277337fcd711fdaed939c8751a884 Mon Sep 17 00:00:00 2001
+From 715c0e5b1d6df06363a9f8de53befcf8f1f3329b Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sat, 15 Sep 2018 22:08:18 +0300
-Subject: [PATCH 135/728] tpm: tpm-space.c remove unneeded semicolon
+Subject: [PATCH 135/743] tpm: tpm-space.c remove unneeded semicolon
 
 Remove unneeded semicolon in tpm2_map_response_header()
 

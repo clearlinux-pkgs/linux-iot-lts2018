@@ -1,7 +1,7 @@
-From a6351329991f68a2e27cdd80148939f6e4fa0ca6 Mon Sep 17 00:00:00 2001
+From 12d57317118a87e98220c9f42be6601994c2303e Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Sun, 20 Nov 2016 20:18:36 +0530
-Subject: [PATCH 215/728] SoundWire: Remove dead code from SoundWire BW
+Subject: [PATCH 215/743] SoundWire: Remove dead code from SoundWire BW
  calculation
 
 Remove some of the dead code from SoundWire BW calculation

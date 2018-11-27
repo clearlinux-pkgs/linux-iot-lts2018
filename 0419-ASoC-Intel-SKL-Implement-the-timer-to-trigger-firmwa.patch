@@ -1,7 +1,7 @@
-From 3c6776855f553f63bc5e337e0573eeb9332c975c Mon Sep 17 00:00:00 2001
+From 8bd656da1394e8c3d98f5fcb28de8faa77bbce27 Mon Sep 17 00:00:00 2001
 From: "R, Dharageswari" <dharageswari.r@intel.com>
 Date: Mon, 25 Dec 2017 03:03:35 +0530
-Subject: [PATCH 419/728] ASoC: Intel: SKL: Implement the timer to trigger
+Subject: [PATCH 419/743] ASoC: Intel: SKL: Implement the timer to trigger
  firmware crash recovery
 
 This patch implements timer to trigger firmware crash recovery

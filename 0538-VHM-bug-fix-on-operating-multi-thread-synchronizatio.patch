@@ -1,7 +1,7 @@
-From 7a9957b6e13c2972d6170e60d9bc0f934ceed7a2 Mon Sep 17 00:00:00 2001
+From 5b8548dcf419398291747cfa5164afb19e4e34fd Mon Sep 17 00:00:00 2001
 From: "Zheng, Gen" <gen.zheng@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 538/728] VHM: bug fix on operating multi-thread
+Subject: [PATCH 538/743] VHM: bug fix on operating multi-thread
  synchronization
 
 With current code, the ioreq client based on VHM kthread may access

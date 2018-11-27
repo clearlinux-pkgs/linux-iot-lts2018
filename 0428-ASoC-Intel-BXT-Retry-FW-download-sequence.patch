@@ -1,7 +1,7 @@
-From a23e7455a7d69d4417349006f066d1442d36fd84 Mon Sep 17 00:00:00 2001
+From 097a3653391cbd7897783b609062477aa62bbda0 Mon Sep 17 00:00:00 2001
 From: "Shaik, Kareem M" <kareem.m.shaik@intel.com>
 Date: Fri, 1 Dec 2017 00:46:21 +0530
-Subject: [PATCH 428/728] ASoC: Intel: BXT: Retry FW download sequence
+Subject: [PATCH 428/743] ASoC: Intel: BXT: Retry FW download sequence
 
 In FW download failure case, the recommended solution is to repeat
 complete download sequence in multiple iterations.FW download

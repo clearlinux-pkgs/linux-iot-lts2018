@@ -1,7 +1,7 @@
-From 8cf26abd75c6de152f14872a2c7322ff417cfb60 Mon Sep 17 00:00:00 2001
+From ed2922b23d8d4a1ab0ff3092f1d2af5151cf4986 Mon Sep 17 00:00:00 2001
 From: Zhipeng Gong <zhipeng.gong@intel.com>
 Date: Thu, 20 Sep 2018 13:10:45 +0800
-Subject: [PATCH 670/728] drm/i915/gvt: use plane size for fb decoder
+Subject: [PATCH 670/743] drm/i915/gvt: use plane size for fb decoder
 
 Current fb decoder returns pipe src size to user space,
 while ggtt surface sharing only show primary plane framebuffer.

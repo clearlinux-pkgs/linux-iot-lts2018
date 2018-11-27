@@ -1,7 +1,7 @@
-From 4d41905e010f3248790ca2e08ccc353ede9cb5ea Mon Sep 17 00:00:00 2001
+From b2c8be8829bba3b065dfa634d9822430db97d16f Mon Sep 17 00:00:00 2001
 From: Saranya Gopal <saranya.gopal@intel.com>
 Date: Wed, 12 Sep 2018 01:03:57 +0530
-Subject: [PATCH 072/728] usbcore: Select UAC3 configuration for audio if
+Subject: [PATCH 072/743] usbcore: Select UAC3 configuration for audio if
  present
 
 USB audio class 3.0 specification introduced many significant

@@ -1,7 +1,7 @@
-From 4fab0127ec57558722042ef35ca8de021d56cdce Mon Sep 17 00:00:00 2001
+From 9544ffaa0f782a5657ce09455f65f9b43533f1c5 Mon Sep 17 00:00:00 2001
 From: Vivek Kasireddy <vivek.kasireddy@intel.com>
 Date: Thu, 8 Mar 2018 15:10:34 -0800
-Subject: [PATCH 660/728] INTERNAL [IOTG] drm/i915: Decouple pipe and crtc
+Subject: [PATCH 660/743] INTERNAL [IOTG] drm/i915: Decouple pipe and crtc
  index dependencies
 
 i915 driver had assumptions that pipe and the crtc index always

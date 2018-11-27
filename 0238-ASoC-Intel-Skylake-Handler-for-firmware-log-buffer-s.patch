@@ -1,7 +1,7 @@
-From a24ee1937cc0bdc66e36bafaf9c4231b05652fde Mon Sep 17 00:00:00 2001
+From cf70c42f593a84ea67a979c6a13178776565889c Mon Sep 17 00:00:00 2001
 From: "Panwar, Ashish" <ashish.panwar@intel.com>
 Date: Wed, 20 Jan 2016 19:19:21 +0530
-Subject: [PATCH 238/728] ASoC: Intel: Skylake: Handler for firmware log buffer
+Subject: [PATCH 238/743] ASoC: Intel: Skylake: Handler for firmware log buffer
  status notification
 
 We copy half of the firmware log buffer on this notification. We

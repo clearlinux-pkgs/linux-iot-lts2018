@@ -1,7 +1,7 @@
-From 6db16e13c557f65e79c87710df0397d732ce6e84 Mon Sep 17 00:00:00 2001
+From 6fd1e9db18c05d59772890fae8799b45b93ff8aa Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:05 +0300
-Subject: [PATCH 722/728] lib: Add memcat_p(): paste 2 pointer arrays together
+Subject: [PATCH 722/743] lib: Add memcat_p(): paste 2 pointer arrays together
 
 This adds a helper to paste 2 pointer arrays together, useful for merging
 various types of attribute arrays. There are a few places in the kernel

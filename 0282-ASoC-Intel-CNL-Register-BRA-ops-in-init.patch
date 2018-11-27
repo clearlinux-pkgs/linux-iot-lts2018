@@ -1,7 +1,7 @@
-From 3884302206fb1438f96bd2f8203e3a73b3e7e62f Mon Sep 17 00:00:00 2001
+From 945ad2990e04e8d1dadfae90617a3fe6bdde7af6 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Sun, 2 Jul 2017 11:51:00 +0530
-Subject: [PATCH 282/728] ASoC: Intel: CNL: Register BRA ops in init.
+Subject: [PATCH 282/743] ASoC: Intel: CNL: Register BRA ops in init.
 
 Signed-off-by: Sanyog Kale <sanyog.r.kale@intel.com>
 ---

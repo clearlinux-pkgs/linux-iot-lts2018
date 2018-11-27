@@ -1,7 +1,7 @@
-From ee3ac0abd125ceb5be9c02901ae84885034f23bd Mon Sep 17 00:00:00 2001
+From 2c073346cddd529324405d0772f0cd832fc7d0ee Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:51 +0300
-Subject: [PATCH 708/728] stm class: Rework policy node fallback
+Subject: [PATCH 708/743] stm class: Rework policy node fallback
 
 Currently, if no matching policy node can be found for a trace source,
 we'll try to use "default" policy node, then, if that doesn't exist,

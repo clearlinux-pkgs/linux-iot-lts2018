@@ -1,7 +1,7 @@
-From 8ec4ac95c58f20792d8af6110765d83789bd6d41 Mon Sep 17 00:00:00 2001
+From 17755560371a930783b63f4bb6f4a2ca36925007 Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Fri, 14 Sep 2018 16:10:19 +0800
-Subject: [PATCH 615/728] drm/i915/gvt: support guest plane scaling
+Subject: [PATCH 615/743] drm/i915/gvt: support guest plane scaling
 
 It is to support plane scaling feature, need let guest access PS_CTRL,
 PS_WIN, PS_POS registers. Use parameter domain_scaler_owner to control

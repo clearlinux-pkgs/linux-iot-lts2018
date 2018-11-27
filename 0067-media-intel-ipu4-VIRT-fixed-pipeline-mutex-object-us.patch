@@ -1,7 +1,7 @@
-From 30bfbf56047049cb1302ecce59ccd9c7a3443837 Mon Sep 17 00:00:00 2001
+From 6a7910db0c17d573bd403feb46a89074dc0367fd Mon Sep 17 00:00:00 2001
 From: Ong Hock Yu <ong.hock.yu@intel.com>
 Date: Sun, 4 Nov 2018 02:30:44 +0000
-Subject: [PATCH 067/728] media: intel-ipu4: [VIRT] fixed pipeline mutex object
+Subject: [PATCH 067/743] media: intel-ipu4: [VIRT] fixed pipeline mutex object
  used but not being initialized issue.
 
 Change-Id: Iebf6a37042fd585d631d064843ad20cce1c0b57c

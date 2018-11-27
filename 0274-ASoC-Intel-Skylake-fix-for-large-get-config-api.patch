@@ -1,7 +1,7 @@
-From e5b23bcabdeba1d605c9032e0f21d883197d4d93 Mon Sep 17 00:00:00 2001
+From 2d579e286680dd0a54975837819b8179f3145196 Mon Sep 17 00:00:00 2001
 From: Mousumi Jana <mousumix.jana@intel.com>
 Date: Sun, 8 Nov 2015 19:12:28 +0530
-Subject: [PATCH 274/728] ASoC: Intel: Skylake:fix for large get config api
+Subject: [PATCH 274/743] ASoC: Intel: Skylake:fix for large get config api
 
 This patch adds support for get large config API
 when need to send the tx parameter to retrieve one or

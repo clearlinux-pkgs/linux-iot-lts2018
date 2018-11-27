@@ -1,7 +1,7 @@
-From 083af8b8f3426ea43d5040c37eb6e7ac6e61fa79 Mon Sep 17 00:00:00 2001
+From 4bcf7b7ec81d8bf3a09f743abeb374a78b4b4450 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Mon, 5 Mar 2018 19:47:28 +0200
-Subject: [PATCH 123/728] tpm: sort objects in the Makefile
+Subject: [PATCH 123/743] tpm: sort objects in the Makefile
 
 Make the tpm Makefile a bit more in order by putting
 objects in one column.

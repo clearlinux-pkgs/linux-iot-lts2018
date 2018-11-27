@@ -1,7 +1,7 @@
-From f2378aa3a6b1476e89a6cc8baaae0455425db7af Mon Sep 17 00:00:00 2001
+From 90b2c09981a0f4074ed49f04a46d573092086e96 Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Mon, 26 Feb 2018 20:07:34 +0800
-Subject: [PATCH 620/728] drm/i915/gvt: add pvmmio support in preempt context
+Subject: [PATCH 620/743] drm/i915/gvt: add pvmmio support in preempt context
  submission
 
 This patch added the pvmmio support in preemption context submission for

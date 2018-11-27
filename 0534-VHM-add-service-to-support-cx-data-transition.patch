@@ -1,7 +1,7 @@
-From 7a22edb4bcb18b37c97e6fa9fdc5088c78cf7045 Mon Sep 17 00:00:00 2001
+From f4d734668411ff287b350310cfd38afb0a37e0c6 Mon Sep 17 00:00:00 2001
 From: Victor Sun <victor.sun@intel.com>
 Date: Thu, 19 Apr 2018 00:15:43 +0800
-Subject: [PATCH 534/728] VHM: add service to support cx data transition
+Subject: [PATCH 534/743] VHM: add service to support cx data transition
 
 Like Acrn px enabling, the cx data is also hard coded within HV, DM will
 get hard coded cx data to build DSDT for UOS. With this DSDT, UOS would

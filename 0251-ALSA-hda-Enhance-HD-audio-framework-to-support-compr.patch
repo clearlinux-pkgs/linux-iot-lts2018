@@ -1,7 +1,7 @@
-From 19cf7ec7cfca36cf7136b42708a1c13c6f49d48f Mon Sep 17 00:00:00 2001
+From b17ab5b679b05d06f256cdf8f07ba0410c2eb2ec Mon Sep 17 00:00:00 2001
 From: Divya Prakash <divya1.prakash@intel.com>
 Date: Thu, 7 Apr 2016 10:32:45 +0530
-Subject: [PATCH 251/728] ALSA: hda: Enhance HD audio framework to support
+Subject: [PATCH 251/743] ALSA: hda: Enhance HD audio framework to support
  compress streams
 
 Introduce APIs for compress stream DMA assignment,

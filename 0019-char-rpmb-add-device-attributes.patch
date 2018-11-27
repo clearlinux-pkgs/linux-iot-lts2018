@@ -1,7 +1,7 @@
-From 25318fd809f278c1951630d00f1e23c56494875b Mon Sep 17 00:00:00 2001
+From 967f19a8a557af69321470ba59f736742fc5fbb0 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 28 Feb 2016 23:59:39 +0200
-Subject: [PATCH 019/728] char: rpmb: add device attributes
+Subject: [PATCH 019/743] char: rpmb: add device attributes
 
 Add attribute type that displays underlay storage type technology
 EMMC, UFS, and attribute id, that displays underlay storage device id.

@@ -1,7 +1,7 @@
-From e5ff2270087243923eab4e6ef389903b39a925a9 Mon Sep 17 00:00:00 2001
+From e00d73a6c2b3ec5f99f13e6d405dfb597d63e8a6 Mon Sep 17 00:00:00 2001
 From: Saranya Gopal <saranya.gopal@intel.com>
 Date: Fri, 5 Oct 2018 15:20:15 +0530
-Subject: [PATCH 071/728] roles: Enable static DRD mode for role switch in
+Subject: [PATCH 071/743] roles: Enable static DRD mode for role switch in
  Intel platforms
 
 Enable static DRD mode in Intel platforms which guarantees

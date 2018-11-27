@@ -1,7 +1,7 @@
-From 514a469d2d4fa462ce89639845bd5dbf33dbe301 Mon Sep 17 00:00:00 2001
+From 9042fc865a7f81948ef36eb88913abd702511c2c Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:03 +0300
-Subject: [PATCH 720/728] stm class: SPDX-ify the documentation
+Subject: [PATCH 720/743] stm class: SPDX-ify the documentation
 
 Add the SPDX header to the STM class documentation.
 

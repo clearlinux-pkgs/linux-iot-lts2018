@@ -1,7 +1,7 @@
-From e3381abe534b71a1f819a14d954f1bd7df5b73d0 Mon Sep 17 00:00:00 2001
+From 7dce05a62a86b9d40e780c1a8f32d59265444f55 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Tue, 6 Mar 2018 10:43:45 +0200
-Subject: [PATCH 129/728] tpm: factor out tpm1_get_random into tpm1-cmd.c
+Subject: [PATCH 129/743] tpm: factor out tpm1_get_random into tpm1-cmd.c
 
 Factor out get random implementation from tpm-interface.c
 into tpm1_get_random function in tpm1-cmd.c.

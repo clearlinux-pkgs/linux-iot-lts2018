@@ -1,7 +1,7 @@
-From ae71226ce53052391a4397ad1562dcee52870be1 Mon Sep 17 00:00:00 2001
+From 91554be0562ac79618b3a689dc118e637080e674 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 10 May 2018 14:04:35 -0700
-Subject: [PATCH 093/728] LSM: Infrastructure management of the file security
+Subject: [PATCH 093/743] LSM: Infrastructure management of the file security
  blob
 
 Move management of the file->f_security blob out of the

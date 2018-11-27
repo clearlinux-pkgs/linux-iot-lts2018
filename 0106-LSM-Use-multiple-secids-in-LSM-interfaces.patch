@@ -1,7 +1,7 @@
-From 35681797c9d589cb94fc51d55f550fd4279fbbed Mon Sep 17 00:00:00 2001
+From 218227c6f0b933536e4376ed1f758ed7ab100aba Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Tue, 28 Aug 2018 16:21:29 -0700
-Subject: [PATCH 106/728] LSM: Use multiple secids in LSM interfaces
+Subject: [PATCH 106/743] LSM: Use multiple secids in LSM interfaces
 
 This is the second of two parts required to change the
 security module infrastructure from using a u32 to

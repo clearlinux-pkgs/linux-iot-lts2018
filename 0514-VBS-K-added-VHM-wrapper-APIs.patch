@@ -1,7 +1,7 @@
-From 3d5d38b9ce9e658326ce9508f54e82f16881fdd2 Mon Sep 17 00:00:00 2001
+From 794d3b491b90e2b9d32e8fa9e27c921c890b360e Mon Sep 17 00:00:00 2001
 From: Hao Li <hao.l.li@intel.com>
 Date: Thu, 25 Jan 2018 10:12:26 -0500
-Subject: [PATCH 514/728] VBS-K: added VHM wrapper APIs
+Subject: [PATCH 514/743] VBS-K: added VHM wrapper APIs
 
 This patch added 3 VHM wrapper APIs to the VBS-K framework:
  - long virtio_dev_register(struct virtio_dev_info *dev);

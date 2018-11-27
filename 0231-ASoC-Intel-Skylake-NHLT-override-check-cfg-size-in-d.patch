@@ -1,7 +1,7 @@
-From 824cdccefd045cef45f901a3e9eee6b413a355c5 Mon Sep 17 00:00:00 2001
+From 068b1570131589cc7b8246deb6b4f6c75f8fff6d Mon Sep 17 00:00:00 2001
 From: Jeeja KP <jeeja.kp@intel.com>
 Date: Tue, 8 Sep 2015 22:16:08 +0530
-Subject: [PATCH 231/728] ASoC: Intel: Skylake: NHLT override, check cfg size
+Subject: [PATCH 231/743] ASoC: Intel: Skylake: NHLT override, check cfg size
  in debugfs blob write
 
 When blob is updated, check the cfg size. If cfg size exceeds maximum,

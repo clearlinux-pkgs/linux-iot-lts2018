@@ -1,7 +1,7 @@
-From 604937248e422959f652ec6ea1eff7e099c1ceec Mon Sep 17 00:00:00 2001
+From c0ee1e51785b2de88dae785b30d04b087b56020f Mon Sep 17 00:00:00 2001
 From: Yin Fengwei <fengwei.yin@intel.com>
 Date: Fri, 31 Aug 2018 10:58:59 +0800
-Subject: [PATCH 522/728] api doc: add vhm API docs
+Subject: [PATCH 522/743] api doc: add vhm API docs
 
 Change-Id: If6df309ea215c1592ce41f7da724388ff1084087
 Tracked-On: 220254

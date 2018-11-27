@@ -1,7 +1,7 @@
-From 3640c8dd7ec2cfbe227777da6d4ac500d0d9c31b Mon Sep 17 00:00:00 2001
+From a9de274dd51ff17808c87ef35a98c27e41be75b5 Mon Sep 17 00:00:00 2001
 From: Tadeusz Struk <tadeusz.struk@intel.com>
 Date: Mon, 10 Sep 2018 10:18:28 -0700
-Subject: [PATCH 117/728] tpm: add ptr to the tpm_space struct to file_priv
+Subject: [PATCH 117/743] tpm: add ptr to the tpm_space struct to file_priv
 
 Add a ptr to struct tpm_space to the file_priv and consolidate
 of the write operations for the two interfaces.

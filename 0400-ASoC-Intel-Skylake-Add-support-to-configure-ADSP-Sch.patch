@@ -1,7 +1,7 @@
-From 15efda367405e83f509da573142500d774a4b188 Mon Sep 17 00:00:00 2001
+From c3130b4408e6e3a7d0feaa8e3863e2c9fd604ce8 Mon Sep 17 00:00:00 2001
 From: "Shaik, Kareem M" <kareem.m.shaik@intel.com>
 Date: Thu, 26 Oct 2017 02:56:25 +0530
-Subject: [PATCH 400/728] ASoC: Intel: Skylake: Add support to configure ADSP
+Subject: [PATCH 400/743] ASoC: Intel: Skylake: Add support to configure ADSP
  Scheduler
 
 ADSP scheduler can be configured to run either from

@@ -1,7 +1,7 @@
-From bbac0a24b4743e55465281de2dbc663e9e69e8f6 Mon Sep 17 00:00:00 2001
+From fc2cc43d40b976b9753b0b2fa7f0de714ad0a532 Mon Sep 17 00:00:00 2001
 From: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
 Date: Wed, 6 Sep 2017 14:04:58 +0530
-Subject: [PATCH 391/728] ASoC: Intel: Skylake: Fix error handling in
+Subject: [PATCH 391/743] ASoC: Intel: Skylake: Fix error handling in
  cnl_sdw_hw_params()
 
 There are bunch of error paths where allocated resources are not freed

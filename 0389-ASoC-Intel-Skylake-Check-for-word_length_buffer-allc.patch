@@ -1,7 +1,7 @@
-From a9e71623c349b516a716ff26df54f79e378aff46 Mon Sep 17 00:00:00 2001
+From 9d396628fe5c16dac0ecd2e1d3eba969d85e39f9 Mon Sep 17 00:00:00 2001
 From: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
 Date: Wed, 6 Sep 2017 14:04:56 +0530
-Subject: [PATCH 389/728] ASoC: Intel: Skylake: Check for word_length_buffer
+Subject: [PATCH 389/743] ASoC: Intel: Skylake: Check for word_length_buffer
  allcation failure
 
 word_length_buffer buffer allocation can fail.

@@ -1,7 +1,7 @@
-From fbad99aa7b8e547b234cba2b571305254d7536b0 Mon Sep 17 00:00:00 2001
+From 11d4dc2e24879036bddd7bd27fa530f6309809a0 Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Fri, 19 Oct 2018 10:59:29 +0200
-Subject: [PATCH 472/728] Revert "ASoC: Intel: Skylake: validate the downloaded
+Subject: [PATCH 472/743] Revert "ASoC: Intel: Skylake: validate the downloaded
  firmware"
 
 This reverts commit 5421814ae83588a501df54d5d4bde39b059756fa.

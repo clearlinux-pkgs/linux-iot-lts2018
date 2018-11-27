@@ -1,7 +1,7 @@
-From 0ad4c0423978c7020b0cdb871aa1fa7962ae3bdf Mon Sep 17 00:00:00 2001
+From 7feef8bf05fa564c83b4848996d7fd2277773448 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Tue, 28 Aug 2018 11:40:43 -0700
-Subject: [PATCH 105/728] LSM: Use multiple secids in security module
+Subject: [PATCH 105/743] LSM: Use multiple secids in security module
  interfaces
 
 This is the first of two parts required to change the

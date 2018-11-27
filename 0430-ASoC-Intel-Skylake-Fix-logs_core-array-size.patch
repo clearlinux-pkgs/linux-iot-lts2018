@@ -1,7 +1,7 @@
-From 536036d94f2bc85c5bf3c0310a8db095e1338277 Mon Sep 17 00:00:00 2001
+From 6b7d326a0907b73b06445a3ab3bc297ad3a492f8 Mon Sep 17 00:00:00 2001
 From: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
 Date: Fri, 23 Feb 2018 15:47:19 +0530
-Subject: [PATCH 430/728] ASoC: Intel: Skylake: Fix logs_core array size
+Subject: [PATCH 430/743] ASoC: Intel: Skylake: Fix logs_core array size
 
 2 extra trace buffer dais were added for CNL but logs_core array size
 had not been updated to accommodate this.

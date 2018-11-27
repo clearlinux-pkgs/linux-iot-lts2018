@@ -1,7 +1,7 @@
-From 52e7b1ab0dda3e1198ac80634240f01a302a11fd Mon Sep 17 00:00:00 2001
+From c21b32b72eb37b54fbe24b7cb57bf470d3fbcea6 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Thu, 20 Apr 2017 10:02:34 +0300
-Subject: [PATCH 168/728] mei: expose device state in sysfs
+Subject: [PATCH 168/743] mei: expose device state in sysfs
 
 Expose mei device state to user-space through sysfs.
 This gave indication to applications that driver is in transition,

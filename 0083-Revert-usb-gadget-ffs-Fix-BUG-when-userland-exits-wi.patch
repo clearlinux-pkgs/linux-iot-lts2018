@@ -1,7 +1,7 @@
-From c2824a8c58ff65c0e3b04925e1cee08cbe131e27 Mon Sep 17 00:00:00 2001
+From f65edcd0b51b50ea3c24268f52726de8663cec5a Mon Sep 17 00:00:00 2001
 From: Shen Jing <jingx.shen@intel.com>
 Date: Thu, 1 Nov 2018 15:35:17 +0530
-Subject: [PATCH 083/728] Revert "usb: gadget: ffs: Fix BUG when userland exits
+Subject: [PATCH 083/743] Revert "usb: gadget: ffs: Fix BUG when userland exits
  with submitted AIO transfers"
 
 This reverts commit b4194da3f9087dd38d91b40f9bec42d59ce589a8

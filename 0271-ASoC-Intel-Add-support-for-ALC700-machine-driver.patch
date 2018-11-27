@@ -1,7 +1,7 @@
-From ff9099b1cf18c97466600bff86d0cf6e1f6bdc91 Mon Sep 17 00:00:00 2001
+From d19cc42d2ab93df54a5513df18ed0ec0a7fb1a8f Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Tue, 28 Jun 2016 15:48:56 +0530
-Subject: [PATCH 271/728] ASoC:Intel: Add support for ALC700 machine driver
+Subject: [PATCH 271/743] ASoC:Intel: Add support for ALC700 machine driver
 
 Change-Id: Idcec9e08faaedbb92f714548d9fea15af4de6b91
 Signed-off-by: Hardik Shah <hardik.t.shah@intel.com>

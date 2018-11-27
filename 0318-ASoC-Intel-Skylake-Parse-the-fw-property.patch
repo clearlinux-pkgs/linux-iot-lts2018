@@ -1,7 +1,7 @@
-From ed5dd5cf6163ed60ae681cde617d209157464a35 Mon Sep 17 00:00:00 2001
+From 1959dcce50f965deb15054535e8d7f2f3f48db94 Mon Sep 17 00:00:00 2001
 From: Leoni Prodduvaka <leoni.prodduvaka@intel.com>
 Date: Mon, 6 Feb 2017 22:16:04 +0530
-Subject: [PATCH 318/728] ASoC: Intel: Skylake: Parse the fw property
+Subject: [PATCH 318/743] ASoC: Intel: Skylake: Parse the fw property
 
 The value returned by the FW CONFIG IPC is in the form of a TLV.
 It contains information about fw version, memory reclaim,

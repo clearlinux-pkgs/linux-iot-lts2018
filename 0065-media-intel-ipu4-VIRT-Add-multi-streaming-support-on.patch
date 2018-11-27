@@ -1,7 +1,7 @@
-From d4b0782f9a485e0a3007f076715a3320000b9a45 Mon Sep 17 00:00:00 2001
+From eec8bd7dfe9d4f9102021e7fdc73abafa853520c Mon Sep 17 00:00:00 2001
 From: Ong Hock Yu <ong.hock.yu@intel.com>
 Date: Tue, 2 Oct 2018 08:50:23 +0800
-Subject: [PATCH 065/728] media: intel-ipu4: [VIRT] Add multi streaming support
+Subject: [PATCH 065/743] media: intel-ipu4: [VIRT] Add multi streaming support
  on guest OS
 
 Change-Id: I416c99a032e9f2a9611c43ca917b28e3ff70fe18

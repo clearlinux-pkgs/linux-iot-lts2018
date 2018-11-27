@@ -1,7 +1,7 @@
-From 6fdc889c245b6a5b8dea913ae494ddfc7cab6ef7 Mon Sep 17 00:00:00 2001
+From 798660e77bc7d6aec0a50a3f2a3d7b2a4f3a47fb Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Tue, 10 Jul 2018 09:55:30 +0800
-Subject: [PATCH 622/728] drm/i915/gvt: don't treat EINVAL if trap pci_command
+Subject: [PATCH 622/743] drm/i915/gvt: don't treat EINVAL if trap pci_command
  and pci_status together
 
 Previously we only support single pci_command writing trap. While when

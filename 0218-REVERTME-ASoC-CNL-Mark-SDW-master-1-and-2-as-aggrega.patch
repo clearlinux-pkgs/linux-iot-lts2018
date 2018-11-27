@@ -1,7 +1,7 @@
-From d9a124d2eac49dd277b2f7756b83ef8b24f528ef Mon Sep 17 00:00:00 2001
+From f03b8ee440fe8503db90a387d802d0eabfbeab47 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Fri, 29 Apr 2016 16:41:26 +0530
-Subject: [PATCH 218/728] REVERTME:ASoC:CNL: Mark SDW master 1 and 2 as
+Subject: [PATCH 218/743] REVERTME:ASoC:CNL: Mark SDW master 1 and 2 as
  aggregated.
 
 This patch is to to test the aggregation. Mark the master1

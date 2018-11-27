@@ -1,7 +1,7 @@
-From 639fb056e11b658de50f5aa1808fd16935f89469 Mon Sep 17 00:00:00 2001
+From d9a4c7618c66a176a78307b3633c8adf6c9d0f16 Mon Sep 17 00:00:00 2001
 From: "Yew, Chang Ching" <chang.ching.yew@intel.com>
 Date: Tue, 23 Oct 2018 13:23:51 +0800
-Subject: [PATCH 062/728] media: i2c: crlmodule-lite: base code (configurable
+Subject: [PATCH 062/743] media: i2c: crlmodule-lite: base code (configurable
  register list)
 
 Base code for common sensor driver, crlmodule-lite to work with ICI driver

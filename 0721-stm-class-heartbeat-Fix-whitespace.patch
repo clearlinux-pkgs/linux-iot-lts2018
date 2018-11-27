@@ -1,7 +1,7 @@
-From 0fdd30a521bc0a8894e8d8906c54b224d90f357b Mon Sep 17 00:00:00 2001
+From 80c52dc8b74474e8f6ae8018d272b83bbad6a8ea Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:04 +0300
-Subject: [PATCH 721/728] stm class: heartbeat: Fix whitespace
+Subject: [PATCH 721/743] stm class: heartbeat: Fix whitespace
 
 Fix whitespace in the code for better readability, no functional changes.
 

@@ -1,7 +1,7 @@
-From d0c3876c84d5e88baf480ad5adaad6ba66c717b8 Mon Sep 17 00:00:00 2001
+From 5d60e292cecaf822e40b243cb30e2165da695b95 Mon Sep 17 00:00:00 2001
 From: "S, Pavan K" <pavan.k.s@intel.com>
 Date: Fri, 30 Jun 2017 20:52:37 +0530
-Subject: [PATCH 359/728] ASoC: Intel: Multiple I/O PCM format support for pipe
+Subject: [PATCH 359/743] ASoC: Intel: Multiple I/O PCM format support for pipe
 
 If a pipe supports multiple input/output formats, kcontrol is
 created and selection of pipe input and output configuration

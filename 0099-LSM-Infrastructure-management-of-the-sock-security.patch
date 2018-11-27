@@ -1,7 +1,7 @@
-From 83fbae8be424a07e722b87eaebab306126aa492c Mon Sep 17 00:00:00 2001
+From e938772b1c9f27cf112cb95a2765d859fc6e6530 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 12 Jul 2018 13:11:09 -0700
-Subject: [PATCH 099/728] LSM: Infrastructure management of the sock security
+Subject: [PATCH 099/743] LSM: Infrastructure management of the sock security
 
 Move management of the sock->sk_security blob out
 of the individual security modules and into the security

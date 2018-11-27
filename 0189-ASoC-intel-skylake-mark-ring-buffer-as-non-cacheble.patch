@@ -1,7 +1,7 @@
-From 307ed88d2356d0f122d062280f04720c2bb9b7f4 Mon Sep 17 00:00:00 2001
+From ec0ca3dece660400bbe68a599a2f7cbdae1d177a Mon Sep 17 00:00:00 2001
 From: Ramesh Babu <ramesh.babu@intel.com>
 Date: Mon, 23 Nov 2015 03:22:40 +0530
-Subject: [PATCH 189/728] ASoC: intel: skylake: mark ring buffer as
+Subject: [PATCH 189/743] ASoC: intel: skylake: mark ring buffer as
  non-cacheble
 
 Change-Id: I8c08f3a91682654e5f1db95033b580258201da91

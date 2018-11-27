@@ -1,7 +1,7 @@
-From f54b3dc87a0734a5963a21fd2a043692dfae444c Mon Sep 17 00:00:00 2001
+From 2ade8bdb82733eef35d23e2e930feb97dac42d68 Mon Sep 17 00:00:00 2001
 From: "Wagner, Steffen" <steffen.wagner@intel.com>
 Date: Mon, 8 May 2017 21:19:09 +0530
-Subject: [PATCH 351/728] ASoC: tdf8532: NXP TDF8532 audio class-D amplifier
+Subject: [PATCH 351/743] ASoC: tdf8532: NXP TDF8532 audio class-D amplifier
  driver
 
 This is a basic driver to register the codec, expose the

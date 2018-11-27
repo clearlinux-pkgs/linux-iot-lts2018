@@ -1,7 +1,7 @@
-From f23792674dd64d3e8cc9ecb91c075007bbfe1ea4 Mon Sep 17 00:00:00 2001
+From f3e53f60f8818bae78549a90f0e4096acc189404 Mon Sep 17 00:00:00 2001
 From: Pardha Saradhi K <pardha.saradhi.kesapragada@intel.com>
 Date: Tue, 18 Jul 2017 22:56:08 +0530
-Subject: [PATCH 405/728] ALSA: hda: Make sure DMA is stopped by reading back
+Subject: [PATCH 405/743] ALSA: hda: Make sure DMA is stopped by reading back
  the RUN bit
 
 As per HW recommendation, after clearing the RUN bit,

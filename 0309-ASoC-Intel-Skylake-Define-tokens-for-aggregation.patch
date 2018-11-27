@@ -1,7 +1,7 @@
-From b92ac3deb06c5cacc79deeb4290b8d0512a0a7a8 Mon Sep 17 00:00:00 2001
+From 1306fb8af41db1fa38d43079145bf0b70f24c281 Mon Sep 17 00:00:00 2001
 From: Shreyas NC <shreyas.nc@intel.com>
 Date: Wed, 8 Mar 2017 03:08:18 +0530
-Subject: [PATCH 309/728] ASoC: Intel: Skylake: Define tokens for aggregation
+Subject: [PATCH 309/743] ASoC: Intel: Skylake: Define tokens for aggregation
 
 To support aggregation, define tokens for aggregation id,
 masters participating in aggregation, link id and channel mask.

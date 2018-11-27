@@ -1,7 +1,7 @@
-From f279d64c839e0eff98e8d0c74c059b90ebdac92d Mon Sep 17 00:00:00 2001
+From dc7d43c7cf7e08c028f71a0783a7176592ca722c Mon Sep 17 00:00:00 2001
 From: "Diwakar, Praveen" <praveen.diwakar@intel.com>
 Date: Tue, 25 Apr 2017 06:24:38 +0530
-Subject: [PATCH 344/728] ASoC: Intel: Skylake: Add single module support in a
+Subject: [PATCH 344/743] ASoC: Intel: Skylake: Add single module support in a
  given pipeline
 
 Single pipeline module will be modelled as PGA leaf. Decision to model

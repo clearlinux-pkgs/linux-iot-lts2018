@@ -1,7 +1,7 @@
-From 290d17c23da537f8caba2fe04be287395393ecf1 Mon Sep 17 00:00:00 2001
+From cc366abdc27a0f83fdcbca18c71b58b516397588 Mon Sep 17 00:00:00 2001
 From: Vivek Kasireddy <vivek.kasireddy@intel.com>
 Date: Thu, 8 Mar 2018 11:14:57 -0800
-Subject: [PATCH 661/728] INTERNAL [IOTG] drm: Don't assume that the primary
+Subject: [PATCH 661/743] INTERNAL [IOTG] drm: Don't assume that the primary
  plane always exists
 
 In some virtualization use-cases, the operating system and hence

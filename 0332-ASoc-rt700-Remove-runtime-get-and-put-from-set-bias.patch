@@ -1,7 +1,7 @@
-From 09c45a4e39df344421a6ebb6ed9257ad2a337e9b Mon Sep 17 00:00:00 2001
+From 59f1e8518a810e7913f5afa41a71639542f0fdd3 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Fri, 24 Mar 2017 03:40:36 +0530
-Subject: [PATCH 332/728] ASoc: rt700: Remove runtime get and put from set bias
+Subject: [PATCH 332/743] ASoc: rt700: Remove runtime get and put from set bias
 
 Earlier runtime get and put was added while setting bias level to make
 sure the clock to the codec is ON. Since clock will be ON while setting

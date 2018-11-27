@@ -1,7 +1,7 @@
-From 1e64d424e7b391a89e7e56d0bdc587673cbedaa6 Mon Sep 17 00:00:00 2001
+From d396330dfb563f4a17e145333ab00ca0477a3b31 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Thu, 21 Dec 2017 13:55:41 +0530
-Subject: [PATCH 701/728] drm/i915: Add revocation check on Ksvs
+Subject: [PATCH 701/743] drm/i915: Add revocation check on Ksvs
 
 KSV list revocated by DCP LLC is provided as SRM Blob to kernel.
 Which is parsed and stored in intel_connector->revocated_ksv_list.

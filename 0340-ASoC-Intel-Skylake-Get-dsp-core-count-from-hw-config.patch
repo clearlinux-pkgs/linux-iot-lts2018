@@ -1,7 +1,7 @@
-From bded3711ff45bb87bfcf363e436d6e2959b210df Mon Sep 17 00:00:00 2001
+From c2909e67134b12073f82c05dc9e897ee5e7d18de Mon Sep 17 00:00:00 2001
 From: "Diwakar, Praveen" <praveen.diwakar@intel.com>
 Date: Wed, 28 Jun 2017 16:49:23 +0530
-Subject: [PATCH 340/728] ASoC: Intel: Skylake: Get dsp core count from hw
+Subject: [PATCH 340/743] ASoC: Intel: Skylake: Get dsp core count from hw
  config ipc
 
 Instead of getting dsp core count from hard coded value, use hw

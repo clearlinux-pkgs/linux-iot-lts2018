@@ -1,7 +1,7 @@
-From 84b6d47caeaa23d0d5665e82900e59288544adb4 Mon Sep 17 00:00:00 2001
+From 1cd247003e2b1a849fbb1d336283d05bc8ee0d60 Mon Sep 17 00:00:00 2001
 From: Jayachandran B <jayachandran.b@intel.com>
 Date: Wed, 27 Jan 2016 09:30:16 +0530
-Subject: [PATCH 326/728] ASoC: Intel: Skylake: Debugfs for core power handling
+Subject: [PATCH 326/743] ASoC: Intel: Skylake: Debugfs for core power handling
 
 This Debugfs allows to test core power handling.
 

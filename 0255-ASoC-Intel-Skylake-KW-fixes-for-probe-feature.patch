@@ -1,7 +1,7 @@
-From c81ef19f741a2042c23381e9b98d9a68fc09330a Mon Sep 17 00:00:00 2001
+From cac63a82a9d5483a5dde8dc9f362c40fcd06ce83 Mon Sep 17 00:00:00 2001
 From: G Kranthi <gudishax.kranthikumar@intel.com>
 Date: Tue, 10 May 2016 11:11:09 +0530
-Subject: [PATCH 255/728] ASoC: Intel: Skylake: KW fixes for probe feature
+Subject: [PATCH 255/743] ASoC: Intel: Skylake: KW fixes for probe feature
 
 This patch will add fixes for below klocwork errors,
 

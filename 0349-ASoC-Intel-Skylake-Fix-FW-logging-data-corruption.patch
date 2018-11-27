@@ -1,7 +1,7 @@
-From 2d4fcfb80d78a9814a74198c41401f668e01dcf7 Mon Sep 17 00:00:00 2001
+From 3ad1d68fbfd60d86277f0df2c59a347f7b259634 Mon Sep 17 00:00:00 2001
 From: Pardha Saradhi K <pardha.saradhi.kesapragada@intel.com>
 Date: Mon, 7 Nov 2016 13:38:52 +0530
-Subject: [PATCH 349/728] ASoC: Intel: Skylake: Fix FW logging data corruption
+Subject: [PATCH 349/743] ASoC: Intel: Skylake: Fix FW logging data corruption
 
 As per the new logging scheme introduced in latest firmware,
 the log buffer read/write pointers are located at the base

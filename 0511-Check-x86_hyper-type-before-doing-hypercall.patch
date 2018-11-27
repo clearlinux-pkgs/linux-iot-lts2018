@@ -1,7 +1,7 @@
-From 627d2eda192fd1b425f42ae086e641931d22ea05 Mon Sep 17 00:00:00 2001
+From 8c4a191148974238c92d6de1a2f0073b1d415844 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:58:58 +0800
-Subject: [PATCH 511/728] Check x86_hyper type before doing hypercall
+Subject: [PATCH 511/743] Check x86_hyper type before doing hypercall
 
 this is to fix native boot failure issue with CONFIG_ACRN
 

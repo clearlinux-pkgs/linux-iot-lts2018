@@ -1,7 +1,7 @@
-From 94a834981eb37075601f83991852d639081d516b Mon Sep 17 00:00:00 2001
+From ca9334aad57f5bfbea11e8474ba93a2135b67c59 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Fri, 6 Jan 2017 16:06:23 +0530
-Subject: [PATCH 293/728] ASoC: Intel: Add SoundWire aggregation support
+Subject: [PATCH 293/743] ASoC: Intel: Add SoundWire aggregation support
 
 This patch adds aggregation support on Master 1 and Master 2
 under CONFIG_SND_SOC_SDW_AGGM1M2 config. It also removes

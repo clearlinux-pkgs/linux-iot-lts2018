@@ -1,7 +1,7 @@
-From 59719938c79557ea9ca4b06112821d901ac7dff0 Mon Sep 17 00:00:00 2001
+From 82dedbe470ff0eb419a5f6fe03e2ee7721e3ab39 Mon Sep 17 00:00:00 2001
 From: Chang Ying <ying.chang@intel.com>
 Date: Thu, 25 Oct 2018 16:20:44 +0800
-Subject: [PATCH 044/728] mm: export some vm_area APIs
+Subject: [PATCH 044/743] mm: export some vm_area APIs
 
 These APIs are needed in DMA mapping API implementation
 as a module. Device specific IOMMUs with associated DMA

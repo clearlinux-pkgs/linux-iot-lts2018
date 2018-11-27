@@ -1,7 +1,7 @@
-From a5af4e4ba2e720d10107fb8d08749ecb1530c3f7 Mon Sep 17 00:00:00 2001
+From 9a1e7ed055f40268434995f303531e131aadbbf4 Mon Sep 17 00:00:00 2001
 From: Mateusz Polrola <mateuszx.potrola@intel.com>
 Date: Thu, 20 Sep 2018 14:01:22 +0200
-Subject: [PATCH 658/728] hyper_dmabuf: Align with dma_buf_ops changes
+Subject: [PATCH 658/743] hyper_dmabuf: Align with dma_buf_ops changes
 
 In 4.17.0 kernel, map_atomic and unmap_atomic callbacks were removed
 from dma_buf_ops, additionally device param for attach callback was

@@ -1,7 +1,7 @@
-From 288632e0accc2a56e56e9b68eaee33ccb58fa9a4 Mon Sep 17 00:00:00 2001
+From e0f3fa97cad4a6381c8656bf6b4660b9e041b984 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Mon, 27 Aug 2018 15:53:14 -0700
-Subject: [PATCH 095/728] SELinux: Abstract use of inode security blob
+Subject: [PATCH 095/743] SELinux: Abstract use of inode security blob
 
 Don't use the inode->i_security pointer directly.
 Provide a helper function that provides the security blob pointer.

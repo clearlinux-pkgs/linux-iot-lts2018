@@ -1,7 +1,7 @@
-From f47dd905c410e1f9c892048b0bba17d514ac8258 Mon Sep 17 00:00:00 2001
+From 7d0a29632a240ca275de9a9a2540417124d43fd3 Mon Sep 17 00:00:00 2001
 From: Hao Li <hao.l.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:58 +0800
-Subject: [PATCH 515/728] api doc: add ACRN VBS API docs
+Subject: [PATCH 515/743] api doc: add ACRN VBS API docs
 
 Change-Id: I634c0117392ca529d7bd4b89a02fec43a0f70d63
 Tracked-On: 220254

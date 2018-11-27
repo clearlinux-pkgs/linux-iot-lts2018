@@ -1,7 +1,7 @@
-From 25557e572713db451d46101d0df89e39d09c21e5 Mon Sep 17 00:00:00 2001
+From b27cf4bdf6fd4e65e4e9e51a8c5cb6ede2a25b40 Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Fri, 14 Sep 2018 16:10:20 +0800
-Subject: [PATCH 624/728] drm/i915/gvt: handling pvmmio update of plane
+Subject: [PATCH 624/743] drm/i915/gvt: handling pvmmio update of plane
  registers in GVT-g
 
 When pvmmio level PVMMIO_PLANE_UPDATE is enabled, need handle multiple

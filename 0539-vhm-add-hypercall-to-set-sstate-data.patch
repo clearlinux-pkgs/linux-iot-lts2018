@@ -1,7 +1,7 @@
-From a4fe9f05c61bf8643f45a2734e4c8516828bb0a5 Mon Sep 17 00:00:00 2001
+From ec6b68bfd9a4a6e6a4c1aa48f2d30890375c2879 Mon Sep 17 00:00:00 2001
 From: Victor Sun <victor.sun@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 539/728] vhm: add hypercall to set sstate data
+Subject: [PATCH 539/743] vhm: add hypercall to set sstate data
 
 The host ACPI State data which needed by S3/S5 implementation will
 be parsed in userspace, add one hypercall api to pass these information

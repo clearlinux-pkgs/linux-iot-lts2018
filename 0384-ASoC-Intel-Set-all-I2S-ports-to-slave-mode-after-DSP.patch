@@ -1,7 +1,7 @@
-From 00bb4097c0d98ae3230747b6801b05e6ea8e9adc Mon Sep 17 00:00:00 2001
+From ef7a11061bcd22f6374cffa02d3962b9abb324a4 Mon Sep 17 00:00:00 2001
 From: Mousumi Jana <mousumix.jana@intel.com>
 Date: Tue, 12 Sep 2017 17:18:44 +0530
-Subject: [PATCH 384/728] ASoC: Intel: Set all I2S ports to slave mode after
+Subject: [PATCH 384/743] ASoC: Intel: Set all I2S ports to slave mode after
  DSP power up in BXTP
 
 During DSP power up sequences, the I2S ports default to Master mode.

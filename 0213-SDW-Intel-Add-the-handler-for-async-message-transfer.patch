@@ -1,7 +1,7 @@
-From 735e756b23279059f2d99a5325bd3035317aad3a Mon Sep 17 00:00:00 2001
+From 372c3aaa0a8c6539eab834a7ddbd94b3f8e46431 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Fri, 29 Apr 2016 16:30:53 +0530
-Subject: [PATCH 213/728] SDW: Intel: Add the handler for async message
+Subject: [PATCH 213/743] SDW: Intel: Add the handler for async message
  transfer.
 
 Async message transfer is used by the bus driver

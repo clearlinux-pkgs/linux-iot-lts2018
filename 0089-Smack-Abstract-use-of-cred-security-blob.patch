@@ -1,7 +1,7 @@
-From 4750b0a345b8f17549e830c4ec5c240066d1bb13 Mon Sep 17 00:00:00 2001
+From 7da4f69a1a3fa96f3dc75a5f6f449892380db73e Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Mon, 27 Aug 2018 14:21:11 -0700
-Subject: [PATCH 089/728] Smack: Abstract use of cred security blob
+Subject: [PATCH 089/743] Smack: Abstract use of cred security blob
 
 Don't use the cred->security pointer directly.
 Provide a helper function that provides the security blob pointer.

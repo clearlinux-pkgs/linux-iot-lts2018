@@ -1,7 +1,7 @@
-From 6b86c4bbbc2633273ee8c07d5b7fb6a9940a97b4 Mon Sep 17 00:00:00 2001
+From 6d5fed2cb95dd7966a24c68405a518f3081ded5a Mon Sep 17 00:00:00 2001
 From: Puneeth Prabhu <puneethx.prabhu@intel.com>
 Date: Mon, 7 May 2018 17:22:32 +0530
-Subject: [PATCH 443/728] ASoC: Intel: Boards: Add machine driver for HU
+Subject: [PATCH 443/743] ASoC: Intel: Boards: Add machine driver for HU
  topology
 
 This patch adds I2S machine driver for IVI HU topology

@@ -1,7 +1,7 @@
-From 2183d8815ce2cd7a831445f23002cd5350d075f2 Mon Sep 17 00:00:00 2001
+From ab9f41f45e65d387d5e2f7fae7b649373dc1f2fc Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Mon, 7 May 2018 13:34:46 +0300
-Subject: [PATCH 161/728] mei: bump hbm version to 2.2
+Subject: [PATCH 161/743] mei: bump hbm version to 2.2
 
 Bump HBM version to 2.2 to indicate vtag support.
 

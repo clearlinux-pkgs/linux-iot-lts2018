@@ -1,7 +1,7 @@
-From 74aadc2efc417e5c11034f26e35be8a010251d5b Mon Sep 17 00:00:00 2001
+From 649daaa216022ed58f12d530f0c5fca284ff07a1 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Fri, 21 Apr 2017 12:21:17 +0530
-Subject: [PATCH 335/728] SoundWire: Select default frame shape based on
+Subject: [PATCH 335/743] SoundWire: Select default frame shape based on
  platform
 
 This patch selects default frame shape in SoundWire controller

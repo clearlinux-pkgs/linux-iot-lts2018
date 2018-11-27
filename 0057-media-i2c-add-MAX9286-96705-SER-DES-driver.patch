@@ -1,7 +1,7 @@
-From 112484fd609a3bc342dabcff073a5cbbde27de6b Mon Sep 17 00:00:00 2001
+From 5d41f6f4824469b37bcd14363206cbe91ab5d20c Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:52 +0800
-Subject: [PATCH 057/728] media: i2c: add MAX9286/96705 SER/DES driver
+Subject: [PATCH 057/743] media: i2c: add MAX9286/96705 SER/DES driver
 
 The MAX9286 GMSL deserializer receives data from
 up to four GMSL serializers over STP cables and

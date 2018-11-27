@@ -1,7 +1,7 @@
-From 1767547509397a6c2db5b59c9b4c4fa527202bd7 Mon Sep 17 00:00:00 2001
+From 86b94eafa8cc02b76bc60dd03d92ab3e5c1daf34 Mon Sep 17 00:00:00 2001
 From: Liu Changcheng <changcheng.liu@intel.com>
 Date: Fri, 11 May 2018 17:11:42 +0800
-Subject: [PATCH 438/728] ASoC: tdf8532: right free allocated space in case of
+Subject: [PATCH 438/743] ASoC: tdf8532: right free allocated space in case of
  error
 
 1. Check allocated space before using it.

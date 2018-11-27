@@ -1,7 +1,7 @@
-From cbe8b4eff72f3f095cbe6531274bd4cc177a7753 Mon Sep 17 00:00:00 2001
+From ee49ed77634d48e6c901996b3f20c99f6a50689f Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 551/728] sos: vhm: refine set memory region API
+Subject: [PATCH 551/743] sos: vhm: refine set memory region API
 
 1. rename set_mmio_map to add_memory_region;
 unset_mmio_map to del_memory_region.

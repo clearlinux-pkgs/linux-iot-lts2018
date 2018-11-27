@@ -1,7 +1,7 @@
-From 963c1906e5f2dffc4d9fee4b219cd4aaf18bbb42 Mon Sep 17 00:00:00 2001
+From 983e4570532c7fc961e3c08cfe103c0a6af14f12 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:07 +0200
-Subject: [PATCH 002/728] x86/mm/init32: Mark text and rodata RO in one go
+Subject: [PATCH 002/743] x86/mm/init32: Mark text and rodata RO in one go
 
 The sequence of marking text and rodata read-only in 32bit init is:
 

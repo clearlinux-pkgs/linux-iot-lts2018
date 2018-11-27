@@ -1,7 +1,7 @@
-From db075102f7936f00bbff334f4658eddfa91d0901 Mon Sep 17 00:00:00 2001
+From e1ea9927570e894fb79285056104a594a81f0a49 Mon Sep 17 00:00:00 2001
 From: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
 Date: Wed, 17 Oct 2018 12:14:39 +0200
-Subject: [PATCH 476/728] ASoC: Intel: Skylake: Fix for lockup in
+Subject: [PATCH 476/743] ASoC: Intel: Skylake: Fix for lockup in
  sst_ipc_tx_message_wait
 
 Change-Id: I25540f4255813a4eb83a12a7495c4cb84afcb741

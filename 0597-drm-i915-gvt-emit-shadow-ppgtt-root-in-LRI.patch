@@ -1,7 +1,7 @@
-From ded51b9bba308a51cad44673bba38e4c66b26a8b Mon Sep 17 00:00:00 2001
+From d907ed3c7821e3f5c0aa814488d9fc2f4082237b Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Fri, 14 Sep 2018 16:10:17 +0800
-Subject: [PATCH 597/728] drm/i915/gvt: emit shadow ppgtt root in LRI
+Subject: [PATCH 597/743] drm/i915/gvt: emit shadow ppgtt root in LRI
 
 Usually the PDP/PML4 root poiners should be updated through the context,
 however, on BXT, we found that sometimes the PDP/PML4 root pointers will

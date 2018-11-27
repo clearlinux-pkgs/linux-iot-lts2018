@@ -1,7 +1,7 @@
-From 72d79f4c6b44f3bfb05de948f745b70b6ad8e0c1 Mon Sep 17 00:00:00 2001
+From 7aee8f6604a95729b9e9e963c90e2d5007d3a08e Mon Sep 17 00:00:00 2001
 From: Felipe Balbi <felipe.balbi@linux.intel.com>
 Date: Wed, 1 Aug 2018 13:56:50 +0300
-Subject: [PATCH 082/728] usb: dwc3: gadget: remove wait_end_transfer
+Subject: [PATCH 082/743] usb: dwc3: gadget: remove wait_end_transfer
 
 Now that we have a list of cancelled requests, we can skip over TRBs
 when END_TRANSFER command completes.

@@ -1,7 +1,7 @@
-From 1419cb0deaa2628e869523b78589493325b21f28 Mon Sep 17 00:00:00 2001
+From c6f9a190e8a067829acebff39b6e97765d3c9d21 Mon Sep 17 00:00:00 2001
 From: "Yang, Dong" <dong.yang@intel.com>
 Date: Tue, 23 Oct 2018 16:22:43 +0800
-Subject: [PATCH 705/728] Allow RenderNode to be used for kms getters.
+Subject: [PATCH 705/743] Allow RenderNode to be used for kms getters.
 
 Minigbm relies on this to query if a particular format
 can be scanned out or not.

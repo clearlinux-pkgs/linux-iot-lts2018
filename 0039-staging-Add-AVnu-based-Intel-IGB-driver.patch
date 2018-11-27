@@ -1,7 +1,7 @@
-From 398d068c1629084e910b06e4a22bdc895539dbec Mon Sep 17 00:00:00 2001
+From 90d0484f1a9c6696a37aaba3957297e5c1e6ec65 Mon Sep 17 00:00:00 2001
 From: "Vyas, Tarun" <tarun.vyas@intel.com>
 Date: Wed, 5 Sep 2018 08:14:21 -0700
-Subject: [PATCH 039/728] staging: Add AVnu based Intel IGB driver
+Subject: [PATCH 039/743] staging: Add AVnu based Intel IGB driver
 
 This initial commit adds the AVnu based Intel IGB driver
 for the I210 ethernet controller to drivers/staging. It

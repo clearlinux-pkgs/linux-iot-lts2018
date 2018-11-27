@@ -1,7 +1,7 @@
-From 0dd19795557abfd9ec6e2e2f9bdf9ddd8f509596 Mon Sep 17 00:00:00 2001
+From 870513b03003e47d02315d00140d64615d3422dc Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Tue, 26 Jun 2018 08:49:50 +0800
-Subject: [PATCH 663/728] drm/i915/gvt: make KBL also support plane restriction
+Subject: [PATCH 663/743] drm/i915/gvt: make KBL also support plane restriction
  feature
 
 previously plane restriction feature was for APL only, we need extend

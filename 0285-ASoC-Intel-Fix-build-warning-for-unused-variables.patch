@@ -1,7 +1,7 @@
-From d3d8620b543fe2dd1db01bcefdc8aba377cb04fc Mon Sep 17 00:00:00 2001
+From 52e39ab3f41f5b887a39eb2d44e6449cf0f1e2ce Mon Sep 17 00:00:00 2001
 From: Jaikrishna Nemallapudi <jaikrishnax.nemallapudi@intel.com>
 Date: Wed, 14 Dec 2016 17:12:45 +0530
-Subject: [PATCH 285/728] ASoC: Intel: Fix build warning for unused variables
+Subject: [PATCH 285/743] ASoC: Intel: Fix build warning for unused variables
 
 This patch initialize uninitialized variables reported as build warnings.
 

@@ -1,7 +1,7 @@
-From a43ee36ad318db932c5e4c3560d46be0baa085fa Mon Sep 17 00:00:00 2001
+From e9282698626eb9e86653e97529c152b322eb67ff Mon Sep 17 00:00:00 2001
 From: Pei Zhang <pei.zhang@intel.com>
 Date: Fri, 14 Sep 2018 16:10:17 +0800
-Subject: [PATCH 594/728] drm/i915/gvt: add some MMIO value initialization
+Subject: [PATCH 594/743] drm/i915/gvt: add some MMIO value initialization
 
 There are some virtual MMIO registers contains static value which won't
 be changed by guest writing. Those registers could be optimized with a

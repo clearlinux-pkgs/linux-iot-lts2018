@@ -1,7 +1,7 @@
-From d7fee5a8fee04edcf83bce9fd9db6e7e799e4a47 Mon Sep 17 00:00:00 2001
+From 17348fe4fb234ca110132d21ea33197c7cf224e3 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:00 +0800
-Subject: [PATCH 535/728] vhm: add set_memmaps hypercall support
+Subject: [PATCH 535/743] vhm: add set_memmaps hypercall support
 
 This new added hypercall is to support multi regions memmap in one time,
 which improve the performance.

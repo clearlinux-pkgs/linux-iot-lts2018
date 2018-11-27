@@ -1,7 +1,7 @@
-From 98b5ae2d1fc818e5ae4434b8b1df91eb85b090f9 Mon Sep 17 00:00:00 2001
+From 1507c399364efc9ea4eae97023b19e17e7197a11 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Wed, 19 Sep 2018 14:17:45 +0800
-Subject: [PATCH 694/728] drm/i915: Async work for hdcp authentication
+Subject: [PATCH 694/743] drm/i915: Async work for hdcp authentication
 
 Each HDCP authentication, could take upto 5.1Sec, based on the
 downstream HDCP topology.

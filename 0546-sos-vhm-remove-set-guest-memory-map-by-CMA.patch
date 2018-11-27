@@ -1,7 +1,7 @@
-From 196ba65e8923e09db71abdcc080b7ca2f763836e Mon Sep 17 00:00:00 2001
+From ae59aef658dbef1330bf84021e1c4a6d97bdb758 Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 546/728] sos: vhm: remove set guest memory map by CMA
+Subject: [PATCH 546/743] sos: vhm: remove set guest memory map by CMA
 
 We removed CMA Device Manager memory allocation mechanisms and use
 hugetlb as the only Device Manager memory allocation mechanism.

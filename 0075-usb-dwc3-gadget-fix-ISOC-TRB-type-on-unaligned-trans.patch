@@ -1,7 +1,7 @@
-From e78122ba189b5f6661e8b42d96829f46b7796ff1 Mon Sep 17 00:00:00 2001
+From bb448ab37cef2a74d4805ad87f64577e55ea0dea Mon Sep 17 00:00:00 2001
 From: Felipe Balbi <felipe.balbi@linux.intel.com>
 Date: Wed, 1 Aug 2018 09:37:34 +0300
-Subject: [PATCH 075/728] usb: dwc3: gadget: fix ISOC TRB type on unaligned
+Subject: [PATCH 075/743] usb: dwc3: gadget: fix ISOC TRB type on unaligned
  transfers
 
 When chaining ISOC TRBs together, only the first ISOC TRB should be of

@@ -1,7 +1,7 @@
-From e61d9eac5c0a2b98ae226147f113c0b8bf0f3fe6 Mon Sep 17 00:00:00 2001
+From 94bbaae4e5aa22963a151d58ce30fc1519b562e8 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:55 +0300
-Subject: [PATCH 712/728] stm class: Add a helper for writing data packets
+Subject: [PATCH 712/743] stm class: Add a helper for writing data packets
 
 Add a helper to write a sequence of bytes as STP data packets. This
 is used by protocol drivers to output their metadata, as well as the

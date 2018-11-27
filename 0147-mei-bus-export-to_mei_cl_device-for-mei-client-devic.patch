@@ -1,7 +1,7 @@
-From 2cfd04f34f66f6c3a1c844de2912f146f4169b57 Mon Sep 17 00:00:00 2001
+From 486eb32c32c685ce5d2c53a372f7af7b07b02806 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 1 Aug 2018 14:42:58 +0300
-Subject: [PATCH 147/728] mei: bus: export to_mei_cl_device for mei client
+Subject: [PATCH 147/743] mei: bus: export to_mei_cl_device for mei client
  devices drivers
 
 Export to_mei_cl_device macro, as it is needed also

@@ -1,7 +1,7 @@
-From 9f36494d530b2d24e00419725a4799b518c19f93 Mon Sep 17 00:00:00 2001
+From f12189779cf3385d1456b4280bf22afd146eb3a6 Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Sat, 15 Apr 2017 04:20:20 +0800
-Subject: [PATCH 592/728] drm/i915/gvt: removed save/store registers
+Subject: [PATCH 592/743] drm/i915/gvt: removed save/store registers
 
 Simple the logic of workload conext status change.
 Remove the unnecessary status switch  when one workload

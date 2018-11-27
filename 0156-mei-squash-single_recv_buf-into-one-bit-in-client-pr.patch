@@ -1,7 +1,7 @@
-From 1838cb4ecaefc682aac72e00f8c5bffb9d8c0515 Mon Sep 17 00:00:00 2001
+From d9b5c22bbde6c1adf624a3a0394e7f93b637559e Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Sun, 6 May 2018 14:29:57 +0300
-Subject: [PATCH 156/728] mei: squash single_recv_buf into one bit in client
+Subject: [PATCH 156/743] mei: squash single_recv_buf into one bit in client
  properties
 
 single_recv_buf member of struct mei_client_properties has a boolean

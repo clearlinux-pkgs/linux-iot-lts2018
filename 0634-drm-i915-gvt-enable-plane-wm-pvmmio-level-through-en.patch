@@ -1,7 +1,7 @@
-From 7a4dcfd09de2df02dca5f28443fa9aa108ddcae5 Mon Sep 17 00:00:00 2001
+From d1a61ff634b48783aa7b4fdd86dc181cb4a7afe0 Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Wed, 29 Aug 2018 12:08:45 +0800
-Subject: [PATCH 634/728] drm/i915/gvt: enable plane wm pvmmio level through
+Subject: [PATCH 634/743] drm/i915/gvt: enable plane wm pvmmio level through
  enable_pvmmio param
 
 plane wm update pvmmio level is 0x4, need set it in enable_pvmmio for both

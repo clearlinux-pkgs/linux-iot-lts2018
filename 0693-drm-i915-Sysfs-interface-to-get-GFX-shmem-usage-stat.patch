@@ -1,7 +1,7 @@
-From e3f5ac6343e83d9883d57129eeabf5630619b3e8 Mon Sep 17 00:00:00 2001
+From f3bdf6a6e8ef7c9a74ac662f5026247e983106f3 Mon Sep 17 00:00:00 2001
 From: "Fan, Yugang" <yugang.fan@intel.com>
 Date: Mon, 17 Sep 2018 09:50:43 +0800
-Subject: [PATCH 693/728] drm/i915: Sysfs interface to get GFX shmem usage
+Subject: [PATCH 693/743] drm/i915: Sysfs interface to get GFX shmem usage
  stats per process
 
 There is a requirement of a new interface for achieving below

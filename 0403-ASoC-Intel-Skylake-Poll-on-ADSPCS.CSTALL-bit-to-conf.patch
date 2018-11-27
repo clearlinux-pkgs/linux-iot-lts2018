@@ -1,7 +1,7 @@
-From b8a6af97605087cb47519ea89f6bfa27f7ebec67 Mon Sep 17 00:00:00 2001
+From ca90da1ad590c7b71976bb0c428d989f8554512f Mon Sep 17 00:00:00 2001
 From: Mohit Sinha <mohit.sinha@intel.com>
 Date: Thu, 16 Nov 2017 21:35:07 +0530
-Subject: [PATCH 403/728] ASoC: Intel: Skylake: Poll on ADSPCS.CSTALL bit to
+Subject: [PATCH 403/743] ASoC: Intel: Skylake: Poll on ADSPCS.CSTALL bit to
  confirm stall state change.
 
 ADSPCS.CSTALL bit should be set/cleared in order to stall/ un-stall

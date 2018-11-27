@@ -1,7 +1,7 @@
-From 6bf2a98cc07316e1f25e3f47cb68f52da001d92b Mon Sep 17 00:00:00 2001
+From be80ca6d497fab513d3efcb2c61ae8c421a3157a Mon Sep 17 00:00:00 2001
 From: Kuppuswamy Sathyanarayanan <sathyanarayanan.kuppuswamy@linux.intel.com>
 Date: Tue, 31 Jul 2018 14:39:38 -0700
-Subject: [PATCH 645/728] hyper_dmabuf: Fix incorrect return in
+Subject: [PATCH 645/743] hyper_dmabuf: Fix incorrect return in
  hyper_dmabuf_ops_end_cpu_access()
 
 In hyper_dmabuf_ops_end_cpu_access(), currently we don't check for

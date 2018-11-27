@@ -1,7 +1,7 @@
-From e6d5316969b494490431e9026437eaf08341db3d Mon Sep 17 00:00:00 2001
+From 21442b0893a9f55c3351087388b288212ab47700 Mon Sep 17 00:00:00 2001
 From: Ping Gao <ping.a.gao@intel.com>
 Date: Wed, 6 Sep 2017 15:42:48 +0800
-Subject: [PATCH 675/728] drm/i915/gvt: Skip to compare force-nonpriv registers
+Subject: [PATCH 675/743] drm/i915/gvt: Skip to compare force-nonpriv registers
 
 As force-nonpriv registers are updated by command, skip to compare
 them with host cache during the first entire non-context MMIOs

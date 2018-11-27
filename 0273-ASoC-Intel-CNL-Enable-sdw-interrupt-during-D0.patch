@@ -1,7 +1,7 @@
-From 9d63dfe86239c71722d18e24db5a2238f1be7ba3 Mon Sep 17 00:00:00 2001
+From 571eccbd39c42d56dd5a0462e6b71b314ce56501 Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Mon, 19 Sep 2016 13:59:36 +0530
-Subject: [PATCH 273/728] ASoC: Intel: CNL: Enable sdw interrupt during D0
+Subject: [PATCH 273/743] ASoC: Intel: CNL: Enable sdw interrupt during D0
 
 Change-Id: I3f34bbbf273da5a0a9a15df319b95178e8b41fa0
 Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>

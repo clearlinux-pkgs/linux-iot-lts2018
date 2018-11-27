@@ -1,7 +1,7 @@
-From fcfca2f36b90c91c3da779b6690a13f3cd6cc4b8 Mon Sep 17 00:00:00 2001
+From 3cd92b4a488714dac9205f1284531e2dd4cf8ad0 Mon Sep 17 00:00:00 2001
 From: Manisha Chinthapally <manisha.chinthapally@intel.com>
 Date: Tue, 23 Oct 2018 13:46:26 -0700
-Subject: [PATCH 583/728] Add support for hypercalls for sep and socwatch tool
+Subject: [PATCH 583/743] Add support for hypercalls for sep and socwatch tool
  support
 
 This patch has following changes New sbuf type for each tool is added

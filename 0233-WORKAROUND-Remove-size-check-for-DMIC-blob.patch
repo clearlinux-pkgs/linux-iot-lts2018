@@ -1,7 +1,7 @@
-From 829d3b13073ec2924321176ded90ce1358da1251 Mon Sep 17 00:00:00 2001
+From 6853a4adc8cb94460c57fe67581a782dc95683ca Mon Sep 17 00:00:00 2001
 From: Ramesh Babu <ramesh.babu@intel.com>
 Date: Mon, 2 Nov 2015 07:06:38 +0530
-Subject: [PATCH 233/728] WORKAROUND: Remove size check for DMIC blob
+Subject: [PATCH 233/743] WORKAROUND: Remove size check for DMIC blob
 
 Change-Id: Ic7c70d4f0b1bf137c8bfbfbb9ef9962fdad8daf9
 Signed-off-by: Ramesh Babu <ramesh.babu@intel.com>

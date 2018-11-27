@@ -1,7 +1,7 @@
-From 783d1b5821725283986c0d3e56a5105bd667b010 Mon Sep 17 00:00:00 2001
+From 4b64b593cb29fde6340e02d75bc1c98fd3aaacd7 Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Fri, 29 Dec 2017 18:48:22 +0800
-Subject: [PATCH 604/728] drm/i915/gvt: add param disable_gvt_fw_loading to
+Subject: [PATCH 604/743] drm/i915/gvt: add param disable_gvt_fw_loading to
  disable gvt fw loading
 
 when gvt fw doesn't exist, try to load fw from initrd will cost about 1 minute,

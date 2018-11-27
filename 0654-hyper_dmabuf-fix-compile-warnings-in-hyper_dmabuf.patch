@@ -1,7 +1,7 @@
-From 17a1a9fc78664cbb4c2f320b6cef582036cbccd2 Mon Sep 17 00:00:00 2001
+From 8398ebec0ce9f6373bbe64d91f281c8ff3bc09af Mon Sep 17 00:00:00 2001
 From: Wei Liu <weix.w.liu@intel.com>
 Date: Wed, 19 Sep 2018 16:21:22 +0800
-Subject: [PATCH 654/728] hyper_dmabuf: fix compile warnings in hyper_dmabuf
+Subject: [PATCH 654/743] hyper_dmabuf: fix compile warnings in hyper_dmabuf
 
 This patch fix the compile warnings in hyper_dmabuf
 

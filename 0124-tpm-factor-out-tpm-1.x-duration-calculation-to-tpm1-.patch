@@ -1,7 +1,7 @@
-From 491ca074a1c110eb8a0739b2bcea1cdb83f0b3d1 Mon Sep 17 00:00:00 2001
+From 5431292f3429e2f1f86aeb95649ac33d29ac5177 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Mon, 5 Mar 2018 20:13:35 +0200
-Subject: [PATCH 124/728] tpm: factor out tpm 1.x duration calculation to
+Subject: [PATCH 124/743] tpm: factor out tpm 1.x duration calculation to
  tpm1-cmd.c
 
 Factor out TPM 1.x commands calculation into tpm1-cmd.c file.

@@ -1,7 +1,7 @@
-From 8276eed67a0dc650470ffd64f4d2002d740b8396 Mon Sep 17 00:00:00 2001
+From 5d19ca5acbb5933abe8693081525914bc4412e18 Mon Sep 17 00:00:00 2001
 From: "Yew, Chang Ching" <chang.ching.yew@intel.com>
 Date: Tue, 23 Oct 2018 13:25:38 +0800
-Subject: [PATCH 063/728] media: platform: intel: platform driver to be used by
+Subject: [PATCH 063/743] media: platform: intel: platform driver to be used by
  ICI and crlmodule-lite
 
 Platform driver which ICI and crlmodule-lite use to retrieve

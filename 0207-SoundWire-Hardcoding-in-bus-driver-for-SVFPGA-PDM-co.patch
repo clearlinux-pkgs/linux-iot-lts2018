@@ -1,7 +1,7 @@
-From 5e85008d26c681394a82ce61d0c3c5005ee07b57 Mon Sep 17 00:00:00 2001
+From b943a9159fe513862f09ce7218c07d64e24310a8 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Sun, 20 Nov 2016 20:16:25 +0530
-Subject: [PATCH 207/728] SoundWire: Hardcoding in bus driver for SVFPGA PDM
+Subject: [PATCH 207/743] SoundWire: Hardcoding in bus driver for SVFPGA PDM
  codec.
 
 SVFPGA PDM codec implements the codec in orthogonal way to

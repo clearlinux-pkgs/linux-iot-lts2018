@@ -1,7 +1,7 @@
-From ffd8c252445cdf6eadadae56c3394cdaef56cb20 Mon Sep 17 00:00:00 2001
+From a7d6c5b0828bde2179e2cb0b35ea75cec60af378 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Tue, 25 Oct 2016 12:26:50 +0300
-Subject: [PATCH 150/728] mei: hbm: setup dma ring
+Subject: [PATCH 150/743] mei: hbm: setup dma ring
 
 DMA ring is allocated upon HBM handshake and the ring parameters are set
 via dedicated HBM_DMA_SETUP request command. The firmware will perform

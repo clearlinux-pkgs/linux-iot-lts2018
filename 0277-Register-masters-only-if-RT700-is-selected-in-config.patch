@@ -1,7 +1,7 @@
-From 7946512070ccf12073fc2474012fe43063f8e086 Mon Sep 17 00:00:00 2001
+From 94a603e1338546f01171ff7cdf8ee9889f5baf72 Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Mon, 24 Oct 2016 16:23:20 +0530
-Subject: [PATCH 277/728] Register masters only if RT700 is selected in config
+Subject: [PATCH 277/743] Register masters only if RT700 is selected in config
 
 This info should come from BIOS settings. Right now it is
 not available, so using WA to avoid registering sdw masters

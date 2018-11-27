@@ -1,7 +1,7 @@
-From 2492853e19843e8a12e7910685c6ae5ec46e130a Mon Sep 17 00:00:00 2001
+From a97e7a5c4426befa89412c5adc43e69cbcf3dda1 Mon Sep 17 00:00:00 2001
 From: Shiqing Gao <shiqing.gao@intel.com>
 Date: Fri, 31 Aug 2018 10:58:56 +0800
-Subject: [PATCH 491/728] sos: clean up ptdev msi-x table ioremap operations
+Subject: [PATCH 491/743] sos: clean up ptdev msi-x table ioremap operations
 
 - use list rather than array to store the virtual base address
     of MSI-X table in memory space after ioremap

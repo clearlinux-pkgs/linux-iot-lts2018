@@ -1,7 +1,7 @@
-From 366049f52a49b51157a2f8a3340527cbbe10b944 Mon Sep 17 00:00:00 2001
+From 8d12c61d9adc9283ed6ee28a0ae4d3b3748224b0 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 541/728] vhm: add sos offline cpu support
+Subject: [PATCH 541/743] vhm: add sos offline cpu support
 
 add sysfs with attr "offline_cpu", use
 	echo cpu_id > /sys/class/vhm/acrn_vhm/offline_cpu

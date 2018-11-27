@@ -1,7 +1,7 @@
-From 189dd9c0195e4954a4421b73179ca0231cb96294 Mon Sep 17 00:00:00 2001
+From 87760347095de7331192f47273943a4ebcdd3c7e Mon Sep 17 00:00:00 2001
 From: "Pawse, GuruprasadX" <guruprasadx.pawse@intel.com>
 Date: Tue, 14 Jun 2016 18:19:44 +0530
-Subject: [PATCH 256/728] ASoC: Intel: Skylake: Probe - Start DMA before
+Subject: [PATCH 256/743] ASoC: Intel: Skylake: Probe - Start DMA before
  setting probe params
 
 FW starts probe module soon after its params are set. But to avoid

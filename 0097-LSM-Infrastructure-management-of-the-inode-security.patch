@@ -1,7 +1,7 @@
-From e54745f17a35721154565125fa6e86ee7b241787 Mon Sep 17 00:00:00 2001
+From c862956728b8a8980e84441eaa33f0e522ad6f39 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Wed, 20 Jun 2018 15:22:48 -0700
-Subject: [PATCH 097/728] LSM: Infrastructure management of the inode security
+Subject: [PATCH 097/743] LSM: Infrastructure management of the inode security
 
 Move management of the inode->i_security blob out
 of the individual security modules and into the security

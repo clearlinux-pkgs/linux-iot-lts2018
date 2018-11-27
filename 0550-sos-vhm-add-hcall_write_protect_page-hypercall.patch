@@ -1,7 +1,7 @@
-From e3334c903a9abedf9529db929b5e42f1f86416a1 Mon Sep 17 00:00:00 2001
+From 0a2172cfb9bcb123620f05bd54715eddd8ba890f Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 550/728] sos: vhm: add hcall_write_protect_page hypercall
+Subject: [PATCH 550/743] sos: vhm: add hcall_write_protect_page hypercall
 
 1. add write_protect_page to set or unset one page write protect
 2. replace update_memmap_attr with write_protect_page to set or

@@ -1,7 +1,7 @@
-From d980fee746d53148f07e807178532810c70d2545 Mon Sep 17 00:00:00 2001
+From 7691451b68d4885b52a75683e3044427c9e95f45 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:57 +0300
-Subject: [PATCH 714/728] stm class: Switch over to the protocol driver
+Subject: [PATCH 714/743] stm class: Switch over to the protocol driver
 
 Now that the default framing protocol is factored out into its own driver,
 switch over to using the driver for writing data. To that end, make the

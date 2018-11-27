@@ -1,7 +1,7 @@
-From da446c2fb25e38cf8bdc4a70ca11ba180c6844fd Mon Sep 17 00:00:00 2001
+From 5dad4d2491970abef1af1b0429cf286185041dd6 Mon Sep 17 00:00:00 2001
 From: "Yew, Chang Ching" <chang.ching.yew@intel.com>
 Date: Tue, 23 Oct 2018 13:26:38 +0800
-Subject: [PATCH 064/728] media: intel-ipu4: virtio: IPU virtio backend and
+Subject: [PATCH 064/743] media: intel-ipu4: virtio: IPU virtio backend and
  frontend drivers base-code
 
 Base code to enable IPU virtualization for ACRN squashed from

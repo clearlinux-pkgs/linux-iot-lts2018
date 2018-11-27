@@ -1,7 +1,7 @@
-From 90490eb5e6aeff682cf51ee5a41892a7ef76045a Mon Sep 17 00:00:00 2001
+From 53f7d109b1a46936e38e69ee01b2f697ffb4d434 Mon Sep 17 00:00:00 2001
 From: Shuo Liu <shuo.a.liu@intel.com>
 Date: Wed, 11 Jul 2018 14:37:53 +0800
-Subject: [PATCH 576/728] vhm: add ioeventfd support for ACRN hypervisor
+Subject: [PATCH 576/743] vhm: add ioeventfd support for ACRN hypervisor
  service module
 
 ioeventfd which is based on eventfd, intends to glue vhm module and

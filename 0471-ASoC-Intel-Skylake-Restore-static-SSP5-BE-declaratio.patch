@@ -1,7 +1,7 @@
-From 311a7e91c2fa289a6e6bc80e81772d2df8d6c27e Mon Sep 17 00:00:00 2001
+From 3ecfcd63505053c26721daab20e92a799056ea34 Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Thu, 4 Oct 2018 12:17:27 +0200
-Subject: [PATCH 471/728] ASoC: Intel: Skylake: Restore static SSP5 BE
+Subject: [PATCH 471/743] ASoC: Intel: Skylake: Restore static SSP5 BE
  declaration.
 
 Skylake driver declares SSP Pin BEs dynamically, based on

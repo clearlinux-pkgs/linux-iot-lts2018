@@ -1,7 +1,7 @@
-From 9e6d1e3d5cf20572c2562091adb54f735d430768 Mon Sep 17 00:00:00 2001
+From 4a0ccfdbc203d2c07a6ba1e14af876c4f1efc2cf Mon Sep 17 00:00:00 2001
 From: Thinh Nguyen <Thinh.Nguyen@synopsys.com>
 Date: Thu, 2 Aug 2018 20:17:16 -0700
-Subject: [PATCH 074/728] usb: dwc3: gadget: Properly check last unaligned/zero
+Subject: [PATCH 074/743] usb: dwc3: gadget: Properly check last unaligned/zero
  chain TRB
 
 Current check for the last extra TRB for zero and unaligned transfers

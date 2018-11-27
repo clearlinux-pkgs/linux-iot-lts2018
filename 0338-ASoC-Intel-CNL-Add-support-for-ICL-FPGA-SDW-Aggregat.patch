@@ -1,7 +1,7 @@
-From c1994db7f61a965e769fb71d03a440f38c965d04 Mon Sep 17 00:00:00 2001
+From 38ad685e2abe61f9b563b1573369205decc05d77 Mon Sep 17 00:00:00 2001
 From: Leoni Prodduvaka <leoni.prodduvaka@intel.com>
 Date: Tue, 18 Apr 2017 22:57:51 +0530
-Subject: [PATCH 338/728] ASoC: Intel: CNL: Add support for ICL FPGA SDW
+Subject: [PATCH 338/743] ASoC: Intel: CNL: Add support for ICL FPGA SDW
  Aggregation
 
 Added Master 1 as the skl_platform_dai id for icl fpga sdw aggregation

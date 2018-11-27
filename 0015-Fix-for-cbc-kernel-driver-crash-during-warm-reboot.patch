@@ -1,7 +1,7 @@
-From 433deb83ea15356994cba95b10baa74e118010c7 Mon Sep 17 00:00:00 2001
+From c3abc2e4db0cfe8906b357d655b65fd746e80f9b Mon Sep 17 00:00:00 2001
 From: padmarao edapalapati <padmarao.edapalapati@intel.com>
 Date: Thu, 6 Sep 2018 10:38:22 +0530
-Subject: [PATCH 015/728] Fix for cbc kernel driver crash during warm reboot
+Subject: [PATCH 015/743] Fix for cbc kernel driver crash during warm reboot
 
 Added a Sync mechanism with spinlocks between demuxed_receive
 and cbc_device_open, cbc_device_release

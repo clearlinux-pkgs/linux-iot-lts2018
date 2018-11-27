@@ -1,7 +1,7 @@
-From f138e12780fce3f3dcbd86f75d6717f056a3d781 Mon Sep 17 00:00:00 2001
+From e8623b294810b0035ecc0594e7b6165bdb0086bd Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Tue, 16 Oct 2018 11:38:41 +0800
-Subject: [PATCH 702/728] i915: Add cp_downstream property
+Subject: [PATCH 702/743] i915: Add cp_downstream property
 
 Implements drm blob property cp_downstream_info property on HDCP
 capable connectors.

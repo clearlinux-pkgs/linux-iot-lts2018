@@ -1,7 +1,7 @@
-From 9bbbbc8c1779a3e5a9ac06c30a79e1d09bac0aff Mon Sep 17 00:00:00 2001
+From e9f15ae3ab6d0e7eb1a31a7b03df04746b5e911c Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Mon, 23 Jul 2018 10:51:33 +0800
-Subject: [PATCH 625/728] drm/i915/gvt: enable plane update pvmmio through
+Subject: [PATCH 625/743] drm/i915/gvt: enable plane update pvmmio through
  enable_pvmmio param
 
 plane update pvmmio level is 0x2, need set it in enable_pvmmio for both SOS

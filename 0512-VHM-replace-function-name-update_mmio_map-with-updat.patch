@@ -1,7 +1,7 @@
-From 7d65a1a4ff67c419060622a2f1c94d581ed69163 Mon Sep 17 00:00:00 2001
+From 6ca0ecf4793408e0a82fe1844c702e9d26521077 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:58:58 +0800
-Subject: [PATCH 512/728] VHM: replace function name update_mmio_map with
+Subject: [PATCH 512/743] VHM: replace function name update_mmio_map with
  update_memmap_attr
 
 Change-Id: Ia4e4c621d4a8bc6738042cede93b9b145af291f9

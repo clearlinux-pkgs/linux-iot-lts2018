@@ -1,7 +1,7 @@
-From 5619ac37727c3715dcaae3965e0f2a3fb87b99f5 Mon Sep 17 00:00:00 2001
+From c2ff535cff3444cae06d6790bd9d7f6f6dfb01e0 Mon Sep 17 00:00:00 2001
 From: Pardha Saradhi K <pardha.saradhi.kesapragada@intel.com>
 Date: Wed, 22 Nov 2017 17:28:42 +0530
-Subject: [PATCH 473/728] ASoC: Intel: BXT: Print version details of ADSP Base
+Subject: [PATCH 473/743] ASoC: Intel: BXT: Print version details of ADSP Base
  FW
 
 Print the major, minor, hotfix and build number of

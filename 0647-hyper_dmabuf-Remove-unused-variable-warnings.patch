@@ -1,7 +1,7 @@
-From 964bb722a70c42e4b74a53b764d4573e510379ff Mon Sep 17 00:00:00 2001
+From cf057e11fa4ce24be66d39ab7643773e585d30ed Mon Sep 17 00:00:00 2001
 From: Kuppuswamy Sathyanarayanan <sathyanarayanan.kuppuswamy@linux.intel.com>
 Date: Tue, 31 Jul 2018 14:39:40 -0700
-Subject: [PATCH 647/728] hyper_dmabuf: Remove unused variable warnings
+Subject: [PATCH 647/743] hyper_dmabuf: Remove unused variable warnings
 
 Remove unused variable warnings in hyper_dmabuf_list.c,
 hyper_dmabuf_msg.c and hyper_dmabuf_ops.c

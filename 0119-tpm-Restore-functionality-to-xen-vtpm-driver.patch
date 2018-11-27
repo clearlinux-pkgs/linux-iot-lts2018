@@ -1,7 +1,7 @@
-From f41fbe5b113b4ec0633917794776227d25055ff2 Mon Sep 17 00:00:00 2001
+From 0db29bb52b6e23686fc96037fc5225be10447ddb Mon Sep 17 00:00:00 2001
 From: "Dr. Greg Wettstein" <greg@wind.enjellic.com>
 Date: Mon, 17 Sep 2018 18:53:33 -0400
-Subject: [PATCH 119/728] tpm: Restore functionality to xen vtpm driver.
+Subject: [PATCH 119/743] tpm: Restore functionality to xen vtpm driver.
 
 Functionality of the xen-tpmfront driver was lost secondary to
 the introduction of xenbus multi-page support in commit ccc9d90a9a8b

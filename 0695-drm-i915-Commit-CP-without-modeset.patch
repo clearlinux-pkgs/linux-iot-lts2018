@@ -1,7 +1,7 @@
-From 6951d066263468fcaae011ede876065237e4717f Mon Sep 17 00:00:00 2001
+From c347322927b3e974ce0bf1da99b7ce181d666cf5 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Wed, 19 Sep 2018 14:18:50 +0800
-Subject: [PATCH 695/728] drm/i915: Commit CP without modeset
+Subject: [PATCH 695/743] drm/i915: Commit CP without modeset
 
 This patch commits the content protection change of a connector,
 without crtc modeset.

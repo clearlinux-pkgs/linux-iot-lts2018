@@ -1,7 +1,7 @@
-From 0a9ecda60f74bc01d33d53e9aef3d7f8f9d81782 Mon Sep 17 00:00:00 2001
+From 4c3dacca528719c5c38b403d879ec63127169d04 Mon Sep 17 00:00:00 2001
 From: Dharageswari R <dharageswari.r@intel.com>
 Date: Sun, 13 Mar 2016 22:22:47 +0530
-Subject: [PATCH 297/728] ASoC: Intel: board: Enable deepbuffer capture in
+Subject: [PATCH 297/743] ASoC: Intel: board: Enable deepbuffer capture in
  cnl_rt274
 
 Change-Id: I42a782d7689a90b814214420bc3a3ea8e2ad224e

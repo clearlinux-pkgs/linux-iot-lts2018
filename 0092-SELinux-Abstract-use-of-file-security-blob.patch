@@ -1,7 +1,7 @@
-From 7931ad55c7029e80c5edc4eba9859468c580326c Mon Sep 17 00:00:00 2001
+From e87ceefececaf30c1fec406e94443fd240e83b16 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 10 May 2018 14:01:52 -0700
-Subject: [PATCH 092/728] SELinux: Abstract use of file security blob
+Subject: [PATCH 092/743] SELinux: Abstract use of file security blob
 
 Don't use the file->f_security pointer directly.
 Provide a helper function that provides the security blob pointer.

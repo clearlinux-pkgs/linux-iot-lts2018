@@ -1,7 +1,7 @@
-From 6730601d9997899c05b47a3d7ac0a6623d3f888e Mon Sep 17 00:00:00 2001
+From d15cce9bc8d94f50686d132ef706079554e5a628 Mon Sep 17 00:00:00 2001
 From: Jian Jun Chen <jian.jun.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:03 +0800
-Subject: [PATCH 560/728] VBS-K: Check whether vhm_client_id is valid before
+Subject: [PATCH 560/743] VBS-K: Check whether vhm_client_id is valid before
  deregister
 
 Need to check whether vhm_client_id is valid before trying to

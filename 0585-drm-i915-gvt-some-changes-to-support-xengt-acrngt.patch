@@ -1,7 +1,7 @@
-From 5dff15add3f302a3ea8a4c05631a10b8d8016c75 Mon Sep 17 00:00:00 2001
+From caee808ae5e9978d2ba8a64b977b475663ad2bd5 Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Fri, 14 Sep 2018 16:10:16 +0800
-Subject: [PATCH 585/728] drm/i915/gvt: some changes to support xengt/acrngt
+Subject: [PATCH 585/743] drm/i915/gvt: some changes to support xengt/acrngt
 
 Set guest ppgtt entry in ppgtt_handle_guest_write_page_table_bytes()
 

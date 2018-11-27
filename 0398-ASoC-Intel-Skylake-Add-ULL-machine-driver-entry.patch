@@ -1,7 +1,7 @@
-From a56c3f1e0e016cf6f1dc3246dc31d91008b4bf4a Mon Sep 17 00:00:00 2001
+From 0c3557becf72a2e84b1747e97f9f03d0b45d62c1 Mon Sep 17 00:00:00 2001
 From: "Gogineni, GiribabuX" <giribabux.gogineni@intel.com>
 Date: Fri, 27 Oct 2017 19:30:32 +0530
-Subject: [PATCH 398/728] ASoC: Intel: Skylake: Add ULL machine driver entry
+Subject: [PATCH 398/743] ASoC: Intel: Skylake: Add ULL machine driver entry
 
 This patch adds ULL machine driver name to driver
 data.

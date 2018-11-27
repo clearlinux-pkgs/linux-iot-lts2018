@@ -1,7 +1,7 @@
-From 16bf2ef320347bcbcbb96adc18e916eba3c18c19 Mon Sep 17 00:00:00 2001
+From 258a2860340251b0457592a3ff199331a0597776 Mon Sep 17 00:00:00 2001
 From: Christian Brauner <christian@brauner.io>
 Date: Wed, 22 Aug 2018 13:52:40 +0200
-Subject: [PATCH 085/728] security/capabilities: remove check for -EINVAL
+Subject: [PATCH 085/743] security/capabilities: remove check for -EINVAL
 
 bprm_caps_from_vfs_caps() never returned -EINVAL so remove the
 rc == -EINVAL check.

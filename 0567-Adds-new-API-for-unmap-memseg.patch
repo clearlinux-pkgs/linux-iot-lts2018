@@ -1,7 +1,7 @@
-From d27393327794562b47e46533f70cba65c1e18e4c Mon Sep 17 00:00:00 2001
+From 347c9ab8197edcd666071ff38a92bfff73a2aee3 Mon Sep 17 00:00:00 2001
 From: Edwin Zhai <edwin.zhai@intel.com>
 Date: Wed, 5 Sep 2018 09:35:05 +0800
-Subject: [PATCH 567/728] Adds new API for unmap memseg
+Subject: [PATCH 567/743] Adds new API for unmap memseg
 
 It is required when DM unmap ptdev BAR in deinit
 

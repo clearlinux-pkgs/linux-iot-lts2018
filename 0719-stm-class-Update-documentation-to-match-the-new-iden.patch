@@ -1,7 +1,7 @@
-From 03a884d39c7ce6d78369fa0df0bafd578a9dd324 Mon Sep 17 00:00:00 2001
+From d5e956e792474fea199bbe4dbd1652e097138545 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:02 +0300
-Subject: [PATCH 719/728] stm class: Update documentation to match the new
+Subject: [PATCH 719/743] stm class: Update documentation to match the new
  identification rules
 
 The rules and order of identification of trace sources against the

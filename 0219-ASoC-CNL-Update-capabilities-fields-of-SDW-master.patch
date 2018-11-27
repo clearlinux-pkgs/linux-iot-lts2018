@@ -1,7 +1,7 @@
-From 19bde06017c7157ef31b4e39c72eea9c19dfc278 Mon Sep 17 00:00:00 2001
+From 2665841c8a94290ab9b60acdca330b9b642641ce Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Mon, 2 May 2016 00:14:23 +0530
-Subject: [PATCH 219/728] ASoC:CNL: Update capabilities fields of SDW master
+Subject: [PATCH 219/743] ASoC:CNL: Update capabilities fields of SDW master
 
 Capabilities fields are missing while updating master controller
 update the fields based on hardware/topology capability

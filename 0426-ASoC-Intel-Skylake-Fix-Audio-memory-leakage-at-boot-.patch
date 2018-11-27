@@ -1,7 +1,7 @@
-From 61e3941d669f30c33c7a1938c041eedfb9f05585 Mon Sep 17 00:00:00 2001
+From 85a96e274cf0f60b3527ef98bc8038c1a362266f Mon Sep 17 00:00:00 2001
 From: "Shaik, ShahinaX" <shahinax.shaik@intel.com>
 Date: Thu, 29 Mar 2018 21:40:15 +0530
-Subject: [PATCH 426/728] ASoC: Intel: Skylake: Fix Audio memory leakage at
+Subject: [PATCH 426/743] ASoC: Intel: Skylake: Fix Audio memory leakage at
  boot time
 
 Fix kmemleak issues in skl_module_sysfs_init functions by,

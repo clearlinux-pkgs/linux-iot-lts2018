@@ -1,7 +1,7 @@
-From 5cb87b35cc2cc316ff194791c5bee8d9096464c0 Mon Sep 17 00:00:00 2001
+From f43d3023d361ab220d35bc078be2de721b244b4a Mon Sep 17 00:00:00 2001
 From: "Panwar, Ashish" <ashish.panwar@intel.com>
 Date: Wed, 20 Jan 2016 19:09:05 +0530
-Subject: [PATCH 237/728] ASoC: Intel: Skylake: Driver ring buffer APIs for
+Subject: [PATCH 237/743] ASoC: Intel: Skylake: Driver ring buffer APIs for
  firmware logging.
 
 Data from trace window will be copied in this buffer and passed to

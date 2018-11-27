@@ -1,7 +1,7 @@
-From 4aa0dec4f8e8e319b42757c4565a15c3ea20a764 Mon Sep 17 00:00:00 2001
+From 947213d5506e4aa6cf5f33b571339707df17d0eb Mon Sep 17 00:00:00 2001
 From: Mateusz Polrola <mateuszx.potrola@intel.com>
 Date: Thu, 20 Sep 2018 12:12:52 +0200
-Subject: [PATCH 655/728] hyper_dmabuf/virtio: Adapt to the new state
+Subject: [PATCH 655/743] hyper_dmabuf/virtio: Adapt to the new state
  transition of VHM requests
 
 Instead of using two members (namely ''valid'' and ''processed''), the

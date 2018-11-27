@@ -1,7 +1,7 @@
-From 15d196037fb7d4473c02176f683c0fa17fa8d2c0 Mon Sep 17 00:00:00 2001
+From 45d932f76cb0b860b3868e11b874204946f9b6e8 Mon Sep 17 00:00:00 2001
 From: "Paul, Subhankar" <subhankar.paul@intel.com>
 Date: Tue, 8 Aug 2017 22:46:45 +0530
-Subject: [PATCH 375/728] ASoC: Intel: Skylake: Add support for module
+Subject: [PATCH 375/743] ASoC: Intel: Skylake: Add support for module
  notifications
 
 Firmware modules can send asynchronous notification to driver

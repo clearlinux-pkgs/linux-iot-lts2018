@@ -1,7 +1,7 @@
-From 4c7ce15d46455dda7893dc6b2b5702db5fa975a9 Mon Sep 17 00:00:00 2001
+From 346910488c73b6342df706c8ff1f9e5db73bbbf6 Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Tue, 14 Aug 2018 02:24:22 +0000
-Subject: [PATCH 665/728] drm/i915: fix a kernel panic issue of plane
+Subject: [PATCH 665/743] drm/i915: fix a kernel panic issue of plane
  restriction
 
 When plane restriction feature enabled in sevice os, there could be the

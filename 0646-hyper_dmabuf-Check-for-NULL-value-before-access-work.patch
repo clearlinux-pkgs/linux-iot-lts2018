@@ -1,7 +1,7 @@
-From 9a9f19661450a8cdac78e22f14176ef28a01bf37 Mon Sep 17 00:00:00 2001
+From 6c97f72625a638d7947b29f1c90faa286ac02943 Mon Sep 17 00:00:00 2001
 From: Kuppuswamy Sathyanarayanan <sathyanarayanan.kuppuswamy@linux.intel.com>
 Date: Tue, 31 Jul 2018 14:39:39 -0700
-Subject: [PATCH 646/728] hyper_dmabuf: Check for NULL value before access work
+Subject: [PATCH 646/743] hyper_dmabuf: Check for NULL value before access work
  pointer.
 
 In delayed_unexport() check for work pointer NULL value before accessing

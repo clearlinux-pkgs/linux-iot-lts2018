@@ -1,7 +1,7 @@
-From 0fb432cf30f83fb0727443acc1c77e8fe2a05ef1 Mon Sep 17 00:00:00 2001
+From 11be3b7f4103d27a9b960345d322a6980c342d06 Mon Sep 17 00:00:00 2001
 From: Manisha Chinthapally <manisha.chinthapally@intel.com>
 Date: Tue, 13 Nov 2018 12:27:51 -0800
-Subject: [PATCH 727/728] SEP: some cleanup
+Subject: [PATCH 727/743] SEP: some cleanup
 
 Cleaned up some unused variables
 imporved readablility by removing double casting.

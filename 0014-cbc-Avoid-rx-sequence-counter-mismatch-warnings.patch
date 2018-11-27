@@ -1,7 +1,7 @@
-From e8f4809f04d0731265dff87395723c2344d19b18 Mon Sep 17 00:00:00 2001
+From 9eb253b85e3c5d4580d4636e6e1c39071ebd4644 Mon Sep 17 00:00:00 2001
 From: "G Jaya Kumaran, Vineetha" <vineetha.g.jaya.kumaran@intel.com>
 Date: Fri, 25 May 2018 14:24:11 +0800
-Subject: [PATCH 014/728] cbc: Avoid rx sequence counter mismatch warnings
+Subject: [PATCH 014/743] cbc: Avoid rx sequence counter mismatch warnings
 
 The receive sequence counter should only be incremented
 if the checksum passes, to avoid unnecessary spawning

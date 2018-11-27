@@ -1,7 +1,7 @@
-From 1cc8b4fe2434b1fa000dfc948d1a20cf7b77a8a2 Mon Sep 17 00:00:00 2001
+From c53532b7b096ad1cee91d44e91722c4c84d3e158 Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Mon, 25 Apr 2016 13:39:37 +0530
-Subject: [PATCH 208/728] SDW:Intel: Fix hardcoding for SVFPGA codec.
+Subject: [PATCH 208/743] SDW:Intel: Fix hardcoding for SVFPGA codec.
 
 SVFPGA codec requires special handling as its not modelled
 as MIPI defined SoundWire Slave. This is used for testing PDM

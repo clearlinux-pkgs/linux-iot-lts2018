@@ -1,7 +1,7 @@
-From e1eb597a9bc434ae146382b00e68f2c458eae427 Mon Sep 17 00:00:00 2001
+From f16fd8e9a5d1e232af637c69affcc8f9e9f4e165 Mon Sep 17 00:00:00 2001
 From: Xiangyang Wu <xiangyang.wu@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 540/728] VHM:Update cpu id type as uint16_t for struct
+Subject: [PATCH 540/743] VHM:Update cpu id type as uint16_t for struct
  acrn_create_vcpu
 
 Update the cpu id type as uint16_t for struct acrn_create_vcpu in

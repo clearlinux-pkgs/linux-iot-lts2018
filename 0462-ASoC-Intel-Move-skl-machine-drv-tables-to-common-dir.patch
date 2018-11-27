@@ -1,7 +1,7 @@
-From 8fa566288475b0b3a243251db2d5df51ebc0da4a Mon Sep 17 00:00:00 2001
+From af93470f6fbd694b78a5c9a5bc28c6e2009cee7e Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Tue, 14 Aug 2018 12:25:29 +0200
-Subject: [PATCH 462/728] ASoC: Intel: Move skl machine drv tables to common
+Subject: [PATCH 462/743] ASoC: Intel: Move skl machine drv tables to common
  directory.
 
 Align with machine drv tables declaration model present on upstream.

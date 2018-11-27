@@ -1,7 +1,7 @@
-From 9d68849830df31be06841cc37def0d3da37ac92a Mon Sep 17 00:00:00 2001
+From d9aa2dc666b305f9e5482b75032810b8674c0ce9 Mon Sep 17 00:00:00 2001
 From: Mohit Sinha <mohit.sinha@intel.com>
 Date: Mon, 4 Sep 2017 23:31:17 +0530
-Subject: [PATCH 386/728] ASoC: Intel: Board: Add fixup for 32 bit masking
+Subject: [PATCH 386/743] ASoC: Intel: Board: Add fixup for 32 bit masking
 
 Fixup function does the masking of the format to set the
 SSP2 to 32 bit

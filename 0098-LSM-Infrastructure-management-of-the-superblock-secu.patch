@@ -1,7 +1,7 @@
-From 397a974ef06bbac2c45c96f95cc69fa8a944b4a3 Mon Sep 17 00:00:00 2001
+From a4d3985dc06e55885e797f56f4c8e83ac5ae678a Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 10 May 2018 14:25:23 -0700
-Subject: [PATCH 098/728] LSM: Infrastructure management of the superblock
+Subject: [PATCH 098/743] LSM: Infrastructure management of the superblock
  security blob
 
 Move management of the superblock->sb_security blob out

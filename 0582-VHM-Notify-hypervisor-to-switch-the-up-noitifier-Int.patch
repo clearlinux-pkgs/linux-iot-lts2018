@@ -1,7 +1,7 @@
-From c1a4e83b81f0a6282e2948b73dc33c2f30af14bb Mon Sep 17 00:00:00 2001
+From 6c612ce9a97beb5ea5614ae8e57d4b22a542457b Mon Sep 17 00:00:00 2001
 From: Zhao Yakui <yakui.zhao@intel.com>
 Date: Tue, 16 Oct 2018 13:38:25 +0800
-Subject: [PATCH 582/728] VHM: Notify hypervisor to switch the up-noitifier
+Subject: [PATCH 582/743] VHM: Notify hypervisor to switch the up-noitifier
  Interrupt vector
 
 Currently the acrn-hypervisor is using the PLATFORM_IPI vector to notify

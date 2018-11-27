@@ -1,7 +1,7 @@
-From 746298aeb0b51725026f495b575fb5dc3384d9c5 Mon Sep 17 00:00:00 2001
+From 2985e02b626b0c6940aace813942db6921ac37fa Mon Sep 17 00:00:00 2001
 From: Victor Sun <victor.sun@intel.com>
 Date: Fri, 31 Aug 2018 10:59:00 +0800
-Subject: [PATCH 531/728] VHM: add service to support px data transition
+Subject: [PATCH 531/743] VHM: add service to support px data transition
 
 The px data is hard coded within HV, DM will get these data to build
 DSDT for UOS. With this DSDT, UOS would have capability on Px control

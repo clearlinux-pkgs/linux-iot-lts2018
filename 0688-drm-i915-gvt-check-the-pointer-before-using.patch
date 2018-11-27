@@ -1,7 +1,7 @@
-From 06479f12481b1c9a87466a209ca62b7b90eadb9c Mon Sep 17 00:00:00 2001
+From f1692cbb4ec2164c2b60fce8836135ede2bdc46d Mon Sep 17 00:00:00 2001
 From: Xinyun Liu <xinyun.liu@intel.com>
 Date: Wed, 24 Oct 2018 19:50:08 +0800
-Subject: [PATCH 688/728] drm/i915/gvt: check the pointer before using
+Subject: [PATCH 688/743] drm/i915/gvt: check the pointer before using
 
 fix issues reported by smatch:
 

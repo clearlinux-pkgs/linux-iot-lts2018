@@ -1,7 +1,7 @@
-From 7f36d2d6603dfd6e98f4afb647b1b0b70ab58345 Mon Sep 17 00:00:00 2001
+From b1e70f2cc21f1ed1553ac736c41bdca9d166876c Mon Sep 17 00:00:00 2001
 From: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
 Date: Wed, 28 Feb 2018 15:38:13 +0530
-Subject: [PATCH 431/728] ASoC: Intel: Skylake: Replace strcpy with strlcpy
+Subject: [PATCH 431/743] ASoC: Intel: Skylake: Replace strcpy with strlcpy
 
 Replace strcpy with strlcpy, as it avoids a possible buffer overflow.
 

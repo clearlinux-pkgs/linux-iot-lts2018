@@ -1,7 +1,7 @@
-From b2f2993cd85a488feac89e75bd6fd214d264ad90 Mon Sep 17 00:00:00 2001
+From 3d77b3469141cb1733925a8be077a943d774c9b3 Mon Sep 17 00:00:00 2001
 From: Junjie Mao <junjie.mao@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 549/728] vhm: revisit types in structure parameters of
+Subject: [PATCH 549/743] vhm: revisit types in structure parameters of
  hypercalls
 
 While fixing the MISRA C violations related to integral types, we have unified

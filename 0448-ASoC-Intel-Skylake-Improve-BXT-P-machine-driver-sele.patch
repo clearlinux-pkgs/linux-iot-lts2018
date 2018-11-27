@@ -1,7 +1,7 @@
-From 88757162b3341db4c4ff3d0c0fa0daef9a62e967 Mon Sep 17 00:00:00 2001
+From 142320b2333e189bac49023cac8872a47b735e6e Mon Sep 17 00:00:00 2001
 From: Kareem Shaik <kareem.m.shaik@intel.com>
 Date: Wed, 29 Nov 2017 15:38:20 +0530
-Subject: [PATCH 448/728] ASoC: Intel: Skylake: Improve BXT-P machine driver
+Subject: [PATCH 448/743] ASoC: Intel: Skylake: Improve BXT-P machine driver
  selection based on configuration
 
 Use configuration option to select the correct machine driver defined under

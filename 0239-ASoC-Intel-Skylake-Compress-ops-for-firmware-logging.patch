@@ -1,7 +1,7 @@
-From 5df2d5a5c608c5b2841962b508e897687a9395b0 Mon Sep 17 00:00:00 2001
+From f6abaf4ebb3ae6da8a56c8745d165cc146d41c49 Mon Sep 17 00:00:00 2001
 From: "Panwar, Ashish" <ashish.panwar@intel.com>
 Date: Wed, 20 Jan 2016 19:22:05 +0530
-Subject: [PATCH 239/728] ASoC: Intel: Skylake: Compress ops for firmware
+Subject: [PATCH 239/743] ASoC: Intel: Skylake: Compress ops for firmware
  logging.
 
 Implementation of compress ops for firmware logging. These ops are

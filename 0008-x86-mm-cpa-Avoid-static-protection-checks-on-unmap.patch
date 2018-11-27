@@ -1,7 +1,7 @@
-From 9261180f9f71b5bdcd8b02496289d195538ad84c Mon Sep 17 00:00:00 2001
+From 12536a3a51535dba2e240c87b46febb5f47a81f9 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:13 +0200
-Subject: [PATCH 008/728] x86/mm/cpa: Avoid static protection checks on unmap
+Subject: [PATCH 008/743] x86/mm/cpa: Avoid static protection checks on unmap
 
 If the new pgprot has the PRESENT bit cleared, then conflicts vs. RW/NX are
 completely irrelevant.

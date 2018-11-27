@@ -1,7 +1,7 @@
-From 2464012b99e28894962d4b17ed8852211d1cac41 Mon Sep 17 00:00:00 2001
+From a50ddd1c5b5cc0adf870a64810e481cc49bff15a Mon Sep 17 00:00:00 2001
 From: "Gross, Mark" <mark.gross@intel.com>
 Date: Fri, 14 Sep 2018 13:16:02 -0700
-Subject: [PATCH 040/728] the igb_avb direver cannot coexist with e1000 or
+Subject: [PATCH 040/743] the igb_avb direver cannot coexist with e1000 or
  e1000e drivers.
 
 So I'm making the config protest from enabling igb_avb and e1000 or

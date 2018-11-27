@@ -1,8 +1,8 @@
-From 523272462a361882ba49869a687759ffb3ea4d3a Mon Sep 17 00:00:00 2001
+From 80b007c25b3351f8f3d583fae7dee754fb42f77c Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Amadeusz=20S=C5=82awi=C5=84ski?=
  <amadeuszx.slawinski@intel.com>
 Date: Thu, 12 Jul 2018 12:55:26 +0200
-Subject: [PATCH 455/728] ASoC: Intel: Skylake: pipeline needs to be reset
+Subject: [PATCH 455/743] ASoC: Intel: Skylake: pipeline needs to be reset
  before disconnect
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8

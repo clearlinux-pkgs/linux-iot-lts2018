@@ -1,7 +1,7 @@
-From c7f4f58548779fcd5c5b8791f2d499d990c0048d Mon Sep 17 00:00:00 2001
+From b438cf62e1de540c32ef59a5989bce613ccbcb0b Mon Sep 17 00:00:00 2001
 From: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
 Date: Fri, 21 Sep 2018 16:09:53 +0200
-Subject: [PATCH 468/728] REVERTME: Fix no audio output after resume from S3
+Subject: [PATCH 468/743] REVERTME: Fix no audio output after resume from S3
 
 Ignoring returned code from tdf8532_stop_play allows continue
 playback after S3.

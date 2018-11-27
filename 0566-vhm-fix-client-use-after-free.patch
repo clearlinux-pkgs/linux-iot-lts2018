@@ -1,7 +1,7 @@
-From f489f713cb6fe4c945ecdacc17e3da3442b3a8bd Mon Sep 17 00:00:00 2001
+From 2fbee21fbea1aef6842f436359aa6cf1655d78f2 Mon Sep 17 00:00:00 2001
 From: Li Zhijian <lizhijian@cn.fujitsu.com>
 Date: Fri, 31 Aug 2018 10:59:04 +0800
-Subject: [PATCH 566/728] vhm: fix client use-after-free
+Subject: [PATCH 566/743] vhm: fix client use-after-free
 
 free_client() will free resource of client
 

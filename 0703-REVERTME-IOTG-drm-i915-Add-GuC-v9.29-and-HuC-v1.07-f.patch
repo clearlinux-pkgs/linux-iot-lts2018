@@ -1,7 +1,7 @@
-From 783af14555a4c77880ae61cc9ee30c5b0c5726c0 Mon Sep 17 00:00:00 2001
+From 89d6a710f329702dab2d4f65a0e4cf095cd43c68 Mon Sep 17 00:00:00 2001
 From: Badiuzzaman Iskhandar <badiuzzaman.azzarfan.bin.iskhandar@intel.com>
 Date: Tue, 9 Oct 2018 15:31:22 +0800
-Subject: [PATCH 703/728] REVERTME [IOTG]: drm/i915/: Add GuC v9.29 and HuC
+Subject: [PATCH 703/743] REVERTME [IOTG]: drm/i915/: Add GuC v9.29 and HuC
  v1.07 firmware size
 
 In deferred firmware loading, the value of the firmware sizes were not

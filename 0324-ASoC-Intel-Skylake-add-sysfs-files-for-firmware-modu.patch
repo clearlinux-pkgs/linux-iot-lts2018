@@ -1,7 +1,7 @@
-From 21b6c18a2526b9b32b5d48ee0370696090df0cee Mon Sep 17 00:00:00 2001
+From 98e360c5cfecf2b6cf9916ad92822f8892bf3b26 Mon Sep 17 00:00:00 2001
 From: "Pawse, GuruprasadX" <guruprasadx.pawse@intel.com>
 Date: Mon, 30 Jan 2017 20:12:52 +0530
-Subject: [PATCH 324/728] ASoC: Intel: Skylake: add sysfs files for firmware
+Subject: [PATCH 324/743] ASoC: Intel: Skylake: add sysfs files for firmware
  modules
 
 This patch adds sysfs files for firmware modules.

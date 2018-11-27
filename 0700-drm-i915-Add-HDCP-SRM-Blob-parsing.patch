@@ -1,7 +1,7 @@
-From 9ea0cc4b8f0fc3237081b9868dafb21700a88d55 Mon Sep 17 00:00:00 2001
+From 5f065a829a6e977ea6cd523b6163fac97983e25c Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Wed, 20 Dec 2017 21:47:01 +0530
-Subject: [PATCH 700/728] drm/i915: Add HDCP SRM Blob parsing
+Subject: [PATCH 700/743] drm/i915: Add HDCP SRM Blob parsing
 
 This patch adds a drm blob property to selected connectors.
 And also adds capability to parse the new srm blob passed through

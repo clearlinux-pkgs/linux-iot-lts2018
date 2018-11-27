@@ -1,7 +1,7 @@
-From 6bd7b227d0fd1a46052be2d7c7a4c63f4fda886a Mon Sep 17 00:00:00 2001
+From 2b11bd28f49758ad17b01e88e342eb31c4583a58 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 16 Sep 2018 22:29:58 +0300
-Subject: [PATCH 140/728] tpm1: reimplement tpm1_continue_selftest() using
+Subject: [PATCH 140/743] tpm1: reimplement tpm1_continue_selftest() using
  tpm_buf
 
 Reimplement tpm1_continue_selftest() using tpm_buf structure.

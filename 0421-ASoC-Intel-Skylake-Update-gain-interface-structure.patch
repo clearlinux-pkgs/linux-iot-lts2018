@@ -1,7 +1,7 @@
-From e7943fc25a33546fa5246a2b85f64b5badbfd566 Mon Sep 17 00:00:00 2001
+From ce550548c6d7b2d2bc147288e894387735aded54 Mon Sep 17 00:00:00 2001
 From: "Shaik, ShahinaX" <shahinax.shaik@intel.com>
 Date: Mon, 5 Feb 2018 20:12:17 +0530
-Subject: [PATCH 421/728] ASoC: Intel: Skylake: Update gain interface structure
+Subject: [PATCH 421/743] ASoC: Intel: Skylake: Update gain interface structure
 
 This patch updates gain structure alignment as per
 firmware interface requirement.

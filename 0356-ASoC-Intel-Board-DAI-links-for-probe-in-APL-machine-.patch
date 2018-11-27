@@ -1,7 +1,7 @@
-From af9380bd0083f037469a70db7e72b110631123fc Mon Sep 17 00:00:00 2001
+From 7f7e132d59b6ca627752f96d0992661817fb45cb Mon Sep 17 00:00:00 2001
 From: Pramod Kumar Yadav <pramodx.k.yadav@intel.com>
 Date: Tue, 26 Apr 2016 15:49:45 +0530
-Subject: [PATCH 356/728] ASoC: Intel: Board: DAI links for probe in APL
+Subject: [PATCH 356/743] ASoC: Intel: Board: DAI links for probe in APL
  machine driver
 
 Added two DAI link, one for each playback & capture, for probe

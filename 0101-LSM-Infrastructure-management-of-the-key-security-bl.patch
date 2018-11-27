@@ -1,7 +1,7 @@
-From cd0f36f1bc817fd2c1a4f2e591c106cd012774d4 Mon Sep 17 00:00:00 2001
+From 3598e1e84e72a154c168a64bbd86f389704ba1b4 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 10 May 2018 14:32:32 -0700
-Subject: [PATCH 101/728] LSM: Infrastructure management of the key security
+Subject: [PATCH 101/743] LSM: Infrastructure management of the key security
  blob
 
 Move management of the key->security blob out of the

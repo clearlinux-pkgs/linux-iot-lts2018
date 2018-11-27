@@ -1,7 +1,7 @@
-From 53f82a90680d5ee93f2a0ef476a376b67f21891e Mon Sep 17 00:00:00 2001
+From c5f0388af206329bcc6676a56f83d6cef5bf13fe Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Wed, 16 Aug 2017 12:26:31 +0530
-Subject: [PATCH 413/728] SoundWire: Perform clock exit by setting clock stop
+Subject: [PATCH 413/743] SoundWire: Perform clock exit by setting clock stop
  clear
 
 As per HW sequence, clock stop clear bit in mcp_control

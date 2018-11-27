@@ -1,7 +1,7 @@
-From 794629e165f8f287f6d9808a4d6ae0c8905c09f0 Mon Sep 17 00:00:00 2001
+From a96ffd2133f1c0a440aa1c2d9ae0ff2c6bc1ac6b Mon Sep 17 00:00:00 2001
 From: Minggui Cao <minggui.cao@intel.com>
 Date: Wed, 8 Aug 2018 15:42:00 +0800
-Subject: [PATCH 573/728] VHM: add ioctl/hypercall for UOS intr data monitor
+Subject: [PATCH 573/743] VHM: add ioctl/hypercall for UOS intr data monitor
 
 DM can use this ioctl/hypercall to get the UOS pass-through devices'
 interrupt count data, to monitor its status.

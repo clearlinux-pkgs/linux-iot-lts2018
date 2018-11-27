@@ -1,7 +1,7 @@
-From 42ae6825c06676891882a4de6dcbd3f2fb60ac68 Mon Sep 17 00:00:00 2001
+From 2e49172129fee52ba12aee351a208a6b05de1ff4 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Thu, 10 May 2018 14:08:37 -0700
-Subject: [PATCH 094/728] LSM: Infrastructure management of the task security
+Subject: [PATCH 094/743] LSM: Infrastructure management of the task security
  blob
 
 Move management of the task_struct->security blob out

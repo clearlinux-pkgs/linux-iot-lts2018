@@ -1,7 +1,7 @@
-From 47534021e01328bfd996a47373aeb10f84afcb9a Mon Sep 17 00:00:00 2001
+From 32e3219fd56ef8f32f849ae2149c563e150c55ac Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Tue, 17 Jul 2018 17:06:34 +0200
-Subject: [PATCH 457/728] ASoC: Intel: Allow for firmware load retry.
+Subject: [PATCH 457/743] ASoC: Intel: Allow for firmware load retry.
 
 Due to unconditional initial timeouts, firmware may fail to load
 during its initialization. This issue cannot be resolved on driver

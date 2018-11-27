@@ -1,7 +1,7 @@
-From b0d0660063bd591b309f4501671e66cb143bbd0a Mon Sep 17 00:00:00 2001
+From 5fcf59620bc9661d206537d1143c266728f7789a Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:11 +0200
-Subject: [PATCH 006/728] x86/mm/cpa: Add debug mechanism
+Subject: [PATCH 006/743] x86/mm/cpa: Add debug mechanism
 
 The whole static protection magic is silently fixing up anything which is
 handed in. That's just wrong. The offending call sites need to be fixed.

@@ -1,7 +1,7 @@
-From 82171acbc476c222d2831945b90e60f41117ba09 Mon Sep 17 00:00:00 2001
+From 8cdaa26cd920b4a9a7161832c8f0480cafb7d7be Mon Sep 17 00:00:00 2001
 From: "Kim, Dongwon" <dongwon.kim@intel.com>
 Date: Thu, 2 Nov 2017 14:58:23 -0700
-Subject: [PATCH 640/728] REVERTME [IOTG]: hyper_dmabuf: Introducing the
+Subject: [PATCH 640/743] REVERTME [IOTG]: hyper_dmabuf: Introducing the
  hyper_dmabuf driver
 
 This commit squishes all the different commits related to the

@@ -1,7 +1,7 @@
-From 8229dcd063a4ac8505064eb767ecd35b9d51b479 Mon Sep 17 00:00:00 2001
+From 20c36581e81cf5addb0c8c4a4bf331fbdbb82f80 Mon Sep 17 00:00:00 2001
 From: Felipe Balbi <felipe.balbi@linux.intel.com>
 Date: Wed, 1 Aug 2018 13:37:53 +0300
-Subject: [PATCH 078/728] usb: dwc3: gadget: use num_trbs when skipping TRBs on
+Subject: [PATCH 078/743] usb: dwc3: gadget: use num_trbs when skipping TRBs on
  ->dequeue()
 
 Now that we track how many TRBs a request uses, it's easier to skip

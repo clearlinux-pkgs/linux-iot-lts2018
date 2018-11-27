@@ -1,7 +1,7 @@
-From 8faf6bed728d12a9995b6a954694a3fb5497a4be Mon Sep 17 00:00:00 2001
+From 5a5ebc2ae2aabf47355c10d1fdc943bc84f4f8aa Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Mon, 4 Dec 2017 15:05:59 +0530
-Subject: [PATCH 411/728] soundwire: Change programming sequence for BRA
+Subject: [PATCH 411/743] soundwire: Change programming sequence for BRA
 
 Currently, the register programming (PDI, ALH, DP_CTRL) is performed
 before FW pipeline creation.

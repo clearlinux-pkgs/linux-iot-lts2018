@@ -1,7 +1,7 @@
-From 1251a2c6c37138997d6ad3a3f95a03b244b0fd97 Mon Sep 17 00:00:00 2001
+From 7587b6c75d2b5b0096aaefd99b7e7eb22c33f8f9 Mon Sep 17 00:00:00 2001
 From: "Panwar, Ashish" <ashish.panwar@intel.com>
 Date: Sat, 19 Mar 2016 08:44:11 +0530
-Subject: [PATCH 245/728] REVERTME-1: Revert when logging is updated in
+Subject: [PATCH 245/743] REVERTME-1: Revert when logging is updated in
  driver/firmware.
 
 Core 0 is currently using entire 8KB window for logging.

@@ -1,7 +1,7 @@
-From ad5808ccca2eb706f7efa7a1b170a2a89a7a4523 Mon Sep 17 00:00:00 2001
+From 399acdc84b10a881bf219b7c0fbdaccabed53088 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 7 Mar 2018 09:07:54 +0200
-Subject: [PATCH 131/728] tpm: factor out tpm 1.x pm suspend flow into
+Subject: [PATCH 131/743] tpm: factor out tpm 1.x pm suspend flow into
  tpm1-cmd.c
 
 Factor out TPM 1.x suspend flow from tpm-interface.c into a new function

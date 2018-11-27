@@ -1,7 +1,7 @@
-From 688b6be597598d72f5a5a9522f14ce5d031d0796 Mon Sep 17 00:00:00 2001
+From 688d861f3e13e74bfe3e4c54b68dc5229363c194 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Tue, 1 Nov 2016 11:15:57 +0200
-Subject: [PATCH 152/728] mei: dma ring: implement rx circular buffer logic
+Subject: [PATCH 152/743] mei: dma ring: implement rx circular buffer logic
 
 Implement circular buffer protocol over receive dma
 buffer. Add extension to the mei message header that holds

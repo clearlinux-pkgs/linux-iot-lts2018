@@ -1,7 +1,7 @@
-From 6d2e6aedf72a33b79ccd55d8362606be06b324e7 Mon Sep 17 00:00:00 2001
+From c16edc1c286d2a5fb0523ee405ca45dceb719d75 Mon Sep 17 00:00:00 2001
 From: Shahina Shaik <shahinax.shaik@intel.com>
 Date: Mon, 30 Apr 2018 18:47:02 +0530
-Subject: [PATCH 432/728] ASoC: Intel: Boards: Replace codec to component in
+Subject: [PATCH 432/743] ASoC: Intel: Boards: Replace codec to component in
  RT274 machine driver
 
 As the framework is changed in kernel 4.17 version,

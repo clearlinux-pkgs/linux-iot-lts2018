@@ -1,7 +1,7 @@
-From cea5d7b8a1428adcb5fcc8d99d87d0717f1a40ce Mon Sep 17 00:00:00 2001
+From cc5b55691134be1d3eef247825a3bb7fe6818692 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Sun, 12 Aug 2018 14:21:27 +0300
-Subject: [PATCH 162/728] mei: add a spin lock to protect rd_completed queue
+Subject: [PATCH 162/743] mei: add a spin lock to protect rd_completed queue
 
 This will add ability to access read completed queue
 outside of the driver big lock.

@@ -1,7 +1,7 @@
-From 095128be00a5a32af308a5907aa81f23326cd596 Mon Sep 17 00:00:00 2001
+From a2b2126c3185d02407336b1dcf15885a5f32e09b Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Thu, 10 Mar 2016 10:33:33 +0530
-Subject: [PATCH 194/728] ASoC: CNL: Register soundwire controller to bus
+Subject: [PATCH 194/743] ASoC: CNL: Register soundwire controller to bus
  driver.
 
 This patch registers the SoundWire controller to the

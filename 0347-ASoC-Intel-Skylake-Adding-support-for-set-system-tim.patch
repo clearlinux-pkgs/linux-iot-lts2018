@@ -1,7 +1,7 @@
-From ab5c677187c2a1a1772d84da50080dd2302dee76 Mon Sep 17 00:00:00 2001
+From 37ef5116432a415c2d7cda3b474923bc2e75b1aa Mon Sep 17 00:00:00 2001
 From: "Paul, Subhankar" <subhankar.paul@intel.com>
 Date: Wed, 31 Aug 2016 03:24:12 +0530
-Subject: [PATCH 347/728] ASoC: Intel: Skylake: Adding support for set system
+Subject: [PATCH 347/743] ASoC: Intel: Skylake: Adding support for set system
  time to aDSP
 
 In order to calculate the logging timestamps, firmware need the IA

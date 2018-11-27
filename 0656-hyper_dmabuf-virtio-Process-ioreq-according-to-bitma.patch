@@ -1,7 +1,7 @@
-From 8ea16fdae6bdb19d13d987ac7c4d99138c08f274 Mon Sep 17 00:00:00 2001
+From e1c3fd272e50b4e9e4fb4deadf2a828d21b94f0a Mon Sep 17 00:00:00 2001
 From: Mateusz Polrola <mateuszx.potrola@intel.com>
 Date: Thu, 20 Sep 2018 14:09:19 +0200
-Subject: [PATCH 656/728] hyper_dmabuf/virtio: Process ioreq according to
+Subject: [PATCH 656/743] hyper_dmabuf/virtio: Process ioreq according to
  bitmap
 
 Vhm will record pending ioreqs of the vhm client into a bitmap,

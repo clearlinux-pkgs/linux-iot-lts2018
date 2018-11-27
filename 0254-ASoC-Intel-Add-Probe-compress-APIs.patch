@@ -1,7 +1,7 @@
-From 932f06370e3ccbcffac8f7c155059f5cc6ae57b0 Mon Sep 17 00:00:00 2001
+From c851f7b4f9e7532aafa0edcb177d5b69ddd22ccd Mon Sep 17 00:00:00 2001
 From: Divya Prakash <divya1.prakash@intel.com>
 Date: Wed, 20 Apr 2016 10:08:03 +0530
-Subject: [PATCH 254/728] ASoC: Intel: Add Probe compress APIs
+Subject: [PATCH 254/743] ASoC: Intel: Add Probe compress APIs
 
 Using the compress framework, introduce probe
 compress dai APIs to open, set parameters, start,

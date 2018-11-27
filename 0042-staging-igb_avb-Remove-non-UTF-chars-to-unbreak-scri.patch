@@ -1,7 +1,7 @@
-From b9674b99b2b1c690f12b1b2a026d3bb9212f8753 Mon Sep 17 00:00:00 2001
+From 491ab9ceb37c68a74eb5319014b9e6dc562ec139 Mon Sep 17 00:00:00 2001
 From: "Vyas, Tarun" <tarun.vyas@intel.com>
 Date: Thu, 4 Oct 2018 16:53:20 +0000
-Subject: [PATCH 042/728] staging: igb_avb: Remove non-UTF chars to unbreak
+Subject: [PATCH 042/743] staging: igb_avb: Remove non-UTF chars to unbreak
  scripts
 
 Signed-off-by: Tarun Vyas <tarun.vyas@intel.com>

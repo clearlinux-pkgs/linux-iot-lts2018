@@ -1,7 +1,7 @@
-From dc67a79cd9e7399b88c9dfb20fdc2330abd17c90 Mon Sep 17 00:00:00 2001
+From a81295897adb8a3628266fa264978596000d457b Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:57 +0800
-Subject: [PATCH 502/728] Shared_buf: add shared buffer
+Subject: [PATCH 502/743] Shared_buf: add shared buffer
 
 Added a ring buffer shared between ACRN hypervisor and service OS.
 

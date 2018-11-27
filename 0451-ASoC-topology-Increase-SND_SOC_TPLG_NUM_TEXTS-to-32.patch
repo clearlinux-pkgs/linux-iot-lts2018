@@ -1,7 +1,7 @@
-From 55e820877a111f531f3020e6cbf038cec2924fcb Mon Sep 17 00:00:00 2001
+From 202ffeb20cc17e2a0375ffbbac7ff00a2bea6bfb Mon Sep 17 00:00:00 2001
 From: Puneeth Prabhu <puneethx.prabhu@intel.com>
 Date: Tue, 15 May 2018 12:01:07 +0530
-Subject: [PATCH 451/728] ASoC: topology: Increase SND_SOC_TPLG_NUM_TEXTS to 32
+Subject: [PATCH 451/743] ASoC: topology: Increase SND_SOC_TPLG_NUM_TEXTS to 32
 
 ITT supports maximum of 32 path configs for a path. But,
 kernel supports upto 16 path configs.

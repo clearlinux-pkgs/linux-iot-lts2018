@@ -1,7 +1,7 @@
-From 4ae2f6dca19e3db362f813d8b81c10a978b1a4d3 Mon Sep 17 00:00:00 2001
+From a2c2edea746a720ebecb3ea110ab39dc81f7d67c Mon Sep 17 00:00:00 2001
 From: Yin Fengwei <fengwei.yin@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 544/728] vhm: Rename the restart_vm to reset_vm
+Subject: [PATCH 544/743] vhm: Rename the restart_vm to reset_vm
 
 Signed-off-by: Yin Fengwei <fengwei.yin@intel.com>
 Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>

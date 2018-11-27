@@ -1,7 +1,7 @@
-From 75e0e5043a9418437cfb2d79d4af0c976e3418e1 Mon Sep 17 00:00:00 2001
+From e76d672753fef2239c0c2011b7ac7ea9aacbad35 Mon Sep 17 00:00:00 2001
 From: Jian Jun Chen <jian.jun.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:03 +0800
-Subject: [PATCH 561/728] VBS-K: add reset support for vbs_rng
+Subject: [PATCH 561/743] VBS-K: add reset support for vbs_rng
 
 Add reset support for vbs_rng, it acts as an example about how to
 support D3.

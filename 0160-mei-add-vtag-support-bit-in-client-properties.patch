@@ -1,7 +1,7 @@
-From adde97647a6f8470bd76bd8bce03f4e2aba0a28d Mon Sep 17 00:00:00 2001
+From 1d5bd022ad8ba73acb60e7102f52773223bd3f54 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Wed, 9 May 2018 09:18:17 +0300
-Subject: [PATCH 160/728] mei: add vtag support bit in client properties
+Subject: [PATCH 160/743] mei: add vtag support bit in client properties
 
 Change-Id: I8b1c80bf0d8a5f3fea4ec1e8e604f6cc8d16a7b8
 Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>

@@ -1,7 +1,7 @@
-From 882574057a4f44160b45600f155bf32f1e7ab51f Mon Sep 17 00:00:00 2001
+From 6bb9184d7e038f5a4ce63b5c498a9dcdab97bd66 Mon Sep 17 00:00:00 2001
 From: Ramesh Babu <ramesh.babu@intel.com>
 Date: Fri, 9 Oct 2015 01:31:44 +0530
-Subject: [PATCH 330/728] ASoC: Intel: Skylake: Increase the SSP count in
+Subject: [PATCH 330/743] ASoC: Intel: Skylake: Increase the SSP count in
  debugFS
 
 Some of Broxton SKUs has 6 SSP ports, hence

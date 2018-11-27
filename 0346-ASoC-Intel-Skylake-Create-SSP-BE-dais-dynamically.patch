@@ -1,7 +1,7 @@
-From 3a52a5e780537fe4aa3e709a5e32a4288193972f Mon Sep 17 00:00:00 2001
+From ad3cd1c9a6d69e85360cc496a3ef63444feaae19 Mon Sep 17 00:00:00 2001
 From: "Diwakar, Praveen" <praveen.diwakar@intel.com>
 Date: Tue, 6 Jun 2017 21:04:21 +0530
-Subject: [PATCH 346/728] ASoC: Intel: Skylake: Create SSP BE dais dynamically
+Subject: [PATCH 346/743] ASoC: Intel: Skylake: Create SSP BE dais dynamically
 
 This patch creates BE SSP dai dynamically, by getting SSP
 link information from NHLT.

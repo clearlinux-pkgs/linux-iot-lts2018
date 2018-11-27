@@ -1,7 +1,7 @@
-From fbf843b8076a8f11e2d3fe2b357df1c3c6517bd7 Mon Sep 17 00:00:00 2001
+From 1db652a61f3aec2468c2604f3a07b35b52c14ee7 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Fri, 12 Oct 2018 19:39:37 +0800
-Subject: [PATCH 699/728] drm: Add CP System Renewability Msg Property
+Subject: [PATCH 699/743] drm: Add CP System Renewability Msg Property
 
 This patch adds a drm blob property to the selected connector.
 This property will be used to pass the SRM Blob ID from userspace

@@ -1,7 +1,7 @@
-From fabfd0c02645320af0fe2a90dce7a32e39a66e9c Mon Sep 17 00:00:00 2001
+From 0a65e3f3cb333f2df052be5cb633229cbf0fac9a Mon Sep 17 00:00:00 2001
 From: Vincent Cao <vincent.t.cao@intel.com>
 Date: Tue, 19 Jun 2018 16:49:01 -0700
-Subject: [PATCH 084/728] TEE/OPTEE: Adds a kernel internal TEE client
+Subject: [PATCH 084/743] TEE/OPTEE: Adds a kernel internal TEE client
  interface
 
 Enable TEE core additional kernel interface client interface to be

@@ -1,7 +1,7 @@
-From 52c52d3f9647760d3de3ae347466cd1b3c40c7b2 Mon Sep 17 00:00:00 2001
+From bc230cc4db9ec32489319c40b8d9f8b518257e68 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Tue, 6 Mar 2018 10:58:06 +0200
-Subject: [PATCH 130/728] tpm: move tpm 1.x selftest code from tpm-interface.c
+Subject: [PATCH 130/743] tpm: move tpm 1.x selftest code from tpm-interface.c
  tpm1-cmd.c
 
 Move the tpm1 selftest code functions to tpm1-cmd.c

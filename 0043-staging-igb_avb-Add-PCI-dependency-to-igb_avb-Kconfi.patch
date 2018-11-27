@@ -1,7 +1,7 @@
-From 1cd5d00709627d2b2df48ebc2911d9879b2c9f88 Mon Sep 17 00:00:00 2001
+From ac0a6f0ef1792946161c04be5ba1c3f87918b773 Mon Sep 17 00:00:00 2001
 From: "Vyas, Tarun" <tarun.vyas@intel.com>
 Date: Mon, 17 Sep 2018 01:16:08 +0000
-Subject: [PATCH 043/728] staging: igb_avb: Add PCI dependency to igb_avb
+Subject: [PATCH 043/743] staging: igb_avb: Add PCI dependency to igb_avb
  Kconfig
 
 Not depending on PCI breaks igb_avb build when building with PCI=n.

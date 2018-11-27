@@ -1,7 +1,7 @@
-From 9ad1d5ba64eef6e94c03f87667e32cb6b8d27fa2 Mon Sep 17 00:00:00 2001
+From da4ad309eace994135a2f5019f6c6f6600e650bc Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:52 +0300
-Subject: [PATCH 709/728] stm class: Clarify configfs root type/operations
+Subject: [PATCH 709/743] stm class: Clarify configfs root type/operations
  names
 
 The current naming of stp-policy root type and group ops is confusing,

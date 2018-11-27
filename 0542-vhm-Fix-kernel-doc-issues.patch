@@ -1,7 +1,7 @@
-From db99d5ea861e5b23c5647f61d1fd7e5ea1c3d50d Mon Sep 17 00:00:00 2001
+From 32a7227eb4da892e1bcca697a2444fe63af5c41d Mon Sep 17 00:00:00 2001
 From: Xinyun Liu <xinyun.liu@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 542/728] vhm: Fix kernel-doc issues
+Subject: [PATCH 542/743] vhm: Fix kernel-doc issues
 
 Some comments are not in kernel-doc format so got error like:
 

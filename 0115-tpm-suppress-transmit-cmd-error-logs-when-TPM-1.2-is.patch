@@ -1,7 +1,7 @@
-From ffeca0c22461d94fff30743f8c2bc12c80349558 Mon Sep 17 00:00:00 2001
+From 86c9905aa65ea027a3ba09e8150019cc4bafb9e6 Mon Sep 17 00:00:00 2001
 From: Javier Martinez Canillas <javierm@redhat.com>
 Date: Thu, 30 Aug 2018 16:40:05 +0200
-Subject: [PATCH 115/728] tpm: suppress transmit cmd error logs when TPM 1.2 is
+Subject: [PATCH 115/743] tpm: suppress transmit cmd error logs when TPM 1.2 is
  disabled/deactivated
 
 For TPM 1.2 chips the system setup utility allows to set the TPM device in

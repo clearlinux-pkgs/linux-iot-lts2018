@@ -1,7 +1,7 @@
-From 7fcc798b9ace7988e4b10a3fec21d15caa4d5ec3 Mon Sep 17 00:00:00 2001
+From 8ba623315eb4f14bd66e195441e9862bb0632a7a Mon Sep 17 00:00:00 2001
 From: "Pawse, GuruprasadX" <guruprasadx.pawse@intel.com>
 Date: Fri, 10 Feb 2017 20:22:42 +0530
-Subject: [PATCH 296/728] ASoC: Intel: Skylake: Add platform DAI for deepbuffer
+Subject: [PATCH 296/743] ASoC: Intel: Skylake: Add platform DAI for deepbuffer
  capture
 
 This patch adds platform DAI for deepbuffer capture

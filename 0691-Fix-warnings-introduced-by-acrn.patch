@@ -1,7 +1,7 @@
-From 3ac8f63f0545bbe1c418180aafbc1c4ca24d1fb5 Mon Sep 17 00:00:00 2001
+From 29134306746df2e5a591475abff7241c859a2570 Mon Sep 17 00:00:00 2001
 From: Fei Yang <fei.yang@intel.com>
 Date: Mon, 29 Oct 2018 11:45:11 -0700
-Subject: [PATCH 691/728] Fix warnings introduced by acrn
+Subject: [PATCH 691/743] Fix warnings introduced by acrn
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

@@ -1,7 +1,7 @@
-From 17c5aee7223ed9be942ae83ee1195cfd836d5273 Mon Sep 17 00:00:00 2001
+From 7b32f5f9f676878be3cdf56d508195eb53e76c8b Mon Sep 17 00:00:00 2001
 From: "Lewandowski, Gustaw" <gustaw.lewandowski@intel.com>
 Date: Wed, 11 Jul 2018 13:52:39 +0200
-Subject: [PATCH 454/728] ASoC: Intel: Fix race condition in IPC rx list
+Subject: [PATCH 454/743] ASoC: Intel: Fix race condition in IPC rx list
 
 Since there are multiple IPCs being sent in a short span of time, there
 is a possibility of more than one message being on the Rx list after

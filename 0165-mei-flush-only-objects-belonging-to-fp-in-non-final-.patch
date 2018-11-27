@@ -1,7 +1,7 @@
-From 87be17e6d4449554223c3ec3cbc17e91e40bd437 Mon Sep 17 00:00:00 2001
+From 70e5252bbf43f74b9214e4dbfa0e83c3079418a9 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Sun, 21 Oct 2018 17:09:17 +0300
-Subject: [PATCH 165/728] mei: flush only objects belonging to fp in non-final
+Subject: [PATCH 165/743] mei: flush only objects belonging to fp in non-final
  flush
 
 Change-Id: Ibbec077c1aa8fd114491fa4e63f2fa2f4751994e

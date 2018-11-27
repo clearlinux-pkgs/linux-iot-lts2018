@@ -1,7 +1,7 @@
-From 7d6e459ddb361a330264daf72c1b443d506afa80 Mon Sep 17 00:00:00 2001
+From 709d8c4c69a0e3d503908bc7b51e2512f3405506 Mon Sep 17 00:00:00 2001
 From: Junjie Mao <junjie.mao@intel.com>
 Date: Fri, 31 Aug 2018 10:59:03 +0800
-Subject: [PATCH 556/728] vhm: adapt to the new state transition of VHM
+Subject: [PATCH 556/743] vhm: adapt to the new state transition of VHM
  requests
 
 This is the counter-part of VHM request state transition update.

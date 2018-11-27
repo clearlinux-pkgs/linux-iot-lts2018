@@ -1,7 +1,7 @@
-From aea689ef1f662323dbb327e0e22b58cf3bbd2839 Mon Sep 17 00:00:00 2001
+From d79a5ce91ef35f366d265c27800b783802740e7b Mon Sep 17 00:00:00 2001
 From: "Duan, YayongX" <yayongx.duan@intel.com>
 Date: Wed, 27 Dec 2017 12:26:06 +0800
-Subject: [PATCH 707/728] Debug: Add register dump
+Subject: [PATCH 707/743] Debug: Add register dump
 
 Store CPU registers during cpu stop in order to get them with ramdump.
 

@@ -1,7 +1,7 @@
-From cedfb0ae5f3a2525d3507c46b96bd85c43268b71 Mon Sep 17 00:00:00 2001
+From d5fb24d70c222562ed8c6c5c6dbb005863e61dc5 Mon Sep 17 00:00:00 2001
 From: Wei Liu <weix.w.liu@intel.com>
 Date: Thu, 20 Sep 2018 10:16:56 +0800
-Subject: [PATCH 574/728] vhm: enable -Werror while compiling
+Subject: [PATCH 574/743] vhm: enable -Werror while compiling
  vhm/vbs/hyper-dmabuf
 
 Sometimes warnings are caused by the potential errors,

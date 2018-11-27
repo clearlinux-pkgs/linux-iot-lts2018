@@ -1,7 +1,7 @@
-From cd7e6d1e01cf015cd76abfe7ee756ecf644e3e24 Mon Sep 17 00:00:00 2001
+From e60af325019529156cefe947627dc8ee74de2017 Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Mon, 27 Aug 2018 09:34:15 +0200
-Subject: [PATCH 653/728] hyper_dmabuf: fix map failure issue when assign 4G
+Subject: [PATCH 653/743] hyper_dmabuf: fix map failure issue when assign 4G
  memory to UOS (v2)
 
 When assign 4G memory to UOS, 32bit GPA ref_handle will overflow, instead

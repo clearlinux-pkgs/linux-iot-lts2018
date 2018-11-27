@@ -1,7 +1,7 @@
-From f1c5ed82fc8a54123046b46583efd5b3b8e22eec Mon Sep 17 00:00:00 2001
+From 8a8d47ed7f8bfa84445bbdc5701ee715023cae91 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <cschaufler@localhost.localdomain>
 Date: Mon, 27 Aug 2018 13:49:28 -0700
-Subject: [PATCH 088/728] procfs: add smack subdir to attrs
+Subject: [PATCH 088/743] procfs: add smack subdir to attrs
 
 Back in 2007 I made what turned out to be a rather serious
 mistake in the implementation of the Smack security module.

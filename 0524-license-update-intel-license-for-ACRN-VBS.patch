@@ -1,7 +1,7 @@
-From 2a60bc03398f0c0df8db6a90962767d66db65ba8 Mon Sep 17 00:00:00 2001
+From dd455f18c851bd0567e675b62f22615cddf98a5f Mon Sep 17 00:00:00 2001
 From: Hao Li <hao.l.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:59 +0800
-Subject: [PATCH 524/728] license: update intel license for ACRN VBS
+Subject: [PATCH 524/743] license: update intel license for ACRN VBS
 
 Change-Id: I9afb8d0b45075051e59307b41f6754ebabfe6808
 Tracked-On: 219330

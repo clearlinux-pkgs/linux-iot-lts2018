@@ -1,7 +1,7 @@
-From 69bb3cb17334e5eebe1e6a470c33704e1e2a5017 Mon Sep 17 00:00:00 2001
+From 4bdea6b6445a17cb1bfff5b897d78e5eb8daf84a Mon Sep 17 00:00:00 2001
 From: Zhao Yakui <yakui.zhao@intel.com>
 Date: Fri, 14 Sep 2018 16:10:16 +0800
-Subject: [PATCH 584/728] Kernel/VHM: Rename acpi_generic_address in
+Subject: [PATCH 584/743] Kernel/VHM: Rename acpi_generic_address in
  acrn_common.h to avoid redefinition
 
 Currently the acpi_generic_address is defined in acrn_common.h. And it is also

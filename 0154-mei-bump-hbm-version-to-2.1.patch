@@ -1,7 +1,7 @@
-From 0346962eb419a409fb10122735c2ac438e9cc739 Mon Sep 17 00:00:00 2001
+From d093ca060f933b4b2926f9054fdcb756614ccdc3 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Tue, 15 Nov 2016 11:47:04 +0200
-Subject: [PATCH 154/728] mei: bump hbm version to 2.1
+Subject: [PATCH 154/743] mei: bump hbm version to 2.1
 
 Bump HBM version to 2.1 to indicate DMA transfer support.
 

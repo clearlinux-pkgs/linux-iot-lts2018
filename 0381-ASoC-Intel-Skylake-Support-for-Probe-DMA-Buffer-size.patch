@@ -1,7 +1,7 @@
-From 0a31ad224782cdca0eb5782e695743a8d7ecef57 Mon Sep 17 00:00:00 2001
+From 78d81495ce7c5fa922e0a50642952d0fbaf5a5dd Mon Sep 17 00:00:00 2001
 From: Mousumi Jana <mousumix.jana@intel.com>
 Date: Wed, 30 Aug 2017 20:52:51 +0530
-Subject: [PATCH 381/728] ASoC: Intel: Skylake: Support for Probe DMA Buffer
+Subject: [PATCH 381/743] ASoC: Intel: Skylake: Support for Probe DMA Buffer
  size
 
 This patch removes hard coding of buffer size for Probe

@@ -1,7 +1,7 @@
-From aa7cf8496da61d9626d800074f4c77b07ed8593d Mon Sep 17 00:00:00 2001
+From ccb41c725af58341272ccd7f84e1d1deedbd4ec7 Mon Sep 17 00:00:00 2001
 From: Li Zhijian <lizhijian@cn.fujitsu.com>
 Date: Wed, 22 Aug 2018 16:12:20 +0000
-Subject: [PATCH 565/728] vhm: init client->kthread_exit true
+Subject: [PATCH 565/743] vhm: init client->kthread_exit true
 
 Previously, there is a deadlock at below case
 - acrn-dm create gvt instance successfully

@@ -1,7 +1,7 @@
-From 1720e5b0ee30709d5c7fb4d3e2af6aa520d97a83 Mon Sep 17 00:00:00 2001
+From e489bef87b5d6023e6c692c84db7e23f97defb9c Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Fri, 21 Sep 2018 16:19:23 +0300
-Subject: [PATCH 141/728] tpm: use u32 instead of int for PCR index
+Subject: [PATCH 141/743] tpm: use u32 instead of int for PCR index
 
 The TPM specs defines PCR index as a positive number, and there is
 no reason to use a signed number. It is also a possible security

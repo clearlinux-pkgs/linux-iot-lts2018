@@ -1,7 +1,7 @@
-From 333bd193abc6f4423e2b4354f4353fae08a048b6 Mon Sep 17 00:00:00 2001
+From dbc7410d6ce918f2353c23648e69fff3ec659be2 Mon Sep 17 00:00:00 2001
 From: xiao jin <jin.xiao@intel.com>
 Date: Thu, 12 Apr 2018 17:32:04 +0530
-Subject: [PATCH 435/728] ASoC: soc-pcm: Fix FE and BE race when accessing
+Subject: [PATCH 435/743] ASoC: soc-pcm: Fix FE and BE race when accessing
  substream->runtime
 
 After start of FE and BE, FE might close without triggering

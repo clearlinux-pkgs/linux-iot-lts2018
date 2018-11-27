@@ -1,7 +1,7 @@
-From 8ed0ee85fcacf04472e465778c336c30b0fb6ad8 Mon Sep 17 00:00:00 2001
+From cf382f2def9e2005ef6955bbf77d61fa938cec19 Mon Sep 17 00:00:00 2001
 From: Jon Moeller <jon.moeller@intel.com>
 Date: Tue, 13 Nov 2018 01:25:24 -0600
-Subject: [PATCH 725/728] platform/x86: add sep and socwatch drivers without
+Subject: [PATCH 725/743] platform/x86: add sep and socwatch drivers without
  socperf.
 
 SEP driver version is  5.0.0

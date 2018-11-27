@@ -1,7 +1,7 @@
-From a58c4d853f0a6c482c2b7a4e67c8a5e1d7539410 Mon Sep 17 00:00:00 2001
+From 5fd9001647a2c7ee5307873e43ee3450c5bcca66 Mon Sep 17 00:00:00 2001
 From: Pardha Saradhi K <pardha.saradhi.kesapragada@intel.com>
 Date: Thu, 30 Mar 2017 22:57:48 +0530
-Subject: [PATCH 449/728] ASoC: Intel: common: Provide an interface to send
+Subject: [PATCH 449/743] ASoC: Intel: common: Provide an interface to send
  IPCs directly
 
 This patch adds support for an IPC Tx function that can

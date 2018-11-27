@@ -1,7 +1,7 @@
-From 1bd7026b772265007e7db3170c71ac9ed77cedc1 Mon Sep 17 00:00:00 2001
+From 3b33cc4b8fbf50c04646f2798a85ccc11d9ee296 Mon Sep 17 00:00:00 2001
 From: "R, Dharageswari" <dharageswari.r@intel.com>
 Date: Mon, 25 Dec 2017 07:06:05 +0530
-Subject: [PATCH 415/728] ASoC: Intel: Skylake: Add an API to reset the usage
+Subject: [PATCH 415/743] ASoC: Intel: Skylake: Add an API to reset the usage
  count of the DSP cores
 
 Add an interface to reset the usage count of ADSP cores. This is needed in

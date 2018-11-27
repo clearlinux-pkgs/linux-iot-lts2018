@@ -1,7 +1,7 @@
-From 9341ac2bde7f82783cd96ebba2600a6fef628bac Mon Sep 17 00:00:00 2001
+From 977892dc63f5d07f5d91e199f11c768c44aaff8b Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Mon, 5 Mar 2018 21:48:35 +0200
-Subject: [PATCH 126/728] tpm: factor out tpm_get_timeouts()
+Subject: [PATCH 126/743] tpm: factor out tpm_get_timeouts()
 
 Factor out tpm_get_timeouts() into tpm2_get_timeouts()
 and tpm1_get_timeouts()

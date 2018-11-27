@@ -1,7 +1,7 @@
-From a23639f5d4960bcd2ec95efa38e038e85e614168 Mon Sep 17 00:00:00 2001
+From 2dee2637f721e01d7663966b4dca0ac391626b33 Mon Sep 17 00:00:00 2001
 From: Sameer Sharma <sameerx.sharma@intel.com>
 Date: Mon, 18 Jun 2018 19:54:54 +0530
-Subject: [PATCH 453/728] ASoC: Intel: Skylake: Enable use_tplg_pcm flag for
+Subject: [PATCH 453/743] ASoC: Intel: Skylake: Enable use_tplg_pcm flag for
  BXTP platform
 
 Enabling use_tplg_pcm flag to check whether FE dais will be

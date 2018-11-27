@@ -1,7 +1,7 @@
-From 2bc2e9ac348f88e9bdff2d03865348db184bfdb2 Mon Sep 17 00:00:00 2001
+From af0b9444c11efa03c99f566f66f3101a0e2900f7 Mon Sep 17 00:00:00 2001
 From: Pei Zhang <pei.zhang@intel.com>
 Date: Fri, 14 Sep 2018 16:10:19 +0800
-Subject: [PATCH 617/728] drm/i915/gvt: get ready of memory for pvmmio
+Subject: [PATCH 617/743] drm/i915/gvt: get ready of memory for pvmmio
 
 To enable pvmmio feature, we need to prepare to regions memory: the mmio
 memory whose size is 2M for Gen8/9, and the 4K shared page. GVT creates

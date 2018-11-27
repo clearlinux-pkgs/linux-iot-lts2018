@@ -1,7 +1,7 @@
-From 3c0075e8b34935e59975f813fb7689bb3800e052 Mon Sep 17 00:00:00 2001
+From 1fc6159c4d59ba8e474312d846bb282a171505a9 Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Wed, 23 Nov 2016 19:05:46 +0530
-Subject: [PATCH 288/728] ASoC: Intel: Boards: Add CNL RT274 I2S machine driver
+Subject: [PATCH 288/743] ASoC: Intel: Boards: Add CNL RT274 I2S machine driver
 
 Add the CNL I2S machine driver using Realtek ALC274 codec
 in I2S mode.

@@ -1,7 +1,7 @@
-From b4d29d6cd9234b117de51d4fccddea9524a8a63b Mon Sep 17 00:00:00 2001
+From d05b701b3aa4b8b2d237fdb1f88b71347b0d1f88 Mon Sep 17 00:00:00 2001
 From: Satyeshwar Singh <satyeshwar.singh@intel.com>
 Date: Fri, 5 Oct 2018 13:52:11 -0700
-Subject: [PATCH 668/728] drm/i915: Optimize watermark calculation for plane
+Subject: [PATCH 668/743] drm/i915: Optimize watermark calculation for plane
  restrictions
 
 The same code was being used in skl_build_plane_wm and

@@ -1,7 +1,7 @@
-From 2fbcb81954b3c5a2d17f101b878ca4a8936e19c8 Mon Sep 17 00:00:00 2001
+From 4a949b24b8c4aa8c72999d17e473093d419dc998 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Tue, 6 Mar 2018 10:17:24 +0200
-Subject: [PATCH 128/728] tpm: move tpm_getcap to tpm1-cmd.c
+Subject: [PATCH 128/743] tpm: move tpm_getcap to tpm1-cmd.c
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

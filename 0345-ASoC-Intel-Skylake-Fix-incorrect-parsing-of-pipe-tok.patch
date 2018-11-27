@@ -1,7 +1,7 @@
-From e578eb344616c6091e868085345aafa09a67a0e7 Mon Sep 17 00:00:00 2001
+From 7ad2c7d163b63837687efa982e20f3905004d5c2 Mon Sep 17 00:00:00 2001
 From: Shreyas NC <shreyas.nc@intel.com>
 Date: Tue, 30 May 2017 19:37:19 +0530
-Subject: [PATCH 345/728] ASoC: Intel: Skylake: Fix incorrect parsing of pipe
+Subject: [PATCH 345/743] ASoC: Intel: Skylake: Fix incorrect parsing of pipe
  tokens
 
 To avoid parsing of pipe related tokens multiple times for a case where

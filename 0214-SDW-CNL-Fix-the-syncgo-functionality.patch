@@ -1,7 +1,7 @@
-From 7fb8326a36481816572f3b0d241423755ec91c64 Mon Sep 17 00:00:00 2001
+From eb38da33baf3b747ef977dfa6b0bb56a4e0f0714 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Fri, 29 Apr 2016 16:39:23 +0530
-Subject: [PATCH 214/728] SDW:CNL: Fix the syncgo functionality.
+Subject: [PATCH 214/743] SDW:CNL: Fix the syncgo functionality.
 
 Sync go is used to synchronously send the commands on
 more than 1 master to support aggregation. Fix the

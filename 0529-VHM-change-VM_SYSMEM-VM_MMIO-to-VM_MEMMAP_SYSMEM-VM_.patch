@@ -1,7 +1,7 @@
-From b00727e3b2f3f4c6b6596857e89dc1b8129fe63e Mon Sep 17 00:00:00 2001
+From 942ae881f077073b30444f0df806cf4d1248b38e Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:00 +0800
-Subject: [PATCH 529/728] VHM: change VM_SYSMEM/VM_MMIO to
+Subject: [PATCH 529/743] VHM: change VM_SYSMEM/VM_MMIO to
  VM_MEMMAP_SYSMEM/VM_MEMMAP_MMIO
 
 Change-Id: I7dc07502530ae47c6f9a3bc6a29fc271a053e8da

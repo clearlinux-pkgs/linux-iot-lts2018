@@ -1,7 +1,7 @@
-From 3e33012973a11bf4f95faea56cd609969d011b56 Mon Sep 17 00:00:00 2001
+From 52fc92af74e71e9f769c43c60192ea2f765f35bf Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Tue, 2 Aug 2016 15:37:20 +0530
-Subject: [PATCH 190/728] REVERTME: ASoC: Intel: CNL: Load firmware in
+Subject: [PATCH 190/743] REVERTME: ASoC: Intel: CNL: Load firmware in
  dsp_init.
 
 This patch loads the DSP firmware as a part of dsp_init

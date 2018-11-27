@@ -1,7 +1,7 @@
-From 5953c1ca99762169f2e5898848fd297265395f95 Mon Sep 17 00:00:00 2001
+From 5080cfc442a02437b670c2489dcf1b2ac51f7848 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:58 +0300
-Subject: [PATCH 715/728] stm class: Add MIPI SyS-T protocol support
+Subject: [PATCH 715/743] stm class: Add MIPI SyS-T protocol support
 
 This adds support for MIPI SyS-T protocol as specified in an open
 standard [1]. In addition to marking message boundaries, it also

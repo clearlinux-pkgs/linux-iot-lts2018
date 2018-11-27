@@ -1,7 +1,7 @@
-From 4ecfc381cdcf32e2456e4cdcc15b8be327d72632 Mon Sep 17 00:00:00 2001
+From 89c42a98e22d99046024eb9fe760e115ba29fded Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:53 +0300
-Subject: [PATCH 710/728] stm class: Clean up stp_configfs_init
+Subject: [PATCH 710/743] stm class: Clean up stp_configfs_init
 
 Minor code shortening, no functional changes.
 

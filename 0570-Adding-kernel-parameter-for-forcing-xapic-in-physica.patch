@@ -1,7 +1,7 @@
-From ad159d895f1d2fd778ce77a3042eaf673a430cfe Mon Sep 17 00:00:00 2001
+From e122a737ab50175b20b424373de1d55051d54cf5 Mon Sep 17 00:00:00 2001
 From: Sainath Grandhi <sainath.grandhi@intel.com>
 Date: Thu, 13 Sep 2018 16:14:53 +0800
-Subject: [PATCH 570/728] Adding kernel parameter for forcing xapic in physical
+Subject: [PATCH 570/743] Adding kernel parameter for forcing xapic in physical
  mode
 
 This patch does the following

@@ -1,7 +1,7 @@
-From 670cf821e3d2a33291806f3a4edb1069d3f378a4 Mon Sep 17 00:00:00 2001
+From 54df45f2630c63370a0d713d5ce68da04a29b187 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey.schaufler@intel.com>
 Date: Thu, 6 Sep 2018 09:32:19 -0700
-Subject: [PATCH 087/728] Add the Intel specific README file
+Subject: [PATCH 087/743] Add the Intel specific README file
 
 Add the required Intel information.
 

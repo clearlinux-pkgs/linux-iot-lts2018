@@ -1,7 +1,7 @@
-From 6f07e35dfa335d6f4dcd44c17aa8cbff419458c0 Mon Sep 17 00:00:00 2001
+From ee56ca5f54a12ed5b241348ab650852e1219e417 Mon Sep 17 00:00:00 2001
 From: Zhao Yakui <yakui.zhao@intel.com>
 Date: Thu, 26 Jul 2018 15:17:00 +0800
-Subject: [PATCH 664/728] kernel/drm/i915: Check the plane_state->fb to avoid
+Subject: [PATCH 664/743] kernel/drm/i915: Check the plane_state->fb to avoid
  Null pointer
 
 After the boot option of "enable_initial_modeset=1" is added for gvt-g,

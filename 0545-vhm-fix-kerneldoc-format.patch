@@ -1,7 +1,7 @@
-From 8e5beaf2d95867c02a73b49b0724d43fb116124a Mon Sep 17 00:00:00 2001
+From 063311a0ca80a7c181226d87e114023d75a0e1de Mon Sep 17 00:00:00 2001
 From: Xinyun Liu <xinyun.liu@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 545/728] vhm: fix kerneldoc format
+Subject: [PATCH 545/743] vhm: fix kerneldoc format
 
 remove doxygen commands and add missing description
 

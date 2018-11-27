@@ -1,7 +1,7 @@
-From f65b4981db4e7dfd25978abe86e2f44e153117e0 Mon Sep 17 00:00:00 2001
+From 33b33fccb509f5242f2a1dbf5ec07269c7c97c22 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Mon, 15 Oct 2018 14:03:26 +0300
-Subject: [PATCH 120/728] tpm: tpm_try_transmit() refactor error flow.
+Subject: [PATCH 120/743] tpm: tpm_try_transmit() refactor error flow.
 
 First, rename out_no_locality to out_locality for bailing out on
 both tpm_cmd_ready() and tpm_request_locality() failure.

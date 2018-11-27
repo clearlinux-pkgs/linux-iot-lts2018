@@ -1,7 +1,7 @@
-From f9a75cd6f8bd39f03eb60e1637b3a42d42c76d0a Mon Sep 17 00:00:00 2001
+From b85dfbf040a221fb2905ac9f0303e5b9b35fe9ea Mon Sep 17 00:00:00 2001
 From: Zhi Jin <zhi.jin@intel.com>
 Date: Wed, 1 Aug 2018 14:58:50 +0800
-Subject: [PATCH 568/728] sos: vhm: add HC_SETUP_HV_NPK_LOG hypercall
+Subject: [PATCH 568/743] sos: vhm: add HC_SETUP_HV_NPK_LOG hypercall
 
 This hypercall is used to enable/disable/configure the hypervisor
 NPK log.

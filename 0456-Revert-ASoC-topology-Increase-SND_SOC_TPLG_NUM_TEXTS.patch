@@ -1,7 +1,7 @@
-From 4b6c4bf317faea0d6c688e2593e31a79c8e9a241 Mon Sep 17 00:00:00 2001
+From 583b3b75668ce4879d6a88403f979a6315a8f2d7 Mon Sep 17 00:00:00 2001
 From: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
 Date: Tue, 24 Jul 2018 16:30:03 +0200
-Subject: [PATCH 456/728] Revert "ASoC: topology: Increase
+Subject: [PATCH 456/743] Revert "ASoC: topology: Increase
  SND_SOC_TPLG_NUM_TEXTS to 32"
 
 This reverts commit 640a66de27627b1f18270497d8e16fec7c9afb58.

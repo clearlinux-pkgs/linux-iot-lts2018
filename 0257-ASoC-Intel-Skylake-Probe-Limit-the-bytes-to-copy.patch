@@ -1,7 +1,7 @@
-From f6771920e7e7016717d5f1d52800a6cf7e44b657 Mon Sep 17 00:00:00 2001
+From e75e66f64b1d90499fa7b5f5e71d21797bcd8707 Mon Sep 17 00:00:00 2001
 From: Jayachandran B <jayachandran.b@intel.com>
 Date: Tue, 14 Jun 2016 10:39:48 +0530
-Subject: [PATCH 257/728] ASoC: Intel: Skylake: Probe-Limit the bytes to copy
+Subject: [PATCH 257/743] ASoC: Intel: Skylake: Probe-Limit the bytes to copy
 
 If userspace happens to issue a copy with count > ring buffer size,
 limit the count to the allocated ring buffer size to avoid out of

@@ -1,7 +1,7 @@
-From 695bea9d4a2c197e51d0ae37f57d636b159a4b3e Mon Sep 17 00:00:00 2001
+From 18099aa578ef937e96e0fe911883f44c4243d526 Mon Sep 17 00:00:00 2001
 From: Yin Fengwei <fengwei.yin@intel.com>
 Date: Fri, 31 Aug 2018 10:59:00 +0800
-Subject: [PATCH 533/728] sos_kernel: export restart vm function to DM.
+Subject: [PATCH 533/743] sos_kernel: export restart vm function to DM.
 
 Two major changes:
  - Add ioctl interface to invoke vm restart between DM and vhm

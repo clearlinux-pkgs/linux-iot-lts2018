@@ -1,7 +1,7 @@
-From 2d64d5864220a05259f15d07840317d318ca49f9 Mon Sep 17 00:00:00 2001
+From b254c16fed01ce31b5c858d8dc9b5db17822d1ae Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Sat, 23 Apr 2016 18:41:07 +0530
-Subject: [PATCH 205/728] ASoC:Codecs: Add support for SV FPGA SoundWire PDM
+Subject: [PATCH 205/743] ASoC:Codecs: Add support for SV FPGA SoundWire PDM
  Codec.
 
 Change-Id: I4f48659c9be3238b78ee911449557142a694bf0b

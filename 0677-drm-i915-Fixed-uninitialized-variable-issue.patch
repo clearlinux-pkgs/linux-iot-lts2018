@@ -1,7 +1,7 @@
-From 953091034866af832e7ad38775bb6ab7e2594179 Mon Sep 17 00:00:00 2001
+From d6d14b02673a55a1c5f8e52863b05ffac18e226c Mon Sep 17 00:00:00 2001
 From: Satyeshwar Singh <satyeshwar.singh@intel.com>
 Date: Sun, 14 Oct 2018 16:40:07 -0700
-Subject: [PATCH 677/728] drm/i915: Fixed uninitialized variable issue
+Subject: [PATCH 677/743] drm/i915: Fixed uninitialized variable issue
 
 There could be a circumstance in which ret may not be initialized
 and checking for its value may yield unexpected results.

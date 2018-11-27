@@ -1,7 +1,7 @@
-From 20c013b66c5c270a8157661dd47f136ca6d6aae4 Mon Sep 17 00:00:00 2001
+From 52fa113f2cbf58a758e79cc2e8f16917bca26d6e Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Sun, 2 Jul 2017 11:30:20 +0530
-Subject: [PATCH 280/728] ASoC: Intel: CNL: Update dsp ops API to take
+Subject: [PATCH 280/743] ASoC: Intel: CNL: Update dsp ops API to take
  direction as input parameter
 
 This patch removes hardcoding of audio stream direction inside dsp ops.
