@@ -27,7 +27,8 @@ Source3:        cmdline-iot-lts2018
 Source4:        cmdline-iot-lts2018-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
-# quilt:  4.19/lts/base-v4.19-181115T003542Z
+# quilt.branch: 4.19/base
+# quilt:  lts-v4.19-base-181127T002205Z
 # config: mainline-tracking-v4.19-181114T015139Z
 
 %define ktarget0 iot-lts2018
@@ -772,7 +773,22 @@ Patch0724: 0724-lib-Fix-ia64-bootloader-linkage.patch
 Patch0725: 0725-platform-x86-add-sep-and-socwatch-drivers-without-so.patch
 Patch0726: 0726-Fix-for-socwatch-build-error-that-occurs-if-CONFIG_T.patch
 Patch0727: 0727-SEP-some-cleanup.patch
-Patch0728: 0728-test-configs-use-for-clean-and-android-bare-metal-BA.patch
+Patch0728: 0728-MUST_REBASE-Enable-plane-decryption-bit.patch
+Patch0729: 0729-Revert-ASoC-Intel-Skylake-Avoid-sending-IPCs-during-.patch
+Patch0730: 0730-Revert-ASoC-Intel-Skylake-Implement-recovery-for-cAV.patch
+Patch0731: 0731-ASoC-Intel-Restore-static-FE-declaration-for-bxt_tdf.patch
+Patch0732: 0732-Revert-ASoC-Intel-SKL-Implement-the-timer-to-trigger.patch
+Patch0733: 0733-Revert-ASoC-tdf8532-add-crit-sections.patch
+Patch0734: 0734-media-intel-ipu4-VIRT-Fix-video-buffer-double-free-i.patch
+Patch0735: 0735-ipu-virtio-Null-ptr-check-of-intel_ipu4_virtio_msg_p.patch
+Patch0736: 0736-drm-i915-gvt-fix-array-index-mismatch-issue.patch
+Patch0737: 0737-drm-i915-gvt-add-plane-rotation-support-for-90-180-a.patch
+Patch0738: 0738-ipu-Fix-double-free-and-firmware-loading-issues.patch
+Patch0739: 0739-drm-i915-Add-missing-decryption-bit-implementation.patch
+Patch0740: 0740-igb_avb-remove-the-unnecessary-exclusive-of-E1000e.patch
+Patch0741: 0741-ASoC-Intel-Skylake-refactor-memory-management-in-skl.patch
+Patch0742: 0742-platform-x86-Fix-SEP-driver-license-header-SoCWatch-.patch
+Patch0743: 0743-test-configs-use-for-clean-and-android-bare-metal-BA.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1530,6 +1546,21 @@ Linux kernel extra files
 %patch0726 -p1
 %patch0727 -p1
 %patch0728 -p1
+%patch0729 -p1
+%patch0730 -p1
+%patch0731 -p1
+%patch0732 -p1
+%patch0733 -p1
+%patch0734 -p1
+%patch0735 -p1
+%patch0736 -p1
+%patch0737 -p1
+%patch0738 -p1
+%patch0739 -p1
+%patch0740 -p1
+%patch0741 -p1
+%patch0742 -p1
+%patch0743 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
