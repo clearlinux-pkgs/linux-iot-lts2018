@@ -1,7 +1,7 @@
-From fb878d23f63fdf9b035ef0dad1df36c2635fcfef Mon Sep 17 00:00:00 2001
+From 157ea07d5141c76e6f422dfdbcbc6745a2879123 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:12 +0200
-Subject: [PATCH 007/743] x86/mm/cpa: Add large page preservation statistics
+Subject: [PATCH 07/12] x86/mm/cpa: Add large page preservation statistics
 
 The large page preservation mechanism is just magic and provides no
 information at all. Add optional statistic output in debugfs so the magic can
@@ -200,5 +200,5 @@ index 1f2519055b30..cdf52eb86f3a 100644
  					      CPA_PROTECT);
  
 -- 
-2.19.2
+2.19.1
 

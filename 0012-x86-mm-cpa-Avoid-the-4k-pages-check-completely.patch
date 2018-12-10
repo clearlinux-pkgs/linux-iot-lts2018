@@ -1,7 +1,7 @@
-From c8be6832312b94bf0f92d860a94756a4c80c94d0 Mon Sep 17 00:00:00 2001
+From bb1e569b89ee3b9f5128d5eb6ac15e5a41b084cd Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:17 +0200
-Subject: [PATCH 012/743] x86/mm/cpa: Avoid the 4k pages check completely
+Subject: [PATCH 12/12] x86/mm/cpa: Avoid the 4k pages check completely
 
 The extra loop which tries hard to preserve large pages in case of conflicts
 with static protection regions turns out to be not preserving anything, at
@@ -167,5 +167,5 @@ index bbc5eb5cbc9d..4e55ded01be5 100644
  	new_pte = pfn_pte(old_pfn, new_prot);
  	__set_pmd_pte(kpte, address, new_pte);
 -- 
-2.19.2
+2.19.1
 

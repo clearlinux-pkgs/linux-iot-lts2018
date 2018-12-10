@@ -1,7 +1,7 @@
-From 205050fd6f46af45ddcfd7077d664a9dee6306c3 Mon Sep 17 00:00:00 2001
+From 80c7ceed2143258dfc28a252627878bdf8bdb1f6 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Fri, 31 Aug 2018 17:23:41 -0700
-Subject: [PATCH 109/743] Netfilter: Add a selection for Smack
+Subject: [PATCH 26/97] Netfilter: Add a selection for Smack
 
 If you are running a single security module it's
 fine to tell the netfilter system that your security
@@ -614,5 +614,5 @@ index 701a1cc1bdcc..596aba2e4d6b 100644
  		ssp = smack_sock(sk);
  		skp = ssp->smk_out;
 -- 
-2.19.2
+2.19.1
 

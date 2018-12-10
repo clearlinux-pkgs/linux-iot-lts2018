@@ -1,7 +1,7 @@
-From d06000595ac7bd000dfe6e4658455160b156c07a Mon Sep 17 00:00:00 2001
+From 1fe693658971e4153eb46a768a1152d0b49a00f8 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Wed, 20 Jun 2018 14:07:16 -0700
-Subject: [PATCH 096/743] Smack: Abstract use of inode security blob
+Subject: [PATCH 13/97] Smack: Abstract use of inode security blob
 
 Don't use the inode->i_security pointer directly.
 Provide a helper function that provides the security blob pointer.
@@ -193,5 +193,5 @@ index d1430341798f..364699ad55b9 100644
  	if (isp->smk_flags & SMK_INODE_TRANSMUTE) {
  		rcu_read_lock();
 -- 
-2.19.2
+2.19.1
 
