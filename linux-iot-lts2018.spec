@@ -14,13 +14,13 @@
 #
 
 Name:           linux-iot-lts2018
-Version:        4.19.5
-Release:        29
+Version:        4.19.8
+Release:        30
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.5.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.8.tar.xz
 Source1:        config-iot-lts2018
 Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
@@ -846,7 +846,7 @@ Group:          kernel
 Linux kernel extra files
 
 %prep
-%setup -q -n linux-4.19.5
+%setup -q -n linux-4.19.8
 
 #patchXXXX PK Series
 %patch0001 -p1
