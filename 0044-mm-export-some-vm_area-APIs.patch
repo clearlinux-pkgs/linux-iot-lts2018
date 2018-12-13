@@ -1,7 +1,7 @@
-From efb021703d620506e4aac53ff68afb62c5ee4b45 Mon Sep 17 00:00:00 2001
+From 77a13901d07b01b23e5f1ea3efea6a07dd42c374 Mon Sep 17 00:00:00 2001
 From: Chang Ying <ying.chang@intel.com>
 Date: Thu, 25 Oct 2018 16:20:44 +0800
-Subject: [PATCH 01/25] mm: export some vm_area APIs
+Subject: [PATCH 044/774] mm: export some vm_area APIs
 
 These APIs are needed in DMA mapping API implementation
 as a module. Device specific IOMMUs with associated DMA
@@ -27,5 +27,5 @@ index a728fc492557..dc1d9254b832 100644
  /**
   *	remove_vm_area  -  find and remove a continuous kernel virtual area
 -- 
-2.19.1
+2.20.0
 

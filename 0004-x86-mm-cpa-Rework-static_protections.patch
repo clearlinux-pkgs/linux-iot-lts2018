@@ -1,7 +1,7 @@
-From fbfdbce31f6a045c88e67a4801a56792bb816538 Mon Sep 17 00:00:00 2001
+From dd01b41abaf84ee06441447582bae68f1bb069b1 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:09 +0200
-Subject: [PATCH 04/12] x86/mm/cpa: Rework static_protections()
+Subject: [PATCH 004/774] x86/mm/cpa: Rework static_protections()
 
 static_protections() is pretty unreadable. Split it up into separate checks
 for each protection area.
@@ -20,7 +20,7 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  1 file changed, 98 insertions(+), 64 deletions(-)
 
 diff --git a/arch/x86/mm/pageattr.c b/arch/x86/mm/pageattr.c
-index 36f5d711ddbe..9731aeeebe71 100644
+index ef7a230b6742..fca0e0e396e0 100644
 --- a/arch/x86/mm/pageattr.c
 +++ b/arch/x86/mm/pageattr.c
 @@ -286,84 +286,118 @@ static void cpa_flush_array(unsigned long *start, int numpages, int cache,
@@ -207,5 +207,5 @@ index 36f5d711ddbe..9731aeeebe71 100644
  
  /*
 -- 
-2.19.1
+2.20.0
 

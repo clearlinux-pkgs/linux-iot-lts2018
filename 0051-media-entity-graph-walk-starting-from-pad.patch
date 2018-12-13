@@ -1,7 +1,7 @@
-From 2c326609428d70a5e31c6f5d52cff237ebfcbf6b Mon Sep 17 00:00:00 2001
+From f8bef7a9a8dfc6b9683ebd551f40742c2aef2d35 Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:28 +0800
-Subject: [PATCH 08/25] media:entity: graph walk starting from pad
+Subject: [PATCH 051/774] media:entity: graph walk starting from pad
 
 This function initializes the graph traversal structure to walk
 the entities graph starting at the given entity and pad.
@@ -66,5 +66,5 @@ index 0faaf936302b..95c27c39e42f 100644
  
  	const struct media_entity_operations *ops;
 -- 
-2.19.1
+2.20.0
 
