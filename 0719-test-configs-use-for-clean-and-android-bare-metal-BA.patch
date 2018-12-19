@@ -1,8 +1,8 @@
-From 4892b0f1d5ab301836151b41bb77cd7bffe53421 Mon Sep 17 00:00:00 2001
+From f4c2a4b33556c24e3b761e9bcd8efe3c13584f28 Mon Sep 17 00:00:00 2001
 From: sys_oak <sys_oak@intel.com>
 Date: Fri, 9 Nov 2018 18:07:41 -0800
-Subject: [PATCH 719/774] test configs use for clean and android bare metal BAT
- testing for kernel version: v4.19
+Subject: [PATCH] test configs use for clean and android bare metal BAT testing
+ for kernel version: v4.19
 
 ---
  arch/x86/configs/android_test_defconfig | 6285 ++++++++++++++++++++++
@@ -12807,5 +12807,5 @@ index 000000000000..8874941c4240
 +# CONFIG_UNWINDER_FRAME_POINTER is not set
 +# CONFIG_UNWINDER_GUESS is not set
 -- 
-2.20.0
+2.19.1
 

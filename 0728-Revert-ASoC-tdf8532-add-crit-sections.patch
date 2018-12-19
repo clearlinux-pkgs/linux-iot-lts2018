@@ -1,7 +1,7 @@
-From 56ac8dac4f3171ba251fc966c2f26842f74519f8 Mon Sep 17 00:00:00 2001
+From b4f6ce113bcf87f97c584b659bcb36f7571e0ef7 Mon Sep 17 00:00:00 2001
 From: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
 Date: Tue, 30 Oct 2018 14:46:08 +0100
-Subject: [PATCH 728/774] Revert "ASoC: tdf8532: add crit sections"
+Subject: [PATCH 06/11] Revert "ASoC: tdf8532: add crit sections"
 
 Reverted patch introduces memory leak in tdf8532_resume and causes other
 problems with audio functionality.
@@ -206,5 +206,5 @@ index 0f3540707580..39353a04b3ba 100644
  
  #endif
 -- 
-2.20.0
+2.19.1
 

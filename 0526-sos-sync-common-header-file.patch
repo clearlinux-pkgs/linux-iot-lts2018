@@ -1,7 +1,7 @@
-From 3c792a39d184b20638899bb5eb5f8af58d8e8651 Mon Sep 17 00:00:00 2001
+From f72f5324bd149f1e8cfe141c6d3ceb1453760221 Mon Sep 17 00:00:00 2001
 From: Mingqiang Chi <mingqiang.chi@intel.com>
 Date: Fri, 31 Aug 2018 10:59:00 +0800
-Subject: [PATCH 526/774] sos: sync common header file
+Subject: [PATCH 055/214] sos: sync common header file
 
 sync common header file (acrn_common.h)
 
@@ -248,5 +248,5 @@ index d48fe80f6fab..40f3444b7e73 100644
 +
  #endif /* ACRN_COMMON_H */
 -- 
-2.20.0
+2.19.1
 

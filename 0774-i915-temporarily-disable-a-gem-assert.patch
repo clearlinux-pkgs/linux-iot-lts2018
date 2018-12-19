@@ -1,7 +1,7 @@
-From 097c6f4fb230a8ee2c973b586a66f4bbcce7f300 Mon Sep 17 00:00:00 2001
+From 75cae2814751d49c7c141368b5b91033afc096d8 Mon Sep 17 00:00:00 2001
 From: Alek Du <alek.du@intel.com>
 Date: Tue, 11 Dec 2018 02:01:23 +0000
-Subject: [PATCH 774/774] i915: temporarily disable a gem assert
+Subject: [PATCH 18/18] i915: temporarily disable a gem assert
 
 PnP team need CONFIG_DRM_I915_DEBUG_GEM on to get some preemptive data.
 But this will trigger an assert bug-on in slab shrink i915 callback.
@@ -20,7 +20,7 @@ Signed-off-by: Alek Du <alek.du@intel.com>
  1 file changed, 11 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index f72b5e832462..dd5190279215 100644
+index f72b5e8..dd51902 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
 @@ -4691,7 +4691,17 @@ int i915_gem_wait_for_idle(struct drm_i915_private *i915,
@@ -43,5 +43,5 @@ index f72b5e832462..dd5190279215 100644
  		struct intel_engine_cs *engine;
  		enum intel_engine_id id;
 -- 
-2.20.0
+2.7.4
 

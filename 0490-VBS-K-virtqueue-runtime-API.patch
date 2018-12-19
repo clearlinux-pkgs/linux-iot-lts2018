@@ -1,7 +1,7 @@
-From 968bee084d3d9538855f2b4920e03c53bfe75e0c Mon Sep 17 00:00:00 2001
+From 30923d8ad672b447bcee9581abdf1f3768638a7b Mon Sep 17 00:00:00 2001
 From: Hao Li <hao.l.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:56 +0800
-Subject: [PATCH 490/774] VBS-K: virtqueue runtime API.
+Subject: [PATCH 019/214] VBS-K: virtqueue runtime API.
 
 This patch added the virtqueue runtime API to the VBS-K framework:
  - int virtio_vq_getchain(struct virtio_vq_info *vq, uint16_t *pidx,
@@ -405,5 +405,5 @@ index 55ff810fa094..9ebde05e4663 100644
 +
  #endif
 -- 
-2.20.0
+2.19.1
 

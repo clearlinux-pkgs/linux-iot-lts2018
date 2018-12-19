@@ -1,7 +1,7 @@
-From 5528a3b62ff02bc2b84c43726f67558dfdd3913f Mon Sep 17 00:00:00 2001
+From cb2e039c7a2bea2e56364f740854996faf65c57e Mon Sep 17 00:00:00 2001
 From: Kaige Fu <kaige.fu@intel.com>
 Date: Wed, 14 Nov 2018 21:36:38 +0800
-Subject: [PATCH 764/774] HVLog: Fix typo and refine sbuf_hvlog_index
+Subject: [PATCH 08/18] HVLog: Fix typo and refine sbuf_hvlog_index
 
 This patch fixes typo of ACRN_CURRNET_HVLOG and replace prefix "ACRN_"
 with "SUBF_".
@@ -16,7 +16,7 @@ Reviewed-by: Yan, Like <like.yan@intel.com>
  1 file changed, 15 insertions(+), 15 deletions(-)
 
 diff --git a/drivers/acrn/acrn_hvlog.c b/drivers/acrn/acrn_hvlog.c
-index 6d27b79cb1a1..84e04ee32819 100644
+index 6d27b79..84e04ee 100644
 --- a/drivers/acrn/acrn_hvlog.c
 +++ b/drivers/acrn/acrn_hvlog.c
 @@ -74,9 +74,9 @@
@@ -122,5 +122,5 @@ index 6d27b79cb1a1..84e04ee32819 100644
  		foreach_cpu(pcpu_id, PCPU_NRS) {
  			sbuf_share_setup(pcpu_id, ACRN_HVLOG, 0);
 -- 
-2.20.0
+2.7.4
 

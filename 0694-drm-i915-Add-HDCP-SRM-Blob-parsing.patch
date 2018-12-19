@@ -1,7 +1,7 @@
-From c32d024bbdaf6481f95554b29537a4ecc3165fc0 Mon Sep 17 00:00:00 2001
+From f30047634cf3e4f677ea3f21877554a3db7ddada Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Wed, 20 Dec 2017 21:47:01 +0530
-Subject: [PATCH 694/774] drm/i915: Add HDCP SRM Blob parsing
+Subject: [PATCH 08/13] drm/i915: Add HDCP SRM Blob parsing
 
 This patch adds a drm blob property to selected connectors.
 And also adds capability to parse the new srm blob passed through
@@ -20,7 +20,7 @@ Signed-off-by: Ramalingam C <ramalingam.c@intel.com>
  3 files changed, 165 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 4ad778044026..afe0e539bc66 100644
+index f20ce3b3545a..d4b307b531ec 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -419,6 +419,11 @@ struct intel_connector {
@@ -235,5 +235,5 @@ index 98e63d870139..f17eb2910bdb 100644
 +
  #endif
 -- 
-2.20.0
+2.19.1
 

@@ -1,7 +1,7 @@
-From c47fb652fd16c946389f26584d44f41d682513b1 Mon Sep 17 00:00:00 2001
+From 67d79b7f3ee44af097c23dc4f0f5a95e7ca06ef5 Mon Sep 17 00:00:00 2001
 From: Pei Zhang <pei.zhang@intel.com>
 Date: Fri, 14 Sep 2018 16:10:19 +0800
-Subject: [PATCH 612/774] drm/i915: implement pvmmio in guest i915
+Subject: [PATCH 141/214] drm/i915: implement pvmmio in guest i915
 
 If pvmmio is enabled in i915 host driver, guest i915 will read most MMIO
 register directly, which won't be trapped to host GVT. A small range
@@ -40,7 +40,7 @@ index acc3be54b9f4..06b786199215 100644
  	mutex_init(&dev_priv->backlight_lock);
  	spin_lock_init(&dev_priv->uncore.lock);
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 02b447179a41..7ac61af5d039 100644
+index a5f8d05793ba..18650bc9c8e4 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -55,6 +55,7 @@
@@ -112,10 +112,10 @@ index d1a3e3e68512..c1089bdedd2e 100644
  	u64 magic;		/* VGT_MAGIC */
  	u16 version_major;
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 5b544cb38148..00b5e45cd44d 100644
+index 9e63cd47b60f..3c2cc2e19826 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
-@@ -10656,4 +10656,31 @@ enum skl_power_gate {
+@@ -10652,4 +10652,31 @@ enum skl_power_gate {
  						_ICL_DSC1_RC_BUF_THRESH_1_UDW_PB, \
  						_ICL_DSC1_RC_BUF_THRESH_1_UDW_PC)
  
@@ -148,10 +148,10 @@ index 5b544cb38148..00b5e45cd44d 100644
 +
  #endif /* _I915_REG_H_ */
 diff --git a/drivers/gpu/drm/i915/intel_lrc.c b/drivers/gpu/drm/i915/intel_lrc.c
-index e0499a416451..9f331aa633d1 100644
+index 5dde7253c963..b937f9f05e6a 100644
 --- a/drivers/gpu/drm/i915/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/intel_lrc.c
-@@ -463,6 +463,8 @@ static void execlists_submit_ports(struct intel_engine_cs *engine)
+@@ -451,6 +451,8 @@ static void execlists_submit_ports(struct intel_engine_cs *engine)
  	struct intel_engine_execlists *execlists = &engine->execlists;
  	struct execlist_port *port = execlists->port;
  	unsigned int n;
@@ -160,7 +160,7 @@ index e0499a416451..9f331aa633d1 100644
  
  	/*
  	 * We can skip acquiring intel_runtime_pm_get() here as it was taken
-@@ -505,10 +507,27 @@ static void execlists_submit_ports(struct intel_engine_cs *engine)
+@@ -493,10 +495,27 @@ static void execlists_submit_ports(struct intel_engine_cs *engine)
  			GEM_BUG_ON(!n);
  			desc = 0;
  		}
@@ -190,5 +190,5 @@ index e0499a416451..9f331aa633d1 100644
  	if (execlists->ctrl_reg)
  		writel(EL_CTRL_LOAD, execlists->ctrl_reg);
 -- 
-2.20.0
+2.19.1
 

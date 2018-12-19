@@ -1,7 +1,7 @@
-From 8197627bcfce052308b26d784d413de615757440 Mon Sep 17 00:00:00 2001
+From 9030d44a304f0f1850fc20d0b66f0fccc4cdb83c Mon Sep 17 00:00:00 2001
 From: Xinyun Liu <xinyun.liu@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 536/774] vhm: Fix kernel-doc issues
+Subject: [PATCH 065/214] vhm: Fix kernel-doc issues
 
 Some comments are not in kernel-doc format so got error like:
 
@@ -182,5 +182,5 @@ index f0a7e1cf7b05..14e9fe7a4d5f 100644
   * Return: host physical address, <0 on error
   */
 -- 
-2.20.0
+2.19.1
 

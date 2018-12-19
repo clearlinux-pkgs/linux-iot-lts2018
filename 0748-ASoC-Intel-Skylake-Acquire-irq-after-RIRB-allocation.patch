@@ -1,8 +1,7 @@
-From 3c3c15097a6c639e45d3d8854496756d46955006 Mon Sep 17 00:00:00 2001
+From 97a9cdf677c64c6f60ea1387128e81ac3c09eee1 Mon Sep 17 00:00:00 2001
 From: Kamil Kulesza <kamil.kulesza@intel.com>
 Date: Wed, 7 Nov 2018 14:01:13 +0100
-Subject: [PATCH 748/774] ASoC: Intel: Skylake Acquire irq after RIRB
- allocation
+Subject: [PATCH] ASoC: Intel: Skylake Acquire irq after RIRB allocation
 
 Cold reboot stress test found that the hda irq could access rirb ring
 buffer before its memory gets allocated which resulting in null
@@ -53,5 +52,5 @@ index df428fabc39b..7d1a82480711 100644
  	skl_init_pci(skl);
  
 -- 
-2.20.0
+2.19.1
 

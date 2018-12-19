@@ -1,7 +1,7 @@
-From 7dde517c613e7613babdfda74d1455a658440af0 Mon Sep 17 00:00:00 2001
+From d1457215111fcac6c8f4c0f1fde8145cc9ba0677 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Fri, 21 Sep 2018 16:19:23 +0300
-Subject: [PATCH 135/774] tpm: use u32 instead of int for PCR index
+Subject: [PATCH 58/97] tpm: use u32 instead of int for PCR index
 
 The TPM specs defines PCR index as a positive number, and there is
 no reason to use a signed number. It is also a possible security
@@ -204,10 +204,10 @@ index 4609b94142d4..b49a55cf775f 100644
  {
  	return -ENODEV;
 diff --git a/security/integrity/ima/ima_crypto.c b/security/integrity/ima/ima_crypto.c
-index d9e7728027c6..acf2c7df7145 100644
+index 7e7e7e7c250a..959d9edc113a 100644
 --- a/security/integrity/ima/ima_crypto.c
 +++ b/security/integrity/ima/ima_crypto.c
-@@ -643,7 +643,7 @@ int ima_calc_buffer_hash(const void *buf, loff_t len,
+@@ -629,7 +629,7 @@ int ima_calc_buffer_hash(const void *buf, loff_t len,
  	return calc_buffer_shash(buf, len, hash);
  }
  
@@ -216,7 +216,7 @@ index d9e7728027c6..acf2c7df7145 100644
  {
  	if (!ima_tpm_chip)
  		return;
-@@ -659,7 +659,8 @@ static int __init ima_calc_boot_aggregate_tfm(char *digest,
+@@ -645,7 +645,8 @@ static int __init ima_calc_boot_aggregate_tfm(char *digest,
  					      struct crypto_shash *tfm)
  {
  	u8 pcr_i[TPM_DIGEST_SIZE];
@@ -227,5 +227,5 @@ index d9e7728027c6..acf2c7df7145 100644
  
  	shash->tfm = tfm;
 -- 
-2.20.0
+2.19.1
 

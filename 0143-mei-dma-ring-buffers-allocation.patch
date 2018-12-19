@@ -1,7 +1,7 @@
-From d2af6334e2a5eca2c724955a9a5196f7122bedad Mon Sep 17 00:00:00 2001
+From 159edd197ca87324b8251f40a1ed6b5fefa18f59 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Thu, 20 Oct 2016 02:12:10 +0300
-Subject: [PATCH 143/774] mei: dma ring buffers allocation
+Subject: [PATCH 66/97] mei: dma ring buffers allocation
 
 Allocate DMA ring buffers from managed coherent memory.
 
@@ -17,7 +17,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  create mode 100644 drivers/misc/mei/dma-ring.c
 
 diff --git a/drivers/misc/mei/Makefile b/drivers/misc/mei/Makefile
-index f83e2fdc01d3..fe9d99daeb4d 100644
+index cd6825afa8e1..d9215fc4e499 100644
 --- a/drivers/misc/mei/Makefile
 +++ b/drivers/misc/mei/Makefile
 @@ -9,6 +9,7 @@ mei-objs += hbm.o
@@ -216,5 +216,5 @@ index 377397e1b5a5..a6796e3f712b 100644
   *  MEI interrupt functions prototype
   */
 -- 
-2.20.0
+2.19.1
 

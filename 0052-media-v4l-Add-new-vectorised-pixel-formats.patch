@@ -1,7 +1,7 @@
-From f080bdbbdb3c6e4e20990c043c9fbb947d066b49 Mon Sep 17 00:00:00 2001
+From 9804397cc9b7d9cd6b4b81b91751cfaec3c2b30f Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:32 +0800
-Subject: [PATCH 052/774] media: v4l: Add new vectorised pixel formats
+Subject: [PATCH 09/25] media: v4l: Add new vectorised pixel formats
 
 Signed-off-by: Chang Ying <ying.chang@intel.com>
 Signed-off-by: Meng Wei <wei.meng@intel.com>
@@ -10,10 +10,10 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 30 insertions(+)
 
 diff --git a/include/uapi/linux/videodev2.h b/include/uapi/linux/videodev2.h
-index fef1758ae2e4..6964ab3cdef9 100644
+index 1a70f2fad418..e37f299b519f 100644
 --- a/include/uapi/linux/videodev2.h
 +++ b/include/uapi/linux/videodev2.h
-@@ -555,6 +555,7 @@ struct v4l2_pix_format {
+@@ -544,6 +544,7 @@ struct v4l2_pix_format {
  #define V4L2_PIX_FMT_HI240   v4l2_fourcc('H', 'I', '2', '4') /*  8  8-bit color   */
  #define V4L2_PIX_FMT_HM12    v4l2_fourcc('H', 'M', '1', '2') /*  8  YUV 4:2:0 16x16 macroblocks */
  #define V4L2_PIX_FMT_M420    v4l2_fourcc('M', '4', '2', '0') /* 12  YUV 4:2:0 2 lines y, 1 line uv interleaved */
@@ -21,7 +21,7 @@ index fef1758ae2e4..6964ab3cdef9 100644
  
  /* two planes -- one Y, one Cr + Cb interleaved  */
  #define V4L2_PIX_FMT_NV12    v4l2_fourcc('N', 'V', '1', '2') /* 12  Y/CbCr 4:2:0  */
-@@ -621,6 +622,10 @@ struct v4l2_pix_format {
+@@ -610,6 +611,10 @@ struct v4l2_pix_format {
  #define V4L2_PIX_FMT_SGBRG12P v4l2_fourcc('p', 'G', 'C', 'C')
  #define V4L2_PIX_FMT_SGRBG12P v4l2_fourcc('p', 'g', 'C', 'C')
  #define V4L2_PIX_FMT_SRGGB12P v4l2_fourcc('p', 'R', 'C', 'C')
@@ -32,7 +32,7 @@ index fef1758ae2e4..6964ab3cdef9 100644
  	/* 14bit raw bayer packed, 7 bytes for every 4 pixels */
  #define V4L2_PIX_FMT_SBGGR14P v4l2_fourcc('p', 'B', 'E', 'E')
  #define V4L2_PIX_FMT_SGBRG14P v4l2_fourcc('p', 'G', 'E', 'E')
-@@ -631,6 +636,31 @@ struct v4l2_pix_format {
+@@ -620,6 +625,31 @@ struct v4l2_pix_format {
  #define V4L2_PIX_FMT_SGRBG16 v4l2_fourcc('G', 'R', '1', '6') /* 16  GRGR.. BGBG.. */
  #define V4L2_PIX_FMT_SRGGB16 v4l2_fourcc('R', 'G', '1', '6') /* 16  RGRG.. GBGB.. */
  
@@ -65,5 +65,5 @@ index fef1758ae2e4..6964ab3cdef9 100644
  #define V4L2_PIX_FMT_HSV24 v4l2_fourcc('H', 'S', 'V', '3')
  #define V4L2_PIX_FMT_HSV32 v4l2_fourcc('H', 'S', 'V', '4')
 -- 
-2.20.0
+2.19.1
 

@@ -1,7 +1,7 @@
-From 6a9a5b2572585e63754bec08a78816a69574772f Mon Sep 17 00:00:00 2001
+From 2001c0b76e8abd56ed0be6aca61aef275dc376e7 Mon Sep 17 00:00:00 2001
 From: Mitul Chokshi <mitul.chokshi@intel.com>
 Date: Fri, 14 Sep 2018 16:10:18 +0800
-Subject: [PATCH 602/774] drm/i915/gvt: Add vgt-id in context id
+Subject: [PATCH 131/214] drm/i915/gvt: Add vgt-id in context id
 
 Context id is reported to OABUFFER along with performance statistics
 counter. So when performance monitoring code gets the Context id, it
@@ -28,7 +28,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  2 files changed, 19 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index d6c25bea4382..5418ca7126a8 100644
+index 4aca5344863d..bfb655ec6996 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -1837,6 +1837,10 @@ struct drm_i915_private {
@@ -91,5 +91,5 @@ index b10770cfccd2..aeb8ec81ffea 100644
  	return 0;
  }
 -- 
-2.20.0
+2.19.1
 

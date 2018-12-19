@@ -1,7 +1,7 @@
-From c6974bc55c6a30d116565b3b1038b7b7a983ecb4 Mon Sep 17 00:00:00 2001
+From 5c648185edf077c4acdcfcde3607f0268d68a054 Mon Sep 17 00:00:00 2001
 From: Yael Samet <yael.samet@intel.com>
 Date: Mon, 14 Aug 2017 11:23:38 +0300
-Subject: [PATCH 166/774] mei: dal: add acp parser code
+Subject: [PATCH 89/97] mei: dal: add acp parser code
 
 The ACP (Admin Command Pack) file represents a Java trusted application
 (JTA) image to be downloaded to the DAL firmware.
@@ -781,5 +781,5 @@ index 000000000000..1de625de54f2
 +
 +#endif /* _ACP_PARSER_H */
 -- 
-2.20.0
+2.19.1
 

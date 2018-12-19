@@ -1,7 +1,7 @@
-From 4fe8b17400095a4d784a4bf012dc9da218653e9d Mon Sep 17 00:00:00 2001
+From 22feb7af281a06d427095adad99c2ff2dad87b4b Mon Sep 17 00:00:00 2001
 From: Divya Prakash <divya1.prakash@intel.com>
 Date: Wed, 20 Apr 2016 10:08:03 +0530
-Subject: [PATCH 248/774] ASoC: Intel: Add Probe compress APIs
+Subject: [PATCH 073/296] ASoC: Intel: Add Probe compress APIs
 
 Using the compress framework, introduce probe
 compress dai APIs to open, set parameters, start,
@@ -1130,7 +1130,7 @@ index eb030dfb88ca..0437e4cf1261 100644
  
  struct skl_ipc_init_instance_msg {
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 6bd91744ee1a..7aefd1cce3b3 100644
+index 35c0ec938a18..1d02c88da5e4 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -96,7 +96,7 @@ void skl_tplg_d0i3_put(struct skl *skl, enum d0i3_capability caps)
@@ -1530,5 +1530,5 @@ index 2d0efe8233a4..feb4ab5fc9b4 100644
  
  static irqreturn_t skl_interrupt(int irq, void *dev_id)
 -- 
-2.20.0
+2.19.1
 

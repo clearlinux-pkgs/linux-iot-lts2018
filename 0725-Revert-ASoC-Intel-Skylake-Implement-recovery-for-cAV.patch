@@ -1,7 +1,7 @@
-From 615b6426c7789b38fffa910367bf0af225d3bfe9 Mon Sep 17 00:00:00 2001
+From 0e046c6068668e95f9a620c2a4ffeb51b8975980 Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Fri, 12 Oct 2018 16:32:05 +0200
-Subject: [PATCH 725/774] Revert "ASoC: Intel: Skylake: Implement recovery for
+Subject: [PATCH 03/11] Revert "ASoC: Intel: Skylake: Implement recovery for
  cAVS platforms"
 
 Currently implemented recovery flow for Skylake and child platforms is
@@ -205,7 +205,7 @@ index dc793d503115..ef9bf4a4a1b7 100644
  unsigned int skl_dsp_get_enabled_cores(struct sst_dsp *ctx);
  void skl_dsp_init_core_state(struct sst_dsp *ctx);
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 9d57fc8a21c7..17efe6fce345 100644
+index 35dc1b071ff7..cd57e1a1753c 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -2511,7 +2511,6 @@ static void skl_tplg_fill_dma_id(struct skl_module_cfg *mcfg,
@@ -251,5 +251,5 @@ index 73b70cea74d7..938e694e676a 100644
  	 * Do not suspend if streams which are marked ignore suspend are
  	 * running, we need to save the state for these and continue
 -- 
-2.20.0
+2.19.1
 

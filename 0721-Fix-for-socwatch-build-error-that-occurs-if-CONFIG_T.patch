@@ -1,7 +1,7 @@
-From e6ddb36bcc7ecb670502115cbd962e6edcf0ad1f Mon Sep 17 00:00:00 2001
+From b7062cf3557e02e461525a34c758b3582c18ade8 Mon Sep 17 00:00:00 2001
 From: Jon Moeller <jon.moeller@intel.com>
 Date: Tue, 13 Nov 2018 13:31:51 -0600
-Subject: [PATCH 721/774] Fix for socwatch build error that occurs if
+Subject: [PATCH 2/3] Fix for socwatch build error that occurs if
  CONFIG_TRACEPOINTS is disabled.
 
 Change-Id: I6ce699ed113aecfbcac9bf4751618f15bcb66fac
@@ -59,5 +59,5 @@ index 0c414423de09..a20e0566cfca 100644
  }
  /*
 -- 
-2.20.0
+2.19.1
 

@@ -1,7 +1,7 @@
-From 1d039c9d1507d41460112bc609daa5d03dbb718f Mon Sep 17 00:00:00 2001
+From a9326fa994380e4d92ec9caa787f2d514e3db9fc Mon Sep 17 00:00:00 2001
 From: Vinod Koul <vinod.koul@intel.com>
 Date: Mon, 31 Aug 2015 14:05:10 +0530
-Subject: [PATCH 221/774] ASoC: Intel: Skylake: Add NHLT override control
+Subject: [PATCH 046/296] ASoC: Intel: Skylake: Add NHLT override control
 
 For debugging purposes we may want to not use the BIOS values and
 test our own values, so allow the override by adding a control
@@ -117,5 +117,5 @@ index 78aa8bdcb619..28c62dda07db 100644
  
  #define skl_to_bus(s)  (&(s)->hbus)
 -- 
-2.20.0
+2.19.1
 

@@ -1,8 +1,8 @@
-From c7b8c42364df5f71cc1cba850af6b9c41635ca4d Mon Sep 17 00:00:00 2001
+From caaa9a19db1c41d02c9ffffb541056aac9771652 Mon Sep 17 00:00:00 2001
 From: Ong Hock Yu <ong.hock.yu@intel.com>
 Date: Wed, 14 Nov 2018 00:11:14 +0000
-Subject: [PATCH 729/774] media: intel-ipu4: [VIRT] Fix video buffer double
- free issue.
+Subject: [PATCH 07/11] media: intel-ipu4: [VIRT] Fix video buffer double free
+ issue.
 
 The video buffer allocated at UOS are free at SOS.
 This caused a double free when UOS shutdown and
@@ -442,5 +442,5 @@ index ab06be71a4c4..a09af6a931a8 100644
  
  int process_stream_on(struct ipu4_virtio_req_info *req_info)
 -- 
-2.20.0
+2.19.1
 

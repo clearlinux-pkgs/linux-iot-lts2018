@@ -1,7 +1,7 @@
-From 36b522e966bac8840d2f08b4552fc59265b6295e Mon Sep 17 00:00:00 2001
+From bd04da48b3d328669e3973e14aa6ffcbaca533bd Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:53 +0300
-Subject: [PATCH 704/774] stm class: Clean up stp_configfs_init
+Subject: [PATCH 05/19] stm class: Clean up stp_configfs_init
 
 Minor code shortening, no functional changes.
 
@@ -32,5 +32,5 @@ index 530448bd5a34..a505f055f464 100644
  
  void __exit stp_configfs_exit(void)
 -- 
-2.20.0
+2.19.1
 

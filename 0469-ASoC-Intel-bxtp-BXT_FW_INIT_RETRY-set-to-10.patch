@@ -1,7 +1,7 @@
-From 4a22da4dd93ec6b120c7cf177b11f31ca19bc918 Mon Sep 17 00:00:00 2001
+From 45720a74851bb589cb4248736e51b911e2c66ec3 Mon Sep 17 00:00:00 2001
 From: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
 Date: Sat, 13 Oct 2018 13:49:20 +0200
-Subject: [PATCH 469/774] ASoC: Intel: bxtp: BXT_FW_INIT_RETRY set to 10
+Subject: [PATCH 294/296] ASoC: Intel: bxtp: BXT_FW_INIT_RETRY set to 10
 
 Change-Id: Ife347075f7708f7213451b7a21b19f6720630a12
 Signed-off-by: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
@@ -23,5 +23,5 @@ index cd7fbabef8ee..cde519de05dd 100644
  #define GET_SSP_BASE(N)	(N > 4 ? 0x2000 : 0x4000)
  
 -- 
-2.20.0
+2.19.1
 

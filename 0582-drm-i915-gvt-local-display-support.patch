@@ -1,7 +1,7 @@
-From 74886b21d875dec89e78f2354fff446c6707b0c2 Mon Sep 17 00:00:00 2001
+From 60ad6019da56dcd80b902ad74b9864552e4f6681 Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Tue, 19 Dec 2017 10:22:34 +0800
-Subject: [PATCH 582/774] drm/i915/gvt: local display support
+Subject: [PATCH 111/214] drm/i915/gvt: local display support
 
 Added local display dispaly support for GVT-g.
 
@@ -499,10 +499,10 @@ index 29877969310d..0b16775e292c 100644
  }
  
 diff --git a/drivers/gpu/drm/i915/intel_dp.c b/drivers/gpu/drm/i915/intel_dp.c
-index f92079e19de8..e2371607a413 100644
+index 1193202766a2..37c08c71fdf6 100644
 --- a/drivers/gpu/drm/i915/intel_dp.c
 +++ b/drivers/gpu/drm/i915/intel_dp.c
-@@ -509,7 +509,7 @@ uint32_t intel_dp_pack_aux(const uint8_t *src, int src_bytes)
+@@ -479,7 +479,7 @@ uint32_t intel_dp_pack_aux(const uint8_t *src, int src_bytes)
  	return v;
  }
  
@@ -524,7 +524,7 @@ index 8fc61e96754f..7c11b8d10b66 100644
  void intel_edp_drrs_enable(struct intel_dp *intel_dp,
  			   const struct intel_crtc_state *crtc_state);
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index c3a64d6a18df..fc6d8719d763 100644
+index 43ae9de12ba3..01d0f4d3653a 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -33,6 +33,10 @@
@@ -538,7 +538,7 @@ index c3a64d6a18df..fc6d8719d763 100644
  /**
   * DOC: RC6
   *
-@@ -5167,6 +5171,14 @@ skl_compute_ddb(struct drm_atomic_state *state)
+@@ -5128,6 +5132,14 @@ skl_compute_ddb(struct drm_atomic_state *state)
  
  	memcpy(ddb, &dev_priv->wm.skl_hw.ddb, sizeof(*ddb));
  
@@ -553,7 +553,7 @@ index c3a64d6a18df..fc6d8719d763 100644
  	for_each_new_intel_crtc_in_state(intel_state, crtc, cstate, i) {
  		ret = skl_allocate_pipe_ddb(cstate, ddb);
  		if (ret)
-@@ -5393,6 +5405,11 @@ static void skl_atomic_update_crtc_wm(struct intel_atomic_state *state,
+@@ -5354,6 +5366,11 @@ static void skl_atomic_update_crtc_wm(struct intel_atomic_state *state,
  	I915_WRITE(PIPE_WM_LINETIME(pipe), pipe_wm->linetime);
  
  	for_each_plane_id_on_crtc(crtc, plane_id) {
@@ -606,5 +606,5 @@ index f7026e887fa9..11b7afc0a0d3 100644
  
  	I915_WRITE_FW(PLANE_CTL(pipe, plane_id), 0);
 -- 
-2.20.0
+2.19.1
 

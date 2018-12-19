@@ -1,7 +1,7 @@
-From 19fff027443b8500c98ce338f3f7acb4a8edb655 Mon Sep 17 00:00:00 2001
+From c15731fadf579fc779920e00e58ff728090bb93a Mon Sep 17 00:00:00 2001
 From: Ding Xiang <dingxiang@cmss.chinamobile.com>
 Date: Tue, 4 Sep 2018 16:41:39 +0800
-Subject: [PATCH 083/774] security: tomoyo: Fix obsolete function
+Subject: [PATCH 03/97] security: tomoyo: Fix obsolete function
 
 simple_strtoul is obsolete, and use kstrtouint instead
 
@@ -27,5 +27,5 @@ index 03923a138ef5..9b38f94b5dd0 100644
  	if (global_pid)
  		p = find_task_by_pid_ns(pid, &init_pid_ns);
 -- 
-2.20.0
+2.19.1
 

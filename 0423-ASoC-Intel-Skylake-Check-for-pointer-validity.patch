@@ -1,7 +1,7 @@
-From 356b1393c96e79685bdea03a18ad9579cf99b7e6 Mon Sep 17 00:00:00 2001
+From 4b5936458291d3f09d35cc1111c881c773ed8678 Mon Sep 17 00:00:00 2001
 From: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
 Date: Wed, 13 Dec 2017 10:40:30 +0530
-Subject: [PATCH 423/774] ASoC: Intel: Skylake: Check for pointer validity.
+Subject: [PATCH 248/296] ASoC: Intel: Skylake: Check for pointer validity.
 
 kzalloc allocation can fail. Return -ENOMEM if allocation fails.
 
@@ -26,5 +26,5 @@ index f3c5e29afaa6..30507fa0208c 100644
  						user_buf, count);
  	size = written;
 -- 
-2.20.0
+2.19.1
 

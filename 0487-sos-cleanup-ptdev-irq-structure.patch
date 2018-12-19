@@ -1,7 +1,7 @@
-From 859445b596b1e81ff395500894a54ed7f1b72db8 Mon Sep 17 00:00:00 2001
+From 45dfabc70999360b21bdb26c1a248342da502e40 Mon Sep 17 00:00:00 2001
 From: Binbin Wu <binbin.wu@intel.com>
 Date: Fri, 31 Aug 2018 10:58:56 +0800
-Subject: [PATCH 487/774] sos: cleanup ptdev irq structure
+Subject: [PATCH 016/214] sos: cleanup ptdev irq structure
 
 - Use individual data struct of ptdev irq for ioctl and hypercall
 
@@ -178,5 +178,5 @@ index 5ec2d10fc350..df07e3c93467 100644
 +
  #endif /* VHM_IOCTL_DEFS_H */
 -- 
-2.20.0
+2.19.1
 

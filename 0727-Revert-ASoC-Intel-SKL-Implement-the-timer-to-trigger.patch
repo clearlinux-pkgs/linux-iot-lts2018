@@ -1,7 +1,7 @@
-From b734f03c9fc73a85c995777cbf305dbde37105f2 Mon Sep 17 00:00:00 2001
+From 72e6c89ae9e9f37d753fb75f90d377e85505571c Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Fri, 12 Oct 2018 16:23:47 +0200
-Subject: [PATCH 727/774] Revert "ASoC: Intel: SKL: Implement the timer to
+Subject: [PATCH 05/11] Revert "ASoC: Intel: SKL: Implement the timer to
  trigger firmware crash recovery"
 
 Currently implemented recovery flow for Skylake and child platforms is
@@ -295,5 +295,5 @@ index 01053c4cdf6e..b75dc47331f6 100644
  
  #ifdef CONFIG_DEBUG_FS
 -- 
-2.20.0
+2.19.1
 

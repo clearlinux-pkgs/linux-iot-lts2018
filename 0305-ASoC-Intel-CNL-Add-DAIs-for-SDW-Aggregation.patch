@@ -1,7 +1,7 @@
-From a75b08e054793be568e29af79c44900c6586b6c0 Mon Sep 17 00:00:00 2001
+From 51771d06fd29955a75414c791139971ad3e6750d Mon Sep 17 00:00:00 2001
 From: "Jayanti, Satya Charitardha" <satya.charitardha.jayanti@intel.com>
 Date: Wed, 4 Jan 2017 20:41:55 +0530
-Subject: [PATCH 305/774] ASoC: Intel: CNL: Add DAIs for SDW Aggregation
+Subject: [PATCH 130/296] ASoC: Intel: CNL: Add DAIs for SDW Aggregation
 
 This patch adds DAI to enable Aggregation feature for
 playback and capture on SoundWire Master 1 and Master 2
@@ -78,5 +78,5 @@ index 7ac209ddd1eb..265992ec11ff 100644
  	/* Currently adding 1 playback and 1 capture pin, ideally it
  	 * should be coming from CLT based on endpoints to be supported
 -- 
-2.20.0
+2.19.1
 
