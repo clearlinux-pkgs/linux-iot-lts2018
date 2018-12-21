@@ -1,7 +1,7 @@
-From da47a8fde0fa41d33efa3d6578619726cb26ecb0 Mon Sep 17 00:00:00 2001
+From 5995c01da67a11758ec0246cd0a199cf8f6bedcf Mon Sep 17 00:00:00 2001
 From: Yael Samet <yael.samet@intel.com>
 Date: Mon, 14 Aug 2017 11:32:37 +0300
-Subject: [PATCH 96/97] mei: dal: add test module
+Subject: [PATCH 173/798] mei: dal: add test module
 
 DAL test module allows the user space to test the DAL kernel space api.
 It exposes a character device to the user space, and calls DAL api's
@@ -1010,5 +1010,5 @@ index 000000000000..13717df1ae54
 +
 +#endif /* KDI_CMD_DEFS_H */
 -- 
-2.19.1
+2.20.0
 

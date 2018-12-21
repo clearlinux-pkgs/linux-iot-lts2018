@@ -1,7 +1,7 @@
-From 5f22b883b928f01d292424d3feb8cd410b09e780 Mon Sep 17 00:00:00 2001
+From cceb080b4d4605c632d4b4a249b04058765d0523 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Mon, 5 Mar 2018 19:47:28 +0200
-Subject: [PATCH 40/97] tpm: sort objects in the Makefile
+Subject: [PATCH 117/798] tpm: sort objects in the Makefile
 
 Make the tpm Makefile a bit more in order by putting
 objects in one column.
@@ -47,5 +47,5 @@ index 4e9c33ca1f8f..efc785053627 100644
  tpm-$(CONFIG_EFI) += eventlog/efi.o
  tpm-$(CONFIG_OF) += eventlog/of.o
 -- 
-2.19.1
+2.20.0
 

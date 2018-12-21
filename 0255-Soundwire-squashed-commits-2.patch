@@ -1,7 +1,7 @@
-From b6314bdffaf5817f880686151121d5a5e99fb83e Mon Sep 17 00:00:00 2001
+From b5e6e76a13ea8ee3d1d73041b51c5dbe85dbbc9c Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Sun, 20 Nov 2016 20:25:37 +0530
-Subject: [PATCH 080/296] Soundwire squashed commits [2]
+Subject: [PATCH 255/798] Soundwire squashed commits [2]
 
 SoundWire: Optimizations in BW calculation and runtime ops
 
@@ -7679,5 +7679,5 @@ index ea9a3e14434a..564602c0ee12 100644
  	return 0;
  }
 -- 
-2.19.1
+2.20.0
 

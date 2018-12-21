@@ -1,7 +1,7 @@
-From 9400a057919c70e55179623993239280ed0cff30 Mon Sep 17 00:00:00 2001
+From 9dc98d39a262cef0494c0f643dc3388348f7e39f Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Mon, 10 Dec 2018 11:09:27 +0800
-Subject: [PATCH] media: intel-ipu4: adv7481_hdmi: Fix S3 resume
+Subject: [PATCH 755/798] media: intel-ipu4: adv7481_hdmi: Fix S3 resume
 
 S3 could not resume when IRQ pin is true in ADV7481.
 
@@ -13,11 +13,11 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-Index: kernel-lts2018/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
-===================================================================
---- kernel-lts2018.orig/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
-+++ kernel-lts2018/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
-@@ -1014,7 +1014,7 @@ static struct crl_sensor_configuration a
+diff --git a/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h b/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
+index 1926bf4a168f..0a3394569509 100644
+--- a/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
++++ b/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
+@@ -1014,7 +1014,7 @@ static struct crl_sensor_configuration adv7481_hdmi_crl_configuration = {
  	.csi_fmts_items = ARRAY_SIZE(adv7481_hdmi_crl_csi_data_fmt),
  	.csi_fmts = adv7481_hdmi_crl_csi_data_fmt,
  
@@ -26,3 +26,6 @@ Index: kernel-lts2018/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration
  	.crl_irq_fn = NULL,
  	.crl_threaded_irq_fn = crl_adv7481_threaded_irq_fn,
  
+-- 
+2.20.0
+

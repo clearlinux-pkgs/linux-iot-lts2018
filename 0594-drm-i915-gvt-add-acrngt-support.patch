@@ -1,7 +1,7 @@
-From 9ed7bddd7b98f2ee162e5804c4b2acc4919eec9e Mon Sep 17 00:00:00 2001
+From 9c7bafd3aae79f9eca4e6def9d4a84b8ff530285 Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Fri, 14 Sep 2018 16:10:17 +0800
-Subject: [PATCH 123/214] drm/i915/gvt: add acrngt support
+Subject: [PATCH 594/798] drm/i915/gvt: add acrngt support
 
 Refine the structure based on the latest gvt-g structure
 
@@ -1091,5 +1091,5 @@ index f14cff32ae2f..d4b7929c8bee 100644
  
  #endif /* _GVT_HYPERCALL_H_ */
 -- 
-2.19.1
+2.20.0
 

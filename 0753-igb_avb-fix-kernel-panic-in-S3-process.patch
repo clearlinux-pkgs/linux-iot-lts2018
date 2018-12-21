@@ -1,7 +1,7 @@
-From ba2c5a98f2679cea1fd843c00d526401b691f15f Mon Sep 17 00:00:00 2001
+From 828c6ede6475b4c43c39503703ddb2aa05db8aa1 Mon Sep 17 00:00:00 2001
 From: Feng Tang <feng.tang@intel.com>
 Date: Thu, 15 Nov 2018 09:45:37 +0800
-Subject: [PATCH 1/2] igb_avb: fix kernel panic in S3 process
+Subject: [PATCH 753/798] igb_avb: fix kernel panic in S3 process
 
 We met igb_avb kernel panic during S3 suspend/resume process, the
 panic call stack is:
@@ -76,5 +76,5 @@ index ef1b3adcde3d..84ec739cae7b 100644
  }
  
 -- 
-2.19.1
+2.20.0
 

@@ -1,7 +1,7 @@
-From bdf35d6da224e3f184c5ee19f21dfac94ac8551c Mon Sep 17 00:00:00 2001
+From d09fdef6ece960e4b4b1b9abc453a0838f023f7b Mon Sep 17 00:00:00 2001
 From: "Lewandowski, Gustaw" <gustaw.lewandowski@intel.com>
 Date: Wed, 11 Jul 2018 13:52:39 +0200
-Subject: [PATCH 273/296] ASoC: Intel: Fix race condition in IPC rx list
+Subject: [PATCH 448/798] ASoC: Intel: Fix race condition in IPC rx list
 
 Since there are multiple IPCs being sent in a short span of time, there
 is a possibility of more than one message being on the Rx list after
@@ -52,5 +52,5 @@ index 9370c474c618..0e7b5ce64b9e 100644
  	spin_unlock_irqrestore(&ipc->dsp->spinlock, flags);
  }
 -- 
-2.19.1
+2.20.0
 

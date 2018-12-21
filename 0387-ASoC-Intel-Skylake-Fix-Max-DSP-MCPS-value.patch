@@ -1,7 +1,7 @@
-From 02d3a2f8f1de6cf9db8c34212257f26f170d0107 Mon Sep 17 00:00:00 2001
+From 9e47b8a768f5fec203337122b461795f0f358584 Mon Sep 17 00:00:00 2001
 From: "Shaik, Kareem M" <kareem.m.shaik@intel.com>
 Date: Thu, 6 Oct 2016 16:23:09 +0530
-Subject: [PATCH 212/296] ASoC: Intel: Skylake: Fix Max DSP MCPS value
+Subject: [PATCH 387/798] ASoC: Intel: Skylake: Fix Max DSP MCPS value
 
 Currently Max MCPS is specified as 30M, but it should be 350M.
 However actual MCPS is 400M, since module CPS are simulated on
@@ -24,10 +24,10 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 451b28a21585..1931d4ed73f5 100644
+index c3e5ff49467f..fd04b5161bd4 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
-@@ -5166,7 +5166,7 @@ static void skl_tplg_set_pipe_type(struct skl *skl, struct skl_pipe *pipe)
+@@ -5167,7 +5167,7 @@ static void skl_tplg_set_pipe_type(struct skl *skl, struct skl_pipe *pipe)
  }
  
  /* This will be read from topology manifest, currently defined here */
@@ -37,5 +37,5 @@ index 451b28a21585..1931d4ed73f5 100644
  
  /*
 -- 
-2.19.1
+2.20.0
 

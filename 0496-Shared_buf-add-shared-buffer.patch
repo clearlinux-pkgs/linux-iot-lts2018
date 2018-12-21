@@ -1,7 +1,7 @@
-From c41fb00c6bd2ca60c0ec324faac7b7c5e82cbe33 Mon Sep 17 00:00:00 2001
+From 9d7ea2686211b5bba3acf0e3a9e9835db329494b Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:57 +0800
-Subject: [PATCH 025/214] Shared_buf: add shared buffer
+Subject: [PATCH 496/798] Shared_buf: add shared buffer
 
 Added a ring buffer shared between ACRN hypervisor and service OS.
 
@@ -22,17 +22,17 @@ Signed-off-by: Li, Fei1 <fei1.li@intel.com>
  create mode 100644 drivers/acrn/sbuf.h
 
 diff --git a/drivers/Kconfig b/drivers/Kconfig
-index b9ac6b8cbdd4..ae0772a3581a 100644
+index 97c8a6f9b032..08e4c4194fa1 100644
 --- a/drivers/Kconfig
 +++ b/drivers/Kconfig
-@@ -221,4 +221,5 @@ source "drivers/slimbus/Kconfig"
+@@ -222,4 +222,5 @@ source "drivers/slimbus/Kconfig"
  
  source "drivers/vbs/Kconfig"
  
 +source "drivers/acrn/Kconfig"
  endmenu
 diff --git a/drivers/Makefile b/drivers/Makefile
-index 6d0c3cd78ffd..22376163e35d 100644
+index 6095e80d7fa9..5794c097204c 100644
 --- a/drivers/Makefile
 +++ b/drivers/Makefile
 @@ -185,6 +185,7 @@ obj-$(CONFIG_FSI)		+= fsi/
@@ -381,5 +381,5 @@ index 000000000000..7f3694920232
 +
 +#endif /* SHARED_BUF_H */
 -- 
-2.19.1
+2.20.0
 

@@ -1,7 +1,7 @@
-From bbad360cf72539e8966932f5f07571ba1441107a Mon Sep 17 00:00:00 2001
+From c3c6a5a16d715e193188031ec77674346fb5c205 Mon Sep 17 00:00:00 2001
 From: Divya Prakash <divya1.prakash@intel.com>
 Date: Sun, 10 Apr 2016 13:36:16 +0530
-Subject: [PATCH 072/296] ASoC: Intel: Add delete module IPC
+Subject: [PATCH 247/798] ASoC: Intel: Add delete module IPC
 
 This IPC is to explicitly delete a module instance.
 Till now, destroying a pipe was taking care of deleting
@@ -81,5 +81,5 @@ index a8de8cfac6ee..eb030dfb88ca 100644
  		struct skl_ipc_bind_unbind_msg *msg);
  
 -- 
-2.19.1
+2.20.0
 

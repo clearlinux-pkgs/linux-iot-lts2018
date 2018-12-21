@@ -1,7 +1,7 @@
-From 55f3e97a505efa143a858defe06995085088f26c Mon Sep 17 00:00:00 2001
+From 2e3f70fa406124bf54dba4bd7bd40f4b49d50a7a Mon Sep 17 00:00:00 2001
 From: Edwin Zhai <edwin.zhai@intel.com>
 Date: Wed, 5 Sep 2018 09:35:05 +0800
-Subject: [PATCH 090/214] Adds new API for unmap memseg
+Subject: [PATCH 561/798] Adds new API for unmap memseg
 
 It is required when DM unmap ptdev BAR in deinit
 
@@ -101,5 +101,5 @@ index cf4f63211aa2..6c09157a9bef 100644
  /* PCI assignment*/
  #define IC_ID_PCI_BASE                  0x50UL
 -- 
-2.19.1
+2.20.0
 

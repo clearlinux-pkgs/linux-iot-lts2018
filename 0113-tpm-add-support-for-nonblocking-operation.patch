@@ -1,7 +1,7 @@
-From dd3d5df123f19acbe815ad61fa0980ee31dd0470 Mon Sep 17 00:00:00 2001
+From d377ac41ab0c587ee83d6511a3e27de57e5f84ed Mon Sep 17 00:00:00 2001
 From: Tadeusz Struk <tadeusz.struk@intel.com>
 Date: Mon, 10 Sep 2018 10:18:33 -0700
-Subject: [PATCH 35/97] tpm: add support for nonblocking operation
+Subject: [PATCH 113/798] tpm: add support for nonblocking operation
 
 Currently the TPM driver only supports blocking calls, which doesn't allow
 asynchronous IO operations to the TPM hardware.
@@ -376,5 +376,5 @@ index 96006c6b9696..0c751a79bbed 100644
  	.release = tpmrm_release,
  };
 -- 
-2.19.1
+2.20.0
 

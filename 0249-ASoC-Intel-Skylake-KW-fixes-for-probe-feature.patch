@@ -1,7 +1,7 @@
-From c7bf90f7bb99e14cbe624c245498172086a5f12a Mon Sep 17 00:00:00 2001
+From 9c8b826c5a857cafc16580ce534852b9c2041808 Mon Sep 17 00:00:00 2001
 From: G Kranthi <gudishax.kranthikumar@intel.com>
 Date: Tue, 10 May 2016 11:11:09 +0530
-Subject: [PATCH 074/296] ASoC: Intel: Skylake: KW fixes for probe feature
+Subject: [PATCH 249/798] ASoC: Intel: Skylake: KW fixes for probe feature
 
 This patch will add fixes for below klocwork errors,
 
@@ -49,7 +49,7 @@ index 7c206ec1b6a7..7c6e3779c213 100644
  
  #if USE_SPIB
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 1d02c88da5e4..3ef44ba263c4 100644
+index 7aefd1cce3b3..49f8404fd381 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -530,6 +530,9 @@ int skl_tplg_set_probe_params(struct snd_soc_dapm_widget *w,
@@ -104,5 +104,5 @@ index 1d02c88da5e4..3ef44ba263c4 100644
  		if (pconfig->probe_count) {
  			/* In the case of extraction, additional probe points can be set when
 -- 
-2.19.1
+2.20.0
 

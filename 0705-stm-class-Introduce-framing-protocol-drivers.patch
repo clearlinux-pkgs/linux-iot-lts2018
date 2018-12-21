@@ -1,7 +1,7 @@
-From 6b92142d9d0e61aab7e93d40ad21262c9e5cde75 Mon Sep 17 00:00:00 2001
+From 9aa448aa2cf6fbe2192072052cfbb89710fe56c2 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:54 +0300
-Subject: [PATCH 06/19] stm class: Introduce framing protocol drivers
+Subject: [PATCH 705/798] stm class: Introduce framing protocol drivers
 
 At the moment, the stm class applies a certain STP framing pattern to
 the data as it is written to the underlying STM device. In order to
@@ -542,5 +542,5 @@ index e5df08ae59cf..ed7f3d07fa47 100644
 +
  #endif /* _STM_STM_H_ */
 -- 
-2.19.1
+2.20.0
 

@@ -1,7 +1,7 @@
-From 6468fca596f002ab04feacef26ce01c01785d579 Mon Sep 17 00:00:00 2001
+From 607619a270b21f6fe9b486476d2be4c21004db30 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:04 +0300
-Subject: [PATCH 16/19] stm class: heartbeat: Fix whitespace
+Subject: [PATCH 715/798] stm class: heartbeat: Fix whitespace
 
 Fix whitespace in the code for better readability, no functional changes.
 
@@ -26,5 +26,5 @@ index 7db42395e131..3e7df1c0477f 100644
  		hrtimer_init(&stm_heartbeat[i].hrtimer, CLOCK_MONOTONIC,
  			     HRTIMER_MODE_ABS);
 -- 
-2.19.1
+2.20.0
 

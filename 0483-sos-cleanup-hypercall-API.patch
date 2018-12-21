@@ -1,7 +1,7 @@
-From a5803b653ed7668ee31512ba6610cebb6338431d Mon Sep 17 00:00:00 2001
+From 2815a22497831aa4a902afcc93ec3eec3f4d94ac Mon Sep 17 00:00:00 2001
 From: Mingqiang Chi <mingqiang.chi@intel.com>
 Date: Fri, 31 Aug 2018 10:58:56 +0800
-Subject: [PATCH 012/214] sos: cleanup hypercall API
+Subject: [PATCH 483/798] sos: cleanup hypercall API
 
 Put all hypercall APIs into vhm_hypercall.c
 other modules need to call hypercall API from
@@ -835,5 +835,5 @@ index ce579e3734ff..35bb48ae6cd3 100644
  
  #endif /* VHM_HYPERCALL_H */
 -- 
-2.19.1
+2.20.0
 

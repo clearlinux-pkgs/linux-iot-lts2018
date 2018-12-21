@@ -1,7 +1,7 @@
-From 7cff955dab9ba008a40ad4a23d46c5ca511039e4 Mon Sep 17 00:00:00 2001
+From 1232e4589828724c96eb6a19a50f3c6c8d6205e0 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:58:55 +0800
-Subject: [PATCH 004/214] VHM: add guest memory management support
+Subject: [PATCH 475/798] VHM: add guest memory management support
 
 VHM provides guest memory management services for application.
 It allocates/frees contiguous physical memory for guest based on dma-cma,
@@ -711,5 +711,5 @@ index dcb246af561a..4f1a0db2c54d 100644
  
  struct vhm_vm *find_get_vm(unsigned long vmid);
 -- 
-2.19.1
+2.20.0
 

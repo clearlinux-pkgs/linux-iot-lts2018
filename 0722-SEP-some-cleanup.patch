@@ -1,7 +1,7 @@
-From a7d06dcd15d07dbee353e1f85fe53787e3c209b3 Mon Sep 17 00:00:00 2001
+From 4bbe1fab08ee11c42b1498e0bfb44c35a581275e Mon Sep 17 00:00:00 2001
 From: Manisha Chinthapally <manisha.chinthapally@intel.com>
 Date: Tue, 13 Nov 2018 12:27:51 -0800
-Subject: [PATCH 3/3] SEP: some cleanup
+Subject: [PATCH 722/798] SEP: some cleanup
 
 Cleaned up some unused variables
 imporved readablility by removing double casting.
@@ -198,5 +198,5 @@ index b1d997d0f405..148925dea263 100755
  
  	FOR_EACH_REG_UNC_OPERATION(pecb, dev_idx, idx, PMU_OPERATION_READ)
 -- 
-2.19.1
+2.20.0
 

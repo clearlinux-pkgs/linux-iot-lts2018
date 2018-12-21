@@ -1,7 +1,7 @@
-From dfc7c7be7ecc3ca2fffb4881f3a18a3f560983fe Mon Sep 17 00:00:00 2001
+From cfd95fe9c1ac7fb11424276fcc8aeb8a559bdff2 Mon Sep 17 00:00:00 2001
 From: "Yan, Like" <like.yan@intel.com>
 Date: Fri, 31 Aug 2018 10:58:59 +0800
-Subject: [PATCH 049/214] Cleanup Kconfig
+Subject: [PATCH 520/798] Cleanup Kconfig
 
 Change-Id: I219bc9343fe47a1cdab70c247370beb9e425fcd4
 Signed-off-by: Yan, Like
@@ -74,5 +74,5 @@ index 0b0faeeff74a..e59b9487cd65 100644
  	default n
  	---help---
 -- 
-2.19.1
+2.20.0
 

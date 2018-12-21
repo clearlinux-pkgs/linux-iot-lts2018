@@ -1,7 +1,7 @@
-From 7a38b61d49195288d340361047134d6fd5f176ce Mon Sep 17 00:00:00 2001
+From 923e56d416306e8d81a45f8236abcb33e73f1350 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:51 +0300
-Subject: [PATCH 03/19] stm class: Rework policy node fallback
+Subject: [PATCH 702/798] stm class: Rework policy node fallback
 
 Currently, if no matching policy node can be found for a trace source,
 we'll try to use "default" policy node, then, if that doesn't exist,
@@ -245,5 +245,5 @@ index 923571adc6f4..e5df08ae59cf 100644
  };
  
 -- 
-2.19.1
+2.20.0
 

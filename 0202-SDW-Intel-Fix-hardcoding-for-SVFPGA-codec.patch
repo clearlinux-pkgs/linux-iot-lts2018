@@ -1,7 +1,7 @@
-From bdeb25396b55f10cf408a56dc063ea6775ba2826 Mon Sep 17 00:00:00 2001
+From 58c9a9703b0a6d2495c527083fe15daae0cad9db Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Mon, 25 Apr 2016 13:39:37 +0530
-Subject: [PATCH 027/296] SDW:Intel: Fix hardcoding for SVFPGA codec.
+Subject: [PATCH 202/798] SDW:Intel: Fix hardcoding for SVFPGA codec.
 
 SVFPGA codec requires special handling as its not modelled
 as MIPI defined SoundWire Slave. This is used for testing PDM
@@ -32,5 +32,5 @@ index 3f3317a6707a..9686aa2f9caf 100644
  	if (bank) {
  		mcp_clockctrl_offset = SDW_CNL_MCP_CLOCKCTRL1;
 -- 
-2.19.1
+2.20.0
 

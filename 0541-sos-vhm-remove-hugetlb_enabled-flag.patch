@@ -1,7 +1,7 @@
-From e0ab4ac076793993af1300191452d95ea5af3999 Mon Sep 17 00:00:00 2001
+From 1cff9e00bdf23e357f60352d38050bd26e1ce8cf Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 070/214] sos: vhm: remove hugetlb_enabled flag
+Subject: [PATCH 541/798] sos: vhm: remove hugetlb_enabled flag
 
 Since we only have hugetlb memory allocation mechanism, there no needs
 hugetlb_enabled to indicate we're using hugetlb.
@@ -111,5 +111,5 @@ index 91cd13dad69a..29fee8fe0a7b 100644
  
  /**
 -- 
-2.19.1
+2.20.0
 

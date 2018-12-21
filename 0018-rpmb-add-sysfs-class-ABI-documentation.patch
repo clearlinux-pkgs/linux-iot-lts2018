@@ -1,7 +1,7 @@
-From 50a5c277413c89b2a2daf7d83fe484d889be6802 Mon Sep 17 00:00:00 2001
+From d6801500449999f36a2ee1b736eff721f1f1e376 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 13 Mar 2016 13:36:52 +0200
-Subject: [PATCH 03/22] rpmb: add sysfs-class ABI documentation
+Subject: [PATCH 018/798] rpmb: add sysfs-class ABI documentation
 
 V2: resend
 V3: add more verbose description
@@ -48,7 +48,7 @@ index 000000000000..a9d45aa77f77
 +		The /sys/class/rpmb/rpmbN directory is created for
 +		each RPMB registered device.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 3c99a53c4590..070cb20bcf78 100644
+index 249b9943adbc..7135116016c1 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -12533,6 +12533,7 @@ L:	linux-kernel@vger.kernel.org
@@ -60,5 +60,5 @@ index 3c99a53c4590..070cb20bcf78 100644
  RTL2830 MEDIA DRIVER
  M:	Antti Palosaari <crope@iki.fi>
 -- 
-2.19.1
+2.20.0
 

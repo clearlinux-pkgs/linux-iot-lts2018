@@ -1,14 +1,14 @@
-From f31a585a8e118b4ff1b835b9c803f2fd940b0533 Mon Sep 17 00:00:00 2001
+From 598509cfc091438cafd053925fb1914965522e16 Mon Sep 17 00:00:00 2001
 From: mark gross <mark.gross@intel.com>
 Date: Fri, 30 Nov 2018 15:42:56 -0800
-Subject: [PATCH 2/2] v4.19.5 update: fix up intel_display.c
+Subject: [PATCH 746/798] v4.19.5 update: fix up intel_display.c
 
 ---
  drivers/gpu/drm/i915/intel_display.c | 11 +++--------
  1 file changed, 3 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 1bd92ba7118c..3ac08ca37acf 100644
+index 1bd92ba7118c..3f312242b3ff 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -15950,9 +15950,6 @@ static void intel_modeset_readout_hw_state(struct drm_device *dev)
@@ -37,5 +37,5 @@ index 1bd92ba7118c..3ac08ca37acf 100644
  
  	intel_modeset_update_connector_atomic_state(dev);
 -- 
-2.19.1
+2.20.0
 

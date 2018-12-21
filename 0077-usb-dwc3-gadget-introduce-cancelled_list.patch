@@ -1,7 +1,7 @@
-From 61895df209f2e1e5124231623e4ffdb220567d7a Mon Sep 17 00:00:00 2001
+From fbececa7d3a4b3b278145428f550797041685cef Mon Sep 17 00:00:00 2001
 From: Felipe Balbi <felipe.balbi@linux.intel.com>
 Date: Wed, 1 Aug 2018 13:53:29 +0300
-Subject: [PATCH 12/15] usb: dwc3: gadget: introduce cancelled_list
+Subject: [PATCH 077/798] usb: dwc3: gadget: introduce cancelled_list
 
 This list will host cancelled requests who still have TRBs being
 processed.
@@ -34,10 +34,10 @@ index 0de78cb29f2c..24f0b108b7f6 100644
  	struct list_head	started_list;
  
 diff --git a/drivers/usb/dwc3/gadget.c b/drivers/usb/dwc3/gadget.c
-index e5cc41b3b20d..8e235417027f 100644
+index 22663d293367..19df912e9f1a 100644
 --- a/drivers/usb/dwc3/gadget.c
 +++ b/drivers/usb/dwc3/gadget.c
-@@ -2169,6 +2169,7 @@ static int dwc3_gadget_init_endpoint(struct dwc3 *dwc, u8 epnum)
+@@ -2164,6 +2164,7 @@ static int dwc3_gadget_init_endpoint(struct dwc3 *dwc, u8 epnum)
  
  	INIT_LIST_HEAD(&dep->pending_list);
  	INIT_LIST_HEAD(&dep->started_list);
@@ -72,5 +72,5 @@ index 2aacd1afd9ff..023a473648eb 100644
  		int status);
  
 -- 
-2.19.1
+2.20.0
 

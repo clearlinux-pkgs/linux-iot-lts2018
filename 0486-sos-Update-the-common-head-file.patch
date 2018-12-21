@@ -1,7 +1,7 @@
-From 48cc594a6a46700b0bc12d1ebab1cf12313465ee Mon Sep 17 00:00:00 2001
+From 298c9b1c1f0dba4137d22fc00c83df39f5e8fef2 Mon Sep 17 00:00:00 2001
 From: Mingqiang Chi <mingqiang.chi@intel.com>
 Date: Fri, 31 Aug 2018 10:58:56 +0800
-Subject: [PATCH 015/214] sos: Update the common head file
+Subject: [PATCH 486/798] sos: Update the common head file
 
 --remove unused data structures
 --move data structure(vm_gpa2hpa) to acrn_hv_defs.h
@@ -99,5 +99,5 @@ index 329c38b961e5..1d21bf21c91c 100644
 +
  #endif /* ACRN_HV_DEFS_H */
 -- 
-2.19.1
+2.20.0
 

@@ -1,7 +1,7 @@
-From ed800c88e267b42ed690ac356a417e37886108fc Mon Sep 17 00:00:00 2001
+From 0a807a9aa4b331834f649f8ea64e1ac78a4aa14a Mon Sep 17 00:00:00 2001
 From: "Jayanti, Satya Charitardha" <satya.charitardha.jayanti@intel.com>
 Date: Wed, 4 Jan 2017 20:38:56 +0530
-Subject: [PATCH 133/296] ASoC: Intel: Boards: Add SDW Aggregation changes
+Subject: [PATCH 308/798] ASoC: Intel: Boards: Add SDW Aggregation changes
 
 This patch makes machine driver changes to enable Aggregation
 feature for playback and capture on SoundWire Master 1 and
@@ -154,5 +154,5 @@ index 740062a4108a..ee8fe3934571 100644
  		.name = "dmic01",
  		.cpu_dai_name = "DMIC01 Pin",
 -- 
-2.19.1
+2.20.0
 

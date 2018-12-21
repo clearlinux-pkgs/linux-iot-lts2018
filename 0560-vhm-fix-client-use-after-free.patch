@@ -1,7 +1,7 @@
-From fee09051ea04364d7063eae7bf4e3aa73819d01a Mon Sep 17 00:00:00 2001
+From 4ae1d2b9d74f25ed26345baec6c6060fc70c6cbf Mon Sep 17 00:00:00 2001
 From: Li Zhijian <lizhijian@cn.fujitsu.com>
 Date: Fri, 31 Aug 2018 10:59:04 +0800
-Subject: [PATCH 089/214] vhm: fix client use-after-free
+Subject: [PATCH 560/798] vhm: fix client use-after-free
 
 free_client() will free resource of client
 
@@ -32,5 +32,5 @@ index 0bcb0e053947..6bf07e812d03 100644
  
  void acrn_ioreq_destroy_client(int client_id)
 -- 
-2.19.1
+2.20.0
 

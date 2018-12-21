@@ -1,7 +1,7 @@
-From e1f6fb124e66c4388b91a3179ecebd212b30a512 Mon Sep 17 00:00:00 2001
+From 4ebced21f092c44865b9f30ac5101610636c08a8 Mon Sep 17 00:00:00 2001
 From: Mingqiang Chi <mingqiang.chi@intel.com>
 Date: Fri, 31 Aug 2018 10:58:59 +0800
-Subject: [PATCH 042/214] vhm: modify mmio/memory map/unmap api
+Subject: [PATCH 513/798] vhm: modify mmio/memory map/unmap api
 
 Split the parameter(prot) to two parameters(mem_type and
 mem_access_right)
@@ -173,5 +173,5 @@ index 2ff1e25b22ce..ba8558949e48 100644
  int vhm_dev_mmap(struct file *file, struct vm_area_struct *vma);
  
 -- 
-2.19.1
+2.20.0
 

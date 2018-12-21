@@ -1,7 +1,7 @@
-From 96c570cf9b93bb4b15eeab4060b016f41c2ad285 Mon Sep 17 00:00:00 2001
+From 53d09d71f46fa7693f11ccf90e891b8355ebf401 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 25 Apr 2018 19:07:06 +0300
-Subject: [PATCH 14/22] nvme: connect to rpmb layer
+Subject: [PATCH 029/798] nvme: connect to rpmb layer
 
 This patch covers rpmb storage operation
 as defined in NVMe spec 1.3a in section 8.10.
@@ -45,7 +45,7 @@ index aea459c65ae1..99f99e87b82b 100644
  nvme-fabrics-y				+= fabrics.o
  
 diff --git a/drivers/nvme/host/core.c b/drivers/nvme/host/core.c
-index 6bb9908bf46f..9d84b7ecb67e 100644
+index 0ba301f7e8b4..c78313a83618 100644
 --- a/drivers/nvme/host/core.c
 +++ b/drivers/nvme/host/core.c
 @@ -11,7 +11,6 @@
@@ -56,7 +56,7 @@ index 6bb9908bf46f..9d84b7ecb67e 100644
  #include <linux/blkdev.h>
  #include <linux/blk-mq.h>
  #include <linux/delay.h>
-@@ -1659,25 +1658,57 @@ static const struct pr_ops nvme_pr_ops = {
+@@ -1661,25 +1660,57 @@ static const struct pr_ops nvme_pr_ops = {
  	.pr_clear	= nvme_pr_clear,
  };
  
@@ -123,7 +123,7 @@ index 6bb9908bf46f..9d84b7ecb67e 100644
  EXPORT_SYMBOL_GPL(nvme_sec_submit);
  #endif /* CONFIG_BLK_SED_OPAL */
  
-@@ -2468,7 +2499,10 @@ int nvme_init_identify(struct nvme_ctrl *ctrl)
+@@ -2470,7 +2501,10 @@ int nvme_init_identify(struct nvme_ctrl *ctrl)
  		ctrl->hmmaxd = le16_to_cpu(id->hmmaxd);
  	}
  
@@ -316,5 +316,5 @@ index 000000000000..34e807bfc4f9
 +	nvme_rpmb_remove(ctrl);
 +}
 -- 
-2.19.1
+2.20.0
 

@@ -1,7 +1,7 @@
-From 80c7ceed2143258dfc28a252627878bdf8bdb1f6 Mon Sep 17 00:00:00 2001
+From c04b1c5b8a919ab402da8453cf0431e7813785b2 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <casey@schaufler-ca.com>
 Date: Fri, 31 Aug 2018 17:23:41 -0700
-Subject: [PATCH 26/97] Netfilter: Add a selection for Smack
+Subject: [PATCH 106/798] Netfilter: Add a selection for Smack
 
 If you are running a single security module it's
 fine to tell the netfilter system that your security
@@ -309,7 +309,7 @@ index 22474f5c93d7..42ee220f6940 100644
  				     &secctx,
  				     &secctx_len) == 0) {
 diff --git a/net/unix/af_unix.c b/net/unix/af_unix.c
-index b6b3f4033729..d94ad39c09a7 100644
+index 42244b075f08..048cb2ebb128 100644
 --- a/net/unix/af_unix.c
 +++ b/net/unix/af_unix.c
 @@ -141,9 +141,10 @@ static struct hlist_head *unix_sockets_unbound(void *addr)
@@ -412,7 +412,7 @@ index 65e4b103bd17..e5818936782d 100644
  {
  	return call_int_hook(tun_dev_alloc_security, 0, security);
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index f3cbec93c332..820963e7a2b9 100644
+index d4509399e760..e57b72882a87 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -50,6 +50,7 @@
@@ -423,7 +423,7 @@ index f3cbec93c332..820963e7a2b9 100644
  #include <linux/tty.h>
  #include <net/icmp.h>
  #include <net/ip.h>		/* for local_port_range[] */
-@@ -5342,13 +5343,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
+@@ -5350,13 +5351,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
  			    PACKET__RELABELTO, NULL);
  }
  
@@ -448,7 +448,7 @@ index f3cbec93c332..820963e7a2b9 100644
  }
  
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 67140c835a18..db937bd4a457 100644
+index 05191807497f..0107146089f5 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -35,6 +35,7 @@
@@ -471,7 +471,7 @@ index 67140c835a18..db937bd4a457 100644
  #ifdef SMACK_IPV6_PORT_LABELING
  DEFINE_MUTEX(smack_ipv6_lock);
  static LIST_HEAD(smk_ipv6_port_list);
-@@ -3807,6 +3813,19 @@ static int smk_skb_to_addr_ipv6(struct sk_buff *skb, struct sockaddr_in6 *sip)
+@@ -3814,6 +3820,19 @@ static int smk_skb_to_addr_ipv6(struct sk_buff *skb, struct sockaddr_in6 *sip)
  }
  #endif /* CONFIG_IPV6 */
  
@@ -491,7 +491,7 @@ index 67140c835a18..db937bd4a457 100644
  /**
   * smack_socket_sock_rcv_skb - Smack packet delivery access check
   * @sk: socket
-@@ -3841,7 +3860,7 @@ static int smack_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
+@@ -3848,7 +3867,7 @@ static int smack_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
  		 * If there is no secmark fall back to CIPSO.
  		 * The secmark is assumed to reflect policy better.
  		 */
@@ -500,7 +500,7 @@ index 67140c835a18..db937bd4a457 100644
  			skp = smack_from_secid(skb->secmark);
  			goto access_check;
  		}
-@@ -3887,7 +3906,7 @@ static int smack_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
+@@ -3894,7 +3913,7 @@ static int smack_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
  		    proto != IPPROTO_TCP && proto != IPPROTO_DCCP)
  			break;
  #ifdef SMACK_IPV6_SECMARK_LABELING
@@ -509,7 +509,7 @@ index 67140c835a18..db937bd4a457 100644
  			skp = smack_from_secid(skb->secmark);
  		else
  			skp = smack_ipv6host_label(&sadd);
-@@ -3987,7 +4006,7 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
+@@ -3994,7 +4013,7 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
  		break;
  	case PF_INET:
  #ifdef CONFIG_SECURITY_SMACK_NETFILTER
@@ -518,7 +518,7 @@ index 67140c835a18..db937bd4a457 100644
  			s = skb->secmark;
  			if (s != 0)
  				break;
-@@ -4008,7 +4027,8 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
+@@ -4015,7 +4034,8 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
  		break;
  	case PF_INET6:
  #ifdef SMACK_IPV6_SECMARK_LABELING
@@ -528,7 +528,7 @@ index 67140c835a18..db937bd4a457 100644
  #endif
  		break;
  	}
-@@ -4086,11 +4106,9 @@ static int smack_inet_conn_request(struct sock *sk, struct sk_buff *skb,
+@@ -4093,11 +4113,9 @@ static int smack_inet_conn_request(struct sock *sk, struct sk_buff *skb,
  	 * If there is no secmark fall back to CIPSO.
  	 * The secmark is assumed to reflect policy better.
  	 */
@@ -543,7 +543,7 @@ index 67140c835a18..db937bd4a457 100644
  	}
  #endif /* CONFIG_SECURITY_SMACK_NETFILTER */
  
-@@ -4166,6 +4184,24 @@ static void smack_inet_csk_clone(struct sock *sk,
+@@ -4173,6 +4191,24 @@ static void smack_inet_csk_clone(struct sock *sk,
  		ssp->smk_packet = NULL;
  }
  
@@ -568,7 +568,7 @@ index 67140c835a18..db937bd4a457 100644
  /*
   * Key management security hooks
   *
-@@ -4674,6 +4710,8 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
+@@ -4681,6 +4717,8 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(sock_graft, smack_sock_graft),
  	LSM_HOOK_INIT(inet_conn_request, smack_inet_conn_request),
  	LSM_HOOK_INIT(inet_csk_clone, smack_inet_csk_clone),
@@ -614,5 +614,5 @@ index 701a1cc1bdcc..596aba2e4d6b 100644
  		ssp = smack_sock(sk);
  		skp = ssp->smk_out;
 -- 
-2.19.1
+2.20.0
 

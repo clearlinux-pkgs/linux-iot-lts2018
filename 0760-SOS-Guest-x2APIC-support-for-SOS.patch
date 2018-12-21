@@ -1,7 +1,7 @@
-From 19990a22eba2aaf413c5da3e227693f146df5e27 Mon Sep 17 00:00:00 2001
+From f18bc33eb1785a5fab80a955e0efa629213c2b15 Mon Sep 17 00:00:00 2001
 From: Sainath Grandhi <sainath.grandhi@intel.com>
 Date: Fri, 2 Nov 2018 16:21:22 -0700
-Subject: [PATCH 04/18] SOS: Guest x2APIC support for SOS
+Subject: [PATCH 760/798] SOS: Guest x2APIC support for SOS
 
 This patch adds support to use x2APIC in SOS when ACRN exposes x2APIC
 to guests and supports x2APIC MSR emulation.
@@ -17,7 +17,7 @@ Signed-off-by: Sainath Grandhi <sainath.grandhi@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/arch/x86/acrn/acrn.c b/arch/x86/acrn/acrn.c
-index 8283673..6b01b27 100644
+index 8283673604f9..6b01b27794a1 100644
 --- a/arch/x86/acrn/acrn.c
 +++ b/arch/x86/acrn/acrn.c
 @@ -56,8 +56,8 @@ static void acrn_pin_vcpu(int cpu)
@@ -32,5 +32,5 @@ index 8283673..6b01b27 100644
  
  static void __init acrn_init_mem_mapping(void)
 -- 
-2.7.4
+2.20.0
 

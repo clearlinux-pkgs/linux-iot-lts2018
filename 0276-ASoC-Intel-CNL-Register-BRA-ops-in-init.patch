@@ -1,7 +1,7 @@
-From af82c73ba5db8f098ae9c204f364fb4b1f3a9182 Mon Sep 17 00:00:00 2001
+From 0855ba08a9472ce2b300b3e4f81586d80e5eece8 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Sun, 2 Jul 2017 11:51:00 +0530
-Subject: [PATCH 101/296] ASoC: Intel: CNL: Register BRA ops in init.
+Subject: [PATCH 276/798] ASoC: Intel: CNL: Register BRA ops in init.
 
 Signed-off-by: Sanyog Kale <sanyog.r.kale@intel.com>
 ---
@@ -178,5 +178,5 @@ index 4c7cb272a029..2bafc7d40cec 100644
  	void (*cleanup)(struct device *dev, struct skl_sst *ctx);
  };
 -- 
-2.19.1
+2.20.0
 

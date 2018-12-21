@@ -1,7 +1,7 @@
-From cd08da9fbe20d5a092492f4e36abac2342ff14b7 Mon Sep 17 00:00:00 2001
+From f6df9e359190b7aef05da17b249e37f0657fc599 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Mon, 2 May 2016 15:12:59 +0530
-Subject: [PATCH 040/296] ASoC:CNL: Add DAIS for SoundWire masters.
+Subject: [PATCH 215/798] ASoC:CNL: Add DAIS for SoundWire masters.
 
 Add new DAIs for SoundWire master for aggregation.
 Add DAI IDs to find the master controller from DAI.
@@ -109,5 +109,5 @@ index ab1314a6f408..7166ef9992ab 100644
  		struct snd_soc_dai *dai);
  int cnl_sdw_hw_params(struct snd_pcm_substream *substream,
 -- 
-2.19.1
+2.20.0
 
