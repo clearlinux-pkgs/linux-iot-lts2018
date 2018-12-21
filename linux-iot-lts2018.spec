@@ -29,7 +29,7 @@ Source4:        cmdline-iot-lts2018-sos
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
 # quilt.tag:  lts-v4.19.8-base-181219T182725Z
-# config.tag: lts-v4.19.8-base-181217T195742Z
+# config.tag: lts-v4.19.8-base-181219T192318Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
