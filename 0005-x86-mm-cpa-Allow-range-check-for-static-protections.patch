@@ -1,7 +1,7 @@
-From b4350c6944ee6936e43cc1d6167d22845385d18f Mon Sep 17 00:00:00 2001
+From c73b6d859bd510a753598eb4a1541a6f4358fa55 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:10 +0200
-Subject: [PATCH 005/798] x86/mm/cpa: Allow range check for static protections
+Subject: [PATCH 05/12] x86/mm/cpa: Allow range check for static protections
 
 Checking static protections only page by page is slow especially for huge
 pages. To allow quick checks over a complete range, add the ability to do
@@ -26,7 +26,7 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  1 file changed, 44 insertions(+), 25 deletions(-)
 
 diff --git a/arch/x86/mm/pageattr.c b/arch/x86/mm/pageattr.c
-index fca0e0e396e0..b0e1dd6ce89d 100644
+index 9731aeeebe71..61ff27848452 100644
 --- a/arch/x86/mm/pageattr.c
 +++ b/arch/x86/mm/pageattr.c
 @@ -286,22 +286,29 @@ static void cpa_flush_array(unsigned long *start, int numpages, int cache,
@@ -185,5 +185,5 @@ index fca0e0e396e0..b0e1dd6ce89d 100644
  		new_prot = pgprot_clear_protnone_bits(new_prot);
  
 -- 
-2.20.0
+2.19.1
 

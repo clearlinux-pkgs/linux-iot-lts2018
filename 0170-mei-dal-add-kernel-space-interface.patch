@@ -1,7 +1,7 @@
-From 7f1b95d9e0d2c2efbae83f5eb9720f738ca78167 Mon Sep 17 00:00:00 2001
+From dd3a8e5b179945ee5f03c4f4df0c4f991ca7d781 Mon Sep 17 00:00:00 2001
 From: Yael Samet <yael.samet@intel.com>
 Date: Tue, 5 Sep 2017 14:09:42 +0300
-Subject: [PATCH 170/798] mei: dal: add kernel space interface
+Subject: [PATCH 93/97] mei: dal: add kernel space interface
 
 DAL kernel space interface exposes in-kernel API
 to access trusted execution service in DAL.
@@ -723,5 +723,5 @@ index 000000000000..19a016ba3b9a
 +
 +#endif /* _DAL_H_ */
 -- 
-2.20.0
+2.19.1
 

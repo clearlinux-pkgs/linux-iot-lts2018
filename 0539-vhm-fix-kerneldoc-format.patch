@@ -1,7 +1,7 @@
-From 36b218943fa882b6dc990bc07a5096168fe80f6b Mon Sep 17 00:00:00 2001
+From 07092ac30edbc9b5db144a83e198cee72727e08f Mon Sep 17 00:00:00 2001
 From: Xinyun Liu <xinyun.liu@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 539/798] vhm: fix kerneldoc format
+Subject: [PATCH 068/214] vhm: fix kerneldoc format
 
 remove doxygen commands and add missing description
 
@@ -68,5 +68,5 @@ index b5f6ca1f2dea..e89b78c7fff5 100644
   * @refcnt: reference count of guest
   * @seg_lock:  mutex to protect memseg_list
 -- 
-2.20.0
+2.19.1
 

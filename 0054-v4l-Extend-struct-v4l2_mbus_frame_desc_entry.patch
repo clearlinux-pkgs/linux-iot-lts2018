@@ -1,7 +1,7 @@
-From 539376d5078c9893e80c02c2380ece47e8ad1ca9 Mon Sep 17 00:00:00 2001
+From 4a73dc80772341f9b67ab6138b5eb877be26328e Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:40 +0800
-Subject: [PATCH 054/798] v4l: Extend struct v4l2_mbus_frame_desc_entry
+Subject: [PATCH 11/25] v4l: Extend struct v4l2_mbus_frame_desc_entry
 
 Add bus type to frame descriptors
 Add bpp fields and bus-specific information (CSI-2).
@@ -101,5 +101,5 @@ index 4bd777a68d64..889deab36029 100644
  struct regulator_bulk_data;
  
 -- 
-2.20.0
+2.19.1
 

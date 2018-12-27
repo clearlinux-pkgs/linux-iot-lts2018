@@ -1,7 +1,7 @@
-From c29e07f7e5282cbc25163f4cffcdc03ba2197b07 Mon Sep 17 00:00:00 2001
+From 080f07935f8f45a6a65aaf0fe517155bfff42d80 Mon Sep 17 00:00:00 2001
 From: Mousumi Jana <mousumix.jana@intel.com>
 Date: Thu, 20 Jul 2017 16:39:00 +0530
-Subject: [PATCH 364/798] ASoC: Intel: Skylake: Notify topology changes
+Subject: [PATCH 189/296] ASoC: Intel: Skylake: Notify topology changes
 
 Some events like pipeline start, pipeline delete, DSP D0/D3
 need to be notified to the user in order to convey a
@@ -258,7 +258,7 @@ index 8f4e3074de17..f20b842af4e4 100644
  {
  	struct skl_ipc_large_config_msg msg;
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index fb9fc5ae3f05..f1d3518fc770 100644
+index 29be5b7da3ba..373dbced8efa 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -2642,6 +2642,78 @@ int skl_tplg_be_update_params(struct snd_soc_dai *dai,
@@ -353,5 +353,5 @@ index b3a15ed76122..ce4069607dda 100644
 +			unsigned int __user *data, unsigned int size);
  #endif
 -- 
-2.20.0
+2.19.1
 

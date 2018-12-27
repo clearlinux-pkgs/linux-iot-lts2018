@@ -1,7 +1,7 @@
-From 29ab5d041ac13438d0f239d58d09a84ee4fffb99 Mon Sep 17 00:00:00 2001
+From 328eff2b4c6e743011966e04562a888a01c1dbcb Mon Sep 17 00:00:00 2001
 From: Hao Li <hao.l.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:58 +0800
-Subject: [PATCH 509/798] api doc: add ACRN VBS API docs
+Subject: [PATCH 038/214] api doc: add ACRN VBS API docs
 
 Change-Id: I634c0117392ca529d7bd4b89a02fec43a0f70d63
 Tracked-On: 220254
@@ -520,5 +520,5 @@ index 9ebde05e4663..9e865b8dff05 100644
  
  #endif
 -- 
-2.20.0
+2.19.1
 

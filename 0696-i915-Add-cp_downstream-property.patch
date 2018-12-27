@@ -1,7 +1,7 @@
-From 6b274ffbea9bd3eef87de636654e763d53eb18a3 Mon Sep 17 00:00:00 2001
+From b0cb94088de18b9d7488aa2f1793b22b4c04dd95 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Tue, 16 Oct 2018 11:38:41 +0800
-Subject: [PATCH 696/798] i915: Add cp_downstream property
+Subject: [PATCH 10/13] i915: Add cp_downstream property
 
 Implements drm blob property cp_downstream_info property on HDCP
 capable connectors.
@@ -21,7 +21,7 @@ Signed-off-by: Romli, Khairul Anuar <khairul.anuar.romli@intel.com>
  3 files changed, 88 insertions(+), 35 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index afe0e539bc66..b8bae3ab7c35 100644
+index d4b307b531ec..d734030c2ac1 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -424,6 +424,9 @@ struct intel_connector {
@@ -377,5 +377,5 @@ index f17eb2910bdb..8f5831d4b483 100644
  #define DRM_HDCP_MAX_DEVICE_EXCEEDED(x)		(x & BIT(7))
  
 -- 
-2.20.0
+2.19.1
 

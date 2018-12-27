@@ -1,7 +1,7 @@
-From 0c3159d039660ebdf6d1327c4903ab44f12b6f88 Mon Sep 17 00:00:00 2001
+From 6c6b527cf5ba9a7663bcbb25a6cdf2661a8849f6 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Fri, 29 Apr 2016 14:59:48 +0530
-Subject: [PATCH 205/798] SDW: Change log level to error from debug.
+Subject: [PATCH 030/296] SDW: Change log level to error from debug.
 
 For any errors, log level should be error.
 By mistake it was debug.
@@ -27,5 +27,5 @@ index 5f4aea04a85b..78c8cfd32d4c 100644
  		goto out;
  	}
 -- 
-2.20.0
+2.19.1
 

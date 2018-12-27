@@ -1,7 +1,7 @@
-From 4b45b86243065ba0f62998ceec2f76a98169459a Mon Sep 17 00:00:00 2001
+From badc152592f690b11a69f9f40f3c2e247a9658a7 Mon Sep 17 00:00:00 2001
 From: Fei Yang <fei.yang@intel.com>
 Date: Mon, 29 Oct 2018 11:45:11 -0700
-Subject: [PATCH 685/798] Fix warnings introduced by acrn
+Subject: [PATCH 214/214] Fix warnings introduced by acrn
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -47,5 +47,5 @@ index d3fe892641d0..9887a92b5e8e 100644
  
  /* Functions internal to the PCI core code */
 -- 
-2.20.0
+2.19.1
 

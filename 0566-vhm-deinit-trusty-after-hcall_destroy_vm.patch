@@ -1,7 +1,7 @@
-From fc58bbeeb74c16d404ddda8cd1627f5a4cd9e81e Mon Sep 17 00:00:00 2001
+From 828d4d6af55e0a43a701d19d60f5abf55c7d8c19 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Sat, 8 Sep 2018 15:37:38 +0800
-Subject: [PATCH 566/798] vhm: deinit trusty after hcall_destroy_vm
+Subject: [PATCH 095/214] vhm: deinit trusty after hcall_destroy_vm
 
 after deinit_trusty, the released cma memory could be used by other drivers.
 while EPT of this memory area need be remap back to SOS by hcall_destroy_vm.
@@ -51,5 +51,5 @@ index 6e351c387928..d57dc3972bc5 100644
  		break;
  	}
 -- 
-2.20.0
+2.19.1
 

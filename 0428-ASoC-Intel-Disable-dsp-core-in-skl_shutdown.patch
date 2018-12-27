@@ -1,7 +1,7 @@
-From b9a9beea9470967f8d319f629f085657a7bc1555 Mon Sep 17 00:00:00 2001
+From 97bf1f01a842422efaf1d31ff133d822adc99ce6 Mon Sep 17 00:00:00 2001
 From: Zhang Yanmin <yanmin.zhang@intel.com>
 Date: Thu, 12 Apr 2018 17:05:23 +0530
-Subject: [PATCH 428/798] ASoC: Intel: Disable dsp core in skl_shutdown
+Subject: [PATCH 253/296] ASoC: Intel: Disable dsp core in skl_shutdown
 
 skl_shutdown requires to put dsp cores quiescent else leads
 to the issue when PMC timeout while waiting for IP SIDE_POK_STS
@@ -48,5 +48,5 @@ index a0d41441a7a4..99f8cdf0cc07 100644
  	 * when system goes to shutdown. When cores.usage_count is
  	 * equal to zero then driver puts the dsp core to zero. On few
 -- 
-2.20.0
+2.19.1
 

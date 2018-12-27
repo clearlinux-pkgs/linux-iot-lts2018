@@ -1,7 +1,7 @@
-From 5a7bb7a19e668c7bca52a364ea0db44c02e1a3c0 Mon Sep 17 00:00:00 2001
+From 82acf71c15815c3ea47684ca8aa43fc1d267bd2a Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Mon, 4 Dec 2017 15:05:59 +0530
-Subject: [PATCH 405/798] soundwire: Change programming sequence for BRA
+Subject: [PATCH 230/296] soundwire: Change programming sequence for BRA
 
 Currently, the register programming (PDI, ALH, DP_CTRL) is performed
 before FW pipeline creation.
@@ -50,5 +50,5 @@ index 9f8e77c20699..95eb7a8fab2b 100644
  	ret = ops->bra_platform_xfer(data->bra_data->drv_data, true, &info);
  	if (ret < 0) {
 -- 
-2.20.0
+2.19.1
 

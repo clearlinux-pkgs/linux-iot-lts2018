@@ -1,7 +1,7 @@
-From 9a833f0490bff4bd99b43c9cbc7e57b5d55c441f Mon Sep 17 00:00:00 2001
+From b7cb778cf9cb4f5f2bb647419b8a41c7976df0a7 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Tue, 8 May 2018 11:08:19 +0300
-Subject: [PATCH 152/798] mei: hbm: add capabilities message
+Subject: [PATCH 75/97] mei: hbm: add capabilities message
 
 The HBM capabilities command allows performing
 capabilities handshake between FW and a host driver.
@@ -235,5 +235,5 @@ index 1187522284d5..6a815a1f0201 100644
  	struct mei_fw_version fw_ver[MEI_MAX_FW_VER_BLOCKS];
  
 -- 
-2.20.0
+2.19.1
 

@@ -1,7 +1,7 @@
-From 74e00b5e3d8398a384cc96b841225e48f13d71fb Mon Sep 17 00:00:00 2001
+From ccbc6b40daa37aef55aacf9a4275c9ec8e09b188 Mon Sep 17 00:00:00 2001
 From: Yael Samet <yael.samet@intel.com>
 Date: Tue, 5 Sep 2017 12:21:49 +0300
-Subject: [PATCH 168/798] mei: dal: dynamic application loader
+Subject: [PATCH 91/97] mei: dal: dynamic application loader
 
 DAL stands for Dynamic Application Loader, it provides the ability
 to run Java applets in a secured environment inside of Intel ME security
@@ -18,22 +18,20 @@ Change-Id: I0d6d9af6039e888c8575c2f21dc37afbadc676da
 Signed-off-by: Yael Samet <yael.samet@intel.com>
 Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
 ---
- drivers/misc/mei/Kconfig         |   3 +
- drivers/misc/mei/Makefile        |   1 +
- drivers/misc/mei/dal/Kconfig     |   7 +
- drivers/misc/mei/dal/Makefile    |   9 +
- drivers/misc/mei/dal/dal_class.c | 778 +++++++++++++++++++++++++++++++
- drivers/misc/mei/dal/dal_dev.h   | 149 ++++++
+ drivers/misc/mei/Kconfig         |    3 
+ drivers/misc/mei/Makefile        |    1 
+ drivers/misc/mei/dal/Kconfig     |    7 
+ drivers/misc/mei/dal/Makefile    |    9 
+ drivers/misc/mei/dal/dal_class.c |  778 +++++++++++++++++++++++++++++++++++++++
+ drivers/misc/mei/dal/dal_dev.h   |  149 +++++++
  6 files changed, 947 insertions(+)
  create mode 100644 drivers/misc/mei/dal/Kconfig
  create mode 100644 drivers/misc/mei/dal/Makefile
  create mode 100644 drivers/misc/mei/dal/dal_class.c
  create mode 100644 drivers/misc/mei/dal/dal_dev.h
 
-diff --git a/drivers/misc/mei/Kconfig b/drivers/misc/mei/Kconfig
-index 49de44e485a2..94961573f5f8 100644
---- a/drivers/misc/mei/Kconfig
-+++ b/drivers/misc/mei/Kconfig
+--- dev-bkc.orig/drivers/misc/mei/Kconfig
++++ dev-bkc/drivers/misc/mei/Kconfig
 @@ -53,4 +53,7 @@ config INTEL_MEI_VIRTIO
  	  The module will be called mei_virtio.
  	  Enable this if your virtual machine supports virtual mei
@@ -42,20 +40,15 @@ index 49de44e485a2..94961573f5f8 100644
 +source "drivers/misc/mei/dal/Kconfig"
 +
  source "drivers/misc/mei/spd/Kconfig"
-diff --git a/drivers/misc/mei/Makefile b/drivers/misc/mei/Makefile
-index c632e72406d6..462fa25242d8 100644
---- a/drivers/misc/mei/Makefile
-+++ b/drivers/misc/mei/Makefile
-@@ -29,3 +29,4 @@ obj-$(CONFIG_INTEL_MEI_VIRTIO) += mei-virtio.o
+--- dev-bkc.orig/drivers/misc/mei/Makefile
++++ dev-bkc/drivers/misc/mei/Makefile
+@@ -29,3 +29,4 @@ obj-$(CONFIG_INTEL_MEI_VIRTIO) += mei-vi
  mei-virtio-objs := hw-virtio.o
  
  obj-$(CONFIG_INTEL_MEI_SPD) += spd/
 +obj-$(CONFIG_INTEL_MEI_DAL) += dal/
-diff --git a/drivers/misc/mei/dal/Kconfig b/drivers/misc/mei/dal/Kconfig
-new file mode 100644
-index 000000000000..5d8356ae931e
 --- /dev/null
-+++ b/drivers/misc/mei/dal/Kconfig
++++ dev-bkc/drivers/misc/mei/dal/Kconfig
 @@ -0,0 +1,7 @@
 +config INTEL_MEI_DAL
 +	tristate "Dynamic Application Loader for ME"
@@ -64,11 +57,8 @@ index 000000000000..5d8356ae931e
 +	  Dynamic Application Loader enables downloading java applets
 +	  to DAL FW and run it in a secure environment.
 +	  The DAL module exposes both user space api and kernel space api.
-diff --git a/drivers/misc/mei/dal/Makefile b/drivers/misc/mei/dal/Makefile
-new file mode 100644
-index 000000000000..e073531bc88d
 --- /dev/null
-+++ b/drivers/misc/mei/dal/Makefile
++++ dev-bkc/drivers/misc/mei/dal/Makefile
 @@ -0,0 +1,9 @@
 +# SPDX-License-Identifier: GPL-2.0
 +
@@ -79,11 +69,8 @@ index 000000000000..e073531bc88d
 +mei_dal-objs += acp_parser.o
 +mei_dal-objs += bh_external.o
 +mei_dal-objs += bh_internal.o
-diff --git a/drivers/misc/mei/dal/dal_class.c b/drivers/misc/mei/dal/dal_class.c
-new file mode 100644
-index 000000000000..607c63c3dca9
 --- /dev/null
-+++ b/drivers/misc/mei/dal/dal_class.c
++++ dev-bkc/drivers/misc/mei/dal/dal_class.c
 @@ -0,0 +1,778 @@
 +// SPDX-License-Identifier: BSD-3-Clause OR GPL-2.0
 +/*
@@ -863,11 +850,8 @@ index 000000000000..607c63c3dca9
 +MODULE_AUTHOR("Intel Corporation");
 +MODULE_DESCRIPTION("Intel(R) MEI Dynamic Application Loader (DAL)");
 +MODULE_LICENSE("GPL v2");
-diff --git a/drivers/misc/mei/dal/dal_dev.h b/drivers/misc/mei/dal/dal_dev.h
-new file mode 100644
-index 000000000000..3cad5a85c5de
 --- /dev/null
-+++ b/drivers/misc/mei/dal/dal_dev.h
++++ dev-bkc/drivers/misc/mei/dal/dal_dev.h
 @@ -0,0 +1,149 @@
 +/* SPDX-License-Identifier: BSD-3-Clause OR GPL-2.0 */
 +/*
@@ -1018,6 +1002,3 @@ index 000000000000..3cad5a85c5de
 +void dal_dc_destroy(struct dal_device *ddev, enum dal_intf intf);
 +
 +#endif /* _DAL_KDI_H_ */
--- 
-2.20.0
-

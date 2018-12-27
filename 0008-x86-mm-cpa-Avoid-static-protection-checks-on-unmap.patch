@@ -1,7 +1,7 @@
-From 9007d6fb5c0047699641a09782f64f7d8a9174af Mon Sep 17 00:00:00 2001
+From 34ae4bfeab1a8c3177f950d9344f6337e5f18f4b Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:13 +0200
-Subject: [PATCH 008/798] x86/mm/cpa: Avoid static protection checks on unmap
+Subject: [PATCH 08/12] x86/mm/cpa: Avoid static protection checks on unmap
 
 If the new pgprot has the PRESENT bit cleared, then conflicts vs. RW/NX are
 completely irrelevant.
@@ -42,7 +42,7 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  1 file changed, 7 insertions(+)
 
 diff --git a/arch/x86/mm/pageattr.c b/arch/x86/mm/pageattr.c
-index 98e5c709ba7f..67e77576f678 100644
+index cdf52eb86f3a..8f9083eb21ac 100644
 --- a/arch/x86/mm/pageattr.c
 +++ b/arch/x86/mm/pageattr.c
 @@ -526,6 +526,13 @@ static inline pgprot_t static_protections(pgprot_t prot, unsigned long start,
@@ -60,5 +60,5 @@ index 98e5c709ba7f..67e77576f678 100644
  	end = start + npg * PAGE_SIZE - 1;
  
 -- 
-2.20.0
+2.19.1
 

@@ -1,7 +1,7 @@
-From 7c744c377299bbe0d1a3e3e869509873c703e497 Mon Sep 17 00:00:00 2001
+From 28b346ffb4264bb98782aa13a44bab9ffc5ff5fe Mon Sep 17 00:00:00 2001
 From: Libin Yang <libin.yang@intel.com>
 Date: Tue, 4 Dec 2018 12:03:40 +0800
-Subject: [PATCH 766/798] VBS: export vbs symbols
+Subject: [PATCH 10/18] VBS: export vbs symbols
 
 This patch exports some vbs symbols for other modules to use.
 
@@ -14,7 +14,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 4 insertions(+)
 
 diff --git a/drivers/vbs/vq.c b/drivers/vbs/vq.c
-index 9f7a829c7a67..4ea44c47b871 100644
+index 9f7a829..4ea44c4 100644
 --- a/drivers/vbs/vq.c
 +++ b/drivers/vbs/vq.c
 @@ -243,6 +243,7 @@ int virtio_vq_getchain(struct virtio_vq_info *vq, uint16_t *pidx,
@@ -50,5 +50,5 @@ index 9f7a829c7a67..4ea44c47b871 100644
  /*
   * Initialize the currently-selected virtqueue.
 -- 
-2.20.0
+2.7.4
 

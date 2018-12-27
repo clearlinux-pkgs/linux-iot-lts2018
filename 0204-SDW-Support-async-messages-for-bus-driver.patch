@@ -1,7 +1,7 @@
-From 9fa4c22a07a5b36c37efed9ac315e2b5db753e06 Mon Sep 17 00:00:00 2001
+From 77f6b97b56921f08be31465abfb02ce9956deed2 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Fri, 29 Apr 2016 14:22:16 +0530
-Subject: [PATCH 204/798] SDW: Support async messages for bus driver.
+Subject: [PATCH 029/296] SDW: Support async messages for bus driver.
 
 All of the messages to the master controller for read/write
 register are synchronous for calling function. Master controller
@@ -207,5 +207,5 @@ index 01c846b0c695..d16579b35f8a 100644
  		struct sdw_bra_block *block);
  	int (*monitor_handover)(struct sdw_master *mstr,
 -- 
-2.20.0
+2.19.1
 

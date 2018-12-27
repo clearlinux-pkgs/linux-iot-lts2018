@@ -1,7 +1,7 @@
-From a275cd3cf1581cc7631e0a618e76c8c547a64669 Mon Sep 17 00:00:00 2001
+From 56a30670019cd2550c6b82d8e167167f274c6f15 Mon Sep 17 00:00:00 2001
 From: Peter Huewe <peterhuewe@gmx.de>
 Date: Mon, 3 Sep 2018 21:51:51 +0200
-Subject: [PATCH 111/798] tpm: Make SECURITYFS a weak dependency
+Subject: [PATCH 33/97] tpm: Make SECURITYFS a weak dependency
 
 While having SECURITYFS enabled for the tpm subsystem is beneficial in
 most cases, it is not strictly necessary to have it enabled at all.
@@ -34,5 +34,5 @@ index 18c81cbe4704..536e55d3919f 100644
  	select CRYPTO_HASH_INFO
  	---help---
 -- 
-2.20.0
+2.19.1
 

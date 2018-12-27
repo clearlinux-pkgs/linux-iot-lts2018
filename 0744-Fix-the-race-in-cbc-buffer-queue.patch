@@ -1,7 +1,7 @@
-From fdfeab55cfa086556912f6de3cc9e76722390531 Mon Sep 17 00:00:00 2001
+From a13be70e5ba050d848fc4005add46ca89bb8e6e6 Mon Sep 17 00:00:00 2001
 From: padmarao edapalapati <padmarao.edapalapati@intel.com>
 Date: Fri, 16 Nov 2018 11:30:09 +0530
-Subject: [PATCH 744/798] Fix the race in cbc buffer queue
+Subject: [PATCH 7/7] Fix the race in cbc buffer queue
 
 There is a possible race in cbc_buffer_release in memset
 Anothe issue is the cbc_buffer_queue read write defined as
@@ -86,5 +86,5 @@ index 4439e34f5142..714fd95c74b1 100644
  
  	/* Send to debug device */
 -- 
-2.20.0
+2.19.1
 

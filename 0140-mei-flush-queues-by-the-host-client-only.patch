@@ -1,7 +1,7 @@
-From 867a5a1592ff3c048c2b9e425a08d2fc2e0bc737 Mon Sep 17 00:00:00 2001
+From 9599df04ec03c4d335829d539c8b1ce0b9b7885f Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Mon, 17 Sep 2018 16:18:07 +0300
-Subject: [PATCH 140/798] mei: flush queues by the host client only
+Subject: [PATCH 63/97] mei: flush queues by the host client only
 
 During queues flush, the me client in most cases is already
 unlinked hence the me client id is unavailable. The host client
@@ -62,5 +62,5 @@ index ebdcf0b450e2..ee58561ceb08 100644
  	}
  }
 -- 
-2.20.0
+2.19.1
 

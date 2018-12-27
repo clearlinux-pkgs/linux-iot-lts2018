@@ -1,7 +1,7 @@
-From 6007b516d806f00ff625a0548aa023fd2a3665bc Mon Sep 17 00:00:00 2001
+From 6fe60544d740cb4fec572f8945333c10d4f863ca Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:11 +0200
-Subject: [PATCH 006/798] x86/mm/cpa: Add debug mechanism
+Subject: [PATCH 06/12] x86/mm/cpa: Add debug mechanism
 
 The whole static protection magic is silently fixing up anything which is
 handed in. That's just wrong. The offending call sites need to be fixed.
@@ -24,7 +24,7 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  1 file changed, 52 insertions(+), 9 deletions(-)
 
 diff --git a/arch/x86/mm/pageattr.c b/arch/x86/mm/pageattr.c
-index b0e1dd6ce89d..9a29e690826d 100644
+index 61ff27848452..1f2519055b30 100644
 --- a/arch/x86/mm/pageattr.c
 +++ b/arch/x86/mm/pageattr.c
 @@ -42,6 +42,13 @@ struct cpa_data {
@@ -133,5 +133,5 @@ index b0e1dd6ce89d..9a29e690826d 100644
  		new_prot = pgprot_clear_protnone_bits(new_prot);
  
 -- 
-2.20.0
+2.19.1
 

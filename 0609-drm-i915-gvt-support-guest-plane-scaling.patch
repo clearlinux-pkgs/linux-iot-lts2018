@@ -1,7 +1,7 @@
-From 1cfec8ddc078f1f46adfc19754f020d601513df6 Mon Sep 17 00:00:00 2001
+From dfc6594fedd9c0cb7121c3cff5c5b9e5f732eceb Mon Sep 17 00:00:00 2001
 From: Fei Jiang <fei.jiang@intel.com>
 Date: Fri, 14 Sep 2018 16:10:19 +0800
-Subject: [PATCH 609/798] drm/i915/gvt: support guest plane scaling
+Subject: [PATCH 138/214] drm/i915/gvt: support guest plane scaling
 
 It is to support plane scaling feature, need let guest access PS_CTRL,
 PS_WIN, PS_POS registers. Use parameter domain_scaler_owner to control
@@ -308,10 +308,10 @@ index 6c4d4a21474b..74865c23f809 100644
  
  #define MEMBER(T, member, ...) T member;
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 1129168fa96e..a4f8d1cff799 100644
+index 91b53bc444dd..bc4d36c1a672 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
-@@ -13930,6 +13930,11 @@ static void intel_crtc_init_scalers(struct intel_crtc *crtc,
+@@ -13926,6 +13926,11 @@ static void intel_crtc_init_scalers(struct intel_crtc *crtc,
  		scaler->in_use = 0;
  		scaler->mode = PS_SCALER_MODE_DYN;
  		scaler->owned = 1;
@@ -324,5 +324,5 @@ index 1129168fa96e..a4f8d1cff799 100644
  			 !(1 << (crtc->pipe * SKL_NUM_SCALERS + i) &
  			  dev_priv->vgpu.scaler_owned))
 -- 
-2.20.0
+2.19.1
 

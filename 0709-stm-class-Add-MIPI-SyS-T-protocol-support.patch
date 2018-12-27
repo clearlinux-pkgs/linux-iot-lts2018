@@ -1,7 +1,7 @@
-From 6d7225d215ff53b1fa14d4db6102c12a7829406b Mon Sep 17 00:00:00 2001
+From 680f20c9b7da1327283627986b725018b0e1d972 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:58 +0300
-Subject: [PATCH 709/798] stm class: Add MIPI SyS-T protocol support
+Subject: [PATCH 10/19] stm class: Add MIPI SyS-T protocol support
 
 This adds support for MIPI SyS-T protocol as specified in an open
 standard [1]. In addition to marking message boundaries, it also
@@ -373,5 +373,5 @@ index 000000000000..ffeb057b777c
 +MODULE_DESCRIPTION("MIPI SyS-T STM framing protocol driver");
 +MODULE_AUTHOR("Alexander Shishkin <alexander.shishkin@linux.intel.com>");
 -- 
-2.20.0
+2.19.1
 

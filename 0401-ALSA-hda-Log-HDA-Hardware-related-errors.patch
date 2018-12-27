@@ -1,7 +1,7 @@
-From 87708177cee9e64fef09973da54fd3f6e7eaf4af Mon Sep 17 00:00:00 2001
+From f3e1bda9e2ffdfb9826eab1a9bdb4a56e1427692 Mon Sep 17 00:00:00 2001
 From: Pardha Saradhi K <pardha.saradhi.kesapragada@intel.com>
 Date: Wed, 19 Jul 2017 00:41:43 +0530
-Subject: [PATCH 401/798] ALSA: hda: Log HDA Hardware related errors
+Subject: [PATCH 226/296] ALSA: hda: Log HDA Hardware related errors
 
 Detect the timeout while modifying HDA DMA related Registers
 for stream reset and print them to console for user information
@@ -42,5 +42,5 @@ index 00954efaa483..0fdb6dd7f316 100644
  	if (azx_dev->posbuf)
  		*azx_dev->posbuf = 0;
 -- 
-2.20.0
+2.19.1
 

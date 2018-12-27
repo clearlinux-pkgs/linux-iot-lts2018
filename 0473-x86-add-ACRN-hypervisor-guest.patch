@@ -1,7 +1,7 @@
-From d56dcb8a3165a53b93e68ff14769e8c03fb22016 Mon Sep 17 00:00:00 2001
+From 4862b0cbd994bd609098340fd9e4c6fae256e847 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:58:54 +0800
-Subject: [PATCH 473/798] x86: add ACRN hypervisor guest
+Subject: [PATCH 002/214] x86: add ACRN hypervisor guest
 
 add x86_hyper_acrn into supported hypervisors array, which enabling
 ACRN services guest run on ACRN hypervisor.
@@ -43,10 +43,10 @@ index 0038a2d10a7a..466219296cd6 100644
  obj-$(subst m,y,$(CONFIG_HYPERV)) += hyperv/
  
 diff --git a/arch/x86/Kconfig b/arch/x86/Kconfig
-index 26bc0aa4a869..6cb07933d406 100644
+index 1a0be022f91d..04855e782c63 100644
 --- a/arch/x86/Kconfig
 +++ b/arch/x86/Kconfig
-@@ -778,6 +778,8 @@ config QUEUED_LOCK_STAT
+@@ -782,6 +782,8 @@ config QUEUED_LOCK_STAT
  	  behavior of paravirtualized queued spinlocks and report
  	  them on debugfs.
  
@@ -196,5 +196,5 @@ index 479ca4728de0..5a6f072e6748 100644
  
  enum x86_hypervisor_type x86_hyper_type;
 -- 
-2.20.0
+2.19.1
 

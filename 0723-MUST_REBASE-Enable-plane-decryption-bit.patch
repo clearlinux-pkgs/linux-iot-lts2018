@@ -1,7 +1,7 @@
-From 9498f71e9d47ff8c5f00f924c3dec82483c29f9d Mon Sep 17 00:00:00 2001
+From bc0dcf57f7b5dbe5be00eb31deaaed696e9301c3 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Thu, 1 Nov 2018 14:06:30 +0800
-Subject: [PATCH 723/798] MUST_REBASE: Enable plane decryption bit
+Subject: [PATCH 01/11] MUST_REBASE: Enable plane decryption bit
 
 Enable plane decryption bit if the plane decryption check
 return true. This plane decryption bit will be used for
@@ -84,10 +84,10 @@ index a16a74d7e15e..273fdf3b0e0f 100644
   * drm_plane_create_alpha_property - create a new alpha property
   * @plane: drm plane
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 00b5e45cd44d..0297014630a5 100644
+index 3c2cc2e19826..c88133da35c4 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
-@@ -6544,6 +6544,7 @@ enum {
+@@ -6540,6 +6540,7 @@ enum {
  #define   PLANE_CTL_ALPHA_DISABLE		(0 << 4)
  #define   PLANE_CTL_ALPHA_SW_PREMULTIPLY	(2 << 4)
  #define   PLANE_CTL_ALPHA_HW_PREMULTIPLY	(3 << 4)
@@ -173,5 +173,5 @@ index 8a152dc16ea5..47d018e31bce 100644
  	/**
  	 * @rotation_property:
 -- 
-2.20.0
+2.19.1
 

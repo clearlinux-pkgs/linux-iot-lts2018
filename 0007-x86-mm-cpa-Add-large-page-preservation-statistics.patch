@@ -1,7 +1,7 @@
-From d5b245aaf96227438e98867d447bf020a2ee424c Mon Sep 17 00:00:00 2001
+From 157ea07d5141c76e6f422dfdbcbc6745a2879123 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:12 +0200
-Subject: [PATCH 007/798] x86/mm/cpa: Add large page preservation statistics
+Subject: [PATCH 07/12] x86/mm/cpa: Add large page preservation statistics
 
 The large page preservation mechanism is just magic and provides no
 information at all. Add optional statistic output in debugfs so the magic can
@@ -33,10 +33,10 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  2 files changed, 105 insertions(+), 2 deletions(-)
 
 diff --git a/arch/x86/Kconfig b/arch/x86/Kconfig
-index 44c6a82b7ce5..26bc0aa4a869 100644
+index 1a0be022f91d..65728bb1182c 100644
 --- a/arch/x86/Kconfig
 +++ b/arch/x86/Kconfig
-@@ -1481,6 +1481,14 @@ config X86_DIRECT_GBPAGES
+@@ -1491,6 +1491,14 @@ config X86_DIRECT_GBPAGES
  	  supports them), so don't confuse the user by printing
  	  that we have them enabled.
  
@@ -52,7 +52,7 @@ index 44c6a82b7ce5..26bc0aa4a869 100644
  	def_bool y
  
 diff --git a/arch/x86/mm/pageattr.c b/arch/x86/mm/pageattr.c
-index 9a29e690826d..98e5c709ba7f 100644
+index 1f2519055b30..cdf52eb86f3a 100644
 --- a/arch/x86/mm/pageattr.c
 +++ b/arch/x86/mm/pageattr.c
 @@ -101,6 +101,95 @@ void arch_report_meminfo(struct seq_file *m)
@@ -200,5 +200,5 @@ index 9a29e690826d..98e5c709ba7f 100644
  					      CPA_PROTECT);
  
 -- 
-2.20.0
+2.19.1
 
