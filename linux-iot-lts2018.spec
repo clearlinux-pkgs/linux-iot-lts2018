@@ -27,6 +27,7 @@ Source1:        config-iot-lts2018
 Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
 Source4:        cmdline-iot-lts2018-sos
+Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
@@ -1769,6 +1770,7 @@ cp %{SOURCE1} .
 cp %{SOURCE2} .
 cp %{SOURCE3} .
 cp %{SOURCE4} .
+cp %{SOURCE5} .
 cp -a /usr/lib/firmware/i915 firmware/
 cp -a /usr/lib/firmware/intel-ucode firmware/
 cp -a /usr/lib/firmware/intel firmware/
