@@ -17,7 +17,7 @@ Name:           linux-iot-lts2018
 Version:        4.19.8
 # Release number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-Release:        1812241100
+Release:        1812262056
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -30,8 +30,8 @@ Source4:        cmdline-iot-lts2018-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.8-base-181224T110058Z
-# config.tag: lts-v4.19.8-base-181224T110058Z
+# quilt.tag:  lts-v4.19.8-base-181226T205600Z
+# config.tag: lts-v4.19.8-base-181226T205600Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -856,6 +856,39 @@ Patch0805: 0805-drm-i915-execlists-Try-preempt-reset-from-h.patch
 Patch0806: 0806-drm-i915-preemption-Select-timeout-when-sch.patch
 Patch0807: 0807-drm-i915-Use-a-preemption-timeout-to-enforc.patch
 Patch0808: 0808-drm-i915-Allow-user-control-over-preempt-ti.patch
+Patch0809: 0809-media-intel-ipu4-add-timestamp-info-in-driv.patch
+Patch0810: 0810-media-ov2775-Update-v4l2-ctrl-setting.patch
+Patch0811: 0811-media-Buttress-base-addr-interface.patch
+Patch0812: 0812-media-intel-ipu4-ox03a10-set-hflip-default.patch
+Patch0813: 0813-media-intel-ipu4-magna-Modify-for-dual-magn.patch
+Patch0814: 0814-media-ov2775-update-register-setting.patch
+Patch0815: 0815-media-intel-ipu4-be-soc-Set-NV16-input-form.patch
+Patch0816: 0816-media-ti964-pdata-for-AS_1140.patch
+Patch0817: 0817-media-ti964-add-magna-subdev-for-2nd-ti964.patch
+Patch0818: 0818-media-intel-ipu4-css-scci_IPU4_master_20181.patch
+Patch0819: 0819-media-intel-ipu4-css-scci_IPU4_master_20181.patch
+Patch0820: 0820-media-intel-ipu4-fix-build-warning.patch
+Patch0821: 0821-media-intel-ipu4-VIRT-Use-pointer-for-sync-.patch
+Patch0822: 0822-media-intel-ipu4-VIRT-Psys-mediation-stub-p.patch
+Patch0823: 0823-media-intel-ipu4-VIRT-Psys-mediation-connec.patch
+Patch0824: 0824-media-intel-ipu4-VIRT-Support-for-PSYS-BE.patch
+Patch0825: 0825-media-intel-ipu4-VIRT-Add-support-for-getbu.patch
+Patch0826: 0826-media-intel-ipu4-VIRT-Add-support-for-dqeve.patch
+Patch0827: 0827-media-intel-ipu4-VIRT-Add-support-for-IPU_I.patch
+Patch0828: 0828-media-intel-ipu4-VIRT-Add-32-bits-IOTCL-sup.patch
+Patch0829: 0829-media-intel-ipu4-VIRT-Add-class_create-for-.patch
+Patch0830: 0830-media-intel-ipu4-VIRT-Fix-1st-run-hang-and-.patch
+Patch0831: 0831-media-intel-ipu4-VIRT-Move-the-PYSY-buffer-.patch
+Patch0832: 0832-media-intel-ipu4-VIRT-Use-actual-object-siz.patch
+Patch0833: 0833-media-intel-ipu4-VIRT-Add-timeout-to-front-.patch
+Patch0834: 0834-media-intel-ipu4-VIRT-Fixed-function-exit-t.patch
+Patch0835: 0835-media-intel-ipu4-VIRT-Use-native-driver-fun.patch
+Patch0836: 0836-media-ici-Change-value-of-ICI_FORMAT_RGB565.patch
+Patch0837: 0837-media-intel-ipu4-VIRT-Fix-PSYS-2-PG-operati.patch
+Patch0838: 0838-media-ici-Change-ici_isys_pixelformat-param.patch
+Patch0839: 0839-media-intel-ipu4-ICI-Fix-putbuf-list-and-ge.patch
+Patch0840: 0840-media-ipu4-add-virtio-depends-for-ipu-virti.patch
+Patch0841: 0841-media-intel-ipu4-VIRT-Support-for-IPU-ACRN-.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1693,6 +1726,39 @@ Linux kernel extra files
 %patch0806 -p1
 %patch0807 -p1
 %patch0808 -p1
+%patch0809 -p1
+%patch0810 -p1
+%patch0811 -p1
+%patch0812 -p1
+%patch0813 -p1
+%patch0814 -p1
+%patch0815 -p1
+%patch0816 -p1
+%patch0817 -p1
+%patch0818 -p1
+%patch0819 -p1
+%patch0820 -p1
+%patch0821 -p1
+%patch0822 -p1
+%patch0823 -p1
+%patch0824 -p1
+%patch0825 -p1
+%patch0826 -p1
+%patch0827 -p1
+%patch0828 -p1
+%patch0829 -p1
+%patch0830 -p1
+%patch0831 -p1
+%patch0832 -p1
+%patch0833 -p1
+%patch0834 -p1
+%patch0835 -p1
+%patch0836 -p1
+%patch0837 -p1
+%patch0838 -p1
+%patch0839 -p1
+%patch0840 -p1
+%patch0841 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
