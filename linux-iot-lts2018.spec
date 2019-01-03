@@ -17,7 +17,7 @@ Name:           linux-iot-lts2018
 Version:        4.19.8
 # Release number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-Release:        1812281845
+Release:        1901020537
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -31,8 +31,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.8-base-181228T184545Z
-# config.tag: lts-v4.19.8-base-181228T184545Z
+# quilt.tag:  lts-v4.19.8-base-190102T053708Z
+# config.tag: lts-v4.19.8-base-190102T053708Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -891,6 +891,7 @@ Patch0839: 0839-media-intel-ipu4-ICI-Fix-putbuf-list-and-ge.patch
 Patch0840: 0840-media-ipu4-add-virtio-depends-for-ipu-virti.patch
 Patch0841: 0841-media-intel-ipu4-VIRT-Support-for-IPU-ACRN-.patch
 Patch0842: 0842-drm-i915-gvt-fix-kernel-panic-when-fail-to-.patch
+Patch0843: 0843-vhm-fix-audio-backend-module-handle-ioreq-i.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1762,6 +1763,7 @@ Linux kernel extra files
 %patch0840 -p1
 %patch0841 -p1
 %patch0842 -p1
+%patch0843 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
