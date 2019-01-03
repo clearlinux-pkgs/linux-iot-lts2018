@@ -17,7 +17,7 @@ Name:           linux-iot-lts2018
 Version:        4.19.8
 # Release number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-Release:        1901020538
+Release:        1901020539
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
