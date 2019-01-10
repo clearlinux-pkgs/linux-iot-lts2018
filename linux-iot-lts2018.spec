@@ -17,7 +17,7 @@ Name:           linux-iot-lts2018
 Version:        4.19.8
 # Release number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-Release:        1901020539
+Release:        1901090631
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -31,8 +31,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.8-base-190102T053708Z
-# config.tag: lts-v4.19.8-base-190102T053708Z
+# quilt.tag:  lts-v4.19.8-base-190109T063124Z
+# config.tag: lts-v4.19.8-base-190109T063124Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -892,6 +892,26 @@ Patch0840: 0840-media-ipu4-add-virtio-depends-for-ipu-virti.patch
 Patch0841: 0841-media-intel-ipu4-VIRT-Support-for-IPU-ACRN-.patch
 Patch0842: 0842-drm-i915-gvt-fix-kernel-panic-when-fail-to-.patch
 Patch0843: 0843-vhm-fix-audio-backend-module-handle-ioreq-i.patch
+Patch0844: 0844-drm-i915-gvt-force-to-active-the-high-perfo.patch
+Patch0845: 0845-igb_avb-back-port-an-upstream-patch-and-add.patch
+Patch0846: 0846-ASoC-Intel-boards-Update-aliases-for-TDF-ma.patch
+Patch0847: 0847-drm-i915-Not-wait-for-fuse-registers-in-gue.patch
+Patch0848: 0848-media-i2c-ti964-ICI-Enabling-TI964-deser-an.patch
+Patch0849: 0849-media-ici-Change-total-BE_STREAMS-and-MAX_S.patch
+Patch0850: 0850-media-i2c-crlmodule-lite-Remove-unused-vari.patch
+Patch0851: 0851-media-intel-ipu4-VIRT-Release-ISYS-buffer-d.patch
+Patch0852: 0852-media-intel-ipu4-ICI-get-virtual-I2C-ID-dyn.patch
+Patch0853: 0853-media-intel-ipu4-ICI-Fix-cvbs-image-quality.patch
+Patch0854: 0854-media-intel-ipu4-ICI-Fix-sometimes-FW-faile.patch
+Patch0855: 0855-media-intel-ipu4-VIRT-Fix-ipu_psys_getbuf-f.patch
+Patch0856: 0856-media-i2c-pci-Reduce-log-level.patch
+Patch0857: 0857-media-ici-Add-handler-to-clear-dma-mapped-b.patch
+Patch0858: 0858-media-intel-ipu4-ICI-MAX9286-and-AR0231AT-e.patch
+Patch0859: 0859-media-i2c-Fix-for-warnings-for-max9286_ici-.patch
+Patch0860: 0860-media-intel-ipu4-VIRT-Close-dmabuf-fd-when-.patch
+Patch0861: 0861-media-intel-ipu4-ICI-Workaround-to-force-co.patch
+Patch0862: 0862-Revert-igb_avb-back-port-an-upstream-patch-.patch
+Patch0863: 0863-drm-i915-gvt-allocate-memory-for-vreg-mmio-.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1764,6 +1784,26 @@ Linux kernel extra files
 %patch0841 -p1
 %patch0842 -p1
 %patch0843 -p1
+%patch0844 -p1
+%patch0845 -p1
+%patch0846 -p1
+%patch0847 -p1
+%patch0848 -p1
+%patch0849 -p1
+%patch0850 -p1
+%patch0851 -p1
+%patch0852 -p1
+%patch0853 -p1
+%patch0854 -p1
+%patch0855 -p1
+%patch0856 -p1
+%patch0857 -p1
+%patch0858 -p1
+%patch0859 -p1
+%patch0860 -p1
+%patch0861 -p1
+%patch0862 -p1
+%patch0863 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
