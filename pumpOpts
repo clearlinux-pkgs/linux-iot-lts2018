@@ -1,2 +1,2 @@
 alias = linux
-regex = ^lts-v(.+)-base-(.+)$
+regex = ^lts-v(.+)-base-([0-9]{6})T([0-9]{4}).+$
