@@ -17,7 +17,7 @@ Name:           linux-iot-lts2018
 Version:        4.19.8
 # Release number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-Release:        1901090631
+Release:        1901111952
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -31,8 +31,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.8-base-190109T063124Z
-# config.tag: lts-v4.19.8-base-190109T063124Z
+# quilt.tag:  lts-v4.19.8-base-190111T195245Z
+# config.tag: lts-v4.19.8-base-190111T195245Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -912,6 +912,17 @@ Patch0860: 0860-media-intel-ipu4-VIRT-Close-dmabuf-fd-when-.patch
 Patch0861: 0861-media-intel-ipu4-ICI-Workaround-to-force-co.patch
 Patch0862: 0862-Revert-igb_avb-back-port-an-upstream-patch-.patch
 Patch0863: 0863-drm-i915-gvt-allocate-memory-for-vreg-mmio-.patch
+Patch0864: 0864-Security-improvement-for-depressing-compile.patch
+Patch0865: 0865-platform-x86-Change-struct-fields-to-16-bit.patch
+Patch0866: 0866-drm-i915-gvt-Get-Port-ID-from-the-encoder-o.patch
+Patch0867: 0867-drivers-hyper_dmabuf-Reuse-the-exported-dma.patch
+Patch0868: 0868-drivers-hyper_dmabuf-Remove-the-imported-dm.patch
+Patch0869: 0869-drivers-hyper_dmabuf-Remove-from-imported_l.patch
+Patch0870: 0870-Security-Fix-copy-wrong-size-of-keystore-cl.patch
+Patch0871: 0871-Bug-Fix-to-fix-incorrect-osid-value.patch
+Patch0872: 0872-media-intel-ipu4-VIRT-Avoid-double-close-of.patch
+Patch0873: 0873-media-intel-ipu4-VIRT-Increase-the-POLL_WAI.patch
+Patch0874: 0874-intel-ipu4-ici-Move-empty-list-check-into-s.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1804,6 +1815,17 @@ Linux kernel extra files
 %patch0861 -p1
 %patch0862 -p1
 %patch0863 -p1
+%patch0864 -p1
+%patch0865 -p1
+%patch0866 -p1
+%patch0867 -p1
+%patch0868 -p1
+%patch0869 -p1
+%patch0870 -p1
+%patch0871 -p1
+%patch0872 -p1
+%patch0873 -p1
+%patch0874 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
