@@ -17,7 +17,7 @@ Name:           linux-iot-lts2018
 Version:        4.19.13
 # Release number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-Release:        1901141831
+Release:        1901170915
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -31,8 +31,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.13-base-190114T183036Z
-# config.tag: lts-v4.19.13-base-190114T183036Z
+# quilt.tag:  lts-v4.19.13-base-190117T091501Z
+# config.tag: lts-v4.19.13-base-190117T091501Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -920,6 +920,15 @@ Patch0868: 0868-Bug-Fix-to-fix-incorrect-osid-value.patch
 Patch0869: 0869-media-intel-ipu4-VIRT-Avoid-double-close-of.patch
 Patch0870: 0870-media-intel-ipu4-VIRT-Increase-the-POLL_WAI.patch
 Patch0871: 0871-intel-ipu4-ici-Move-empty-list-check-into-s.patch
+Patch0872: 0872-drm-Add-per-plane-pixel-blend-mode-property.patch
+Patch0873: 0873-drm-i915-Add-plane-alpha-blending-support-v.patch
+Patch0874: 0874-igb_avb-Fix-invalid-memory-access-after-S3-.patch
+Patch0875: 0875-drm-i915-Introduce-initial-mode-setting.patch
+Patch0876: 0876-keystore-fix-memory-leaks.patch
+Patch0877: 0877-keystore-fix-missing-break.patch
+Patch0878: 0878-keystore-add-application-authentication-fea.patch
+Patch0879: 0879-Revert-drm-i915-Add-plane-alpha-blending-su.patch
+Patch0880: 0880-Revert-drm-Add-per-plane-pixel-blend-mode-p.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1820,6 +1829,15 @@ Linux kernel extra files
 %patch0869 -p1
 %patch0870 -p1
 %patch0871 -p1
+%patch0872 -p1
+%patch0873 -p1
+%patch0874 -p1
+%patch0875 -p1
+%patch0876 -p1
+%patch0877 -p1
+%patch0878 -p1
+%patch0879 -p1
+%patch0880 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
