@@ -17,7 +17,7 @@ Name:           linux-iot-lts2018
 Version:        4.19.13
 # Release number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-Release:        1901170915
+Release:        1901182211
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -31,8 +31,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.13-base-190117T091501Z
-# config.tag: lts-v4.19.13-base-190117T091501Z
+# quilt.tag:  lts-v4.19.13-base-190118T221148Z
+# config.tag: lts-v4.19.13-base-190118T221148Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -929,6 +929,11 @@ Patch0877: 0877-keystore-fix-missing-break.patch
 Patch0878: 0878-keystore-add-application-authentication-fea.patch
 Patch0879: 0879-Revert-drm-i915-Add-plane-alpha-blending-su.patch
 Patch0880: 0880-Revert-drm-Add-per-plane-pixel-blend-mode-p.patch
+Patch0881: 0881-ASoC-Intel-Skylake-Add-FE-and-BE-DAIs-for-U.patch
+Patch0882: 0882-Revert-ASoC-Intel-board-Add-support-for-FE-.patch
+Patch0883: 0883-ASoC-Intel-board-Update-BXT-P-ULL-machine-d.patch
+Patch0884: 0884-media-intel-ipu4-ICI-start-stream-with-corr.patch
+Patch0885: 0885-media-intel-ipu4-ICI-Reorder-mutex-lock-of-.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1838,6 +1843,11 @@ Linux kernel extra files
 %patch0878 -p1
 %patch0879 -p1
 %patch0880 -p1
+%patch0881 -p1
+%patch0882 -p1
+%patch0883 -p1
+%patch0884 -p1
+%patch0885 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
