@@ -17,7 +17,7 @@ Name:           linux-iot-lts2018
 Version:        4.19.13
 # Release number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-Release:        1901182211
+Release:        1901221809
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -31,8 +31,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.13-base-190118T221148Z
-# config.tag: lts-v4.19.13-base-190118T221148Z
+# quilt.tag:  lts-v4.19.13-base-190122T180934Z
+# config.tag: lts-v4.19.13-base-190122T180934Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -934,6 +934,70 @@ Patch0882: 0882-Revert-ASoC-Intel-board-Add-support-for-FE-.patch
 Patch0883: 0883-ASoC-Intel-board-Update-BXT-P-ULL-machine-d.patch
 Patch0884: 0884-media-intel-ipu4-ICI-start-stream-with-corr.patch
 Patch0885: 0885-media-intel-ipu4-ICI-Reorder-mutex-lock-of-.patch
+Patch0886: 0886-ASoC-Skl-Virt-Fix-incorrect-virt-msg-respon.patch
+Patch0887: 0887-ASoC-Skl-Virt-Add-locks-to-virtqueue-relate.patch
+Patch0888: 0888-ASoC-Skl-Virt-Add-locks-to-substreams-list.patch
+Patch0889: 0889-ASoC-Skl-Virt-Handle-timed-out-message-repl.patch
+Patch0890: 0890-trusty-Add-trusty-driver.patch
+Patch0891: 0891-trusty-Add-notifier-before-and-after-every-.patch
+Patch0892: 0892-trusty-Get-version-string-from-trusty.patch
+Patch0893: 0893-trusty-Add-interrupt-support.patch
+Patch0894: 0894-trusty-Add-fiq-support.patch
+Patch0895: 0895-trusty-arm64-fiq-support.patch
+Patch0896: 0896-trusty-fiq-arm64-Allow-multiple-fiq-handler.patch
+Patch0897: 0897-trusty-Add-trusty-logging-driver.patch
+Patch0898: 0898-trusty-add-couple-non-secure-memory-related.patch
+Patch0899: 0899-trusty-add-trusty-virtio-driver.patch
+Patch0900: 0900-trusty-add-trusty-ipc-driver.patch
+Patch0901: 0901-trusty-Select-api-version.patch
+Patch0902: 0902-trusty-Handle-fiqs-without-calling-notifier.patch
+Patch0903: 0903-trusty-Add-smp-support.patch
+Patch0904: 0904-trusty-irq-Add-support-for-secure-interrupt.patch
+Patch0905: 0905-Modify-the-static-analysis-errors-for-googl.patch
+Patch0906: 0906-Modify-Google-s-trusty-drivers-so-as-to-sup.patch
+Patch0907: 0907-Fix-the-issue-for-tipc-test-case-closer1.patch
+Patch0908: 0908-trusty-implement-trusty-OS-timer-proxy-for-.patch
+Patch0909: 0909-Replace-CPU_STARTING-CPU_DYING-with-CPU_UP_.patch
+Patch0910: 0910-trusty-fix-incompatible-pointer-types.patch
+Patch0911: 0911-trusty-move-async-works-off-system-workqueu.patch
+Patch0912: 0912-trusty-print-out-Built-in-kernel-directly.patch
+Patch0913: 0913-trusty-Popup-warning-when-LK-timer-interrup.patch
+Patch0914: 0914-trusty-log-Add-vmm-panic-notifier-for-vmm-d.patch
+Patch0915: 0915-trusty-fix-rcu_preempt-soft-lockup-crash-is.patch
+Patch0916: 0916-trusty-Add-VMM-PANIC-dump-data.patch
+Patch0917: 0917-Modify-Trusty-drivers-so-as-to-compatible-w.patch
+Patch0918: 0918-Limit-to-output-trusty-lk-log-on-debug-vers.patch
+Patch0919: 0919-trusty-ipc-tipc_msg_hdr-structure-support-l.patch
+Patch0920: 0920-trusty-ipc-change-DEFAULT_MSG_BUF_SIZE-to-6.patch
+Patch0921: 0921-check-CPUID-while-probe-trusty-drivers.patch
+Patch0922: 0922-Fix-the-compile-error-when-update-4.12.patch
+Patch0923: 0923-trusty-Fix-the-warnings-for-eywa-building.patch
+Patch0924: 0924-trusty-Enable-dynamic-timer.patch
+Patch0925: 0925-check-vmm-signature-for-vmm-dump.patch
+Patch0926: 0926-Revert-BXT-DYNAMIC-TIMER-Enable-dynamic-tim.patch
+Patch0927: 0927-Revert-trusty-implement-trusty-OS-timer-pro.patch
+Patch0928: 0928-trusty-add-support-for-parameterized-NOP-op.patch
+Patch0929: 0929-trusty-switch-to-use-version-3-of-TRUSTY_AP.patch
+Patch0930: 0930-trusty-add-support-for-SM-Wall-object.patch
+Patch0931: 0931-trusty-add-support-for-trusty-backup-timer.patch
+Patch0932: 0932-trusty-kernel-driver-code-refine.patch
+Patch0933: 0933-Change-Trusty-Kconfig-to-build-for-X86-Arch.patch
+Patch0934: 0934-trusty-Add-null-check-pointer-before-defere.patch
+Patch0935: 0935-trusty-Check-if-eVmm-is-available-before-in.patch
+Patch0936: 0936-trusty-Update-Trusty-timer-solution.patch
+Patch0937: 0937-trusty-detect-vmm-when-load-trusty-driver.patch
+Patch0938: 0938-Remove-unused-label-to-depress-compile-warn.patch
+Patch0939: 0939-trusty-Update-dependency-of-trusty-module.patch
+Patch0940: 0940-trusty-Rename-CWP-with-ACRN.patch
+Patch0941: 0941-trusty-add-RAX-into-clobber-list-of-inline-.patch
+Patch0942: 0942-trusty-Update-macro-SMC_FC_GET_WALL_SIZE-fr.patch
+Patch0943: 0943-unify-trusty-driver.patch
+Patch0944: 0944-Revert-trusty-ipc-change-DEFAULT_MSG_BUF_SI.patch
+Patch0945: 0945-refine-work-queue-in-trusty-driver.patch
+Patch0946: 0946-register-suspend-callback.patch
+Patch0947: 0947-Fix-compile-warning-from-ISO90-and-output-f.patch
+Patch0948: 0948-check-return-value-of-hypercall.patch
+Patch0949: 0949-Fix-compilation-errors-when-rebase-to-v4.19.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1848,6 +1912,70 @@ Linux kernel extra files
 %patch0883 -p1
 %patch0884 -p1
 %patch0885 -p1
+%patch0886 -p1
+%patch0887 -p1
+%patch0888 -p1
+%patch0889 -p1
+%patch0890 -p1
+%patch0891 -p1
+%patch0892 -p1
+%patch0893 -p1
+%patch0894 -p1
+%patch0895 -p1
+%patch0896 -p1
+%patch0897 -p1
+%patch0898 -p1
+%patch0899 -p1
+%patch0900 -p1
+%patch0901 -p1
+%patch0902 -p1
+%patch0903 -p1
+%patch0904 -p1
+%patch0905 -p1
+%patch0906 -p1
+%patch0907 -p1
+%patch0908 -p1
+%patch0909 -p1
+%patch0910 -p1
+%patch0911 -p1
+%patch0912 -p1
+%patch0913 -p1
+%patch0914 -p1
+%patch0915 -p1
+%patch0916 -p1
+%patch0917 -p1
+%patch0918 -p1
+%patch0919 -p1
+%patch0920 -p1
+%patch0921 -p1
+%patch0922 -p1
+%patch0923 -p1
+%patch0924 -p1
+%patch0925 -p1
+%patch0926 -p1
+%patch0927 -p1
+%patch0928 -p1
+%patch0929 -p1
+%patch0930 -p1
+%patch0931 -p1
+%patch0932 -p1
+%patch0933 -p1
+%patch0934 -p1
+%patch0935 -p1
+%patch0936 -p1
+%patch0937 -p1
+%patch0938 -p1
+%patch0939 -p1
+%patch0940 -p1
+%patch0941 -p1
+%patch0942 -p1
+%patch0943 -p1
+%patch0944 -p1
+%patch0945 -p1
+%patch0946 -p1
+%patch0947 -p1
+%patch0948 -p1
+%patch0949 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
