@@ -17,7 +17,7 @@ Name:           linux-iot-lts2018
 Version:        4.19.13
 # Release number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-Release:        1901221809
+Release:        1901240557
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -31,8 +31,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.13-base-190122T180934Z
-# config.tag: lts-v4.19.13-base-190122T180934Z
+# quilt.tag:  lts-v4.19.13-base-190124T055729Z
+# config.tag: lts-v4.19.13-base-190124T055729Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -998,6 +998,11 @@ Patch0946: 0946-register-suspend-callback.patch
 Patch0947: 0947-Fix-compile-warning-from-ISO90-and-output-f.patch
 Patch0948: 0948-check-return-value-of-hypercall.patch
 Patch0949: 0949-Fix-compilation-errors-when-rebase-to-v4.19.patch
+Patch0950: 0950-VHM-Add-one-hypercall-to-query-hardware-inf.patch
+Patch0951: 0951-HVLog-Refine-acrn_hvlog-to-remove-the-limit.patch
+Patch0952: 0952-ACRNTrace-Refine-acrn-trace-module-to-remov.patch
+Patch0953: 0953-kernel-Sync-the-common-header-file.patch
+Patch0954: 0954-vhm-remove-the-flooding-log-from-vhm.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1976,6 +1981,11 @@ Linux kernel extra files
 %patch0947 -p1
 %patch0948 -p1
 %patch0949 -p1
+%patch0950 -p1
+%patch0951 -p1
+%patch0952 -p1
+%patch0953 -p1
+%patch0954 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
