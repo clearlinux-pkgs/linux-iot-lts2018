@@ -15,9 +15,10 @@
 
 Name:           linux-iot-lts2018
 Version:        4.19.13
-# Release number is the number from PKT it consist in
+# upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-Release:        1901240557
+%global upstreamnumber         1901240557
+Release: 	1
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
