@@ -14,11 +14,11 @@
 #
 
 Name:           linux-iot-lts2018
-Version:        4.19.13
+Version:        4.19.13.190124.0557
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
 %global upstreamnumber         1901240557
-Release: 	1
+Release:        2
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -2006,8 +2006,9 @@ cp -a /usr/lib/firmware/intel firmware/
 BuildKernel() {
 
     Target=$1
+    Version="%{version}"
     Arch=x86_64
-    ExtraVer="-%{release}.${Target}"
+    ExtraVer="${Version:(-12)}-%{release}.${Target}"
 
     perl -p -i -e "s/^EXTRAVERSION.*/EXTRAVERSION = ${ExtraVer}/" Makefile
 
