@@ -14,11 +14,11 @@
 #
 
 Name:           linux-iot-lts2018
-Version:        4.19.13.190124.0557
+Version:        4.19.13.190126.0148
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1901240557
-Release:        2
+%global upstreamnumber         1901260148
+Release:        3
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.13-base-190124T055729Z
-# config.tag: lts-v4.19.13-base-190124T055729Z
+# quilt.tag:  lts-v4.19.13-base-190126T014853Z
+# config.tag: lts-v4.19.13-base-190126T014853Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1004,6 +1004,38 @@ Patch0951: 0951-HVLog-Refine-acrn_hvlog-to-remove-the-limit.patch
 Patch0952: 0952-ACRNTrace-Refine-acrn-trace-module-to-remov.patch
 Patch0953: 0953-kernel-Sync-the-common-header-file.patch
 Patch0954: 0954-vhm-remove-the-flooding-log-from-vhm.patch
+Patch0955: 0955-media-intel-ipu4-VIRT-Increase-wait-time.patch
+Patch0956: 0956-media-intel-ipu4-VIRT-Clean-up-SOS-states-a.patch
+Patch0957: 0957-media-intel-ipu4-fix-v4l2_g_ext_ctrls-param.patch
+Patch0958: 0958-media-intel-ipu4p-css-scci_IPU4_master_2018.patch
+Patch0959: 0959-media-intel-ipu4p-css-scci_IPU4_master_2018.patch
+Patch0960: 0960-media-psys-Enable-new-FW-API-for-IPU-perfor.patch
+Patch0961: 0961-media-intel-ipu4p-css-scci_IPU4_master_2018.patch
+Patch0962: 0962-media-intel-ipu4-css-scci_IPU4_master_20181.patch
+Patch0963: 0963-media-intel-ipu4p-css-scci_IPU4_master_2018.patch
+Patch0964: 0964-media-css-scci_master_20181105_2026-FwRelea.patch
+Patch0965: 0965-media-buttress-Use-ISR_STATUS-in-buttress-I.patch
+Patch0966: 0966-media-intel-ipu4-fix-2-kernel-panic-in-ipu-.patch
+Patch0967: 0967-media-intel-ipu4p-css-scci_IPU4_master_2018.patch
+Patch0968: 0968-media-Enable-streamID-switching-for-ISYS-IO.patch
+Patch0969: 0969-media-Set-IPU-device-name.patch
+Patch0970: 0970-media-i2c-add-required-kconf-dependency.patch
+Patch0971: 0971-media-Disable-CSI-EOF-IRQ.patch
+Patch0972: 0972-media-Disable-FW-IRQ-and-response-of-EOF.patch
+Patch0973: 0973-media-intel-ipu4-remove-redundant-assignmen.patch
+Patch0974: 0974-media-intel-ipu4-ov495-OV2775-OV495-enablem.patch
+Patch0975: 0975-media-intel-ipu4-css-scci_IPU4_master_20181.patch
+Patch0976: 0976-media-intel-ipu4p-css-scci_IPU4_master_2018.patch
+Patch0977: 0977-media-intel-ipu4-css-scci_IPU4_master_20181.patch
+Patch0978: 0978-media-intel-ipu4p-css-scci_IPU4_master_2018.patch
+Patch0979: 0979-media-intel-ipu4-ti960-fix-map-conflict.patch
+Patch0980: 0980-media-intel-ipu4-VIRT-Close-dmabuf-fd-when-.patch
+Patch0981: 0981-media-intel-ipu4-VIRT-Avoid-double-close-of.patch
+Patch0982: 0982-media-intel-ipu4-pdata-for-OV495-multiport.patch
+Patch0983: 0983-media-intel-ipu4-fix-TI960-i2c-adapter.patch
+Patch0984: 0984-media-intel-ipu4-enable-OV495-multiport.patch
+Patch0985: 0985-media-intel-ipu4-restore-back-ox03a-init-se.patch
+Patch0986: 0986-media-intel-ipu4-separated-init-seq-for-ox0.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1987,6 +2019,38 @@ Linux kernel extra files
 %patch0952 -p1
 %patch0953 -p1
 %patch0954 -p1
+%patch0955 -p1
+%patch0956 -p1
+%patch0957 -p1
+%patch0958 -p1
+%patch0959 -p1
+%patch0960 -p1
+%patch0961 -p1
+%patch0962 -p1
+%patch0963 -p1
+%patch0964 -p1
+%patch0965 -p1
+%patch0966 -p1
+%patch0967 -p1
+%patch0968 -p1
+%patch0969 -p1
+%patch0970 -p1
+%patch0971 -p1
+%patch0972 -p1
+%patch0973 -p1
+%patch0974 -p1
+%patch0975 -p1
+%patch0976 -p1
+%patch0977 -p1
+%patch0978 -p1
+%patch0979 -p1
+%patch0980 -p1
+%patch0981 -p1
+%patch0982 -p1
+%patch0983 -p1
+%patch0984 -p1
+%patch0985 -p1
+%patch0986 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
