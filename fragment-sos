@@ -1,6 +1,6 @@
 CONFIG_LOCALVERSION=""
 CONFIG_DEFAULT_HOSTNAME="clr"
-CONFIG_EXTRA_FIRMWARE="i915/skl_dmc_ver1_26.bin i915/kbl_dmc_ver1_01.bin i915/kbl_huc_ver02_00_1810.bin intel-ucode/06-5e-03 intel-ucode/06-4e-03 intel-ucode/06-4f-01 intel-ucode/06-56-02 intel-ucode/06-56-03 intel-ucode/06-56-04 intel-ucode/06-55-04 intel-ucode/06-8e-0a intel-ucode/06-8e-09 i915/bxt_dmc_ver1_07.bin i915/bxt_guc_ver9_29.bin i915/bxt_huc_ver01_07_1398.bin intel/reef-apl.ri intel/reef-apl.tplg"
+CONFIG_EXTRA_FIRMWARE="i915/skl_dmc_ver1_26.bin i915/kbl_dmc_ver1_01.bin i915/kbl_huc_ver02_00_1810.bin i915/bxt_dmc_ver1_07.bin i915/bxt_guc_ver9_29.bin i915/bxt_huc_ver01_07_1398.bin intel/reef-apl.ri intel/reef-apl.tplg"
 CONFIG_EXTRA_FIRMWARE_DIR="firmware"
 CONFIG_E100=m
 CONFIG_E1000=m
