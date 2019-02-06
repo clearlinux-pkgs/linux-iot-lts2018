@@ -14,16 +14,16 @@
 #
 
 Name:           linux-iot-lts2018
-Version:        4.19.18
+Version:        4.19.19
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1901301849
-Release:        7
+%global upstreamnumber         1902050457
+Release:        8
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.18.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.19.tar.xz
 Source1:        config-iot-lts2018
 Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.18-base-190130T184924Z
-# config.tag: lts-v4.19.18-base-190130T184924Z
+# quilt.tag:  lts-v4.19.19-base-190205T045721Z
+# config.tag: lts-v4.19.19-base-190205T045721Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1034,6 +1034,7 @@ Patch0981: 0981-media-intel-ipu4-fix-TI960-i2c-adapter.patch
 Patch0982: 0982-media-intel-ipu4-enable-OV495-multiport.patch
 Patch0983: 0983-media-intel-ipu4-restore-back-ox03a-init-se.patch
 Patch0984: 0984-media-intel-ipu4-separated-init-seq-for-ox0.patch
+Patch0985: 0985-usb-dwc3-gadget-use-req-needs_extra_trb.v4.19.19.merge.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1060,7 +1061,7 @@ Group:          kernel
 Linux kernel extra files
 
 %prep
-%setup -q -n linux-4.19.18
+%setup -q -n linux-4.19.19
 
 #patchXXXX PK Series
 %patch0001 -p1
@@ -2047,6 +2048,7 @@ Linux kernel extra files
 %patch0982 -p1
 %patch0983 -p1
 %patch0984 -p1
+%patch0985 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
