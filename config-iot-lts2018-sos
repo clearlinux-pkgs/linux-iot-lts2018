@@ -4,7 +4,7 @@
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 8.2.1 20180502
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 8.2.1 20190208 gcc-8-branch@268661
 #
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=80201
@@ -3139,8 +3139,7 @@ CONFIG_WATCHDOG_HANDLE_BOOT_ENABLED=y
 # CONFIG_WAFER_WDT is not set
 # CONFIG_I6300ESB_WDT is not set
 # CONFIG_IE6XX_WDT is not set
-CONFIG_ITCO_WDT=y
-# CONFIG_ITCO_VENDOR_SUPPORT is not set
+# CONFIG_ITCO_WDT is not set
 # CONFIG_IT8712F_WDT is not set
 # CONFIG_IT87_WDT is not set
 # CONFIG_HP_WATCHDOG is not set
