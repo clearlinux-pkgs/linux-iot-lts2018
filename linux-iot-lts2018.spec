@@ -17,8 +17,8 @@ Name:           linux-iot-lts2018
 Version:        4.19.19
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1902050457
-Release:        8
+%global upstreamnumber         1902080315
+Release:        9
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.19-base-190205T045721Z
-# config.tag: lts-v4.19.19-base-190205T045721Z
+# quilt.tag:  lts-v4.19.19-base-190208T031538Z
+# config.tag: lts-v4.19.19-base-190208T031538Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1035,6 +1035,13 @@ Patch0982: 0982-media-intel-ipu4-enable-OV495-multiport.patch
 Patch0983: 0983-media-intel-ipu4-restore-back-ox03a-init-se.patch
 Patch0984: 0984-media-intel-ipu4-separated-init-seq-for-ox0.patch
 Patch0985: 0985-usb-dwc3-gadget-use-req-needs_extra_trb.v4.19.19.merge.patch
+Patch0986: 0986-ASoC-Intel-Skl-Virt-Fix-PCI-dev-initializat.patch
+Patch0987: 0987-ASoC-Intel-Skylake-Virt-Support-for-enterin.patch
+Patch0988: 0988-ASoC-Skl-Virt-Handle-expired-messages-in-wo.patch
+Patch0989: 0989-Get-vcpu-pcpu-mapping.patch
+Patch0990: 0990-Fix-the-sample-data-flushing-issue-on-all-c.patch
+Patch0991: 0991-Get-profiling-status-info.patch
+Patch0992: 0992-ded-support-for-new-hypercall.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2049,6 +2056,13 @@ Linux kernel extra files
 %patch0983 -p1
 %patch0984 -p1
 %patch0985 -p1
+%patch0986 -p1
+%patch0987 -p1
+%patch0988 -p1
+%patch0989 -p1
+%patch0990 -p1
+%patch0991 -p1
+%patch0992 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
