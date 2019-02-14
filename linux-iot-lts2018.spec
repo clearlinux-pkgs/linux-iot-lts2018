@@ -1067,6 +1067,32 @@ Group:          kernel
 %description extra
 Linux kernel extra files
 
+%package sos-extra
+License:        GPL-2.0
+Summary:        The Linux kernel SOS extra files
+Group:          kernel
+
+%description sos-extra
+Linux kernel SOS extra files
+
+%package dev
+License:        GPL-2.0
+Summary:        The Linux kernel
+Group:          kernel
+Requires:       %{name} = %{version}-%{release}, %{name}-extra = %{version}-%{release}
+
+%description dev
+Linux kernel build files and install script
+
+%package sos-dev
+License:        GPL-2.0
+Summary:        The Linux kernel
+Group:          kernel
+Requires:       %{name} = %{version}-%{release}, %{name}-sos-extra = %{version}-%{release}
+
+%description sos-dev
+Linux kernel build files and install script
+
 %prep
 %setup -q -n linux-4.19.19
 
@@ -2082,7 +2108,6 @@ cp -a /usr/lib/firmware/intel firmware/
 BuildKernel() {
 
     Target=$1
-    Version="%{version}"
     Arch=x86_64
     ExtraVer="-%{release}.${Target}"
 
@@ -2106,6 +2131,7 @@ InstallKernel() {
     Kversion=$2
     Arch=x86_64
     KernelDir=%{buildroot}/usr/lib/kernel
+    DevDir=%{buildroot}/usr/lib/modules/${Kversion}/build
 
     mkdir   -p ${KernelDir}
     install -m 644 ${Target}/.config    ${KernelDir}/config-${Kversion}
@@ -2121,6 +2147,24 @@ InstallKernel() {
     rm -f %{buildroot}/usr/lib/modules/${Kversion}/build
     rm -f %{buildroot}/usr/lib/modules/${Kversion}/source
 
+    mkdir -p ${DevDir}
+    find . -type f -a '(' -name 'Makefile*' -o -name 'Kbuild*' -o -name 'Kconfig*' ')' -exec cp -t ${DevDir} --parents -pr {} +
+    find . -type f -a '(' -name '*.sh' -o -name '*.pl' ')' -exec cp -t ${DevDir} --parents -pr {} +
+    cp -t ${DevDir} -pr ${Target}/{Module.symvers,tools}
+    ln -s ../../../kernel/config-${Kversion} ${DevDir}/.config
+    ln -s ../../../kernel/System.map-${Kversion} ${DevDir}/System.map
+    cp -t ${DevDir} --parents -pr arch/x86/include
+    cp -t ${DevDir}/arch/x86/include -pr ${Target}/arch/x86/include/*
+    cp -t ${DevDir}/include -pr include/*
+    cp -t ${DevDir}/include -pr ${Target}/include/*
+    cp -t ${DevDir} --parents -pr scripts/*
+    cp -t ${DevDir}/scripts -pr ${Target}/scripts/*
+    find  ${DevDir}/scripts -type f -name '*.[cho]' -exec rm -v {} +
+    find  ${DevDir} -type f -name '*.cmd' -exec rm -v {} +
+    # Cleanup any dangling links
+    find ${DevDir} -type l -follow -exec rm -v {} +
+
+    # Kernel default target link
     ln -s org.clearlinux.${Target}.%{version}-%{release} %{buildroot}/usr/lib/kernel/default-${Target}
 }
 
@@ -2152,6 +2196,17 @@ rm -rf %{buildroot}/usr/lib/firmware
 %files extra
 %dir /usr/lib/kernel
 /usr/lib/kernel/System.map-%{kversion0}
-/usr/lib/kernel/System.map-%{kversion1}
 /usr/lib/kernel/vmlinux-%{kversion0}
+
+%files sos-extra
+%dir /usr/lib/kernel
+/usr/lib/kernel/System.map-%{kversion1}
 /usr/lib/kernel/vmlinux-%{kversion1}
+
+%files dev
+%defattr(-,root,root)
+/usr/lib/modules/%{kversion0}/build
+
+%files sos-dev
+%defattr(-,root,root)
+/usr/lib/modules/%{kversion1}/build
