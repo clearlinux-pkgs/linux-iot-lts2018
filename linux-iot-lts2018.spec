@@ -17,8 +17,8 @@ Name:           linux-iot-lts2018
 Version:        4.19.20
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1902140909
-Release:        15
+%global upstreamnumber         1902162344
+Release:        16
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.20-base-190214T090914Z
-# config.tag: lts-v4.19.20-base-190214T090914Z
+# quilt.tag:  lts-v4.19.20-base-190216T234416Z
+# config.tag: lts-v4.19.20-base-190216T234416Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1046,6 +1046,11 @@ Patch0993: 0993-iommu-vt-d-Added-option-to-disable-BXT-IPU.patch
 Patch0994: 0994-af_key-unconditionally-clone-on-broadcast.patch
 Patch0995: 0995-mfd-intel-lpss-Set-the-device-in-reset-stat.patch
 Patch0996: 0996-BXT-Workaround-for-HW-bug-data-loss-in-16-1.patch
+Patch0997: 0997-drm-i915-gvt-Refine-the-snapshort-range-of-.patch
+Patch0998: 0998-drm-i915-gvt-optimize-the-oos-memory-setup.patch
+Patch0999: 0999-drm-i915-gvt-limit-the-active-perf-on-BXT-p.patch
+Patch1000: 1000-media-intel-ipu4-VIRT-Increase-MAX_ISYS_VIR.patch
+Patch1001: 1001-media-i2c-ici-fix-for-NULL-pointer-deref-in.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2097,6 +2102,11 @@ Linux kernel build files and install script
 %patch0994 -p1
 %patch0995 -p1
 %patch0996 -p1
+%patch0997 -p1
+%patch0998 -p1
+%patch0999 -p1
+%patch1000 -p1
+%patch1001 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
