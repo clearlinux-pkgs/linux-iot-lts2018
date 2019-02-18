@@ -18,7 +18,7 @@ Version:        4.19.20
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
 %global upstreamnumber         1902162344
-Release:        17
+Release:        18
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
