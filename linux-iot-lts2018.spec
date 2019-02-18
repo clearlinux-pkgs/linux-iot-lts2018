@@ -17,8 +17,8 @@ Name:           linux-iot-lts2018
 Version:        4.19.20
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1902120600
-Release:        14
+%global upstreamnumber         1902140909
+Release:        15
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.20-base-190212T060057Z
-# config.tag: lts-v4.19.20-base-190212T060057Z
+# quilt.tag:  lts-v4.19.20-base-190214T090914Z
+# config.tag: lts-v4.19.20-base-190214T090914Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1042,6 +1042,10 @@ Patch0989: 0989-Get-vcpu-pcpu-mapping.patch
 Patch0990: 0990-Fix-the-sample-data-flushing-issue-on-all-c.patch
 Patch0991: 0991-Get-profiling-status-info.patch
 Patch0992: 0992-ded-support-for-new-hypercall.patch
+Patch0993: 0993-iommu-vt-d-Added-option-to-disable-BXT-IPU.patch
+Patch0994: 0994-af_key-unconditionally-clone-on-broadcast.patch
+Patch0995: 0995-mfd-intel-lpss-Set-the-device-in-reset-stat.patch
+Patch0996: 0996-BXT-Workaround-for-HW-bug-data-loss-in-16-1.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2089,6 +2093,10 @@ Linux kernel build files and install script
 %patch0990 -p1
 %patch0991 -p1
 %patch0992 -p1
+%patch0993 -p1
+%patch0994 -p1
+%patch0995 -p1
+%patch0996 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
