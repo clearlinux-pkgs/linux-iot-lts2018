@@ -17,8 +17,8 @@ Name:           linux-iot-lts2018
 Version:        4.19.23
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1902191258
-Release:        20
+%global upstreamnumber         1902222143
+Release:        21
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.23-base-190219T125834Z
-# config.tag: lts-v4.19.23-base-190219T125834Z
+# quilt.tag:  lts-v4.19.23-base-190222T214327Z
+# config.tag: lts-v4.19.23-base-190222T214327Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1051,6 +1051,10 @@ Patch0998: 0998-drm-i915-gvt-optimize-the-oos-memory-setup.patch
 Patch0999: 0999-drm-i915-gvt-limit-the-active-perf-on-BXT-p.patch
 Patch1000: 1000-media-intel-ipu4-VIRT-Increase-MAX_ISYS_VIR.patch
 Patch1001: 1001-media-i2c-ici-fix-for-NULL-pointer-deref-in.patch
+Patch1002: 1002-SEP-Bug-fix-to-prevent-Vtune-crash-with-eve.patch
+Patch1003: 1003-Revert-BXT-Workaround-for-HW-bug-data-loss-.patch
+Patch1004: 1004-SEP-Bug-Fix-for-VMM-symbol-resolution.patch
+Patch1005: 1005-SEP-Error-handling-based-on-acrn-hypercall-.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2107,6 +2111,10 @@ Linux kernel build files and install script
 %patch0999 -p1
 %patch1000 -p1
 %patch1001 -p1
+%patch1002 -p1
+%patch1003 -p1
+%patch1004 -p1
+%patch1005 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
