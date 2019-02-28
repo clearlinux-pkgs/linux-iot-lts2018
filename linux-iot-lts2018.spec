@@ -17,8 +17,8 @@ Name:           linux-iot-lts2018
 Version:        4.19.23
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1902222143
-Release:        22
+%global upstreamnumber         1902261033
+Release:        23
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.23-base-190222T214327Z
-# config.tag: lts-v4.19.23-base-190222T214327Z
+# quilt.tag:  lts-v4.19.23-base-190226T103353Z
+# config.tag: lts-v4.19.23-base-190226T103353Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1055,6 +1055,15 @@ Patch1002: 1002-SEP-Bug-fix-to-prevent-Vtune-crash-with-eve.patch
 Patch1003: 1003-Revert-BXT-Workaround-for-HW-bug-data-loss-.patch
 Patch1004: 1004-SEP-Bug-Fix-for-VMM-symbol-resolution.patch
 Patch1005: 1005-SEP-Error-handling-based-on-acrn-hypercall-.patch
+Patch1006: 1006-mei-dal-dal_dev_read-check-for-invalid-argu.patch
+Patch1007: 1007-mei-support-variable-extended-heci-header.patch
+Patch1008: 1008-mei-dal-fix-size-of-data-copied-to-user-in-.patch
+Patch1009: 1009-mei-dma-silent-the-reject-message.patch
+Patch1010: 1010-drm-Add-per-plane-pixel-blend-mode-property.patch
+Patch1011: 1011-drm-i915-gvt-add-PIPEDSL-to-pvmmio-trap-lis.patch
+Patch1012: 1012-INTERNAL-drm-i915-Add-plane-alpha-blending-.patch
+Patch1013: 1013-mei-hbm-clean-the-feature-flags-on-link-res.patch
+Patch1014: 1014-mei-hbm-vtag-clean-the-feature-flags-on-lin.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2115,6 +2124,15 @@ Linux kernel build files and install script
 %patch1003 -p1
 %patch1004 -p1
 %patch1005 -p1
+%patch1006 -p1
+%patch1007 -p1
+%patch1008 -p1
+%patch1009 -p1
+%patch1010 -p1
+%patch1011 -p1
+%patch1012 -p1
+%patch1013 -p1
+%patch1014 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
