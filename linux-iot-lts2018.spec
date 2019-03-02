@@ -17,8 +17,8 @@ Name:           linux-iot-lts2018
 Version:        4.19.23
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1902261033
-Release:        23
+%global upstreamnumber         1903010958
+Release:        24
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.23-base-190226T103353Z
-# config.tag: lts-v4.19.23-base-190226T103353Z
+# quilt.tag:  lts-v4.19.23-base-190301T095825Z
+# config.tag: lts-v4.19.23-base-190301T095825Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1064,6 +1064,29 @@ Patch1011: 1011-drm-i915-gvt-add-PIPEDSL-to-pvmmio-trap-lis.patch
 Patch1012: 1012-INTERNAL-drm-i915-Add-plane-alpha-blending-.patch
 Patch1013: 1013-mei-hbm-clean-the-feature-flags-on-link-res.patch
 Patch1014: 1014-mei-hbm-vtag-clean-the-feature-flags-on-lin.patch
+Patch1015: 1015-ASoC-Intel-Skylake-fix-for-BXT-HW-data-loss.patch
+Patch1016: 1016-ASoC-Intel-Skylake-Virt-Support-for-GOS-acc.patch
+Patch1017: 1017-ASoC-Intel-Skylake-Virt-Synchronistation-of.patch
+Patch1018: 1018-ASoC-Intel-Skylake-Virt-Virtualization-BE-a.patch
+Patch1019: 1019-ASoC-Intel-Skylake-Virt-Check-domain_id-dur.patch
+Patch1020: 1020-ASoC-Intel-Skl-Virt-Choose-topology-based-o.patch
+Patch1021: 1021-vhm-fix-audio-backend-module-handle-ioreq-i.patch
+Patch1022: 1022-ASoC-Intel-Skl-Virt-Release-resources-is-Se.patch
+Patch1023: 1023-ASoC-Intel-Skl-Virt-Latency-improvement.patch
+Patch1024: 1024-ASoC-Intel-Skl-Virt-Add-static-map-of-domai.patch
+Patch1025: 1025-ASoC-Intel-Skylake-Generic-firmware-recover.patch
+Patch1026: 1026-ASoC-Intel-Skylake-print-module-type-instea.patch
+Patch1027: 1027-ASoC-Intel-Skylake-Remove-MCPS-available-ch.patch
+Patch1028: 1028-ASoC-Intel-Skylake-Remove-memory-available-.patch
+Patch1029: 1029-ASoC-Intel-Skl-Virt-Fix-compilation-BE-and-.patch
+Patch1030: 1030-ASoC-Intel-Skl-Virt-Fix-warnings.patch
+Patch1031: 1031-media-intel-ipu4-Fix-IPC-timeout-in-ipu-but.patch
+Patch1032: 1032-media-intel-ipu4-VIRT-Check-whether-file-op.patch
+Patch1033: 1033-media-i2c-max9286-form-max9286-node-names-b.patch
+Patch1034: 1034-media-intel-ipu4-VIRT-Making-poll-req-timeo.patch
+Patch1035: 1035-media-intel-ipu4-VIRT-Adding-VBS-dev-reset.patch
+Patch1036: 1036-ICI-Adding-delay-after-initializing-OV10635.patch
+Patch1037: 1037-media-i2c-ti960-ICI-Enable-TI960-and-OV495-.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2133,6 +2156,29 @@ Linux kernel build files and install script
 %patch1012 -p1
 %patch1013 -p1
 %patch1014 -p1
+%patch1015 -p1
+%patch1016 -p1
+%patch1017 -p1
+%patch1018 -p1
+%patch1019 -p1
+%patch1020 -p1
+%patch1021 -p1
+%patch1022 -p1
+%patch1023 -p1
+%patch1024 -p1
+%patch1025 -p1
+%patch1026 -p1
+%patch1027 -p1
+%patch1028 -p1
+%patch1029 -p1
+%patch1030 -p1
+%patch1031 -p1
+%patch1032 -p1
+%patch1033 -p1
+%patch1034 -p1
+%patch1035 -p1
+%patch1036 -p1
+%patch1037 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
