@@ -14,16 +14,16 @@
 #
 
 Name:           linux-iot-lts2018
-Version:        4.19.27
+Version:        4.19.28
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1903080404
-Release:        25
+%global upstreamnumber         1903111150
+Release:        26
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.27.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.28.tar.xz
 Source1:        config-iot-lts2018
 Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.27-base-190308T040447Z
-# config.tag: lts-v4.19.27-base-190308T040447Z
+# quilt.tag:  lts-v4.19.28-base-190311T115000Z
+# config.tag: lts-v4.19.28-base-190311T115000Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1087,7 +1087,6 @@ Patch1034: 1034-media-intel-ipu4-VIRT-Making-poll-req-timeo.patch
 Patch1035: 1035-media-intel-ipu4-VIRT-Adding-VBS-dev-reset.patch
 Patch1036: 1036-ICI-Adding-delay-after-initializing-OV10635.patch
 Patch1037: 1037-media-i2c-ti960-ICI-Enable-TI960-and-OV495-.patch
-Patch1038: 1038-exec-Fix-mem-leak-in-kernel_read_file.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -1140,7 +1139,7 @@ Requires:       %{name} = %{version}-%{release}, %{name}-sos-extra = %{version}-
 Linux kernel build files and install script
 
 %prep
-%setup -q -n linux-4.19.27
+%setup -q -n linux-4.19.28
 
 #patchXXXX PK Series
 %patch0001 -p1
@@ -2180,7 +2179,6 @@ Linux kernel build files and install script
 %patch1035 -p1
 %patch1036 -p1
 %patch1037 -p1
-%patch1038 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
