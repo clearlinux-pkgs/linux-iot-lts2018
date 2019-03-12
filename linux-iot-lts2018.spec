@@ -18,7 +18,7 @@ Version:        4.19.28
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
 %global upstreamnumber         1903111150
-Release:        26
+Release:        27
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -43,6 +43,7 @@ Source5:	fragment-sos
 BuildRequires:  buildreq-kernel
 
 Requires: systemd-bin
+Requires: linux-iot-lts2018-license = %{version}-%{release}
 
 # don't strip .ko files!
 %global __os_install_post %{nil}
@@ -1108,14 +1109,23 @@ The Linux kernel for Service OS
 License:        GPL-2.0
 Summary:        The Linux kernel extra files
 Group:          kernel
+Requires:       linux-iot-lts2018-license = %{version}-%{release}
 
 %description extra
 Linux kernel extra files
+
+%package license
+Summary: license components for the linux package.
+Group: Default
+
+%description license
+license components for the linux package.
 
 %package sos-extra
 License:        GPL-2.0
 Summary:        The Linux kernel SOS extra files
 Group:          kernel
+Requires:       linux-iot-lts2018-license = %{version}-%{release}
 
 %description sos-extra
 Linux kernel SOS extra files
@@ -1125,6 +1135,7 @@ License:        GPL-2.0
 Summary:        The Linux kernel
 Group:          kernel
 Requires:       %{name} = %{version}-%{release}, %{name}-extra = %{version}-%{release}
+Requires:       linux-iot-lts2018-license = %{version}-%{release}
 
 %description dev
 Linux kernel build files and install script
@@ -1134,6 +1145,7 @@ License:        GPL-2.0
 Summary:        The Linux kernel
 Group:          kernel
 Requires:       %{name} = %{version}-%{release}, %{name}-sos-extra = %{version}-%{release}
+Requires:       linux-iot-lts2018-license = %{version}-%{release}
 
 %description sos-dev
 Linux kernel build files and install script
@@ -2263,6 +2275,10 @@ InstallKernel %{ktarget1} %{kversion1}
 
 rm -rf %{buildroot}/usr/lib/firmware
 
+mkdir -p %{buildroot}/usr/share/package-licenses/linux-iot-lts2018
+cp COPYING %{buildroot}/usr/share/package-licenses/linux-iot-lts2018/COPYING
+cp -a LICENSES/* %{buildroot}/usr/share/package-licenses/linux-iot-lts2018
+
 %files
 %dir /usr/lib/kernel
 %dir /usr/lib/modules/%{kversion0}
@@ -2287,6 +2303,10 @@ rm -rf %{buildroot}/usr/lib/firmware
 %dir /usr/lib/kernel
 /usr/lib/kernel/System.map-%{kversion0}
 /usr/lib/kernel/vmlinux-%{kversion0}
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/linux-iot-lts2018
 
 %files sos-extra
 %dir /usr/lib/kernel
