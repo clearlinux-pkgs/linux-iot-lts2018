@@ -17,8 +17,8 @@ Name:           linux-iot-lts2018
 Version:        4.19.28
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1903111150
-Release:        27
+%global upstreamnumber         1903120848
+Release:        28
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.28-base-190311T115000Z
-# config.tag: lts-v4.19.28-base-190311T115000Z
+# quilt.tag:  lts-v4.19.28-base-190312T084846Z
+# config.tag: lts-v4.19.28-base-190312T084846Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1088,6 +1088,13 @@ Patch1034: 1034-media-intel-ipu4-VIRT-Making-poll-req-timeo.patch
 Patch1035: 1035-media-intel-ipu4-VIRT-Adding-VBS-dev-reset.patch
 Patch1036: 1036-ICI-Adding-delay-after-initializing-OV10635.patch
 Patch1037: 1037-media-i2c-ti960-ICI-Enable-TI960-and-OV495-.patch
+Patch1038: 1038-TSC-Print-current-tsc-value-when-detected.patch
+Patch1039: 1039-keystore-add-iv_size-restriction-for-dal-ke.patch
+Patch1040: 1040-drm-i915-add-lock-to-avoid-racing-of-pvmmio.patch
+Patch1041: 1041-media-intel-ipu4-crlmodule-lite-adv7481_cvb.patch
+Patch1042: 1042-kernel-vhm-Add-some-debugs-to-print-the-cli.patch
+Patch1043: 1043-drm-i915-gvt-handles-error-when-ioreq-attac.patch
+Patch1044: 1044-INTERNAL-drm-i915-Additional-alpha-blending.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2191,6 +2198,13 @@ Linux kernel build files and install script
 %patch1035 -p1
 %patch1036 -p1
 %patch1037 -p1
+%patch1038 -p1
+%patch1039 -p1
+%patch1040 -p1
+%patch1041 -p1
+%patch1042 -p1
+%patch1043 -p1
+%patch1044 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
