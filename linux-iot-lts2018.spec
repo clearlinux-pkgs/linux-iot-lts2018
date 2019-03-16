@@ -1108,6 +1108,7 @@ The Linux IOT LTS2018 kernel.
 License:        GPL-2.0
 Summary:        The Linux kernel for Service OS
 Group:          kernel
+Requires:       linux-iot-lts2018-license = %{version}-%{release}
 
 %description sos
 The Linux kernel for Service OS
