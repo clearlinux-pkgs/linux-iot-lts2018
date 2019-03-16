@@ -2258,6 +2258,8 @@ InstallKernel() {
     cp  ${Target}/arch/x86/boot/bzImage ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
     chmod 755 ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
 
+    echo lts-v4.19.28-base-190312T084846Z > ${KernelDir}/upstream-tag-${Kversion}
+
     mkdir -p %{buildroot}/usr/lib/modules
     make O=${Target} -s ARCH=${Arch} INSTALL_MOD_PATH=%{buildroot}/usr modules_install
 
@@ -2301,6 +2303,7 @@ cp -a LICENSES/* %{buildroot}/usr/share/package-licenses/linux-iot-lts2018
 /usr/lib/kernel/cmdline-%{kversion0}
 /usr/lib/kernel/org.clearlinux.%{ktarget0}.%{version}-%{release}
 /usr/lib/kernel/default-%{ktarget0}
+/usr/lib/kernel/upstream-tag-%{ktarget0}
 /usr/lib/modules/%{kversion0}/kernel
 /usr/lib/modules/%{kversion0}/modules.*
 
@@ -2311,6 +2314,7 @@ cp -a LICENSES/* %{buildroot}/usr/share/package-licenses/linux-iot-lts2018
 /usr/lib/kernel/cmdline-%{kversion1}
 /usr/lib/kernel/org.clearlinux.%{ktarget1}.%{version}-%{release}
 /usr/lib/kernel/default-%{ktarget1}
+/usr/lib/kernel/upstream-tag-%{ktarget1}
 /usr/lib/modules/%{kversion1}/kernel
 /usr/lib/modules/%{kversion1}/modules.*
 
