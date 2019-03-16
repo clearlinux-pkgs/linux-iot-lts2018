@@ -2258,7 +2258,7 @@ InstallKernel() {
     cp  ${Target}/arch/x86/boot/bzImage ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
     chmod 755 ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
 
-    echo lts-v4.19.28-base-190312T084846Z > ${KernelDir}/upstream-tag-${Kversion}
+    echo lts-v4.19.28-base-190312T084846Z | tee ${KernelDir}/upstream-tag-${Kversion}
 
     mkdir -p %{buildroot}/usr/lib/modules
     make O=${Target} -s ARCH=${Arch} INSTALL_MOD_PATH=%{buildroot}/usr modules_install
