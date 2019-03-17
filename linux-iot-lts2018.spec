@@ -18,7 +18,7 @@ Version:        4.19.28
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
 %global upstreamnumber         1903120848
-Release:        31
+Release:        32
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -29,6 +29,7 @@ Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
 Source4:        cmdline-iot-lts2018-sos
 Source5:	fragment-sos
+Source6:	upstream-tag
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
@@ -2217,6 +2218,7 @@ cp %{SOURCE2} .
 cp %{SOURCE3} .
 cp %{SOURCE4} .
 cp %{SOURCE5} .
+cp %{SOURCE6} .
 cp -a /usr/lib/firmware/i915 firmware/
 cp -a /usr/lib/firmware/intel-ucode firmware/
 cp -a /usr/lib/firmware/intel firmware/
@@ -2255,10 +2257,9 @@ InstallKernel() {
     install -m 644 ${Target}/System.map ${KernelDir}/System.map-${Kversion}
     install -m 644 ${Target}/vmlinux    ${KernelDir}/vmlinux-${Kversion}
     install -m 644 cmdline-${Target}    ${KernelDir}/cmdline-${Kversion}
+    install -m 644 upstream-tag         ${KernelDir}/upstream-tag-${Kversion}
     cp  ${Target}/arch/x86/boot/bzImage ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
     chmod 755 ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
-
-    echo lts-v4.19.28-base-190312T084846Z | tee ${KernelDir}/upstream-tag-${Kversion}
 
     mkdir -p %{buildroot}/usr/lib/modules
     make O=${Target} -s ARCH=${Arch} INSTALL_MOD_PATH=%{buildroot}/usr modules_install
