@@ -17,8 +17,8 @@ Name:           linux-iot-lts2018
 Version:        4.19.28
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1903120848
-Release:        33
+%global upstreamnumber         1903202118
+Release:        34
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.28-base-190312T084846Z
-# config.tag: lts-v4.19.28-base-190312T084846Z
+# quilt.tag:  lts-v4.19.28-base-190320T211819Z
+# config.tag: lts-v4.19.28-base-190320T211819Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1095,6 +1095,24 @@ Patch1041: 1041-media-intel-ipu4-crlmodule-lite-adv7481_cvb.patch
 Patch1042: 1042-kernel-vhm-Add-some-debugs-to-print-the-cli.patch
 Patch1043: 1043-drm-i915-gvt-handles-error-when-ioreq-attac.patch
 Patch1044: 1044-INTERNAL-drm-i915-Additional-alpha-blending.patch
+Patch1045: 1045-ASoC-Intel-Common-Fix-NULL-dereference-for-.patch
+Patch1046: 1046-ASoC-Intel-Fix-memory-leak-from-early-funct.patch
+Patch1047: 1047-iommu-vt-d-disble-BXT-IPU-by-default.patch
+Patch1048: 1048-trusty-Fix-possible-memory-leak.patch
+Patch1049: 1049-trusty-disable-va-printing-in-dmesg-on-user.patch
+Patch1050: 1050-media-intel-ipu4-remove-verbose-logging-dur.patch
+Patch1051: 1051-media-pci-Fix-improper-use-of-pointer-befor.patch
+Patch1052: 1052-media-pci-improper-use-of-pointer-before-ve.patch
+Patch1053: 1053-ipu-dma-Fix-possible-NULL-pointer-dereferen.patch
+Patch1054: 1054-usb-dwc3-move-synchronize_irq-out-of-the-sp.patch
+Patch1055: 1055-ipu-mmu.c-Fix-possible-null-pointer-derefer.patch
+Patch1056: 1056-media-pci-Check-pointer-validity-before-use.patch
+Patch1057: 1057-ASoC-Intel-Skl-Virt-Fix-NULL-ptr-in-pcm_clo.patch
+Patch1058: 1058-ASoC-Intel-Skl-Virt-Remove-support-for-DSP-.patch
+Patch1059: 1059-ASoC-Intel-Skl-Virt-Fix-panic-issue-on-HW-p.patch
+Patch1060: 1060-ASoC-Intel-Skl-Virt-Fix-panic-during-tplg-i.patch
+Patch1061: 1061-Intel-Skl-Virt-Don-t-duplicate-VBS-audio-cl.patch
+Patch1062: 1062-ASoC-Intel-Skl-Virt-Cleanup-Klocwork-issues.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2206,6 +2224,24 @@ Linux kernel build files and install script
 %patch1042 -p1
 %patch1043 -p1
 %patch1044 -p1
+%patch1045 -p1
+%patch1046 -p1
+%patch1047 -p1
+%patch1048 -p1
+%patch1049 -p1
+%patch1050 -p1
+%patch1051 -p1
+%patch1052 -p1
+%patch1053 -p1
+%patch1054 -p1
+%patch1055 -p1
+%patch1056 -p1
+%patch1057 -p1
+%patch1058 -p1
+%patch1059 -p1
+%patch1060 -p1
+%patch1061 -p1
+%patch1062 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
