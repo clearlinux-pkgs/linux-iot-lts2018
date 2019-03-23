@@ -1,18 +1,23 @@
-From ca207a39e686e9aa2641efbea5379f743f7ba177 Mon Sep 17 00:00:00 2001
+From 9df98356bab30583ff84837c5ab033f0606931a9 Mon Sep 17 00:00:00 2001
 From: Pawel Furtak <pawel.furtak@intel.com>
 Date: Mon, 4 Mar 2019 19:22:12 +0100
-Subject: [PATCH 14/18] ASoC: Intel: Skl: Virt: Remove support for DSP IPC on
+Subject: [PATCH 22/27] ASoC: Intel: Skl: Virt: Remove support for DSP IPC on
  FE
 
-Change-Id: I44c7f34e44b44138b35e6a4cc501d81983952d84
+In current design of virtio audio mediator, there is no need to
+froward DSP IPC from FE to BE
+
+Change-Id: I00f7663df025f4269ff97308c2ec1a3106059e29
 Tracked-On: OAM-76766
 Signed-off-by: Pawel Furtak <pawel.furtak@intel.com>
+Reviewed-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
+Tested-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
 ---
  .../soc/intel/skylake/virtio/skl-virtio-fe.c  | 59 ++-----------------
  1 file changed, 5 insertions(+), 54 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index d627eaf0f93d..91f9738a611c 100644
+index 1085d75cfa09..8b54d0808eb9 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -260,65 +260,16 @@ static int vfe_put_inbox_buffer(struct snd_skl_vfe *vfe,

@@ -17,8 +17,8 @@ Name:           linux-iot-lts2018
 Version:        4.19.28
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
-%global upstreamnumber         1903202118
-Release:        34
+%global upstreamnumber         1903221317
+Release:        35
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -32,8 +32,8 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.28-base-190320T211819Z
-# config.tag: lts-v4.19.28-base-190320T211819Z
+# quilt.tag:  lts-v4.19.28-base-190322T131707Z
+# config.tag: lts-v4.19.28-base-190322T131707Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1107,12 +1107,21 @@ Patch1053: 1053-ipu-dma-Fix-possible-NULL-pointer-dereferen.patch
 Patch1054: 1054-usb-dwc3-move-synchronize_irq-out-of-the-sp.patch
 Patch1055: 1055-ipu-mmu.c-Fix-possible-null-pointer-derefer.patch
 Patch1056: 1056-media-pci-Check-pointer-validity-before-use.patch
-Patch1057: 1057-ASoC-Intel-Skl-Virt-Fix-NULL-ptr-in-pcm_clo.patch
-Patch1058: 1058-ASoC-Intel-Skl-Virt-Remove-support-for-DSP-.patch
-Patch1059: 1059-ASoC-Intel-Skl-Virt-Fix-panic-issue-on-HW-p.patch
-Patch1060: 1060-ASoC-Intel-Skl-Virt-Fix-panic-during-tplg-i.patch
-Patch1061: 1061-Intel-Skl-Virt-Don-t-duplicate-VBS-audio-cl.patch
-Patch1062: 1062-ASoC-Intel-Skl-Virt-Cleanup-Klocwork-issues.patch
+Patch1057: 1057-media-intel-ipu4-VIRT-Handle-open-pipeline-.patch
+Patch1058: 1058-media-intel-ipu4-VIRT-Fix-psys-mediation-bu.patch
+Patch1059: 1059-media-i2c-ici-platform-Fix-for-build-warnin.patch
+Patch1060: 1060-ipu4-Added-IPU-hang-recovery.patch
+Patch1061: 1061-media-intel-ipu4-Extended-error-recovery-fo.patch
+Patch1062: 1062-media-intel-ipu4-Send-recovery-error-signal.patch
+Patch1063: 1063-media-intel-ipu4-Generate-error-signal-only.patch
+Patch1064: 1064-SoC-Intel-Fix-memory-leak-cnl_sdw_bra_pipe_.patch
+Patch1065: 1065-ASoC-Intel-Skl-Virt-Fix-panic-issue-on-HW-p.patch
+Patch1066: 1066-ASoC-Intel-Skl-Virt-Remove-support-for-DSP-.patch
+Patch1067: 1067-ASoC-Intel-Skl-Virt-Fix-panic-during-tplg-i.patch
+Patch1068: 1068-ASoC-Intel-Skl-Virt-Don-t-duplicate-VBS-aud.patch
+Patch1069: 1069-ASoC-Intel-Skl-Virt-Fix-NULL-ptr-in-pcm_clo.patch
+Patch1070: 1070-ASoC-Intel-Skl-Virt-Fix-logic-of-vbe_skl_pc.patch
+Patch1071: 1071-ASoC-Intel-Skl-Virt-Cleanup-static-analysis.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2242,6 +2251,15 @@ Linux kernel build files and install script
 %patch1060 -p1
 %patch1061 -p1
 %patch1062 -p1
+%patch1063 -p1
+%patch1064 -p1
+%patch1065 -p1
+%patch1066 -p1
+%patch1067 -p1
+%patch1068 -p1
+%patch1069 -p1
+%patch1070 -p1
+%patch1071 -p1
 # End XXXX PK Series
 
 # Clear Linux Series

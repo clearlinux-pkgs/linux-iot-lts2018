@@ -1,7 +1,7 @@
 From 6ec96871a156e1257843fbdb3fd08658991aa735 Mon Sep 17 00:00:00 2001
 From: "Nikunj A. Dadhania" <nikunj.dadhania@intel.com>
 Date: Fri, 15 Mar 2019 13:52:22 +0530
-Subject: [PATCH 06/18] media: intel-ipu4: remove verbose logging during build
+Subject: [PATCH 06/27] media: intel-ipu4: remove verbose logging during build
 
 Change-Id: I76f9c460d788022d249cf4ae964c02b8882dee84
 Signed-off-by: Nikunj A. Dadhania <nikunj.dadhania@intel.com>

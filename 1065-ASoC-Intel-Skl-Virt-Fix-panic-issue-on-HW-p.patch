@@ -1,26 +1,29 @@
-From 04a564bcf1beef56f7264d4a4e2d253725f3ca7c Mon Sep 17 00:00:00 2001
+From 3ae575914ab66b621ad435963a619788f9589cea Mon Sep 17 00:00:00 2001
 From: Pawel Furtak <pawel.furtak@intel.com>
 Date: Mon, 4 Mar 2019 14:13:41 +0100
-Subject: [PATCH 15/18] ASoC: Intel: Skl: Virt: Fix panic issue on HW pos
+Subject: [PATCH 21/27] ASoC: Intel: Skl: Virt: Fix panic issue on HW pos
  update
 
 snd_pcm_period_elapsed may result in substream close/open
 thus list of open substreams should not be used to find
-updated streams. This patch adds new list to manage updated streams.
+updated streams. This patch adds new list to manage
+updated streams.
 
-Change-Id: Ib5d578764efbfdc0cf664ca46701e83d39b2d3c4
+Change-Id: I6b83a95774840a8b6cae450086e41bed6ab77650
 Tracked-On: OAM-76721
 Signed-off-by: Pawel Furtak <pawel.furtak@intel.com>
+Reviewed-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
+Tested-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
 ---
  .../soc/intel/skylake/virtio/skl-virtio-fe.c  | 62 ++++++++++++++-----
  .../soc/intel/skylake/virtio/skl-virtio-fe.h  |  8 +++
  2 files changed, 56 insertions(+), 14 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 91f9738a611c..7954d6143452 100644
+index d627eaf0f93d..1085d75cfa09 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-@@ -275,8 +275,38 @@ static void vfe_cmd_tx_done(struct virtqueue *vq)
+@@ -324,8 +324,42 @@ static void vfe_cmd_tx_done(struct virtqueue *vq)
  static void vfe_cmd_handle_rx(struct virtqueue *vq)
  {
  	struct snd_skl_vfe *vfe;
@@ -46,37 +49,37 @@ index 91f9738a611c..7954d6143452 100644
 +		updated_stream =
 +			kzalloc(sizeof(*updated_stream), GFP_ATOMIC);
 +
-+		if (!updated_stream)
-+			continue;
++		if (!updated_stream) {
++			dev_err(&vfe->vdev->dev,
++				"Failed to allocate stream update descriptor\n");
++			goto release_lock;
++		}
 +
 +		updated_stream->substream = substr_info->substream;
 +		spin_lock(&vfe->updated_streams_lock);
 +		list_add_tail(&updated_stream->list, &vfe->updated_streams);
 +		spin_unlock(&vfe->updated_streams_lock);
 +	}
++release_lock:
 +	spin_unlock_irqrestore(&vfe->substream_info_lock, irq_flags);
 +
  	queue_work(vfe->posn_update_queue,
  		&vfe->posn_update_work);
  }
-@@ -353,24 +383,24 @@ static void vfe_not_handle_rx(struct virtqueue *vq)
+@@ -402,24 +436,20 @@ static void vfe_not_handle_rx(struct virtqueue *vq)
  
  static void vfe_handle_posn(struct work_struct *work)
  {
 -	struct vfe_substream_info *substr_info;
 -	struct vfe_stream_pos_desc *pos_desc;
 +	struct vfe_updated_substream *updated_stream_desc;
-+	struct snd_pcm_substream *substream;
 +	unsigned long irq_flags;
  	struct snd_skl_vfe *vfe =
  		container_of(work, struct snd_skl_vfe, posn_update_work);
  
 -	/*stnc pos_desc*/
 -	rmb();
-+	while (true) {
-+		if (list_empty(&vfe->updated_streams))
-+			return;
- 
+-
 -	list_for_each_entry(substr_info, &vfe->substr_info_list, list) {
 -		pos_desc = substr_info->pos_desc;
 -		if (!pos_desc ||
@@ -84,6 +87,7 @@ index 91f9738a611c..7954d6143452 100644
 -			continue;
 -		if (pos_desc->be_irq_cnt - pos_desc->fe_irq_cnt > 1)
 -			dev_warn(&vfe->vdev->dev, "Missed interrupts on fe side\n");
++	while (!list_empty(&vfe->updated_streams)) {
 +		spin_lock_irqsave(&vfe->updated_streams_lock, irq_flags);
 +		updated_stream_desc = list_first_entry(&vfe->updated_streams,
 +				struct vfe_updated_substream, list);
@@ -97,7 +101,7 @@ index 91f9738a611c..7954d6143452 100644
  	}
  }
  
-@@ -521,6 +551,8 @@ int vfe_pcm_close(struct snd_pcm_substream *substream)
+@@ -570,6 +600,8 @@ int vfe_pcm_close(struct snd_pcm_substream *substream)
  	sstream_info = vfe_find_substream_info(vfe, substream);
  
  	if (sstream_info) {
@@ -106,7 +110,7 @@ index 91f9738a611c..7954d6143452 100644
  		list_del(&sstream_info->list);
  		kfree(sstream_info);
  	}
-@@ -1067,13 +1099,15 @@ static int vfe_init(struct virtio_device *vdev)
+@@ -1116,6 +1148,8 @@ static int vfe_init(struct virtio_device *vdev)
  	INIT_LIST_HEAD(&vfe->substr_info_list);
  	spin_lock_init(&vfe->ipc_vq_lock);
  	INIT_LIST_HEAD(&vfe->expired_msg_list);
@@ -115,14 +119,6 @@ index 91f9738a611c..7954d6143452 100644
  
  	INIT_WORK(&vfe->posn_update_work, vfe_handle_posn);
  	INIT_WORK(&vfe->msg_timeout_work, vfe_not_tx_timeout_handler);
- 	INIT_WORK(&vfe->message_loop_work, vfe_message_loop);
- 
- 	vfe->posn_update_queue =  alloc_workqueue("%s",
--		WQ_HIGHPRI | WQ_UNBOUND, 1, "posn_update_queue");
-+		WQ_HIGHPRI | WQ_CPU_INTENSIVE, 1, "posn_update_queue");
- 
- 	ret = vfe_init_vqs(vfe);
- 	if (ret < 0)
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 index 74e7acbc6856..fcc2dc29c3f7 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h

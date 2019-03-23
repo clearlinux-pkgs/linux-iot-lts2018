@@ -1,7 +1,7 @@
 From 137a9c291647a722bbf7256b7a6a2cf70977ab73 Mon Sep 17 00:00:00 2001
 From: "Wood, Brian J" <brian.j.wood@intel.com>
 Date: Tue, 19 Mar 2019 10:04:22 -0700
-Subject: [PATCH 12/18] media: pci: Check pointer validity before use
+Subject: [PATCH 12/27] media: pci: Check pointer validity before use
 
 This commit addresses some use cases where pointer
 is used without first checking is valid.

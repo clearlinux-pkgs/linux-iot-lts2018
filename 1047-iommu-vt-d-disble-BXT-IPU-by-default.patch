@@ -1,7 +1,7 @@
 From dc2ec1b8c11692e3e06f8bda845258b93fd09de2 Mon Sep 17 00:00:00 2001
 From: kgopala2 <karthik.l.gopalakrishnan@intel.com>
 Date: Wed, 13 Mar 2019 22:54:22 +0800
-Subject: [PATCH 03/18] iommu/vt-d: disble BXT IPU by default
+Subject: [PATCH 03/27] iommu/vt-d: disble BXT IPU by default
 
 Remove any dependence on command-line option. Disable
 IPU mapping by IOMMU by defaut.

@@ -1,9 +1,9 @@
-From d08aa9ca9c6b25f37b31c0d78c865eaccaf1991c Mon Sep 17 00:00:00 2001
+From ab7aa02f82cba38d026c501795479cdf1e7d11f2 Mon Sep 17 00:00:00 2001
 From: Marcin Pietraszko <marcin.pietraszko@intel.com>
 Date: Thu, 7 Mar 2019 15:06:13 +0100
-Subject: [PATCH 18/18] ASoC: Intel: Skl: Virt: Cleanup Klocwork issues
+Subject: [PATCH 27/27] ASoC: Intel: Skl: Virt: Cleanup static analysis issues
 
-Change-Id: I56c2cf72cf796fd215c29f66834d709cb9f57a2a
+Change-Id: I3f5a62cbd22dd8788b5416a02e7d110606f12834
 Tracked-On: OAM-76847
 Signed-off-by: Marcin Pietraszko <marcin.pietraszko@intel.com>
 ---
@@ -13,7 +13,7 @@ Signed-off-by: Marcin Pietraszko <marcin.pietraszko@intel.com>
  3 files changed, 23 insertions(+), 25 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 7f02b65f7e9b..5b1b3a200723 100644
+index 7709299f8078..097e6a9c4fb4 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -387,9 +387,6 @@ static int vbe_skl_prepare_dma(struct vbe_substream_info *substr_info,
@@ -93,7 +93,7 @@ index be2cc77dcd83..7f395ed3bcd1 100644
  	u32 chunk_size;
  	u32 chunks;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index f21becb8859a..d7da9fb0b63f 100644
+index 17d5e3de45f5..c9475a0852e1 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -157,7 +157,8 @@ static int vfe_send_msg(struct snd_skl_vfe *vfe,
@@ -106,7 +106,7 @@ index f21becb8859a..d7da9fb0b63f 100644
  	msg_header->domain_id = domain_id;
  	memcpy(&msg->header, msg_header, sizeof(msg->header));
  	msg->tx_data = tx_data;
-@@ -477,19 +478,15 @@ static struct kctl_ops vfe_kctl_ops = {
+@@ -474,19 +475,15 @@ static struct kctl_ops vfe_kctl_ops = {
  		.send_noti = vfe_send_kctl_msg,
  };
  
@@ -130,7 +130,7 @@ index f21becb8859a..d7da9fb0b63f 100644
  }
  
  int vfe_pcm_open(struct snd_pcm_substream *substream)
-@@ -510,7 +507,7 @@ int vfe_pcm_open(struct snd_pcm_substream *substream)
+@@ -507,7 +504,7 @@ int vfe_pcm_open(struct snd_pcm_substream *substream)
  	if (ret)
  		return 0;
  
@@ -139,7 +139,7 @@ index f21becb8859a..d7da9fb0b63f 100644
  
  	ret = vfe_send_msg(vfe, &msg_header, NULL, 0,
  		&vbe_result, sizeof(vbe_result));
-@@ -565,7 +562,7 @@ int vfe_pcm_close(struct snd_pcm_substream *substream)
+@@ -562,7 +559,7 @@ int vfe_pcm_close(struct snd_pcm_substream *substream)
  	}
  	spin_unlock_irqrestore(&vfe->substream_info_lock, irq_flags);
  
@@ -148,7 +148,7 @@ index f21becb8859a..d7da9fb0b63f 100644
  
  	ret = vfe_send_msg(vfe, &msg_header, NULL, 0,
  		&vbe_result, sizeof(vbe_result));
-@@ -603,7 +600,7 @@ int vfe_pcm_hw_params(struct snd_pcm_substream *substream,
+@@ -600,7 +597,7 @@ int vfe_pcm_hw_params(struct snd_pcm_substream *substream,
  	vfe_params.period_size = params_period_size(params);
  	vfe_params.periods = params_periods(params);
  
@@ -157,7 +157,7 @@ index f21becb8859a..d7da9fb0b63f 100644
  
  	ret = vfe_send_msg(vfe, &msg_header, &vfe_params, sizeof(vfe_params),
  					&vbe_result, sizeof(vbe_result));
-@@ -627,7 +624,7 @@ int vfe_pcm_trigger(struct snd_pcm_substream *substream, int cmd)
+@@ -624,7 +621,7 @@ int vfe_pcm_trigger(struct snd_pcm_substream *substream, int cmd)
  	if (ret)
  		return 0;
  
@@ -166,7 +166,7 @@ index f21becb8859a..d7da9fb0b63f 100644
  
  	return vfe_send_msg(vfe, &msg_header, &cmd, sizeof(cmd), NULL, 0);
  }
-@@ -647,6 +644,9 @@ int vfe_pcm_prepare(struct snd_pcm_substream *substream)
+@@ -644,6 +641,9 @@ int vfe_pcm_prepare(struct snd_pcm_substream *substream)
  	if (ret)
  		return 0;
  
@@ -176,7 +176,7 @@ index f21becb8859a..d7da9fb0b63f 100644
  	sg_buf = snd_pcm_substream_sgbuf(substream);
  
  	dma_conf.addr = (u64)sg_buf->table[0].addr;
-@@ -657,7 +657,7 @@ int vfe_pcm_prepare(struct snd_pcm_substream *substream)
+@@ -654,7 +654,7 @@ int vfe_pcm_prepare(struct snd_pcm_substream *substream)
  	dma_conf.stream_pos_addr = virt_to_phys(substr_info->pos_desc);
  	dma_conf.stream_pos_size = sizeof(struct vfe_stream_pos_desc);
  

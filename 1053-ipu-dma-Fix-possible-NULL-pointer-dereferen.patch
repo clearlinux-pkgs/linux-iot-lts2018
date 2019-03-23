@@ -1,7 +1,7 @@
 From 73798d0d9070e772df87a4932eb8e096e003c2be Mon Sep 17 00:00:00 2001
 From: Anil Kumar <anil.kumar.k@intel.com>
 Date: Fri, 15 Mar 2019 10:48:30 -0700
-Subject: [PATCH 09/18] ipu-dma: Fix possible NULL pointer dereference
+Subject: [PATCH 09/27] ipu-dma: Fix possible NULL pointer dereference
 
 Signed-off-by: Anil Kumar <anil.kumar.k@intel.com>
 Tracked-On: PKT-1812

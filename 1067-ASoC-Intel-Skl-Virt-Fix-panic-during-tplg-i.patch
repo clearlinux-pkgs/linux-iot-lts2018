@@ -1,22 +1,23 @@
-From 509cfd7e797727be4f1fbf2bea88797313e27143 Mon Sep 17 00:00:00 2001
+From cc090965c9a711637c6827791d5ecb9dff5f80f5 Mon Sep 17 00:00:00 2001
 From: Pawel Furtak <pawel.furtak@intel.com>
 Date: Tue, 5 Mar 2019 09:19:19 +0100
-Subject: [PATCH 16/18] ASoC: Intel: Skl: Virt: Fix panic during tplg
+Subject: [PATCH 23/27] ASoC: Intel: Skl: Virt: Fix panic during tplg
  initialization
 
 Timeout during topology request may lead to not initialized
 topology buffer. This patch adds additional checks and cleanups
 to avoid access fo not initialized/freed memory.
 
-Change-Id: I830798e4e65760c4550ba6889d82b5990957e673
+Change-Id: I1a4eec1c04d41566e04a58fd88e4307c01a39664
 Tracked-On: OAM-76719
 Signed-off-by: Pawel Furtak <pawel.furtak@intel.com>
+Signed-off-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
 ---
- .../soc/intel/skylake/virtio/skl-virtio-fe.c  | 28 ++++++++++++++-----
- 1 file changed, 21 insertions(+), 7 deletions(-)
+ .../soc/intel/skylake/virtio/skl-virtio-fe.c  | 27 +++++++++++++------
+ 1 file changed, 19 insertions(+), 8 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 7954d6143452..f21becb8859a 100644
+index 8b54d0808eb9..17d5e3de45f5 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -282,7 +282,6 @@ static void vfe_cmd_handle_rx(struct virtqueue *vq)
@@ -27,21 +28,20 @@ index 7954d6143452..f21becb8859a 100644
  	spin_lock_irqsave(&vfe->substream_info_lock, irq_flags);
  	list_for_each_entry_safe(substr_info, tmp,
  			&vfe->substr_info_list, list) {
-@@ -414,6 +413,13 @@ static void vfe_handle_tplg(struct snd_skl_vfe *vfe,
+@@ -414,7 +413,11 @@ static void vfe_handle_tplg(struct snd_skl_vfe *vfe,
  		tplg_data->offset, tplg_data->chunk_size);
  
  	mutex_lock(&vfe->tplg.tplg_lock);
+-	data_ptr = vfe->tplg.tplg_data.data + tplg_data->offset;
 +
-+	if (!vfe->tplg.tplg_data.data) {
-+		dev_info(&vfe->vdev->dev,
-+			"Tplg buffer not initialized\n");
++	if (!vfe->tplg.tplg_data.data)
 +		goto err_handler;
-+	}
 +
- 	data_ptr = vfe->tplg.tplg_data.data + tplg_data->offset;
++	data_ptr = (u8 *)vfe->tplg.tplg_data.data + tplg_data->offset;
  	memcpy(data_ptr, tplg_data->data, tplg_data->chunk_size);
  	vfe->tplg.data_ready += tplg_data->chunk_size;
-@@ -423,6 +429,7 @@ static void vfe_handle_tplg(struct snd_skl_vfe *vfe,
+ 
+@@ -423,6 +426,7 @@ static void vfe_handle_tplg(struct snd_skl_vfe *vfe,
  		wake_up(&vfe->tplg.waitq);
  	}
  
@@ -49,7 +49,7 @@ index 7954d6143452..f21becb8859a 100644
  	mutex_unlock(&vfe->tplg.tplg_lock);
  }
  
-@@ -1018,7 +1025,7 @@ static int vfe_skl_init(struct virtio_device *vdev)
+@@ -1018,7 +1022,7 @@ static int vfe_skl_init(struct virtio_device *vdev)
  
  	err = vfe_init_tplg(vfe, skl);
  	if (err < 0)
@@ -58,7 +58,7 @@ index 7954d6143452..f21becb8859a 100644
  
  	err = vfe_platform_register(vfe, &vdev->dev);
  	if (err < 0)
-@@ -1087,8 +1094,10 @@ static int vfe_init(struct virtio_device *vdev)
+@@ -1087,8 +1091,10 @@ static int vfe_init(struct virtio_device *vdev)
  	int ret;
  
  	vfe = devm_kzalloc(&vdev->dev, sizeof(*vfe), GFP_KERNEL);
@@ -71,7 +71,7 @@ index 7954d6143452..f21becb8859a 100644
  
  	skl_vfe = vfe;
  	vfe->vdev = vdev;
-@@ -1123,12 +1132,17 @@ static int vfe_init(struct virtio_device *vdev)
+@@ -1123,12 +1129,17 @@ static int vfe_init(struct virtio_device *vdev)
  
  	ret = vfe_skl_init(vdev);
  	if (ret < 0)

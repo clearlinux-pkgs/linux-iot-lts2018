@@ -1,7 +1,7 @@
 From e1df84c9c07e8ad9619201c05427f0bc52d29e10 Mon Sep 17 00:00:00 2001
 From: Junxiao Chang <junxiao.chang@intel.com>
 Date: Tue, 19 Mar 2019 09:52:38 +0800
-Subject: [PATCH 10/18] usb: dwc3: move synchronize_irq() out of the spinlock
+Subject: [PATCH 10/27] usb: dwc3: move synchronize_irq() out of the spinlock
  protected block
 
 dwc3_gadget_suspend() is called under dwc->lock spinlock. In such context
