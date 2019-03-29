@@ -1,13 +1,13 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.28 Kernel Configuration
+# Linux/x86 4.19.31 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 8.2.1 20180502
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 8.3.1 20190328 gcc-8-branch@269986
 #
 CONFIG_CC_IS_GCC=y
-CONFIG_GCC_VERSION=80201
+CONFIG_GCC_VERSION=80301
 CONFIG_CLANG_VERSION=0
 CONFIG_IRQ_WORK=y
 CONFIG_BUILDTIME_EXTABLE_SORT=y
