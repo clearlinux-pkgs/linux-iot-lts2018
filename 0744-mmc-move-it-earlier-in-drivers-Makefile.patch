@@ -1,4 +1,4 @@
-From 66918719c48603952a7d0784af6c426134948ba7 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Wood, Brian J" <brian.j.wood@intel.com>
 Date: Tue, 27 Nov 2018 13:31:10 -0800
 Subject: [PATCH] mmc: move it earlier in drivers/Makefile
@@ -16,7 +16,7 @@ Signed-off-by: Wood, Brian J <brian.j.wood@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/Makefile b/drivers/Makefile
-index b45c73684496..78ef69c8ac9d 100644
+index b45c736..78ef69c 100644
 --- a/drivers/Makefile
 +++ b/drivers/Makefile
 @@ -58,6 +58,8 @@ obj-y				+= char/
@@ -37,5 +37,5 @@ index b45c73684496..78ef69c8ac9d 100644
  obj-$(CONFIG_NEW_LEDS)		+= leds/
  obj-$(CONFIG_INFINIBAND)	+= infiniband/
 -- 
-2.19.1
+2.21.0
 

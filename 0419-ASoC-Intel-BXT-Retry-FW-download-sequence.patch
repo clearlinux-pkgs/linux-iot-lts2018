@@ -1,7 +1,7 @@
-From 58abbd28b47d79d156f92e31cbc661ad679ff2b1 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Shaik, Kareem M" <kareem.m.shaik@intel.com>
 Date: Fri, 1 Dec 2017 00:46:21 +0530
-Subject: [PATCH 247/296] ASoC: Intel: BXT: Retry FW download sequence
+Subject: [PATCH] ASoC: Intel: BXT: Retry FW download sequence
 
 In FW download failure case, the recommended solution is to repeat
 complete download sequence in multiple iterations.FW download
@@ -29,7 +29,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  1 file changed, 27 insertions(+), 19 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index 2eb57d75f1b1..47b2a24f84dc 100644
+index 2eb57d7..47b2a24 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -59,7 +59,7 @@
@@ -99,5 +99,5 @@ index 2eb57d75f1b1..47b2a24f84dc 100644
  		dev_dbg(ctx->dev, "Firmware download successful\n");
  		ret = wait_event_timeout(skl->boot_wait, skl->boot_complete,
 -- 
-2.19.1
+2.21.0
 

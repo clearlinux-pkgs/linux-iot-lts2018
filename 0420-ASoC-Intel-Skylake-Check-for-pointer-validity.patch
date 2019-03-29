@@ -1,7 +1,7 @@
-From 4b5936458291d3f09d35cc1111c881c773ed8678 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
 Date: Wed, 13 Dec 2017 10:40:30 +0530
-Subject: [PATCH 248/296] ASoC: Intel: Skylake: Check for pointer validity.
+Subject: [PATCH] ASoC: Intel: Skylake: Check for pointer validity.
 
 kzalloc allocation can fail. Return -ENOMEM if allocation fails.
 
@@ -12,7 +12,7 @@ Signed-off-by: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
  1 file changed, 3 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index f3c5e29afaa6..30507fa0208c 100644
+index f3c5e29..30507fa 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -186,6 +186,9 @@ static ssize_t mod_control_write(struct file *file,
@@ -26,5 +26,5 @@ index f3c5e29afaa6..30507fa0208c 100644
  						user_buf, count);
  	size = written;
 -- 
-2.19.1
+2.21.0
 

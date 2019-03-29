@@ -1,7 +1,7 @@
-From c42ad8566d312ed5e732ab7fcbbe258eda31b1fe Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Binbin Wu <binbin.wu@intel.com>
 Date: Fri, 31 Aug 2018 10:58:55 +0800
-Subject: [PATCH 010/214] VHM: add passthrough device support
+Subject: [PATCH] VHM: add passthrough device support
 
 add following ioctl in vhm_dev to support device passthrough
 - assign, deassign pass-through device
@@ -36,7 +36,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  6 files changed, 268 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 97f7c466e11d..97c20d82154f 100644
+index 97f7c46..97c20d8 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -267,6 +267,31 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -72,7 +72,7 @@ index 97f7c466e11d..97c20d82154f 100644
  		pr_warn("Unknown IOCTL 0x%x\n", ioctl_num);
  		ret = 0;
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 384b86e60c9c..0f3f6c1c5f4c 100644
+index 384b86e..0f3f6c1 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -50,14 +50,30 @@
@@ -270,7 +270,7 @@ index 384b86e60c9c..0f3f6c1c5f4c 100644
 +	return ret;
 +}
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index f0567aa0f1dd..5723e5e2d537 100644
+index f0567aa..5723e5e 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -99,6 +99,15 @@ enum request_direction {
@@ -329,7 +329,7 @@ index f0567aa0f1dd..5723e5e2d537 100644
 +
  #endif /* ACRN_COMMON_H */
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index d527a8fa8435..3e43da56813d 100644
+index d527a8f..3e43da5 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -92,6 +92,14 @@
@@ -348,7 +348,7 @@ index d527a8fa8435..3e43da56813d 100644
  #define ACRN_INVALID_VMID (-1UL)
  #define ACRN_INVALID_HPA (-1UL)
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index f1ed9a07e708..ce579e3734ff 100644
+index f1ed9a0..ce579e3 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -140,6 +140,7 @@ static inline long acrn_hypercall4(unsigned long hyp_id, unsigned long param1,
@@ -373,7 +373,7 @@ index f1ed9a07e708..ce579e3734ff 100644
  
  #endif /* VHM_HYPERCALL_H */
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 3be6aca40844..8d03d38b788d 100644
+index 3be6aca..8d03d38 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -79,11 +79,20 @@
@@ -398,5 +398,5 @@ index 3be6aca40844..8d03d38b788d 100644
  
  enum {
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From f0e0770b53847da4367e2c0ae758cf1d14388657 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Thu, 21 Dec 2017 13:55:41 +0530
-Subject: [PATCH 09/13] drm/i915: Add revocation check on Ksvs
+Subject: [PATCH] drm/i915: Add revocation check on Ksvs
 
 KSV list revocated by DCP LLC is provided as SRM Blob to kernel.
 Which is parsed and stored in intel_connector->revocated_ksv_list.
@@ -15,7 +15,7 @@ Signed-off-by: Ramalingam C <ramalingam.c@intel.com>
  1 file changed, 49 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_hdcp.c b/drivers/gpu/drm/i915/intel_hdcp.c
-index ca2c73469cb2..20f78b572d1b 100644
+index ca2c734..20f78b5 100644
 --- a/drivers/gpu/drm/i915/intel_hdcp.c
 +++ b/drivers/gpu/drm/i915/intel_hdcp.c
 @@ -185,6 +185,45 @@ struct intel_digital_port *conn_to_dig_port(struct intel_connector *connector)
@@ -89,5 +89,5 @@ index ca2c73469cb2..20f78b572d1b 100644
  	I915_WRITE(PORT_HDCP_BKSVHI(port), bksv.reg[1]);
  
 -- 
-2.19.1
+2.21.0
 

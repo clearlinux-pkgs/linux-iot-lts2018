@@ -1,7 +1,7 @@
-From 51771d06fd29955a75414c791139971ad3e6750d Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Jayanti, Satya Charitardha" <satya.charitardha.jayanti@intel.com>
 Date: Wed, 4 Jan 2017 20:41:55 +0530
-Subject: [PATCH 130/296] ASoC: Intel: CNL: Add DAIs for SDW Aggregation
+Subject: [PATCH] ASoC: Intel: CNL: Add DAIs for SDW Aggregation
 
 This patch adds DAI to enable Aggregation feature for
 playback and capture on SoundWire Master 1 and Master 2
@@ -19,7 +19,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 30 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 7ac209ddd1eb..265992ec11ff 100644
+index 7ac209d..265992e 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1354,17 +1354,17 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
@@ -78,5 +78,5 @@ index 7ac209ddd1eb..265992ec11ff 100644
  	/* Currently adding 1 playback and 1 capture pin, ideally it
  	 * should be coming from CLT based on endpoints to be supported
 -- 
-2.19.1
+2.21.0
 

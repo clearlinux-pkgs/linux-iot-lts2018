@@ -1,7 +1,7 @@
-From a52cad1eb24fb1bf5706d1ba48ade4c273557a24 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Wed, 28 Nov 2018 23:32:05 +0800
-Subject: [PATCH 09/18] vhm: remove "reserve memory for trusty"
+Subject: [PATCH] vhm: remove "reserve memory for trusty"
 
 Allocate memory for trusty in SOS kernel may failed after running
 a long time since there can not find a continue 16 MB memory. So
@@ -12,16 +12,16 @@ Tracked-On: PKT-1592
 Tracked-On: https://github.com/projectacrn/acrn-hypervisor/issues/1942
 Signed-off-by: Li, Fei1 <fei1.li@intel.com>
 ---
- drivers/char/vhm/vhm_dev.c      | 16 ++--------
+ drivers/char/vhm/vhm_dev.c      | 16 +-------
  drivers/vhm/Kconfig             |  1 -
- drivers/vhm/vhm_mm.c            | 65 -----------------------------------------
+ drivers/vhm/vhm_mm.c            | 65 ---------------------------------
  include/linux/vhm/acrn_common.h |  3 --
  include/linux/vhm/acrn_vhm_mm.h |  3 --
- include/linux/vhm/vhm_vm_mngt.h |  2 --
+ include/linux/vhm/vhm_vm_mngt.h |  2 -
  6 files changed, 2 insertions(+), 88 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 33df39be..59dd49b 100644
+index 33df39b..59dd49b 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -224,18 +224,10 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -217,5 +217,5 @@ index d3b26bd..65f6474 100644
  	long refcnt;
  	struct mutex hugepage_lock;
 -- 
-2.7.4
+2.21.0
 

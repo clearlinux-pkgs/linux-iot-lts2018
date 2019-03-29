@@ -1,4 +1,4 @@
-From 4c4b0b55c8b1d52b42696520215de64069a4bbd9 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Feng Tang <feng.tang@intel.com>
 Date: Tue, 11 Dec 2018 11:27:52 +0800
 Subject: [PATCH] i915: make driver init async
@@ -32,5 +32,5 @@ index 1df3ce1..fcf5e3f 100644
  
  static int __init i915_init(void)
 -- 
-2.7.4
+2.21.0
 

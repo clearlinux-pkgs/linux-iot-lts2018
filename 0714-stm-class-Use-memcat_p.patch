@@ -1,7 +1,7 @@
-From e7d8138b35dcadec511bf7ca59aa131544d9dca7 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:43:06 +0300
-Subject: [PATCH 18/19] stm class: Use memcat_p()
+Subject: [PATCH] stm class: Use memcat_p()
 
 Instead of a local copy, use the memcat_p() helper to merge policy
 node attributes.
@@ -14,7 +14,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  1 file changed, 1 insertion(+), 28 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/policy.c b/drivers/hwtracing/stm/policy.c
-index 5e51bed0787b..0910ec807187 100644
+index 5e51bed..0910ec8 100644
 --- a/drivers/hwtracing/stm/policy.c
 +++ b/drivers/hwtracing/stm/policy.c
 @@ -202,33 +202,6 @@ static struct configfs_attribute *stp_policy_node_attrs[] = {
@@ -61,5 +61,5 @@ index 5e51bed0787b..0910ec807187 100644
  		kfree(type);
  		return NULL;
 -- 
-2.19.1
+2.21.0
 

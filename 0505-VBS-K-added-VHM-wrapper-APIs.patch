@@ -1,7 +1,7 @@
-From c05e21f46c1d85283c7e8a009c652713b13a99dc Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Hao Li <hao.l.li@intel.com>
 Date: Thu, 25 Jan 2018 10:12:26 -0500
-Subject: [PATCH 037/214] VBS-K: added VHM wrapper APIs
+Subject: [PATCH] VBS-K: added VHM wrapper APIs
 
 This patch added 3 VHM wrapper APIs to the VBS-K framework:
  - long virtio_dev_register(struct virtio_dev_info *dev);
@@ -23,7 +23,7 @@ Signed-off-by: Hao Li <hao.l.li@intel.com>
  3 files changed, 181 insertions(+), 155 deletions(-)
 
 diff --git a/drivers/vbs/vbs.c b/drivers/vbs/vbs.c
-index 1e7a9645a353..9d96f45b9644 100644
+index 1e7a964..9d96f45 100644
 --- a/drivers/vbs/vbs.c
 +++ b/drivers/vbs/vbs.c
 @@ -67,6 +67,127 @@
@@ -155,7 +155,7 @@ index 1e7a9645a353..9d96f45b9644 100644
  				struct vbs_vqs_info __user *i)
  {
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
-index f2234e73034d..87965bafbbb3 100644
+index f2234e7..87965ba 100644
 --- a/drivers/vbs/vbs_rng.c
 +++ b/drivers/vbs/vbs_rng.c
 @@ -74,8 +74,6 @@
@@ -521,7 +521,7 @@ index f2234e73034d..87965bafbbb3 100644
  
  /* device specific function */
 diff --git a/include/linux/vbs/vbs.h b/include/linux/vbs/vbs.h
-index 715c49156a1a..b2e185e115c8 100644
+index 715c491..b2e185e 100644
 --- a/include/linux/vbs/vbs.h
 +++ b/include/linux/vbs/vbs.h
 @@ -63,6 +63,8 @@
@@ -572,5 +572,5 @@ index 715c49156a1a..b2e185e115c8 100644
  
  #endif
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From 272a271e82770ea6eb53ecbc52d1a3fe76003019 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Huang, Yang" <yang.huang@intel.com>
 Date: Tue, 24 Jul 2018 13:52:54 +0800
-Subject: [PATCH 20/22] rpmb: add rpmb  multiplexor kernel module
+Subject: [PATCH] rpmb: add rpmb multiplexor kernel module
 
 This module owns RPMB authentication key in ACRN SOS kernel.
 It receives the requests from SOS/DM and replaces with real
@@ -24,7 +24,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/char/rpmb/mux/mux.c
 
 diff --git a/drivers/char/rpmb/Kconfig b/drivers/char/rpmb/Kconfig
-index 48f11c19bbda..568ba9adb117 100644
+index 48f11c1..568ba9a 100644
 --- a/drivers/char/rpmb/Kconfig
 +++ b/drivers/char/rpmb/Kconfig
 @@ -40,3 +40,5 @@ config VIRTIO_RPMB
@@ -34,7 +34,7 @@ index 48f11c19bbda..568ba9adb117 100644
 +
 +source "drivers/char/rpmb/mux/Kconfig"
 diff --git a/drivers/char/rpmb/Makefile b/drivers/char/rpmb/Makefile
-index 281c012712ca..20cf088d2476 100644
+index 281c012..20cf088 100644
 --- a/drivers/char/rpmb/Makefile
 +++ b/drivers/char/rpmb/Makefile
 @@ -6,3 +6,5 @@ obj-$(CONFIG_RPMB_SIM) += rpmb_sim.o
@@ -45,7 +45,7 @@ index 281c012712ca..20cf088d2476 100644
 +obj-$(CONFIG_RPMB_MUX) += mux/
 diff --git a/drivers/char/rpmb/mux/Kconfig b/drivers/char/rpmb/mux/Kconfig
 new file mode 100644
-index 000000000000..8087f9b797f8
+index 0000000..8087f9b
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/Kconfig
 @@ -0,0 +1,14 @@
@@ -65,7 +65,7 @@ index 000000000000..8087f9b797f8
 +	  in such a RPMB virtualization use case could enable it.
 diff --git a/drivers/char/rpmb/mux/Makefile b/drivers/char/rpmb/mux/Makefile
 new file mode 100644
-index 000000000000..7afc458a0dd2
+index 0000000..7afc458
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/Makefile
 @@ -0,0 +1,3 @@
@@ -74,7 +74,7 @@ index 000000000000..7afc458a0dd2
 +ccflags-y += -D__CHECK_ENDIAN__
 diff --git a/drivers/char/rpmb/mux/mux.c b/drivers/char/rpmb/mux/mux.c
 new file mode 100644
-index 000000000000..55901197d0a5
+index 0000000..5590119
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/mux.c
 @@ -0,0 +1,742 @@
@@ -821,5 +821,5 @@ index 000000000000..55901197d0a5
 +MODULE_DESCRIPTION("RPMB Mux kernel module");
 +MODULE_LICENSE("Dual BSD/GPL");
 -- 
-2.19.1
+2.21.0
 

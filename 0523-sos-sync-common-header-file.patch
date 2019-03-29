@@ -1,7 +1,7 @@
-From f72f5324bd149f1e8cfe141c6d3ceb1453760221 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Mingqiang Chi <mingqiang.chi@intel.com>
 Date: Fri, 31 Aug 2018 10:59:00 +0800
-Subject: [PATCH 055/214] sos: sync common header file
+Subject: [PATCH] sos: sync common header file
 
 sync common header file (acrn_common.h)
 
@@ -13,7 +13,7 @@ Reviewed-on:
  1 file changed, 138 insertions(+), 31 deletions(-)
 
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index d48fe80f6fab..40f3444b7e73 100644
+index d48fe80..40f3444 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -74,6 +74,16 @@
@@ -248,5 +248,5 @@ index d48fe80f6fab..40f3444b7e73 100644
 +
  #endif /* ACRN_COMMON_H */
 -- 
-2.19.1
+2.21.0
 

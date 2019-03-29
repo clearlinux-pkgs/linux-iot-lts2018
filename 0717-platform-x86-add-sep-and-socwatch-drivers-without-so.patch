@@ -1,8 +1,7 @@
-From d26baef1dce09d488bda5056db5b7da7e55e1af3 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Jon Moeller <jon.moeller@intel.com>
 Date: Tue, 13 Nov 2018 01:25:24 -0600
-Subject: [PATCH 1/3] platform/x86: add sep and socwatch drivers without
- socperf.
+Subject: [PATCH] platform/x86: add sep and socwatch drivers without socperf.
 
 SEP driver version is  5.0.0
 socwatch - SoC Watch Driver version 2.6.2
@@ -275,10 +274,10 @@ Signed-off-by: Jon Moeller <jon.moeller@intel.com>
  create mode 100644 drivers/platform/x86/socwatchhv/swhv_driver.c
 
 diff --git a/drivers/platform/x86/Kconfig b/drivers/platform/x86/Kconfig
-index 0c1aa6c314f5..73eb42a94a10 100644
+index 7563c07..c9b7b67 100644
 --- a/drivers/platform/x86/Kconfig
 +++ b/drivers/platform/x86/Kconfig
-@@ -1235,3 +1235,6 @@ config PMC_ATOM
+@@ -1237,3 +1237,6 @@ config PMC_ATOM
         def_bool y
         depends on PCI
         select COMMON_CLK
@@ -286,7 +285,7 @@ index 0c1aa6c314f5..73eb42a94a10 100644
 +source "drivers/platform/x86/socwatchhv/Kconfig"
 +source "drivers/platform/x86/sepdk/Kconfig"
 diff --git a/drivers/platform/x86/Makefile b/drivers/platform/x86/Makefile
-index e6d1becf81ce..84f429dd9958 100644
+index e6d1bec..84f429d 100644
 --- a/drivers/platform/x86/Makefile
 +++ b/drivers/platform/x86/Makefile
 @@ -92,3 +92,6 @@ obj-$(CONFIG_MLX_PLATFORM)	+= mlx-platform.o
@@ -298,7 +297,7 @@ index e6d1becf81ce..84f429dd9958 100644
 +obj-$(CONFIG_INTEL_SEP) += sepdk/
 diff --git a/drivers/platform/x86/sepdk/Kconfig b/drivers/platform/x86/sepdk/Kconfig
 new file mode 100755
-index 000000000000..ed9c94ec3d07
+index 0000000..ed9c94e
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/Kconfig
 @@ -0,0 +1,63 @@
@@ -367,7 +366,7 @@ index 000000000000..ed9c94ec3d07
 +
 diff --git a/drivers/platform/x86/sepdk/Makefile b/drivers/platform/x86/sepdk/Makefile
 new file mode 100755
-index 000000000000..c8992312a9bb
+index 0000000..c899231
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/Makefile
 @@ -0,0 +1,5 @@
@@ -378,7 +377,7 @@ index 000000000000..c8992312a9bb
 +
 diff --git a/drivers/platform/x86/sepdk/inc/apic.h b/drivers/platform/x86/sepdk/inc/apic.h
 new file mode 100644
-index 000000000000..2b7f1c70dab5
+index 0000000..2b7f1c7
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/apic.h
 @@ -0,0 +1,114 @@
@@ -498,7 +497,7 @@ index 000000000000..2b7f1c70dab5
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/asm_helper.h b/drivers/platform/x86/sepdk/inc/asm_helper.h
 new file mode 100644
-index 000000000000..fd4eabf95dd9
+index 0000000..fd4eabf
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/asm_helper.h
 @@ -0,0 +1,186 @@
@@ -690,7 +689,7 @@ index 000000000000..fd4eabf95dd9
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/chap.h b/drivers/platform/x86/sepdk/inc/chap.h
 new file mode 100644
-index 000000000000..823aa9058cd5
+index 0000000..823aa90
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/chap.h
 @@ -0,0 +1,31 @@
@@ -727,7 +726,7 @@ index 000000000000..823aa9058cd5
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/control.h b/drivers/platform/x86/sepdk/inc/control.h
 new file mode 100644
-index 000000000000..ecc93ceab221
+index 0000000..ecc93ce
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/control.h
 @@ -0,0 +1,510 @@
@@ -1243,7 +1242,7 @@ index 000000000000..ecc93ceab221
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/core2.h b/drivers/platform/x86/sepdk/inc/core2.h
 new file mode 100644
-index 000000000000..8a6c0835a623
+index 0000000..8a6c083
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/core2.h
 @@ -0,0 +1,49 @@
@@ -1298,7 +1297,7 @@ index 000000000000..8a6c0835a623
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/cpumon.h b/drivers/platform/x86/sepdk/inc/cpumon.h
 new file mode 100644
-index 000000000000..0ce584c1c805
+index 0000000..0ce584c
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/cpumon.h
 @@ -0,0 +1,53 @@
@@ -1357,7 +1356,7 @@ index 000000000000..0ce584c1c805
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/ecb_iterators.h b/drivers/platform/x86/sepdk/inc/ecb_iterators.h
 new file mode 100644
-index 000000000000..10527535925f
+index 0000000..1052753
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/ecb_iterators.h
 @@ -0,0 +1,581 @@
@@ -1944,7 +1943,7 @@ index 000000000000..10527535925f
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/eventmux.h b/drivers/platform/x86/sepdk/inc/eventmux.h
 new file mode 100644
-index 000000000000..4a96bb18ae85
+index 0000000..4a96bb1
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/eventmux.h
 @@ -0,0 +1,42 @@
@@ -1992,7 +1991,7 @@ index 000000000000..4a96bb18ae85
 +#endif /* _EVENTMUX_H_ */
 diff --git a/drivers/platform/x86/sepdk/inc/gfx.h b/drivers/platform/x86/sepdk/inc/gfx.h
 new file mode 100644
-index 000000000000..2bad4d712527
+index 0000000..2bad4d7
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/gfx.h
 @@ -0,0 +1,39 @@
@@ -2037,7 +2036,7 @@ index 000000000000..2bad4d712527
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/gmch.h b/drivers/platform/x86/sepdk/inc/gmch.h
 new file mode 100644
-index 000000000000..baa35728c4bf
+index 0000000..baa3572
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/gmch.h
 @@ -0,0 +1,31 @@
@@ -2074,7 +2073,7 @@ index 000000000000..baa35728c4bf
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/haswellunc_sa.h b/drivers/platform/x86/sepdk/inc/haswellunc_sa.h
 new file mode 100644
-index 000000000000..bd4fb6887d0c
+index 0000000..bd4fb68
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/haswellunc_sa.h
 @@ -0,0 +1,57 @@
@@ -2137,7 +2136,7 @@ index 000000000000..bd4fb6887d0c
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/jkt_unc_ha.h b/drivers/platform/x86/sepdk/inc/jkt_unc_ha.h
 new file mode 100644
-index 000000000000..aa6bf7624075
+index 0000000..aa6bf76
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/jkt_unc_ha.h
 @@ -0,0 +1,37 @@
@@ -2180,7 +2179,7 @@ index 000000000000..aa6bf7624075
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/jkt_unc_qpill.h b/drivers/platform/x86/sepdk/inc/jkt_unc_qpill.h
 new file mode 100644
-index 000000000000..debde4d48252
+index 0000000..debde4d
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/jkt_unc_qpill.h
 @@ -0,0 +1,64 @@
@@ -2250,7 +2249,7 @@ index 000000000000..debde4d48252
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/linuxos.h b/drivers/platform/x86/sepdk/inc/linuxos.h
 new file mode 100644
-index 000000000000..3e4c2c96476f
+index 0000000..3e4c2c9
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/linuxos.h
 @@ -0,0 +1,79 @@
@@ -2335,7 +2334,7 @@ index 000000000000..3e4c2c96476f
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/lwpmudrv.h b/drivers/platform/x86/sepdk/inc/lwpmudrv.h
 new file mode 100644
-index 000000000000..37c8109a0e8b
+index 0000000..37c8109
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/lwpmudrv.h
 @@ -0,0 +1,551 @@
@@ -2892,7 +2891,7 @@ index 000000000000..37c8109a0e8b
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/msrdefs.h b/drivers/platform/x86/sepdk/inc/msrdefs.h
 new file mode 100644
-index 000000000000..40986ea111bb
+index 0000000..40986ea
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/msrdefs.h
 @@ -0,0 +1,81 @@
@@ -2979,7 +2978,7 @@ index 000000000000..40986ea111bb
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/output.h b/drivers/platform/x86/sepdk/inc/output.h
 new file mode 100644
-index 000000000000..483e0b5fb5d5
+index 0000000..483e0b5
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/output.h
 @@ -0,0 +1,120 @@
@@ -3105,7 +3104,7 @@ index 000000000000..483e0b5fb5d5
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/pci.h b/drivers/platform/x86/sepdk/inc/pci.h
 new file mode 100644
-index 000000000000..44d5304d86a5
+index 0000000..44d5304
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/pci.h
 @@ -0,0 +1,133 @@
@@ -3244,7 +3243,7 @@ index 000000000000..44d5304d86a5
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/pebs.h b/drivers/platform/x86/sepdk/inc/pebs.h
 new file mode 100644
-index 000000000000..7a7bbe10e2ba
+index 0000000..7a7bbe1
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/pebs.h
 @@ -0,0 +1,494 @@
@@ -3744,7 +3743,7 @@ index 000000000000..7a7bbe10e2ba
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/perfver4.h b/drivers/platform/x86/sepdk/inc/perfver4.h
 new file mode 100644
-index 000000000000..74ecf54179df
+index 0000000..74ecf54
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/perfver4.h
 @@ -0,0 +1,51 @@
@@ -3801,7 +3800,7 @@ index 000000000000..74ecf54179df
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/pmi.h b/drivers/platform/x86/sepdk/inc/pmi.h
 new file mode 100644
-index 000000000000..4fd71f74ceb9
+index 0000000..4fd71f7
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/pmi.h
 @@ -0,0 +1,65 @@
@@ -3872,7 +3871,7 @@ index 000000000000..4fd71f74ceb9
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/sepdrv_p_state.h b/drivers/platform/x86/sepdk/inc/sepdrv_p_state.h
 new file mode 100644
-index 000000000000..2a20394c393f
+index 0000000..2a20394
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/sepdrv_p_state.h
 @@ -0,0 +1,34 @@
@@ -3912,7 +3911,7 @@ index 000000000000..2a20394c393f
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/silvermont.h b/drivers/platform/x86/sepdk/inc/silvermont.h
 new file mode 100644
-index 000000000000..4a35b1db5047
+index 0000000..4a35b1d
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/silvermont.h
 @@ -0,0 +1,41 @@
@@ -3959,7 +3958,7 @@ index 000000000000..4a35b1db5047
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/sys_info.h b/drivers/platform/x86/sepdk/inc/sys_info.h
 new file mode 100644
-index 000000000000..c5dd5621a58b
+index 0000000..c5dd562
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/sys_info.h
 @@ -0,0 +1,71 @@
@@ -4036,7 +4035,7 @@ index 000000000000..c5dd5621a58b
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/unc_common.h b/drivers/platform/x86/sepdk/inc/unc_common.h
 new file mode 100644
-index 000000000000..d1cc228982f0
+index 0000000..d1cc228
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/unc_common.h
 @@ -0,0 +1,161 @@
@@ -4203,7 +4202,7 @@ index 000000000000..d1cc228982f0
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/unc_gt.h b/drivers/platform/x86/sepdk/inc/unc_gt.h
 new file mode 100644
-index 000000000000..3e95db32cfa8
+index 0000000..3e95db3
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/unc_gt.h
 @@ -0,0 +1,86 @@
@@ -4295,7 +4294,7 @@ index 000000000000..3e95db32cfa8
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/utility.h b/drivers/platform/x86/sepdk/inc/utility.h
 new file mode 100644
-index 000000000000..c5eca9612b00
+index 0000000..c5eca96
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/utility.h
 @@ -0,0 +1,637 @@
@@ -4938,7 +4937,7 @@ index 000000000000..c5eca9612b00
 +#endif
 diff --git a/drivers/platform/x86/sepdk/inc/valleyview_sochap.h b/drivers/platform/x86/sepdk/inc/valleyview_sochap.h
 new file mode 100644
-index 000000000000..18214ea3ca76
+index 0000000..18214ea
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/inc/valleyview_sochap.h
 @@ -0,0 +1,60 @@
@@ -5004,7 +5003,7 @@ index 000000000000..18214ea3ca76
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/error_reporting_utils.h b/drivers/platform/x86/sepdk/include/error_reporting_utils.h
 new file mode 100644
-index 000000000000..c1e90c441cc1
+index 0000000..c1e90c4
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/error_reporting_utils.h
 @@ -0,0 +1,167 @@
@@ -5177,7 +5176,7 @@ index 000000000000..c1e90c441cc1
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_chipset.h b/drivers/platform/x86/sepdk/include/lwpmudrv_chipset.h
 new file mode 100644
-index 000000000000..82531312af75
+index 0000000..8253131
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_chipset.h
 @@ -0,0 +1,274 @@
@@ -5457,7 +5456,7 @@ index 000000000000..82531312af75
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h b/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
 new file mode 100644
-index 000000000000..d6889982ada0
+index 0000000..d688998
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
 @@ -0,0 +1,507 @@
@@ -5970,7 +5969,7 @@ index 000000000000..d6889982ada0
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_ecb.h b/drivers/platform/x86/sepdk/include/lwpmudrv_ecb.h
 new file mode 100644
-index 000000000000..792ae65191b3
+index 0000000..792ae65
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_ecb.h
 @@ -0,0 +1,1116 @@
@@ -7092,7 +7091,7 @@ index 000000000000..792ae65191b3
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_gfx.h b/drivers/platform/x86/sepdk/include/lwpmudrv_gfx.h
 new file mode 100644
-index 000000000000..fe6583e2c44c
+index 0000000..fe6583e
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_gfx.h
 @@ -0,0 +1,33 @@
@@ -7131,7 +7130,7 @@ index 000000000000..fe6583e2c44c
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_ioctl.h b/drivers/platform/x86/sepdk/include/lwpmudrv_ioctl.h
 new file mode 100644
-index 000000000000..a8d32466a4bd
+index 0000000..a8d3246
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_ioctl.h
 @@ -0,0 +1,284 @@
@@ -7421,7 +7420,7 @@ index 000000000000..a8d32466a4bd
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_pwr.h b/drivers/platform/x86/sepdk/include/lwpmudrv_pwr.h
 new file mode 100644
-index 000000000000..e26a478a9bb1
+index 0000000..e26a478
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_pwr.h
 @@ -0,0 +1,100 @@
@@ -7527,7 +7526,7 @@ index 000000000000..e26a478a9bb1
 +#endif /* _LWPMUDRV_PWR_H_ */
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h b/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h
 new file mode 100644
-index 000000000000..c76ef5fa0e67
+index 0000000..c76ef5f
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h
 @@ -0,0 +1,2059 @@
@@ -9592,7 +9591,7 @@ index 000000000000..c76ef5fa0e67
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_types.h b/drivers/platform/x86/sepdk/include/lwpmudrv_types.h
 new file mode 100644
-index 000000000000..7fe842eee890
+index 0000000..7fe842e
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_types.h
 @@ -0,0 +1,159 @@
@@ -9757,7 +9756,7 @@ index 000000000000..7fe842eee890
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_version.h b/drivers/platform/x86/sepdk/include/lwpmudrv_version.h
 new file mode 100644
-index 000000000000..a2cbedd44573
+index 0000000..a2cbedd
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_version.h
 @@ -0,0 +1,111 @@
@@ -9874,7 +9873,7 @@ index 000000000000..a2cbedd44573
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/pax_shared.h b/drivers/platform/x86/sepdk/include/pax_shared.h
 new file mode 100644
-index 000000000000..a706232c9b4a
+index 0000000..a706232
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/pax_shared.h
 @@ -0,0 +1,180 @@
@@ -10060,7 +10059,7 @@ index 000000000000..a706232c9b4a
 +#endif
 diff --git a/drivers/platform/x86/sepdk/include/rise_errors.h b/drivers/platform/x86/sepdk/include/rise_errors.h
 new file mode 100644
-index 000000000000..29fb278def7d
+index 0000000..29fb278
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/include/rise_errors.h
 @@ -0,0 +1,326 @@
@@ -10392,7 +10391,7 @@ index 000000000000..29fb278def7d
 +#endif
 diff --git a/drivers/platform/x86/sepdk/pax/Makefile b/drivers/platform/x86/sepdk/pax/Makefile
 new file mode 100755
-index 000000000000..267d70eeaab5
+index 0000000..267d70e
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/pax/Makefile
 @@ -0,0 +1,4 @@
@@ -10402,7 +10401,7 @@ index 000000000000..267d70eeaab5
 +
 diff --git a/drivers/platform/x86/sepdk/pax/pax.c b/drivers/platform/x86/sepdk/pax/pax.c
 new file mode 100755
-index 000000000000..f8eebf989b0e
+index 0000000..f8eebf9
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/pax/pax.c
 @@ -0,0 +1,967 @@
@@ -11375,7 +11374,7 @@ index 000000000000..f8eebf989b0e
 +module_exit(pax_Unload);
 diff --git a/drivers/platform/x86/sepdk/pax/pax.h b/drivers/platform/x86/sepdk/pax/pax.h
 new file mode 100755
-index 000000000000..b7d48f874958
+index 0000000..b7d48f8
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/pax/pax.h
 @@ -0,0 +1,33 @@
@@ -11414,7 +11413,7 @@ index 000000000000..b7d48f874958
 +#endif
 diff --git a/drivers/platform/x86/sepdk/sep/Makefile b/drivers/platform/x86/sepdk/sep/Makefile
 new file mode 100755
-index 000000000000..405e55d53c97
+index 0000000..405e55d
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/Makefile
 @@ -0,0 +1,67 @@
@@ -11487,7 +11486,7 @@ index 000000000000..405e55d53c97
 +						unc_sa.o
 diff --git a/drivers/platform/x86/sepdk/sep/apic.c b/drivers/platform/x86/sepdk/sep/apic.c
 new file mode 100755
-index 000000000000..693c526d63de
+index 0000000..693c526
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/apic.c
 @@ -0,0 +1,228 @@
@@ -11721,7 +11720,7 @@ index 000000000000..693c526d63de
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/chap.c b/drivers/platform/x86/sepdk/sep/chap.c
 new file mode 100755
-index 000000000000..434e9aeb658e
+index 0000000..434e9ae
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/chap.c
 @@ -0,0 +1,474 @@
@@ -12201,7 +12200,7 @@ index 000000000000..434e9aeb658e
 +};
 diff --git a/drivers/platform/x86/sepdk/sep/control.c b/drivers/platform/x86/sepdk/sep/control.c
 new file mode 100755
-index 000000000000..474de2c3e578
+index 0000000..474de2c
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/control.c
 @@ -0,0 +1,896 @@
@@ -13103,7 +13102,7 @@ index 000000000000..474de2c3e578
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/core2.c b/drivers/platform/x86/sepdk/sep/core2.c
 new file mode 100755
-index 000000000000..a56ad28cd097
+index 0000000..a56ad28
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/core2.c
 @@ -0,0 +1,2137 @@
@@ -15246,7 +15245,7 @@ index 000000000000..a56ad28cd097
 +};
 diff --git a/drivers/platform/x86/sepdk/sep/cpumon.c b/drivers/platform/x86/sepdk/sep/cpumon.c
 new file mode 100755
-index 000000000000..ac8ade14f106
+index 0000000..ac8ade1
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/cpumon.c
 @@ -0,0 +1,357 @@
@@ -15609,7 +15608,7 @@ index 000000000000..ac8ade14f106
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/eventmux.c b/drivers/platform/x86/sepdk/sep/eventmux.c
 new file mode 100755
-index 000000000000..1d8099dc674a
+index 0000000..1d8099d
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/eventmux.c
 @@ -0,0 +1,446 @@
@@ -16061,7 +16060,7 @@ index 000000000000..1d8099dc674a
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/gfx.c b/drivers/platform/x86/sepdk/sep/gfx.c
 new file mode 100755
-index 000000000000..38342f6740c4
+index 0000000..38342f6
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/gfx.c
 @@ -0,0 +1,261 @@
@@ -16328,7 +16327,7 @@ index 000000000000..38342f6740c4
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/gmch.c b/drivers/platform/x86/sepdk/sep/gmch.c
 new file mode 100755
-index 000000000000..41b9ee8b67a5
+index 0000000..41b9ee8
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/gmch.c
 @@ -0,0 +1,505 @@
@@ -16839,7 +16838,7 @@ index 000000000000..41b9ee8b67a5
 +				   .Trigger_Read = gmch_Trigger_Read };
 diff --git a/drivers/platform/x86/sepdk/sep/linuxos.c b/drivers/platform/x86/sepdk/sep/linuxos.c
 new file mode 100755
-index 000000000000..08da10e614d8
+index 0000000..08da10e
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/linuxos.c
 @@ -0,0 +1,1477 @@
@@ -18322,7 +18321,7 @@ index 000000000000..08da10e614d8
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/lwpmudrv.c b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 new file mode 100755
-index 000000000000..f13552c20774
+index 0000000..f13552c
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 @@ -0,0 +1,7537 @@
@@ -25865,7 +25864,7 @@ index 000000000000..f13552c20774
 +module_exit(lwpmu_Unload);
 diff --git a/drivers/platform/x86/sepdk/sep/output.c b/drivers/platform/x86/sepdk/sep/output.c
 new file mode 100755
-index 000000000000..5fe2d28b4174
+index 0000000..5fe2d28
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/output.c
 @@ -0,0 +1,1177 @@
@@ -27048,7 +27047,7 @@ index 000000000000..5fe2d28b4174
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/pci.c b/drivers/platform/x86/sepdk/sep/pci.c
 new file mode 100755
-index 000000000000..12a93804975c
+index 0000000..12a9380
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/pci.c
 @@ -0,0 +1,661 @@
@@ -27715,7 +27714,7 @@ index 000000000000..12a93804975c
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/pebs.c b/drivers/platform/x86/sepdk/sep/pebs.c
 new file mode 100755
-index 000000000000..7537c1136ec4
+index 0000000..7537c11
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/pebs.c
 @@ -0,0 +1,1957 @@
@@ -29678,7 +29677,7 @@ index 000000000000..7537c1136ec4
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/perfver4.c b/drivers/platform/x86/sepdk/sep/perfver4.c
 new file mode 100755
-index 000000000000..ae8fa717f4bf
+index 0000000..ae8fa71
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/perfver4.c
 @@ -0,0 +1,1972 @@
@@ -31656,7 +31655,7 @@ index 000000000000..ae8fa717f4bf
 +};
 diff --git a/drivers/platform/x86/sepdk/sep/pmi.c b/drivers/platform/x86/sepdk/sep/pmi.c
 new file mode 100755
-index 000000000000..44f335dbc885
+index 0000000..44f335d
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/pmi.c
 @@ -0,0 +1,640 @@
@@ -32302,7 +32301,7 @@ index 000000000000..44f335dbc885
 +#endif
 diff --git a/drivers/platform/x86/sepdk/sep/sepdrv_p_state.c b/drivers/platform/x86/sepdk/sep/sepdrv_p_state.c
 new file mode 100755
-index 000000000000..e91b9be4d582
+index 0000000..e91b9be
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/sepdrv_p_state.c
 @@ -0,0 +1,88 @@
@@ -32396,7 +32395,7 @@ index 000000000000..e91b9be4d582
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/silvermont.c b/drivers/platform/x86/sepdk/sep/silvermont.c
 new file mode 100755
-index 000000000000..d69930395923
+index 0000000..d699303
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/silvermont.c
 @@ -0,0 +1,1113 @@
@@ -33515,7 +33514,7 @@ index 000000000000..d69930395923
 +				   .read_metrics = NULL };
 diff --git a/drivers/platform/x86/sepdk/sep/sys32.S b/drivers/platform/x86/sepdk/sep/sys32.S
 new file mode 100755
-index 000000000000..eb4c12304cdc
+index 0000000..eb4c123
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/sys32.S
 @@ -0,0 +1,200 @@
@@ -33721,7 +33720,7 @@ index 000000000000..eb4c12304cdc
 +		ret
 diff --git a/drivers/platform/x86/sepdk/sep/sys64.S b/drivers/platform/x86/sepdk/sep/sys64.S
 new file mode 100755
-index 000000000000..1deb8db3cdb7
+index 0000000..1deb8db
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/sys64.S
 @@ -0,0 +1,140 @@
@@ -33867,7 +33866,7 @@ index 000000000000..1deb8db3cdb7
 +	CFI_ENDPROC
 diff --git a/drivers/platform/x86/sepdk/sep/sys_info.c b/drivers/platform/x86/sepdk/sep/sys_info.c
 new file mode 100755
-index 000000000000..b72ce2894c82
+index 0000000..b72ce28
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/sys_info.c
 @@ -0,0 +1,1111 @@
@@ -34984,7 +34983,7 @@ index 000000000000..b72ce2894c82
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/unc_common.c b/drivers/platform/x86/sepdk/sep/unc_common.c
 new file mode 100755
-index 000000000000..5442734a91f7
+index 0000000..5442734
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/unc_common.c
 @@ -0,0 +1,388 @@
@@ -35378,7 +35377,7 @@ index 000000000000..5442734a91f7
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/unc_gt.c b/drivers/platform/x86/sepdk/sep/unc_gt.c
 new file mode 100755
-index 000000000000..34e7650da94b
+index 0000000..34e7650
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/unc_gt.c
 @@ -0,0 +1,470 @@
@@ -35854,7 +35853,7 @@ index 000000000000..34e7650da94b
 +				  .read_metrics = NULL };
 diff --git a/drivers/platform/x86/sepdk/sep/unc_mmio.c b/drivers/platform/x86/sepdk/sep/unc_mmio.c
 new file mode 100755
-index 000000000000..b1d997d0f405
+index 0000000..b1d997d
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/unc_mmio.c
 @@ -0,0 +1,1083 @@
@@ -36943,7 +36942,7 @@ index 000000000000..b1d997d0f405
 +					 .read_metrics = NULL };
 diff --git a/drivers/platform/x86/sepdk/sep/unc_msr.c b/drivers/platform/x86/sepdk/sep/unc_msr.c
 new file mode 100755
-index 000000000000..ce144203dc39
+index 0000000..ce14420
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/unc_msr.c
 @@ -0,0 +1,347 @@
@@ -37296,7 +37295,7 @@ index 000000000000..ce144203dc39
 +				   .read_metrics = NULL };
 diff --git a/drivers/platform/x86/sepdk/sep/unc_pci.c b/drivers/platform/x86/sepdk/sep/unc_pci.c
 new file mode 100755
-index 000000000000..e338556f8b34
+index 0000000..e338556
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/unc_pci.c
 @@ -0,0 +1,491 @@
@@ -37793,7 +37792,7 @@ index 000000000000..e338556f8b34
 +				   .read_metrics = NULL };
 diff --git a/drivers/platform/x86/sepdk/sep/unc_power.c b/drivers/platform/x86/sepdk/sep/unc_power.c
 new file mode 100755
-index 000000000000..4f7d8ff43744
+index 0000000..4f7d8ff
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/unc_power.c
 @@ -0,0 +1,444 @@
@@ -38243,7 +38242,7 @@ index 000000000000..4f7d8ff43744
 +				     .read_metrics = NULL };
 diff --git a/drivers/platform/x86/sepdk/sep/unc_sa.c b/drivers/platform/x86/sepdk/sep/unc_sa.c
 new file mode 100755
-index 000000000000..7345807f9588
+index 0000000..7345807
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/unc_sa.c
 @@ -0,0 +1,173 @@
@@ -38422,7 +38421,7 @@ index 000000000000..7345807f9588
 +				     .read_metrics = NULL };
 diff --git a/drivers/platform/x86/sepdk/sep/utility.c b/drivers/platform/x86/sepdk/sep/utility.c
 new file mode 100755
-index 000000000000..cc4f0cba5e9e
+index 0000000..cc4f0cb
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/utility.c
 @@ -0,0 +1,1157 @@
@@ -39585,7 +39584,7 @@ index 000000000000..cc4f0cba5e9e
 +}
 diff --git a/drivers/platform/x86/sepdk/sep/valleyview_sochap.c b/drivers/platform/x86/sepdk/sep/valleyview_sochap.c
 new file mode 100755
-index 000000000000..7e1e5eb9c65f
+index 0000000..7e1e5eb
 --- /dev/null
 +++ b/drivers/platform/x86/sepdk/sep/valleyview_sochap.c
 @@ -0,0 +1,301 @@
@@ -39892,7 +39891,7 @@ index 000000000000..7e1e5eb9c65f
 +};
 diff --git a/drivers/platform/x86/socwatch/Kconfig b/drivers/platform/x86/socwatch/Kconfig
 new file mode 100644
-index 000000000000..87a7ae205f2d
+index 0000000..87a7ae2
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/Kconfig
 @@ -0,0 +1,6 @@
@@ -39904,7 +39903,7 @@ index 000000000000..87a7ae205f2d
 +	  Say Y here to enable SocWatch driver
 diff --git a/drivers/platform/x86/socwatch/Makefile b/drivers/platform/x86/socwatch/Makefile
 new file mode 100644
-index 000000000000..15ac18fcfdc0
+index 0000000..15ac18f
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/Makefile
 @@ -0,0 +1,22 @@
@@ -39932,7 +39931,7 @@ index 000000000000..15ac18fcfdc0
 +			sw_reader.o sw_trace_notifier_provider.o
 diff --git a/drivers/platform/x86/socwatch/inc/sw_collector.h b/drivers/platform/x86/socwatch/inc/sw_collector.h
 new file mode 100644
-index 000000000000..b771ab936b26
+index 0000000..b771ab9
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_collector.h
 @@ -0,0 +1,136 @@
@@ -40074,7 +40073,7 @@ index 000000000000..b771ab936b26
 +#endif // __SW_COLLECTOR_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_defines.h b/drivers/platform/x86/socwatch/inc/sw_defines.h
 new file mode 100644
-index 000000000000..15ccca1efed6
+index 0000000..15ccca1
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_defines.h
 @@ -0,0 +1,156 @@
@@ -40236,7 +40235,7 @@ index 000000000000..15ccca1efed6
 +#endif // _PW_DEFINES_H_
 diff --git a/drivers/platform/x86/socwatch/inc/sw_file_ops.h b/drivers/platform/x86/socwatch/inc/sw_file_ops.h
 new file mode 100644
-index 000000000000..7c5705cf942c
+index 0000000..7c5705c
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_file_ops.h
 @@ -0,0 +1,70 @@
@@ -40312,7 +40311,7 @@ index 000000000000..7c5705cf942c
 +#endif // __SW_FILE_OPS_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_hardware_io.h b/drivers/platform/x86/socwatch/inc/sw_hardware_io.h
 new file mode 100644
-index 000000000000..f93fa6b10d7a
+index 0000000..f93fa6b
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_hardware_io.h
 @@ -0,0 +1,118 @@
@@ -40436,7 +40435,7 @@ index 000000000000..f93fa6b10d7a
 +#endif // __SW_HARDWARE_IO_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_internal.h b/drivers/platform/x86/socwatch/inc/sw_internal.h
 new file mode 100644
-index 000000000000..8e88d5d5ea54
+index 0000000..8e88d5d
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_internal.h
 @@ -0,0 +1,138 @@
@@ -40580,7 +40579,7 @@ index 000000000000..8e88d5d5ea54
 +#endif // __SW_DATA_STRUCTS_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_ioctl.h b/drivers/platform/x86/socwatch/inc/sw_ioctl.h
 new file mode 100644
-index 000000000000..baf93058c5c5
+index 0000000..baf9305
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_ioctl.h
 @@ -0,0 +1,303 @@
@@ -40889,7 +40888,7 @@ index 000000000000..baf93058c5c5
 +#endif // __SW_IOCTL_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_kernel_defines.h b/drivers/platform/x86/socwatch/inc/sw_kernel_defines.h
 new file mode 100644
-index 000000000000..275b1bdfc25e
+index 0000000..275b1bd
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_kernel_defines.h
 @@ -0,0 +1,164 @@
@@ -41059,7 +41058,7 @@ index 000000000000..275b1bdfc25e
 +#endif // _SW_KERNEL_DEFINES_H_
 diff --git a/drivers/platform/x86/socwatch/inc/sw_list.h b/drivers/platform/x86/socwatch/inc/sw_list.h
 new file mode 100644
-index 000000000000..ecc646a99caa
+index 0000000..ecc646a
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_list.h
 @@ -0,0 +1,76 @@
@@ -41141,7 +41140,7 @@ index 000000000000..ecc646a99caa
 +#endif // __SW_LIST_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_lock_defs.h b/drivers/platform/x86/socwatch/inc/sw_lock_defs.h
 new file mode 100644
-index 000000000000..7c9d68c02f58
+index 0000000..7c9d68c
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_lock_defs.h
 @@ -0,0 +1,98 @@
@@ -41245,7 +41244,7 @@ index 000000000000..7c9d68c02f58
 +#endif // __SW_LOCK_DEFS_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_mem.h b/drivers/platform/x86/socwatch/inc/sw_mem.h
 new file mode 100644
-index 000000000000..600b8881262c
+index 0000000..600b888
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_mem.h
 @@ -0,0 +1,82 @@
@@ -41333,7 +41332,7 @@ index 000000000000..600b8881262c
 +#endif // _SW_MEM_H_
 diff --git a/drivers/platform/x86/socwatch/inc/sw_ops_provider.h b/drivers/platform/x86/socwatch/inc/sw_ops_provider.h
 new file mode 100644
-index 000000000000..43bd73fd3445
+index 0000000..43bd73f
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_ops_provider.h
 @@ -0,0 +1,62 @@
@@ -41401,7 +41400,7 @@ index 000000000000..43bd73fd3445
 +#endif // __SW_OPS_PROVIDER_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_output_buffer.h b/drivers/platform/x86/socwatch/inc/sw_output_buffer.h
 new file mode 100644
-index 000000000000..17e59445ce85
+index 0000000..17e5944
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_output_buffer.h
 @@ -0,0 +1,136 @@
@@ -41543,7 +41542,7 @@ index 000000000000..17e59445ce85
 +#endif // _SW_OUTPUT_BUFFER_H_
 diff --git a/drivers/platform/x86/socwatch/inc/sw_overhead_measurements.h b/drivers/platform/x86/socwatch/inc/sw_overhead_measurements.h
 new file mode 100644
-index 000000000000..7d9dc683119b
+index 0000000..7d9dc68
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_overhead_measurements.h
 @@ -0,0 +1,189 @@
@@ -41738,7 +41737,7 @@ index 000000000000..7d9dc683119b
 +#endif // _PW_OVERHEAD_MEASUREMENTS_H_
 diff --git a/drivers/platform/x86/socwatch/inc/sw_structs.h b/drivers/platform/x86/socwatch/inc/sw_structs.h
 new file mode 100644
-index 000000000000..7f53a9e2984c
+index 0000000..7f53a9e
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_structs.h
 @@ -0,0 +1,500 @@
@@ -42244,7 +42243,7 @@ index 000000000000..7f53a9e2984c
 +#endif // __SW_STRUCTS_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_telem.h b/drivers/platform/x86/socwatch/inc/sw_telem.h
 new file mode 100644
-index 000000000000..52e5119b557e
+index 0000000..52e5119
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_telem.h
 @@ -0,0 +1,74 @@
@@ -42324,7 +42323,7 @@ index 000000000000..52e5119b557e
 +#endif /* SW_TELEM_H */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_trace_notifier_provider.h b/drivers/platform/x86/socwatch/inc/sw_trace_notifier_provider.h
 new file mode 100644
-index 000000000000..3834a16d7ae8
+index 0000000..3834a16
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_trace_notifier_provider.h
 @@ -0,0 +1,82 @@
@@ -42412,7 +42411,7 @@ index 000000000000..3834a16d7ae8
 +#endif // __SW_TRACE_NOTIFIER_PROVIDER_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_tracepoint_handlers.h b/drivers/platform/x86/socwatch/inc/sw_tracepoint_handlers.h
 new file mode 100644
-index 000000000000..db8294a9a137
+index 0000000..db8294a
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_tracepoint_handlers.h
 @@ -0,0 +1,142 @@
@@ -42560,7 +42559,7 @@ index 000000000000..db8294a9a137
 +#endif // __SW_TRACEPOINT_HANDLERS_H__
 diff --git a/drivers/platform/x86/socwatch/inc/sw_types.h b/drivers/platform/x86/socwatch/inc/sw_types.h
 new file mode 100644
-index 000000000000..914ce9806965
+index 0000000..914ce98
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_types.h
 @@ -0,0 +1,152 @@
@@ -42718,7 +42717,7 @@ index 000000000000..914ce9806965
 +#endif // _PW_TYPES_H_
 diff --git a/drivers/platform/x86/socwatch/inc/sw_version.h b/drivers/platform/x86/socwatch/inc/sw_version.h
 new file mode 100644
-index 000000000000..5797edffa64d
+index 0000000..5797edf
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/inc/sw_version.h
 @@ -0,0 +1,74 @@
@@ -42798,7 +42797,7 @@ index 000000000000..5797edffa64d
 +#endif // __SW_VERSION_H__
 diff --git a/drivers/platform/x86/socwatch/sw_collector.c b/drivers/platform/x86/socwatch/sw_collector.c
 new file mode 100644
-index 000000000000..a6c8a9cec48b
+index 0000000..a6c8a9c
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_collector.c
 @@ -0,0 +1,706 @@
@@ -43510,7 +43509,7 @@ index 000000000000..a6c8a9cec48b
 +}
 diff --git a/drivers/platform/x86/socwatch/sw_driver.c b/drivers/platform/x86/socwatch/sw_driver.c
 new file mode 100644
-index 000000000000..35b516cfb26a
+index 0000000..35b516c
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_driver.c
 @@ -0,0 +1,1472 @@
@@ -44988,7 +44987,7 @@ index 000000000000..35b516cfb26a
 +MODULE_DESCRIPTION(MOD_DESC);
 diff --git a/drivers/platform/x86/socwatch/sw_file_ops.c b/drivers/platform/x86/socwatch/sw_file_ops.c
 new file mode 100644
-index 000000000000..06c88801a9ec
+index 0000000..06c8880
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_file_ops.c
 @@ -0,0 +1,364 @@
@@ -45358,7 +45357,7 @@ index 000000000000..06c88801a9ec
 +}
 diff --git a/drivers/platform/x86/socwatch/sw_hardware_io.c b/drivers/platform/x86/socwatch/sw_hardware_io.c
 new file mode 100644
-index 000000000000..759288ac546e
+index 0000000..759288a
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_hardware_io.c
 @@ -0,0 +1,188 @@
@@ -45552,7 +45551,7 @@ index 000000000000..759288ac546e
 +}
 diff --git a/drivers/platform/x86/socwatch/sw_internal.c b/drivers/platform/x86/socwatch/sw_internal.c
 new file mode 100644
-index 000000000000..a4a4dca9dc53
+index 0000000..a4a4dca
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_internal.c
 @@ -0,0 +1,238 @@
@@ -45796,7 +45795,7 @@ index 000000000000..a4a4dca9dc53
 +}
 diff --git a/drivers/platform/x86/socwatch/sw_mem.c b/drivers/platform/x86/socwatch/sw_mem.c
 new file mode 100644
-index 000000000000..0d1231c2e3a8
+index 0000000..0d1231c
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_mem.c
 @@ -0,0 +1,331 @@
@@ -46133,7 +46132,7 @@ index 000000000000..0d1231c2e3a8
 +#endif // DO_TRACK_MEMORY_USAGE
 diff --git a/drivers/platform/x86/socwatch/sw_ops_provider.c b/drivers/platform/x86/socwatch/sw_ops_provider.c
 new file mode 100644
-index 000000000000..1eb60d12b701
+index 0000000..1eb60d1
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_ops_provider.c
 @@ -0,0 +1,1225 @@
@@ -47364,7 +47363,7 @@ index 000000000000..1eb60d12b701
 +}
 diff --git a/drivers/platform/x86/socwatch/sw_output_buffer.c b/drivers/platform/x86/socwatch/sw_output_buffer.c
 new file mode 100644
-index 000000000000..d3b8e585595d
+index 0000000..d3b8e58
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_output_buffer.c
 @@ -0,0 +1,598 @@
@@ -47968,7 +47967,7 @@ index 000000000000..d3b8e585595d
 +};
 diff --git a/drivers/platform/x86/socwatch/sw_reader.c b/drivers/platform/x86/socwatch/sw_reader.c
 new file mode 100644
-index 000000000000..c94e7e8983db
+index 0000000..c94e7e8
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_reader.c
 @@ -0,0 +1,163 @@
@@ -48137,7 +48136,7 @@ index 000000000000..c94e7e8983db
 +}
 diff --git a/drivers/platform/x86/socwatch/sw_telem.c b/drivers/platform/x86/socwatch/sw_telem.c
 new file mode 100644
-index 000000000000..9f8beb57da68
+index 0000000..9f8beb5
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_telem.c
 @@ -0,0 +1,493 @@
@@ -48636,7 +48635,7 @@ index 000000000000..9f8beb57da68
 +}
 diff --git a/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c b/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
 new file mode 100644
-index 000000000000..0c414423de09
+index 0000000..0c41442
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
 @@ -0,0 +1,2233 @@
@@ -50875,7 +50874,7 @@ index 000000000000..0c414423de09
 +}
 diff --git a/drivers/platform/x86/socwatch/sw_tracepoint_handlers.c b/drivers/platform/x86/socwatch/sw_tracepoint_handlers.c
 new file mode 100644
-index 000000000000..bc335ce9a65e
+index 0000000..bc335ce
 --- /dev/null
 +++ b/drivers/platform/x86/socwatch/sw_tracepoint_handlers.c
 @@ -0,0 +1,399 @@
@@ -51280,7 +51279,7 @@ index 000000000000..bc335ce9a65e
 +}
 diff --git a/drivers/platform/x86/socwatchhv/Kconfig b/drivers/platform/x86/socwatchhv/Kconfig
 new file mode 100644
-index 000000000000..3226632de1fc
+index 0000000..3226632
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/Kconfig
 @@ -0,0 +1,6 @@
@@ -51292,7 +51291,7 @@ index 000000000000..3226632de1fc
 +	  Say Y here to enable SocWatch hypervisor driver
 diff --git a/drivers/platform/x86/socwatchhv/Makefile b/drivers/platform/x86/socwatchhv/Makefile
 new file mode 100644
-index 000000000000..bd4b58a61f06
+index 0000000..bd4b58a
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/Makefile
 @@ -0,0 +1,20 @@
@@ -51318,7 +51317,7 @@ index 000000000000..bd4b58a61f06
 +			swhv_acrn.o
 diff --git a/drivers/platform/x86/socwatchhv/control.c b/drivers/platform/x86/socwatchhv/control.c
 new file mode 100644
-index 000000000000..4d1c384b1fe8
+index 0000000..4d1c384
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/control.c
 @@ -0,0 +1,141 @@
@@ -51465,7 +51464,7 @@ index 000000000000..4d1c384b1fe8
 +}
 diff --git a/drivers/platform/x86/socwatchhv/inc/asm_helper.h b/drivers/platform/x86/socwatchhv/inc/asm_helper.h
 new file mode 100644
-index 000000000000..d09a3bbd19cb
+index 0000000..d09a3bb
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/asm_helper.h
 @@ -0,0 +1,158 @@
@@ -51629,7 +51628,7 @@ index 000000000000..d09a3bbd19cb
 +#endif
 diff --git a/drivers/platform/x86/socwatchhv/inc/control.h b/drivers/platform/x86/socwatchhv/inc/control.h
 new file mode 100644
-index 000000000000..7403150dd679
+index 0000000..7403150
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/control.h
 @@ -0,0 +1,194 @@
@@ -51829,7 +51828,7 @@ index 000000000000..7403150dd679
 +#endif
 diff --git a/drivers/platform/x86/socwatchhv/inc/pw_types.h b/drivers/platform/x86/socwatchhv/inc/pw_types.h
 new file mode 100644
-index 000000000000..b8a3ac855e53
+index 0000000..b8a3ac8
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/pw_types.h
 @@ -0,0 +1,132 @@
@@ -51967,7 +51966,7 @@ index 000000000000..b8a3ac855e53
 +#endif // _PW_TYPES_H_
 diff --git a/drivers/platform/x86/socwatchhv/inc/pw_version.h b/drivers/platform/x86/socwatchhv/inc/pw_version.h
 new file mode 100644
-index 000000000000..8e1cf1cc4d62
+index 0000000..8e1cf1c
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/pw_version.h
 @@ -0,0 +1,67 @@
@@ -52040,7 +52039,7 @@ index 000000000000..8e1cf1cc4d62
 +#endif // _PW_VERSION_H_
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_defines.h b/drivers/platform/x86/socwatchhv/inc/sw_defines.h
 new file mode 100644
-index 000000000000..9c8995805464
+index 0000000..9c89958
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_defines.h
 @@ -0,0 +1,156 @@
@@ -52202,7 +52201,7 @@ index 000000000000..9c8995805464
 +#endif // _PW_DEFINES_H_
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_ioctl.h b/drivers/platform/x86/socwatchhv/inc/sw_ioctl.h
 new file mode 100644
-index 000000000000..baf93058c5c5
+index 0000000..baf9305
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_ioctl.h
 @@ -0,0 +1,303 @@
@@ -52511,7 +52510,7 @@ index 000000000000..baf93058c5c5
 +#endif // __SW_IOCTL_H__
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_kernel_defines.h b/drivers/platform/x86/socwatchhv/inc/sw_kernel_defines.h
 new file mode 100644
-index 000000000000..23e939a732c7
+index 0000000..23e939a
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_kernel_defines.h
 @@ -0,0 +1,164 @@
@@ -52681,7 +52680,7 @@ index 000000000000..23e939a732c7
 +#endif // _SW_KERNEL_DEFINES_H_
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_structs.h b/drivers/platform/x86/socwatchhv/inc/sw_structs.h
 new file mode 100644
-index 000000000000..94e58b5244f4
+index 0000000..94e58b5
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_structs.h
 @@ -0,0 +1,501 @@
@@ -53188,7 +53187,7 @@ index 000000000000..94e58b5244f4
 +#endif // __SW_STRUCTS_H__
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_types.h b/drivers/platform/x86/socwatchhv/inc/sw_types.h
 new file mode 100644
-index 000000000000..914ce9806965
+index 0000000..914ce98
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_types.h
 @@ -0,0 +1,152 @@
@@ -53346,7 +53345,7 @@ index 000000000000..914ce9806965
 +#endif // _PW_TYPES_H_
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_version.h b/drivers/platform/x86/socwatchhv/inc/sw_version.h
 new file mode 100644
-index 000000000000..5797edffa64d
+index 0000000..5797edf
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_version.h
 @@ -0,0 +1,74 @@
@@ -53426,7 +53425,7 @@ index 000000000000..5797edffa64d
 +#endif // __SW_VERSION_H__
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_acrn.h b/drivers/platform/x86/socwatchhv/inc/swhv_acrn.h
 new file mode 100644
-index 000000000000..06a9e090932b
+index 0000000..06a9e09
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_acrn.h
 @@ -0,0 +1,117 @@
@@ -53549,7 +53548,7 @@ index 000000000000..06a9e090932b
 +#endif // _SWHV_ACRN_H_
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_acrn_sbuf.h b/drivers/platform/x86/socwatchhv/inc/swhv_acrn_sbuf.h
 new file mode 100644
-index 000000000000..c5a08d1025ae
+index 0000000..c5a08d1
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_acrn_sbuf.h
 @@ -0,0 +1,186 @@
@@ -53741,7 +53740,7 @@ index 000000000000..c5a08d1025ae
 +#endif // _SWHV_ACRN_SBUF_H_
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_defines.h b/drivers/platform/x86/socwatchhv/inc/swhv_defines.h
 new file mode 100644
-index 000000000000..65239d566ae1
+index 0000000..65239d5
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_defines.h
 @@ -0,0 +1,111 @@
@@ -53858,7 +53857,7 @@ index 000000000000..65239d566ae1
 +#endif // _SWHV_DEFINES_H_
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_driver.h b/drivers/platform/x86/socwatchhv/inc/swhv_driver.h
 new file mode 100644
-index 000000000000..8ad0d672f095
+index 0000000..8ad0d67
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_driver.h
 @@ -0,0 +1,109 @@
@@ -53973,7 +53972,7 @@ index 000000000000..8ad0d672f095
 +#endif // _SWHV_DRIVER_H_
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_ioctl.h b/drivers/platform/x86/socwatchhv/inc/swhv_ioctl.h
 new file mode 100644
-index 000000000000..690bbcd5ccba
+index 0000000..690bbcd
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_ioctl.h
 @@ -0,0 +1,164 @@
@@ -54143,7 +54142,7 @@ index 000000000000..690bbcd5ccba
 +#endif // __SWHV_IOCTL_H__
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_structs.h b/drivers/platform/x86/socwatchhv/inc/swhv_structs.h
 new file mode 100644
-index 000000000000..67bac8e36ad4
+index 0000000..67bac8e
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_structs.h
 @@ -0,0 +1,234 @@
@@ -54383,7 +54382,7 @@ index 000000000000..67bac8e36ad4
 +#endif // _SWHV_STRUCTS_H_
 diff --git a/drivers/platform/x86/socwatchhv/swhv_acrn.c b/drivers/platform/x86/socwatchhv/swhv_acrn.c
 new file mode 100644
-index 000000000000..926ff09819a7
+index 0000000..926ff09
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/swhv_acrn.c
 @@ -0,0 +1,747 @@
@@ -55136,7 +55135,7 @@ index 000000000000..926ff09819a7
 +}
 diff --git a/drivers/platform/x86/socwatchhv/swhv_driver.c b/drivers/platform/x86/socwatchhv/swhv_driver.c
 new file mode 100644
-index 000000000000..369d8a69158f
+index 0000000..369d8a6
 --- /dev/null
 +++ b/drivers/platform/x86/socwatchhv/swhv_driver.c
 @@ -0,0 +1,375 @@
@@ -55516,5 +55515,5 @@ index 000000000000..369d8a69158f
 +MODULE_AUTHOR(MOD_AUTHOR);
 +MODULE_DESCRIPTION(MOD_DESC);
 -- 
-2.19.1
+2.21.0
 

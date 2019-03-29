@@ -1,7 +1,7 @@
-From f0f3997ee9b8c9ad9802cc0d38bb440468c58bb7 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Pawse, GuruprasadX" <guruprasadx.pawse@intel.com>
 Date: Wed, 12 Apr 2017 16:07:43 +0530
-Subject: [PATCH 152/296] ASoC: Intel: board: Add SSP0 codec-codec link
+Subject: [PATCH] ASoC: Intel: board: Add SSP0 codec-codec link
 
 Change-Id: I111f0405411125a8176aa6e9c8295f72059ab2e2
 Signed-off-by: Pawse, GuruprasadX <guruprasadx.pawse@intel.com>
@@ -18,7 +18,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 22 insertions(+)
 
 diff --git a/sound/soc/intel/boards/cnl_rt274.c b/sound/soc/intel/boards/cnl_rt274.c
-index 21b40b895629..3615c79e5bc5 100644
+index 21b40b8..3615c79 100644
 --- a/sound/soc/intel/boards/cnl_rt274.c
 +++ b/sound/soc/intel/boards/cnl_rt274.c
 @@ -60,6 +60,14 @@ static const struct snd_soc_dapm_widget cnl_rt274_widgets[] = {
@@ -58,5 +58,5 @@ index 21b40b895629..3615c79e5bc5 100644
  
  static int
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From b6314bdffaf5817f880686151121d5a5e99fb83e Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Sun, 20 Nov 2016 20:25:37 +0530
-Subject: [PATCH 080/296] Soundwire squashed commits [2]
+Subject: [PATCH] Soundwire squashed commits [2]
 
 SoundWire: Optimizations in BW calculation and runtime ops
 
@@ -312,7 +312,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  create mode 100644 drivers/sdw/sdw_utils.c
 
 diff --git a/drivers/sdw/Kconfig b/drivers/sdw/Kconfig
-index 90e954c392e0..1b7e2cc2ebc3 100644
+index 90e954c..1b7e2cc 100644
 --- a/drivers/sdw/Kconfig
 +++ b/drivers/sdw/Kconfig
 @@ -1,5 +1,6 @@
@@ -323,7 +323,7 @@ index 90e954c392e0..1b7e2cc2ebc3 100644
  	  SoundWire interface is typically used for transporting data
  	  related to audio functions.
 diff --git a/drivers/sdw/Makefile b/drivers/sdw/Makefile
-index 184682a88a1a..e2ba440f4ef2 100644
+index 184682a..e2ba440 100644
 --- a/drivers/sdw/Makefile
 +++ b/drivers/sdw/Makefile
 @@ -1,4 +1,4 @@
@@ -333,7 +333,7 @@ index 184682a88a1a..e2ba440f4ef2 100644
  obj-$(CONFIG_SDW)			+= sdw_bus.o
  obj-$(CONFIG_SDW_CNL)			+= sdw_cnl.o
 diff --git a/drivers/sdw/sdw.c b/drivers/sdw/sdw.c
-index 78c8cfd32d4c..aefd25d4e393 100644
+index 78c8cfd..aefd25d 100644
 --- a/drivers/sdw/sdw.c
 +++ b/drivers/sdw/sdw.c
 @@ -210,6 +210,29 @@ static int sdw_slv_probe(struct device *dev)
@@ -2254,7 +2254,7 @@ index 78c8cfd32d4c..aefd25d4e393 100644
  struct sdw_master *sdw_get_master(int nr)
  {
 diff --git a/drivers/sdw/sdw_bwcalc.c b/drivers/sdw/sdw_bwcalc.c
-index cafaccbeea3a..7ebb26756f59 100644
+index cafaccb..7ebb267 100644
 --- a/drivers/sdw/sdw_bwcalc.c
 +++ b/drivers/sdw/sdw_bwcalc.c
 @@ -25,37 +25,38 @@
@@ -5770,7 +5770,7 @@ index cafaccbeea3a..7ebb26756f59 100644
  }
 -EXPORT_SYMBOL_GPL(sdw_bus_calc_bw_dis);
 diff --git a/drivers/sdw/sdw_cnl.c b/drivers/sdw/sdw_cnl.c
-index 274966572499..9f8e77c20699 100644
+index 2749665..9f8e77c 100644
 --- a/drivers/sdw/sdw_cnl.c
 +++ b/drivers/sdw/sdw_cnl.c
 @@ -260,8 +260,9 @@ static int sdw_config_update(struct cnl_sdw *sdw)
@@ -6892,7 +6892,7 @@ index 274966572499..9f8e77c20699 100644
  static const struct dev_pm_ops cnl_sdw_pm_ops = {
  	SET_SYSTEM_SLEEP_PM_OPS(cnl_sdw_sleep_suspend, cnl_sdw_sleep_resume)
 diff --git a/drivers/sdw/sdw_cnl_priv.h b/drivers/sdw/sdw_cnl_priv.h
-index 8e9d68c2bc2c..504df88d681a 100644
+index 8e9d68c..504df88 100644
 --- a/drivers/sdw/sdw_cnl_priv.h
 +++ b/drivers/sdw/sdw_cnl_priv.h
 @@ -27,7 +27,14 @@
@@ -6963,7 +6963,7 @@ index 8e9d68c2bc2c..504df88d681a 100644
 +
  #endif /* _LINUX_SDW_CNL_H */
 diff --git a/drivers/sdw/sdw_priv.h b/drivers/sdw/sdw_priv.h
-index 42e948440481..fd060bfa74c4 100644
+index 42e9484..fd060bf 100644
 --- a/drivers/sdw/sdw_priv.h
 +++ b/drivers/sdw/sdw_priv.h
 @@ -34,16 +34,14 @@
@@ -7067,7 +7067,7 @@ index 42e948440481..fd060bfa74c4 100644
  int sdw_trylock_mstr(struct sdw_master *mstr);
 diff --git a/drivers/sdw/sdw_utils.c b/drivers/sdw/sdw_utils.c
 new file mode 100644
-index 000000000000..724323d01993
+index 0000000..724323d
 --- /dev/null
 +++ b/drivers/sdw/sdw_utils.c
 @@ -0,0 +1,49 @@
@@ -7121,7 +7121,7 @@ index 000000000000..724323d01993
 +}
 +EXPORT_SYMBOL(sdw_bus_compute_crc8);
 diff --git a/include/linux/sdw/sdw_cnl.h b/include/linux/sdw/sdw_cnl.h
-index acf223cba595..6a9281c458b7 100644
+index acf223c..6a9281c 100644
 --- a/include/linux/sdw/sdw_cnl.h
 +++ b/include/linux/sdw/sdw_cnl.h
 @@ -73,6 +73,33 @@ struct cnl_sdw_port {
@@ -7168,7 +7168,7 @@ index acf223cba595..6a9281c458b7 100644
  
  struct cnl_sdw_port *cnl_sdw_alloc_port(struct sdw_master *mstr, int ch_count,
 diff --git a/include/linux/sdw/sdw_registers.h b/include/linux/sdw/sdw_registers.h
-index 1abdf4bf863a..2e831c0e93cf 100644
+index 1abdf4b..2e831c0 100644
 --- a/include/linux/sdw/sdw_registers.h
 +++ b/include/linux/sdw/sdw_registers.h
 @@ -68,13 +68,17 @@
@@ -7199,7 +7199,7 @@ index 1abdf4bf863a..2e831c0e93cf 100644
  #define SDW_SCP_SYSTEMCTRL_CLK_STP_MODE_SHIFT		0x1
  #define SDW_SCP_SYSTEMCTRL_WAKE_UP_EN_SHIFT		0x2
 diff --git a/include/linux/sdw_bus.h b/include/linux/sdw_bus.h
-index d16579b35f8a..ed075fbd9a99 100644
+index d16579b..ed075fb 100644
 --- a/include/linux/sdw_bus.h
 +++ b/include/linux/sdw_bus.h
 @@ -60,6 +60,66 @@
@@ -7476,7 +7476,7 @@ index d16579b35f8a..ed075fbd9a99 100644
 +
  #endif /*  _LINUX_SDW_BUS_H */
 diff --git a/sound/soc/codecs/svfpga-sdw.c b/sound/soc/codecs/svfpga-sdw.c
-index 1fa06ef82ab2..dec412af6d5c 100644
+index 1fa06ef..dec412a 100644
 --- a/sound/soc/codecs/svfpga-sdw.c
 +++ b/sound/soc/codecs/svfpga-sdw.c
 @@ -79,7 +79,7 @@ static int svfpga_register_sdw_capabilties(struct sdw_slv *sdw,
@@ -7489,7 +7489,7 @@ index 1fa06ef82ab2..dec412af6d5c 100644
  			prop->num_freq_configs = 0;
  			prop->freq_supported = NULL;
 diff --git a/sound/soc/intel/boards/cnl_svfpga.c b/sound/soc/intel/boards/cnl_svfpga.c
-index 312c0437ac15..23c1f6437cda 100644
+index 312c043..23c1f64 100644
 --- a/sound/soc/intel/boards/cnl_svfpga.c
 +++ b/sound/soc/intel/boards/cnl_svfpga.c
 @@ -125,7 +125,7 @@ static int cnl_svfpga_codec_fixup(struct snd_soc_pcm_runtime *rtd,
@@ -7502,7 +7502,7 @@ index 312c0437ac15..23c1f6437cda 100644
  	snd_mask_set(hw_param_mask(params, SNDRV_PCM_HW_PARAM_FORMAT),
  						SNDRV_PCM_FORMAT_S16_LE);
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index b82de714c916..d888d31d0ea2 100644
+index b82de71..d888d31 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -516,7 +516,7 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
@@ -7540,7 +7540,7 @@ index b82de714c916..d888d31d0ea2 100644
  			dpn_cap->min_ch_num = 1;
  			dpn_cap->max_ch_num = 8;
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.c b/sound/soc/intel/skylake/skl-sdw-pcm.c
-index ea9a3e14434a..564602c0ee12 100644
+index ea9a3e1..564602c 100644
 --- a/sound/soc/intel/skylake/skl-sdw-pcm.c
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.c
 @@ -39,7 +39,8 @@
@@ -7679,5 +7679,5 @@ index ea9a3e14434a..564602c0ee12 100644
  	return 0;
  }
 -- 
-2.19.1
+2.21.0
 

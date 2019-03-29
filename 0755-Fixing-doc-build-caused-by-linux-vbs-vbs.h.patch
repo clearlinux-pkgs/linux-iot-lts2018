@@ -1,7 +1,7 @@
-From 2bb1c0de5f26a414caee54e47f32ff263faa0ed2 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Zhao Yakui <yakui.zhao@intel.com>
 Date: Tue, 6 Nov 2018 08:25:41 +0800
-Subject: [PATCH 03/18] Fixing doc build caused by linux/vbs/vbs.h
+Subject: [PATCH] Fixing doc build caused by linux/vbs/vbs.h
 
 Tracked-On: PKT-1592
 Tracked-on: https://github.com/projectacrn/acrn-hypervisor/issues/1669
@@ -24,5 +24,5 @@ index d9d932c..a72bb96 100644
  	/** @_ctx: VM context this device belongs to */
  	struct ctx _ctx;
 -- 
-2.7.4
+2.21.0
 

@@ -1,7 +1,7 @@
-From 45dfabc70999360b21bdb26c1a248342da502e40 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Binbin Wu <binbin.wu@intel.com>
 Date: Fri, 31 Aug 2018 10:58:56 +0800
-Subject: [PATCH 016/214] sos: cleanup ptdev irq structure
+Subject: [PATCH] sos: cleanup ptdev irq structure
 
 - Use individual data struct of ptdev irq for ioctl and hypercall
 
@@ -19,7 +19,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  3 files changed, 69 insertions(+), 16 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 5130fb508bc9..ebada9a11552 100644
+index 5130fb5..ebada9a 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -151,9 +151,13 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -113,7 +113,7 @@ index 5130fb508bc9..ebada9a11552 100644
  			mutex_lock(&table_iomems_lock);
  			list_add(&new->list, &table_iomems_list);
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 1d21bf21c91c..eeac0e9b4e76 100644
+index 1d21bf2..eeac0e9 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -132,4 +132,24 @@ struct vm_gpa2hpa {
@@ -142,7 +142,7 @@ index 1d21bf21c91c..eeac0e9b4e76 100644
 +
  #endif /* ACRN_HV_DEFS_H */
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 5ec2d10fc350..df07e3c93467 100644
+index 5ec2d10..df07e3c 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -129,4 +129,31 @@ struct vm_memmap {
@@ -178,5 +178,5 @@ index 5ec2d10fc350..df07e3c93467 100644
 +
  #endif /* VHM_IOCTL_DEFS_H */
 -- 
-2.19.1
+2.21.0
 

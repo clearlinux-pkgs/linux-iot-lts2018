@@ -1,4 +1,4 @@
-From f4c2a4b33556c24e3b761e9bcd8efe3c13584f28 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: sys_oak <sys_oak@intel.com>
 Date: Fri, 9 Nov 2018 18:07:41 -0800
 Subject: [PATCH] test configs use for clean and android bare metal BAT testing
@@ -13,7 +13,7 @@ Subject: [PATCH] test configs use for clean and android bare metal BAT testing
 
 diff --git a/arch/x86/configs/android_test_defconfig b/arch/x86/configs/android_test_defconfig
 new file mode 100644
-index 000000000000..82ef1999e2a7
+index 0000000..82ef199
 --- /dev/null
 +++ b/arch/x86/configs/android_test_defconfig
 @@ -0,0 +1,6285 @@
@@ -6304,7 +6304,7 @@ index 000000000000..82ef1999e2a7
 +# CONFIG_UNWINDER_GUESS is not set
 diff --git a/arch/x86/configs/test_defconfig b/arch/x86/configs/test_defconfig
 new file mode 100644
-index 000000000000..8874941c4240
+index 0000000..8874941
 --- /dev/null
 +++ b/arch/x86/configs/test_defconfig
 @@ -0,0 +1,6498 @@
@@ -12807,5 +12807,5 @@ index 000000000000..8874941c4240
 +# CONFIG_UNWINDER_FRAME_POINTER is not set
 +# CONFIG_UNWINDER_GUESS is not set
 -- 
-2.19.1
+2.21.0
 

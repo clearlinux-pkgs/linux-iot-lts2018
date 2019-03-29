@@ -1,8 +1,8 @@
-From 9ef652042d3ea227d81d59cec476fda9ed66cf93 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Yew, Chang Ching" <chang.ching.yew@intel.com>
 Date: Fri, 16 Nov 2018 09:39:50 +0800
-Subject: [PATCH 08/11] ipu: virtio: Null ptr check of
- intel_ipu4_virtio_msg_parse() parameter
+Subject: [PATCH] ipu: virtio: Null ptr check of intel_ipu4_virtio_msg_parse()
+ parameter
 
 Change-Id: Id732e7736bdc901502c8604b7c73f452e02a6e5e
 Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
@@ -11,7 +11,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  1 file changed, 6 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
-index 3b5eae651026..aff563bea39d 100644
+index 3b5eae6..aff563b 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
 @@ -20,7 +20,12 @@
@@ -39,5 +39,5 @@ index 3b5eae651026..aff563bea39d 100644
  	case IPU4_CMD_POLL:
  			/*
 -- 
-2.19.1
+2.21.0
 

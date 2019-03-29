@@ -1,7 +1,7 @@
-From 7a4e9db5e6e106cc085fbcbf861803e9072561c8 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Mon, 18 Jun 2018 18:11:40 +0300
-Subject: [PATCH 76/97] mei: add extended header
+Subject: [PATCH] mei: add extended header
 
 Extend header, beyond existing 4 bytes mei message header,
 currently containing 8bit vtag (virtual tag).
@@ -18,7 +18,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  5 files changed, 89 insertions(+), 45 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 1fc8ea0f519b..42f2e30211ab 100644
+index 1fc8ea0..42f2e30 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -386,6 +386,7 @@ static struct mei_cl_cb *mei_io_cb_init(struct mei_cl *cl,
@@ -200,7 +200,7 @@ index 1fc8ea0f519b..42f2e30211ab 100644
  	else
  		mei_tx_cb_enqueue(cb, &dev->write_list);
 diff --git a/drivers/misc/mei/hbm.c b/drivers/misc/mei/hbm.c
-index 9bc211c6c389..84bcdb0bc239 100644
+index 06d6da2..d635f65 100644
 --- a/drivers/misc/mei/hbm.c
 +++ b/drivers/misc/mei/hbm.c
 @@ -136,19 +136,15 @@ void mei_hbm_reset(struct mei_device *dev)
@@ -229,7 +229,7 @@ index 9bc211c6c389..84bcdb0bc239 100644
  
  /**
 diff --git a/drivers/misc/mei/hw.h b/drivers/misc/mei/hw.h
-index 46843bc224a0..b4e00028ad0a 100644
+index 46843bc..b4e0002 100644
 --- a/drivers/misc/mei/hw.h
 +++ b/drivers/misc/mei/hw.h
 @@ -211,6 +211,17 @@ enum  mei_cl_disconnect_status {
@@ -277,7 +277,7 @@ index 46843bc224a0..b4e00028ad0a 100644
  struct mei_bus_message {
  	u8 hbm_cmd;
 diff --git a/drivers/misc/mei/interrupt.c b/drivers/misc/mei/interrupt.c
-index 055c2d89b310..6531e036bb00 100644
+index 055c2d8..6531e03 100644
 --- a/drivers/misc/mei/interrupt.c
 +++ b/drivers/misc/mei/interrupt.c
 @@ -101,6 +101,7 @@ static int mei_cl_irq_read_msg(struct mei_cl *cl,
@@ -330,7 +330,7 @@ index 055c2d89b310..6531e036bb00 100644
  	}
  
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 6a815a1f0201..5f033b79f577 100644
+index 6a815a1..5f033b7 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -184,6 +184,7 @@ struct mei_cl;
@@ -364,5 +364,5 @@ index 6a815a1f0201..5f033b79f577 100644
  ssize_t mei_fw_status2str(struct mei_fw_status *fw_sts, char *buf, size_t len);
  /**
 -- 
-2.19.1
+2.21.0
 

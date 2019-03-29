@@ -1,7 +1,7 @@
-From e88ed734b9c4831ce3e0a3cf47a44bf0b33e6591 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Guneshwor Singh <guneshwor.o.singh@intel.com>
 Date: Wed, 20 Sep 2017 14:26:09 +0530
-Subject: [PATCH 229/296] SoundWire: Fix CRC8 dependency
+Subject: [PATCH] SoundWire: Fix CRC8 dependency
 
 CRC8 should be selected when SDW is selected. So use 'select' instead of
 'depends' in Kconfig.
@@ -20,7 +20,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/sdw/Kconfig b/drivers/sdw/Kconfig
-index 660188bd2c02..7e5a57f1f6d2 100644
+index 660188b..7e5a57f 100644
 --- a/drivers/sdw/Kconfig
 +++ b/drivers/sdw/Kconfig
 @@ -1,6 +1,6 @@
@@ -32,5 +32,5 @@ index 660188bd2c02..7e5a57f1f6d2 100644
  	help
  	  SoundWire interface is typically used for transporting data
 -- 
-2.19.1
+2.21.0
 

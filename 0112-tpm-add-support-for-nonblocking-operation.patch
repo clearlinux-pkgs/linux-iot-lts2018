@@ -1,7 +1,7 @@
-From dd3d5df123f19acbe815ad61fa0980ee31dd0470 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Tadeusz Struk <tadeusz.struk@intel.com>
 Date: Mon, 10 Sep 2018 10:18:33 -0700
-Subject: [PATCH 35/97] tpm: add support for nonblocking operation
+Subject: [PATCH] tpm: add support for nonblocking operation
 
 Currently the TPM driver only supports blocking calls, which doesn't allow
 asynchronous IO operations to the TPM hardware.
@@ -22,7 +22,7 @@ Signed-off--by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  6 files changed, 137 insertions(+), 45 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm-dev-common.c b/drivers/char/tpm/tpm-dev-common.c
-index f0c033b69b62..99b5133a9d05 100644
+index f0c033b..99b5133 100644
 --- a/drivers/char/tpm/tpm-dev-common.c
 +++ b/drivers/char/tpm/tpm-dev-common.c
 @@ -17,11 +17,36 @@
@@ -254,7 +254,7 @@ index f0c033b69b62..99b5133a9d05 100644
 +	}
 +}
 diff --git a/drivers/char/tpm/tpm-dev.c b/drivers/char/tpm/tpm-dev.c
-index 98b9630c3a36..32f9738f1cb2 100644
+index 98b9630..32f9738 100644
 --- a/drivers/char/tpm/tpm-dev.c
 +++ b/drivers/char/tpm/tpm-dev.c
 @@ -68,5 +68,6 @@ const struct file_operations tpm_fops = {
@@ -265,7 +265,7 @@ index 98b9630c3a36..32f9738f1cb2 100644
  	.release = tpm_release,
  };
 diff --git a/drivers/char/tpm/tpm-dev.h b/drivers/char/tpm/tpm-dev.h
-index 4048677bbd78..a126b575cb8c 100644
+index 4048677..a126b57 100644
 --- a/drivers/char/tpm/tpm-dev.h
 +++ b/drivers/char/tpm/tpm-dev.h
 @@ -2,18 +2,22 @@
@@ -304,10 +304,10 @@ index 4048677bbd78..a126b575cb8c 100644
 +void tpm_common_release(struct file *file, struct file_priv *priv);
  #endif
 diff --git a/drivers/char/tpm/tpm-interface.c b/drivers/char/tpm/tpm-interface.c
-index 7d958ff426e0..129f640424b7 100644
+index 43c3f9b..2f66b80 100644
 --- a/drivers/char/tpm/tpm-interface.c
 +++ b/drivers/char/tpm/tpm-interface.c
-@@ -1409,19 +1409,32 @@ static int __init tpm_init(void)
+@@ -1419,19 +1419,32 @@ static int __init tpm_init(void)
  	tpmrm_class = class_create(THIS_MODULE, "tpmrm");
  	if (IS_ERR(tpmrm_class)) {
  		pr_err("couldn't create tpmrm class\n");
@@ -345,7 +345,7 @@ index 7d958ff426e0..129f640424b7 100644
  }
  
  static void __exit tpm_exit(void)
-@@ -1430,6 +1443,7 @@ static void __exit tpm_exit(void)
+@@ -1440,6 +1453,7 @@ static void __exit tpm_exit(void)
  	class_destroy(tpm_class);
  	class_destroy(tpmrm_class);
  	unregister_chrdev_region(tpm_devt, 2*TPM_NUM_DEVICES);
@@ -354,7 +354,7 @@ index 7d958ff426e0..129f640424b7 100644
  
  subsys_initcall(tpm_init);
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index f3501d05264f..f20dc8ece348 100644
+index f3501d0..f20dc8e 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
 @@ -604,4 +604,6 @@ int tpm2_commit_space(struct tpm_chip *chip, struct tpm_space *space,
@@ -365,7 +365,7 @@ index f3501d05264f..f20dc8ece348 100644
 +void tpm_dev_common_exit(void);
  #endif
 diff --git a/drivers/char/tpm/tpmrm-dev.c b/drivers/char/tpm/tpmrm-dev.c
-index 96006c6b9696..0c751a79bbed 100644
+index 96006c6..0c751a7 100644
 --- a/drivers/char/tpm/tpmrm-dev.c
 +++ b/drivers/char/tpm/tpmrm-dev.c
 @@ -51,5 +51,6 @@ const struct file_operations tpmrm_fops = {
@@ -376,5 +376,5 @@ index 96006c6b9696..0c751a79bbed 100644
  	.release = tpmrm_release,
  };
 -- 
-2.19.1
+2.21.0
 

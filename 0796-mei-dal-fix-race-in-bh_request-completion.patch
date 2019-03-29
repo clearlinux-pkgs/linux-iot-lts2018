@@ -1,7 +1,7 @@
-From c5deebfea60e966297a728acf6a45eb71cc08ebf Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 31 Oct 2018 14:47:37 +0200
-Subject: [PATCH 3/4] mei: dal: fix race in bh_request completion
+Subject: [PATCH] mei: dal: fix race in bh_request completion
 
 The bh_request function schedules bh_request_work thread,
 and both use the shared variable (bh_request struct).
@@ -26,7 +26,7 @@ Signed-off-by: Yael Samet <yael.samet@intel.com>
  1 file changed, 69 insertions(+), 44 deletions(-)
 
 diff --git a/drivers/misc/mei/dal/bh_internal.c b/drivers/misc/mei/dal/bh_internal.c
-index df3565a394c2..48d4e1145977 100644
+index df3565a..48d4e11 100644
 --- a/drivers/misc/mei/dal/bh_internal.c
 +++ b/drivers/misc/mei/dal/bh_internal.c
 @@ -27,6 +27,7 @@ static u64 bh_host_id_number = MSG_SEQ_START_NUMBER;
@@ -211,5 +211,5 @@ index df3565a394c2..48d4e1145977 100644
  	mutex_unlock(&bh_srvc.request_lock);
  
 -- 
-2.17.1
+2.21.0
 

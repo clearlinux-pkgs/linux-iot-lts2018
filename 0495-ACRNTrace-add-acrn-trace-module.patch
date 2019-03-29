@@ -1,7 +1,7 @@
-From 6f8f7a376e37716223f70033937eb5f8a5dafbd2 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:58:57 +0800
-Subject: [PATCH 027/214] ACRNTrace: add acrn trace module
+Subject: [PATCH] ACRNTrace: add acrn trace module
 
 Change-Id: I9bf3a0a13e411e15063eb50905875e86e5731d1b
 Tracked-On: https://rtc.intel.com/ccm0001001/resource/itemName/com.ibm.team.workitem.WorkItem/216912
@@ -14,7 +14,7 @@ Signed-off-by: Li, Fei1 <fei1.li@intel.com>
  create mode 100644 drivers/acrn/acrn_trace.c
 
 diff --git a/drivers/acrn/Kconfig b/drivers/acrn/Kconfig
-index f25f0ae77727..08b24a168167 100644
+index f25f0ae..08b24a1 100644
 --- a/drivers/acrn/Kconfig
 +++ b/drivers/acrn/Kconfig
 @@ -3,3 +3,11 @@ config ACRN_SHARED_BUFFER
@@ -30,7 +30,7 @@ index f25f0ae77727..08b24a168167 100644
 +		You can say y to build it into the kernel, or m to build
 +		it as a module.
 diff --git a/drivers/acrn/Makefile b/drivers/acrn/Makefile
-index bc475f8116e3..5430f4fa06fd 100644
+index bc475f8..5430f4f 100644
 --- a/drivers/acrn/Makefile
 +++ b/drivers/acrn/Makefile
 @@ -1 +1,2 @@
@@ -39,7 +39,7 @@ index bc475f8116e3..5430f4fa06fd 100644
 \ No newline at end of file
 diff --git a/drivers/acrn/acrn_trace.c b/drivers/acrn/acrn_trace.c
 new file mode 100644
-index 000000000000..31470a3de6ac
+index 0000000..31470a3
 --- /dev/null
 +++ b/drivers/acrn/acrn_trace.c
 @@ -0,0 +1,297 @@
@@ -341,5 +341,5 @@ index 000000000000..31470a3de6ac
 +MODULE_DESCRIPTION("Driver for the Intel ACRN Hypervisor Trace");
 +MODULE_VERSION("0.1");
 -- 
-2.19.1
+2.21.0
 

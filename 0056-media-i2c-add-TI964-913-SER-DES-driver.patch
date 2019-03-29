@@ -1,7 +1,7 @@
-From c6dd6dff1bff24122a95a373f92d8da33d53ad5d Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:48 +0800
-Subject: [PATCH 13/25] media: i2c: add TI964/913 SER/DES driver
+Subject: [PATCH] media: i2c: add TI964/913 SER/DES driver
 
 TI964 is a versatile camera hub capable of connecting
 serialized camera data received from 4 independent video
@@ -21,10 +21,10 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  create mode 100644 include/media/ti964.h
 
 diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
-index 304ee02e2497..2681d2bc74ff 100644
+index 7e34bdc..3544b1a 100644
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
-@@ -1066,6 +1066,12 @@ config VIDEO_I2C
+@@ -1068,6 +1068,12 @@ config VIDEO_I2C
  	  To compile this driver as a module, choose M here: the
  	  module will be called video-i2c
  
@@ -38,7 +38,7 @@ index 304ee02e2497..2681d2bc74ff 100644
  
  menu "Sensors used on soc_camera driver"
 diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
-index db6e8021b947..e0d41d364c45 100644
+index db6e802..e0d41d3 100644
 --- a/drivers/media/i2c/Makefile
 +++ b/drivers/media/i2c/Makefile
 @@ -112,3 +112,4 @@ obj-$(CONFIG_VIDEO_IMX274)	+= imx274.o
@@ -48,7 +48,7 @@ index db6e8021b947..e0d41d364c45 100644
 +obj-$(CONFIG_VIDEO_TI964) += ti964.o
 diff --git a/drivers/media/i2c/ti964-reg.h b/drivers/media/i2c/ti964-reg.h
 new file mode 100644
-index 000000000000..e916c41b74a1
+index 0000000..e916c41
 --- /dev/null
 +++ b/drivers/media/i2c/ti964-reg.h
 @@ -0,0 +1,128 @@
@@ -182,7 +182,7 @@ index 000000000000..e916c41b74a1
 +#endif
 diff --git a/drivers/media/i2c/ti964.c b/drivers/media/i2c/ti964.c
 new file mode 100644
-index 000000000000..606eef257ca6
+index 0000000..606eef2
 --- /dev/null
 +++ b/drivers/media/i2c/ti964.c
 @@ -0,0 +1,1368 @@
@@ -1556,7 +1556,7 @@ index 000000000000..606eef257ca6
 +MODULE_DESCRIPTION("TI964 CSI2-Aggregator driver");
 diff --git a/include/media/ti964.h b/include/media/ti964.h
 new file mode 100644
-index 000000000000..ab5ee210efe4
+index 0000000..ab5ee21
 --- /dev/null
 +++ b/include/media/ti964.h
 @@ -0,0 +1,59 @@
@@ -1620,5 +1620,5 @@ index 000000000000..ab5ee210efe4
 +
 +#endif
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From dfc7c7be7ecc3ca2fffb4881f3a18a3f560983fe Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Yan, Like" <like.yan@intel.com>
 Date: Fri, 31 Aug 2018 10:58:59 +0800
-Subject: [PATCH 049/214] Cleanup Kconfig
+Subject: [PATCH] Cleanup Kconfig
 
 Change-Id: I219bc9343fe47a1cdab70c247370beb9e425fcd4
 Signed-off-by: Yan, Like
@@ -12,7 +12,7 @@ Signed-off-by: Yan, Like
  3 files changed, 5 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/acrn/Kconfig b/drivers/acrn/Kconfig
-index 9056a4f1f20a..9fc4cae04a56 100644
+index 9056a4f..9fc4cae 100644
 --- a/drivers/acrn/Kconfig
 +++ b/drivers/acrn/Kconfig
 @@ -1,12 +1,13 @@
@@ -40,7 +40,7 @@ index 9056a4f1f20a..9fc4cae04a56 100644
  		This is the Trace driver for the Intel ACRN hypervisor log.
  		You can say y to build it into the kernel.
 diff --git a/drivers/vbs/Kconfig b/drivers/vbs/Kconfig
-index e3bb44d6a5e9..663d09c2c42f 100644
+index e3bb44d..663d09c 100644
 --- a/drivers/vbs/Kconfig
 +++ b/drivers/vbs/Kconfig
 @@ -2,7 +2,7 @@
@@ -62,7 +62,7 @@ index e3bb44d6a5e9..663d09c2c42f 100644
  	default n
  	---help---
 diff --git a/drivers/vhm/Kconfig b/drivers/vhm/Kconfig
-index 0b0faeeff74a..e59b9487cd65 100644
+index 0b0faee..e59b948 100644
 --- a/drivers/vhm/Kconfig
 +++ b/drivers/vhm/Kconfig
 @@ -3,7 +3,6 @@ config ACRN_VHM
@@ -74,5 +74,5 @@ index 0b0faeeff74a..e59b9487cd65 100644
  	default n
  	---help---
 -- 
-2.19.1
+2.21.0
 

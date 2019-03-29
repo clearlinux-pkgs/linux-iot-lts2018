@@ -1,7 +1,7 @@
-From 50cd66d03dfc83c4da85f1230bed09dff973ded9 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Anamika Lal <anamikax.lal@intel.com>
 Date: Thu, 10 Aug 2017 12:24:43 +0530
-Subject: [PATCH 191/296] ASoC: rt700: Remove prints used for debugging.
+Subject: [PATCH] ASoC: rt700: Remove prints used for debugging.
 
 While integrating rt700 codec driver prints were added for debugging
 purpose. Hence removing them.
@@ -19,7 +19,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  2 files changed, 3 insertions(+), 74 deletions(-)
 
 diff --git a/sound/soc/codecs/rt700-sdw.c b/sound/soc/codecs/rt700-sdw.c
-index 8a7fbc5a40c7..62f7e2989ca8 100644
+index 8a7fbc5..62f7e29 100644
 --- a/sound/soc/codecs/rt700-sdw.c
 +++ b/sound/soc/codecs/rt700-sdw.c
 @@ -364,11 +364,8 @@ static int rt700_sdw_handle_impl_def_interrupts(struct sdw_slv *swdev,
@@ -35,7 +35,7 @@ index 8a7fbc5a40c7..62f7e2989ca8 100644
  
  	return 0;
 diff --git a/sound/soc/codecs/rt700.c b/sound/soc/codecs/rt700.c
-index 03bab55537b6..a654c092b8c5 100644
+index 03bab55..a654c09 100644
 --- a/sound/soc/codecs/rt700.c
 +++ b/sound/soc/codecs/rt700.c
 @@ -569,12 +569,10 @@ static int rt700_hda_read(struct regmap *regmap, unsigned int vid,
@@ -260,5 +260,5 @@ index 03bab55537b6..a654c092b8c5 100644
  
  	/* Enable Jack Detection */
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From a429e0ac2b21a7479cd3be048c8c9f7e08cd3ace Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Alexander Usyskin <alexander.usyskin@intel.com>
 Date: Mon, 9 Feb 2015 17:13:20 +0200
-Subject: [PATCH 19/22] mei: spd: connect to the rpmb subsystem
+Subject: [PATCH] mei: spd: connect to the rpmb subsystem
 
 Connect SPD to RPMB subsystem and implement RPMB storage commands.
 
@@ -21,7 +21,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/misc/mei/spd/rpmb.c
 
 diff --git a/drivers/misc/mei/spd/Kconfig b/drivers/misc/mei/spd/Kconfig
-index 8347fbc9fbe0..085f9caa8c66 100644
+index 8347fbc..085f9ca 100644
 --- a/drivers/misc/mei/spd/Kconfig
 +++ b/drivers/misc/mei/spd/Kconfig
 @@ -3,7 +3,7 @@
@@ -34,7 +34,7 @@ index 8347fbc9fbe0..085f9caa8c66 100644
  	  A driver for the host storage proxy ME client
  	  The driver enables ME FW to store data on a storage devices
 diff --git a/drivers/misc/mei/spd/Makefile b/drivers/misc/mei/spd/Makefile
-index 8e8aba94b9ef..72d0bca2974e 100644
+index 8e8aba9..72d0bca 100644
 --- a/drivers/misc/mei/spd/Makefile
 +++ b/drivers/misc/mei/spd/Makefile
 @@ -6,6 +6,7 @@ obj-$(CONFIG_INTEL_MEI_SPD) += mei_spd.o
@@ -46,7 +46,7 @@ index 8e8aba94b9ef..72d0bca2974e 100644
  
  ccflags-y += -D__CHECK_ENDIAN__
 diff --git a/drivers/misc/mei/spd/cmd.c b/drivers/misc/mei/spd/cmd.c
-index 25d682d7eb09..3f45902e23da 100644
+index 25d682d..3f45902 100644
 --- a/drivers/misc/mei/spd/cmd.c
 +++ b/drivers/misc/mei/spd/cmd.c
 @@ -12,6 +12,9 @@
@@ -154,7 +154,7 @@ index 25d682d7eb09..3f45902e23da 100644
  	case SPD_GPP_WRITE_CMD:
  		ret = mei_spd_cmd_gpp_write(spd, cmd, out_buf_sz);
 diff --git a/drivers/misc/mei/spd/main.c b/drivers/misc/mei/spd/main.c
-index 2adccce70eaf..468cceffb7a0 100644
+index 2adccce..468ccef 100644
 --- a/drivers/misc/mei/spd/main.c
 +++ b/drivers/misc/mei/spd/main.c
 @@ -53,6 +53,7 @@ static int mei_spd_probe(struct mei_cl_device *cldev,
@@ -175,7 +175,7 @@ index 2adccce70eaf..468cceffb7a0 100644
  		mutex_unlock(&spd->lock);
 diff --git a/drivers/misc/mei/spd/rpmb.c b/drivers/misc/mei/spd/rpmb.c
 new file mode 100644
-index 000000000000..b74d0cd8f802
+index 0000000..b74d0cd
 --- /dev/null
 +++ b/drivers/misc/mei/spd/rpmb.c
 @@ -0,0 +1,199 @@
@@ -379,7 +379,7 @@ index 000000000000..b74d0cd8f802
 +	return !!spd->rdev;
 +}
 diff --git a/drivers/misc/mei/spd/spd.h b/drivers/misc/mei/spd/spd.h
-index cd30d0ed18ae..b919a5cb7a4c 100644
+index cd30d0e..b919a5c 100644
 --- a/drivers/misc/mei/spd/spd.h
 +++ b/drivers/misc/mei/spd/spd.h
 @@ -7,6 +7,7 @@
@@ -422,5 +422,5 @@ index cd30d0ed18ae..b919a5cb7a4c 100644
  int mei_spd_dbgfs_register(struct mei_spd *spd, const char *name);
  void mei_spd_dbgfs_deregister(struct mei_spd *spd);
 -- 
-2.19.1
+2.21.0
 

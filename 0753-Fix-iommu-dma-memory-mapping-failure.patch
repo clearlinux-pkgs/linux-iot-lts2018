@@ -1,4 +1,4 @@
-From f1c15a5f546f7b930a4d9118909b322ab764fe03 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Lee, Keerock" <keerock.lee@intel.com>
 Date: Thu, 6 Dec 2018 19:12:15 +0000
 Subject: [PATCH] Fix iommu dma memory mapping failure
@@ -19,7 +19,7 @@ Signed-off-by: Keerock Lee <keerock.lee@intel.com>
  1 file changed, 12 insertions(+), 12 deletions(-)
 
 diff --git a/drivers/staging/igb_avb/igb_main.c b/drivers/staging/igb_avb/igb_main.c
-index ef1b3adcde3d..70219b0a2cd9 100644
+index 84ec739..8d772cf 100644
 --- a/drivers/staging/igb_avb/igb_main.c
 +++ b/drivers/staging/igb_avb/igb_main.c
 @@ -4297,7 +4297,7 @@ void igb_clean_rx_ring(struct igb_ring *rx_ring)
@@ -94,7 +94,7 @@ index ef1b3adcde3d..70219b0a2cd9 100644
  
  	/*
  	 * if mapping failed free memory back to system since
-@@ -10438,7 +10438,7 @@ static long igb_mapbuf_user(struct file *file, void __user *arg, int ring)
+@@ -10444,7 +10444,7 @@ static long igb_mapbuf_user(struct file *file, void __user *arg, int ring)
  	}
  
  	page_dma = dma_map_page(pci_dev_to_dev(adapter->pdev), page,
@@ -103,7 +103,7 @@ index ef1b3adcde3d..70219b0a2cd9 100644
  
  	if (dma_mapping_error(pci_dev_to_dev(adapter->pdev), page_dma)) {
  		err = -ENOMEM;
-@@ -10467,7 +10467,7 @@ static long igb_mapbuf_user(struct file *file, void __user *arg, int ring)
+@@ -10473,7 +10473,7 @@ static long igb_mapbuf_user(struct file *file, void __user *arg, int ring)
  copy_failed:
  	dma_unmap_page(pci_dev_to_dev(adapter->pdev),
  			userpage->page_dma, PAGE_SIZE,
@@ -112,7 +112,7 @@ index ef1b3adcde3d..70219b0a2cd9 100644
  map_failed:
  	put_page(userpage->page);
  page_failed:
-@@ -10693,7 +10693,7 @@ static long igb_unmapbuf(struct file *file, void __user *arg, int ring)
+@@ -10699,7 +10699,7 @@ static long igb_unmapbuf(struct file *file, void __user *arg, int ring)
  		dma_unmap_page(pci_dev_to_dev(adapter->pdev),
  				userpage->page_dma,
  				PAGE_SIZE,
@@ -121,7 +121,7 @@ index ef1b3adcde3d..70219b0a2cd9 100644
  
  		put_page(userpage->page);
  
-@@ -10801,7 +10801,7 @@ static int igb_close_file(struct inode *inode, struct file *file)
+@@ -10807,7 +10807,7 @@ static int igb_close_file(struct inode *inode, struct file *file)
  		dma_unmap_page(pci_dev_to_dev(adapter->pdev),
  						userpage->page_dma,
  						PAGE_SIZE,
@@ -131,5 +131,5 @@ index ef1b3adcde3d..70219b0a2cd9 100644
  		put_page(userpage->page);
  
 -- 
-2.19.1
+2.21.0
 

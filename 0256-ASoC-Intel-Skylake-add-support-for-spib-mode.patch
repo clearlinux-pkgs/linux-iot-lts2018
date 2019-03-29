@@ -1,7 +1,7 @@
-From cf70a1b68d33484bcb8fc705d624c62ee73161fc Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Ramesh Babu <ramesh.babu@intel.com>
 Date: Mon, 23 May 2016 11:39:19 +0530
-Subject: [PATCH 084/296] ASoC: Intel: Skylake: add support for spib mode
+Subject: [PATCH] ASoC: Intel: Skylake: add support for spib mode
 
 Skylake audio controller sports SPIB capability, which can be
 used to inform position of appl pointer to host DMA controller.
@@ -23,7 +23,7 @@ Signed-off-by: Subhransu S. Prusty <subhransu.s.prusty@intel.com>
  1 file changed, 44 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 65a110664ff6..228f00763094 100644
+index 65a1106..228f007 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -46,7 +46,8 @@ static const struct snd_pcm_hardware azx_pcm_hw = {
@@ -137,5 +137,5 @@ index 65a110664ff6..228f00763094 100644
  
  static void skl_pcm_free(struct snd_pcm *pcm)
 -- 
-2.19.1
+2.21.0
 

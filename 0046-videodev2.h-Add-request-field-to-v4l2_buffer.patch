@@ -1,7 +1,7 @@
-From 2ac5b4ab1b159b68c0ccd4a6273b38d9b093b48d Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Meng Wei <wei.meng@intel.com>
 Date: Fri, 26 Oct 2018 09:52:04 +0800
-Subject: [PATCH 03/25] videodev2.h: Add request field to v4l2_buffer
+Subject: [PATCH] videodev2.h: Add request field to v4l2_buffer
 
 When queuing buffers allow for passing the request ID that
 should be associated with this buffer.
@@ -17,10 +17,10 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  5 files changed, 25 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/media/common/videobuf2/videobuf2-v4l2.c b/drivers/media/common/videobuf2/videobuf2-v4l2.c
-index 886a2d8d5c6c..5b678ea1dc9e 100644
+index 9d4a81b..550f0c0 100644
 --- a/drivers/media/common/videobuf2/videobuf2-v4l2.c
 +++ b/drivers/media/common/videobuf2/videobuf2-v4l2.c
-@@ -178,6 +178,11 @@ static int vb2_queue_or_prepare_buf(struct vb2_queue *q, struct v4l2_buffer *b,
+@@ -177,6 +177,11 @@ static int vb2_queue_or_prepare_buf(struct vb2_queue *q, struct v4l2_buffer *b,
  		return -EINVAL;
  	}
  
@@ -32,7 +32,7 @@ index 886a2d8d5c6c..5b678ea1dc9e 100644
  	return __verify_planes_array(q->bufs[b->index], b);
  }
  
-@@ -203,8 +208,8 @@ static void __fill_v4l2_buffer(struct vb2_buffer *vb, void *pb)
+@@ -202,8 +207,8 @@ static void __fill_v4l2_buffer(struct vb2_buffer *vb, void *pb)
  	b->timestamp = ns_to_timeval(vb->timestamp);
  	b->timecode = vbuf->timecode;
  	b->sequence = vbuf->sequence;
@@ -43,7 +43,7 @@ index 886a2d8d5c6c..5b678ea1dc9e 100644
  
  	if (q->is_multiplanar) {
  		/*
-@@ -320,6 +325,7 @@ static int __fill_vb2_buffer(struct vb2_buffer *vb,
+@@ -319,6 +324,7 @@ static int __fill_vb2_buffer(struct vb2_buffer *vb,
  	}
  	vb->timestamp = 0;
  	vbuf->sequence = 0;
@@ -52,7 +52,7 @@ index 886a2d8d5c6c..5b678ea1dc9e 100644
  	if (V4L2_TYPE_IS_MULTIPLANAR(b->type)) {
  		if (b->memory == VB2_MEMORY_USERPTR) {
 diff --git a/drivers/media/v4l2-core/v4l2-compat-ioctl32.c b/drivers/media/v4l2-core/v4l2-compat-ioctl32.c
-index 6481212fda77..222653915699 100644
+index 6481212..2226539 100644
 --- a/drivers/media/v4l2-core/v4l2-compat-ioctl32.c
 +++ b/drivers/media/v4l2-core/v4l2-compat-ioctl32.c
 @@ -481,7 +481,7 @@ struct v4l2_buffer32 {
@@ -107,7 +107,7 @@ index 6481212fda77..222653915699 100644
  
  	if (V4L2_TYPE_IS_MULTIPLANAR(type)) {
 diff --git a/include/media/videobuf2-core.h b/include/media/videobuf2-core.h
-index f6818f732f34..aba09cef3ddd 100644
+index f6818f7..aba09ce 100644
 --- a/include/media/videobuf2-core.h
 +++ b/include/media/videobuf2-core.h
 @@ -516,6 +516,7 @@ struct vb2_queue {
@@ -119,7 +119,7 @@ index f6818f732f34..aba09cef3ddd 100644
  	struct mutex			*lock;
  	void				*owner;
 diff --git a/include/media/videobuf2-v4l2.h b/include/media/videobuf2-v4l2.h
-index 3d5e2d739f05..317c2b7fe105 100644
+index 3d5e2d7..317c2b7 100644
 --- a/include/media/videobuf2-v4l2.h
 +++ b/include/media/videobuf2-v4l2.h
 @@ -43,6 +43,8 @@ struct vb2_v4l2_buffer {
@@ -132,10 +132,10 @@ index 3d5e2d739f05..317c2b7fe105 100644
  
  /*
 diff --git a/include/uapi/linux/videodev2.h b/include/uapi/linux/videodev2.h
-index 5d1a3685bea9..1a70f2fad418 100644
+index 1aae2e4..fef1758 100644
 --- a/include/uapi/linux/videodev2.h
 +++ b/include/uapi/linux/videodev2.h
-@@ -917,6 +917,7 @@ struct v4l2_plane {
+@@ -928,6 +928,7 @@ struct v4l2_plane {
   * @length:	size in bytes of the buffer (NOT its payload) for single-plane
   *		buffers (when type != *_MPLANE); number of elements in the
   *		planes array for multi-plane buffers
@@ -143,7 +143,7 @@ index 5d1a3685bea9..1a70f2fad418 100644
   *
   * Contains data exchanged by application and driver using one of the Streaming
   * I/O methods.
-@@ -940,7 +941,10 @@ struct v4l2_buffer {
+@@ -951,7 +952,10 @@ struct v4l2_buffer {
  		__s32		fd;
  	} m;
  	__u32			length;
@@ -155,5 +155,5 @@ index 5d1a3685bea9..1a70f2fad418 100644
  };
  
 -- 
-2.19.1
+2.21.0
 

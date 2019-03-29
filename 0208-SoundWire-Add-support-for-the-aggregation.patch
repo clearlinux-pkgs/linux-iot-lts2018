@@ -1,7 +1,7 @@
-From b65bcee78d04fe6499c241633a9711de4dea036a Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Sun, 1 May 2016 18:29:30 +0530
-Subject: [PATCH 036/296] SoundWire: Add support for the aggregation
+Subject: [PATCH] SoundWire: Add support for the aggregation
 
 Add support for the master aggregation in
 SoundWire bus driver. For the aggregated masters
@@ -17,7 +17,7 @@ Reviewed-on:
  1 file changed, 755 insertions(+), 276 deletions(-)
 
 diff --git a/drivers/sdw/sdw_bwcalc.c b/drivers/sdw/sdw_bwcalc.c
-index 5b362dc0a2f4..cafaccbeea3a 100644
+index 5b362dc..cafaccb 100644
 --- a/drivers/sdw/sdw_bwcalc.c
 +++ b/drivers/sdw/sdw_bwcalc.c
 @@ -17,7 +17,7 @@
@@ -1254,5 +1254,5 @@ index 5b362dc0a2f4..cafaccbeea3a 100644
  
  	return 0;
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From b0cb94088de18b9d7488aa2f1793b22b4c04dd95 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Tue, 16 Oct 2018 11:38:41 +0800
-Subject: [PATCH 10/13] i915: Add cp_downstream property
+Subject: [PATCH] i915: Add cp_downstream property
 
 Implements drm blob property cp_downstream_info property on HDCP
 capable connectors.
@@ -21,10 +21,10 @@ Signed-off-by: Romli, Khairul Anuar <khairul.anuar.romli@intel.com>
  3 files changed, 88 insertions(+), 35 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index d4b307b531ec..d734030c2ac1 100644
+index 75c4581..e8f7ad1 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
-@@ -424,6 +424,9 @@ struct intel_connector {
+@@ -434,6 +434,9 @@ struct intel_connector {
  	unsigned int revocated_ksv_cnt;
  	u8 *revocated_ksv_list;
  	u32 srm_blob_id;
@@ -35,7 +35,7 @@ index d4b307b531ec..d734030c2ac1 100644
  
  struct intel_digital_connector_state {
 diff --git a/drivers/gpu/drm/i915/intel_hdcp.c b/drivers/gpu/drm/i915/intel_hdcp.c
-index 20f78b572d1b..d9869b64a3f1 100644
+index 20f78b5..d9869b6 100644
 --- a/drivers/gpu/drm/i915/intel_hdcp.c
 +++ b/drivers/gpu/drm/i915/intel_hdcp.c
 @@ -234,25 +234,28 @@ int intel_hdcp_auth_downstream(struct intel_connector *connector)
@@ -365,7 +365,7 @@ index 20f78b572d1b..d9869b64a3f1 100644
  	mutex_init(&connector->hdcp_mutex);
  	INIT_DELAYED_WORK(&connector->hdcp_check_work, intel_hdcp_check_work);
 diff --git a/include/drm/drm_hdcp.h b/include/drm/drm_hdcp.h
-index f17eb2910bdb..8f5831d4b483 100644
+index f17eb29..8f5831d 100644
 --- a/include/drm/drm_hdcp.h
 +++ b/include/drm/drm_hdcp.h
 @@ -20,6 +20,7 @@
@@ -377,5 +377,5 @@ index f17eb2910bdb..8f5831d4b483 100644
  #define DRM_HDCP_MAX_DEVICE_EXCEEDED(x)		(x & BIT(7))
  
 -- 
-2.19.1
+2.21.0
 

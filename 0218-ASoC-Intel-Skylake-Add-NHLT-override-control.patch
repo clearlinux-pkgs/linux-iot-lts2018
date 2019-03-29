@@ -1,7 +1,7 @@
-From a9326fa994380e4d92ec9caa787f2d514e3db9fc Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Vinod Koul <vinod.koul@intel.com>
 Date: Mon, 31 Aug 2015 14:05:10 +0530
-Subject: [PATCH 046/296] ASoC: Intel: Skylake: Add NHLT override control
+Subject: [PATCH] ASoC: Intel: Skylake: Add NHLT override control
 
 For debugging purposes we may want to not use the BIOS values and
 test our own values, so allow the override by adding a control
@@ -15,7 +15,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  2 files changed, 66 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 5d7ac2ee7a3c..09321ba98e78 100644
+index 5d7ac2e..09321ba 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -33,6 +33,7 @@ struct skl_debug {
@@ -105,7 +105,7 @@ index 5d7ac2ee7a3c..09321ba98e78 100644
  
  err:
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 78aa8bdcb619..28c62dda07db 100644
+index 78aa8bd..28c62dd 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -103,6 +103,7 @@ struct skl {
@@ -117,5 +117,5 @@ index 78aa8bdcb619..28c62dda07db 100644
  
  #define skl_to_bus(s)  (&(s)->hbus)
 -- 
-2.19.1
+2.21.0
 

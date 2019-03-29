@@ -1,7 +1,7 @@
-From 96c570cf9b93bb4b15eeab4060b016f41c2ad285 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 25 Apr 2018 19:07:06 +0300
-Subject: [PATCH 14/22] nvme: connect to rpmb layer
+Subject: [PATCH] nvme: connect to rpmb layer
 
 This patch covers rpmb storage operation
 as defined in NVMe spec 1.3a in section 8.10.
@@ -21,7 +21,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/nvme/host/rpmb.c
 
 diff --git a/drivers/nvme/host/Kconfig b/drivers/nvme/host/Kconfig
-index 88a8b5916624..a0027cebf2db 100644
+index 88a8b59..a0027ce 100644
 --- a/drivers/nvme/host/Kconfig
 +++ b/drivers/nvme/host/Kconfig
 @@ -5,6 +5,7 @@ config BLK_DEV_NVME
@@ -33,7 +33,7 @@ index 88a8b5916624..a0027cebf2db 100644
  	  The NVM Express driver is for solid state drives directly
  	  connected to the PCI or PCI Express bus.  If you know you
 diff --git a/drivers/nvme/host/Makefile b/drivers/nvme/host/Makefile
-index aea459c65ae1..99f99e87b82b 100644
+index aea459c..99f99e8 100644
 --- a/drivers/nvme/host/Makefile
 +++ b/drivers/nvme/host/Makefile
 @@ -15,6 +15,7 @@ nvme-core-$(CONFIG_NVM)			+= lightnvm.o
@@ -45,7 +45,7 @@ index aea459c65ae1..99f99e87b82b 100644
  nvme-fabrics-y				+= fabrics.o
  
 diff --git a/drivers/nvme/host/core.c b/drivers/nvme/host/core.c
-index 6bb9908bf46f..9d84b7ecb67e 100644
+index 2cdb303..87a4ecd 100644
 --- a/drivers/nvme/host/core.c
 +++ b/drivers/nvme/host/core.c
 @@ -11,7 +11,6 @@
@@ -56,7 +56,7 @@ index 6bb9908bf46f..9d84b7ecb67e 100644
  #include <linux/blkdev.h>
  #include <linux/blk-mq.h>
  #include <linux/delay.h>
-@@ -1659,25 +1658,57 @@ static const struct pr_ops nvme_pr_ops = {
+@@ -1672,25 +1671,57 @@ static const struct pr_ops nvme_pr_ops = {
  	.pr_clear	= nvme_pr_clear,
  };
  
@@ -123,7 +123,7 @@ index 6bb9908bf46f..9d84b7ecb67e 100644
  EXPORT_SYMBOL_GPL(nvme_sec_submit);
  #endif /* CONFIG_BLK_SED_OPAL */
  
-@@ -2468,7 +2499,10 @@ int nvme_init_identify(struct nvme_ctrl *ctrl)
+@@ -2481,7 +2512,10 @@ int nvme_init_identify(struct nvme_ctrl *ctrl)
  		ctrl->hmmaxd = le16_to_cpu(id->hmmaxd);
  	}
  
@@ -135,7 +135,7 @@ index 6bb9908bf46f..9d84b7ecb67e 100644
  
  	if (ret < 0)
 diff --git a/drivers/nvme/host/nvme.h b/drivers/nvme/host/nvme.h
-index bb4a2003c097..a596e9e84d1e 100644
+index e82cdae..43f3752 100644
 --- a/drivers/nvme/host/nvme.h
 +++ b/drivers/nvme/host/nvme.h
 @@ -21,6 +21,7 @@
@@ -146,7 +146,7 @@ index bb4a2003c097..a596e9e84d1e 100644
  #include <linux/fault-inject.h>
  #include <linux/rcupdate.h>
  
-@@ -167,6 +168,7 @@ struct nvme_ctrl {
+@@ -168,6 +169,7 @@ struct nvme_ctrl {
  	struct list_head subsys_entry;
  
  	struct opal_dev *opal_dev;
@@ -154,7 +154,7 @@ index bb4a2003c097..a596e9e84d1e 100644
  
  	char name[12];
  	u16 cntlid;
-@@ -193,6 +195,7 @@ struct nvme_ctrl {
+@@ -194,6 +196,7 @@ struct nvme_ctrl {
  	u8 apsta;
  	u32 oaes;
  	u32 aen_result;
@@ -162,7 +162,7 @@ index bb4a2003c097..a596e9e84d1e 100644
  	unsigned int shutdown_timeout;
  	unsigned int kato;
  	bool subsystem;
-@@ -420,6 +423,12 @@ void nvme_start_ctrl(struct nvme_ctrl *ctrl);
+@@ -421,6 +424,12 @@ void nvme_start_ctrl(struct nvme_ctrl *ctrl);
  void nvme_stop_ctrl(struct nvme_ctrl *ctrl);
  void nvme_put_ctrl(struct nvme_ctrl *ctrl);
  int nvme_init_identify(struct nvme_ctrl *ctrl);
@@ -176,10 +176,10 @@ index bb4a2003c097..a596e9e84d1e 100644
  void nvme_remove_namespaces(struct nvme_ctrl *ctrl);
  
 diff --git a/drivers/nvme/host/pci.c b/drivers/nvme/host/pci.c
-index d668682f91df..6c19fa7525e3 100644
+index 7b9ef8e..3644199 100644
 --- a/drivers/nvme/host/pci.c
 +++ b/drivers/nvme/host/pci.c
-@@ -2289,6 +2289,10 @@ static void nvme_reset_work(struct work_struct *work)
+@@ -2295,6 +2295,10 @@ static void nvme_reset_work(struct work_struct *work)
  	if (result)
  		goto out;
  
@@ -192,7 +192,7 @@ index d668682f91df..6c19fa7525e3 100644
  			dev->ctrl.opal_dev =
 diff --git a/drivers/nvme/host/rpmb.c b/drivers/nvme/host/rpmb.c
 new file mode 100644
-index 000000000000..34e807bfc4f9
+index 0000000..34e807b
 --- /dev/null
 +++ b/drivers/nvme/host/rpmb.c
 @@ -0,0 +1,119 @@
@@ -316,5 +316,5 @@ index 000000000000..34e807bfc4f9
 +	nvme_rpmb_remove(ctrl);
 +}
 -- 
-2.19.1
+2.21.0
 

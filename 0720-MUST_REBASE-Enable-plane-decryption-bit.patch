@@ -1,7 +1,7 @@
-From bc0dcf57f7b5dbe5be00eb31deaaed696e9301c3 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Romli, Khairul Anuar" <khairul.anuar.romli@intel.com>
 Date: Thu, 1 Nov 2018 14:06:30 +0800
-Subject: [PATCH 01/11] MUST_REBASE: Enable plane decryption bit
+Subject: [PATCH] MUST_REBASE: Enable plane decryption bit
 
 Enable plane decryption bit if the plane decryption check
 return true. This plane decryption bit will be used for
@@ -21,7 +21,7 @@ Signed-off-by: Hoong Tee, Yeoh <hoong.tee.yeoh@intel.com>
  6 files changed, 62 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/gpu/drm/drm_atomic.c b/drivers/gpu/drm/drm_atomic.c
-index b1fcc77e2add..d3c3c65bf5b7 100644
+index b1fcc77..d3c3c65 100644
 --- a/drivers/gpu/drm/drm_atomic.c
 +++ b/drivers/gpu/drm/drm_atomic.c
 @@ -919,6 +919,8 @@ static int drm_atomic_plane_set_property(struct drm_plane *plane,
@@ -43,7 +43,7 @@ index b1fcc77e2add..d3c3c65bf5b7 100644
  		*val = state->color_encoding;
  	} else if (property == plane->color_range_property) {
 diff --git a/drivers/gpu/drm/drm_blend.c b/drivers/gpu/drm/drm_blend.c
-index a16a74d7e15e..273fdf3b0e0f 100644
+index a16a74d..273fdf3 100644
 --- a/drivers/gpu/drm/drm_blend.c
 +++ b/drivers/gpu/drm/drm_blend.c
 @@ -112,6 +112,36 @@
@@ -84,10 +84,10 @@ index a16a74d7e15e..273fdf3b0e0f 100644
   * drm_plane_create_alpha_property - create a new alpha property
   * @plane: drm plane
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 3c2cc2e19826..c88133da35c4 100644
+index 00b5e45..0297014 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
-@@ -6540,6 +6540,7 @@ enum {
+@@ -6544,6 +6544,7 @@ enum {
  #define   PLANE_CTL_ALPHA_DISABLE		(0 << 4)
  #define   PLANE_CTL_ALPHA_SW_PREMULTIPLY	(2 << 4)
  #define   PLANE_CTL_ALPHA_HW_PREMULTIPLY	(3 << 4)
@@ -96,7 +96,7 @@ index 3c2cc2e19826..c88133da35c4 100644
  #define   PLANE_CTL_ROTATE_0			0x0
  #define   PLANE_CTL_ROTATE_90			0x1
 diff --git a/drivers/gpu/drm/i915/intel_sprite.c b/drivers/gpu/drm/i915/intel_sprite.c
-index 7b8e2c7c9f8d..2c0cc897c41e 100644
+index 7b8e2c7..2c0cc89 100644
 --- a/drivers/gpu/drm/i915/intel_sprite.c
 +++ b/drivers/gpu/drm/i915/intel_sprite.c
 @@ -317,6 +317,7 @@ skl_update_plane(struct intel_plane *plane,
@@ -127,7 +127,7 @@ index 7b8e2c7c9f8d..2c0cc897c41e 100644
  
  	spin_unlock_irqrestore(&dev_priv->uncore.lock, irqflags);
 diff --git a/include/drm/drm_blend.h b/include/drm/drm_blend.h
-index 330c561c4c11..74ba3e10b3a9 100644
+index 330c561..74ba3e1 100644
 --- a/include/drm/drm_blend.h
 +++ b/include/drm/drm_blend.h
 @@ -39,6 +39,7 @@ static inline bool drm_rotation_90_or_270(unsigned int rotation)
@@ -139,7 +139,7 @@ index 330c561c4c11..74ba3e10b3a9 100644
  				       unsigned int rotation,
  				       unsigned int supported_rotations);
 diff --git a/include/drm/drm_plane.h b/include/drm/drm_plane.h
-index 8a152dc16ea5..47d018e31bce 100644
+index 8a152dc..47d018e 100644
 --- a/include/drm/drm_plane.h
 +++ b/include/drm/drm_plane.h
 @@ -173,7 +173,13 @@ struct drm_plane_state {
@@ -173,5 +173,5 @@ index 8a152dc16ea5..47d018e31bce 100644
  	/**
  	 * @rotation_property:
 -- 
-2.19.1
+2.21.0
 

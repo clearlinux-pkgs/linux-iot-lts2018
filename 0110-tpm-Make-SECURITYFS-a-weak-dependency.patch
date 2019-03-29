@@ -1,7 +1,7 @@
-From 56a30670019cd2550c6b82d8e167167f274c6f15 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Peter Huewe <peterhuewe@gmx.de>
 Date: Mon, 3 Sep 2018 21:51:51 +0200
-Subject: [PATCH 33/97] tpm: Make SECURITYFS a weak dependency
+Subject: [PATCH] tpm: Make SECURITYFS a weak dependency
 
 While having SECURITYFS enabled for the tpm subsystem is beneficial in
 most cases, it is not strictly necessary to have it enabled at all.
@@ -21,7 +21,7 @@ Signed-off-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/char/tpm/Kconfig b/drivers/char/tpm/Kconfig
-index 18c81cbe4704..536e55d3919f 100644
+index 18c81cb..536e55d 100644
 --- a/drivers/char/tpm/Kconfig
 +++ b/drivers/char/tpm/Kconfig
 @@ -5,7 +5,7 @@
@@ -34,5 +34,5 @@ index 18c81cbe4704..536e55d3919f 100644
  	select CRYPTO_HASH_INFO
  	---help---
 -- 
-2.19.1
+2.21.0
 

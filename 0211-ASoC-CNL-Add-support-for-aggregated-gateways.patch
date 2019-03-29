@@ -1,7 +1,7 @@
-From 86935a41efc4a1061221a51fb22de0c15f524185 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Mon, 2 May 2016 15:09:22 +0530
-Subject: [PATCH 039/296] ASoC:CNL: Add support for aggregated gateways.
+Subject: [PATCH] ASoC:CNL: Add support for aggregated gateways.
 
 Gateway Link copier needs to be programmed differently
 for aggregated case. Add support for SoundWire aggregated
@@ -17,7 +17,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  2 files changed, 16 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index f63b50e43257..a9eaa4aed643 100644
+index f63b50e..a9eaa4a 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -566,7 +566,10 @@ static u32 skl_get_node_id(struct skl_sst *ctx,
@@ -33,7 +33,7 @@ index f63b50e43257..a9eaa4aed643 100644
  
  	default:
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 353c90cbd336..44e4109ba4dc 100644
+index 353c90c..44e4109 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -383,6 +383,16 @@ struct skl_module {
@@ -63,5 +63,5 @@ index 353c90cbd336..44e4109ba4dc 100644
  	struct skl_module_pin *m_out_pin;
  	enum skl_module_type m_type;
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From 7acc0063d186d9671675841b6d3b30af16a4c685 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Casey Schaufler <cschaufler@localhost.localdomain>
 Date: Mon, 27 Aug 2018 13:49:28 -0700
-Subject: [PATCH 05/97] procfs: add smack subdir to attrs
+Subject: [PATCH] procfs: add smack subdir to attrs
 
 Back in 2007 I made what turned out to be a rather serious
 mistake in the implementation of the Smack security module.
@@ -31,7 +31,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  5 files changed, 96 insertions(+), 21 deletions(-)
 
 diff --git a/Documentation/admin-guide/LSM/index.rst b/Documentation/admin-guide/LSM/index.rst
-index c980dfe9abf1..9842e21afd4a 100644
+index c980dfe..9842e21 100644
 --- a/Documentation/admin-guide/LSM/index.rst
 +++ b/Documentation/admin-guide/LSM/index.rst
 @@ -17,9 +17,8 @@ MAC extensions, other extensions can be built using the LSM to provide
@@ -62,7 +62,7 @@ index c980dfe9abf1..9842e21afd4a 100644
     :maxdepth: 1
  
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index 7e9f07bf260d..2230eb2fdd29 100644
+index 81d77b1..732acea 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -140,9 +140,13 @@ struct pid_entry {
@@ -80,7 +80,7 @@ index 7e9f07bf260d..2230eb2fdd29 100644
  
  /*
   * Count the number of hardlinks for the pid_entry table, excluding the .
-@@ -2517,7 +2521,7 @@ static ssize_t proc_pid_attr_read(struct file * file, char __user * buf,
+@@ -2513,7 +2517,7 @@ static ssize_t proc_pid_attr_read(struct file * file, char __user * buf,
  	if (!task)
  		return -ESRCH;
  
@@ -89,7 +89,7 @@ index 7e9f07bf260d..2230eb2fdd29 100644
  				      (char*)file->f_path.dentry->d_name.name,
  				      &p);
  	put_task_struct(task);
-@@ -2566,7 +2570,9 @@ static ssize_t proc_pid_attr_write(struct file * file, const char __user * buf,
+@@ -2562,7 +2566,9 @@ static ssize_t proc_pid_attr_write(struct file * file, const char __user * buf,
  	if (rv < 0)
  		goto out_free;
  
@@ -100,7 +100,7 @@ index 7e9f07bf260d..2230eb2fdd29 100644
  	mutex_unlock(&current->signal->cred_guard_mutex);
  out_free:
  	kfree(page);
-@@ -2580,13 +2586,53 @@ static const struct file_operations proc_pid_attr_operations = {
+@@ -2576,13 +2582,53 @@ static const struct file_operations proc_pid_attr_operations = {
  	.llseek		= generic_file_llseek,
  };
  
@@ -161,10 +161,10 @@ index 7e9f07bf260d..2230eb2fdd29 100644
  
  static int proc_attr_dir_readdir(struct file *file, struct dir_context *ctx)
 diff --git a/fs/proc/internal.h b/fs/proc/internal.h
-index 5185d7f6a51e..d4f9989063d0 100644
+index 95b1419..f857978 100644
 --- a/fs/proc/internal.h
 +++ b/fs/proc/internal.h
-@@ -81,6 +81,7 @@ union proc_op {
+@@ -82,6 +82,7 @@ union proc_op {
  	int (*proc_show)(struct seq_file *m,
  		struct pid_namespace *ns, struct pid *pid,
  		struct task_struct *task);
@@ -173,7 +173,7 @@ index 5185d7f6a51e..d4f9989063d0 100644
  
  struct proc_inode {
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 75f4156c84d7..418de5d20ffb 100644
+index 75f4156..418de5d 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -390,8 +390,10 @@ int security_sem_semctl(struct kern_ipc_perm *sma, int cmd);
@@ -212,10 +212,10 @@ index 75f4156c84d7..418de5d20ffb 100644
  	return -EINVAL;
  }
 diff --git a/security/security.c b/security/security.c
-index 736e78da1ab9..3dfe75d0d373 100644
+index 5ce2448..fb75d36 100644
 --- a/security/security.c
 +++ b/security/security.c
-@@ -1288,14 +1288,30 @@ void security_d_instantiate(struct dentry *dentry, struct inode *inode)
+@@ -1295,14 +1295,30 @@ void security_d_instantiate(struct dentry *dentry, struct inode *inode)
  }
  EXPORT_SYMBOL(security_d_instantiate);
  
@@ -251,5 +251,5 @@ index 736e78da1ab9..3dfe75d0d373 100644
  
  int security_netlink_send(struct sock *sk, struct sk_buff *skb)
 -- 
-2.19.1
+2.21.0
 

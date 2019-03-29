@@ -1,7 +1,7 @@
-From ed95b7ab62420a5696881dcc94cc56e99cf04680 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Thomas Gleixner <tglx@linutronix.de>
 Date: Mon, 17 Sep 2018 16:29:15 +0200
-Subject: [PATCH 10/12] x86/mm/cpa: Optimize same protection check
+Subject: [PATCH] x86/mm/cpa: Optimize same protection check
 
 When the existing mapping is correct and the new requested page protections
 are the same as the existing ones, then further checks can be omitted and the
@@ -44,7 +44,7 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  1 file changed, 14 insertions(+)
 
 diff --git a/arch/x86/mm/pageattr.c b/arch/x86/mm/pageattr.c
-index 19781b0ab4b4..5160334f9095 100644
+index f74c642..de51245 100644
 --- a/arch/x86/mm/pageattr.c
 +++ b/arch/x86/mm/pageattr.c
 @@ -839,6 +839,20 @@ static int __should_split_large_page(pte_t *kpte, unsigned long address,
@@ -69,5 +69,5 @@ index 19781b0ab4b4..5160334f9095 100644
  	 * Make sure that the requested pgprot does not violate the static
  	 * protections. Check the full large page whether one of the pages
 -- 
-2.19.1
+2.21.0
 

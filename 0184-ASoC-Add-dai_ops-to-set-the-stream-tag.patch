@@ -1,7 +1,7 @@
-From 3bfb260df358501a87e8fb56f3c65efea031fca5 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Hardik T Shah <hardik.t.shah@intel.com>
 Date: Thu, 10 Mar 2016 10:16:10 +0530
-Subject: [PATCH 012/296] ASoC: Add dai_ops to set the stream tag.
+Subject: [PATCH] ASoC: Add dai_ops to set the stream tag.
 
 Stream tag is introduced for supporting SoundWire links
 as part of ASoC. stream tag is unique stream identifier
@@ -21,7 +21,7 @@ Signed-off-by: Hardik T Shah <hardik.t.shah@intel.com>
  2 files changed, 72 insertions(+)
 
 diff --git a/include/sound/soc-dai.h b/include/sound/soc-dai.h
-index f5d70041108f..c393f1126839 100644
+index f5d7004..c393f11 100644
 --- a/include/sound/soc-dai.h
 +++ b/include/sound/soc-dai.h
 @@ -145,6 +145,13 @@ int snd_soc_dai_get_channel_map(struct snd_soc_dai *dai,
@@ -56,10 +56,10 @@ index f5d70041108f..c393f1126839 100644
  	 * ALSA PCM audio operations - all optional.
  	 * Called by soc-core during audio PCM operations.
 diff --git a/sound/soc/soc-core.c b/sound/soc/soc-core.c
-index 473eefe8658e..29b42f8f1eff 100644
+index 62aa320..7f30e8a 100644
 --- a/sound/soc/soc-core.c
 +++ b/sound/soc/soc-core.c
-@@ -2607,6 +2607,61 @@ int snd_soc_dai_set_tdm_slot(struct snd_soc_dai *dai,
+@@ -2608,6 +2608,61 @@ int snd_soc_dai_set_tdm_slot(struct snd_soc_dai *dai,
  }
  EXPORT_SYMBOL_GPL(snd_soc_dai_set_tdm_slot);
  
@@ -122,5 +122,5 @@ index 473eefe8658e..29b42f8f1eff 100644
   * snd_soc_dai_set_channel_map - configure DAI audio channel map
   * @dai: DAI
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From 374be6e3ffe265ba5222e49ab2dd623b9eb77ac6 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Igor Stoppa <igor.stoppa@gmail.com>
 Date: Wed, 5 Sep 2018 23:34:43 +0300
-Subject: [PATCH 27/97] seccomp: remove unnecessary unlikely()
+Subject: [PATCH] seccomp: remove unnecessary unlikely()
 
 WARN_ON() already contains an unlikely(), so it's not necessary to wrap it
 into another.
@@ -16,7 +16,7 @@ Signed-off-by: James Morris <james.morris@microsoft.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/kernel/seccomp.c b/kernel/seccomp.c
-index fd023ac24e10..5a2a9af4663e 100644
+index fd023ac..5a2a9af 100644
 --- a/kernel/seccomp.c
 +++ b/kernel/seccomp.c
 @@ -195,7 +195,7 @@ static u32 seccomp_run_filters(const struct seccomp_data *sd,
@@ -38,5 +38,5 @@ index fd023ac24e10..5a2a9af4663e 100644
  		return failed;
  	}
 -- 
-2.19.1
+2.21.0
 

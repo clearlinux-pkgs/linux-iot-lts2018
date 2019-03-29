@@ -1,7 +1,7 @@
-From 731aa835c420da80e8ae2ae164718ea956ed5c57 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Jian Jun Chen <jian.jun.chen@intel.com>
 Date: Thu, 6 Dec 2018 12:07:14 +0800
-Subject: [PATCH 09/11] VBS-K: use kernel virtio header files
+Subject: [PATCH] VBS-K: use kernel virtio header files
 
 Current VBS-K implementation defines its own set of vring structures
 and virtio feature flags. Some of them have the same names as those
@@ -21,7 +21,7 @@ Tracked-On: PKT-1617
  3 files changed, 14 insertions(+), 55 deletions(-)
 
 diff --git a/drivers/vbs/vq.c b/drivers/vbs/vq.c
-index 4ea44c47b871..3a714441f11a 100644
+index 4ea44c4..3a71444 100644
 --- a/drivers/vbs/vq.c
 +++ b/drivers/vbs/vq.c
 @@ -75,7 +75,7 @@ void * paddr_guest2host(struct ctx *ctx, uintptr_t gaddr, size_t len)
@@ -93,7 +93,7 @@ index 4ea44c47b871..3a714441f11a 100644
  	/* ... immediately followed by "avail" ring (entirely uint16_t's) */
  	vq->avail = (struct vring_avail *)base;
 diff --git a/include/linux/vbs/vbs.h b/include/linux/vbs/vbs.h
-index a72bb9612d1e..765dc9c33a07 100644
+index a72bb96..765dc9c 100644
 --- a/include/linux/vbs/vbs.h
 +++ b/include/linux/vbs/vbs.h
 @@ -62,6 +62,8 @@
@@ -146,7 +146,7 @@ index a72bb9612d1e..765dc9c33a07 100644
  	volatile struct vring_avail *avail;
  	/* private: the "used" ring */
 diff --git a/include/linux/vbs/vq.h b/include/linux/vbs/vq.h
-index ca14f8f34888..45e462920506 100644
+index ca14f8f..45e4629 100644
 --- a/include/linux/vbs/vq.h
 +++ b/include/linux/vbs/vq.h
 @@ -77,27 +77,8 @@
@@ -192,5 +192,5 @@ index ca14f8f34888..45e462920506 100644
  
  	return size;
 -- 
-2.17.1
+2.21.0
 

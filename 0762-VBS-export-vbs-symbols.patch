@@ -1,7 +1,7 @@
-From 28b346ffb4264bb98782aa13a44bab9ffc5ff5fe Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Libin Yang <libin.yang@intel.com>
 Date: Tue, 4 Dec 2018 12:03:40 +0800
-Subject: [PATCH 10/18] VBS: export vbs symbols
+Subject: [PATCH] VBS: export vbs symbols
 
 This patch exports some vbs symbols for other modules to use.
 
@@ -50,5 +50,5 @@ index 9f7a829..4ea44c4 100644
  /*
   * Initialize the currently-selected virtqueue.
 -- 
-2.7.4
+2.21.0
 

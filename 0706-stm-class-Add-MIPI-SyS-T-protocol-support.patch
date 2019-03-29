@@ -1,7 +1,7 @@
-From 680f20c9b7da1327283627986b725018b0e1d972 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:58 +0300
-Subject: [PATCH 10/19] stm class: Add MIPI SyS-T protocol support
+Subject: [PATCH] stm class: Add MIPI SyS-T protocol support
 
 This adds support for MIPI SyS-T protocol as specified in an open
 standard [1]. In addition to marking message boundaries, it also
@@ -25,7 +25,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  create mode 100644 drivers/hwtracing/stm/p_sys-t.c
 
 diff --git a/drivers/hwtracing/stm/Kconfig b/drivers/hwtracing/stm/Kconfig
-index 262e7891fb97..752dd66742bf 100644
+index 262e789..752dd66 100644
 --- a/drivers/hwtracing/stm/Kconfig
 +++ b/drivers/hwtracing/stm/Kconfig
 @@ -26,6 +26,20 @@ config STM_PROTO_BASIC
@@ -50,7 +50,7 @@ index 262e7891fb97..752dd66742bf 100644
  	tristate "Dummy STM driver"
  	help
 diff --git a/drivers/hwtracing/stm/Makefile b/drivers/hwtracing/stm/Makefile
-index 1571de66eca4..1692fcd29277 100644
+index 1571de6..1692fcd 100644
 --- a/drivers/hwtracing/stm/Makefile
 +++ b/drivers/hwtracing/stm/Makefile
 @@ -4,8 +4,10 @@ obj-$(CONFIG_STM)	+= stm_core.o
@@ -66,7 +66,7 @@ index 1571de66eca4..1692fcd29277 100644
  
 diff --git a/drivers/hwtracing/stm/p_sys-t.c b/drivers/hwtracing/stm/p_sys-t.c
 new file mode 100644
-index 000000000000..ffeb057b777c
+index 0000000..ffeb057
 --- /dev/null
 +++ b/drivers/hwtracing/stm/p_sys-t.c
 @@ -0,0 +1,302 @@
@@ -373,5 +373,5 @@ index 000000000000..ffeb057b777c
 +MODULE_DESCRIPTION("MIPI SyS-T STM framing protocol driver");
 +MODULE_AUTHOR("Alexander Shishkin <alexander.shishkin@linux.intel.com>");
 -- 
-2.19.1
+2.21.0
 

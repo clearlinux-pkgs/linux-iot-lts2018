@@ -1,7 +1,7 @@
-From 60ad6019da56dcd80b902ad74b9864552e4f6681 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Min He <min.he@intel.com>
 Date: Tue, 19 Dec 2017 10:22:34 +0800
-Subject: [PATCH 111/214] drm/i915/gvt: local display support
+Subject: [PATCH] drm/i915/gvt: local display support
 
 Added local display dispaly support for GVT-g.
 
@@ -29,7 +29,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  12 files changed, 251 insertions(+), 29 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/cfg_space.c b/drivers/gpu/drm/i915/gvt/cfg_space.c
-index c62346fdc05d..707b0a50da3c 100644
+index c62346f..707b0a5 100644
 --- a/drivers/gpu/drm/i915/gvt/cfg_space.c
 +++ b/drivers/gpu/drm/i915/gvt/cfg_space.c
 @@ -322,6 +322,15 @@ int intel_vgpu_emulate_cfg_write(struct intel_vgpu *vgpu, unsigned int offset,
@@ -49,7 +49,7 @@ index c62346fdc05d..707b0a50da3c 100644
  						   *(u32 *)p_data);
  		if (ret)
 diff --git a/drivers/gpu/drm/i915/gvt/display.c b/drivers/gpu/drm/i915/gvt/display.c
-index 3019dbc39aef..2e01c38887bd 100644
+index 3019dbc..2e01c38 100644
 --- a/drivers/gpu/drm/i915/gvt/display.c
 +++ b/drivers/gpu/drm/i915/gvt/display.c
 @@ -315,14 +315,19 @@ static void clean_virtual_dp_monitor(struct intel_vgpu *vgpu, int port_num)
@@ -197,7 +197,7 @@ index 3019dbc39aef..2e01c38887bd 100644
  
  /**
 diff --git a/drivers/gpu/drm/i915/gvt/edid.c b/drivers/gpu/drm/i915/gvt/edid.c
-index 4b98539025c5..4785b8a10619 100644
+index 4b98539..4785b8a 100644
 --- a/drivers/gpu/drm/i915/gvt/edid.c
 +++ b/drivers/gpu/drm/i915/gvt/edid.c
 @@ -55,10 +55,6 @@ static unsigned char edid_get_byte(struct intel_vgpu *vgpu)
@@ -250,7 +250,7 @@ index 4b98539025c5..4785b8a10619 100644
  		if (WARN_ON((op & 0x1) != GVT_AUX_I2C_READ))
  			return;
 diff --git a/drivers/gpu/drm/i915/gvt/edid.h b/drivers/gpu/drm/i915/gvt/edid.h
-index f6dfc8b795ec..11a75d69062d 100644
+index f6dfc8b..11a75d6 100644
 --- a/drivers/gpu/drm/i915/gvt/edid.h
 +++ b/drivers/gpu/drm/i915/gvt/edid.h
 @@ -48,7 +48,7 @@
@@ -263,7 +263,7 @@ index f6dfc8b795ec..11a75d69062d 100644
  
  enum gmbus_cycle_type {
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.c b/drivers/gpu/drm/i915/gvt/gvt.c
-index 46c8b720e336..8523fbc1e494 100644
+index 46c8b72..8523fbc 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.c
 +++ b/drivers/gpu/drm/i915/gvt/gvt.c
 @@ -301,6 +301,46 @@ static int init_service_thread(struct intel_gvt *gvt)
@@ -324,7 +324,7 @@ index 46c8b720e336..8523fbc1e494 100644
  				&intel_gvt_ops);
  	if (ret) {
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 31f6cdbe5c42..47ed1789ea28 100644
+index 31f6cdb..47ed178 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -291,6 +291,7 @@ struct intel_gvt_firmware {
@@ -362,7 +362,7 @@ index 31f6cdbe5c42..47ed1789ea28 100644
  		struct engine_mmio *mmio;
  		int ctx_mmio_count[I915_NUM_ENGINES];
 diff --git a/drivers/gpu/drm/i915/gvt/handlers.c b/drivers/gpu/drm/i915/gvt/handlers.c
-index 7f7f2fb09a37..e1855328eba6 100644
+index 7f7f2fb..e185532 100644
 --- a/drivers/gpu/drm/i915/gvt/handlers.c
 +++ b/drivers/gpu/drm/i915/gvt/handlers.c
 @@ -441,18 +441,21 @@ static int pipeconf_mmio_write(struct intel_vgpu *vgpu, unsigned int offset,
@@ -441,7 +441,7 @@ index 7f7f2fb09a37..e1855328eba6 100644
  	MMIO_PLANES_DH(PLANE_BUF_CFG, D_SKL_PLUS, NULL, NULL);
  
 diff --git a/drivers/gpu/drm/i915/i915_irq.c b/drivers/gpu/drm/i915/i915_irq.c
-index 29877969310d..0b16775e292c 100644
+index 2987796..0b16775 100644
 --- a/drivers/gpu/drm/i915/i915_irq.c
 +++ b/drivers/gpu/drm/i915/i915_irq.c
 @@ -37,6 +37,10 @@
@@ -499,10 +499,10 @@ index 29877969310d..0b16775e292c 100644
  }
  
 diff --git a/drivers/gpu/drm/i915/intel_dp.c b/drivers/gpu/drm/i915/intel_dp.c
-index 1193202766a2..37c08c71fdf6 100644
+index f92079e..e237160 100644
 --- a/drivers/gpu/drm/i915/intel_dp.c
 +++ b/drivers/gpu/drm/i915/intel_dp.c
-@@ -479,7 +479,7 @@ uint32_t intel_dp_pack_aux(const uint8_t *src, int src_bytes)
+@@ -509,7 +509,7 @@ uint32_t intel_dp_pack_aux(const uint8_t *src, int src_bytes)
  	return v;
  }
  
@@ -512,10 +512,10 @@ index 1193202766a2..37c08c71fdf6 100644
  	int i;
  	if (dst_bytes > 4)
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 8fc61e96754f..7c11b8d10b66 100644
+index 50d5649..e389909 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
-@@ -1708,6 +1708,7 @@ int intel_dp_rate_select(struct intel_dp *intel_dp, int rate);
+@@ -1718,6 +1718,7 @@ int intel_dp_rate_select(struct intel_dp *intel_dp, int rate);
  void intel_dp_hot_plug(struct intel_encoder *intel_encoder);
  void intel_power_sequencer_reset(struct drm_i915_private *dev_priv);
  uint32_t intel_dp_pack_aux(const uint8_t *src, int src_bytes);
@@ -524,7 +524,7 @@ index 8fc61e96754f..7c11b8d10b66 100644
  void intel_edp_drrs_enable(struct intel_dp *intel_dp,
  			   const struct intel_crtc_state *crtc_state);
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 43ae9de12ba3..01d0f4d3653a 100644
+index 425df81..01afc76 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -33,6 +33,10 @@
@@ -538,7 +538,7 @@ index 43ae9de12ba3..01d0f4d3653a 100644
  /**
   * DOC: RC6
   *
-@@ -5128,6 +5132,14 @@ skl_compute_ddb(struct drm_atomic_state *state)
+@@ -5167,6 +5171,14 @@ skl_compute_ddb(struct drm_atomic_state *state)
  
  	memcpy(ddb, &dev_priv->wm.skl_hw.ddb, sizeof(*ddb));
  
@@ -553,7 +553,7 @@ index 43ae9de12ba3..01d0f4d3653a 100644
  	for_each_new_intel_crtc_in_state(intel_state, crtc, cstate, i) {
  		ret = skl_allocate_pipe_ddb(cstate, ddb);
  		if (ret)
-@@ -5354,6 +5366,11 @@ static void skl_atomic_update_crtc_wm(struct intel_atomic_state *state,
+@@ -5393,6 +5405,11 @@ static void skl_atomic_update_crtc_wm(struct intel_atomic_state *state,
  	I915_WRITE(PIPE_WM_LINETIME(pipe), pipe_wm->linetime);
  
  	for_each_plane_id_on_crtc(crtc, plane_id) {
@@ -566,7 +566,7 @@ index 43ae9de12ba3..01d0f4d3653a 100644
  			skl_write_plane_wm(crtc, &pipe_wm->planes[plane_id],
  					   ddb, plane_id);
 diff --git a/drivers/gpu/drm/i915/intel_sprite.c b/drivers/gpu/drm/i915/intel_sprite.c
-index f7026e887fa9..11b7afc0a0d3 100644
+index f7026e8..11b7afc 100644
 --- a/drivers/gpu/drm/i915/intel_sprite.c
 +++ b/drivers/gpu/drm/i915/intel_sprite.c
 @@ -41,6 +41,10 @@
@@ -606,5 +606,5 @@ index f7026e887fa9..11b7afc0a0d3 100644
  
  	I915_WRITE_FW(PLANE_CTL(pipe, plane_id), 0);
 -- 
-2.19.1
+2.21.0
 

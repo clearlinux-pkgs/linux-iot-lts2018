@@ -1,7 +1,7 @@
-From cd08da9fbe20d5a092492f4e36abac2342ff14b7 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Hardik Shah <hardik.t.shah@intel.com>
 Date: Mon, 2 May 2016 15:12:59 +0530
-Subject: [PATCH 040/296] ASoC:CNL: Add DAIS for SoundWire masters.
+Subject: [PATCH] ASoC:CNL: Add DAIS for SoundWire masters.
 
 Add new DAIs for SoundWire master for aggregation.
 Add DAI IDs to find the master controller from DAI.
@@ -19,7 +19,7 @@ Reviewed-on:
  2 files changed, 52 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index da4461762c4e..f27b7188b7c8 100644
+index da44617..f27b718 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1096,6 +1096,7 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
@@ -91,7 +91,7 @@ index da4461762c4e..f27b7188b7c8 100644
  },
  };
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.h b/sound/soc/intel/skylake/skl-sdw-pcm.h
-index ab1314a6f408..7166ef9992ab 100644
+index ab1314a..7166ef9 100644
 --- a/sound/soc/intel/skylake/skl-sdw-pcm.h
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.h
 @@ -24,6 +24,13 @@
@@ -109,5 +109,5 @@ index ab1314a6f408..7166ef9992ab 100644
  		struct snd_soc_dai *dai);
  int cnl_sdw_hw_params(struct snd_pcm_substream *substream,
 -- 
-2.19.1
+2.21.0
 

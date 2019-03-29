@@ -1,7 +1,7 @@
-From 842db231625a79e75b4777377f6c25d73f816f82 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Yin Fengwei <fengwei.yin@intel.com>
 Date: Fri, 31 Aug 2018 10:58:59 +0800
-Subject: [PATCH 045/214] api doc: add vhm API docs
+Subject: [PATCH] api doc: add vhm API docs
 
 Change-Id: If6df309ea215c1592ce41f7da724388ff1084087
 Tracked-On: 220254
@@ -18,7 +18,7 @@ Reviewed-on:
  5 files changed, 358 insertions(+), 8 deletions(-)
 
 diff --git a/Documentation/virtual/acrn/vhm.rst b/Documentation/virtual/acrn/vhm.rst
-index 56d498a016b0..901cff492e2b 100644
+index 56d498a..901cff4 100644
 --- a/Documentation/virtual/acrn/vhm.rst
 +++ b/Documentation/virtual/acrn/vhm.rst
 @@ -3,3 +3,11 @@ Virtio and Hypervisor Module (VHM)
@@ -34,7 +34,7 @@ index 56d498a016b0..901cff492e2b 100644
 +.. kernel-doc:: include/linux/vhm/vhm_ioctl_defs.h
 +.. kernel-doc:: include/linux/vhm/vhm_vm_mngt.h
 diff --git a/include/linux/vhm/acrn_vhm_ioreq.h b/include/linux/vhm/acrn_vhm_ioreq.h
-index fcec2c1e2eac..de3a8aa4eaf6 100644
+index fcec2c1..de3a8aa 100644
 --- a/include/linux/vhm/acrn_vhm_ioreq.h
 +++ b/include/linux/vhm/acrn_vhm_ioreq.h
 @@ -51,6 +51,12 @@
@@ -174,7 +174,7 @@ index fcec2c1e2eac..de3a8aa4eaf6 100644
  
  /* IOReq APIs */
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index ba8558949e48..ba383b354986 100644
+index ba85589..ba383b3 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -51,25 +51,115 @@
@@ -332,7 +332,7 @@ index ba8558949e48..ba383b354986 100644
  
  #endif
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 9f2f21acbbe3..5bc7c666f2ea 100644
+index 9f2f21a..5bc7c66 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -43,6 +43,12 @@
@@ -449,7 +449,7 @@ index 9f2f21acbbe3..5bc7c666f2ea 100644
  	uint32_t major_version;
  	uint32_t minor_version;
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index 5edacb31dc1b..e7bc8b2372f7 100644
+index 5edacb3..e7bc8b2 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -53,6 +53,12 @@
@@ -557,5 +557,5 @@ index 5edacb31dc1b..e7bc8b2372f7 100644
  
  void vm_list_add(struct list_head *list);
 -- 
-2.19.1
+2.21.0
 

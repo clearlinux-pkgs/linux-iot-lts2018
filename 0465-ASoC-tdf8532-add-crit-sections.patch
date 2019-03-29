@@ -1,7 +1,7 @@
-From a006329ac4baa24102655d58837851e07d384af1 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
 Date: Fri, 12 Oct 2018 10:24:41 +0200
-Subject: [PATCH 293/296] ASoC: tdf8532: add crit sections
+Subject: [PATCH] ASoC: tdf8532: add crit sections
 
 Stop of playback caused that entire tdf8532 codec has been
 put into IDLE state despite current capture activity.
@@ -14,7 +14,7 @@ Signed-off-by: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
  2 files changed, 55 insertions(+), 39 deletions(-)
 
 diff --git a/sound/soc/codecs/tdf8532.c b/sound/soc/codecs/tdf8532.c
-index 02e63f95512b..9fc73b69611c 100644
+index 02e63f9..9fc73b6 100644
 --- a/sound/soc/codecs/tdf8532.c
 +++ b/sound/soc/codecs/tdf8532.c
 @@ -21,8 +21,11 @@
@@ -193,7 +193,7 @@ index 02e63f95512b..9fc73b69611c 100644
  		dev_err(&i2c->dev, "Failed to register codec: %d\n", ret);
  		goto out;
 diff --git a/sound/soc/codecs/tdf8532.h b/sound/soc/codecs/tdf8532.h
-index 39353a04b3ba..0f3540707580 100644
+index 39353a0..0f35407 100644
 --- a/sound/soc/codecs/tdf8532.h
 +++ b/sound/soc/codecs/tdf8532.h
 @@ -96,6 +96,7 @@ struct tdf8532_priv {
@@ -205,5 +205,5 @@ index 39353a04b3ba..0f3540707580 100644
  
  #endif
 -- 
-2.19.1
+2.21.0
 

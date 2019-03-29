@@ -1,7 +1,7 @@
-From 6b92142d9d0e61aab7e93d40ad21262c9e5cde75 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:54 +0300
-Subject: [PATCH 06/19] stm class: Introduce framing protocol drivers
+Subject: [PATCH] stm class: Introduce framing protocol drivers
 
 At the moment, the stm class applies a certain STP framing pattern to
 the data as it is written to the underlying STM device. In order to
@@ -19,10 +19,10 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  3 files changed, 318 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/core.c b/drivers/hwtracing/stm/core.c
-index 17198e79df3e..915af2541dcd 100644
+index 94f51f5..c4551b1 100644
 --- a/drivers/hwtracing/stm/core.c
 +++ b/drivers/hwtracing/stm/core.c
-@@ -316,11 +316,26 @@ static int stm_output_assign(struct stm_device *stm, unsigned int width,
+@@ -319,11 +319,26 @@ static int stm_output_assign(struct stm_device *stm, unsigned int width,
  	output->master = midx;
  	output->channel = cidx;
  	output->nr_chans = width;
@@ -49,7 +49,7 @@ index 17198e79df3e..915af2541dcd 100644
  	spin_unlock(&output->lock);
  	spin_unlock(&stm->mc_lock);
  
-@@ -333,6 +348,8 @@ static void stm_output_free(struct stm_device *stm, struct stm_output *output)
+@@ -336,6 +351,8 @@ static void stm_output_free(struct stm_device *stm, struct stm_output *output)
  	spin_lock(&output->lock);
  	if (output->nr_chans)
  		stm_output_disclaim(stm, output);
@@ -58,7 +58,7 @@ index 17198e79df3e..915af2541dcd 100644
  	spin_unlock(&output->lock);
  	spin_unlock(&stm->mc_lock);
  }
-@@ -349,6 +366,127 @@ static int major_match(struct device *dev, const void *data)
+@@ -352,6 +369,127 @@ static int major_match(struct device *dev, const void *data)
  	return MAJOR(dev->devt) == major;
  }
  
@@ -186,7 +186,7 @@ index 17198e79df3e..915af2541dcd 100644
  static int stm_char_open(struct inode *inode, struct file *file)
  {
  	struct stm_file *stmf;
-@@ -1176,6 +1314,8 @@ static int __init stm_core_init(void)
+@@ -1181,6 +1319,8 @@ static int __init stm_core_init(void)
  		goto err_src;
  
  	init_srcu_struct(&stm_source_srcu);
@@ -196,7 +196,7 @@ index 17198e79df3e..915af2541dcd 100644
  	stm_core_up++;
  
 diff --git a/drivers/hwtracing/stm/policy.c b/drivers/hwtracing/stm/policy.c
-index a505f055f464..8bc90432ae69 100644
+index a505f05..8bc9043 100644
 --- a/drivers/hwtracing/stm/policy.c
 +++ b/drivers/hwtracing/stm/policy.c
 @@ -33,8 +33,18 @@ struct stp_policy_node {
@@ -450,7 +450,7 @@ index a505f055f464..8bc90432ae69 100644
  	return ret;
  }
 diff --git a/drivers/hwtracing/stm/stm.h b/drivers/hwtracing/stm/stm.h
-index e5df08ae59cf..ed7f3d07fa47 100644
+index e5df08a..ed7f3d0 100644
 --- a/drivers/hwtracing/stm/stm.h
 +++ b/drivers/hwtracing/stm/stm.h
 @@ -10,20 +10,17 @@
@@ -542,5 +542,5 @@ index e5df08ae59cf..ed7f3d07fa47 100644
 +
  #endif /* _STM_STM_H_ */
 -- 
-2.19.1
+2.21.0
 

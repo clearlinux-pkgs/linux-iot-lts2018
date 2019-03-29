@@ -1,7 +1,7 @@
-From a86a6e327887c28457391ae0a8cb0e8aefa24d6f Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Shuo Liu <shuo.a.liu@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 078/214] vhm: use correct string length
+Subject: [PATCH] vhm: use correct string length
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -18,7 +18,7 @@ Reviewed-by: Jason Chen CJ <jason.cj.chen@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index c91a60598114..5cb15b5badd8 100644
+index c91a605..5cb15b5 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -204,7 +204,7 @@ int acrn_ioreq_create_client(unsigned long vmid, ioreq_handler_t handler,
@@ -31,5 +31,5 @@ index c91a60598114..5cb15b5badd8 100644
  	INIT_LIST_HEAD(&client->range_list);
  	init_waitqueue_head(&client->wq);
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From 089345c87e1b65170f530065548b5a4eafcf0ee3 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Jason Chen CJ <jason.cj.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:01 +0800
-Subject: [PATCH 064/214] vhm: add sos offline cpu support
+Subject: [PATCH] vhm: add sos offline cpu support
 
 add sysfs with attr "offline_cpu", use
 	echo cpu_id > /sys/class/vhm/acrn_vhm/offline_cpu
@@ -21,7 +21,7 @@ Acked-by: Eddie Dong <eddie.dong@intel.com>
  4 files changed, 48 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 92075def6218..75cdbb730fa9 100644
+index 92075de..75cdbb7 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -664,6 +664,41 @@ static const struct file_operations fops = {
@@ -87,7 +87,7 @@ index 92075def6218..75cdbb730fa9 100644
  }
  
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 93dfb661d133..4c94d8f962ad 100644
+index 93dfb66..4c94d8f 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -52,6 +52,11 @@
@@ -103,7 +103,7 @@ index 93dfb661d133..4c94d8f962ad 100644
  {
  	return acrn_hypercall1(HC_GET_API_VERSION, api_version);
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 7cfcf7a30813..b9465a87fe46 100644
+index 7cfcf7a..b9465a8 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -68,6 +68,7 @@
@@ -115,7 +115,7 @@ index 7cfcf7a30813..b9465a87fe46 100644
  /* VM management */
  #define HC_ID_VM_BASE               0x10UL
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 49e94ecc37b9..7d4b15af39a0 100644
+index 49e94ec..7d4b15a 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -137,6 +137,7 @@ static inline long acrn_hypercall4(unsigned long hcall_id, unsigned long param1,
@@ -127,5 +127,5 @@ index 49e94ecc37b9..7d4b15af39a0 100644
  inline long hcall_create_vm(unsigned long vminfo);
  inline long hcall_start_vm(unsigned long vmid);
 -- 
-2.19.1
+2.21.0
 

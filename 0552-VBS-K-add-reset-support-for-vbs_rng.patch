@@ -1,7 +1,7 @@
-From 4456be46498a273691e9062a6ebd7822ed65567d Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Jian Jun Chen <jian.jun.chen@intel.com>
 Date: Fri, 31 Aug 2018 10:59:03 +0800
-Subject: [PATCH 084/214] VBS-K: add reset support for vbs_rng
+Subject: [PATCH] VBS-K: add reset support for vbs_rng
 
 Add reset support for vbs_rng, it acts as an example about how to
 support D3.
@@ -15,7 +15,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 9 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
-index 569d1d5d689c..45e17b086c29 100644
+index 569d1d5..45e17b0 100644
 --- a/drivers/vbs/vbs_rng.c
 +++ b/drivers/vbs/vbs_rng.c
 @@ -123,7 +123,7 @@ static int vbs_rng_connection_cnt = 0;
@@ -69,5 +69,5 @@ index 569d1d5d689c..45e17b086c29 100644
  
  /* device specific function */
 -- 
-2.19.1
+2.21.0
 

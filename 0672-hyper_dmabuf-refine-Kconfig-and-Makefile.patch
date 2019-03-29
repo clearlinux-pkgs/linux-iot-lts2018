@@ -1,7 +1,7 @@
-From 5a53c88a0c21b5ab569c7fcda7f36b9f485096f6 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Dongwon Kim <dongwon.kim@intel.com>
 Date: Thu, 18 Oct 2018 11:43:57 -0700
-Subject: [PATCH 204/214] hyper_dmabuf: refine Kconfig and Makefile
+Subject: [PATCH] hyper_dmabuf: refine Kconfig and Makefile
 
 Make sure CONFIG_VIRTIO is selected if hyper_dmabuf is built
 for ACRN. Also all unused portion is removed from Makefile.
@@ -13,7 +13,7 @@ Signed-off-by: Dongwon Kim <dongwon.kim@intel.com>
  2 files changed, 35 insertions(+), 59 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/Kconfig b/drivers/dma-buf/hyper_dmabuf/Kconfig
-index 1d91a114ba61..f15a8cdf9250 100644
+index 1d91a11..f15a8cd 100644
 --- a/drivers/dma-buf/hyper_dmabuf/Kconfig
 +++ b/drivers/dma-buf/hyper_dmabuf/Kconfig
 @@ -1,44 +1,47 @@
@@ -82,7 +82,7 @@ index 1d91a114ba61..f15a8cdf9250 100644
 -endmenu
 +endif
 diff --git a/drivers/dma-buf/hyper_dmabuf/Makefile b/drivers/dma-buf/hyper_dmabuf/Makefile
-index f63967cc99f6..4ad8dc70234b 100644
+index f63967c..4ad8dc7 100644
 --- a/drivers/dma-buf/hyper_dmabuf/Makefile
 +++ b/drivers/dma-buf/hyper_dmabuf/Makefile
 @@ -1,57 +1,30 @@
@@ -164,5 +164,5 @@ index f63967cc99f6..4ad8dc70234b 100644
 +			 virtio/hyper_dmabuf_virtio_comm_ring.o
  endif
 -- 
-2.19.1
+2.21.0
 

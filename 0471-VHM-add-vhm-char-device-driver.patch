@@ -1,7 +1,7 @@
-From e420d5939d6fadd0ed90800c2a9b810e1a588d63 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: liang ding <liang.ding@intel.com>
 Date: Fri, 31 Aug 2018 10:58:55 +0800
-Subject: [PATCH 003/214] VHM: add vhm char device driver
+Subject: [PATCH] VHM: add vhm char device driver
 
 VHM(virtio and hypervisor service module) is the important middle layer
 to run virtio and hypervisor services in linux kernel for ACRN hypervisor.
@@ -25,18 +25,18 @@ Reviewed-on:
 Reviewed-by: Dong, Eddie <eddie.dong@intel.com>
 Tested-by: Dong, Eddie <eddie.dong@intel.com>
 ---
- drivers/Makefile                   |    1 
- drivers/char/Makefile              |    1 
- drivers/char/vhm/Makefile          |    1 
- drivers/char/vhm/vhm_dev.c         |  247 +++++++++++++++++++++++++++++++++++++
- drivers/vhm/Makefile               |    1 
- drivers/vhm/vhm_hypercall.c        |  134 ++++++++++++++++++++
- drivers/vhm/vhm_vm_mngt.c          |  107 ++++++++++++++++
- include/linux/vhm/acrn_common.h    |   65 +++++++++
- include/linux/vhm/acrn_hv_defs.h   |   81 ++++++++++++
- include/linux/vhm/vhm_hypercall.h  |  148 ++++++++++++++++++++++
- include/linux/vhm/vhm_ioctl_defs.h |   67 ++++++++++
- include/linux/vhm/vhm_vm_mngt.h    |   78 +++++++++++
+ drivers/Makefile                   |   1 +
+ drivers/char/Makefile              |   1 +
+ drivers/char/vhm/Makefile          |   1 +
+ drivers/char/vhm/vhm_dev.c         | 247 +++++++++++++++++++++++++++++
+ drivers/vhm/Makefile               |   1 +
+ drivers/vhm/vhm_hypercall.c        | 134 ++++++++++++++++
+ drivers/vhm/vhm_vm_mngt.c          | 107 +++++++++++++
+ include/linux/vhm/acrn_common.h    |  65 ++++++++
+ include/linux/vhm/acrn_hv_defs.h   |  81 ++++++++++
+ include/linux/vhm/vhm_hypercall.h  | 148 +++++++++++++++++
+ include/linux/vhm/vhm_ioctl_defs.h |  67 ++++++++
+ include/linux/vhm/vhm_vm_mngt.h    |  78 +++++++++
  12 files changed, 931 insertions(+)
  create mode 100644 drivers/char/vhm/Makefile
  create mode 100644 drivers/char/vhm/vhm_dev.c
@@ -49,8 +49,10 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  create mode 100644 include/linux/vhm/vhm_ioctl_defs.h
  create mode 100644 include/linux/vhm/vhm_vm_mngt.h
 
---- dev-bkc.orig/drivers/Makefile
-+++ dev-bkc/drivers/Makefile
+diff --git a/drivers/Makefile b/drivers/Makefile
+index a1a8bf6..b260b5a 100644
+--- a/drivers/Makefile
++++ b/drivers/Makefile
 @@ -183,6 +183,7 @@ obj-$(CONFIG_FPGA)		+= fpga/
  obj-$(CONFIG_FSI)		+= fsi/
  obj-$(CONFIG_TEE)		+= tee/
@@ -59,19 +61,27 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  obj-$(CONFIG_UNISYS_VISORBUS)	+= visorbus/
  obj-$(CONFIG_SIOX)		+= siox/
  obj-$(CONFIG_GNSS)		+= gnss/
---- dev-bkc.orig/drivers/char/Makefile
-+++ dev-bkc/drivers/char/Makefile
+diff --git a/drivers/char/Makefile b/drivers/char/Makefile
+index 88764b7..6371793 100644
+--- a/drivers/char/Makefile
++++ b/drivers/char/Makefile
 @@ -59,3 +59,4 @@ obj-$(CONFIG_XILLYBUS)		+= xillybus/
  obj-$(CONFIG_POWERNV_OP_PANEL)	+= powernv-op-panel.o
  obj-$(CONFIG_ADI)		+= adi.o
  obj-$(CONFIG_RPMB)		+= rpmb/
 +obj-$(CONFIG_ACRN)		+= vhm/
+diff --git a/drivers/char/vhm/Makefile b/drivers/char/vhm/Makefile
+new file mode 100644
+index 0000000..cb801c7
 --- /dev/null
-+++ dev-bkc/drivers/char/vhm/Makefile
++++ b/drivers/char/vhm/Makefile
 @@ -0,0 +1 @@
 +obj-y += vhm_dev.o
+diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
+new file mode 100644
+index 0000000..527e90b
 --- /dev/null
-+++ dev-bkc/drivers/char/vhm/vhm_dev.c
++++ b/drivers/char/vhm/vhm_dev.c
 @@ -0,0 +1,247 @@
 +/*
 + * virtio and hyperviosr service module (VHM): main framework
@@ -320,12 +330,18 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
 +		"responsible for transferring IO requsts from other modules "
 +		"either in user-space or in kernel to and from hypervisor");
 +MODULE_VERSION("0.1");
+diff --git a/drivers/vhm/Makefile b/drivers/vhm/Makefile
+new file mode 100644
+index 0000000..220697a
 --- /dev/null
-+++ dev-bkc/drivers/vhm/Makefile
++++ b/drivers/vhm/Makefile
 @@ -0,0 +1 @@
 +obj-y += vhm_vm_mngt.o vhm_hypercall.o
+diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
+new file mode 100644
+index 0000000..ddc085d
 --- /dev/null
-+++ dev-bkc/drivers/vhm/vhm_hypercall.c
++++ b/drivers/vhm/vhm_hypercall.c
 @@ -0,0 +1,134 @@
 +/*
 + * virtio and hyperviosr service module (VHM): hypercall wrap
@@ -461,8 +477,11 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
 +
 +	return ret;
 +}
+diff --git a/drivers/vhm/vhm_vm_mngt.c b/drivers/vhm/vhm_vm_mngt.c
+new file mode 100644
+index 0000000..61db04b
 --- /dev/null
-+++ dev-bkc/drivers/vhm/vhm_vm_mngt.c
++++ b/drivers/vhm/vhm_vm_mngt.c
 @@ -0,0 +1,107 @@
 +/*
 + * virtio and hyperviosr service module (VHM): vm management
@@ -571,8 +590,11 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
 +{
 +	mutex_unlock(mlock);
 +}
+diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
+new file mode 100644
+index 0000000..08e4773
 --- /dev/null
-+++ dev-bkc/include/linux/vhm/acrn_common.h
++++ b/include/linux/vhm/acrn_common.h
 @@ -0,0 +1,65 @@
 +/*
 + * virtio and hyperviosr service module (VHM): commom.h
@@ -639,8 +661,11 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
 +} __attribute__((aligned(8)));
 +
 +#endif /* ACRN_COMMON_H */
+diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
+new file mode 100644
+index 0000000..f338a8f
 --- /dev/null
-+++ dev-bkc/include/linux/vhm/acrn_hv_defs.h
++++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -0,0 +1,81 @@
 +/*
 + * virtio and hyperviosr service module (VHM): hypercall header
@@ -723,8 +748,11 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
 +#define ACRN_INVALID_HPA (-1UL)
 +
 +#endif /* ACRN_HV_DEFS_H */
+diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
+new file mode 100644
+index 0000000..c07163d
 --- /dev/null
-+++ dev-bkc/include/linux/vhm/vhm_hypercall.h
++++ b/include/linux/vhm/vhm_hypercall.h
 @@ -0,0 +1,148 @@
 +/*
 + * virtio and hyperviosr service module (VHM): hypercall.h
@@ -874,8 +902,11 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
 +inline long vhm_query_vm_state(struct vhm_vm *vm);
 +
 +#endif /* VHM_HYPERCALL_H */
+diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
+new file mode 100644
+index 0000000..d8c81b6
 --- /dev/null
-+++ dev-bkc/include/linux/vhm/vhm_ioctl_defs.h
++++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -0,0 +1,67 @@
 +/*
 + * This file is provided under a dual BSD/GPLv2 license.  When using or
@@ -944,8 +975,11 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
 +#define IC_QUERY_VMSTATE               _IC_ID(IC_ID, IC_ID_VM_BASE + 0x05)
 +
 +#endif /* VHM_IOCTL_DEFS_H */
+diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
+new file mode 100644
+index 0000000..dcb246a
 --- /dev/null
-+++ dev-bkc/include/linux/vhm/vhm_vm_mngt.h
++++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -0,0 +1,78 @@
 +/*
 + * virtio and hyperviosr service module (VHM): vm management
@@ -1025,3 +1059,6 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
 +void vm_mutex_unlock(struct mutex *mlock);
 +
 +#endif
+-- 
+2.21.0
+

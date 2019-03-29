@@ -1,7 +1,7 @@
-From 080f07935f8f45a6a65aaf0fe517155bfff42d80 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Mousumi Jana <mousumix.jana@intel.com>
 Date: Thu, 20 Jul 2017 16:39:00 +0530
-Subject: [PATCH 189/296] ASoC: Intel: Skylake: Notify topology changes
+Subject: [PATCH] ASoC: Intel: Skylake: Notify topology changes
 
 Some events like pipeline start, pipeline delete, DSP D0/D3
 need to be notified to the user in order to convey a
@@ -32,7 +32,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  9 files changed, 160 insertions(+)
 
 diff --git a/include/uapi/sound/snd_sst_tokens.h b/include/uapi/sound/snd_sst_tokens.h
-index 7c0149476820..0f74eeb85995 100644
+index 7c01494..0f74eeb 100644
 --- a/include/uapi/sound/snd_sst_tokens.h
 +++ b/include/uapi/sound/snd_sst_tokens.h
 @@ -350,4 +350,20 @@ enum SKL_TKNS {
@@ -57,7 +57,7 @@ index 7c0149476820..0f74eeb85995 100644
 +
  #endif
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index 9c8d923fe358..c7f7c1529354 100644
+index 9c8d923..c7f7c15 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -498,6 +498,11 @@ static int bxt_set_dsp_D0(struct sst_dsp *ctx, unsigned int core_id)
@@ -85,7 +85,7 @@ index 9c8d923fe358..c7f7c1529354 100644
  }
  
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 1fd9a3afe9a9..8560cd65e77c 100644
+index 1fd9a3a..8560cd6 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -2479,6 +2479,10 @@ int skl_delete_pipe(struct skl_sst *ctx, struct skl_pipe *pipe)
@@ -111,7 +111,7 @@ index 1fd9a3afe9a9..8560cd65e77c 100644
  	return 0;
  }
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 7fda668d9fc9..8209c954b7ad 100644
+index 7fda668..8209c95 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -967,6 +967,10 @@ static struct snd_soc_dai_ops skl_sdw_dai_ops = {
@@ -153,7 +153,7 @@ index 7fda668d9fc9..8209c954b7ad 100644
  
  static const struct snd_soc_component_driver skl_component  = {
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index baec42299419..6736c89c6520 100644
+index baec422..6736c89 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -20,6 +20,7 @@
@@ -192,7 +192,7 @@ index baec42299419..6736c89c6520 100644
 +
  #endif /*__SKL_SST_DSP_H__*/
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index ad437be40334..bc083b0a0d4f 100644
+index ad437be..bc083b0 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -29,6 +29,7 @@ struct sst_generic_ipc;
@@ -228,7 +228,7 @@ index ad437be40334..bc083b0a0d4f 100644
 +int skl_notify_tplg_change(struct skl_sst *ctx, int type);
  #endif /* __SKL_IPC_H */
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 8f4e3074de17..f20b842af4e4 100644
+index 8f4e307..f20b842 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -881,6 +881,25 @@ static int skl_parse_fw_config_info(struct sst_dsp *ctx,
@@ -258,7 +258,7 @@ index 8f4e3074de17..f20b842af4e4 100644
  {
  	struct skl_ipc_large_config_msg msg;
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 29be5b7da3ba..373dbced8efa 100644
+index fb9fc5a..f1d3518 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -2642,6 +2642,78 @@ int skl_tplg_be_update_params(struct snd_soc_dai *dai,
@@ -341,7 +341,7 @@ index 29be5b7da3ba..373dbced8efa 100644
  	{SKL_MIXER_EVENT, skl_tplg_mixer_event},
  	{SKL_VMIXER_EVENT, skl_tplg_mixer_event},
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index b3a15ed76122..ce4069607dda 100644
+index b3a15ed..ce40696 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -614,4 +614,7 @@ int skl_tplg_dsp_log_set(struct snd_kcontrol *kcontrol,
@@ -353,5 +353,5 @@ index b3a15ed76122..ce4069607dda 100644
 +			unsigned int __user *data, unsigned int size);
  #endif
 -- 
-2.19.1
+2.21.0
 

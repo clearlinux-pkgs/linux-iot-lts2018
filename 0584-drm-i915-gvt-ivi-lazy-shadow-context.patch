@@ -1,7 +1,7 @@
-From 1b61e9d12c2713e848c430dcdcf10b1a75b6dce4 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Ping Gao <ping.a.gao@intel.com>
 Date: Fri, 2 Jun 2017 09:03:19 +0800
-Subject: [PATCH 116/214] drm/i915/gvt: ivi: lazy shadow context
+Subject: [PATCH] drm/i915/gvt: ivi: lazy shadow context
 
 It's a significant overhead to shadow guest context by copying all
 the pages, for performance consideration this patch introduce context
@@ -22,7 +22,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  1 file changed, 69 insertions(+), 23 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index e7514bdf2fe9..f0f0ada705cd 100644
+index e7514bd..f0f0ada 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -119,6 +119,7 @@ static void sr_oa_regs(struct intel_vgpu_workload *workload,
@@ -161,5 +161,5 @@ index e7514bdf2fe9..f0f0ada705cd 100644
  
  	intel_gvt_hypervisor_write_gpa(vgpu, workload->ring_context_gpa +
 -- 
-2.19.1
+2.21.0
 

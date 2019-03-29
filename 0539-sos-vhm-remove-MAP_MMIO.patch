@@ -1,7 +1,7 @@
-From db8366a0f18f71a1855487453099341c784bcafc Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Li, Fei1" <fei1.li@intel.com>
 Date: Fri, 31 Aug 2018 10:59:02 +0800
-Subject: [PATCH 071/214] sos: vhm: remove MAP_MMIO
+Subject: [PATCH] sos: vhm: remove MAP_MMIO
 
 Now the MAP_MMIO has no difference with MAP_MEM. So there's no needs
 to keep it.
@@ -14,7 +14,7 @@ Acked-by: Eddie Dong <eddie.dong@intel.com>
  2 files changed, 2 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index c7ca10255064..f663558ae943 100644
+index c7ca102..f663558 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -135,7 +135,7 @@ int set_mmio_map(unsigned long vmid, unsigned long guest_gpa,
@@ -36,7 +36,7 @@ index c7ca10255064..f663558ae943 100644
  	if (_mem_set_memmap(vm->vmid, guest_gpa, host_gpa, memmap->len,
  		mem_type, mem_access_right, type) < 0) {
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index f51f56b58147..31cdebefedf2 100644
+index f51f56b..31cdebe 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -134,7 +134,6 @@
@@ -48,5 +48,5 @@ index f51f56b58147..31cdebefedf2 100644
  	uint32_t type;
  
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From fee09051ea04364d7063eae7bf4e3aa73819d01a Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Li Zhijian <lizhijian@cn.fujitsu.com>
 Date: Fri, 31 Aug 2018 10:59:04 +0800
-Subject: [PATCH 089/214] vhm: fix client use-after-free
+Subject: [PATCH] vhm: fix client use-after-free
 
 free_client() will free resource of client
 
@@ -15,7 +15,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 0bcb0e053947..6bf07e812d03 100644
+index 0bcb0e0..6bf07e8 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -282,10 +282,11 @@ static void acrn_ioreq_destroy_client_pervm(struct ioreq_client *client,
@@ -32,5 +32,5 @@ index 0bcb0e053947..6bf07e812d03 100644
  
  void acrn_ioreq_destroy_client(int client_id)
 -- 
-2.19.1
+2.21.0
 

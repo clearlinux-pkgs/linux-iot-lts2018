@@ -1,7 +1,7 @@
-From d1457215111fcac6c8f4c0f1fde8145cc9ba0677 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Fri, 21 Sep 2018 16:19:23 +0300
-Subject: [PATCH 58/97] tpm: use u32 instead of int for PCR index
+Subject: [PATCH] tpm: use u32 instead of int for PCR index
 
 The TPM specs defines PCR index as a positive number, and there is
 no reason to use a signed number. It is also a possible security
@@ -30,7 +30,7 @@ Reviewed-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  7 files changed, 24 insertions(+), 21 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm-interface.c b/drivers/char/tpm/tpm-interface.c
-index acd647476ae1..d9439f9abe78 100644
+index 9245ec5..88d2e01 100644
 --- a/drivers/char/tpm/tpm-interface.c
 +++ b/drivers/char/tpm/tpm-interface.c
 @@ -38,7 +38,7 @@
@@ -42,7 +42,7 @@ index acd647476ae1..d9439f9abe78 100644
  module_param_named(suspend_pcr, tpm_suspend_pcr, uint, 0644);
  MODULE_PARM_DESC(suspend_pcr,
  		 "PCR to use for dummy writes to facilitate flush on suspend.");
-@@ -455,7 +455,7 @@ EXPORT_SYMBOL_GPL(tpm_is_tpm2);
+@@ -464,7 +464,7 @@ EXPORT_SYMBOL_GPL(tpm_is_tpm2);
   *
   * Return: same as with tpm_transmit_cmd()
   */
@@ -51,7 +51,7 @@ index acd647476ae1..d9439f9abe78 100644
  {
  	int rc;
  
-@@ -485,7 +485,7 @@ EXPORT_SYMBOL_GPL(tpm_pcr_read);
+@@ -494,7 +494,7 @@ EXPORT_SYMBOL_GPL(tpm_pcr_read);
   *
   * Return: same as with tpm_transmit_cmd()
   */
@@ -61,7 +61,7 @@ index acd647476ae1..d9439f9abe78 100644
  	int rc;
  	struct tpm2_digest digest_list[ARRAY_SIZE(chip->active_banks)];
 diff --git a/drivers/char/tpm/tpm-sysfs.c b/drivers/char/tpm/tpm-sysfs.c
-index 96fc7433c57d..b88e08ec2c59 100644
+index 96fc743..b88e08e 100644
 --- a/drivers/char/tpm/tpm-sysfs.c
 +++ b/drivers/char/tpm/tpm-sysfs.c
 @@ -102,7 +102,7 @@ static ssize_t pcrs_show(struct device *dev, struct device_attribute *attr,
@@ -74,7 +74,7 @@ index 96fc7433c57d..b88e08ec2c59 100644
  	struct tpm_chip *chip = to_tpm_chip(dev);
  
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index e0778d19da98..f27d1f38a93d 100644
+index e0778d1..f27d1f3 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
 @@ -509,14 +509,14 @@ ssize_t tpm_transmit_cmd(struct tpm_chip *chip, struct tpm_space *space,
@@ -107,7 +107,7 @@ index e0778d19da98..f27d1f38a93d 100644
  int tpm2_get_random(struct tpm_chip *chip, u8 *dest, size_t max);
  void tpm2_flush_context_cmd(struct tpm_chip *chip, u32 handle,
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index 6b04648f8184..6f306338953b 100644
+index 6b04648..6f30633 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -449,7 +449,7 @@ int tpm1_get_timeouts(struct tpm_chip *chip)
@@ -138,7 +138,7 @@ index 6b04648f8184..6f306338953b 100644
  	u8 dummy_hash[TPM_DIGEST_SIZE] = { 0 };
  	struct tpm_buf buf;
 diff --git a/drivers/char/tpm/tpm2-cmd.c b/drivers/char/tpm/tpm2-cmd.c
-index 6ca4fc0a0d6f..ae86fb0218ab 100644
+index 6ca4fc0..ae86fb0 100644
 --- a/drivers/char/tpm/tpm2-cmd.c
 +++ b/drivers/char/tpm/tpm2-cmd.c
 @@ -175,7 +175,7 @@ struct tpm2_pcr_read_out {
@@ -168,7 +168,7 @@ index 6ca4fc0a0d6f..ae86fb0218ab 100644
  	__be16 size;
  	u8 buffer[TPM_MAX_RNG_DATA];
 diff --git a/include/linux/tpm.h b/include/linux/tpm.h
-index 4609b94142d4..b49a55cf775f 100644
+index 4609b94..b49a55c 100644
 --- a/include/linux/tpm.h
 +++ b/include/linux/tpm.h
 @@ -53,8 +53,8 @@ struct tpm_class_ops {
@@ -204,10 +204,10 @@ index 4609b94142d4..b49a55cf775f 100644
  {
  	return -ENODEV;
 diff --git a/security/integrity/ima/ima_crypto.c b/security/integrity/ima/ima_crypto.c
-index 7e7e7e7c250a..959d9edc113a 100644
+index d9e7728..acf2c7d 100644
 --- a/security/integrity/ima/ima_crypto.c
 +++ b/security/integrity/ima/ima_crypto.c
-@@ -629,7 +629,7 @@ int ima_calc_buffer_hash(const void *buf, loff_t len,
+@@ -643,7 +643,7 @@ int ima_calc_buffer_hash(const void *buf, loff_t len,
  	return calc_buffer_shash(buf, len, hash);
  }
  
@@ -216,7 +216,7 @@ index 7e7e7e7c250a..959d9edc113a 100644
  {
  	if (!ima_tpm_chip)
  		return;
-@@ -645,7 +645,8 @@ static int __init ima_calc_boot_aggregate_tfm(char *digest,
+@@ -659,7 +659,8 @@ static int __init ima_calc_boot_aggregate_tfm(char *digest,
  					      struct crypto_shash *tfm)
  {
  	u8 pcr_i[TPM_DIGEST_SIZE];
@@ -227,5 +227,5 @@ index 7e7e7e7c250a..959d9edc113a 100644
  
  	shash->tfm = tfm;
 -- 
-2.19.1
+2.21.0
 

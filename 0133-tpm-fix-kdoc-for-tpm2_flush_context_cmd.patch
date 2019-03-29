@@ -1,7 +1,7 @@
-From 68cf8ed8819183f7598fdccf78db040f234e4c38 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 17 Oct 2018 20:08:49 +0300
-Subject: [PATCH 59/97] tpm: fix kdoc for tpm2_flush_context_cmd()
+Subject: [PATCH] tpm: fix kdoc for tpm2_flush_context_cmd()
 
 kdoc for tpm2_flush_context_cmd() was off.
 
@@ -13,7 +13,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 2 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm2-cmd.c b/drivers/char/tpm/tpm2-cmd.c
-index ae86fb0218ab..ba94dd5f11a4 100644
+index ae86fb0..ba94dd5 100644
 --- a/drivers/char/tpm/tpm2-cmd.c
 +++ b/drivers/char/tpm/tpm2-cmd.c
 @@ -343,10 +343,9 @@ int tpm2_get_random(struct tpm_chip *chip, u8 *dest, size_t max)
@@ -30,5 +30,5 @@ index ae86fb0218ab..ba94dd5f11a4 100644
  void tpm2_flush_context_cmd(struct tpm_chip *chip, u32 handle,
  			    unsigned int flags)
 -- 
-2.19.1
+2.21.0
 

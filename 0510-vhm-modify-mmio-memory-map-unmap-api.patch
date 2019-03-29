@@ -1,7 +1,7 @@
-From e1f6fb124e66c4388b91a3179ecebd212b30a512 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Mingqiang Chi <mingqiang.chi@intel.com>
 Date: Fri, 31 Aug 2018 10:58:59 +0800
-Subject: [PATCH 042/214] vhm: modify mmio/memory map/unmap api
+Subject: [PATCH] vhm: modify mmio/memory map/unmap api
 
 Split the parameter(prot) to two parameters(mem_type and
 mem_access_right)
@@ -20,7 +20,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  3 files changed, 37 insertions(+), 30 deletions(-)
 
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index a9ba810a7fd7..be6a47afad9a 100644
+index a9ba810..be6a47a 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -148,7 +148,8 @@ int alloc_guest_memseg(struct vhm_vm *vm, struct vm_memseg *memseg)
@@ -115,7 +115,7 @@ index a9ba810a7fd7..be6a47afad9a 100644
  		mutex_unlock(&vm->seg_lock);
  		return -EFAULT;
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 12dc3c954526..411f197f7f3a 100644
+index 12dc3c9..411f197 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -111,20 +111,18 @@
@@ -152,7 +152,7 @@ index 12dc3c954526..411f197f7f3a 100644
  struct vm_set_memmap {
  #define MAP_MEM		0
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 2ff1e25b22ce..ba8558949e48 100644
+index 2ff1e25..ba85589 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -66,11 +66,13 @@ static inline unsigned long  acrn_hpa2gpa(unsigned long hpa)
@@ -173,5 +173,5 @@ index 2ff1e25b22ce..ba8558949e48 100644
  int vhm_dev_mmap(struct file *file, struct vm_area_struct *vma);
  
 -- 
-2.19.1
+2.21.0
 

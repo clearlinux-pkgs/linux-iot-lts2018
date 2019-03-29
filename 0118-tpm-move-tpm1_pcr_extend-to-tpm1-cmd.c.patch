@@ -1,7 +1,7 @@
-From 04203a6e06d1904439356985cfed53e719e60f28 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Tue, 6 Mar 2018 09:36:11 +0200
-Subject: [PATCH 44/97] tpm: move tpm1_pcr_extend to tpm1-cmd.c
+Subject: [PATCH] tpm: move tpm1_pcr_extend to tpm1-cmd.c
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -33,10 +33,10 @@ Tested-by: Nayna Jain <nayna@linux.ibm.com>
  3 files changed, 23 insertions(+), 28 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm-interface.c b/drivers/char/tpm/tpm-interface.c
-index 20f5c15584e4..177795b408ff 100644
+index 15d5f02..8934132 100644
 --- a/drivers/char/tpm/tpm-interface.c
 +++ b/drivers/char/tpm/tpm-interface.c
-@@ -615,34 +615,6 @@ int tpm_pcr_read(struct tpm_chip *chip, int pcr_idx, u8 *res_buf)
+@@ -624,34 +624,6 @@ int tpm_pcr_read(struct tpm_chip *chip, int pcr_idx, u8 *res_buf)
  }
  EXPORT_SYMBOL_GPL(tpm_pcr_read);
  
@@ -72,7 +72,7 @@ index 20f5c15584e4..177795b408ff 100644
   * tpm_pcr_extend - extend a PCR value in SHA1 bank.
   * @chip:	a &struct tpm_chip instance, %NULL for the default chip
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index 4ea51bbdbfae..221b6dcd15a1 100644
+index 4ea51bb..221b6dc 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
 @@ -549,6 +549,8 @@ int tpm_do_selftest(struct tpm_chip *chip);
@@ -85,7 +85,7 @@ index 4ea51bbdbfae..221b6dcd15a1 100644
  int tpm_pm_suspend(struct device *dev);
  int tpm_pm_resume(struct device *dev);
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index 978946748ea3..ec242397e6dc 100644
+index 9789467..ec24239 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -413,3 +413,24 @@ int tpm1_get_timeouts(struct tpm_chip *chip)
@@ -114,5 +114,5 @@ index 978946748ea3..ec242397e6dc 100644
 +	return rc;
 +}
 -- 
-2.19.1
+2.21.0
 

@@ -1,7 +1,7 @@
-From c8733990540152f9fb88a6dee27566e43dbfb17f Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Sun, 20 Mar 2016 11:32:42 +0200
-Subject: [PATCH 07/22] tools rpmb: add RPBM access tool
+Subject: [PATCH] tools rpmb: add RPBM access tool
 
 Add simple RPMB host testing tool. It can be used
 to program key, write and read data block, and retrieve
@@ -45,7 +45,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  create mode 100644 tools/rpmb/rpmb.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 1868f61fffc1..861ef1fb8e6c 100644
+index 5a424e1..5cb69d7 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -12535,6 +12535,7 @@ F:	drivers/char/rpmb/*
@@ -57,7 +57,7 @@ index 1868f61fffc1..861ef1fb8e6c 100644
  RTL2830 MEDIA DRIVER
  M:	Antti Palosaari <crope@iki.fi>
 diff --git a/tools/Makefile b/tools/Makefile
-index be02c8b904db..72f644639fcc 100644
+index be02c8b..72f6446 100644
 --- a/tools/Makefile
 +++ b/tools/Makefile
 @@ -22,6 +22,7 @@ help:
@@ -129,7 +129,7 @@ index be02c8b904db..72f644639fcc 100644
  		gpio_clean objtool_clean leds_clean wmi_clean
 diff --git a/tools/rpmb/.gitignore b/tools/rpmb/.gitignore
 new file mode 100644
-index 000000000000..218f680548e6
+index 0000000..218f680
 --- /dev/null
 +++ b/tools/rpmb/.gitignore
 @@ -0,0 +1,2 @@
@@ -137,7 +137,7 @@ index 000000000000..218f680548e6
 +rpmb
 diff --git a/tools/rpmb/Makefile b/tools/rpmb/Makefile
 new file mode 100644
-index 000000000000..c99d5f9e9439
+index 0000000..c99d5f9
 --- /dev/null
 +++ b/tools/rpmb/Makefile
 @@ -0,0 +1,38 @@
@@ -181,7 +181,7 @@ index 000000000000..c99d5f9e9439
 +	$(INSTALL) $(prog) $(DESTDIR)$(bindir)
 diff --git a/tools/rpmb/rpmb.c b/tools/rpmb/rpmb.c
 new file mode 100644
-index 000000000000..1a507db2739e
+index 0000000..1a507db
 --- /dev/null
 +++ b/tools/rpmb/rpmb.c
 @@ -0,0 +1,1020 @@
@@ -1206,5 +1206,5 @@ index 000000000000..1a507db2739e
 +	exit(EXIT_SUCCESS);
 +}
 -- 
-2.19.1
+2.21.0
 

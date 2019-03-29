@@ -1,7 +1,7 @@
-From 82acf71c15815c3ea47684ca8aa43fc1d267bd2a Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Sanyog Kale <sanyog.r.kale@intel.com>
 Date: Mon, 4 Dec 2017 15:05:59 +0530
-Subject: [PATCH 230/296] soundwire: Change programming sequence for BRA
+Subject: [PATCH] soundwire: Change programming sequence for BRA
 
 Currently, the register programming (PDI, ALH, DP_CTRL) is performed
 before FW pipeline creation.
@@ -26,7 +26,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/sdw/sdw_cnl.c b/drivers/sdw/sdw_cnl.c
-index 9f8e77c20699..95eb7a8fab2b 100644
+index 9f8e77c..95eb7a8 100644
 --- a/drivers/sdw/sdw_cnl.c
 +++ b/drivers/sdw/sdw_cnl.c
 @@ -1900,9 +1900,6 @@ static int cnl_sdw_xfer_bulk(struct sdw_master *mstr,
@@ -50,5 +50,5 @@ index 9f8e77c20699..95eb7a8fab2b 100644
  	ret = ops->bra_platform_xfer(data->bra_data->drv_data, true, &info);
  	if (ret < 0) {
 -- 
-2.19.1
+2.21.0
 

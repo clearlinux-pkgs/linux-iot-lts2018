@@ -1,7 +1,7 @@
-From 8ba3ac5b680bd6ad148034fc4bd93cc5813f5eb3 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Alexander Shishkin <alexander.shishkin@linux.intel.com>
 Date: Fri, 5 Oct 2018 15:42:56 +0300
-Subject: [PATCH 08/19] stm class: Factor out default framing protocol
+Subject: [PATCH] stm class: Factor out default framing protocol
 
 The STP framing pattern that the stm class implicitly applies to the
 data payload is, in fact, a protocol. This patch moves the relevant code
@@ -18,7 +18,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  create mode 100644 drivers/hwtracing/stm/p_basic.c
 
 diff --git a/drivers/hwtracing/stm/Kconfig b/drivers/hwtracing/stm/Kconfig
-index 723e2d90083d..262e7891fb97 100644
+index 723e2d9..262e789 100644
 --- a/drivers/hwtracing/stm/Kconfig
 +++ b/drivers/hwtracing/stm/Kconfig
 @@ -11,6 +11,21 @@ config STM
@@ -44,7 +44,7 @@ index 723e2d90083d..262e7891fb97 100644
  	tristate "Dummy STM driver"
  	help
 diff --git a/drivers/hwtracing/stm/Makefile b/drivers/hwtracing/stm/Makefile
-index effc19e5190f..1571de66eca4 100644
+index effc19e..1571de6 100644
 --- a/drivers/hwtracing/stm/Makefile
 +++ b/drivers/hwtracing/stm/Makefile
 @@ -3,6 +3,10 @@ obj-$(CONFIG_STM)	+= stm_core.o
@@ -60,7 +60,7 @@ index effc19e5190f..1571de66eca4 100644
  obj-$(CONFIG_STM_SOURCE_CONSOLE)	+= stm_console.o
 diff --git a/drivers/hwtracing/stm/p_basic.c b/drivers/hwtracing/stm/p_basic.c
 new file mode 100644
-index 000000000000..8980a6a5fd6c
+index 0000000..8980a6a
 --- /dev/null
 +++ b/drivers/hwtracing/stm/p_basic.c
 @@ -0,0 +1,48 @@
@@ -113,5 +113,5 @@ index 000000000000..8980a6a5fd6c
 +MODULE_DESCRIPTION("Basic STM framing protocol driver");
 +MODULE_AUTHOR("Alexander Shishkin <alexander.shishkin@linux.intel.com>");
 -- 
-2.19.1
+2.21.0
 

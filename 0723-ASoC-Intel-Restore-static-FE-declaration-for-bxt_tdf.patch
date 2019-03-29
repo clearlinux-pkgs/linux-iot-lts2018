@@ -1,8 +1,7 @@
-From d78953b90bb3a0920afe509f3b18888ea90fda6a Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Cezary Rojewski <cezary.rojewski@intel.com>
 Date: Mon, 15 Oct 2018 10:20:13 +0200
-Subject: [PATCH 04/11] ASoC: Intel: Restore static FE declaration for
- bxt_tdf8532.
+Subject: [PATCH] ASoC: Intel: Restore static FE declaration for bxt_tdf8532.
 
 DAIs and DAI links declared within topology for dynamic DAI load
 currently do not provide all the necessary flags such as SoC
@@ -25,7 +24,7 @@ Signed-off-by: Cezary Rojewski <cezary.rojewski@intel.com>
  3 files changed, 328 insertions(+), 6 deletions(-)
 
 diff --git a/sound/soc/intel/boards/bxt_tdf8532.c b/sound/soc/intel/boards/bxt_tdf8532.c
-index 27361e8f72d3..8e993425aaa1 100644
+index 27361e8..8e99342 100644
 --- a/sound/soc/intel/boards/bxt_tdf8532.c
 +++ b/sound/soc/intel/boards/bxt_tdf8532.c
 @@ -90,6 +90,173 @@ static int bxt_tdf8532_ssp2_fixup(struct snd_soc_pcm_runtime *rtd,
@@ -203,7 +202,7 @@ index 27361e8f72d3..8e993425aaa1 100644
  	{
  		.name = "Bxt Compress Probe playback",
 diff --git a/sound/soc/intel/common/soc-acpi-intel-bxt-match.c b/sound/soc/intel/common/soc-acpi-intel-bxt-match.c
-index 77cbd98d3e22..4ceb3487e590 100644
+index 77cbd98..4ceb348 100644
 --- a/sound/soc/intel/common/soc-acpi-intel-bxt-match.c
 +++ b/sound/soc/intel/common/soc-acpi-intel-bxt-match.c
 @@ -15,10 +15,6 @@ static struct snd_soc_acpi_codecs bxt_codecs = {
@@ -234,7 +233,7 @@ index 77cbd98d3e22..4ceb3487e590 100644
  #endif
  	{},
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index f886dc863a1b..eec91202dfac 100644
+index f886dc8..eec9120 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1021,6 +1021,167 @@ struct skl_dsp_notify_ops cb_ops = {
@@ -406,5 +405,5 @@ index f886dc863a1b..eec91202dfac 100644
  	.name = "System Pin",
  	.ops = &skl_pcm_dai_ops,
 -- 
-2.19.1
+2.21.0
 

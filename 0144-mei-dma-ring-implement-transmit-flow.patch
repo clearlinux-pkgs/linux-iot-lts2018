@@ -1,7 +1,7 @@
-From 2309e974e1cba554f785bac3247ab15edbd958c1 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Tomas Winkler <tomas.winkler@intel.com>
 Date: Wed, 2 Nov 2016 18:18:36 -0400
-Subject: [PATCH 70/97] mei: dma ring: implement transmit flow
+Subject: [PATCH] mei: dma ring: implement transmit flow
 
 Implement a circular buffer on allocated system memory. Read and write
 indices are stored on the control block which is also shared between the
@@ -21,7 +21,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  3 files changed, 144 insertions(+), 13 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 5d15501af313..1fc8ea0f519b 100644
+index 5d15501..1fc8ea0 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -1558,10 +1558,13 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
@@ -173,7 +173,7 @@ index 5d15501af313..1fc8ea0f519b 100644
  out:
  	if (mei_hdr.msg_complete)
 diff --git a/drivers/misc/mei/dma-ring.c b/drivers/misc/mei/dma-ring.c
-index 2d2ce6f4ef3b..f809db5c0129 100644
+index 2d2ce6f..f809db5 100644
 --- a/drivers/misc/mei/dma-ring.c
 +++ b/drivers/misc/mei/dma-ring.c
 @@ -144,6 +144,27 @@ static size_t mei_dma_copy_from(struct mei_device *dev, unsigned char *buf,
@@ -279,7 +279,7 @@ index 2d2ce6f4ef3b..f809db5c0129 100644
 +	WRITE_ONCE(ctrl->hbuf_wr_idx, ctrl->hbuf_wr_idx + slots);
 +}
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index bfd181fbd90c..685b78ce30a5 100644
+index bfd181f..685b78c 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -599,6 +599,8 @@ void mei_dmam_ring_free(struct mei_device *dev);
@@ -292,5 +292,5 @@ index bfd181fbd90c..685b78ce30a5 100644
  /*
   *  MEI interrupt functions prototype
 -- 
-2.19.1
+2.21.0
 
