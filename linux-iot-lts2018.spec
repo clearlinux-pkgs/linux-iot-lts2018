@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.31-base-190328T203856Z
+# quilt.tag:  lts-v4.19.31-base-190331T153725Z
 # config.tag: lts-v4.19.31-base-190328T203856Z
 
 %define ktarget0 iot-lts2018
@@ -1120,6 +1120,9 @@ Patch1066: 1066-ASoC-Intel-Skl-Virt-Fix-NULL-ptr-in-pcm_close-on-SOS.patch
 Patch1067: 1067-ASoC-Intel-Skl-Virt-Fix-logic-of-vbe_skl_pcm_close_a.patch
 Patch1068: 1068-ASoC-Intel-Skl-Virt-Cleanup-static-analysis-issues.patch
 Patch1069: 1069-drm-i915-Removing-dead_code-from-function-block.patch
+Patch1070: 1070-acrn-fix-used-uninitialized-warning.patch
+Patch1071: 1071-gpio-virtio-frontend-driver.patch
+Patch1072: 1072-add-an-IRQ-chip-to-gpio-virtio-GPIO-chip.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2256,6 +2259,9 @@ Linux kernel build files and install script
 %patch1067 -p1
 %patch1068 -p1
 %patch1069 -p1
+%patch1070 -p1
+%patch1071 -p1
+%patch1072 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
