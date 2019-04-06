@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.32-base-190402T214319Z
+# quilt.tag:  lts-v4.19.32-base-190405T045553Z
 # config.tag: lts-v4.19.32-base-190402T214319Z
 
 %define ktarget0 iot-lts2018
@@ -1123,6 +1123,10 @@ Patch1069: 1069-drm-i915-Removing-dead_code-from-function-block.patch
 Patch1070: 1070-acrn-fix-used-uninitialized-warning.patch
 Patch1071: 1071-gpio-virtio-frontend-driver.patch
 Patch1072: 1072-add-an-IRQ-chip-to-gpio-virtio-GPIO-chip.patch
+Patch1073: 1073-ASoC-Intel-Skl-Virt-Check-NULL-ptr-on-virual-FE-atta.patch
+Patch1074: 1074-ASoC-Intel-Skl-Virt-Handle-FE-notifications-in-separ.patch
+Patch1075: 1075-ASoC-Intel-Skl-Virt-Increase-reply-timeout-for-PCM-t.patch
+Patch1076: 1076-ASoC-Intel-Skl-Virt-Do-not-update-locked-streams.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2262,6 +2266,10 @@ Linux kernel build files and install script
 %patch1070 -p1
 %patch1071 -p1
 %patch1072 -p1
+%patch1073 -p1
+%patch1074 -p1
+%patch1075 -p1
+%patch1076 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
