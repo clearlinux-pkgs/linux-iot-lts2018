@@ -69,5 +69,5 @@ index e10a64a..7b8e2c7 100644
  	} else if (IS_VALLEYVIEW(dev_priv) || IS_CHERRYVIEW(dev_priv)) {
  		intel_plane->can_scale = false;
 -- 
-2.21.0
+https://clearlinux.org
 

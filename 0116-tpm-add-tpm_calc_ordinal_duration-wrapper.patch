@@ -166,5 +166,5 @@ index 5bb2fb3..5a327eb 100644
  	if (wait_for_tpm_stat(chip, VTPM_STATUS_IDLE, duration,
  			&priv->read_queue, true) < 0) {
 -- 
-2.21.0
+https://clearlinux.org
 

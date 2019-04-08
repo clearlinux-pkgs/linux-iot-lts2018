@@ -493,5 +493,5 @@ index eaa833b..029b098 100644
  /* CPUID leaf 0x3 is used because eVMM will trap this leaf.*/
  #define EVMM_SIGNATURE_CORP 0x43544E49  /* "INTC", edx */
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -66,5 +66,5 @@ index 7f30e8a..18a7c5e 100644
  		ret = snd_soc_dapm_new_pcm(card, rtd, dai_link->params,
  					   dai_link->num_params,
 -- 
-2.21.0
+https://clearlinux.org
 

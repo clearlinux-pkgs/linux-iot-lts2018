@@ -25,5 +25,5 @@ index be5bab2..4c777e1 100644
  static char *block_devnode(struct device *dev, umode_t *mode,
  			   kuid_t *uid, kgid_t *gid)
 -- 
-2.21.0
+https://clearlinux.org
 

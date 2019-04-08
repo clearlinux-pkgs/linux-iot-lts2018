@@ -32,5 +32,5 @@ index 3f3317a..9686aa2 100644
  	if (bank) {
  		mcp_clockctrl_offset = SDW_CNL_MCP_CLOCKCTRL1;
 -- 
-2.21.0
+https://clearlinux.org
 

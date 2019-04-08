@@ -46,5 +46,5 @@ index 40ecca2..58b32db 100644
  		vgpu_vreg_t(vgpu, SFUSE_STRAP) |= SFUSE_STRAP_DDID_DETECTED;
  	}
 -- 
-2.21.0
+https://clearlinux.org
 

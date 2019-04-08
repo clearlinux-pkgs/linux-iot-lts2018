@@ -633,5 +633,5 @@ index e865d2d..cb7929a 100644
  	LSM_HOOK_INIT(sem_semctl, smack_sem_semctl),
  	LSM_HOOK_INIT(sem_semop, smack_sem_semop),
 -- 
-2.21.0
+https://clearlinux.org
 

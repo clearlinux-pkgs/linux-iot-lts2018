@@ -52,5 +52,5 @@ index 335b185..1bd92ba 100644
  		drm_plane_create_color_properties(&primary->base,
  						  BIT(DRM_COLOR_YCBCR_BT601) |
 -- 
-2.21.0
+https://clearlinux.org
 

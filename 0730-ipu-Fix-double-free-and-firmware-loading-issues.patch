@@ -39,5 +39,5 @@ index 0172c19..b235de1 100644
  		*firmware_p = tmp;
  		release_firmware(fw);
 -- 
-2.21.0
+https://clearlinux.org
 

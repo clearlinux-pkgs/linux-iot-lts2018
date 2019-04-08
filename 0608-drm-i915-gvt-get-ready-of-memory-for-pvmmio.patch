@@ -97,5 +97,5 @@ index 878a8a1..4cb3f72 100644
 +	vgpu->mmio.vreg = vgpu->mmio.sreg = vgpu->mmio.shared_page = NULL;
  }
 -- 
-2.21.0
+https://clearlinux.org
 

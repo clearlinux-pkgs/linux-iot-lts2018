@@ -91,5 +91,5 @@ index 192972a..a3b6d07 100644
  	intel_encoder->hpd_pin = intel_hpd_pin_default(dev_priv, port);
  
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -51,5 +51,5 @@ index 6b8c4db..955c952 100644
  alloc_failed:
  	sdw_put_master(mstr);
 -- 
-2.21.0
+https://clearlinux.org
 

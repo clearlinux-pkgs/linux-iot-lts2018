@@ -190,5 +190,5 @@ index c858627..929714a 100644
  	if (execlists->ctrl_reg)
  		writel(EL_CTRL_LOAD, execlists->ctrl_reg);
 -- 
-2.21.0
+https://clearlinux.org
 

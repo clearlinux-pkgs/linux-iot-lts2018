@@ -46,5 +46,5 @@ index 9441a72..c99b2c9 100644
  	ret = skl_register_sdw_masters(dev, cnl, mmio_base, irq, ptr);
  	if (ret) {
 -- 
-2.21.0
+https://clearlinux.org
 

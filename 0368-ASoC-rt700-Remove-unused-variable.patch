@@ -23,5 +23,5 @@ index a654c09..952140d 100644
  	if (rt700->sdw) {
  		ret = sdw_wait_for_slave_enumeration(rt700->sdw->mstr,
 -- 
-2.21.0
+https://clearlinux.org
 

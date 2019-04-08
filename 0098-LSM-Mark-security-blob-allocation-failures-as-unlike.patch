@@ -52,5 +52,5 @@ index c44f5fb..5284159 100644
  
  	rc = call_int_hook(cred_prepare, 0, new, old, gfp);
 -- 
-2.21.0
+https://clearlinux.org
 

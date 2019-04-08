@@ -36,5 +36,5 @@ index 891e248..84acb06 100644
  	/* Playback pipeline */
  	host_cpr_pipe = kzalloc(sizeof(struct skl_pipe), GFP_KERNEL);
 -- 
-2.21.0
+https://clearlinux.org
 

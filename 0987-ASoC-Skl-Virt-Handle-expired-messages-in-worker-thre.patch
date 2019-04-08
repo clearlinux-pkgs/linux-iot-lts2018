@@ -107,5 +107,5 @@ index 1fec990..77ddd7c 100644
  		struct ipc_message *msg);
  	int (*notify_machine_probe)(struct snd_skl_vfe *vfe,
 -- 
-2.21.0
+https://clearlinux.org
 

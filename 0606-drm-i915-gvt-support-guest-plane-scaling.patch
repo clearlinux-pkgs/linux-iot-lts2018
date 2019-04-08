@@ -324,5 +324,5 @@ index 1129168..a4f8d1c 100644
  			 !(1 << (crtc->pipe * SKL_NUM_SCALERS + i) &
  			  dev_priv->vgpu.scaler_owned))
 -- 
-2.21.0
+https://clearlinux.org
 

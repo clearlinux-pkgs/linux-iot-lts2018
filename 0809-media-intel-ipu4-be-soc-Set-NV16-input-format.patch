@@ -27,5 +27,5 @@ index 38fffcf..57d96a2 100644
  	{V4L2_PIX_FMT_YUV420, 12, 0, 8, MEDIA_BUS_FMT_UYVY8_2X8,
  	 IPU_FW_ISYS_FRAME_FORMAT_YUV420},
 -- 
-2.21.0
+https://clearlinux.org
 

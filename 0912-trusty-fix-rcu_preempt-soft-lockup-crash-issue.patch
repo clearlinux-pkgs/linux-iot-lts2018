@@ -153,5 +153,5 @@ index cfef965..679c5a9 100644
  
  int trusty_call_notifier_register(struct device *dev, struct notifier_block *n)
 -- 
-2.21.0
+https://clearlinux.org
 

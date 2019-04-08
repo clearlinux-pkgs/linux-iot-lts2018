@@ -197,5 +197,5 @@ index 93daa92..ff42345 100644
  #define I915_HWS_CSB_WRITE_INDEX	0x1f
  #define CNL_HWS_CSB_WRITE_INDEX		0x2f
 -- 
-2.21.0
+https://clearlinux.org
 

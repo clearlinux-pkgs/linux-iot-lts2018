@@ -553,5 +553,5 @@ index c628be0..d83e48b 100644
  		intel_gvt_wait_vgpu_idle(vgpu);
  		mutex_lock(&vgpu->vgpu_lock);
 -- 
-2.21.0
+https://clearlinux.org
 

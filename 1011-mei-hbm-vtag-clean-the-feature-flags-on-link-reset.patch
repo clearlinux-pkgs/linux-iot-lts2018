@@ -37,5 +37,5 @@ index bf3e530..f996724 100644
  	    (dev->version.major_version == HBM_MAJOR_VERSION_CAP &&
  	     dev->version.minor_version >= HBM_MINOR_VERSION_CAP))
 -- 
-2.21.0
+https://clearlinux.org
 

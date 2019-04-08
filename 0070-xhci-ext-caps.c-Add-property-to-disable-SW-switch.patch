@@ -66,5 +66,5 @@ index 399113f..b4129dd 100644
  
  	ret = platform_device_add(pdev);
 -- 
-2.21.0
+https://clearlinux.org
 

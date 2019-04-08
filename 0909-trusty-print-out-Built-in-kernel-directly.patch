@@ -28,5 +28,5 @@ index 8daf817..cfef965 100644
  	ret = device_create_file(dev, &dev_attr_trusty_version);
  	if (ret)
 -- 
-2.21.0
+https://clearlinux.org
 

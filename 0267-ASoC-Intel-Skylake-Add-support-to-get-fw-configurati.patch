@@ -320,5 +320,5 @@ index c6158d3..b8a1d8b 100644
  	struct skl_pipe_params *params);
  int skl_dsp_set_dma_control(struct skl_sst *ctx, u32 *caps,
 -- 
-2.21.0
+https://clearlinux.org
 

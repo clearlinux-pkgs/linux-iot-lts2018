@@ -62,5 +62,5 @@ index 50f16a0..e2b9c7c 100644
  	/* check if dsp is there */
  	if (bus->ppcap) {
 -- 
-2.21.0
+https://clearlinux.org
 

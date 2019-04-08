@@ -32,5 +32,5 @@ index f306b59..02e63f9 100644
  {
  	uint8_t ack_repl[HEADER_SIZE] = {0, 0, 0};
 -- 
-2.21.0
+https://clearlinux.org
 

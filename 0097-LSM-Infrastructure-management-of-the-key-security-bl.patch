@@ -311,5 +311,5 @@ index cb7929a..f4ecd0a 100644
  	LSM_HOOK_INIT(key_getsecurity, smack_key_getsecurity),
  #endif /* CONFIG_KEYS */
 -- 
-2.21.0
+https://clearlinux.org
 

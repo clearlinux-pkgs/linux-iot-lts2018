@@ -61,5 +61,5 @@ index d1870e0..16e2d41 100644
  
  	MMIO_DH(CUR_BUF_CFG(PIPE_A), D_SKL_PLUS, NULL, NULL);
 -- 
-2.21.0
+https://clearlinux.org
 

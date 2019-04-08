@@ -34,5 +34,5 @@ index 7d23798..507513e 100644
  	if (stream->direction == SND_COMPRESS_CAPTURE) {
  		offset = stream->runtime->total_bytes_transferred %
 -- 
-2.21.0
+https://clearlinux.org
 

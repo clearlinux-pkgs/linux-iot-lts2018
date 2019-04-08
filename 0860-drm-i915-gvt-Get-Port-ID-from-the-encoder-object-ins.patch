@@ -33,5 +33,5 @@ index 700bf9f..afe9eaf 100644
  				type, 0, connector->detect_edid,
  				!gvt_emulate_hdmi);
 -- 
-2.21.0
+https://clearlinux.org
 

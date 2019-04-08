@@ -63,5 +63,5 @@ index c1f6d8b..9c8d923 100644
  	ret = skl_ipc_init(dev, skl);
  	if (ret) {
 -- 
-2.21.0
+https://clearlinux.org
 

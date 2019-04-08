@@ -89,5 +89,5 @@ index ca2c734..20f78b5 100644
  	I915_WRITE(PORT_HDCP_BKSVHI(port), bksv.reg[1]);
  
 -- 
-2.21.0
+https://clearlinux.org
 

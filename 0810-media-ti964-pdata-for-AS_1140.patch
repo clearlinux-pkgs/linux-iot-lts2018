@@ -301,5 +301,5 @@ index e7e6677..8bdbdda 100644
  #if IS_ENABLED(CONFIG_VIDEO_TI960)
  		&ti960_sd,
 -- 
-2.21.0
+https://clearlinux.org
 

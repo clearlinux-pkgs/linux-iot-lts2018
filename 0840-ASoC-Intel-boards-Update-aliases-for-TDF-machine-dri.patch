@@ -41,5 +41,5 @@ index 8e99342..464bbd8 100644
 -MODULE_ALIAS("platform:gpmrb_machine");
 +MODULE_ALIAS("platform:bxt_tdf8532");
 -- 
-2.21.0
+https://clearlinux.org
 

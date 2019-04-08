@@ -53,5 +53,5 @@ index 6f67724..799c61c 100644
  	SEP_DRV_LOG_TRACE("DRV_SETUP_INFO nmi_mode %d.",
  			  DRV_SETUP_INFO_nmi_mode(&req_drv_setup_info));
 -- 
-2.21.0
+https://clearlinux.org
 

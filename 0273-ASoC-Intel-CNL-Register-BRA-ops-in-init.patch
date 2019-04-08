@@ -178,5 +178,5 @@ index 4c7cb27..2bafc7d 100644
  	void (*cleanup)(struct device *dev, struct skl_sst *ctx);
  };
 -- 
-2.21.0
+https://clearlinux.org
 

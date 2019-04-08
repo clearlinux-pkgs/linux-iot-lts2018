@@ -107,5 +107,5 @@ index 3ab2f68..55d25dd 100644
 +#define	SMC_SC_LK_TIMER	SMC_STDCALL_NR(SMC_ENTITY_SMC_X86, 0)
  #endif /* __LINUX_TRUSTY_SMCALL_H */
 -- 
-2.21.0
+https://clearlinux.org
 

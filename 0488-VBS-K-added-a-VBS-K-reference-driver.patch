@@ -660,5 +660,5 @@ index 0000000..ef6f877
 +MODULE_LICENSE("GPL and additional rights");
 +MODULE_DESCRIPTION("Virtio Backend Service reference driver on ACRN hypervisor");
 -- 
-2.21.0
+https://clearlinux.org
 

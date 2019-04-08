@@ -25,5 +25,5 @@ index 33101ef..e45aa53 100644
  	/* Raw bayer formats. */
  	{ ICI_FORMAT_SBGGR12, 16, 12, ICI_FORMAT_SBGGR12, IA_CSS_ISYS_FRAME_FORMAT_RAW16 },
 -- 
-2.21.0
+https://clearlinux.org
 

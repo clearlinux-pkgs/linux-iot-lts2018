@@ -101,5 +101,5 @@ index cf4f632..6c09157 100644
  /* PCI assignment*/
  #define IC_ID_PCI_BASE                  0x50UL
 -- 
-2.21.0
+https://clearlinux.org
 

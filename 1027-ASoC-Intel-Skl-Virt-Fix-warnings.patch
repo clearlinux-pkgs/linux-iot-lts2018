@@ -618,5 +618,5 @@ index fd97e34..b8cb4c1 100644
  	if (!kcontrol) {
  		dev_err(proxy->alloc_dev,
 -- 
-2.21.0
+https://clearlinux.org
 

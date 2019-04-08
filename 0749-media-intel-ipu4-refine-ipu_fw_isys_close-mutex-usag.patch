@@ -51,5 +51,5 @@ index cb6fd04..3704754 100644
  		dev_err(dev, "Device close failure: %d\n", rval);
  
 -- 
-2.21.0
+https://clearlinux.org
 

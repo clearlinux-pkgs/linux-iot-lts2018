@@ -74,5 +74,5 @@ index 504228e..e41a3b3 100644
  	if (!m_cfg->sdw_agg_enable)
  		m_cfg->sdw_stream_num = dma->port->pdi_stream->sdw_pdi_num;
 -- 
-2.21.0
+https://clearlinux.org
 

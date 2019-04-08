@@ -86,5 +86,5 @@ index 66f34ce..01d5451 100644
  void skl_nhlt_free(struct nhlt_acpi_table *addr);
  struct nhlt_specific_cfg *skl_get_ep_blob(struct skl *skl, u32 instance,
 -- 
-2.21.0
+https://clearlinux.org
 

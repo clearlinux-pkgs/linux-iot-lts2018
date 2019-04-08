@@ -26,5 +26,5 @@ index 5d1cbe4..777e7bf 100644
  		/* turn off the links which are off before suspend */
  		list_for_each_entry(hlink, &bus->hlink_list, list) {
 -- 
-2.21.0
+https://clearlinux.org
 

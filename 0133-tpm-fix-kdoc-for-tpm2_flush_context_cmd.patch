@@ -30,5 +30,5 @@ index ae86fb0..ba94dd5 100644
  void tpm2_flush_context_cmd(struct tpm_chip *chip, u32 handle,
  			    unsigned int flags)
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -341,5 +341,5 @@ index 4b18925..6897be8 100644
  
  	pm_runtime_get_noresume(&pci->dev);
 -- 
-2.21.0
+https://clearlinux.org
 

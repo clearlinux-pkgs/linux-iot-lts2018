@@ -96,5 +96,5 @@ index 95eb7a8..c754edb 100644
  		sync_update = cnl_sdw_reg_readl(data->sdw_shim,  SDW_CNL_SYNC);
  		if ((sync_update & CNL_SYNC_SYNCCPU_MASK) == 0)
 -- 
-2.21.0
+https://clearlinux.org
 

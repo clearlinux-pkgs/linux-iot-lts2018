@@ -361,5 +361,5 @@ index 33fdd3f..c04bdbb 100644
  int ufshcd_hold(struct ufs_hba *hba, bool async);
  void ufshcd_release(struct ufs_hba *hba);
 -- 
-2.21.0
+https://clearlinux.org
 

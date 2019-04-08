@@ -58,5 +58,5 @@ index ba129b6..ecd9331 100644
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_CURSOR2, drm_mode_cursor2_ioctl, DRM_MASTER|DRM_UNLOCKED),
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_ATOMIC, drm_mode_atomic_ioctl, DRM_MASTER|DRM_UNLOCKED),
 -- 
-2.21.0
+https://clearlinux.org
 

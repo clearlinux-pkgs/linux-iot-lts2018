@@ -582,5 +582,5 @@ index 7034922..401bcdc 100644
 +void acrn_ioreq_driver_init(void);
  #endif
 -- 
-2.21.0
+https://clearlinux.org
 

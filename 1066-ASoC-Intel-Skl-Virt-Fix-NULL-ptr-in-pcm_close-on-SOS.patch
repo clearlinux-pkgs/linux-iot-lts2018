@@ -73,5 +73,5 @@ index 390d318..d2a0311 100644
  extern int vfe_sst_dsp_init(struct device *dev, void __iomem *mmio_base,
  		int irq, const char *fw_name, struct skl_dsp_loader_ops dsp_ops,
 -- 
-2.21.0
+https://clearlinux.org
 

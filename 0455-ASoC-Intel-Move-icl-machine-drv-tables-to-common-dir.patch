@@ -144,5 +144,5 @@ index f24d759..5c3db44 100644
  };
  MODULE_DEVICE_TABLE(pci, skl_ids);
 -- 
-2.21.0
+https://clearlinux.org
 

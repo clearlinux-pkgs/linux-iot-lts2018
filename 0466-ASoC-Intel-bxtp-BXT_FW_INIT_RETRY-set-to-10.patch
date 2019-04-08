@@ -23,5 +23,5 @@ index cd7fbab..cde519d 100644
  #define GET_SSP_BASE(N)	(N > 4 ? 0x2000 : 0x4000)
  
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -342,5 +342,5 @@ index 0000000..78fb9cc
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:cnl_cs42l42");
 -- 
-2.21.0
+https://clearlinux.org
 

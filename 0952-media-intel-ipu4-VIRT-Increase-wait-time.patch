@@ -42,5 +42,5 @@ index 5a02b82..517b48d 100644
  struct ipu4_virtio_uos {
  	struct virtqueue *vq[IPU_VIRTIO_QUEUE_MAX];
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -65,5 +65,5 @@ index fef1758..6964ab3 100644
  #define V4L2_PIX_FMT_HSV24 v4l2_fourcc('H', 'S', 'V', '3')
  #define V4L2_PIX_FMT_HSV32 v4l2_fourcc('H', 'S', 'V', '4')
 -- 
-2.21.0
+https://clearlinux.org
 

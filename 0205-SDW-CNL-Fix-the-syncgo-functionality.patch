@@ -72,5 +72,5 @@ index c994338..8e9d68c 100644
  #define CNL_SYNC_SYNCPRD_MASK			0x7FFF
  #define CNL_SYNC_SYNCPRD_SHIFT			0x0
 -- 
-2.21.0
+https://clearlinux.org
 

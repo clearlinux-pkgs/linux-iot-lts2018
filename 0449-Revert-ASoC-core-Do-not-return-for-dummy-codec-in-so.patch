@@ -41,5 +41,5 @@ index d0a5af6..18a7c5e 100644
  		if (component->card != card) {
  			dev_err(component->dev,
 -- 
-2.21.0
+https://clearlinux.org
 

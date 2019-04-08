@@ -43,5 +43,5 @@ index 813cd73..ea7bec1 100644
  	sst_dsp_shim_write(ctx, CNL_ADSP_REG_HIPCIDR,
  			   CNL_ADSP_REG_HIPCIDR_BUSY | (CNL_IPC_PURGE |
 -- 
-2.21.0
+https://clearlinux.org
 

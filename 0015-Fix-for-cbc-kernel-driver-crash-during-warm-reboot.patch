@@ -121,5 +121,5 @@ index 0e74183..2c8c1cf 100644
  		pr_err("cbc-core: (<- IOC) dev_receive data is null\n");
  	}
 -- 
-2.21.0
+https://clearlinux.org
 

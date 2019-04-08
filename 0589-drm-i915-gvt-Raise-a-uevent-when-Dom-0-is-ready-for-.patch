@@ -117,5 +117,5 @@ index 5bd3c1f..cf60488 100644
  
  	drm_helper_move_panel_connectors_to_head(&dev_priv->drm);
 -- 
-2.21.0
+https://clearlinux.org
 

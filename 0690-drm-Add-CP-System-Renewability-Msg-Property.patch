@@ -126,5 +126,5 @@ index 9fd96c9..dc5f4d2 100644
  int drm_mode_create_content_type_property(struct drm_device *dev);
  void drm_hdmi_avi_infoframe_content_type(struct hdmi_avi_infoframe *frame,
 -- 
-2.21.0
+https://clearlinux.org
 

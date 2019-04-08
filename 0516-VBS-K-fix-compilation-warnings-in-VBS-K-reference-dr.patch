@@ -116,5 +116,5 @@ index cdfed63..88f6108 100644
  static const struct file_operations vbs_rng_fops = {
  	.owner          = THIS_MODULE,
 -- 
-2.21.0
+https://clearlinux.org
 

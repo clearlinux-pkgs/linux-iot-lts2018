@@ -229,5 +229,5 @@ index 1f14f7f..8d6e8af 100644
  	trusty_irq_handler_data = alloc_percpu(struct trusty_irq);
  	if (!trusty_irq_handler_data)
 -- 
-2.21.0
+https://clearlinux.org
 

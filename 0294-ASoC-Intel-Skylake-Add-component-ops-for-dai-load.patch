@@ -32,5 +32,5 @@ index b8a1d8b..d17809b 100644
 +		 struct snd_soc_dai_driver *pcm_dai);
  #endif
 -- 
-2.21.0
+https://clearlinux.org
 

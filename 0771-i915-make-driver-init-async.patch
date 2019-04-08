@@ -32,5 +32,5 @@ index 1df3ce1..fcf5e3f 100644
  
  static int __init i915_init(void)
 -- 
-2.21.0
+https://clearlinux.org
 

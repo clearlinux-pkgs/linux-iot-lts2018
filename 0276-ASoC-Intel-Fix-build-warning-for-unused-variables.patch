@@ -133,5 +133,5 @@ index 429e15a..a70d87e 100644
  	/* Turned OFF in HDMI codec driver after codec reconfiguration */
  	if (IS_ENABLED(CONFIG_SND_SOC_HDAC_HDMI)) {
 -- 
-2.21.0
+https://clearlinux.org
 

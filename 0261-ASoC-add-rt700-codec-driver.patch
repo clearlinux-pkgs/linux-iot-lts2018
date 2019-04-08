@@ -55870,5 +55870,5 @@ index 0000000..3ad8b84
 +int rt700_jack_detect(struct rt700_priv *rt700, bool *hp, bool *mic);
 +#endif /* __RT700_H__ */
 -- 
-2.21.0
+https://clearlinux.org
 

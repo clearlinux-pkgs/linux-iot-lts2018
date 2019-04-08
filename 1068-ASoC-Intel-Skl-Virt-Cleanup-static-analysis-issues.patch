@@ -186,5 +186,5 @@ index 17d5e3d..c9475a0 100644
  	ret = vfe_send_msg(vfe, &msg_header, &dma_conf, sizeof(dma_conf),
  		&vbe_result, sizeof(vbe_result));
 -- 
-2.21.0
+https://clearlinux.org
 

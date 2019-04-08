@@ -236,5 +236,5 @@ index 384f1b6..96232c4 100644
  void mei_dmam_ring_free(struct mei_device *dev);
  bool mei_dma_ring_is_allocated(struct mei_device *dev);
 -- 
-2.21.0
+https://clearlinux.org
 

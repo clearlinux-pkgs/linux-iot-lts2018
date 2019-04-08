@@ -78,5 +78,5 @@ index 7ac209d..265992e 100644
  	/* Currently adding 1 playback and 1 capture pin, ideally it
  	 * should be coming from CLT based on endpoints to be supported
 -- 
-2.21.0
+https://clearlinux.org
 

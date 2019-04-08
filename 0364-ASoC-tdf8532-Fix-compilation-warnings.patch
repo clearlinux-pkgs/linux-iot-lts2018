@@ -46,5 +46,5 @@ index 7a3cca0..e723ffe 100644
  	dev_data->pkt_id = 0;
  	dev_data->channels = 4;
 -- 
-2.21.0
+https://clearlinux.org
 

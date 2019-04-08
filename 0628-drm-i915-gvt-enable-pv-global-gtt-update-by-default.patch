@@ -28,5 +28,5 @@ index 28769e6..40aee5b 100644
  
  #define MEMBER(T, member, ...) T member;
 -- 
-2.21.0
+https://clearlinux.org
 

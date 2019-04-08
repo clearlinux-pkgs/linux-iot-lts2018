@@ -285,5 +285,5 @@ index 10a4869..a8de8cf 100644
  void skl_ipc_op_int_enable(struct sst_dsp *ctx);
  void skl_ipc_op_int_disable(struct sst_dsp *ctx);
 -- 
-2.21.0
+https://clearlinux.org
 

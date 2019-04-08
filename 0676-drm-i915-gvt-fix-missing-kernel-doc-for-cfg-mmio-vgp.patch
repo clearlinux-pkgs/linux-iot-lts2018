@@ -171,5 +171,5 @@ index 511681b..5411b40 100644
  int intel_gvt_init_vgpu_types(struct intel_gvt *gvt)
  {
 -- 
-2.21.0
+https://clearlinux.org
 

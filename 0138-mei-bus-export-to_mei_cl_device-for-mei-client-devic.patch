@@ -40,5 +40,5 @@ index 7fde40e..03b6ba2 100644
  	struct device_driver driver;
  	const char *name;
 -- 
-2.21.0
+https://clearlinux.org
 

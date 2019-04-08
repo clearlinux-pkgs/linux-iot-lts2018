@@ -31,5 +31,5 @@ index 64e1b61..53bc383 100644
  	if (plane_id == 1 && fb->format->format != DRM_FORMAT_NV12) {
  		DRM_DEBUG_KMS("Non NV12 format have single plane\n");
 -- 
-2.21.0
+https://clearlinux.org
 

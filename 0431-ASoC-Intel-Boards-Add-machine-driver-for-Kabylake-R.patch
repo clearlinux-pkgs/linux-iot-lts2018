@@ -615,5 +615,5 @@ index 0000000..1007e02
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:kblr_alc298s_i2s");
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -48,5 +48,5 @@ index 4b434dc..ebfe741 100644
  		.codec_name = "dmic-codec",
  		.codec_dai_name = "dmic-hifi",
 -- 
-2.21.0
+https://clearlinux.org
 

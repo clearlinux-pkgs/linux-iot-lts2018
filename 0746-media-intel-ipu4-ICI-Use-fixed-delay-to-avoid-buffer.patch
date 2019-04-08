@@ -46,5 +46,5 @@ index 3fed154..33101ef 100644
  	if (!rval)
  		isys->fwcom = NULL; /* No further actions needed */
 -- 
-2.21.0
+https://clearlinux.org
 

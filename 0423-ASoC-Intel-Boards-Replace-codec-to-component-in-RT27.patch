@@ -37,5 +37,5 @@ index 5570474..890e474 100644
  	/* TDM 4 slots 24 bit, set Rx & Tx bitmask to 4 active slots */
  	ret = snd_soc_dai_set_tdm_slot(codec_dai, 0xF, 0xF, 4, 24);
 -- 
-2.21.0
+https://clearlinux.org
 

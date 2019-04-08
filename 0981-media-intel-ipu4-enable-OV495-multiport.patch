@@ -642,5 +642,5 @@ index 60e134f..fe655c2 100644
  #define NR_OF_TI960_GPIOS	\
  	(NR_OF_TI960_SINK_PADS * NR_OF_GPIOS_PER_PORT)
 -- 
-2.21.0
+https://clearlinux.org
 

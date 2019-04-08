@@ -122,5 +122,5 @@ index 62aa320..7f30e8a 100644
   * snd_soc_dai_set_channel_map - configure DAI audio channel map
   * @dai: DAI
 -- 
-2.21.0
+https://clearlinux.org
 

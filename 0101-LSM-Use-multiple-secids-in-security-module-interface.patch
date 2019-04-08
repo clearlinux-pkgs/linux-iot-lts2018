@@ -1486,5 +1486,5 @@ index 9d2dde6..0a075c8 100644
  				&skp->smk_netlabel, strlen(skp->smk_known));
  }
 -- 
-2.21.0
+https://clearlinux.org
 

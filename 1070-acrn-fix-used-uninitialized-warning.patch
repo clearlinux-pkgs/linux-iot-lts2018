@@ -41,5 +41,5 @@ index 852c8b0..010acb9 100644
  	if (!ret)
  		pcpu_num = hw_info.cpu_num;
 -- 
-2.21.0
+https://clearlinux.org
 

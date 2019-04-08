@@ -149,5 +149,5 @@ index 2041e33..587fcac 100644
  	/* Userspace has been fiddling around behind the kernel's back */
  	add_taint(TAINT_USER, LOCKDEP_NOW_UNRELIABLE);
 -- 
-2.21.0
+https://clearlinux.org
 

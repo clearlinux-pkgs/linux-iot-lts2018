@@ -39,5 +39,5 @@ index d9d9062..ca8e74a 100644
   * Bug workaround - some TPM's don't flush the most
   * recently changed pcr on suspend, so force the flush
 -- 
-2.21.0
+https://clearlinux.org
 

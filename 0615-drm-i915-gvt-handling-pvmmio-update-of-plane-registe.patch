@@ -101,5 +101,5 @@ index 14a75c6..afa15c0 100644
  	vgpu_vreg_t(vgpu, reg_1ac) = vgpu_vreg(vgpu, offset);
  
 -- 
-2.21.0
+https://clearlinux.org
 

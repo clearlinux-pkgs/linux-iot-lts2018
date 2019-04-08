@@ -55,5 +55,5 @@ index b724c9e..8590d69 100644
  	if (hcall_get_api_version(virt_to_phys(&api_version)) < 0) {
  		pr_err("vhm: failed to get api version from Hypervisor !\n");
 -- 
-2.21.0
+https://clearlinux.org
 

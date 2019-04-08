@@ -90,5 +90,5 @@ index 2abb089..44730c2 100644
  static int skl_tplg_find_moduleid_from_uuid(struct skl *skl,
  					const struct snd_kcontrol_new *k)
 -- 
-2.21.0
+https://clearlinux.org
 

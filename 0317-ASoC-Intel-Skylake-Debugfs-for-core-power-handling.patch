@@ -130,5 +130,5 @@ index 5cc274a..2041e33 100644
  	d->nhlt =  debugfs_create_dir("nhlt", d->fs);
  	if (IS_ERR(d->nhlt) || !d->nhlt) {
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -32,5 +32,5 @@ index daa3b37..8f897fd 100644
  	/* check 1st module entry is in file */
  	safe_file += adsp_hdr->len + sizeof(*mod_entry);
 -- 
-2.21.0
+https://clearlinux.org
 

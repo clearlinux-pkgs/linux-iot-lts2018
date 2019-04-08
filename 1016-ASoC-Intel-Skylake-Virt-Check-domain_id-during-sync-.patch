@@ -417,5 +417,5 @@ index 0128371..c57ab91 100644
  		ret = kcontrol->put(kcontrol->kcontrol, &kcontrol_val->value);
  
 -- 
-2.21.0
+https://clearlinux.org
 

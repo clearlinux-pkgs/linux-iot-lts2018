@@ -294,5 +294,5 @@ index 773e77b..400f7bb 100644
  	pm_runtime_put_sync_autosuspend(&rt700->sdw->mstr->dev);
  
 -- 
-2.21.0
+https://clearlinux.org
 

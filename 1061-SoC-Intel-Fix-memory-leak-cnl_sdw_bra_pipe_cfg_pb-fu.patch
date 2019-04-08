@@ -45,5 +45,5 @@ index 9f70a4f..719725f 100644
  	link_cpr_cfg->module->resources[0].cps = 100000;
  	link_cpr_cfg->module->resources[0].is_pages = 0;
 -- 
-2.21.0
+https://clearlinux.org
 

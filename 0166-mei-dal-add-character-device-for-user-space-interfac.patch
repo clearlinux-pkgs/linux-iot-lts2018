@@ -389,5 +389,5 @@ index 607c63c..ccdf973 100644
  	class_destroy(dal_class);
  	return ret;
 -- 
-2.21.0
+https://clearlinux.org
 

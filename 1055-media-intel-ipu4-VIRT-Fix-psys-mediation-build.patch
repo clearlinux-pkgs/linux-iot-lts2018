@@ -34,5 +34,5 @@ index fb23912..9e8a406 100644
  intel-ipu4-psys-objs	+= ipu4-fw-resources.o \
  			../ipu-fw-psys.o
 -- 
-2.21.0
+https://clearlinux.org
 

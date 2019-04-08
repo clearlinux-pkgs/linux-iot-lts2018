@@ -197,5 +197,5 @@ index 30d3b9b..8479610 100644
  	struct mutex mutex;	/* Serialise isys video open/release related */
  	struct mutex stream_mutex;	/* Stream start, stop, queueing reqs */
 -- 
-2.21.0
+https://clearlinux.org
 

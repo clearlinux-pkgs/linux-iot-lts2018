@@ -35,5 +35,5 @@ index 9b78fb3..8dbf368 100644
  			ret = sink->driver->ops->startup(&substream, sink);
  			if (ret < 0) {
 -- 
-2.21.0
+https://clearlinux.org
 

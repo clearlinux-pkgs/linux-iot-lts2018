@@ -365,5 +365,5 @@ index 3ad8b84..bcfb863 100644
  int hda_to_sdw(unsigned int nid, unsigned int verb, unsigned int payload,
  		unsigned int *sdw_addr_h, unsigned int *sdw_data_h,
 -- 
-2.21.0
+https://clearlinux.org
 

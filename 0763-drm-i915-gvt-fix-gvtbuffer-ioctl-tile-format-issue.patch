@@ -41,5 +41,5 @@ index fb1ced0..c345996 100644
  		ret = intel_vgpu_decode_cursor_plane(vgpu, &c);
  		if (ret)
 -- 
-2.21.0
+https://clearlinux.org
 

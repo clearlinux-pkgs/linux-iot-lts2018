@@ -334,5 +334,5 @@ index 0000000..312c043
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:cnl_svfpga");
 -- 
-2.21.0
+https://clearlinux.org
 

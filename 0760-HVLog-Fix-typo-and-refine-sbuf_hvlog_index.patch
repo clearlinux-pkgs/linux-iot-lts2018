@@ -122,5 +122,5 @@ index 6d27b79..84e04ee 100644
  		foreach_cpu(pcpu_id, PCPU_NRS) {
  			sbuf_share_setup(pcpu_id, ACRN_HVLOG, 0);
 -- 
-2.21.0
+https://clearlinux.org
 

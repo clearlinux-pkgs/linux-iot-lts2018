@@ -125,5 +125,5 @@ index 5041f5a..33acc64 100644
  inline long hcall_get_cpu_state(unsigned long cmd, unsigned long state_pa);
  inline long hcall_set_memory_regions(unsigned long pa_regions);
 -- 
-2.21.0
+https://clearlinux.org
 

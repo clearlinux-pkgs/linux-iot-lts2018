@@ -66,5 +66,5 @@ index 9864801..36c22c5 100644
  	size = sst->trace_wind.size/sst->trace_wind.nr_dsp;
  	base = (u8 *)sst->trace_wind.addr;
 -- 
-2.21.0
+https://clearlinux.org
 

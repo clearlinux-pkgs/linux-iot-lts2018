@@ -52,5 +52,5 @@ index 6949924..179957d 100644
  	struct acpi_sstate_pkg s5_pkg;
  	uint32_t *wake_vector_32;
 -- 
-2.21.0
+https://clearlinux.org
 

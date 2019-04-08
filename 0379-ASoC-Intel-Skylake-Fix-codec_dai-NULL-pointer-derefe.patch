@@ -33,5 +33,5 @@ index 07a876f..5570474 100644
  	/* Codec needs clock for Jack detection and button press */
  	ret = snd_soc_dai_set_sysclk(codec_dai, RT274_SCLK_S_PLL2,
 -- 
-2.21.0
+https://clearlinux.org
 

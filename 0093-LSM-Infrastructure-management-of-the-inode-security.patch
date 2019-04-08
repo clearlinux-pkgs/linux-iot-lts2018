@@ -407,5 +407,5 @@ index 633b4b8..4beec2f 100644
  	LSM_HOOK_INIT(inode_link, smack_inode_link),
  	LSM_HOOK_INIT(inode_unlink, smack_inode_unlink),
 -- 
-2.21.0
+https://clearlinux.org
 

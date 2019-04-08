@@ -1939,5 +1939,5 @@ index ce0b18a..6ad6320 100644
  	const char *id_string;
  	char suffix; /* suffix to identify multi sensors, abcd.. */
 -- 
-2.21.0
+https://clearlinux.org
 

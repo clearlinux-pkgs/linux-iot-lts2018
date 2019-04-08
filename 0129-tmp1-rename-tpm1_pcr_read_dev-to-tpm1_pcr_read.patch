@@ -81,5 +81,5 @@ index d30f336..05b7724 100644
  		/* Some buggy TPMs will not respond to tpm_tis_ready() for
  		 * around 300ms while the self test is ongoing, keep trying
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -27,5 +27,5 @@ index 1926bf4..0a33945 100644
  	.crl_threaded_irq_fn = crl_adv7481_threaded_irq_fn,
  
 -- 
-2.21.0
+https://clearlinux.org
 

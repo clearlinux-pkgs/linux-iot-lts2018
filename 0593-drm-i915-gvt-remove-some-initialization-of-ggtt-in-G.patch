@@ -57,5 +57,5 @@ index 87411a5..9f003dd 100644
  	if (USES_PPGTT(dev_priv) && !USES_FULL_PPGTT(dev_priv)) {
  		ret = i915_gem_init_aliasing_ppgtt(dev_priv);
 -- 
-2.21.0
+https://clearlinux.org
 

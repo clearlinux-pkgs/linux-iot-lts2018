@@ -109,5 +109,5 @@ index ab1314a..7166ef9 100644
  		struct snd_soc_dai *dai);
  int cnl_sdw_hw_params(struct snd_pcm_substream *substream,
 -- 
-2.21.0
+https://clearlinux.org
 

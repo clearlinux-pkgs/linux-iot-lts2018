@@ -308,5 +308,5 @@ index 0000000..06304de
 +void skl_dsp_done_log_buffer(struct sst_dsp *sst, int core);
 +#endif /* __SKL_FWLOG_H__ */
 -- 
-2.21.0
+https://clearlinux.org
 

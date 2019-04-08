@@ -104,5 +104,5 @@ index 2e43803..1160890 100644
  /* TRUSTED_OS entity calls */
  #define SMC_SC_VIRTIO_GET_DESCR	SMC_STDCALL_NR(SMC_ENTITY_TRUSTED_OS, 20)
 -- 
-2.21.0
+https://clearlinux.org
 

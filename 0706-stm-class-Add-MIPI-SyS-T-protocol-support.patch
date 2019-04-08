@@ -373,5 +373,5 @@ index 0000000..ffeb057
 +MODULE_DESCRIPTION("MIPI SyS-T STM framing protocol driver");
 +MODULE_AUTHOR("Alexander Shishkin <alexander.shishkin@linux.intel.com>");
 -- 
-2.21.0
+https://clearlinux.org
 

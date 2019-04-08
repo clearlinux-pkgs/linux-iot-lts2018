@@ -566,5 +566,5 @@ index d1b2740..b037b0d 100644
  static const struct pci_device_id skl_ids[] = {
  	/* Sunrise Point-LP */
 -- 
-2.21.0
+https://clearlinux.org
 

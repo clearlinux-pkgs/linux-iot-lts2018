@@ -261,5 +261,5 @@ index a307832..bf50bb4 100644
  			arizona->irq, ret);
  		goto err_main_irq;
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -58,5 +58,5 @@ index 5af949d..b3cfcae 100644
  
  extern int intel_vgpu_init_gtt(struct intel_vgpu *vgpu);
 -- 
-2.21.0
+https://clearlinux.org
 

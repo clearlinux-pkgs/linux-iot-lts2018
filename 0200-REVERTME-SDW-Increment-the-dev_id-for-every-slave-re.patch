@@ -38,5 +38,5 @@ index 6a1ff5e..71f1532 100644
  program_slv_failed:
  	device_unregister(&sdw_slv->dev);
 -- 
-2.21.0
+https://clearlinux.org
 

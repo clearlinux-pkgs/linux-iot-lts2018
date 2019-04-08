@@ -31,5 +31,5 @@ index 284e34f..d462b1b 100644
  		dev_err(sst->dev, "Buffer size must be a power of 2\n");
  		return -EINVAL;
 -- 
-2.21.0
+https://clearlinux.org
 

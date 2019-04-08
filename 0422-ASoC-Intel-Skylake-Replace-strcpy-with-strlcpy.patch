@@ -25,5 +25,5 @@ index 1bee574..bda9464 100644
  	if (!m_cap) {
  		dev_err(dev, "SoundWire controller mapping failed...\n");
 -- 
-2.21.0
+https://clearlinux.org
 

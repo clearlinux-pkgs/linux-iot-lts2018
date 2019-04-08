@@ -222,5 +222,5 @@ index 0bc7796..132817c 100644
  
  int security_cred_alloc_blank(struct cred *cred, gfp_t gfp)
 -- 
-2.21.0
+https://clearlinux.org
 

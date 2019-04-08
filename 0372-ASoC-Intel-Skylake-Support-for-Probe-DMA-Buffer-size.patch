@@ -112,5 +112,5 @@ index bf93980..7a7f19c 100644
  		ret = skl_set_module_params(ctx, (void *)&ad,
  					sizeof(struct skl_probe_attach_inj_dma),
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -1019,5 +1019,5 @@ index 0c6b5c6..02256d7 100644
  			u32 param_id, struct skl_module_cfg *mcfg);
  int skl_get_module_params(struct skl_sst *ctx, u32 *params, int size,
 -- 
-2.21.0
+https://clearlinux.org
 

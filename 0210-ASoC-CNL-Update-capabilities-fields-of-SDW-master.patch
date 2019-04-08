@@ -28,5 +28,5 @@ index 0caf9bf..f70d70d 100644
  		m_cap->num_data_ports = CNL_SDW_MAX_PORTS;
  		dp0_cap->max_word_length = 32;
 -- 
-2.21.0
+https://clearlinux.org
 

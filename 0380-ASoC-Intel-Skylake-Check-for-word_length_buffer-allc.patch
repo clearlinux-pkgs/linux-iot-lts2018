@@ -32,5 +32,5 @@ index c99b2c9..813cd73 100644
  				dpn_cap->word_length_buffer[k] = wl = wl + 8;
  			wl = 0;
 -- 
-2.21.0
+https://clearlinux.org
 

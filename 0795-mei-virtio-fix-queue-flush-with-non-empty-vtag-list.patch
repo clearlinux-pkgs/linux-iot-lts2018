@@ -29,5 +29,5 @@ index 86d81cb..e253905 100644
  	mei_cl_flush_queues(cl, NULL);
  	cl_dbg(dev, cl, "removing\n");
 -- 
-2.21.0
+https://clearlinux.org
 

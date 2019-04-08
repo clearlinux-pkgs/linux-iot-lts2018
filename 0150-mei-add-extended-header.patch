@@ -364,5 +364,5 @@ index 6a815a1..5f033b7 100644
  ssize_t mei_fw_status2str(struct mei_fw_status *fw_sts, char *buf, size_t len);
  /**
 -- 
-2.21.0
+https://clearlinux.org
 

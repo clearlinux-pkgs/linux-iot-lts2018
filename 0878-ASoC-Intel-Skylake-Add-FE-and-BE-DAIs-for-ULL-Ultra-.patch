@@ -189,5 +189,5 @@ index 4cf1c29..9a2fffa 100644
  	.name = "iDisp1 Pin",
  	.ops = &skl_link_dai_ops,
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -398,5 +398,5 @@ index d4f7ce6..d05c551 100644
  #define GFX_MODE_BIT_SET_IN_MASK(val, bit) \
  		((((bit) & 0xffff0000) == 0) && !!((val) & (((bit) << 16))))
 -- 
-2.21.0
+https://clearlinux.org
 

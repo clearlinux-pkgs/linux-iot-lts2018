@@ -139,5 +139,5 @@ index 4b8e09e..5656d0b 100644
  
  	int (*send_dsp_ipc_msg)(struct snd_skl_vfe *vfe,
 -- 
-2.21.0
+https://clearlinux.org
 

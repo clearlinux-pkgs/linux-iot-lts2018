@@ -94,5 +94,5 @@ index 9e4a0b2..511681b 100644
  	intel_vgpu_dmabuf_cleanup(vgpu);
  	mutex_unlock(&vgpu->vgpu_lock);
 -- 
-2.21.0
+https://clearlinux.org
 

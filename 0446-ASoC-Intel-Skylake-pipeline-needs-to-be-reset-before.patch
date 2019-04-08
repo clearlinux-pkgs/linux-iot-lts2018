@@ -64,5 +64,5 @@ index bc8d3af..c01875a 100644
  	ret = skl_ipc_delete_pipeline(&ctx->ipc, pipe->ppl_id);
  	if (ret < 0) {
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -75,5 +75,5 @@ index 7ea1d57..9695410 100644
  	rval = ti960_map_subdevs_addr(va);
  	if (rval)
 -- 
-2.21.0
+https://clearlinux.org
 

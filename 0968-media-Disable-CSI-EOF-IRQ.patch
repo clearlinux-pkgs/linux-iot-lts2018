@@ -28,5 +28,5 @@ index d3815d3..d149354 100644
  		} else {
  			v4l2_subdev_call(esd, video, s_stream, state);
 -- 
-2.21.0
+https://clearlinux.org
 

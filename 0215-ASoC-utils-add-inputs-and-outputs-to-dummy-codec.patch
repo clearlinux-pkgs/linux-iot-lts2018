@@ -76,5 +76,5 @@ index e0c9349..8503a36 100644
  		.channels_max	= 384,
  		.rates = STUB_RATES,
 -- 
-2.21.0
+https://clearlinux.org
 

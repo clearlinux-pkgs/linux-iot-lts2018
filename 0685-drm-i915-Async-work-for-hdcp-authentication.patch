@@ -114,5 +114,5 @@ index 0cc6a86..ea938b9 100644
  
  int intel_hdcp_disable(struct intel_connector *connector)
 -- 
-2.21.0
+https://clearlinux.org
 

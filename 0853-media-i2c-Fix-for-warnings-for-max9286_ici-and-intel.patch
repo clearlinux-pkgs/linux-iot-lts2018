@@ -92,5 +92,5 @@ index df0c961..19aef79 100644
  #define TI964_I2C_ADAPTER_2	4
  #define TI964_I2C_ADDRESS	0x3d
 -- 
-2.21.0
+https://clearlinux.org
 

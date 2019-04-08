@@ -357,5 +357,5 @@ index 0b63915..7284291 100644
  	LSM_HOOK_INIT(file_lock, smack_file_lock),
  	LSM_HOOK_INIT(file_fcntl, smack_file_fcntl),
 -- 
-2.21.0
+https://clearlinux.org
 

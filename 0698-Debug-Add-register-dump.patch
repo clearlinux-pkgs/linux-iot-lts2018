@@ -64,5 +64,5 @@ index 04adc8d..9bbeec5 100644
  	disable_local_APIC();
  	mcheck_cpu_clear(this_cpu_ptr(&cpu_info));
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -48,5 +48,5 @@ index 1b788f8..20058f9 100644
  MODULE_ALIAS("platform:cnl_rt274");
 +MODULE_ALIAS("platform:icl_rt274");
 -- 
-2.21.0
+https://clearlinux.org
 

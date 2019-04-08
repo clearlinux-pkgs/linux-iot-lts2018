@@ -301,5 +301,5 @@ index 6f91634..7923f71 100644
  			DRM_DEBUG_KMS("pipe %c not active or no fb, skipping\n",
  				      pipe_name(intel_crtc->pipe));
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -377,5 +377,5 @@ index f17eb29..8f5831d 100644
  #define DRM_HDCP_MAX_DEVICE_EXCEEDED(x)		(x & BIT(7))
  
 -- 
-2.21.0
+https://clearlinux.org
 

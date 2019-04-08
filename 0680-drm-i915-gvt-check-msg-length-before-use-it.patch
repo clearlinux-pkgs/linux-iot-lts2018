@@ -39,5 +39,5 @@ index fb690a4..c4bf480 100644
  		intel_dp_unpack_aux(vgpu_vreg(vgpu, offset + 4 + rxsize),
  				rxbuf + rxsize, msg_length - rxsize);
 -- 
-2.21.0
+https://clearlinux.org
 

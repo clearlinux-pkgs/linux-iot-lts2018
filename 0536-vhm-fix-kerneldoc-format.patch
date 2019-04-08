@@ -68,5 +68,5 @@ index b5f6ca1..e89b78c 100644
   * @refcnt: reference count of guest
   * @seg_lock:  mutex to protect memseg_list
 -- 
-2.21.0
+https://clearlinux.org
 

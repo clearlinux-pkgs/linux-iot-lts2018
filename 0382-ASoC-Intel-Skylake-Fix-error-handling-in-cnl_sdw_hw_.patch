@@ -110,5 +110,5 @@ index 955c952..fb3186a 100644
  
  int cnl_sdw_hw_free(struct snd_pcm_substream *substream,
 -- 
-2.21.0
+https://clearlinux.org
 

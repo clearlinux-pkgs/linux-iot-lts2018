@@ -31,5 +31,5 @@ index 068d320..c68b63f 100644
 -ccflags-y += $(IPU_PSYSLIB_INC) $(HOST_DEFINES) -fno-common -v
 +ccflags-y += $(IPU_PSYSLIB_INC) $(HOST_DEFINES) -fno-common
 -- 
-2.21.0
+https://clearlinux.org
 

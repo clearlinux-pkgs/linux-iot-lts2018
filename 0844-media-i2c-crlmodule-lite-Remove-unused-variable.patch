@@ -26,5 +26,5 @@ index efc0015..bd04ae9 100644
  	struct crl_subdev *prev_sd = NULL;
  	int i = 0;
 -- 
-2.21.0
+https://clearlinux.org
 

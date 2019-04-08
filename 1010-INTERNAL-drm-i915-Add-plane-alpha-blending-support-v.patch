@@ -200,5 +200,5 @@ index 2c0cc89..8a013f1 100644
  	I915_WRITE_FW(PLANE_STRIDE(pipe, plane_id), stride);
  	I915_WRITE_FW(PLANE_SIZE(pipe, plane_id), (src_h << 16) | src_w);
 -- 
-2.21.0
+https://clearlinux.org
 

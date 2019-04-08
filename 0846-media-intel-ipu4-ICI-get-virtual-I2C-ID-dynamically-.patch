@@ -74,5 +74,5 @@ index 848fac9..500491e 100644
  		dev_info(&isys->adev->dev, "sensor device on CSI port: %d\n",
  			sd_info->csi2->port);
 -- 
-2.21.0
+https://clearlinux.org
 

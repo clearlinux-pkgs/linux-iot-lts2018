@@ -209,5 +209,5 @@ index 44e4109..5998e69 100644
 +			 struct snd_ctl_elem_value *ucontrol);
  #endif
 -- 
-2.21.0
+https://clearlinux.org
 

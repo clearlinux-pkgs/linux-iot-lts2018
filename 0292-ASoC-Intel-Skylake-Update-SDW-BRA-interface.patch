@@ -343,5 +343,5 @@ index dde1aeb..495f82f 100644
  	if (!host_cpr_cfg.m_out_pin) {
  		ret =  -ENOMEM;
 -- 
-2.21.0
+https://clearlinux.org
 

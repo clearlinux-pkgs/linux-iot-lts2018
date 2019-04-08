@@ -207,5 +207,5 @@ index 01c846b..d16579b 100644
  		struct sdw_bra_block *block);
  	int (*monitor_handover)(struct sdw_master *mstr,
 -- 
-2.21.0
+https://clearlinux.org
 

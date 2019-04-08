@@ -109,5 +109,5 @@ index 02e63f9..da820c5 100644
  
  static const struct snd_soc_dai_ops tdf8532_dai_ops = {
 -- 
-2.21.0
+https://clearlinux.org
 

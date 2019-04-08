@@ -73,5 +73,5 @@ index 700fb62..cb903a5 100644
  			else
  				reg |= DWC3_DCFG_SUPERSPEED;
 -- 
-2.21.0
+https://clearlinux.org
 

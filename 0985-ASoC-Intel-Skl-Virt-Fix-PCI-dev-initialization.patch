@@ -145,5 +145,5 @@ index 2985c87..8b27ebb 100644
  	cancel_work_sync(&vfe->posn_update_work);
  	vfe_machine_device_unregister(&vfe->sdev);
 -- 
-2.21.0
+https://clearlinux.org
 

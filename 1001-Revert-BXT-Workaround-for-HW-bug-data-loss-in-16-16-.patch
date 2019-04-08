@@ -149,5 +149,5 @@ index 1b83a88..67d6721 100644
  	snd_hdac_stream_writew(azx_dev, SD_LVI, azx_dev->frags - 1);
  
 -- 
-2.21.0
+https://clearlinux.org
 

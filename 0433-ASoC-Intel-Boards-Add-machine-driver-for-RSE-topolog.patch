@@ -422,5 +422,5 @@ index 0000000..25917c4
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:bxt_ivi_rse_i2s");
 -- 
-2.21.0
+https://clearlinux.org
 

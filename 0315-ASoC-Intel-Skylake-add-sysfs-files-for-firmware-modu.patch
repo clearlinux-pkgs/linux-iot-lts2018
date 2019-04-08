@@ -345,5 +345,5 @@ index 2bd5565..0eaa88e 100644
 +}
 +EXPORT_SYMBOL_GPL(skl_module_sysfs_init);
 -- 
-2.21.0
+https://clearlinux.org
 

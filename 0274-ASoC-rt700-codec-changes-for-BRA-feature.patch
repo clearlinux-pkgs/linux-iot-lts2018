@@ -108,5 +108,5 @@ index 8cb6782..773e77b 100644
  	pm_runtime_use_autosuspend(&slave->dev);
  	pm_runtime_enable(&slave->dev);
 -- 
-2.21.0
+https://clearlinux.org
 

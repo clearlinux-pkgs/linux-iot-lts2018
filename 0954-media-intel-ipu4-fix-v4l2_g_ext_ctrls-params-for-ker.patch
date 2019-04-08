@@ -33,5 +33,5 @@ index 2473f92..0f3e122 100644
  		dev_info(&csi2->isys->adev->dev, "can't get link frequency\n");
  		return rval;
 -- 
-2.21.0
+https://clearlinux.org
 

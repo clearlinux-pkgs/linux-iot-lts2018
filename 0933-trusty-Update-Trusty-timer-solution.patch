@@ -148,5 +148,5 @@ index 1e9b455..3189c7e 100644
  void *trusty_wall_base(struct device *dev);
  void *trusty_wall_per_cpu_item_ptr(struct device *dev, unsigned int cpu,
 -- 
-2.21.0
+https://clearlinux.org
 

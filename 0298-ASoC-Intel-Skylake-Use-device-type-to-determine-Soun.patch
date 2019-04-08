@@ -37,5 +37,5 @@ index 2c5ba97..6b8c4db 100644
  	else {
  		dev_err(dai->dev, "Stream type not known\n");
 -- 
-2.21.0
+https://clearlinux.org
 

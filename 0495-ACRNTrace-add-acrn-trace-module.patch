@@ -341,5 +341,5 @@ index 0000000..31470a3
 +MODULE_DESCRIPTION("Driver for the Intel ACRN Hypervisor Trace");
 +MODULE_VERSION("0.1");
 -- 
-2.21.0
+https://clearlinux.org
 

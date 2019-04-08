@@ -105,5 +105,5 @@ index f2f57b0..d641e40 100644
  	g_psys->dev.release = virt_psys_dev_release;
  	dev_set_name(&g_psys->dev, "ipu-psys%d", minor);
 -- 
-2.21.0
+https://clearlinux.org
 

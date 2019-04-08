@@ -25,5 +25,5 @@ index 52b65bb..f9db7ea 100644
  		/* allocate mem for blob */
  		blob->cfg = kzalloc(count, GFP_KERNEL);
 -- 
-2.21.0
+https://clearlinux.org
 

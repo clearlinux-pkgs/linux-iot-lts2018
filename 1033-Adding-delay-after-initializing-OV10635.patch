@@ -30,5 +30,5 @@ index ec91295..dafcf69 100644
  			pr_err("%s, Failed to register external subdev\n", __func__);
  			continue;
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -71,5 +71,5 @@ index 6b0f98c..d902bed 100644
  #define MEMBER(T, member, ...) T member;
  struct i915_params {
 -- 
-2.21.0
+https://clearlinux.org
 

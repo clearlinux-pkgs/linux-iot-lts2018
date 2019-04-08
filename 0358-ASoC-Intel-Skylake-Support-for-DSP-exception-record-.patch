@@ -265,5 +265,5 @@ index 8dbe73e..b3a15ed 100644
 +int skl_dsp_crash_dump_read(struct skl_sst *ctx);
  #endif
 -- 
-2.21.0
+https://clearlinux.org
 

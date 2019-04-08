@@ -83,5 +83,5 @@ index 685b78c..1187522 100644
  	struct mei_fw_version fw_ver[MEI_MAX_FW_VER_BLOCKS];
  
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -47,5 +47,5 @@ index 507513e..9c4d96e 100644
  		pconfig->estream = hdac_ext_host_stream_compr_assign(ebus,
  								substream,
 -- 
-2.21.0
+https://clearlinux.org
 

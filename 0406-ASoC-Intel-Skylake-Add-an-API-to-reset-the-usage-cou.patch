@@ -58,5 +58,5 @@ index 807f5b7..ef9bf4a 100644
  int skl_dsp_disable_core(struct sst_dsp *ctx, unsigned int core_mask);
  int skl_dsp_core_power_up(struct sst_dsp *ctx, unsigned int core_mask);
 -- 
-2.21.0
+https://clearlinux.org
 

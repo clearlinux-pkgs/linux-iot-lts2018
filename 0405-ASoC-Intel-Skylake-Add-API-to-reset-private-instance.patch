@@ -63,5 +63,5 @@ index f20b842..8f4056e 100644
  int skl_dsp_crash_dump_read(struct skl_sst *ctx, int stack_size)
  {
 -- 
-2.21.0
+https://clearlinux.org
 

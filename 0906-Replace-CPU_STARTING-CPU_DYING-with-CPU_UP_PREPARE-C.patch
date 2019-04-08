@@ -44,5 +44,5 @@ index f00c4ec..a48f4f9 100644
  	dev_info(&vdev->dev, "vring%d: va(pa)  %p(%llx) qsz %d notifyid %d\n",
  		 id, tvr->vaddr, (u64)tvr->paddr, tvr->elem_num, tvr->notifyid);
 -- 
-2.21.0
+https://clearlinux.org
 

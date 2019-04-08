@@ -113,5 +113,5 @@ index ad06e5d..5292575 100644
  	spin_unlock_irqrestore(&csi2->isys->lock, flags);
  }
 -- 
-2.21.0
+https://clearlinux.org
 

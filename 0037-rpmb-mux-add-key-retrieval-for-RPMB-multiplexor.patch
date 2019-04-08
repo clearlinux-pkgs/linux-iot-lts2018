@@ -617,5 +617,5 @@ index 5590119..c7caa04 100644
  	device_destroy(rpmb_mux_class, rpmb_mux_devt);
  err_device_create:
 -- 
-2.21.0
+https://clearlinux.org
 

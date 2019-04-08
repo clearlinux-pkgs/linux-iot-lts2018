@@ -27,5 +27,5 @@ index dc0a147..4e99cd0 100644
  		for (i = 0; i < GEN9_MOCS_SIZE; i++) {
  			gen9_render_mocs.control_table[ring_id][i] =
 -- 
-2.21.0
+https://clearlinux.org
 

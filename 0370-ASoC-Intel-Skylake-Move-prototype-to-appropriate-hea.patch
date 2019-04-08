@@ -43,5 +43,5 @@ index 4c09a08..12639e4 100644
  			unsigned int __user *data, unsigned int size);
  struct snd_kcontrol *skl_search_notify_kctl(struct skl_sst *skl,
 -- 
-2.21.0
+https://clearlinux.org
 

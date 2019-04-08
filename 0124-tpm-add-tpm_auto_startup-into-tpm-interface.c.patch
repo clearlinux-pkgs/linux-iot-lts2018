@@ -81,5 +81,5 @@ index 2eb73f6..daca1d0 100644
  int tpm1_pm_suspend(struct tpm_chip *chip, int tpm_suspend_pcr);
  int tpm1_auto_startup(struct tpm_chip *chip);
 -- 
-2.21.0
+https://clearlinux.org
 

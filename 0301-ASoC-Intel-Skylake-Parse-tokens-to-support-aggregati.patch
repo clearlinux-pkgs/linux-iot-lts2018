@@ -63,5 +63,5 @@ index e5853df..2abb089 100644
  		mconfig->dma_buffer_size = tkn_elem->value;
  		break;
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -58,5 +58,5 @@ index 2345f56..812ac2a 100644
  #include <linux/slab.h>
  #include <linux/trusty/smcall.h>
 -- 
-2.21.0
+https://clearlinux.org
 

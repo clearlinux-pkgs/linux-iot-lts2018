@@ -85,5 +85,5 @@ index 0d65533..94c77a5 100644
  	default:
  		return snd_pcm_mmap_data(substream, file, area);
 -- 
-2.21.0
+https://clearlinux.org
 

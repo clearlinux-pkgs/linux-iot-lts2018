@@ -26,5 +26,5 @@ index 335ec68..c90870e 100644
  			(sizeof(*master) * dsp->num_sdw_controllers),
  			GFP_KERNEL);
 -- 
-2.21.0
+https://clearlinux.org
 

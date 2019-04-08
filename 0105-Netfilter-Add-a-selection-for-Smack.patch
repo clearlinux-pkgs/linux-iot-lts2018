@@ -614,5 +614,5 @@ index 701a1cc..596aba2 100644
  		ssp = smack_sock(sk);
  		skp = ssp->smk_out;
 -- 
-2.21.0
+https://clearlinux.org
 

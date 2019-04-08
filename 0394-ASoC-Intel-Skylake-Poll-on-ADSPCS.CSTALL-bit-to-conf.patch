@@ -74,5 +74,5 @@ index 71e31ad..4b16e00 100644
  		skl_dsp_reset_core(ctx, core_mask);
  		dev_err(ctx->dev, "DSP start core failed: core_mask %x\n",
 -- 
-2.21.0
+https://clearlinux.org
 

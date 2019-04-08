@@ -140,5 +140,5 @@ index f49977e..4b8e09e 100644
  	struct virtqueue           *ipc_cmd_tx_vq;
  	/* IPC cmd reply from backend to frontend */
 -- 
-2.21.0
+https://clearlinux.org
 

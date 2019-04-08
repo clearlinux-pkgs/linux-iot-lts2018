@@ -54,5 +54,5 @@ index 2ddda76..00954ef 100644
  }
  EXPORT_SYMBOL_GPL(snd_hdac_stream_start);
 -- 
-2.21.0
+https://clearlinux.org
 

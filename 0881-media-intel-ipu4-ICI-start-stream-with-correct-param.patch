@@ -47,5 +47,5 @@ index 33fec29..f5b6e39 100644
  		dev_err(dev, "can't start streaming (%d)\n", rval);
  		goto out_stream_close;
 -- 
-2.21.0
+https://clearlinux.org
 

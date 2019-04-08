@@ -70,5 +70,5 @@ index e1d6f67..33de8c9 100644
  int snd_skl_parse_uuids(struct sst_dsp *ctx, const struct firmware *fw,
  				unsigned int offset, int index);
 -- 
-2.21.0
+https://clearlinux.org
 

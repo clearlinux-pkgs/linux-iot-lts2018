@@ -405,5 +405,5 @@ index f886dc8..eec9120 100644
  	.name = "System Pin",
  	.ops = &skl_pcm_dai_ops,
 -- 
-2.21.0
+https://clearlinux.org
 

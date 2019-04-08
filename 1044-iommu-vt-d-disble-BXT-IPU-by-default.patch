@@ -46,5 +46,5 @@ index f172dde..f9af892 100644
  DECLARE_PCI_FIXUP_HEADER(PCI_VENDOR_ID_INTEL, 0x5a88, quirk_broxton_ipu);
  
 -- 
-2.21.0
+https://clearlinux.org
 

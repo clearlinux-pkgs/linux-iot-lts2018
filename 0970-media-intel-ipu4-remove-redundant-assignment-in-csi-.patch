@@ -26,5 +26,5 @@ index deaf2a5..028c2de 100644
  	BUILD_BUG_ON(ARRAY_SIZE(csi2_be_supported_codes) != NR_OF_CSI2_BE_PADS);
  	csi2_be->asd.supported_codes = csi2_be_supported_codes;
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -414,5 +414,5 @@ index 01053c4..d00a8b1 100644
  int skl_nhlt_create_sysfs(struct skl *skl);
  void skl_nhlt_remove_sysfs(struct skl *skl);
 -- 
-2.21.0
+https://clearlinux.org
 

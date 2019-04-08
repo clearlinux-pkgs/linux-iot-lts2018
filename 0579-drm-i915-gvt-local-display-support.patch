@@ -606,5 +606,5 @@ index f7026e8..11b7afc 100644
  
  	I915_WRITE_FW(PLANE_CTL(pipe, plane_id), 0);
 -- 
-2.21.0
+https://clearlinux.org
 

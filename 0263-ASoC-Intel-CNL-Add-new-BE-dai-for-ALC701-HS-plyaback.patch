@@ -43,5 +43,5 @@ index 3ac5852..09899a0 100644
  	/* Currently adding 1 capture pin, for PDM ideally it
  	 * should be coming from CLT based on endpoints to be supported
 -- 
-2.21.0
+https://clearlinux.org
 

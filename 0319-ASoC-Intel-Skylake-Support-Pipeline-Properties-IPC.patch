@@ -98,5 +98,5 @@ index 587fcac..8f6d11d 100644
  		skl_ipc_get_large_config(&ctx->ipc, &msg,
  				ipc_data, NULL,
 -- 
-2.21.0
+https://clearlinux.org
 

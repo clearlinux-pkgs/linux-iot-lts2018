@@ -89,5 +89,5 @@ index 8cc33fb..52d73a4 100644
  	if (!skl->nhlt_override) {
  		cfg = skl_get_ep_blob(skl, mconfig->vbus_id, link_type,
 -- 
-2.21.0
+https://clearlinux.org
 

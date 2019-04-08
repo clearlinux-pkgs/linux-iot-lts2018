@@ -821,5 +821,5 @@ index 0000000..5590119
 +MODULE_DESCRIPTION("RPMB Mux kernel module");
 +MODULE_LICENSE("Dual BSD/GPL");
 -- 
-2.21.0
+https://clearlinux.org
 

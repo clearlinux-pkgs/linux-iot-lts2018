@@ -318,5 +318,5 @@ index dc17cfb..33fec29 100644
  	spin_lock_irqsave(&isys->power_lock, flags);
  	if (!rval)
 -- 
-2.21.0
+https://clearlinux.org
 

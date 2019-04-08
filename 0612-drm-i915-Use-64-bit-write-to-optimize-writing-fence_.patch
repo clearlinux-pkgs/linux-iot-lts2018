@@ -54,5 +54,5 @@ index d548ac0..317e376 100644
  		 * we split the 64-bit update into two 32-bit writes. In order
  		 * for a partial fence not to be evaluated between writes, we
 -- 
-2.21.0
+https://clearlinux.org
 

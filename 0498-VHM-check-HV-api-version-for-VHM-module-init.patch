@@ -47,5 +47,5 @@ index 7894297..88fb0fa 100644
  	major = register_chrdev(0, DEVICE_NAME, &fops);
  	if (major < 0) {
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -332,5 +332,5 @@ index ddbb8a3..81e2826 100644
  						sizeof(struct ici_pad_selection));
  	if (host_virt == NULL) {
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -28,5 +28,5 @@ index 92cf555..2855ec2 100644
  	ICI_FORMAT_YUYV			 = ici_fourcc_code('Y', 'U', 'Y', 'V'),
  	ICI_FORMAT_SBGGR12		 = ici_fourcc_code('B', 'G', '1', '2'),
 -- 
-2.21.0
+https://clearlinux.org
 

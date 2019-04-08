@@ -49,5 +49,5 @@ index 7b8cf11..f36c0bb 100644
  obj-$(CONFIG_SND_SOC_INTEL_SKYLAKE) += snd-soc-skl-ipc.o
  
 -- 
-2.21.0
+https://clearlinux.org
 

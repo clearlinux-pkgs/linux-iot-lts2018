@@ -532,5 +532,5 @@ index 6c037d2..bc02740 100644
  int skl_sst_ipc_load_library(struct sst_generic_ipc *ipc,
  			u8 dma_id, u8 table_id, bool wait);
 -- 
-2.21.0
+https://clearlinux.org
 

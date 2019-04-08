@@ -71,5 +71,5 @@ index f0f0ada..9d8f0bf 100644
  
  	if (workload->status || (vgpu->resetting_eng & ENGINE_MASK(ring_id))) {
 -- 
-2.21.0
+https://clearlinux.org
 

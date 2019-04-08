@@ -339,5 +339,5 @@ index c04bdbb..82b5e7d 100644
  	enum ufs_dev_pwr_mode curr_dev_pwr_mode;
  	enum uic_link_state uic_link_state;
 -- 
-2.21.0
+https://clearlinux.org
 

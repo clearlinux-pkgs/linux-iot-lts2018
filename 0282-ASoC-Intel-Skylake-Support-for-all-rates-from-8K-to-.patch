@@ -95,5 +95,5 @@ index ac1eef7..a6901c2 100644
  			SNDRV_PCM_FMTBIT_S24_LE | SNDRV_PCM_FMTBIT_S32_LE,
  		.sig_bits = 32,
 -- 
-2.21.0
+https://clearlinux.org
 

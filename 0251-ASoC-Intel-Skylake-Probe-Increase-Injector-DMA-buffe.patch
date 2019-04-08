@@ -37,5 +37,5 @@ index a27112b..113fa33 100644
   * SKL DSP driver modelling uses only few DAPM widgets so for rest we will
   * ignore. This helpers checks if the SKL driver handles this widget type
 -- 
-2.21.0
+https://clearlinux.org
 

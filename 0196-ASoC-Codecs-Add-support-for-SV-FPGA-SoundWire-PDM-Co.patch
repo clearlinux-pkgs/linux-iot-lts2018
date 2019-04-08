@@ -1218,5 +1218,5 @@ index 0000000..e9757e5
 +int svfpga_remove(struct device *dev);
 +#endif /* __SVFPGA_H__ */
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -248,5 +248,5 @@ index cc4f0cb..65fa379 100755
  		if (rax_value != NULL) {
  			*rax_value = pcpuid.eax;
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -198,5 +198,5 @@ index b1d997d..148925d 100755
  
  	FOR_EACH_REG_UNC_OPERATION(pecb, dev_idx, idx, PMU_OPERATION_READ)
 -- 
-2.21.0
+https://clearlinux.org
 

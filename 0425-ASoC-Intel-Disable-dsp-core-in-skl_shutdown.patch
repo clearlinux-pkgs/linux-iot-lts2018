@@ -48,5 +48,5 @@ index cd24989..94f5ced 100644
  	 * when system goes to shutdown. When cores.usage_count is
  	 * equal to zero then driver puts the dsp core to zero. On few
 -- 
-2.21.0
+https://clearlinux.org
 

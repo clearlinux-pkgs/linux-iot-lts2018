@@ -213,5 +213,5 @@ index 7f87667..a03a745 100644
  			connector->hdcp_value =
  					DRM_MODE_CONTENT_PROTECTION_ENABLED;
 -- 
-2.21.0
+https://clearlinux.org
 

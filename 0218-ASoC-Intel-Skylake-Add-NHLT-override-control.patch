@@ -117,5 +117,5 @@ index 78aa8bd..28c62dd 100644
  
  #define skl_to_bus(s)  (&(s)->hbus)
 -- 
-2.21.0
+https://clearlinux.org
 

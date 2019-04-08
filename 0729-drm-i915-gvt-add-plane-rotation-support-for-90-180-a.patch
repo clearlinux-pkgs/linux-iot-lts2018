@@ -28,5 +28,5 @@ index 44db243..335b185 100644
  		drm_plane_create_rotation_property(&intel_plane->base,
  						   DRM_MODE_ROTATE_0,
 -- 
-2.21.0
+https://clearlinux.org
 

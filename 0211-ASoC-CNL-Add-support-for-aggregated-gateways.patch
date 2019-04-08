@@ -63,5 +63,5 @@ index 353c90c..44e4109 100644
  	struct skl_module_pin *m_out_pin;
  	enum skl_module_type m_type;
 -- 
-2.21.0
+https://clearlinux.org
 

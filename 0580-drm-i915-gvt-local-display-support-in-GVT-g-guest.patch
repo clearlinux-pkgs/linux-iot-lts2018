@@ -103,5 +103,5 @@ index e237160..d583d07 100644
  				    5000))
  		DRM_ERROR("Panel status timeout: status %08x control %08x\n",
 -- 
-2.21.0
+https://clearlinux.org
 

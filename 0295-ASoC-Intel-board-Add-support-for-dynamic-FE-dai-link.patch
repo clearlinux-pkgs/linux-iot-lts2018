@@ -129,5 +129,5 @@ index eebde84..21b40b8 100644
  
  static int snd_cnl_rt274_mc_probe(struct platform_device *pdev)
 -- 
-2.21.0
+https://clearlinux.org
 

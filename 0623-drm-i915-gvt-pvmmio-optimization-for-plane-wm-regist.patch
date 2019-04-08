@@ -159,5 +159,5 @@ index 01afc76..df17ea5 100644
  		skl_write_wm_level(dev_priv, PLANE_WM(pipe, plane_id, level),
  				   &wm->wm[level]);
 -- 
-2.21.0
+https://clearlinux.org
 

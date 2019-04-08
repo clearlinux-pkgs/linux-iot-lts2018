@@ -311,5 +311,5 @@ index eee004f..18054f8 100644
  	pm_runtime_get_sync(&card->dev);
  	if (md->part_curr != md->part_type) {
 -- 
-2.21.0
+https://clearlinux.org
 

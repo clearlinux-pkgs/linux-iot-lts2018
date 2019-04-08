@@ -332,5 +332,5 @@ index 3eef556..dd2e98f 100644
   * tpm2_ordinal_duration_index() - returns an index to the chip duration table
   * @ordinal: TPM command ordinal.
 -- 
-2.21.0
+https://clearlinux.org
 

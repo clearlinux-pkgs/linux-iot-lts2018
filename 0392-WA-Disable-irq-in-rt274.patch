@@ -29,5 +29,5 @@ index 6090f19..74415d5 100644
  	ret = devm_snd_soc_register_component(&i2c->dev,
  				     &soc_component_dev_rt274,
 -- 
-2.21.0
+https://clearlinux.org
 

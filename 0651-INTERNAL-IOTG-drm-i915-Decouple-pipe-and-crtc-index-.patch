@@ -357,5 +357,5 @@ index ead29a1..2f20205 100644
  
  	if (crtc->base.state->adjusted_mode.flags & DRM_MODE_FLAG_INTERLACE)
 -- 
-2.21.0
+https://clearlinux.org
 

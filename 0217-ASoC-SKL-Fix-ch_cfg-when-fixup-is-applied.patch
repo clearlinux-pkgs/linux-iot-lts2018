@@ -26,5 +26,5 @@ index 67e8a1f..96cb7e1 100644
  	if (fixup & SKL_FMT_FIXUP_MASK) {
  		fmt->valid_bit_depth = skl_get_bit_depth(params->s_fmt);
 -- 
-2.21.0
+https://clearlinux.org
 

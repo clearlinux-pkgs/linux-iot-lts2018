@@ -107,5 +107,5 @@ index 6a6df23..fc8ed14 100644
  core_param(panic_on_warn, panic_on_warn, int, 0644);
  core_param(crash_kexec_post_notifiers, crash_kexec_post_notifiers, bool, 0644);
 -- 
-2.21.0
+https://clearlinux.org
 

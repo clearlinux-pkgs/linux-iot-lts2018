@@ -27,5 +27,5 @@ index 0f63c37..e1ae592 100644
  		if (!i915_modparams.avail_planes_per_pipe) {
  			ret = intel_crtc_init(dev_priv, pipe);
 -- 
-2.21.0
+https://clearlinux.org
 

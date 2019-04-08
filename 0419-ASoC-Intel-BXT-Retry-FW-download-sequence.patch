@@ -99,5 +99,5 @@ index 2eb57d7..47b2a24 100644
  		dev_dbg(ctx->dev, "Firmware download successful\n");
  		ret = wait_event_timeout(skl->boot_wait, skl->boot_complete,
 -- 
-2.21.0
+https://clearlinux.org
 

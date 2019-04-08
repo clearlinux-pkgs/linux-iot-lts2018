@@ -43,5 +43,5 @@ index 6dd4848..3101835 100644
  #define OV10635A_I2C_ADDRESS	0x61
  #define OV10635B_I2C_ADDRESS	0x62
 -- 
-2.21.0
+https://clearlinux.org
 

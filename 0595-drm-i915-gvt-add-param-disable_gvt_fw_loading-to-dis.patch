@@ -65,5 +65,5 @@ index 4ac18b4..f0d3023 100644
  		 GVT_FIRMWARE_PATH, pdev->vendor, pdev->device,
  		 pdev->revision);
 -- 
-2.21.0
+https://clearlinux.org
 

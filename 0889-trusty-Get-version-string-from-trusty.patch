@@ -151,5 +151,5 @@ index ce00c1d..abb77f1 100644
 +const char *trusty_version_str_get(struct device *dev);
  #endif
 -- 
-2.21.0
+https://clearlinux.org
 

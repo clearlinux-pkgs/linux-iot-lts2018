@@ -259,5 +259,5 @@ index 9ebe4d9..0f99d7b 100644
  struct virtio_scsi_inhdr {
  	__virtio32 errors;
 -- 
-2.21.0
+https://clearlinux.org
 

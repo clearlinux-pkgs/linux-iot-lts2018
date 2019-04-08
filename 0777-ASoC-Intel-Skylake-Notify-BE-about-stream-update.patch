@@ -36,5 +36,5 @@ index e192fb7..deac8de 100644
  		skl_get_total_bytes_transferred(hstr);
  		snd_compr_fragment_elapsed(hstr->stream);
 -- 
-2.21.0
+https://clearlinux.org
 

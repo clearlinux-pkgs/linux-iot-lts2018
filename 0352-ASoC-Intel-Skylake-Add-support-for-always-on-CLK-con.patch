@@ -249,5 +249,5 @@ index 51cc193..318b3c5 100644
  int skl_get_dmic_geo(struct skl *skl);
  int skl_nhlt_update_topology_bin(struct skl *skl);
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -43,5 +43,5 @@ index f923ca7..02c12fb 100644
  		pvinfo_mmio_read, pvinfo_mmio_write},
  	{D_ALL, LGC_PALETTE(PIPE_A, 0), 1024, NULL, NULL},
 -- 
-2.21.0
+https://clearlinux.org
 

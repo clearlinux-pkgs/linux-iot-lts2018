@@ -457,5 +457,5 @@ index 16e2d41..8fa3bed 100644
  			vgpu_vreg(vgpu, offset) = 0;
  		}
 -- 
-2.21.0
+https://clearlinux.org
 

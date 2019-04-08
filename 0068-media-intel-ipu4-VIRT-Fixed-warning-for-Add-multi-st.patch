@@ -61,5 +61,5 @@ index 4359d7b..cb642f4 100644
  		if (iov.iov_len != sizeof(struct ipu4_virtio_req)) {
  			if (iov.iov_len == sizeof(int)) {
 -- 
-2.21.0
+https://clearlinux.org
 

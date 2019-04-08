@@ -26,5 +26,5 @@ index 7db4239..3e7df1c 100644
  		hrtimer_init(&stm_heartbeat[i].hrtimer, CLOCK_MONOTONIC,
  			     HRTIMER_MODE_ABS);
 -- 
-2.21.0
+https://clearlinux.org
 

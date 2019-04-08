@@ -75,5 +75,5 @@ index 99b01ab..e6c592f 100644
  
  		if (MMIO_COMPARE(vgpu, mmio->reg.reg, mmio->mask))
 -- 
-2.21.0
+https://clearlinux.org
 

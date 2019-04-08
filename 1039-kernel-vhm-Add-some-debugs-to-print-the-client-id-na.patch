@@ -40,5 +40,5 @@ index 8b46f43..3647d1e 100644
  
  	acrn_ioreq_destroy_client_pervm(client, client->ref_vm);
 -- 
-2.21.0
+https://clearlinux.org
 

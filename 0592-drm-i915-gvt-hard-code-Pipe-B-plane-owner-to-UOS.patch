@@ -33,5 +33,5 @@ index fec5751..346a676 100644
  	type.high_gm_size = (vp->gm_sz - vp->aperture_sz) * VMEM_1MB;
  	type.fence = vp->fence_sz;
 -- 
-2.21.0
+https://clearlinux.org
 

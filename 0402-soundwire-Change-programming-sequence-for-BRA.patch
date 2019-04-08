@@ -50,5 +50,5 @@ index 9f8e77c..95eb7a8 100644
  	ret = ops->bra_platform_xfer(data->bra_data->drv_data, true, &info);
  	if (ret < 0) {
 -- 
-2.21.0
+https://clearlinux.org
 

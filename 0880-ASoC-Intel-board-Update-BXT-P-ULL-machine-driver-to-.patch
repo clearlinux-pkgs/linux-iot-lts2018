@@ -129,5 +129,5 @@ index 91baeb7..9b4ee63 100644
  		.no_pcm = 1,
  		.codec_name = "snd-soc-dummy",
 -- 
-2.21.0
+https://clearlinux.org
 

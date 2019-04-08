@@ -50,5 +50,5 @@ index c08d878..e6334dd 100644
  	select SND_HDA_DSP_LOADER
  	select SND_SOC_TOPOLOGY
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -62,5 +62,5 @@ index ead1beb..91650c1 100644
  	char module_name[16]; /* module name from ACPI */
  	int crl_irq_pin;
 -- 
-2.21.0
+https://clearlinux.org
 

@@ -37,5 +37,5 @@ index ba60269..891e248 100644
  	link_cpr_cfg->id.instance_id = 3;
  	link_cpr_cfg->id.pvt_id = skl_get_pvt_id(ctx,
 -- 
-2.21.0
+https://clearlinux.org
 

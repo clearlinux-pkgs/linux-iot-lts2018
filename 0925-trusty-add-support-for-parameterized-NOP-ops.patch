@@ -476,5 +476,5 @@ index aba204b..eaa833b 100644
  #define EVMM_SIGNATURE_CORP 0x43544E49  /* "INTC", edx */
  #define EVMM_SIGNATURE_VMM  0x4D4D5645  /* "EVMM", ecx */
 -- 
-2.21.0
+https://clearlinux.org
 

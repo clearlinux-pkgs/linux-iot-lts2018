@@ -47,5 +47,5 @@ index bece499..8da8ead 100644
  	if (cfg) {
  		mconfig->formats_config.caps_size = cfg->size;
 -- 
-2.21.0
+https://clearlinux.org
 

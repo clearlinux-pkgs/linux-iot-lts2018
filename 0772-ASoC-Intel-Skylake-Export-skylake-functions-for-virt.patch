@@ -150,5 +150,5 @@ index b75dc47..a1536d3 100644
  struct skl_debug *skl_debugfs_init(struct skl *skl);
  void skl_debug_init_module(struct skl_debug *d,
 -- 
-2.21.0
+https://clearlinux.org
 

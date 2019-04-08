@@ -45,5 +45,5 @@ index af294f6..9f70a4f 100644
  	host_cpr_cfg->dev_type = SKL_DEVICE_HDAHOST;
  	host_cpr_cfg->hw_conn_type = SKL_CONN_SINK;
 -- 
-2.21.0
+https://clearlinux.org
 

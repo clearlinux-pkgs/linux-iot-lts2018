@@ -422,5 +422,5 @@ index cd30d0e..b919a5c 100644
  int mei_spd_dbgfs_register(struct mei_spd *spd, const char *name);
  void mei_spd_dbgfs_deregister(struct mei_spd *spd);
 -- 
-2.21.0
+https://clearlinux.org
 

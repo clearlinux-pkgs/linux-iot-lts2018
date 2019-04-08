@@ -66,5 +66,5 @@ index f70d70d..b82de71 100644
  	if (ret) {
  		skl_dsp_free(sst);
 -- 
-2.21.0
+https://clearlinux.org
 

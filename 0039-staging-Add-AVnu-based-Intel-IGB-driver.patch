@@ -45344,5 +45344,5 @@ index 0000000..2bcd58b
 +echo f > /sys/class/net/$INTERFACE/queues/tx-3/xps_cpus
 +ifconfig $INTERFACE up
 -- 
-2.21.0
+https://clearlinux.org
 

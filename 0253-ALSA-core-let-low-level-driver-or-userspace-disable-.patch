@@ -75,5 +75,5 @@ index 818dff1..0d65533 100644
  	ret = do_pcm_hwsync(substream);
  	if (!ret)
 -- 
-2.21.0
+https://clearlinux.org
 

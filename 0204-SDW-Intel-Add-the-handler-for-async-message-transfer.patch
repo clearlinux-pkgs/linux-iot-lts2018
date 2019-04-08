@@ -243,5 +243,5 @@ index 21a61b4..a5fc6db 100644
  	.xfer_bulk = cnl_sdw_xfer_bulk,
  	.monitor_handover = cnl_sdw_mon_handover,
 -- 
-2.21.0
+https://clearlinux.org
 

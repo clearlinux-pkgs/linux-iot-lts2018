@@ -153,5 +153,5 @@ index e389909..8552e73 100644
  void gen8_irq_power_well_post_enable(struct drm_i915_private *dev_priv,
  				     u8 pipe_mask);
 -- 
-2.21.0
+https://clearlinux.org
 

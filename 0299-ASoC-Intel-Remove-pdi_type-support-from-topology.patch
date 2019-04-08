@@ -70,5 +70,5 @@ index d17809b..0026524 100644
  	bool sdw_agg_enable;
  	struct skl_sdw_aggregation sdw_agg;
 -- 
-2.21.0
+https://clearlinux.org
 

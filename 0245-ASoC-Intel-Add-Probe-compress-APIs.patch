@@ -1530,5 +1530,5 @@ index e2b9c7c..d1b2740 100644
  
  static irqreturn_t skl_interrupt(int irq, void *dev_id)
 -- 
-2.21.0
+https://clearlinux.org
 

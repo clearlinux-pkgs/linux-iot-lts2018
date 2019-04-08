@@ -137,5 +137,5 @@ index 65a1106..228f007 100644
  
  static void skl_pcm_free(struct snd_pcm *pcm)
 -- 
-2.21.0
+https://clearlinux.org
 
