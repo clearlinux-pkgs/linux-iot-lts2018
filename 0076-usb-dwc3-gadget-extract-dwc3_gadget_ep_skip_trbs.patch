@@ -13,7 +13,7 @@ Signed-off-by: Felipe Balbi <felipe.balbi@linux.intel.com>
  1 file changed, 24 insertions(+), 37 deletions(-)
 
 diff --git a/drivers/usb/dwc3/gadget.c b/drivers/usb/dwc3/gadget.c
-index 9172bc5..28a63e8 100644
+index 6ea60e4..b90c5c1 100644
 --- a/drivers/usb/dwc3/gadget.c
 +++ b/drivers/usb/dwc3/gadget.c
 @@ -1344,6 +1344,29 @@ static int dwc3_gadget_ep_queue(struct usb_ep *ep, struct usb_request *request,

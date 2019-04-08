@@ -953,7 +953,7 @@ index b0ce65b..72c2b7c 100644
  EXPORT_SYMBOL(security_secmark_relabel_packet);
  
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 0d4bc76..016e6f3 100644
+index 1c22e55..4862725 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -3213,13 +3213,12 @@ static int selinux_inode_setxattr(struct dentry *dentry, const char *name,

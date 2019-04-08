@@ -27,7 +27,7 @@ Signed-off-by: Xinyun Liu <xinyun.liu@intel.com>
  3 files changed, 8 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/cmd_parser.c b/drivers/gpu/drm/i915/gvt/cmd_parser.c
-index 729eb0f..9115c3d 100644
+index d30c5e2..d69cc8e 100644
 --- a/drivers/gpu/drm/i915/gvt/cmd_parser.c
 +++ b/drivers/gpu/drm/i915/gvt/cmd_parser.c
 @@ -808,7 +808,7 @@ static bool is_shadowed_mmio(unsigned int offset)

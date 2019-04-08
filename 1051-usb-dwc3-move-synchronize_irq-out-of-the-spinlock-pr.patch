@@ -80,10 +80,10 @@ index fec9746..3d63bfc 100644
  
  		dwc3_otg_exit(dwc);
 diff --git a/drivers/usb/dwc3/gadget.c b/drivers/usb/dwc3/gadget.c
-index 3e00c7b..40098cc 100644
+index b28409e..3de593f 100644
 --- a/drivers/usb/dwc3/gadget.c
 +++ b/drivers/usb/dwc3/gadget.c
-@@ -3245,8 +3245,6 @@ int dwc3_gadget_suspend(struct dwc3 *dwc)
+@@ -3247,8 +3247,6 @@ int dwc3_gadget_suspend(struct dwc3 *dwc)
  	dwc3_disconnect_gadget(dwc);
  	__dwc3_gadget_stop(dwc);
  

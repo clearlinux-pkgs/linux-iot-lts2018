@@ -34,7 +34,7 @@ index 24f0b10..1310285 100644
  	void __iomem		*regs;
  
 diff --git a/drivers/usb/dwc3/gadget.c b/drivers/usb/dwc3/gadget.c
-index 81026d1..8191b4a 100644
+index 6c46600..c3294a2 100644
 --- a/drivers/usb/dwc3/gadget.c
 +++ b/drivers/usb/dwc3/gadget.c
 @@ -641,8 +641,6 @@ static int __dwc3_gadget_ep_enable(struct dwc3_ep *dep, unsigned int action)

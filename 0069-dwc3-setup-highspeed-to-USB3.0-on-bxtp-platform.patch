@@ -17,7 +17,7 @@ Signed-off-by: Greniger, Jacek <jacekx.greniger@intel.com>
  1 file changed, 27 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/usb/dwc3/gadget.c b/drivers/usb/dwc3/gadget.c
-index 700fb62..cb903a5 100644
+index 524104e..1d8ac7b 100644
 --- a/drivers/usb/dwc3/gadget.c
 +++ b/drivers/usb/dwc3/gadget.c
 @@ -18,6 +18,7 @@

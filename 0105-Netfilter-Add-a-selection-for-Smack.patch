@@ -412,7 +412,7 @@ index 72c2b7c..e0651d3 100644
  {
  	return call_int_hook(tun_dev_alloc_security, 0, security);
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 016e6f3..f690752 100644
+index 4862725..59c2857 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -50,6 +50,7 @@
@@ -423,7 +423,7 @@ index 016e6f3..f690752 100644
  #include <linux/tty.h>
  #include <net/icmp.h>
  #include <net/ip.h>		/* for local_port_range[] */
-@@ -5356,13 +5357,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
+@@ -5360,13 +5361,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
  			    PACKET__RELABELTO, NULL);
  }
  

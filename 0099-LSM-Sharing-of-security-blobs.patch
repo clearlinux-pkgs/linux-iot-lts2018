@@ -376,10 +376,10 @@ index 5284159..d607739 100644
  
  /**
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 415d8c9..0b8aab1 100644
+index a8e1975..05d2959 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
-@@ -6968,7 +6968,8 @@ static __init int selinux_init(void)
+@@ -6975,7 +6975,8 @@ static __init int selinux_init(void)
  {
  	static int finish;
  

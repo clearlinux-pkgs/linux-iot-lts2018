@@ -33,7 +33,7 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  2 files changed, 105 insertions(+), 2 deletions(-)
 
 diff --git a/arch/x86/Kconfig b/arch/x86/Kconfig
-index 44c6a82..26bc0aa 100644
+index e76d16a..6e90dbe 100644
 --- a/arch/x86/Kconfig
 +++ b/arch/x86/Kconfig
 @@ -1481,6 +1481,14 @@ config X86_DIRECT_GBPAGES

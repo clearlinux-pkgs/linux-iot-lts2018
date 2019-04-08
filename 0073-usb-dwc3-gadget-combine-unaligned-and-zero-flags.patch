@@ -46,7 +46,7 @@ index 5bfb625..4872cba 100644
  
  /*
 diff --git a/drivers/usb/dwc3/gadget.c b/drivers/usb/dwc3/gadget.c
-index cb903a5..d8ec257 100644
+index 1d8ac7b..00bad3a 100644
 --- a/drivers/usb/dwc3/gadget.c
 +++ b/drivers/usb/dwc3/gadget.c
 @@ -1071,7 +1071,7 @@ static void dwc3_prepare_one_trb_sg(struct dwc3_ep *dep,

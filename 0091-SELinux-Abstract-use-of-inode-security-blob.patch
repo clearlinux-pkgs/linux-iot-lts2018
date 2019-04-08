@@ -14,7 +14,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  3 files changed, 21 insertions(+), 15 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index cb16ce1..c9476cd 100644
+index 0f2ddc6..9bd4e4f 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -276,7 +276,7 @@ static int __inode_security_revalidate(struct inode *inode,
@@ -115,7 +115,7 @@ index cb16ce1..c9476cd 100644
  	int rc;
  
  	ad.type = LSM_AUDIT_DATA_INODE;
-@@ -4158,7 +4158,7 @@ static int selinux_task_kill(struct task_struct *p, struct siginfo *info,
+@@ -4162,7 +4162,7 @@ static int selinux_task_kill(struct task_struct *p, struct siginfo *info,
  static void selinux_task_to_inode(struct task_struct *p,
  				  struct inode *inode)
  {
@@ -124,7 +124,7 @@ index cb16ce1..c9476cd 100644
  	u32 sid = task_sid(p);
  
  	spin_lock(&isec->lock);
-@@ -6543,7 +6543,7 @@ static void selinux_release_secctx(char *secdata, u32 seclen)
+@@ -6547,7 +6547,7 @@ static void selinux_release_secctx(char *secdata, u32 seclen)
  
  static void selinux_inode_invalidate_secctx(struct inode *inode)
  {

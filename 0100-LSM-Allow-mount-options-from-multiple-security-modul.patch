@@ -144,7 +144,7 @@ index d607739..fd958c7 100644
  EXPORT_SYMBOL(security_sb_set_mnt_opts);
  
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 0b8aab1..df60bb6 100644
+index 05d2959..d48a0ca 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -568,21 +568,23 @@ static int selinux_get_mnt_opts(const struct super_block *sb,
