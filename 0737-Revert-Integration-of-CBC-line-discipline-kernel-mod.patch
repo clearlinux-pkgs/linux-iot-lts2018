@@ -66,17 +66,19 @@ index a387103..7c4de72 100644
  F:	*/
 +
 diff --git a/drivers/tty/Kconfig b/drivers/tty/Kconfig
-index 7210714..0840d27 100644
+index f02563a..e0a04bf 100644
 --- a/drivers/tty/Kconfig
 +++ b/drivers/tty/Kconfig
-@@ -441,7 +441,4 @@ config VCC
- 	depends on SUN_LDOMS
+@@ -442,9 +442,6 @@ config VCC
  	help
  	  Support for Sun logical domain consoles.
--
+ 
 -source "drivers/tty/cbc/Kconfig"
 -
- endif # TTY
+-
+ config LDISC_AUTOLOAD
+ 	bool "Automatically load TTY Line Disciplines"
+ 	default y
 diff --git a/drivers/tty/Makefile b/drivers/tty/Makefile
 index 4ae6744..c72cafd 100644
 --- a/drivers/tty/Makefile

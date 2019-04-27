@@ -27,7 +27,7 @@ index 4cf3f1c..71a815d 100644
  				__func__, start, end, map);
  
 diff --git a/drivers/gpu/drm/i915/gvt/gtt.c b/drivers/gpu/drm/i915/gvt/gtt.c
-index 22c79df..5d46957 100644
+index 9c54078..3550ee3 100644
 --- a/drivers/gpu/drm/i915/gvt/gtt.c
 +++ b/drivers/gpu/drm/i915/gvt/gtt.c
 @@ -1594,7 +1594,7 @@ static void free_ggtt_virtual_page_table(struct intel_vgpu_mm *mm)

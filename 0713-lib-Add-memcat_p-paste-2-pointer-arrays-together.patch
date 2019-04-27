@@ -27,7 +27,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  create mode 100644 lib/test_memcat_p.c
 
 diff --git a/include/linux/string.h b/include/linux/string.h
-index 4a5a0eb..27d0482 100644
+index f58e1ef..b2d5776 100644
 --- a/include/linux/string.h
 +++ b/include/linux/string.h
 @@ -131,6 +131,13 @@ static inline void *memset_p(void **p, void *v, __kernel_size_t n)
@@ -76,7 +76,7 @@ index 4238764..02f5f81 100644
  ifeq ($(CONFIG_DEBUG_KOBJECT),y)
  CFLAGS_kobject.o += -DDEBUG
 diff --git a/lib/string.c b/lib/string.c
-index 2c0900a..453f359 100644
+index 72125fd..49b7fcd 100644
 --- a/lib/string.c
 +++ b/lib/string.c
 @@ -27,6 +27,7 @@
@@ -87,7 +87,7 @@ index 2c0900a..453f359 100644
  
  #include <asm/byteorder.h>
  #include <asm/word-at-a-time.h>
-@@ -890,6 +891,36 @@ void *memscan(void *addr, int c, size_t size)
+@@ -910,6 +911,36 @@ void *memscan(void *addr, int c, size_t size)
  EXPORT_SYMBOL(memscan);
  #endif
  

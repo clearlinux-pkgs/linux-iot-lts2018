@@ -36,7 +36,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  4 files changed, 76 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index 13f8313..7c3636e 100644
+index 95b65f7..bde54f1 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -435,6 +435,38 @@ int intel_gvt_scan_and_shadow_workload(struct intel_vgpu_workload *workload)

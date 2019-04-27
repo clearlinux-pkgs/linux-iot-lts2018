@@ -91,7 +91,7 @@ index f6bcfcb..fd461db 100644
  {
  	u64 start, end;
 diff --git a/drivers/gpu/drm/i915/gvt/gtt.c b/drivers/gpu/drm/i915/gvt/gtt.c
-index 0c7160a..22c79df 100644
+index e326254..9c54078 100644
 --- a/drivers/gpu/drm/i915/gvt/gtt.c
 +++ b/drivers/gpu/drm/i915/gvt/gtt.c
 @@ -1569,6 +1569,106 @@ int intel_vgpu_sync_oos_pages(struct intel_vgpu *vgpu)

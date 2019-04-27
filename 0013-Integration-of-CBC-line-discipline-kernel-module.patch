@@ -59,17 +59,19 @@ Signed-off-by: G Jaya Kumaran, Vineetha
  create mode 100644 include/uapi/linux/cbc/cbc-core.h
 
 diff --git a/drivers/tty/Kconfig b/drivers/tty/Kconfig
-index 0840d27..7210714 100644
+index e0a04bf..f02563a 100644
 --- a/drivers/tty/Kconfig
 +++ b/drivers/tty/Kconfig
-@@ -441,4 +441,7 @@ config VCC
- 	depends on SUN_LDOMS
+@@ -442,6 +442,9 @@ config VCC
  	help
  	  Support for Sun logical domain consoles.
-+
+ 
 +source "drivers/tty/cbc/Kconfig"
 +
- endif # TTY
++
+ config LDISC_AUTOLOAD
+ 	bool "Automatically load TTY Line Disciplines"
+ 	default y
 diff --git a/drivers/tty/Makefile b/drivers/tty/Makefile
 index c72cafd..4ae6744 100644
 --- a/drivers/tty/Makefile

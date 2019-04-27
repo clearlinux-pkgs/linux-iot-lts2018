@@ -82,7 +82,7 @@ index 9e9b19e..249b994 100644
  M:	Antti Palosaari <crope@iki.fi>
  L:	linux-media@vger.kernel.org
 diff --git a/drivers/char/Kconfig b/drivers/char/Kconfig
-index 4072849..26a2da8 100644
+index 1df9cb8..1780743 100644
 --- a/drivers/char/Kconfig
 +++ b/drivers/char/Kconfig
 @@ -552,6 +552,8 @@ config ADI

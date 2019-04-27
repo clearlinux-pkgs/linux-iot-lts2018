@@ -50,7 +50,7 @@ Reviewed-by: He, Min <min.he@intel.com>
  1 file changed, 9 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index c1e6cd6..31ebb62 100644
+index da2b176..d727f89 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -993,12 +993,16 @@ static void complete_current_workload(struct intel_gvt *gvt, int ring_id)
