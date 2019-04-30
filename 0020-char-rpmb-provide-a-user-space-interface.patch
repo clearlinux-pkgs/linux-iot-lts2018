@@ -63,10 +63,10 @@ index 13a7c99..ae2f081 100644
  0xC0	00-0F	linux/usb/iowarrior.h
  0xCA	00-0F	uapi/misc/cxl.h
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 7135116..5a424e1 100644
+index fcb269a..6c2ed56 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -12532,6 +12532,7 @@ M:	Tomas Winkler <tomas.winkler@intel.com>
+@@ -12538,6 +12538,7 @@ M:	Tomas Winkler <tomas.winkler@intel.com>
  L:	linux-kernel@vger.kernel.org
  S:	Supported
  F:	drivers/char/rpmb/*

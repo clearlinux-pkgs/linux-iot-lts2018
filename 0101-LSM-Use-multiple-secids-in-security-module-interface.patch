@@ -522,10 +522,10 @@ index bf5d592..e0b8bf1 100644
  	return err;
  }
 diff --git a/net/xfrm/xfrm_state.c b/net/xfrm/xfrm_state.c
-index cc0203e..21f7c06 100644
+index 3f729cd..0278069 100644
 --- a/net/xfrm/xfrm_state.c
 +++ b/net/xfrm/xfrm_state.c
-@@ -1019,7 +1019,8 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,
+@@ -1027,7 +1027,8 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,
  		memcpy(&x->mark, &pol->mark, sizeof(x->mark));
  		x->if_id = if_id;
  

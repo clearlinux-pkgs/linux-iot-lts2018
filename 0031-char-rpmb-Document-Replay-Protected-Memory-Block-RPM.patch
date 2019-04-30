@@ -249,10 +249,10 @@ index 0000000..21b7bc8
 +.. kernel-doc:: drivers/char/rpmb/rpmb_sim.c
 +
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 5cb69d7..a387103 100644
+index ace2b39..8fd5cd0 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -12535,6 +12535,7 @@ F:	drivers/char/rpmb/*
+@@ -12541,6 +12541,7 @@ F:	drivers/char/rpmb/*
  F:	include/uapi/linux/rpmb.h
  F:	include/linux/rpmb.h
  F:	Documentation/ABI/testing/sysfs-class-rpmb

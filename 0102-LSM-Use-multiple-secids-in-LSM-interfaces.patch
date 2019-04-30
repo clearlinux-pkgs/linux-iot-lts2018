@@ -993,10 +993,10 @@ index e0b8bf1..6ef1496 100644
  	return err;
  }
 diff --git a/net/xfrm/xfrm_state.c b/net/xfrm/xfrm_state.c
-index 21f7c06..8185378 100644
+index 0278069..ab4bc53 100644
 --- a/net/xfrm/xfrm_state.c
 +++ b/net/xfrm/xfrm_state.c
-@@ -1020,7 +1020,7 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,
+@@ -1028,7 +1028,7 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,
  		x->if_id = if_id;
  
  		error = security_xfrm_state_alloc_acquire(x, pol->security,

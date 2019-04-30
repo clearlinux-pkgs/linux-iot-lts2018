@@ -61,10 +61,10 @@ Tracked-On: PKT-1554
  create mode 100644 include/uapi/linux/cbc/cbc-core.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 7c4de72..3340528 100644
+index d6f6a8d..0b08b12 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -12507,6 +12507,11 @@ L:	linux-serial@vger.kernel.org
+@@ -12513,6 +12513,11 @@ L:	linux-serial@vger.kernel.org
  S:	Odd Fixes
  F:	drivers/tty/serial/rp2.*
  

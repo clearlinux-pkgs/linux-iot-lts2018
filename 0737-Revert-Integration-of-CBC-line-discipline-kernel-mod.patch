@@ -57,10 +57,10 @@ Change-Id: I85f40a78be2752e2781217272dfbad6bd920e8e1
  delete mode 100644 include/uapi/linux/cbc/cbc-core.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index a387103..7c4de72 100644
+index 8fd5cd0..d6f6a8d 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -16271,3 +16271,4 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+@@ -16277,3 +16277,4 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
  S:	Buried alive in reporters
  F:	*
  F:	*/
