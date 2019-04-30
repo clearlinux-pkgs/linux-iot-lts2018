@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.35-base-190425T180029Z
+# quilt.tag:  lts-v4.19.36-base-190429T152313Z
 # config.tag: lts-v4.19.35-base-190425T180029Z
 
 %define ktarget0 iot-lts2018
