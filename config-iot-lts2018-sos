@@ -1,10 +1,10 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.35 Kernel Configuration
+# Linux/x86 4.19.36 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.0.1 20190426 (experimental) gcc-8-branch@270590
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.0.1 20190426 (experimental) gcc-8-branch@270609
 #
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=90001
@@ -5029,6 +5029,7 @@ CONFIG_INTEL_PUNIT_IPC=y
 CONFIG_INTEL_TELEMETRY=y
 # CONFIG_MLX_PLATFORM is not set
 # CONFIG_I2C_MULTI_INSTANTIATE is not set
+# CONFIG_INTEL_ATOMISP2_PM is not set
 CONFIG_PMC_ATOM=y
 CONFIG_INTEL_SOCWATCH=m
 CONFIG_INTEL_SOCWATCH_HV=m
