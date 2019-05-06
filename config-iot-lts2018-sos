@@ -4,10 +4,10 @@
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.0.1 20190426 (experimental) gcc-8-branch@270609
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.1.1 20190506 gcc-9-branch@270891
 #
 CONFIG_CC_IS_GCC=y
-CONFIG_GCC_VERSION=90001
+CONFIG_GCC_VERSION=90101
 CONFIG_CLANG_VERSION=0
 CONFIG_IRQ_WORK=y
 CONFIG_BUILDTIME_EXTABLE_SORT=y
