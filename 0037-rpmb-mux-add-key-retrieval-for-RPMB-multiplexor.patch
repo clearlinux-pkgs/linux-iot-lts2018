@@ -30,7 +30,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/char/rpmb/mux/key_sbl.h
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index f5acf35..d229c65 100644
+index 8b6567f..2b2b708 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -741,6 +741,10 @@

@@ -277,10 +277,10 @@ index 7295fb6..ec19f6c 100644
  			      crtc->base.base.id, crtc->base.name,
  			      enableddisabled(crtc_state->base.active));
 diff --git a/drivers/gpu/drm/i915/intel_fbdev.c b/drivers/gpu/drm/i915/intel_fbdev.c
-index 6f91634..7923f71 100644
+index 2d6506c..310ee7e 100644
 --- a/drivers/gpu/drm/i915/intel_fbdev.c
 +++ b/drivers/gpu/drm/i915/intel_fbdev.c
-@@ -550,10 +550,17 @@ static bool intel_fbdev_init_bios(struct drm_device *dev,
+@@ -548,10 +548,17 @@ static bool intel_fbdev_init_bios(struct drm_device *dev,
  
  	/* Find the largest fb */
  	for_each_crtc(dev, crtc) {

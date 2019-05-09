@@ -28,7 +28,7 @@ Signed-off-by: Stephen Rothwell <sfr@canb.auug.org.au>
  2 files changed, 36 insertions(+)
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index e7deadf..c09f2b4 100644
+index ac149ba..5c538eb 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -3064,6 +3064,14 @@
