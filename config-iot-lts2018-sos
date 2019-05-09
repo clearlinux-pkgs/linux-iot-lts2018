@@ -1,10 +1,10 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.36 Kernel Configuration
+# Linux/x86 4.19.40 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.1.1 20190506 gcc-9-branch@270891
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.1.1 20190508 gcc-9-branch@270996
 #
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=90101
@@ -4981,7 +4981,6 @@ CONFIG_LTE_GDM724X=m
 # Gasket devices
 #
 # CONFIG_STAGING_GASKET_FRAMEWORK is not set
-# CONFIG_XIL_AXIS_FIFO is not set
 # CONFIG_EROFS_FS is not set
 CONFIG_IGB_AVB=m
 CONFIG_X86_PLATFORM_DEVICES=y
