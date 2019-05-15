@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.40-base-190507T004212Z
+# quilt.tag:  lts-v4.19.40-base-190510T192206Z
 # config.tag: lts-v4.19.40-base-190507T004212Z
 
 %define ktarget0 iot-lts2018
@@ -1132,6 +1132,7 @@ Patch1078: 1078-ACRN-hvlog-check-whether-it-s-ACRN-before-init-hvlog.patch
 Patch1079: 1079-fix-possible-nulll-pointer-dereference-in-ACRN-VHM.patch
 Patch1080: 1080-acrn-vhm-HC_ASSIGN_PTDEV-passes-the-bdf-directly-ins.patch
 Patch1081: 1081-drm-i915-gvt-disable-the-preemption-timeout-in-GVT-g.patch
+Patch1082: 1082-Change-keystore-applets-store-path.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2280,6 +2281,7 @@ Linux kernel build files and install script
 %patch1079 -p1
 %patch1080 -p1
 %patch1081 -p1
+%patch1082 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
