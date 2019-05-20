@@ -18,7 +18,7 @@ Version:        4.19.40
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
 %global upstreamnumber         1903221317
-Release:        51
+Release:        52
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -33,7 +33,7 @@ Source5:	fragment-sos
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
 # quilt.tag:  lts-v4.19.40-base-190515T230152Z
-# config.tag: lts-v4.19.40-base-190510T192206Z
+# config.tag: lts-v4.19.40-base-190515T230152Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -2336,7 +2336,7 @@ InstallKernel() {
     cp  ${Target}/arch/x86/boot/bzImage ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
     chmod 755 ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
 
-    echo lts-v4.19.40-base-190510T192206Z > ${KernelDir}/upstream-tag-${Kversion}
+    echo lts-v4.19.40-base-190515T230152Z > ${KernelDir}/upstream-tag-${Kversion}
 
     mkdir -p %{buildroot}/usr/lib/modules
     make O=${Target} -s ARCH=${Arch} INSTALL_MOD_PATH=%{buildroot}/usr modules_install
