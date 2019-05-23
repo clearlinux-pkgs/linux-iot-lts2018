@@ -14,16 +14,16 @@
 #
 
 Name:           linux-iot-lts2018
-Version:        4.19.40
+Version:        4.19.44
 # upstream number is the number from PKT it consist in
 # YYMMDDHHMM a 10 length number
 %global upstreamnumber         1903221317
-Release:        52
+Release:        53
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.40.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.44.tar.xz
 Source1:        config-iot-lts2018
 Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
@@ -33,7 +33,7 @@ Source5:	fragment-sos
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
 # quilt.tag:  lts-v4.19.44-base-190521T054759Z
-# config.tag: lts-v4.19.40-base-190515T230152Z
+# config.tag: lts-v4.19.44-base-190521T054759Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1198,7 +1198,7 @@ Requires:       linux-iot-lts2018-license = %{version}-%{release}
 Linux kernel build files and install script
 
 %prep
-%setup -q -n linux-4.19.40
+%setup -q -n linux-4.19.44
 
 #patchXXXX PK Series
 %patch0001 -p1
@@ -2336,7 +2336,7 @@ InstallKernel() {
     cp  ${Target}/arch/x86/boot/bzImage ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
     chmod 755 ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
 
-    echo lts-v4.19.40-base-190515T230152Z > ${KernelDir}/upstream-tag-${Kversion}
+    echo lts-v4.19.44-base-190521T054759Z > ${KernelDir}/upstream-tag-${Kversion}
 
     mkdir -p %{buildroot}/usr/lib/modules
     make O=${Target} -s ARCH=${Arch} INSTALL_MOD_PATH=%{buildroot}/usr modules_install
