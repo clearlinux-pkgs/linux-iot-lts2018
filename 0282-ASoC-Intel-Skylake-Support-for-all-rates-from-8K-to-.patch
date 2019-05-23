@@ -26,7 +26,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 33 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index ac1eef7..a6901c2 100644
+index 4c85981..07faaa2 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -50,9 +50,8 @@ static const struct snd_pcm_hardware azx_pcm_hw = {
@@ -73,7 +73,7 @@ index ac1eef7..a6901c2 100644
  /*
   * check if the stream opened is marked as ignore_suspend by machine, if so
   * then enable suspend_active refcount
-@@ -246,6 +270,11 @@ static int skl_pcm_open(struct snd_pcm_substream *substream,
+@@ -250,6 +274,11 @@ static int skl_pcm_open(struct snd_pcm_substream *substream,
  
  	skl_set_pcm_constrains(bus, runtime);
  
@@ -85,7 +85,7 @@ index ac1eef7..a6901c2 100644
  	/*
  	 * disable WALLCLOCK timestamps for capture streams
  	 * until we figure out how to handle digital inputs
-@@ -974,7 +1003,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -983,7 +1012,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  		.stream_name = "System Playback",
  		.channels_min = HDA_MONO,
  		.channels_max = HDA_STEREO,

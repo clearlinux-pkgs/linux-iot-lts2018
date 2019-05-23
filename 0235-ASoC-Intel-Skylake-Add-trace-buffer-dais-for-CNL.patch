@@ -18,10 +18,10 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 25 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index d462b1b..dc842e2 100644
+index e3eb142..b02b989 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -742,6 +742,10 @@ static int skl_get_compr_core(struct snd_compr_stream *stream)
+@@ -751,6 +751,10 @@ static int skl_get_compr_core(struct snd_compr_stream *stream)
  		return 0;
  	else if (!strcmp(dai->name, "TraceBuffer1 Pin"))
  		return 1;
@@ -32,7 +32,7 @@ index d462b1b..dc842e2 100644
  	else
  		return INT_MIN;
  }
-@@ -900,7 +904,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -909,7 +913,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  	.compress_new = snd_soc_new_compress,
  	.cops = &skl_trace_compr_ops,
  	.capture = {
@@ -41,7 +41,7 @@ index d462b1b..dc842e2 100644
  		.channels_min = HDA_MONO,
  		.channels_max = HDA_MONO,
  	},
-@@ -915,6 +919,26 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -924,6 +928,26 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  		.channels_max = HDA_MONO,
  	},
  },

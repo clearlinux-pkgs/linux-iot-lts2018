@@ -25,10 +25,10 @@ Tested-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  1 file changed, 41 insertions(+), 44 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 9a3b036..453aa7b 100644
+index a905fe8..ae82438 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -2136,80 +2136,79 @@ int skl_platform_register(struct device *dev)
+@@ -2145,80 +2145,79 @@ int skl_platform_register(struct device *dev)
  	struct hdac_bus *bus = dev_get_drvdata(dev);
  	struct skl *skl = bus_to_skl(bus);
  	struct snd_soc_dai_driver *dais;
@@ -150,7 +150,7 @@ index 9a3b036..453aa7b 100644
  	return ret;
  }
  
-@@ -2226,7 +2225,5 @@ int skl_platform_unregister(struct device *dev)
+@@ -2235,7 +2234,5 @@ int skl_platform_unregister(struct device *dev)
  		}
  	}
  

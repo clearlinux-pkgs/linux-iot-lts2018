@@ -14,10 +14,10 @@ Reviewed-on:
  1 file changed, 15 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index d411cf2..da44617 100644
+index 74ec7e6..d931915 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1111,6 +1111,21 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1120,6 +1120,21 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  		.rates = SNDRV_PCM_RATE_48000,
  		.formats = SNDRV_PCM_FMTBIT_S16_LE,
  	},

@@ -10,10 +10,10 @@ Signed-off-by: Shreyas NC <shreyas.nc@intel.com>
  1 file changed, 8 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 09899a0..ac1eef7 100644
+index 1cceaa5..4c85981 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1325,7 +1325,11 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1334,7 +1334,11 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	 * should be coming from CLT based on endpoints to be supported
  	 */
  	.name = "SDW Pin",
@@ -25,7 +25,7 @@ index 09899a0..ac1eef7 100644
  	.ops = &skl_sdw_dai_ops,
  	.playback = {
  		.stream_name = "SDW Tx",
-@@ -1347,7 +1351,11 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1356,7 +1360,11 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	 * should be coming from CLT based on endpoints to be supported
  	 */
  	.name = "SDW10 Pin",

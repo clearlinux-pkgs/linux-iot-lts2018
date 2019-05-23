@@ -10,10 +10,10 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 22 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 3ac5852..09899a0 100644
+index e684d67..1cceaa5 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1342,6 +1342,28 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1351,6 +1351,28 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  		.formats = SNDRV_PCM_FMTBIT_S16_LE,
  	},
  },

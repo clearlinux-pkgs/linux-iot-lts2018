@@ -10,10 +10,10 @@ Signed-off-by: Yadav, PramodX K <pramodx.k.yadav@intel.com>
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 228f007..3ac5852 100644
+index 97617b9..e684d67 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -983,7 +983,9 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -992,7 +992,9 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  		.stream_name = "System Capture",
  		.channels_min = HDA_MONO,
  		.channels_max = HDA_STEREO,
@@ -24,7 +24,7 @@ index 228f007..3ac5852 100644
  		.formats = SNDRV_PCM_FMTBIT_S16_LE | SNDRV_PCM_FMTBIT_S24_LE,
  		.sig_bits = 32,
  	},
-@@ -1021,7 +1023,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -1030,7 +1032,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  		.stream_name = "Reference Capture",
  		.channels_min = HDA_MONO,
  		.channels_max = HDA_QUAD,

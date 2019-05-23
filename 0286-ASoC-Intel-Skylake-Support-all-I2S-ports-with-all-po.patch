@@ -27,7 +27,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 71 insertions(+), 58 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index a7b8df5..4701d9e 100644
+index 9890374..321f0ca 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -35,6 +35,7 @@
@@ -52,7 +52,7 @@ index a7b8df5..4701d9e 100644
  	.channels_min =		1,
  	.channels_max =		8,
  	.buffer_bytes_max =	AZX_MAX_BUF_SIZE,
-@@ -1006,20 +1008,19 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -1015,20 +1017,19 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  	.playback = {
  		.stream_name = "System Playback",
  		.channels_min = HDA_MONO,
@@ -80,7 +80,7 @@ index a7b8df5..4701d9e 100644
  		.sig_bits = 32,
  	},
  },
-@@ -1172,17 +1173,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1181,17 +1182,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	.ops = &skl_be_ssp_dai_ops,
  	.playback = {
  		.stream_name = "ssp0 Tx",
@@ -108,7 +108,7 @@ index a7b8df5..4701d9e 100644
  	},
  },
  {
-@@ -1190,17 +1193,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1199,17 +1202,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	.ops = &skl_be_ssp_dai_ops,
  	.playback = {
  		.stream_name = "ssp1 Tx",
@@ -136,7 +136,7 @@ index a7b8df5..4701d9e 100644
  	},
  },
  {
-@@ -1208,17 +1213,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1217,17 +1222,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	.ops = &skl_be_ssp_dai_ops,
  	.playback = {
  		.stream_name = "ssp2 Tx",
@@ -164,7 +164,7 @@ index a7b8df5..4701d9e 100644
  	},
  },
  {
-@@ -1226,17 +1233,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1235,17 +1242,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	.ops = &skl_be_ssp_dai_ops,
  	.playback = {
  		.stream_name = "ssp3 Tx",
@@ -192,7 +192,7 @@ index a7b8df5..4701d9e 100644
  	},
  },
  {
-@@ -1244,17 +1253,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1253,17 +1262,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	.ops = &skl_be_ssp_dai_ops,
  	.playback = {
  		.stream_name = "ssp4 Tx",
@@ -220,7 +220,7 @@ index a7b8df5..4701d9e 100644
  	},
  },
  {
-@@ -1262,17 +1273,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1271,17 +1282,19 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	.ops = &skl_be_ssp_dai_ops,
  	.playback = {
  		.stream_name = "ssp5 Tx",

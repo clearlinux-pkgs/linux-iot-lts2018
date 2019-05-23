@@ -32,10 +32,10 @@ index f36c0bb..66d2fd1 100644
    snd-soc-skl-objs += skl-debug.o
  endif
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 06b6163..4cf1c29 100644
+index 7969d6b..7e0d065 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -950,7 +950,9 @@ static const struct snd_soc_dai_ops skl_dmic_dai_ops = {
+@@ -959,7 +959,9 @@ static const struct snd_soc_dai_ops skl_dmic_dai_ops = {
  };
  
  static const struct snd_soc_dai_ops skl_be_ssp_dai_ops = {

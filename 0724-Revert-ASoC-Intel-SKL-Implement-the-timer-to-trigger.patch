@@ -75,7 +75,7 @@ index 111e241..96b0bc3 100644
  					unsigned int mstr_num)
  {
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index eec9120..9a3b036 100644
+index de5e4ff..a905fe8 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -22,7 +22,6 @@
@@ -86,7 +86,7 @@ index eec9120..9a3b036 100644
  #include <sound/pcm_params.h>
  #include <sound/soc.h>
  #include "skl.h"
-@@ -520,19 +519,12 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
+@@ -524,19 +523,12 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
  		struct snd_soc_dai *dai)
  {
  	struct skl *skl = get_skl_ctx(dai->dev);
@@ -107,7 +107,7 @@ index eec9120..9a3b036 100644
  	int ret;
  
  	mconfig = skl_tplg_fe_get_cpr_module(dai, substream->stream);
-@@ -576,25 +568,6 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
+@@ -580,25 +572,6 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
  		ret = skl_decoupled_trigger(substream, cmd);
  		if (ret < 0)
  			return ret;
@@ -133,7 +133,7 @@ index eec9120..9a3b036 100644
  		return skl_run_pipe(ctx, mconfig->pipe);
  		break;
  
-@@ -622,26 +595,6 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
+@@ -626,26 +599,6 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
  							hdac_stream(stream));
  			snd_hdac_ext_stream_decouple(bus, stream, false);
  		}

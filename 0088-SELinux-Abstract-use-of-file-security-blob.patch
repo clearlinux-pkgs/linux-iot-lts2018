@@ -13,7 +13,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  2 files changed, 14 insertions(+), 9 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index fc5a08d..750b69d 100644
+index 5e12777..25715ee 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -397,7 +397,7 @@ static int file_alloc_security(struct file *file)
@@ -25,7 +25,7 @@ index fc5a08d..750b69d 100644
  	file->f_security = NULL;
  	kmem_cache_free(file_security_cache, fsec);
  }
-@@ -1888,7 +1888,7 @@ static int file_has_perm(const struct cred *cred,
+@@ -1910,7 +1910,7 @@ static int file_has_perm(const struct cred *cred,
  			 struct file *file,
  			 u32 av)
  {
@@ -34,7 +34,7 @@ index fc5a08d..750b69d 100644
  	struct inode *inode = file_inode(file);
  	struct common_audit_data ad;
  	u32 sid = cred_sid(cred);
-@@ -2232,7 +2232,7 @@ static int selinux_binder_transfer_file(struct task_struct *from,
+@@ -2254,7 +2254,7 @@ static int selinux_binder_transfer_file(struct task_struct *from,
  					struct file *file)
  {
  	u32 sid = task_sid(to);
@@ -43,7 +43,7 @@ index fc5a08d..750b69d 100644
  	struct dentry *dentry = file->f_path.dentry;
  	struct inode_security_struct *isec;
  	struct common_audit_data ad;
-@@ -3548,7 +3548,7 @@ static int selinux_revalidate_file_permission(struct file *file, int mask)
+@@ -3572,7 +3572,7 @@ static int selinux_revalidate_file_permission(struct file *file, int mask)
  static int selinux_file_permission(struct file *file, int mask)
  {
  	struct inode *inode = file_inode(file);
@@ -52,7 +52,7 @@ index fc5a08d..750b69d 100644
  	struct inode_security_struct *isec;
  	u32 sid = current_sid();
  
-@@ -3583,7 +3583,7 @@ static int ioctl_has_perm(const struct cred *cred, struct file *file,
+@@ -3607,7 +3607,7 @@ static int ioctl_has_perm(const struct cred *cred, struct file *file,
  		u32 requested, u16 cmd)
  {
  	struct common_audit_data ad;
@@ -61,7 +61,7 @@ index fc5a08d..750b69d 100644
  	struct inode *inode = file_inode(file);
  	struct inode_security_struct *isec;
  	struct lsm_ioctlop_audit ioctl;
-@@ -3835,7 +3835,7 @@ static void selinux_file_set_fowner(struct file *file)
+@@ -3859,7 +3859,7 @@ static void selinux_file_set_fowner(struct file *file)
  {
  	struct file_security_struct *fsec;
  
@@ -70,7 +70,7 @@ index fc5a08d..750b69d 100644
  	fsec->fown_sid = current_sid();
  }
  
-@@ -3850,7 +3850,7 @@ static int selinux_file_send_sigiotask(struct task_struct *tsk,
+@@ -3874,7 +3874,7 @@ static int selinux_file_send_sigiotask(struct task_struct *tsk,
  	/* struct fown_struct is never outside the context of a struct file */
  	file = container_of(fown, struct file, f_owner);
  
@@ -79,7 +79,7 @@ index fc5a08d..750b69d 100644
  
  	if (!signum)
  		perm = signal_to_av(SIGIO); /* as per send_sigio_to_task */
-@@ -3874,7 +3874,7 @@ static int selinux_file_open(struct file *file)
+@@ -3898,7 +3898,7 @@ static int selinux_file_open(struct file *file)
  	struct file_security_struct *fsec;
  	struct inode_security_struct *isec;
  
@@ -88,7 +88,7 @@ index fc5a08d..750b69d 100644
  	isec = inode_security(file_inode(file));
  	/*
  	 * Save inode label and policy sequence number
-@@ -4014,7 +4014,7 @@ static int selinux_kernel_module_from_file(struct file *file)
+@@ -4038,7 +4038,7 @@ static int selinux_kernel_module_from_file(struct file *file)
  	ad.type = LSM_AUDIT_DATA_FILE;
  	ad.u.file = file;
  

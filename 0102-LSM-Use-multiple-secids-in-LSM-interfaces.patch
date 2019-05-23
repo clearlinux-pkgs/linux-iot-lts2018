@@ -645,10 +645,10 @@ index b7a2612..88443b8 100644
  		return;
  
 diff --git a/net/netfilter/nf_conntrack_netlink.c b/net/netfilter/nf_conntrack_netlink.c
-index 036207e..5990584 100644
+index 47e5a07..29fa721 100644
 --- a/net/netfilter/nf_conntrack_netlink.c
 +++ b/net/netfilter/nf_conntrack_netlink.c
-@@ -332,8 +332,12 @@ static int ctnetlink_dump_secctx(struct sk_buff *skb, const struct nf_conn *ct)
+@@ -333,8 +333,12 @@ static int ctnetlink_dump_secctx(struct sk_buff *skb, const struct nf_conn *ct)
  	struct nlattr *nest_secctx;
  	int len, ret;
  	char *secctx;
@@ -662,7 +662,7 @@ index 036207e..5990584 100644
  	if (ret)
  		return 0;
  
-@@ -617,8 +621,12 @@ static inline int ctnetlink_secctx_size(const struct nf_conn *ct)
+@@ -620,8 +624,12 @@ static inline int ctnetlink_secctx_size(const struct nf_conn *ct)
  {
  #ifdef CONFIG_NF_CONNTRACK_SECMARK
  	int len, ret;

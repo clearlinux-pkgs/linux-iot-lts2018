@@ -19,10 +19,10 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 7 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 4701d9e..1da4850 100644
+index 321f0ca..b54e28a 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1073,6 +1073,13 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -1082,6 +1082,13 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  		.formats = SNDRV_PCM_FMTBIT_S16_LE | SNDRV_PCM_FMTBIT_S24_LE,
  		.sig_bits = 32,
  	},

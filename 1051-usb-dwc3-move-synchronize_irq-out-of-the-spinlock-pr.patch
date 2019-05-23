@@ -60,7 +60,7 @@ Signed-off-by: Marek Szyprowski <m.szyprowski@samsung.com>
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/usb/dwc3/core.c b/drivers/usb/dwc3/core.c
-index fec9746..3d63bfc 100644
+index 4d5c7dd..05b9ccf 100644
 --- a/drivers/usb/dwc3/core.c
 +++ b/drivers/usb/dwc3/core.c
 @@ -1591,6 +1591,7 @@ static int dwc3_suspend_common(struct dwc3 *dwc, pm_message_t msg)

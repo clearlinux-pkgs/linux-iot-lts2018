@@ -37,7 +37,7 @@ index fdaaafd..4a20d25 100644
  void snd_soc_dapm_shutdown(struct snd_soc_card *card);
  
 diff --git a/sound/soc/soc-dapm.c b/sound/soc/soc-dapm.c
-index 8dbf368..5cf5ec3 100644
+index 864de8e..877ede4 100644
 --- a/sound/soc/soc-dapm.c
 +++ b/sound/soc/soc-dapm.c
 @@ -1456,11 +1456,11 @@ static void dapm_seq_insert(struct snd_soc_dapm_widget *new_widget,
@@ -317,7 +317,7 @@ index 8dbf368..5cf5ec3 100644
  }
  EXPORT_SYMBOL_GPL(snd_soc_dapm_new_widgets);
  
-@@ -4230,7 +4255,7 @@ void snd_soc_dapm_connect_dai_link_widgets(struct snd_soc_card *card)
+@@ -4234,7 +4259,7 @@ void snd_soc_dapm_connect_dai_link_widgets(struct snd_soc_card *card)
  	}
  }
  
@@ -326,7 +326,7 @@ index 8dbf368..5cf5ec3 100644
  	int event)
  {
  	int i;
-@@ -4239,7 +4264,7 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
+@@ -4243,7 +4268,7 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
  	for (i = 0; i < rtd->num_codecs; i++)
  		soc_dapm_dai_stream_event(rtd->codec_dais[i], stream, event);
  
@@ -335,7 +335,7 @@ index 8dbf368..5cf5ec3 100644
  }
  
  /**
-@@ -4253,14 +4278,17 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
+@@ -4257,14 +4282,17 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
   *
   * Returns 0 for success else error.
   */
@@ -356,7 +356,7 @@ index 8dbf368..5cf5ec3 100644
  
  /**
 diff --git a/sound/soc/soc-pcm.c b/sound/soc/soc-pcm.c
-index 2a71d8e..8dc4716 100644
+index 12d798a..a29af81 100644
 --- a/sound/soc/soc-pcm.c
 +++ b/sound/soc/soc-pcm.c
 @@ -831,8 +831,10 @@ static int soc_pcm_prepare(struct snd_pcm_substream *substream)

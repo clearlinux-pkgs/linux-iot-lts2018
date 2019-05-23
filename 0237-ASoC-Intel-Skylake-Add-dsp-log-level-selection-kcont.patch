@@ -123,10 +123,10 @@ index 3336a23..4f88595 100644
  	msg.large_param_id = ENABLE_LOGS;
  	msg.param_data_size = sizeof(log_msg);
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index dc842e2..388397d 100644
+index b02b989..764e4dd 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1753,6 +1753,17 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
+@@ -1762,6 +1762,17 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
  	return 0;
  }
  
@@ -144,7 +144,7 @@ index dc842e2..388397d 100644
  static const struct snd_soc_component_driver skl_component  = {
  	.name		= "pcm",
  	.probe		= skl_platform_soc_probe,
-@@ -1760,6 +1771,8 @@ static const struct snd_soc_component_driver skl_component  = {
+@@ -1769,6 +1780,8 @@ static const struct snd_soc_component_driver skl_component  = {
  	.compr_ops	= &skl_platform_compr_ops,
  	.pcm_new	= skl_pcm_new,
  	.pcm_free	= skl_pcm_free,

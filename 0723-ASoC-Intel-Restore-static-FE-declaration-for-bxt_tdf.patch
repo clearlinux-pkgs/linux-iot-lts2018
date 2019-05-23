@@ -233,10 +233,10 @@ index 77cbd98..4ceb348 100644
  #endif
  	{},
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index f886dc8..eec9120 100644
+index 01981c1..de5e4ff 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1021,6 +1021,167 @@ struct skl_dsp_notify_ops cb_ops = {
+@@ -1030,6 +1030,167 @@ struct skl_dsp_notify_ops cb_ops = {
  };
  
  static struct snd_soc_dai_driver skl_fe_dai[] = {

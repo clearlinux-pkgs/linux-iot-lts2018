@@ -539,10 +539,10 @@ index 0000000..46b5e04
 +MODULE_ALIAS("platform:gpmrb_machine");
 +MODULE_ALIAS("platform:bxt_tdf8532");
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index ec0cb11..7cbf1ee 100644
+index 6e170b3..b3bef03 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -997,6 +997,19 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -1006,6 +1006,19 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  		.formats = SNDRV_PCM_FMTBIT_S32_LE,
  	}
  },
@@ -562,7 +562,7 @@ index ec0cb11..7cbf1ee 100644
  {
  	.name = "Dirana Cp Pin",
  	.ops = &skl_pcm_dai_ops,
-@@ -1388,7 +1401,8 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -1397,7 +1410,8 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  
  /* BE cpu dais and compress dais*/
  static struct snd_soc_dai_driver skl_platform_dai[] = {

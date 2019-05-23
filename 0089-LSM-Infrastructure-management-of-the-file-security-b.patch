@@ -186,7 +186,7 @@ index b491c50..0bc7796 100644
  	return rc;
  }
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 750b69d..0f2ddc6 100644
+index 25715ee..20598dc 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -149,7 +149,6 @@ static int __init checkreqprot_setup(char *str)
@@ -226,7 +226,7 @@ index 750b69d..0f2ddc6 100644
  static int superblock_alloc_security(struct super_block *sb)
  {
  	struct superblock_security_struct *sbsec;
-@@ -3570,11 +3557,6 @@ static int selinux_file_alloc_security(struct file *file)
+@@ -3594,11 +3581,6 @@ static int selinux_file_alloc_security(struct file *file)
  	return file_alloc_security(file);
  }
  
@@ -238,7 +238,7 @@ index 750b69d..0f2ddc6 100644
  /*
   * Check whether a task has the ioctl permission and cmd
   * operation to an inode.
-@@ -6878,6 +6860,7 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
+@@ -6902,6 +6884,7 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
  
  struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_cred = sizeof(struct task_security_struct),
@@ -246,7 +246,7 @@ index 750b69d..0f2ddc6 100644
  };
  
  static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
-@@ -6948,7 +6931,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -6972,7 +6955,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  
  	LSM_HOOK_INIT(file_permission, selinux_file_permission),
  	LSM_HOOK_INIT(file_alloc_security, selinux_file_alloc_security),
@@ -254,7 +254,7 @@ index 750b69d..0f2ddc6 100644
  	LSM_HOOK_INIT(file_ioctl, selinux_file_ioctl),
  	LSM_HOOK_INIT(mmap_file, selinux_mmap_file),
  	LSM_HOOK_INIT(mmap_addr, selinux_mmap_addr),
-@@ -7151,9 +7133,6 @@ static __init int selinux_init(void)
+@@ -7175,9 +7157,6 @@ static __init int selinux_init(void)
  	sel_inode_cache = kmem_cache_create("selinux_inode_security",
  					    sizeof(struct inode_security_struct),
  					    0, SLAB_PANIC, NULL);

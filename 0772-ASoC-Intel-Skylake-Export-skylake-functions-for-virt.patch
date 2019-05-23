@@ -31,10 +31,10 @@ index 96b0bc3..814b6a5 100644
  int skl_init_dsp(struct skl *skl)
  {
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 453aa7b..7bc37e2 100644
+index ae82438..a692f48 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1624,7 +1624,7 @@ int skl_dai_load(struct snd_soc_component *cmp, int index,
+@@ -1633,7 +1633,7 @@ int skl_dai_load(struct snd_soc_component *cmp, int index,
  	return 0;
  }
  
@@ -43,7 +43,7 @@ index 453aa7b..7bc37e2 100644
  {
  	struct snd_soc_pcm_runtime *rtd = substream->private_data;
  	struct snd_soc_dai_link *dai_link = rtd->dai_link;
-@@ -1636,6 +1636,7 @@ static int skl_platform_open(struct snd_pcm_substream *substream)
+@@ -1645,6 +1645,7 @@ static int skl_platform_open(struct snd_pcm_substream *substream)
  
  	return 0;
  }
@@ -51,7 +51,7 @@ index 453aa7b..7bc37e2 100644
  
  static int skl_coupled_trigger(struct snd_pcm_substream *substream,
  					int cmd)
-@@ -1710,7 +1711,7 @@ static int skl_coupled_trigger(struct snd_pcm_substream *substream,
+@@ -1719,7 +1720,7 @@ static int skl_coupled_trigger(struct snd_pcm_substream *substream,
  	return 0;
  }
  
@@ -60,7 +60,7 @@ index 453aa7b..7bc37e2 100644
  					int cmd)
  {
  	struct hdac_bus *bus = get_bus_ctx(substream);
-@@ -1720,6 +1721,7 @@ static int skl_platform_pcm_trigger(struct snd_pcm_substream *substream,
+@@ -1729,6 +1730,7 @@ static int skl_platform_pcm_trigger(struct snd_pcm_substream *substream,
  
  	return 0;
  }
@@ -68,7 +68,7 @@ index 453aa7b..7bc37e2 100644
  
  /* update SPIB register with appl position */
  static int skl_platform_ack(struct snd_pcm_substream *substream)
-@@ -1856,14 +1858,15 @@ static const struct snd_pcm_ops skl_platform_ops = {
+@@ -1865,14 +1867,15 @@ static const struct snd_pcm_ops skl_platform_ops = {
  	.ack = skl_platform_ack,
  };
  
@@ -86,7 +86,7 @@ index 453aa7b..7bc37e2 100644
  {
  	struct snd_soc_dai *dai = rtd->cpu_dai;
  	struct hdac_bus *bus = dev_get_drvdata(dai->dev);
-@@ -1890,6 +1893,7 @@ static int skl_pcm_new(struct snd_soc_pcm_runtime *rtd)
+@@ -1899,6 +1902,7 @@ static int skl_pcm_new(struct snd_soc_pcm_runtime *rtd)
  
  	return retval;
  }
@@ -94,7 +94,7 @@ index 453aa7b..7bc37e2 100644
  
  static int skl_get_module_info(struct skl *skl, struct skl_module_cfg *mconfig)
  {
-@@ -2009,7 +2013,7 @@ static int skl_get_probe_widget(struct snd_soc_component *component,
+@@ -2018,7 +2022,7 @@ static int skl_get_probe_widget(struct snd_soc_component *component,
  	return 0;
  }
  
@@ -103,7 +103,7 @@ index 453aa7b..7bc37e2 100644
  {
  	struct hdac_bus *bus = dev_get_drvdata(component->dev);
  	struct skl *skl = bus_to_skl(bus);
-@@ -2086,6 +2090,7 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
+@@ -2095,6 +2099,7 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
  
  	return 0;
  }

@@ -165,7 +165,7 @@ index a1d9c84..111e241 100644
  {
  	struct skl_monitor *monitor_dsp = container_of(work,
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 2aedbc2..f886dc8 100644
+index 080a5b6..01981c1 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -189,7 +189,6 @@ int skl_pcm_host_dma_prepare(struct device *dev, struct skl_pipe_params *params)
@@ -176,7 +176,7 @@ index 2aedbc2..f886dc8 100644
  
  	stream = stream_to_hdac_ext_stream(hstream);
  	snd_hdac_ext_stream_decouple(bus, stream, true);
-@@ -374,7 +373,6 @@ static int skl_pcm_hw_params(struct snd_pcm_substream *substream,
+@@ -378,7 +377,6 @@ static int skl_pcm_hw_params(struct snd_pcm_substream *substream,
  	p_params.host_dma_id = dma_id;
  	p_params.stream = substream->stream;
  	p_params.format = params_format(params);

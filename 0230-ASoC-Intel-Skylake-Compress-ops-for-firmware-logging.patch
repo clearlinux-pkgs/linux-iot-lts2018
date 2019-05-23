@@ -66,7 +66,7 @@ index a9eaa4a..d012198 100644
  #define NOTIFICATION_MASK 0xf
  
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index f27b718..284e34f 100644
+index 80480eb..7745b33 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -29,6 +29,7 @@
@@ -77,7 +77,7 @@ index f27b718..284e34f 100644
  
  #define HDA_MONO 1
  #define HDA_STEREO 2
-@@ -724,6 +725,141 @@ static void skl_sdw_shutdown(struct snd_pcm_substream *substream,
+@@ -733,6 +734,141 @@ static void skl_sdw_shutdown(struct snd_pcm_substream *substream,
  	pm_runtime_put_autosuspend(dai->dev);
  }
  
@@ -219,7 +219,7 @@ index f27b718..284e34f 100644
  static const struct snd_soc_dai_ops skl_pcm_dai_ops = {
  	.startup = skl_pcm_open,
  	.shutdown = skl_pcm_close,
-@@ -758,6 +894,26 @@ static struct snd_soc_dai_ops skl_sdw_dai_ops = {
+@@ -767,6 +903,26 @@ static struct snd_soc_dai_ops skl_sdw_dai_ops = {
  };
  
  static struct snd_soc_dai_driver skl_fe_dai[] = {
@@ -246,7 +246,7 @@ index f27b718..284e34f 100644
  {
  	.name = "System Pin",
  	.ops = &skl_pcm_dai_ops,
-@@ -1576,6 +1732,7 @@ static const struct snd_soc_component_driver skl_component  = {
+@@ -1585,6 +1741,7 @@ static const struct snd_soc_component_driver skl_component  = {
  	.name		= "pcm",
  	.probe		= skl_platform_soc_probe,
  	.ops		= &skl_platform_ops,

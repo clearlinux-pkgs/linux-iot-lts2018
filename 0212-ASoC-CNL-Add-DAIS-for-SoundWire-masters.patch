@@ -19,10 +19,10 @@ Reviewed-on:
  2 files changed, 52 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index da44617..f27b718 100644
+index d931915..80480eb 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1096,6 +1096,7 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1105,6 +1105,7 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	 * should be coming from CLT based on endpoints to be supported
  	 */
  	.name = "SDW Pin",
@@ -30,7 +30,7 @@ index da44617..f27b718 100644
  	.ops = &skl_sdw_dai_ops,
  	.playback = {
  		.stream_name = "SDW Tx",
-@@ -1118,6 +1119,7 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1127,6 +1128,7 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	 */
  	.name = "SDW PDM Pin",
  	.ops = &skl_sdw_dai_ops,
@@ -38,7 +38,7 @@ index da44617..f27b718 100644
  	.capture = {
  		.stream_name = "SDW Rx1",
  		.channels_min = HDA_MONO,
-@@ -1125,8 +1127,50 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1134,8 +1136,50 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  		.rates = SNDRV_PCM_RATE_48000,
  		.formats = SNDRV_PCM_FMTBIT_S16_LE,
  	},

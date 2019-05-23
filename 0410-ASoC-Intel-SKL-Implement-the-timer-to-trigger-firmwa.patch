@@ -74,7 +74,7 @@ index c6d9cb3..5fb1093 100644
  					unsigned int mstr_num)
  {
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index cd036f5..bee7c5e 100644
+index 7b83ee7..a231514 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -22,6 +22,7 @@
@@ -85,7 +85,7 @@ index cd036f5..bee7c5e 100644
  #include <sound/pcm_params.h>
  #include <sound/soc.h>
  #include "skl.h"
-@@ -519,12 +520,19 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
+@@ -523,12 +524,19 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
  		struct snd_soc_dai *dai)
  {
  	struct skl *skl = get_skl_ctx(dai->dev);
@@ -106,7 +106,7 @@ index cd036f5..bee7c5e 100644
  	int ret;
  
  	mconfig = skl_tplg_fe_get_cpr_module(dai, substream->stream);
-@@ -554,7 +562,7 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
+@@ -558,7 +566,7 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
  							stream->lpib);
  			snd_hdac_ext_stream_set_lpib(stream, stream->lpib);
  			if (runtime->no_rewinds)
@@ -115,7 +115,7 @@ index cd036f5..bee7c5e 100644
  						stream, stream->spib);
  		}
  	case SNDRV_PCM_TRIGGER_START:
-@@ -568,6 +576,25 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
+@@ -572,6 +580,25 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
  		ret = skl_decoupled_trigger(substream, cmd);
  		if (ret < 0)
  			return ret;
@@ -141,7 +141,7 @@ index cd036f5..bee7c5e 100644
  		return skl_run_pipe(ctx, mconfig->pipe);
  		break;
  
-@@ -595,6 +622,26 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
+@@ -599,6 +626,26 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
  							hdac_stream(stream));
  			snd_hdac_ext_stream_decouple(bus, stream, false);
  		}

@@ -30,7 +30,7 @@ index 86f6e1d..c5ee108 100644
  
  ifdef CONFIG_DEBUG_FS
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index ab31d6a..d411cf2 100644
+index fcd9523..74ec7e6 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -28,6 +28,7 @@
@@ -41,7 +41,7 @@ index ab31d6a..d411cf2 100644
  
  #define HDA_MONO 1
  #define HDA_STEREO 2
-@@ -662,6 +663,67 @@ static int skl_link_hw_free(struct snd_pcm_substream *substream,
+@@ -671,6 +672,67 @@ static int skl_link_hw_free(struct snd_pcm_substream *substream,
  	return 0;
  }
  
@@ -109,7 +109,7 @@ index ab31d6a..d411cf2 100644
  static const struct snd_soc_dai_ops skl_pcm_dai_ops = {
  	.startup = skl_pcm_open,
  	.shutdown = skl_pcm_close,
-@@ -686,6 +748,15 @@ static const struct snd_soc_dai_ops skl_link_dai_ops = {
+@@ -695,6 +757,15 @@ static const struct snd_soc_dai_ops skl_link_dai_ops = {
  	.trigger = skl_link_pcm_trigger,
  };
  
@@ -125,7 +125,7 @@ index ab31d6a..d411cf2 100644
  static struct snd_soc_dai_driver skl_fe_dai[] = {
  {
  	.name = "System Pin",
-@@ -1019,6 +1090,29 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1028,6 +1099,29 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  		.rates = SNDRV_PCM_RATE_48000,
  		.formats = SNDRV_PCM_FMTBIT_S16_LE,
  	},

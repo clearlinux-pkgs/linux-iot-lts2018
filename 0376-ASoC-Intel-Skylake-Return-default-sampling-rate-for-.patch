@@ -22,10 +22,10 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 14 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 889fd86..4679bf9 100644
+index 7e226d1..9172492 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -877,6 +877,8 @@ static int skl_trace_compr_tstamp(struct snd_compr_stream *stream,
+@@ -886,6 +886,8 @@ static int skl_trace_compr_tstamp(struct snd_compr_stream *stream,
  		return -EINVAL;
  
  	tstamp->copied_total = skl_dsp_log_avail(sst, core);
@@ -34,7 +34,7 @@ index 889fd86..4679bf9 100644
  	return 0;
  }
  
-@@ -1359,6 +1361,9 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1368,6 +1370,9 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  		.stream_name = "TraceBuffer0 Capture",
  		.channels_min = HDA_MONO,
  		.channels_max = HDA_MONO,
@@ -44,7 +44,7 @@ index 889fd86..4679bf9 100644
  	},
  },
  {
-@@ -1369,6 +1374,9 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1378,6 +1383,9 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  		.stream_name = "TraceBuffer1 Capture",
  		.channels_min = HDA_MONO,
  		.channels_max = HDA_MONO,
@@ -54,7 +54,7 @@ index 889fd86..4679bf9 100644
  	},
  },
  {
-@@ -1379,6 +1387,9 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1388,6 +1396,9 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  		.stream_name = "TraceBuffer2 Capture",
  		.channels_min = HDA_MONO,
  		.channels_max = HDA_MONO,
@@ -64,7 +64,7 @@ index 889fd86..4679bf9 100644
  	},
  },
  {
-@@ -1389,6 +1400,9 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1398,6 +1409,9 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  		.stream_name = "TraceBuffer3 Capture",
  		.channels_min = HDA_MONO,
  		.channels_max = HDA_MONO,

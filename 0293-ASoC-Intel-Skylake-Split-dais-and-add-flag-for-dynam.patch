@@ -25,10 +25,10 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 59 insertions(+), 59 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 1da4850..7ac209d 100644
+index b54e28a..23f457b 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -962,46 +962,6 @@ static struct snd_soc_dai_ops skl_sdw_dai_ops = {
+@@ -971,46 +971,6 @@ static struct snd_soc_dai_ops skl_sdw_dai_ops = {
  };
  
  static struct snd_soc_dai_driver skl_fe_dai[] = {
@@ -75,7 +75,7 @@ index 1da4850..7ac209d 100644
  {
  	.name = "System Pin",
  	.ops = &skl_pcm_dai_ops,
-@@ -1081,24 +1041,6 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -1090,24 +1050,6 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  		.formats = SNDRV_PCM_FMTBIT_S16_LE | SNDRV_PCM_FMTBIT_S24_LE,
  	},
  },
@@ -100,7 +100,7 @@ index 1da4850..7ac209d 100644
  {
  	.name = "LowLatency Pin",
  	.ops = &skl_pcm_dai_ops,
-@@ -1173,7 +1115,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -1182,7 +1124,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  },
  };
  
@@ -109,7 +109,7 @@ index 1da4850..7ac209d 100644
  static struct snd_soc_dai_driver skl_platform_dai[] = {
  {
  	.name = "SSP0 Pin",
-@@ -1485,6 +1427,64 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1494,6 +1436,64 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	},
  
  },

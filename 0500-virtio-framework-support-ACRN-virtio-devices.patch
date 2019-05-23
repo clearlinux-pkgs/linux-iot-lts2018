@@ -48,10 +48,10 @@ index 3589764..51d43fd 100644
 +
  endif # VIRTIO_MENU
 diff --git a/drivers/virtio/virtio_pci_common.c b/drivers/virtio/virtio_pci_common.c
-index 465a6f5..9bb79f5 100644
+index 45b04bc..770de55 100644
 --- a/drivers/virtio/virtio_pci_common.c
 +++ b/drivers/virtio/virtio_pci_common.c
-@@ -494,6 +494,35 @@ static const struct dev_pm_ops virtio_pci_pm_ops = {
+@@ -496,6 +496,35 @@ static const struct dev_pm_ops virtio_pci_pm_ops = {
  /* Qumranet donated their vendor ID for devices 0x1000 thru 0x10FF. */
  static const struct pci_device_id virtio_pci_id_table[] = {
  	{ PCI_DEVICE(PCI_VENDOR_ID_REDHAT_QUMRANET, PCI_ANY_ID) },

@@ -15,10 +15,10 @@ Reviewed-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  1 file changed, 156 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 4cf1c29..9a2fffa 100644
+index 7e0d065..e941784 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1172,6 +1172,92 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -1181,6 +1181,92 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  			SNDRV_PCM_FMTBIT_S24_LE | SNDRV_PCM_FMTBIT_S32_LE,
  	},
  },
@@ -111,7 +111,7 @@ index 4cf1c29..9a2fffa 100644
  {
  	.name = "Echoref Pin",
  	.ops = &skl_pcm_dai_ops,
-@@ -1315,6 +1401,76 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
+@@ -1324,6 +1410,76 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
  	},
  },
  #endif

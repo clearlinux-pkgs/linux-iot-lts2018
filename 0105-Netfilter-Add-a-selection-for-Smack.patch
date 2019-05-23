@@ -143,10 +143,10 @@ index 2542e65..c4b12c7 100644
  			} else {
  				audit_log_format(ab, " obj=%s", ctx);
 diff --git a/net/netfilter/nf_conntrack_netlink.c b/net/netfilter/nf_conntrack_netlink.c
-index 5990584..c98bacf 100644
+index 29fa721..64aebd3 100644
 --- a/net/netfilter/nf_conntrack_netlink.c
 +++ b/net/netfilter/nf_conntrack_netlink.c
-@@ -334,8 +334,13 @@ static int ctnetlink_dump_secctx(struct sk_buff *skb, const struct nf_conn *ct)
+@@ -335,8 +335,13 @@ static int ctnetlink_dump_secctx(struct sk_buff *skb, const struct nf_conn *ct)
  	char *secctx;
  	struct secids secid;
  
@@ -160,7 +160,7 @@ index 5990584..c98bacf 100644
  
  	ret = security_secid_to_secctx(&secid, &secctx, &len);
  	if (ret)
-@@ -623,8 +628,13 @@ static inline int ctnetlink_secctx_size(const struct nf_conn *ct)
+@@ -626,8 +631,13 @@ static inline int ctnetlink_secctx_size(const struct nf_conn *ct)
  	int len, ret;
  	struct secids secid;
  
@@ -412,7 +412,7 @@ index 72c2b7c..e0651d3 100644
  {
  	return call_int_hook(tun_dev_alloc_security, 0, security);
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 4862725..59c2857 100644
+index 8b1f894..c2c3538 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -50,6 +50,7 @@
@@ -423,7 +423,7 @@ index 4862725..59c2857 100644
  #include <linux/tty.h>
  #include <net/icmp.h>
  #include <net/ip.h>		/* for local_port_range[] */
-@@ -5360,13 +5361,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
+@@ -5384,13 +5385,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
  			    PACKET__RELABELTO, NULL);
  }
  

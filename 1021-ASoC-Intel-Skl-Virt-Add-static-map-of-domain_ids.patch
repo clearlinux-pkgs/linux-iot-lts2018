@@ -21,10 +21,10 @@ Tested-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  4 files changed, 35 insertions(+), 7 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 7cbf1ee..efb36d5 100644
+index b3bef03..229958f 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1402,7 +1402,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -1411,7 +1411,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  /* BE cpu dais and compress dais*/
  static struct snd_soc_dai_driver skl_platform_dai[] = {
  #if IS_ENABLED(CONFIG_SND_SOC_INTEL_BXT_SOS_TDF8532_MACH) || \

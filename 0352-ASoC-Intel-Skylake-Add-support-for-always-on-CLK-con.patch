@@ -182,10 +182,10 @@ index cf3d381..742b0cb 100644
  *skl_get_ep_blob(struct skl *skl, u32 instance, u8 link_type,
  			u8 s_fmt, u8 num_ch, u32 s_rate,
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 1a722d2..7fda668 100644
+index 32c97d4..9424a76 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1845,6 +1845,10 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
+@@ -1854,6 +1854,10 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
  			dev_err(component->dev, "Failed to boot first fw: %d\n", ret);
  			return ret;
  		}

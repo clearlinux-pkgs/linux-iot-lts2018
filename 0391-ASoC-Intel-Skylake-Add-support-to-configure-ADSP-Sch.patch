@@ -98,10 +98,10 @@ index 84acb06..b97255b 100644
  
  enum skl_bitdepth skl_get_bit_depth(int params)
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 8702f0c..cd036f5 100644
+index 4d68c6a..7b83ee7 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1872,14 +1872,14 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
+@@ -1881,14 +1881,14 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
  			return ret;
  		}
  

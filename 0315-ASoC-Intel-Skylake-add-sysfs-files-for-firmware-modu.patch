@@ -39,10 +39,10 @@ index f4ebdce..54bd83e 100644
  
  	kfree(ctx->cores.state);
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 265992e..361b85b 100644
+index 1457e35..2da571f 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1954,6 +1954,9 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
+@@ -1963,6 +1963,9 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
  		}
  
  		skl_get_probe_widget(component, skl);

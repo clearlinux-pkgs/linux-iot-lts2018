@@ -468,10 +468,10 @@ index 0000000..4cb4573
 +MODULE_AUTHOR("Intel Corporation");
 +MODULE_LICENSE("Dual BSD/GPL");
 diff --git a/drivers/virtio/virtio_pci_common.c b/drivers/virtio/virtio_pci_common.c
-index 9bb79f5..b7654a9 100644
+index 770de55..338a43c 100644
 --- a/drivers/virtio/virtio_pci_common.c
 +++ b/drivers/virtio/virtio_pci_common.c
-@@ -522,6 +522,10 @@ static const struct pci_device_id virtio_pci_id_table[] = {
+@@ -524,6 +524,10 @@ static const struct pci_device_id virtio_pci_id_table[] = {
  
  #define ACRN_VIRTIO_DEVICE_ID_COREU 0x8608
  	{ PCI_DEVICE(PCI_VENDOR_ID_INTEL, ACRN_VIRTIO_DEVICE_ID_COREU) },

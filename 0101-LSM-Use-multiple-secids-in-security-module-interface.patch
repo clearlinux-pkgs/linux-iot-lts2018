@@ -833,10 +833,10 @@ index fd958c7..45750bb 100644
  }
  #endif /* CONFIG_AUDIT */
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index d48a0ca..0a93bbc 100644
+index 4ff3586..c76b439 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
-@@ -3437,15 +3437,15 @@ static int selinux_inode_listsecurity(struct inode *inode, char *buffer, size_t
+@@ -3461,15 +3461,15 @@ static int selinux_inode_listsecurity(struct inode *inode, char *buffer, size_t
  	return len;
  }
  
@@ -855,7 +855,7 @@ index d48a0ca..0a93bbc 100644
  	struct task_security_struct *tsec;
  	struct cred *new_creds = *new;
  
-@@ -3457,8 +3457,8 @@ static int selinux_inode_copy_up(struct dentry *src, struct cred **new)
+@@ -3481,8 +3481,8 @@ static int selinux_inode_copy_up(struct dentry *src, struct cred **new)
  
  	tsec = selinux_cred(new_creds);
  	/* Get label from overlay inode and set it in create_sid */
@@ -866,7 +866,7 @@ index d48a0ca..0a93bbc 100644
  	*new = new_creds;
  	return 0;
  }
-@@ -3875,28 +3875,28 @@ static void selinux_cred_transfer(struct cred *new, const struct cred *old)
+@@ -3899,28 +3899,28 @@ static void selinux_cred_transfer(struct cred *new, const struct cred *old)
  	*tsec = *old_tsec;
  }
  
@@ -900,7 +900,7 @@ index d48a0ca..0a93bbc 100644
  		tsec->create_sid = 0;
  		tsec->keycreate_sid = 0;
  		tsec->sockcreate_sid = 0;
-@@ -4022,9 +4022,9 @@ static int selinux_task_getsid(struct task_struct *p)
+@@ -4046,9 +4046,9 @@ static int selinux_task_getsid(struct task_struct *p)
  			    PROCESS__GETSESSION, NULL);
  }
  
@@ -912,7 +912,7 @@ index d48a0ca..0a93bbc 100644
  }
  
  static int selinux_task_setnice(struct task_struct *p, int nice)
-@@ -5049,7 +5049,9 @@ static int selinux_socket_getpeersec_stream(struct socket *sock,
+@@ -5073,7 +5073,9 @@ static int selinux_socket_getpeersec_stream(struct socket *sock,
  	return err;
  }
  
@@ -923,7 +923,7 @@ index d48a0ca..0a93bbc 100644
  {
  	u32 peer_secid = SECSID_NULL;
  	u16 family;
-@@ -5071,7 +5073,7 @@ static int selinux_socket_getpeersec_dgram(struct socket *sock, struct sk_buff *
+@@ -5095,7 +5097,7 @@ static int selinux_socket_getpeersec_dgram(struct socket *sock, struct sk_buff *
  		selinux_skb_peerlbl_sid(skb, family, &peer_secid);
  
  out:
@@ -932,7 +932,7 @@ index d48a0ca..0a93bbc 100644
  	if (peer_secid == SECSID_NULL)
  		return -EINVAL;
  	return 0;
-@@ -5108,14 +5110,14 @@ static void selinux_sk_clone_security(const struct sock *sk, struct sock *newsk)
+@@ -5132,14 +5134,14 @@ static void selinux_sk_clone_security(const struct sock *sk, struct sock *newsk)
  	selinux_netlbl_sk_security_reset(newsksec);
  }
  
@@ -950,7 +950,7 @@ index d48a0ca..0a93bbc 100644
  	}
  }
  
-@@ -5354,7 +5356,7 @@ static void selinux_inet_conn_established(struct sock *sk, struct sk_buff *skb)
+@@ -5378,7 +5380,7 @@ static void selinux_inet_conn_established(struct sock *sk, struct sk_buff *skb)
  	selinux_skb_peerlbl_sid(skb, family, &sksec->peer_sid);
  }
  
@@ -959,7 +959,7 @@ index d48a0ca..0a93bbc 100644
  {
  	const struct task_security_struct *__tsec;
  	u32 tsid;
-@@ -5363,8 +5365,8 @@ static int selinux_secmark_relabel_packet(u32 sid)
+@@ -5387,8 +5389,8 @@ static int selinux_secmark_relabel_packet(u32 sid)
  	tsid = __tsec->sid;
  
  	return avc_has_perm(&selinux_state,
@@ -970,7 +970,7 @@ index d48a0ca..0a93bbc 100644
  }
  
  static void selinux_secmark_refcount_inc(void)
-@@ -5380,7 +5382,7 @@ static void selinux_secmark_refcount_dec(void)
+@@ -5404,7 +5406,7 @@ static void selinux_secmark_refcount_dec(void)
  static void selinux_req_classify_flow(const struct request_sock *req,
  				      struct flowi *fl)
  {
@@ -979,7 +979,7 @@ index d48a0ca..0a93bbc 100644
  }
  
  static int selinux_tun_dev_alloc_security(void **security)
-@@ -6205,10 +6207,11 @@ static int selinux_ipc_permission(struct kern_ipc_perm *ipcp, short flag)
+@@ -6229,10 +6231,11 @@ static int selinux_ipc_permission(struct kern_ipc_perm *ipcp, short flag)
  	return ipc_has_perm(ipcp, av);
  }
  
@@ -993,7 +993,7 @@ index d48a0ca..0a93bbc 100644
  }
  
  static void selinux_d_instantiate(struct dentry *dentry, struct inode *inode)
-@@ -6414,16 +6417,18 @@ static int selinux_ismaclabel(const char *name)
+@@ -6438,16 +6441,18 @@ static int selinux_ismaclabel(const char *name)
  	return (strcmp(name, XATTR_SELINUX_SUFFIX) == 0);
  }
  

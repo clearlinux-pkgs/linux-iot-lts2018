@@ -62,10 +62,10 @@ index b2873dd..cf3d381 100644
 +	}
 +}
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index c1ddf5c..96c912b 100644
+index 6ad9937..80fa279 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1117,126 +1117,6 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
+@@ -1126,126 +1126,6 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
  
  /* BE cpu dais and compress dais*/
  static struct snd_soc_dai_driver skl_platform_dai[] = {
@@ -192,7 +192,7 @@ index c1ddf5c..96c912b 100644
  {
  	.name = "iDisp1 Pin",
  	.ops = &skl_link_dai_ops,
-@@ -1994,40 +1874,101 @@ static const struct snd_soc_component_driver skl_component  = {
+@@ -2003,40 +1883,101 @@ static const struct snd_soc_component_driver skl_component  = {
  	.num_controls	= ARRAY_SIZE(skl_controls),
  };
  

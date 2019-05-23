@@ -85,10 +85,10 @@ index 31384af..dc648b7 100644
  #define NOTIFICATION_MASK 0xf
  
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 96c912b..ac9f67c 100644
+index 80fa279..5a2985b 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -847,6 +847,12 @@ static int skl_trace_compr_set_params(struct snd_compr_stream *stream,
+@@ -856,6 +856,12 @@ static int skl_trace_compr_set_params(struct snd_compr_stream *stream,
  		return ret;
  	}
  

@@ -102,10 +102,10 @@ index d0d60d7..02b3aad 100644
  	/* Set DMA clock controls */
  	return skl_dsp_set_dma_clk_controls(skl->skl_sst);
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 8209c95..889fd86 100644
+index 4cd5778..7e226d1 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
-@@ -1852,6 +1852,12 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
+@@ -1861,6 +1861,12 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
  			return ret;
  		}
  

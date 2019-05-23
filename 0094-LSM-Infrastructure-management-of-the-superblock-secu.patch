@@ -105,7 +105,7 @@ index 9620309..378b8d4 100644
  
  int security_sb_copy_data(char *orig, char *copy)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index b1b0ec2..bbaf7af 100644
+index 7470e25..a8cb29c 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -333,7 +333,8 @@ static struct inode_security_struct *backing_inode_security(struct dentry *dentr
@@ -150,16 +150,16 @@ index b1b0ec2..bbaf7af 100644
  static inline int inode_doinit(struct inode *inode)
  {
  	return inode_doinit_with_dentry(inode, NULL);
-@@ -457,7 +446,7 @@ static int may_context_mount_inode_relabel(u32 sid,
+@@ -470,7 +459,7 @@ static int selinux_is_genfs_special_handling(struct super_block *sb)
  
  static int selinux_is_sblabel_mnt(struct super_block *sb)
  {
 -	struct superblock_security_struct *sbsec = sb->s_security;
 +	struct superblock_security_struct *sbsec = selinux_superblock(sb);
  
- 	return sbsec->behavior == SECURITY_FS_USE_XATTR ||
- 		sbsec->behavior == SECURITY_FS_USE_TRANS ||
-@@ -476,7 +465,7 @@ static int selinux_is_sblabel_mnt(struct super_block *sb)
+ 	/*
+ 	 * IMPORTANT: Double-check logic in this function when adding a new
+@@ -498,7 +487,7 @@ static int selinux_is_sblabel_mnt(struct super_block *sb)
  
  static int sb_finish_set_opts(struct super_block *sb)
  {
@@ -168,7 +168,7 @@ index b1b0ec2..bbaf7af 100644
  	struct dentry *root = sb->s_root;
  	struct inode *root_inode = d_backing_inode(root);
  	int rc = 0;
-@@ -559,7 +548,7 @@ static int selinux_get_mnt_opts(const struct super_block *sb,
+@@ -581,7 +570,7 @@ static int selinux_get_mnt_opts(const struct super_block *sb,
  				struct security_mnt_opts *opts)
  {
  	int rc = 0, i;
@@ -177,7 +177,7 @@ index b1b0ec2..bbaf7af 100644
  	char *context = NULL;
  	u32 len;
  	char tmp;
-@@ -680,7 +669,7 @@ static int selinux_set_mnt_opts(struct super_block *sb,
+@@ -702,7 +691,7 @@ static int selinux_set_mnt_opts(struct super_block *sb,
  {
  	const struct cred *cred = current_cred();
  	int rc = 0, i;
@@ -186,7 +186,7 @@ index b1b0ec2..bbaf7af 100644
  	const char *name = sb->s_type->name;
  	struct dentry *root = sbsec->sb->s_root;
  	struct inode_security_struct *root_isec;
-@@ -934,8 +923,8 @@ static int selinux_set_mnt_opts(struct super_block *sb,
+@@ -956,8 +945,8 @@ static int selinux_set_mnt_opts(struct super_block *sb,
  static int selinux_cmp_sb_context(const struct super_block *oldsb,
  				    const struct super_block *newsb)
  {
@@ -197,7 +197,7 @@ index b1b0ec2..bbaf7af 100644
  	char oldflags = old->flags & SE_MNTMASK;
  	char newflags = new->flags & SE_MNTMASK;
  
-@@ -967,8 +956,9 @@ static int selinux_sb_clone_mnt_opts(const struct super_block *oldsb,
+@@ -989,8 +978,9 @@ static int selinux_sb_clone_mnt_opts(const struct super_block *oldsb,
  					unsigned long *set_kern_flags)
  {
  	int rc = 0;
@@ -209,7 +209,7 @@ index b1b0ec2..bbaf7af 100644
  
  	int set_fscontext =	(oldsbsec->flags & FSCONTEXT_MNT);
  	int set_context =	(oldsbsec->flags & CONTEXT_MNT);
-@@ -1502,7 +1492,7 @@ static int inode_doinit_with_dentry(struct inode *inode, struct dentry *opt_dent
+@@ -1524,7 +1514,7 @@ static int inode_doinit_with_dentry(struct inode *inode, struct dentry *opt_dent
  	if (isec->sclass == SECCLASS_FILE)
  		isec->sclass = inode_mode_to_security_class(inode->i_mode);
  
@@ -218,7 +218,7 @@ index b1b0ec2..bbaf7af 100644
  	if (!(sbsec->flags & SE_SBINITIALIZED)) {
  		/* Defer initialization until selinux_complete_init,
  		   after the initial policy is loaded and the security
-@@ -1892,7 +1882,8 @@ selinux_determine_inode_label(const struct task_security_struct *tsec,
+@@ -1914,7 +1904,8 @@ selinux_determine_inode_label(const struct task_security_struct *tsec,
  				 const struct qstr *name, u16 tclass,
  				 u32 *_new_isid)
  {
@@ -228,7 +228,7 @@ index b1b0ec2..bbaf7af 100644
  
  	if ((sbsec->flags & SE_SBINITIALIZED) &&
  	    (sbsec->behavior == SECURITY_FS_USE_MNTPOINT)) {
-@@ -1923,7 +1914,7 @@ static int may_create(struct inode *dir,
+@@ -1945,7 +1936,7 @@ static int may_create(struct inode *dir,
  	int rc;
  
  	dsec = inode_security(dir);
@@ -237,7 +237,7 @@ index b1b0ec2..bbaf7af 100644
  
  	sid = tsec->sid;
  
-@@ -2072,7 +2063,7 @@ static int superblock_has_perm(const struct cred *cred,
+@@ -2094,7 +2085,7 @@ static int superblock_has_perm(const struct cred *cred,
  	struct superblock_security_struct *sbsec;
  	u32 sid = cred_sid(cred);
  
@@ -246,7 +246,7 @@ index b1b0ec2..bbaf7af 100644
  	return avc_has_perm(&selinux_state,
  			    sid, sbsec->sid, SECCLASS_FILESYSTEM, perms, ad);
  }
-@@ -2703,11 +2694,6 @@ static int selinux_sb_alloc_security(struct super_block *sb)
+@@ -2725,11 +2716,6 @@ static int selinux_sb_alloc_security(struct super_block *sb)
  	return superblock_alloc_security(sb);
  }
  
@@ -258,7 +258,7 @@ index b1b0ec2..bbaf7af 100644
  static inline int match_prefix(char *prefix, int plen, char *option, int olen)
  {
  	if (plen > olen)
-@@ -2804,7 +2790,7 @@ static int selinux_sb_remount(struct super_block *sb, void *data)
+@@ -2826,7 +2812,7 @@ static int selinux_sb_remount(struct super_block *sb, void *data)
  	int rc, i, *flags;
  	struct security_mnt_opts opts;
  	char *secdata, **mount_options;
@@ -267,7 +267,7 @@ index b1b0ec2..bbaf7af 100644
  
  	if (!(sbsec->flags & SE_SBINITIALIZED))
  		return 0;
-@@ -2998,7 +2984,7 @@ static int selinux_inode_init_security(struct inode *inode, struct inode *dir,
+@@ -3020,7 +3006,7 @@ static int selinux_inode_init_security(struct inode *inode, struct inode *dir,
  	int rc;
  	char *context;
  
@@ -276,7 +276,7 @@ index b1b0ec2..bbaf7af 100644
  
  	newsid = tsec->create_sid;
  
-@@ -3235,7 +3221,7 @@ static int selinux_inode_setxattr(struct dentry *dentry, const char *name,
+@@ -3259,7 +3245,7 @@ static int selinux_inode_setxattr(struct dentry *dentry, const char *name,
  		return dentry_has_perm(current_cred(), dentry, FILE__SETATTR);
  	}
  
@@ -285,7 +285,7 @@ index b1b0ec2..bbaf7af 100644
  	if (!(sbsec->flags & SBLABEL_MNT))
  		return -EOPNOTSUPP;
  
-@@ -6836,6 +6822,7 @@ struct lsm_blob_sizes selinux_blob_sizes = {
+@@ -6860,6 +6846,7 @@ struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_cred = sizeof(struct task_security_struct),
  	.lbs_file = sizeof(struct file_security_struct),
  	.lbs_inode = sizeof(struct inode_security_struct),
@@ -293,7 +293,7 @@ index b1b0ec2..bbaf7af 100644
  };
  
  static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
-@@ -6861,7 +6848,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -6885,7 +6872,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(bprm_committed_creds, selinux_bprm_committed_creds),
  
  	LSM_HOOK_INIT(sb_alloc_security, selinux_sb_alloc_security),
