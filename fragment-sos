@@ -57,8 +57,6 @@ CONFIG_SLAB_FREELIST_HARDENED=y
 
 # Guard pages for kernel stacks
 CONFIG_VMAP_STACK=y
-# TODO: Fixme we need to delete the next line
-# CONFIG_VMAP_STACK is not set
 
 # Perform extensive checks on reference counting
 CONFIG_REFCOUNT_FULL=y
