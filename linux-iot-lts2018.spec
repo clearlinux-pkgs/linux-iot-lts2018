@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.44-base-190521T054759Z
+# quilt.tag:  lts-v4.19.44-base-190524T175309Z
 # config.tag: lts-v4.19.44-base-190521T054759Z
 
 %define ktarget0 iot-lts2018
@@ -1134,6 +1134,8 @@ Patch1080: 1080-acrn-vhm-HC_ASSIGN_PTDEV-passes-the-bdf-directly-ins.patch
 Patch1081: 1081-drm-i915-gvt-disable-the-preemption-timeout-in-GVT-g.patch
 Patch1082: 1082-Change-keystore-applets-store-path.patch
 Patch1083: 1083-ASoC-Intel-Skylake-make-function-static-inline.patch
+Patch1084: 1084-SoC-Intel-Skylake-BXT-Stop-polling-FwStauts-after-ha.patch
+Patch1085: 1085-ASoC-Intel-Skylake-BXT-read-FwStatus-and-ErrorCode-b.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2284,6 +2286,8 @@ Linux kernel build files and install script
 %patch1081 -p1
 %patch1082 -p1
 %patch1083 -p1
+%patch1084 -p1
+%patch1085 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
