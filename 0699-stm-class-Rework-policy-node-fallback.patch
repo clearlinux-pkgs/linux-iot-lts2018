@@ -32,10 +32,10 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  3 files changed, 55 insertions(+), 44 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/core.c b/drivers/hwtracing/stm/core.c
-index 9d55e10..94f51f5 100644
+index 9ec9197..27b778d 100644
 --- a/drivers/hwtracing/stm/core.c
 +++ b/drivers/hwtracing/stm/core.c
-@@ -296,15 +296,15 @@ static int stm_output_assign(struct stm_device *stm, unsigned int width,
+@@ -295,15 +295,15 @@ static int stm_output_assign(struct stm_device *stm, unsigned int width,
  	if (width > stm->data->sw_nchannels)
  		return -EINVAL;
  
@@ -60,7 +60,7 @@ index 9d55e10..94f51f5 100644
  
  	spin_lock(&stm->mc_lock);
  	spin_lock(&output->lock);
-@@ -408,19 +408,30 @@ static int stm_char_release(struct inode *inode, struct file *file)
+@@ -407,19 +407,30 @@ static int stm_char_release(struct inode *inode, struct file *file)
  	return 0;
  }
  
@@ -99,7 +99,7 @@ index 9d55e10..94f51f5 100644
  }
  
  static ssize_t notrace stm_write(struct stm_data *data, unsigned int master,
-@@ -458,16 +469,21 @@ static ssize_t stm_char_write(struct file *file, const char __user *buf,
+@@ -457,16 +468,21 @@ static ssize_t stm_char_write(struct file *file, const char __user *buf,
  		count = PAGE_SIZE - 1;
  
  	/*
@@ -125,7 +125,7 @@ index 9d55e10..94f51f5 100644
  			return err;
  	}
  
-@@ -553,6 +569,7 @@ static int stm_char_policy_set_ioctl(struct stm_file *stmf, void __user *arg)
+@@ -552,6 +568,7 @@ static int stm_char_policy_set_ioctl(struct stm_file *stmf, void __user *arg)
  {
  	struct stm_device *stm = stmf->stm;
  	struct stp_policy_id *id;
@@ -133,7 +133,7 @@ index 9d55e10..94f51f5 100644
  	int ret = -EINVAL, wlimit = 1;
  	u32 size;
  
-@@ -587,7 +604,9 @@ static int stm_char_policy_set_ioctl(struct stm_file *stmf, void __user *arg)
+@@ -586,7 +603,9 @@ static int stm_char_policy_set_ioctl(struct stm_file *stmf, void __user *arg)
  	if (id->width < 1 || id->width > wlimit)
  		goto err_free;
  
@@ -144,7 +144,7 @@ index 9d55e10..94f51f5 100644
  	if (ret)
  		goto err_free;
  
-@@ -823,8 +842,8 @@ EXPORT_SYMBOL_GPL(stm_unregister_device);
+@@ -822,8 +841,8 @@ EXPORT_SYMBOL_GPL(stm_unregister_device);
  static int stm_source_link_add(struct stm_source_device *src,
  			       struct stm_device *stm)
  {
@@ -155,7 +155,7 @@ index 9d55e10..94f51f5 100644
  
  	mutex_lock(&stm->link_mutex);
  	spin_lock(&stm->link_lock);
-@@ -838,19 +857,13 @@ static int stm_source_link_add(struct stm_source_device *src,
+@@ -837,19 +856,13 @@ static int stm_source_link_add(struct stm_source_device *src,
  	spin_unlock(&stm->link_lock);
  	mutex_unlock(&stm->link_mutex);
  

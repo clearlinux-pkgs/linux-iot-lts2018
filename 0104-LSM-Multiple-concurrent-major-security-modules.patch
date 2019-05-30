@@ -215,10 +215,10 @@ index b17201e..a10d549 100644
 +
  #endif /* _LINUX_PRCTL_H */
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 64ef113..4e139b4 100644
+index 69874db..0365185 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
-@@ -1832,6 +1832,9 @@ static __latent_entropy struct task_struct *copy_process(
+@@ -1857,6 +1857,9 @@ static __latent_entropy struct task_struct *copy_process(
  	p->sequential_io	= 0;
  	p->sequential_io_avg	= 0;
  #endif

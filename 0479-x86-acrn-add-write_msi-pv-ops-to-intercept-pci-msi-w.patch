@@ -155,7 +155,7 @@ index af24ed5..7819037 100644
  	struct pci_dev *dev = msi_desc_to_pci_dev(entry);
  
 diff --git a/drivers/pci/pci.h b/drivers/pci/pci.h
-index 6e0d152..d3fe892 100644
+index ab25752..246fe9e 100644
 --- a/drivers/pci/pci.h
 +++ b/drivers/pci/pci.h
 @@ -168,6 +168,8 @@ static inline void pci_msix_clear_and_set_ctrl(struct pci_dev *dev, u16 clear, u

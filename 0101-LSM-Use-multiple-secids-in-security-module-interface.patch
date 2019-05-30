@@ -490,7 +490,7 @@ index 4a397cd..782ee19 100644
  	audit_info->sessionid = audit_get_sessionid(current);
  }
 diff --git a/net/xfrm/xfrm_policy.c b/net/xfrm/xfrm_policy.c
-index bf5d592..e0b8bf1 100644
+index ce1b262..777cda0 100644
 --- a/net/xfrm/xfrm_policy.c
 +++ b/net/xfrm/xfrm_policy.c
 @@ -1082,7 +1082,8 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
@@ -522,7 +522,7 @@ index bf5d592..e0b8bf1 100644
  	return err;
  }
 diff --git a/net/xfrm/xfrm_state.c b/net/xfrm/xfrm_state.c
-index 3f729cd..0278069 100644
+index 11e09eb..8136240 100644
 --- a/net/xfrm/xfrm_state.c
 +++ b/net/xfrm/xfrm_state.c
 @@ -1027,7 +1027,8 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,

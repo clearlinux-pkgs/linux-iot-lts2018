@@ -19,10 +19,10 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  3 files changed, 318 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/core.c b/drivers/hwtracing/stm/core.c
-index 94f51f5..c4551b1 100644
+index 27b778d..1aca60d 100644
 --- a/drivers/hwtracing/stm/core.c
 +++ b/drivers/hwtracing/stm/core.c
-@@ -319,11 +319,26 @@ static int stm_output_assign(struct stm_device *stm, unsigned int width,
+@@ -318,11 +318,26 @@ static int stm_output_assign(struct stm_device *stm, unsigned int width,
  	output->master = midx;
  	output->channel = cidx;
  	output->nr_chans = width;
@@ -49,7 +49,7 @@ index 94f51f5..c4551b1 100644
  	spin_unlock(&output->lock);
  	spin_unlock(&stm->mc_lock);
  
-@@ -336,6 +351,8 @@ static void stm_output_free(struct stm_device *stm, struct stm_output *output)
+@@ -335,6 +350,8 @@ static void stm_output_free(struct stm_device *stm, struct stm_output *output)
  	spin_lock(&output->lock);
  	if (output->nr_chans)
  		stm_output_disclaim(stm, output);
@@ -58,7 +58,7 @@ index 94f51f5..c4551b1 100644
  	spin_unlock(&output->lock);
  	spin_unlock(&stm->mc_lock);
  }
-@@ -352,6 +369,127 @@ static int major_match(struct device *dev, const void *data)
+@@ -351,6 +368,127 @@ static int major_match(struct device *dev, const void *data)
  	return MAJOR(dev->devt) == major;
  }
  
@@ -186,7 +186,7 @@ index 94f51f5..c4551b1 100644
  static int stm_char_open(struct inode *inode, struct file *file)
  {
  	struct stm_file *stmf;
-@@ -1181,6 +1319,8 @@ static int __init stm_core_init(void)
+@@ -1180,6 +1318,8 @@ static int __init stm_core_init(void)
  		goto err_src;
  
  	init_srcu_struct(&stm_source_srcu);

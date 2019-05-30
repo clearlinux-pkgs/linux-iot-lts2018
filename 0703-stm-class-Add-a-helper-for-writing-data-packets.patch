@@ -16,10 +16,10 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  2 files changed, 41 insertions(+), 13 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/core.c b/drivers/hwtracing/stm/core.c
-index c4551b1..7fc3259 100644
+index 1aca60d..0747adc 100644
 --- a/drivers/hwtracing/stm/core.c
 +++ b/drivers/hwtracing/stm/core.c
-@@ -572,27 +572,52 @@ stm_assign_first_policy(struct stm_device *stm, struct stm_output *output,
+@@ -571,27 +571,52 @@ stm_assign_first_policy(struct stm_device *stm, struct stm_output *output,
  	return err;
  }
  

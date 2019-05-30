@@ -36,10 +36,10 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  create mode 100644 lib/memcat_p.c
 
 diff --git a/lib/Makefile b/lib/Makefile
-index 02f5f81..df0eeb6 100644
+index 722e4ec..baa21aa 100644
 --- a/lib/Makefile
 +++ b/lib/Makefile
-@@ -24,7 +24,7 @@ lib-y := ctype.o string.o vsprintf.o cmdline.o \
+@@ -35,7 +35,7 @@ lib-y := ctype.o string.o vsprintf.o cmdline.o \
  	 flex_proportions.o ratelimit.o show_mem.o \
  	 is_single_threaded.o plist.o decompress.o kobject_uevent.o \
  	 earlycpio.o seq_buf.o siphash.o dec_and_lock.o \

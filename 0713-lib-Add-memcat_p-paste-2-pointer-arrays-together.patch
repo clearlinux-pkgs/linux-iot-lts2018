@@ -64,10 +64,10 @@ index 3dea52f..dfd9fd0 100644
  
  config MEMTEST
 diff --git a/lib/Makefile b/lib/Makefile
-index 4238764..02f5f81 100644
+index 0ab8083..722e4ec 100644
 --- a/lib/Makefile
 +++ b/lib/Makefile
-@@ -71,6 +71,7 @@ obj-$(CONFIG_TEST_UUID) += test_uuid.o
+@@ -82,6 +82,7 @@ obj-$(CONFIG_TEST_UUID) += test_uuid.o
  obj-$(CONFIG_TEST_PARMAN) += test_parman.o
  obj-$(CONFIG_TEST_KMOD) += test_kmod.o
  obj-$(CONFIG_TEST_DEBUG_VIRTUAL) += test_debug_virtual.o

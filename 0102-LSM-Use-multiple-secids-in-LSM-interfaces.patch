@@ -962,7 +962,7 @@ index f601933..6e38c86 100644
  #else
  static inline void unix_get_secdata(struct scm_cookie *scm, struct sk_buff *skb)
 diff --git a/net/xfrm/xfrm_policy.c b/net/xfrm/xfrm_policy.c
-index e0b8bf1..6ef1496 100644
+index 777cda0..7de46bf 100644
 --- a/net/xfrm/xfrm_policy.c
 +++ b/net/xfrm/xfrm_policy.c
 @@ -1083,7 +1083,7 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
@@ -993,7 +993,7 @@ index e0b8bf1..6ef1496 100644
  	return err;
  }
 diff --git a/net/xfrm/xfrm_state.c b/net/xfrm/xfrm_state.c
-index 0278069..ab4bc53 100644
+index 8136240..3f6edf9 100644
 --- a/net/xfrm/xfrm_state.c
 +++ b/net/xfrm/xfrm_state.c
 @@ -1028,7 +1028,7 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,

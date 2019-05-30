@@ -62,7 +62,7 @@ index c980dfe..9842e21 100644
     :maxdepth: 1
  
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index 81d77b1..732acea 100644
+index f999e8b..bf2086a 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -140,9 +140,13 @@ struct pid_entry {
@@ -89,7 +89,7 @@ index 81d77b1..732acea 100644
  				      (char*)file->f_path.dentry->d_name.name,
  				      &p);
  	put_task_struct(task);
-@@ -2562,7 +2566,9 @@ static ssize_t proc_pid_attr_write(struct file * file, const char __user * buf,
+@@ -2567,7 +2571,9 @@ static ssize_t proc_pid_attr_write(struct file * file, const char __user * buf,
  	if (rv < 0)
  		goto out_free;
  
@@ -100,7 +100,7 @@ index 81d77b1..732acea 100644
  	mutex_unlock(&current->signal->cred_guard_mutex);
  out_free:
  	kfree(page);
-@@ -2576,13 +2582,53 @@ static const struct file_operations proc_pid_attr_operations = {
+@@ -2581,13 +2587,53 @@ static const struct file_operations proc_pid_attr_operations = {
  	.llseek		= generic_file_llseek,
  };
  

@@ -90,10 +90,10 @@ index eea9db8..12ebc4f 100644
 +EXPORT_SYMBOL(acrn_setup_intr_irq);
 +EXPORT_SYMBOL(acrn_remove_intr_irq);
 diff --git a/arch/x86/entry/entry_64.S b/arch/x86/entry/entry_64.S
-index 617df50..d2305aa 100644
+index c90e00d..1244d03 100644
 --- a/arch/x86/entry/entry_64.S
 +++ b/arch/x86/entry/entry_64.S
-@@ -1151,6 +1151,11 @@ apicinterrupt3 HYPERV_STIMER0_VECTOR \
+@@ -1167,6 +1167,11 @@ apicinterrupt3 HYPERV_STIMER0_VECTOR \
  	hv_stimer0_callback_vector hv_stimer0_vector_handler
  #endif /* CONFIG_HYPERV */
  
@@ -103,7 +103,7 @@ index 617df50..d2305aa 100644
 +#endif
 +
  idtentry debug			do_debug		has_error_code=0	paranoid=1 shift_ist=DEBUG_STACK
- idtentry int3			do_int3			has_error_code=0
+ idtentry int3			do_int3			has_error_code=0	create_gap=1
  idtentry stack_segment		do_stack_segment	has_error_code=1
 diff --git a/arch/x86/include/asm/acrnhyper.h b/arch/x86/include/asm/acrnhyper.h
 new file mode 100644
