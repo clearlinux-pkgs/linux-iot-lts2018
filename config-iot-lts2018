@@ -8033,7 +8033,7 @@ CONFIG_KEYSTORE=m
 # CONFIG_MANIFEST is not set
 # CONFIG_ABL_PARAMETERS is not set
 # CONFIG_ABL_CMDLINE is not set
-CONFIG_DAL_KEYSTORE_APPLET_PATH="/var/lib/intel/dal/applets/Keystore.pack"
+CONFIG_DAL_KEYSTORE_APPLET_PATH="/usr/lib/dal/applets/Keystore.pack"
 CONFIG_DAL_KEYSTORE_APPLET_ID="c12452f0adc640a78623708f0f4f0e52"
 # CONFIG_INTEGRITY is not set
 
