@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.46-base-190529T174924Z
+# quilt.tag:  lts-v4.19.46-base-190605T223425Z
 # config.tag: lts-v4.19.46-base-190529T174924Z
 
 %define ktarget0 iot-lts2018
@@ -1136,6 +1136,19 @@ Patch1082: 1082-Change-keystore-applets-store-path.patch
 Patch1083: 1083-ASoC-Intel-Skylake-make-function-static-inline.patch
 Patch1084: 1084-SoC-Intel-Skylake-BXT-Stop-polling-FwStauts-after-ha.patch
 Patch1085: 1085-ASoC-Intel-Skylake-BXT-read-FwStatus-and-ErrorCode-b.patch
+Patch1086: 1086-ASoC-Intel-Fix-generation-of-crash-dump-info-from-DS.patch
+Patch1087: 1087-ASoC-Intel-Skylake-Fix-readout-of-log-buffer.patch
+Patch1088: 1088-ASoC-Intel-read-DSP-stack-dump-from-specific-core-on.patch
+Patch1089: 1089-ASoC-Intel-Read-remainder-of-stack-dump.patch
+Patch1090: 1090-ASoC-Intel-Look-for-stack-header-during-crashdump.patch
+Patch1091: 1091-ASoC-Intel-Skl-Virt-FE-snd-card-registration-notific.patch
+Patch1092: 1092-ASoC-Intel-Skl-Virt-Initialize-list-of-streams-at-st.patch
+Patch1093: 1093-ASoC-Intel-Skl-Virt-Handle-VQ-callback-in-thread-con.patch
+Patch1094: 1094-ASoC-Intel-Skl-FE-Atomic-period-elapsed-implementati.patch
+Patch1095: 1095-ASoC-Intel-Skl-Virt-Synchronous-topology-load.patch
+Patch1096: 1096-ASoC-Intel-Skl-Virt-Load-audio-firmware-over-virtio.patch
+Patch1097: 1097-ASoC-Intel-Use-high-priority-workqueue-for-kwork.patch
+Patch1098: 1098-dma-buf-hyper_dmabuf-fix-vq-out-of-range-issue.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2288,6 +2301,19 @@ Linux kernel build files and install script
 %patch1083 -p1
 %patch1084 -p1
 %patch1085 -p1
+%patch1086 -p1
+%patch1087 -p1
+%patch1088 -p1
+%patch1089 -p1
+%patch1090 -p1
+%patch1091 -p1
+%patch1092 -p1
+%patch1093 -p1
+%patch1094 -p1
+%patch1095 -p1
+%patch1096 -p1
+%patch1097 -p1
+%patch1098 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
