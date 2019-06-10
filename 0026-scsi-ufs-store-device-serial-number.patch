@@ -36,7 +36,7 @@ index 348471f..febed20 100644
  
  /**
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index b03301b..5e977df 100644
+index 26111ca..540f69d 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
 @@ -43,6 +43,7 @@

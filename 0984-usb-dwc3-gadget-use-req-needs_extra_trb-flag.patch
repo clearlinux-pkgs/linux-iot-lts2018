@@ -15,7 +15,7 @@ Signed-off-by: Nikunj A. Dadhania <nikunj.dadhania@intel.com>
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/drivers/usb/dwc3/gadget.c b/drivers/usb/dwc3/gadget.c
-index c3294a2..b28409e 100644
+index 34327d1..3de593f 100644
 --- a/drivers/usb/dwc3/gadget.c
 +++ b/drivers/usb/dwc3/gadget.c
 @@ -178,8 +178,7 @@ static void dwc3_gadget_del_and_unmap_request(struct dwc3_ep *dep,

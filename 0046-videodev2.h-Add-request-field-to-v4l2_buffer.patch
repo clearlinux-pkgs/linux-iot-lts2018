@@ -107,7 +107,7 @@ index 6481212..2226539 100644
  
  	if (V4L2_TYPE_IS_MULTIPLANAR(type)) {
 diff --git a/include/media/videobuf2-core.h b/include/media/videobuf2-core.h
-index f6818f7..aba09ce 100644
+index bddd86c..cd00489 100644
 --- a/include/media/videobuf2-core.h
 +++ b/include/media/videobuf2-core.h
 @@ -516,6 +516,7 @@ struct vb2_queue {

@@ -34,7 +34,7 @@ index 0de78cb..24f0b10 100644
  	struct list_head	started_list;
  
 diff --git a/drivers/usb/dwc3/gadget.c b/drivers/usb/dwc3/gadget.c
-index b90c5c1..d763c41 100644
+index 3d4bcba..1a77099 100644
 --- a/drivers/usb/dwc3/gadget.c
 +++ b/drivers/usb/dwc3/gadget.c
 @@ -2171,6 +2171,7 @@ static int dwc3_gadget_init_endpoint(struct dwc3 *dwc, u8 epnum)

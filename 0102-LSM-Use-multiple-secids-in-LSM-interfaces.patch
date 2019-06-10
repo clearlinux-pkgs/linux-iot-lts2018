@@ -443,10 +443,10 @@ index 214e149..246a472 100644
  extern int audit_filter(int msgtype, unsigned int listtype);
  
 diff --git a/kernel/auditfilter.c b/kernel/auditfilter.c
-index bf309f2..d3e60ed 100644
+index 425c67e..013fc75 100644
 --- a/kernel/auditfilter.c
 +++ b/kernel/auditfilter.c
-@@ -1323,7 +1323,7 @@ int audit_filter(int msgtype, unsigned int listtype)
+@@ -1325,7 +1325,7 @@ int audit_filter(int msgtype, unsigned int listtype)
  		for (i = 0; i < e->rule.field_count; i++) {
  			struct audit_field *f = &e->rule.fields[i];
  			pid_t pid;
@@ -455,7 +455,7 @@ index bf309f2..d3e60ed 100644
  
  			switch (f->type) {
  			case AUDIT_PID:
-@@ -1354,7 +1354,7 @@ int audit_filter(int msgtype, unsigned int listtype)
+@@ -1356,7 +1356,7 @@ int audit_filter(int msgtype, unsigned int listtype)
  			case AUDIT_SUBJ_CLR:
  				if (f->lsm_rule) {
  					security_task_getsecid(current, &sid);

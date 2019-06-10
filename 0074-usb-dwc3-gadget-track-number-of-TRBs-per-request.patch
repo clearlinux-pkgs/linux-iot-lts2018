@@ -33,7 +33,7 @@ index 4872cba..0de78cb 100644
  	unsigned		direction:1;
  	unsigned		mapped:1;
 diff --git a/drivers/usb/dwc3/gadget.c b/drivers/usb/dwc3/gadget.c
-index 00bad3a..a4b14d3 100644
+index 58e1231..4cec1e1 100644
 --- a/drivers/usb/dwc3/gadget.c
 +++ b/drivers/usb/dwc3/gadget.c
 @@ -1044,6 +1044,8 @@ static void dwc3_prepare_one_trb(struct dwc3_ep *dep,

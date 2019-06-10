@@ -1059,7 +1059,7 @@ index a0b4653..99bac3c 100644
  
  static inline void selinux_xfrm_notify_policyload(void)
 diff --git a/security/selinux/netlabel.c b/security/selinux/netlabel.c
-index c40914a..efc87a7 100644
+index d684257..b8e44b1 100644
 --- a/security/selinux/netlabel.c
 +++ b/security/selinux/netlabel.c
 @@ -122,7 +122,7 @@ static struct netlbl_lsm_secattr *selinux_netlbl_sock_getattr(

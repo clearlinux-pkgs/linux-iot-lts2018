@@ -74,7 +74,7 @@ index c3bcaae..348471f 100644
  
  /**
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 6e80dfe..5e30ee4 100644
+index 3183fa8..6a26476 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
 @@ -305,16 +305,6 @@ static void ufshcd_scsi_block_requests(struct ufs_hba *hba)
