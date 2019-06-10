@@ -1,14 +1,15 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.46 Kernel Configuration
+# Linux/x86 4.19.48 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.1.1 20190605 gcc-9-branch@271943
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.1.1 20190609 gcc-9-branch@272097
 #
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=90101
 CONFIG_CLANG_VERSION=0
+CONFIG_CC_HAS_ASM_GOTO=y
 CONFIG_IRQ_WORK=y
 CONFIG_BUILDTIME_EXTABLE_SORT=y
 CONFIG_THREAD_INFO_IN_TASK=y
