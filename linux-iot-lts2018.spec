@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.46-base-190605T223425Z
+# quilt.tag:  lts-v4.19.48-base-190608T002049Z
 # config.tag: lts-v4.19.46-base-190605T223425Z
 
 %define ktarget0 iot-lts2018
@@ -1101,54 +1101,53 @@ Patch1047: 1047-media-intel-ipu4-remove-verbose-logging-during-build.patch
 Patch1048: 1048-media-pci-Fix-improper-use-of-pointer-before-check.patch
 Patch1049: 1049-media-pci-improper-use-of-pointer-before-verified-as.patch
 Patch1050: 1050-ipu-dma-Fix-possible-NULL-pointer-dereference.patch
-Patch1051: 1051-usb-dwc3-move-synchronize_irq-out-of-the-spinlock-pr.patch
-Patch1052: 1052-ipu-mmu.c-Fix-possible-null-pointer-dereference.patch
-Patch1053: 1053-media-pci-Check-pointer-validity-before-use.patch
-Patch1054: 1054-media-intel-ipu4-VIRT-Handle-open-pipeline-ERROR-whe.patch
-Patch1055: 1055-media-intel-ipu4-VIRT-Fix-psys-mediation-build.patch
-Patch1056: 1056-media-i2c-ici-platform-Fix-for-build-warning.patch
-Patch1057: 1057-ipu4-Added-IPU-hang-recovery.patch
-Patch1058: 1058-media-intel-ipu4-Extended-error-recovery-for-multist.patch
-Patch1059: 1059-media-intel-ipu4-Send-recovery-error-signal-to-users.patch
-Patch1060: 1060-media-intel-ipu4-Generate-error-signal-only-for-faul.patch
-Patch1061: 1061-SoC-Intel-Fix-memory-leak-cnl_sdw_bra_pipe_cfg_pb-fu.patch
-Patch1062: 1062-ASoC-Intel-Skl-Virt-Fix-panic-issue-on-HW-pos-update.patch
-Patch1063: 1063-ASoC-Intel-Skl-Virt-Remove-support-for-DSP-IPC-on-FE.patch
-Patch1064: 1064-ASoC-Intel-Skl-Virt-Fix-panic-during-tplg-initializa.patch
-Patch1065: 1065-ASoC-Intel-Skl-Virt-Don-t-duplicate-VBS-audio-client.patch
-Patch1066: 1066-ASoC-Intel-Skl-Virt-Fix-NULL-ptr-in-pcm_close-on-SOS.patch
-Patch1067: 1067-ASoC-Intel-Skl-Virt-Fix-logic-of-vbe_skl_pcm_close_a.patch
-Patch1068: 1068-ASoC-Intel-Skl-Virt-Cleanup-static-analysis-issues.patch
-Patch1069: 1069-drm-i915-Removing-dead_code-from-function-block.patch
-Patch1070: 1070-acrn-fix-used-uninitialized-warning.patch
-Patch1071: 1071-gpio-virtio-frontend-driver.patch
-Patch1072: 1072-add-an-IRQ-chip-to-gpio-virtio-GPIO-chip.patch
-Patch1073: 1073-ASoC-Intel-Skl-Virt-Check-NULL-ptr-on-virual-FE-atta.patch
-Patch1074: 1074-ASoC-Intel-Skl-Virt-Handle-FE-notifications-in-separ.patch
-Patch1075: 1075-ASoC-Intel-Skl-Virt-Increase-reply-timeout-for-PCM-t.patch
-Patch1076: 1076-ASoC-Intel-Skl-Virt-Do-not-update-locked-streams.patch
-Patch1077: 1077-drm-i915-Remove-unused-function-causing-GCC-compilat.patch
-Patch1078: 1078-ACRN-hvlog-check-whether-it-s-ACRN-before-init-hvlog.patch
-Patch1079: 1079-fix-possible-nulll-pointer-dereference-in-ACRN-VHM.patch
-Patch1080: 1080-acrn-vhm-HC_ASSIGN_PTDEV-passes-the-bdf-directly-ins.patch
-Patch1081: 1081-drm-i915-gvt-disable-the-preemption-timeout-in-GVT-g.patch
-Patch1082: 1082-Change-keystore-applets-store-path.patch
-Patch1083: 1083-ASoC-Intel-Skylake-make-function-static-inline.patch
-Patch1084: 1084-SoC-Intel-Skylake-BXT-Stop-polling-FwStauts-after-ha.patch
-Patch1085: 1085-ASoC-Intel-Skylake-BXT-read-FwStatus-and-ErrorCode-b.patch
-Patch1086: 1086-ASoC-Intel-Fix-generation-of-crash-dump-info-from-DS.patch
-Patch1087: 1087-ASoC-Intel-Skylake-Fix-readout-of-log-buffer.patch
-Patch1088: 1088-ASoC-Intel-read-DSP-stack-dump-from-specific-core-on.patch
-Patch1089: 1089-ASoC-Intel-Read-remainder-of-stack-dump.patch
-Patch1090: 1090-ASoC-Intel-Look-for-stack-header-during-crashdump.patch
-Patch1091: 1091-ASoC-Intel-Skl-Virt-FE-snd-card-registration-notific.patch
-Patch1092: 1092-ASoC-Intel-Skl-Virt-Initialize-list-of-streams-at-st.patch
-Patch1093: 1093-ASoC-Intel-Skl-Virt-Handle-VQ-callback-in-thread-con.patch
-Patch1094: 1094-ASoC-Intel-Skl-FE-Atomic-period-elapsed-implementati.patch
-Patch1095: 1095-ASoC-Intel-Skl-Virt-Synchronous-topology-load.patch
-Patch1096: 1096-ASoC-Intel-Skl-Virt-Load-audio-firmware-over-virtio.patch
-Patch1097: 1097-ASoC-Intel-Use-high-priority-workqueue-for-kwork.patch
-Patch1098: 1098-dma-buf-hyper_dmabuf-fix-vq-out-of-range-issue.patch
+Patch1051: 1051-ipu-mmu.c-Fix-possible-null-pointer-dereference.patch
+Patch1052: 1052-media-pci-Check-pointer-validity-before-use.patch
+Patch1053: 1053-media-intel-ipu4-VIRT-Handle-open-pipeline-ERROR-whe.patch
+Patch1054: 1054-media-intel-ipu4-VIRT-Fix-psys-mediation-build.patch
+Patch1055: 1055-media-i2c-ici-platform-Fix-for-build-warning.patch
+Patch1056: 1056-ipu4-Added-IPU-hang-recovery.patch
+Patch1057: 1057-media-intel-ipu4-Extended-error-recovery-for-multist.patch
+Patch1058: 1058-media-intel-ipu4-Send-recovery-error-signal-to-users.patch
+Patch1059: 1059-media-intel-ipu4-Generate-error-signal-only-for-faul.patch
+Patch1060: 1060-SoC-Intel-Fix-memory-leak-cnl_sdw_bra_pipe_cfg_pb-fu.patch
+Patch1061: 1061-ASoC-Intel-Skl-Virt-Fix-panic-issue-on-HW-pos-update.patch
+Patch1062: 1062-ASoC-Intel-Skl-Virt-Remove-support-for-DSP-IPC-on-FE.patch
+Patch1063: 1063-ASoC-Intel-Skl-Virt-Fix-panic-during-tplg-initializa.patch
+Patch1064: 1064-ASoC-Intel-Skl-Virt-Don-t-duplicate-VBS-audio-client.patch
+Patch1065: 1065-ASoC-Intel-Skl-Virt-Fix-NULL-ptr-in-pcm_close-on-SOS.patch
+Patch1066: 1066-ASoC-Intel-Skl-Virt-Fix-logic-of-vbe_skl_pcm_close_a.patch
+Patch1067: 1067-ASoC-Intel-Skl-Virt-Cleanup-static-analysis-issues.patch
+Patch1068: 1068-drm-i915-Removing-dead_code-from-function-block.patch
+Patch1069: 1069-acrn-fix-used-uninitialized-warning.patch
+Patch1070: 1070-gpio-virtio-frontend-driver.patch
+Patch1071: 1071-add-an-IRQ-chip-to-gpio-virtio-GPIO-chip.patch
+Patch1072: 1072-ASoC-Intel-Skl-Virt-Check-NULL-ptr-on-virual-FE-atta.patch
+Patch1073: 1073-ASoC-Intel-Skl-Virt-Handle-FE-notifications-in-separ.patch
+Patch1074: 1074-ASoC-Intel-Skl-Virt-Increase-reply-timeout-for-PCM-t.patch
+Patch1075: 1075-ASoC-Intel-Skl-Virt-Do-not-update-locked-streams.patch
+Patch1076: 1076-drm-i915-Remove-unused-function-causing-GCC-compilat.patch
+Patch1077: 1077-ACRN-hvlog-check-whether-it-s-ACRN-before-init-hvlog.patch
+Patch1078: 1078-fix-possible-nulll-pointer-dereference-in-ACRN-VHM.patch
+Patch1079: 1079-acrn-vhm-HC_ASSIGN_PTDEV-passes-the-bdf-directly-ins.patch
+Patch1080: 1080-drm-i915-gvt-disable-the-preemption-timeout-in-GVT-g.patch
+Patch1081: 1081-Change-keystore-applets-store-path.patch
+Patch1082: 1082-ASoC-Intel-Skylake-make-function-static-inline.patch
+Patch1083: 1083-SoC-Intel-Skylake-BXT-Stop-polling-FwStauts-after-ha.patch
+Patch1084: 1084-ASoC-Intel-Skylake-BXT-read-FwStatus-and-ErrorCode-b.patch
+Patch1085: 1085-ASoC-Intel-Fix-generation-of-crash-dump-info-from-DS.patch
+Patch1086: 1086-ASoC-Intel-Skylake-Fix-readout-of-log-buffer.patch
+Patch1087: 1087-ASoC-Intel-read-DSP-stack-dump-from-specific-core-on.patch
+Patch1088: 1088-ASoC-Intel-Read-remainder-of-stack-dump.patch
+Patch1089: 1089-ASoC-Intel-Look-for-stack-header-during-crashdump.patch
+Patch1090: 1090-ASoC-Intel-Skl-Virt-FE-snd-card-registration-notific.patch
+Patch1091: 1091-ASoC-Intel-Skl-Virt-Initialize-list-of-streams-at-st.patch
+Patch1092: 1092-ASoC-Intel-Skl-Virt-Handle-VQ-callback-in-thread-con.patch
+Patch1093: 1093-ASoC-Intel-Skl-FE-Atomic-period-elapsed-implementati.patch
+Patch1094: 1094-ASoC-Intel-Skl-Virt-Synchronous-topology-load.patch
+Patch1095: 1095-ASoC-Intel-Skl-Virt-Load-audio-firmware-over-virtio.patch
+Patch1096: 1096-ASoC-Intel-Use-high-priority-workqueue-for-kwork.patch
+Patch1097: 1097-dma-buf-hyper_dmabuf-fix-vq-out-of-range-issue.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2313,7 +2312,6 @@ Linux kernel build files and install script
 %patch1095 -p1
 %patch1096 -p1
 %patch1097 -p1
-%patch1098 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
