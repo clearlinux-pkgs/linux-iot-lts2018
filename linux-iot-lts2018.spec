@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.48-base-190608T002049Z
+# quilt.tag:  lts-v4.19.48-base-190611T183817Z
 # config.tag: lts-v4.19.48-base-190608T002049Z
 
 %define ktarget0 iot-lts2018
@@ -1148,6 +1148,9 @@ Patch1094: 1094-ASoC-Intel-Skl-Virt-Synchronous-topology-load.patch
 Patch1095: 1095-ASoC-Intel-Skl-Virt-Load-audio-firmware-over-virtio.patch
 Patch1096: 1096-ASoC-Intel-Use-high-priority-workqueue-for-kwork.patch
 Patch1097: 1097-dma-buf-hyper_dmabuf-fix-vq-out-of-range-issue.patch
+Patch1098: 1098-drm-i915-Supress-Waddress-of-packed-member-warnings.patch
+Patch1099: 1099-Reduce-the-unnecessary-interrupt-injection-for-small.patch
+Patch1100: 1100-Change-the-priority-of-acrngt_emulation_thread-on-de.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2312,6 +2315,9 @@ Linux kernel build files and install script
 %patch1095 -p1
 %patch1096 -p1
 %patch1097 -p1
+%patch1098 -p1
+%patch1099 -p1
+%patch1100 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
