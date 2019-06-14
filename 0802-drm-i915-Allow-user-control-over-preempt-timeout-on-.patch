@@ -239,7 +239,7 @@ index 4a89662..12a33a8 100644
  
  	if (!HAS_EXECLISTS(i915))
 diff --git a/include/uapi/drm/i915_drm.h b/include/uapi/drm/i915_drm.h
-index fc70f54..83b1a16 100644
+index a25ed47..d66e876 100644
 --- a/include/uapi/drm/i915_drm.h
 +++ b/include/uapi/drm/i915_drm.h
 @@ -1459,6 +1459,18 @@ struct drm_i915_gem_context_param {

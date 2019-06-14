@@ -20,7 +20,7 @@ Tracked-On: PKT-1750
  1 file changed, 7 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 0297014..78c46e1 100644
+index dc5fe56..5d755a3 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
 @@ -5642,6 +5642,9 @@ enum {

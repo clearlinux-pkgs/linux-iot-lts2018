@@ -1150,7 +1150,7 @@ index 2d31921..7567c7f 100644
  }
  
 diff --git a/security/integrity/ima/ima_policy.c b/security/integrity/ima/ima_policy.c
-index 8c94998..72c145b 100644
+index 93babb6..f7e753b 100644
 --- a/security/integrity/ima/ima_policy.c
 +++ b/security/integrity/ima/ima_policy.c
 @@ -278,7 +278,7 @@ static void ima_lsm_update_rules(void)

@@ -84,7 +84,7 @@ index a16a74d..273fdf3 100644
   * drm_plane_create_alpha_property - create a new alpha property
   * @plane: drm plane
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 00b5e45..0297014 100644
+index 162e239..dc5fe56 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
 @@ -6544,6 +6544,7 @@ enum {

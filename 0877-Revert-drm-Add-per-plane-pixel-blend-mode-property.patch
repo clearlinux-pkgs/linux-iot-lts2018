@@ -40,10 +40,10 @@ index f2b173d..d3c3c65 100644
  		*val = state->rotation;
  	} else if (property == plane->zpos_property) {
 diff --git a/drivers/gpu/drm/drm_atomic_helper.c b/drivers/gpu/drm/drm_atomic_helper.c
-index 1791e62..cb95963 100644
+index 9a6763a..34e1225 100644
 --- a/drivers/gpu/drm/drm_atomic_helper.c
 +++ b/drivers/gpu/drm/drm_atomic_helper.c
-@@ -3611,7 +3611,6 @@ void drm_atomic_helper_plane_reset(struct drm_plane *plane)
+@@ -3613,7 +3613,6 @@ void drm_atomic_helper_plane_reset(struct drm_plane *plane)
  		/* Reset the alpha value to fully opaque if it matters */
  		if (plane->alpha_property)
  			plane->state->alpha = plane->alpha_property->values[1];

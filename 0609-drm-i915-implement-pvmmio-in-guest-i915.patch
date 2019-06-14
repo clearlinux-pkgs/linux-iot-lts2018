@@ -112,7 +112,7 @@ index d1a3e3e..c1089bd 100644
  	u64 magic;		/* VGT_MAGIC */
  	u16 version_major;
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 5b544cb..00b5e45 100644
+index 16f5d2d..162e239 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
 @@ -10656,4 +10656,31 @@ enum skl_power_gate {

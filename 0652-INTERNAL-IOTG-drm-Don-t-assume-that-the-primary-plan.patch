@@ -27,7 +27,7 @@ Change-Id: Ie16c4bdd19a3df25ca5c4241ded12b87ca5a106a
  8 files changed, 74 insertions(+), 22 deletions(-)
 
 diff --git a/drivers/gpu/drm/drm_atomic_helper.c b/drivers/gpu/drm/drm_atomic_helper.c
-index 94f5c36..56f2503 100644
+index c22062c..9390a33 100644
 --- a/drivers/gpu/drm/drm_atomic_helper.c
 +++ b/drivers/gpu/drm/drm_atomic_helper.c
 @@ -1074,7 +1074,7 @@ drm_atomic_helper_update_legacy_modeset_state(struct drm_device *dev,
@@ -39,7 +39,7 @@ index 94f5c36..56f2503 100644
  
  		if (new_plane_state && new_plane_state->crtc == crtc) {
  			crtc->x = new_plane_state->src_x >> 16;
-@@ -2937,6 +2937,9 @@ int __drm_atomic_helper_set_config(struct drm_mode_set *set,
+@@ -2939,6 +2939,9 @@ int __drm_atomic_helper_set_config(struct drm_mode_set *set,
  	int hdisplay, vdisplay;
  	int ret;
  
@@ -50,7 +50,7 @@ index 94f5c36..56f2503 100644
  	if (IS_ERR(crtc_state))
  		return PTR_ERR(crtc_state);
 diff --git a/drivers/gpu/drm/drm_crtc.c b/drivers/gpu/drm/drm_crtc.c
-index 9cbe8f5..bd46843 100644
+index 6e241a3..dcfa240 100644
 --- a/drivers/gpu/drm/drm_crtc.c
 +++ b/drivers/gpu/drm/drm_crtc.c
 @@ -410,6 +410,9 @@ int drm_mode_getcrtc(struct drm_device *dev,
@@ -91,7 +91,7 @@ index 9cbe8f5..bd46843 100644
  
  		if (plane->fb)
  			drm_framebuffer_get(plane->fb);
-@@ -606,6 +616,9 @@ int drm_mode_setcrtc(struct drm_device *dev, void *data,
+@@ -610,6 +620,9 @@ int drm_mode_setcrtc(struct drm_device *dev, void *data,
  	if (ret)
  		goto out;
  

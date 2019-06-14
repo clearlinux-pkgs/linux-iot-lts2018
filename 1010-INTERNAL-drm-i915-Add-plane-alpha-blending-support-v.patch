@@ -56,7 +56,7 @@ index 8a4fb73..03352f3 100644
  
  		struct {
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 78c46e1..9b522ae 100644
+index 5d755a3..449f2b3 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
 @@ -6572,8 +6572,10 @@ enum {
@@ -140,7 +140,7 @@ index 223cda4..eed5e6a 100644
  
  	return intel_plane;
 diff --git a/drivers/gpu/drm/i915/intel_fbc.c b/drivers/gpu/drm/i915/intel_fbc.c
-index 01d1d20..c07d69f 100644
+index 728a20e..c941e33 100644
 --- a/drivers/gpu/drm/i915/intel_fbc.c
 +++ b/drivers/gpu/drm/i915/intel_fbc.c
 @@ -674,6 +674,8 @@ static void intel_fbc_update_state_cache(struct intel_crtc *crtc,

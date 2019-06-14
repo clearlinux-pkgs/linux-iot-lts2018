@@ -91,7 +91,7 @@ index f6bcfcb..fd461db 100644
  {
  	u64 start, end;
 diff --git a/drivers/gpu/drm/i915/gvt/gtt.c b/drivers/gpu/drm/i915/gvt/gtt.c
-index e326254..9c54078 100644
+index 901d7fa..ddc7257 100644
 --- a/drivers/gpu/drm/i915/gvt/gtt.c
 +++ b/drivers/gpu/drm/i915/gvt/gtt.c
 @@ -1569,6 +1569,106 @@ int intel_vgpu_sync_oos_pages(struct intel_vgpu *vgpu)
@@ -249,7 +249,7 @@ index e326254..9c54078 100644
  		mm->ggtt_mm.last_partial_off = -1UL;
  	}
  
-@@ -3142,3 +3258,138 @@ int intel_vgpu_g2v_pv_ppgtt_insert_4lvl(struct intel_vgpu *vgpu,
+@@ -3144,3 +3260,138 @@ int intel_vgpu_g2v_pv_ppgtt_insert_4lvl(struct intel_vgpu *vgpu,
  
  	return ret;
  }
