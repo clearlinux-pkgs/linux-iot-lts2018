@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.50-base-190613T212011Z
+# quilt.tag:  lts-v4.19.50-base-190617T192756Z
 # config.tag: lts-v4.19.50-base-190613T212011Z
 
 %define ktarget0 iot-lts2018
@@ -1151,6 +1151,23 @@ Patch1097: 1097-dma-buf-hyper_dmabuf-fix-vq-out-of-range-issue.patch
 Patch1098: 1098-drm-i915-Supress-Waddress-of-packed-member-warnings.patch
 Patch1099: 1099-Reduce-the-unnecessary-interrupt-injection-for-small.patch
 Patch1100: 1100-Change-the-priority-of-acrngt_emulation_thread-on-de.patch
+Patch1101: 1101-media-intel-ipu4-ICI-Fix-failure-in-start-stop-test-.patch
+Patch1102: 1102-media-intel-ipu4-ICI-VIRT-Use-proper-locks-for-prote.patch
+Patch1103: 1103-media-intel-ipu4-ICI-Fix-to-Cleanup-subdev-and-strea.patch
+Patch1104: 1104-media-ici-Calculate-sequence-id-and-timestamp-for-ea.patch
+Patch1105: 1105-media-intel-ipu4-ICI-Align-with-V4L2-driver-behavior.patch
+Patch1106: 1106-media-ici-Fix-system-reboot-upon-stream-stop-after-a.patch
+Patch1107: 1107-media-ici-Fix-memory-leak-in-driver-due-to-virt_dev_.patch
+Patch1108: 1108-media-ici-Fix-warning-when-stream_start-fails.patch
+Patch1109: 1109-media-ipu4-VIRT-Fix-for-race-condition-in-handle_vq_.patch
+Patch1110: 1110-media-ici-Fixed-bytesperline-calculation-for-packed-.patch
+Patch1111: 1111-media-ipu4-ici-Avoid-create-new-buf-object-for-doubl.patch
+Patch1112: 1112-media-intel-ipu4-ICI-VIRT-Fix-top-half-and-bottom-ha.patch
+Patch1113: 1113-media-intel-ipu4-ICI-VIRT-add-locking-to-BE-request-.patch
+Patch1114: 1114-media-ici-Add-debug-message-for-FRAME_EOF-event.patch
+Patch1115: 1115-media-ici-Set-mipi_store_mode-to-IPU_FW_ISYS_MIPI_ST.patch
+Patch1116: 1116-media-intel-ipu4-ti960-ov495-frame-sync-setting.patch
+Patch1117: 1117-media-intel-ipu4-Fixing-static-analysis-issue-in-com.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2318,6 +2335,23 @@ Linux kernel build files and install script
 %patch1098 -p1
 %patch1099 -p1
 %patch1100 -p1
+%patch1101 -p1
+%patch1102 -p1
+%patch1103 -p1
+%patch1104 -p1
+%patch1105 -p1
+%patch1106 -p1
+%patch1107 -p1
+%patch1108 -p1
+%patch1109 -p1
+%patch1110 -p1
+%patch1111 -p1
+%patch1112 -p1
+%patch1113 -p1
+%patch1114 -p1
+%patch1115 -p1
+%patch1116 -p1
+%patch1117 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
