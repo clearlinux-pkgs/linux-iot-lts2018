@@ -70,10 +70,10 @@ index 97a020c..0bef312 100644
 +
  #endif /* ! __LINUX_LSM_HOOKS_H */
 diff --git a/kernel/cred.c b/kernel/cred.c
-index ecf0365..fa2061e 100644
+index efd04b2..c779d0e 100644
 --- a/kernel/cred.c
 +++ b/kernel/cred.c
-@@ -704,19 +704,6 @@ bool creds_are_invalid(const struct cred *cred)
+@@ -713,19 +713,6 @@ bool creds_are_invalid(const struct cred *cred)
  {
  	if (cred->magic != CRED_MAGIC)
  		return true;

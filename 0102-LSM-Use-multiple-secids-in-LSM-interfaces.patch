@@ -592,10 +592,10 @@ index b2d1f04..2542e65 100644
  	context->type = 0;
  	context->fds[0] = -1;
 diff --git a/kernel/cred.c b/kernel/cred.c
-index fa2061e..362de31 100644
+index c779d0e..4493c19 100644
 --- a/kernel/cred.c
 +++ b/kernel/cred.c
-@@ -650,7 +650,7 @@ EXPORT_SYMBOL(prepare_kernel_cred);
+@@ -659,7 +659,7 @@ EXPORT_SYMBOL(prepare_kernel_cred);
   * Set the LSM security ID in a set of credentials so that the subjective
   * security is overridden when an alternative set of credentials is used.
   */
@@ -604,7 +604,7 @@ index fa2061e..362de31 100644
  {
  	return security_kernel_act_as(new, secid);
  }
-@@ -668,14 +668,14 @@ EXPORT_SYMBOL(set_security_override);
+@@ -677,14 +677,14 @@ EXPORT_SYMBOL(set_security_override);
   */
  int set_security_override_from_ctx(struct cred *new, const char *secctx)
  {

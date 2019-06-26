@@ -45,7 +45,7 @@ index aea459c..99f99e8 100644
  nvme-fabrics-y				+= fabrics.o
  
 diff --git a/drivers/nvme/host/core.c b/drivers/nvme/host/core.c
-index abfb463..487d3ce 100644
+index a867a13..0d187e4 100644
 --- a/drivers/nvme/host/core.c
 +++ b/drivers/nvme/host/core.c
 @@ -11,7 +11,6 @@
@@ -56,7 +56,7 @@ index abfb463..487d3ce 100644
  #include <linux/blkdev.h>
  #include <linux/blk-mq.h>
  #include <linux/delay.h>
-@@ -1677,25 +1676,57 @@ static const struct pr_ops nvme_pr_ops = {
+@@ -1696,25 +1695,57 @@ static const struct pr_ops nvme_pr_ops = {
  	.pr_clear	= nvme_pr_clear,
  };
  
@@ -123,7 +123,7 @@ index abfb463..487d3ce 100644
  EXPORT_SYMBOL_GPL(nvme_sec_submit);
  #endif /* CONFIG_BLK_SED_OPAL */
  
-@@ -2486,7 +2517,10 @@ int nvme_init_identify(struct nvme_ctrl *ctrl)
+@@ -2505,7 +2536,10 @@ int nvme_init_identify(struct nvme_ctrl *ctrl)
  		ctrl->hmmaxd = le16_to_cpu(id->hmmaxd);
  	}
  
@@ -176,10 +176,10 @@ index e82cdae..43f3752 100644
  void nvme_remove_namespaces(struct nvme_ctrl *ctrl);
  
 diff --git a/drivers/nvme/host/pci.c b/drivers/nvme/host/pci.c
-index 7b9ef8e..3644199 100644
+index c8eeecc..a8020bb 100644
 --- a/drivers/nvme/host/pci.c
 +++ b/drivers/nvme/host/pci.c
-@@ -2295,6 +2295,10 @@ static void nvme_reset_work(struct work_struct *work)
+@@ -2301,6 +2301,10 @@ static void nvme_reset_work(struct work_struct *work)
  	if (result)
  		goto out;
  
