@@ -16,6 +16,8 @@ CONFIG_DRM_I915_LOW_LEVEL_TRACEPOINTS=y
 # Clear Linux Securty Mandatory Settings
 #
 
+CONFIG_SECURITY_DMESG_RESTRICT=y
+
 # KASLR is required as a basic security hardening
 CONFIG_RANDOMIZE_BASE=y
 CONFIG_RANDOMIZE_MEMORY=y
