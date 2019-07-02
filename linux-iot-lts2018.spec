@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.55-base-190626T050511Z
+# quilt.tag:  lts-v4.19.55-base-190701T074650Z
 # config.tag: lts-v4.19.55-base-190626T050511Z
 
 %define ktarget0 iot-lts2018
@@ -1167,6 +1167,22 @@ Patch1113: 1113-media-ici-Add-debug-message-for-FRAME_EOF-event.patch
 Patch1114: 1114-media-ici-Set-mipi_store_mode-to-IPU_FW_ISYS_MIPI_ST.patch
 Patch1115: 1115-media-intel-ipu4-ti960-ov495-frame-sync-setting.patch
 Patch1116: 1116-media-intel-ipu4-Fixing-static-analysis-issue-in-com.patch
+Patch1117: 1117-drm-i915-gvt-check-scaler-ownership-when-detach-scal.patch
+Patch1118: 1118-drm-i915-gvt-fix-some-garbage-display-issue-in-plane.patch
+Patch1119: 1119-drm-i915-gvt-reduce-time-for-get-forcewake.patch
+Patch1120: 1120-dma-buf-hyper_dmabuf-check-pointer-before-use-it.patch
+Patch1121: 1121-dma-buf-hyper_dmabuf-fix-kernel-panic-while-access-d.patch
+Patch1122: 1122-dma-buf-hyper_dmabuf-protection-on-pending.patch
+Patch1123: 1123-dma-buf-hyper_dmabuf-protecting-exporting-importing-.patch
+Patch1124: 1124-dma-buf-hyper_dmabuf-imported-shouldn-t-be-removed-f.patch
+Patch1125: 1125-dma-buf-hyper_dmabuf-check-if-imported-still-exist-i.patch
+Patch1126: 1126-dma-buf-hyper_dmabuf-mutex-protection-on-processing-.patch
+Patch1127: 1127-dma-buf-hyper_dmabuf-synchronous-operation-on-dmabuf.patch
+Patch1128: 1128-dma-buf-hyper_dmabuf-disable-remote-sync-by-default.patch
+Patch1129: 1129-dma-buf-hyper_dmabuf-remove-unnecessary-check-and-de.patch
+Patch1130: 1130-dma-buf-hyper_dmabuf-delayed_export-protected-with-m.patch
+Patch1131: 1131-dma-buf-hyper_dmabuf-mutex-protection-on-unexport_io.patch
+Patch1132: 1132-dma-buf-hyper_dmabuf-release-double-check-exported.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2350,6 +2366,22 @@ Linux kernel build files and install script
 %patch1114 -p1
 %patch1115 -p1
 %patch1116 -p1
+%patch1117 -p1
+%patch1118 -p1
+%patch1119 -p1
+%patch1120 -p1
+%patch1121 -p1
+%patch1122 -p1
+%patch1123 -p1
+%patch1124 -p1
+%patch1125 -p1
+%patch1126 -p1
+%patch1127 -p1
+%patch1128 -p1
+%patch1129 -p1
+%patch1130 -p1
+%patch1131 -p1
+%patch1132 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
