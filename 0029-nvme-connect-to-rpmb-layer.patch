@@ -45,7 +45,7 @@ index aea459c..99f99e8 100644
  nvme-fabrics-y				+= fabrics.o
  
 diff --git a/drivers/nvme/host/core.c b/drivers/nvme/host/core.c
-index a867a13..0d187e4 100644
+index d8869d9..8514cd3 100644
 --- a/drivers/nvme/host/core.c
 +++ b/drivers/nvme/host/core.c
 @@ -11,7 +11,6 @@

@@ -36,7 +36,7 @@ index 348471f..febed20 100644
  
  /**
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 26111ca..540f69d 100644
+index 57317c5..f871f56 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
 @@ -43,6 +43,7 @@
@@ -47,7 +47,7 @@ index 26111ca..540f69d 100644
  #include <linux/rpmb.h>
  
  #include "ufshcd.h"
-@@ -6375,12 +6376,19 @@ static struct rpmb_ops ufshcd_rpmb_dev_ops = {
+@@ -6376,12 +6377,19 @@ static struct rpmb_ops ufshcd_rpmb_dev_ops = {
  
  };
  
@@ -68,7 +68,7 @@ index 26111ca..540f69d 100644
  	ret = scsi_device_get(hba->sdev_ufs_rpmb);
  	if (ret)
  		goto out_put_dev;
-@@ -6424,6 +6432,9 @@ static inline void ufshcd_rpmb_remove(struct ufs_hba *hba)
+@@ -6425,6 +6433,9 @@ static inline void ufshcd_rpmb_remove(struct ufs_hba *hba)
  	scsi_device_put(hba->sdev_ufs_rpmb);
  	hba->sdev_ufs_rpmb = NULL;
  
@@ -78,7 +78,7 @@ index 26111ca..540f69d 100644
  	spin_unlock_irqrestore(hba->host->host_lock, flags);
  }
  
-@@ -6497,7 +6508,7 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
+@@ -6498,7 +6509,7 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
  {
  	int err;
  	size_t buff_len;
@@ -87,7 +87,7 @@ index 26111ca..540f69d 100644
  	u8 *desc_buf;
  
  	if (!dev_desc)
-@@ -6525,8 +6536,8 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
+@@ -6526,8 +6537,8 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
  	dev_desc->wmanufacturerid = desc_buf[DEVICE_DESC_PARAM_MANF_ID] << 8 |
  				     desc_buf[DEVICE_DESC_PARAM_MANF_ID + 1];
  
@@ -98,7 +98,7 @@ index 26111ca..540f69d 100644
  				      &dev_desc->model, SD_ASCII_STD);
  	if (err < 0) {
  		dev_err(hba->dev, "%s: Failed reading Product Name. err = %d\n",
-@@ -6534,6 +6545,14 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
+@@ -6535,6 +6546,14 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
  		goto out;
  	}
  
@@ -113,7 +113,7 @@ index 26111ca..540f69d 100644
  	/*
  	 * ufshcd_read_string_desc returns size of the string
  	 * reset the error value
-@@ -6549,6 +6568,9 @@ static void ufs_put_device_desc(struct ufs_dev_desc *dev_desc)
+@@ -6550,6 +6569,9 @@ static void ufs_put_device_desc(struct ufs_dev_desc *dev_desc)
  {
  	kfree(dev_desc->model);
  	dev_desc->model = NULL;
@@ -123,7 +123,7 @@ index 26111ca..540f69d 100644
  }
  
  static void ufs_fixup_device_setup(struct ufs_hba *hba,
-@@ -6844,7 +6866,6 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
+@@ -6845,7 +6867,6 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
  	}
  
  	ufs_fixup_device_setup(hba, &card);
@@ -131,7 +131,7 @@ index 26111ca..540f69d 100644
  
  	ufshcd_tune_unipro_params(hba);
  
-@@ -6894,7 +6915,7 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
+@@ -6895,7 +6916,7 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
  		if (ufshcd_scsi_add_wlus(hba))
  			goto out;
  
@@ -140,7 +140,7 @@ index 26111ca..540f69d 100644
  
  		/* Initialize devfreq after UFS device is detected */
  		if (ufshcd_is_clkscaling_supported(hba)) {
-@@ -6918,6 +6939,8 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
+@@ -6919,6 +6940,8 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
  		hba->is_init_prefetch = true;
  
  out:

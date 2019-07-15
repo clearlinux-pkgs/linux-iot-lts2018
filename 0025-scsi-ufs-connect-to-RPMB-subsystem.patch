@@ -44,7 +44,7 @@ index e09fe6a..a3c1982 100644
  	This selects the support for UFS devices in Linux, say Y and make
  	  sure that you know the name of your UFS host adapter (the card
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 6a26476..26111ca 100644
+index 23e483b..57317c5 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
 @@ -37,11 +37,14 @@
@@ -62,7 +62,7 @@ index 6a26476..26111ca 100644
  #include "ufshcd.h"
  #include "ufs_quirks.h"
  #include "unipro.h"
-@@ -6213,6 +6216,217 @@ static void ufshcd_init_icc_levels(struct ufs_hba *hba)
+@@ -6214,6 +6217,217 @@ static void ufshcd_init_icc_levels(struct ufs_hba *hba)
  	kfree(desc_buf);
  }
  
@@ -280,7 +280,7 @@ index 6a26476..26111ca 100644
  /**
   * ufshcd_scsi_add_wlus - Adds required W-LUs
   * @hba: per-adapter instance
-@@ -6260,6 +6474,8 @@ static int ufshcd_scsi_add_wlus(struct ufs_hba *hba)
+@@ -6261,6 +6475,8 @@ static int ufshcd_scsi_add_wlus(struct ufs_hba *hba)
  		ret = PTR_ERR(sdev_rpmb);
  		goto remove_sdev_ufs_device;
  	}
@@ -289,7 +289,7 @@ index 6a26476..26111ca 100644
  	scsi_device_put(sdev_rpmb);
  
  	sdev_boot = __scsi_add_device(hba->host, 0, 0,
-@@ -6678,6 +6894,8 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
+@@ -6679,6 +6895,8 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
  		if (ufshcd_scsi_add_wlus(hba))
  			goto out;
  
@@ -298,7 +298,7 @@ index 6a26476..26111ca 100644
  		/* Initialize devfreq after UFS device is detected */
  		if (ufshcd_is_clkscaling_supported(hba)) {
  			memcpy(&hba->clk_scaling.saved_pwr_info.info,
-@@ -7913,6 +8131,8 @@ int ufshcd_shutdown(struct ufs_hba *hba)
+@@ -7914,6 +8132,8 @@ int ufshcd_shutdown(struct ufs_hba *hba)
  			goto out;
  	}
  
@@ -307,7 +307,7 @@ index 6a26476..26111ca 100644
  	ret = ufshcd_suspend(hba, UFS_SHUTDOWN_PM);
  out:
  	if (ret)
-@@ -7929,7 +8149,10 @@ EXPORT_SYMBOL(ufshcd_shutdown);
+@@ -7930,7 +8150,10 @@ EXPORT_SYMBOL(ufshcd_shutdown);
   */
  void ufshcd_remove(struct ufs_hba *hba)
  {
