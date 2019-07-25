@@ -119,7 +119,7 @@ index b97e2de..8fc8197 100644
  	if (gamma_lut_size) {
  		drm_object_attach_property(&crtc->base,
 diff --git a/drivers/gpu/drm/drm_fb_helper.c b/drivers/gpu/drm/drm_fb_helper.c
-index c9a5606..917e72e 100644
+index bf1217d..599bcde 100644
 --- a/drivers/gpu/drm/drm_fb_helper.c
 +++ b/drivers/gpu/drm/drm_fb_helper.c
 @@ -1464,6 +1464,7 @@ static int setcmap_atomic(struct fb_cmap *cmap, struct fb_info *info)

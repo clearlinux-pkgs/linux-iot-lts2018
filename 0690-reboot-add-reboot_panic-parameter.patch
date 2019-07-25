@@ -15,7 +15,7 @@ Signed-off-by: Tian, Baofeng
  2 files changed, 31 insertions(+), 1 deletion(-)
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index ffe347e..f22c20a 100644
+index 8006a66..b43695e 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -3970,6 +3970,9 @@
