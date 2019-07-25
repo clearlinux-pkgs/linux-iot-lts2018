@@ -1,10 +1,10 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.57 Kernel Configuration
+# Linux/x86 4.19.59 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.1.1 20190715 gcc-9-branch@273487
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.1.1 20190724 gcc-9-branch@273755
 #
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=90101
@@ -2156,7 +2156,7 @@ CONFIG_PHYLIB=y
 #
 # CONFIG_AMD_PHY is not set
 # CONFIG_AQUANTIA_PHY is not set
-# CONFIG_ASIX_PHY is not set
+# CONFIG_AX88796B_PHY is not set
 # CONFIG_AT803X_PHY is not set
 # CONFIG_BCM7XXX_PHY is not set
 # CONFIG_BCM87XX_PHY is not set
