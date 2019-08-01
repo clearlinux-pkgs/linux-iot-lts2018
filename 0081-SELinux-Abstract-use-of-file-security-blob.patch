@@ -13,7 +13,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  2 files changed, 14 insertions(+), 9 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 5e12777..25715ee 100644
+index 6e485d1..11fd969 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -397,7 +397,7 @@ static int file_alloc_security(struct file *file)

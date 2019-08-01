@@ -141,7 +141,7 @@ index 7d16b93..b0ce65b 100644
  
  int security_socket_getpeersec_dgram(struct socket *sock, struct sk_buff *skb,
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index c76b439..2f72b23 100644
+index 9cd8626..150a8f8 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -5035,10 +5035,8 @@ static int selinux_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)

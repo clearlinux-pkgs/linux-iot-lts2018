@@ -412,7 +412,7 @@ index 72c2b7c..e0651d3 100644
  {
  	return call_int_hook(tun_dev_alloc_security, 0, security);
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 8b1f894..c2c3538 100644
+index dc2d83c..2bc986e 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -50,6 +50,7 @@

@@ -43,7 +43,7 @@ index 6b1953a..598e56e 100644
 +
  endif
 diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
-index 5860426..e05004c 100644
+index f1e412a..7c6a6ba 100644
 --- a/drivers/media/i2c/Makefile
 +++ b/drivers/media/i2c/Makefile
 @@ -116,3 +116,4 @@ obj-$(CONFIG_VIDEO_TI964) += ti964.o

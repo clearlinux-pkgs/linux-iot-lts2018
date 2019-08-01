@@ -114,7 +114,7 @@ index 63c9ac2..7e34bdc 100644
  config VIDEO_S5C73M3
  	tristate "Samsung S5C73M3 sensor support"
 diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
-index a94eb03..db6e802 100644
+index 520b3c3..80f37a4 100644
 --- a/drivers/media/i2c/Makefile
 +++ b/drivers/media/i2c/Makefile
 @@ -110,3 +110,5 @@ obj-$(CONFIG_VIDEO_IMX258)	+= imx258.o

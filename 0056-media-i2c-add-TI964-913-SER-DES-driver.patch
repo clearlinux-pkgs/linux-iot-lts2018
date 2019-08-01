@@ -38,7 +38,7 @@ index 7e34bdc..3544b1a 100644
  
  menu "Sensors used on soc_camera driver"
 diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
-index db6e802..e0d41d3 100644
+index 80f37a4..520a470 100644
 --- a/drivers/media/i2c/Makefile
 +++ b/drivers/media/i2c/Makefile
 @@ -112,3 +112,4 @@ obj-$(CONFIG_VIDEO_IMX274)	+= imx274.o

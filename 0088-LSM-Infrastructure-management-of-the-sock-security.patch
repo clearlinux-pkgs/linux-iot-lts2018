@@ -226,7 +226,7 @@ index 378b8d4..244bcf5 100644
  
  void security_sk_clone(const struct sock *sk, struct sock *newsk)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index a8cb29c..eec2092 100644
+index 7d2df61..223c946 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -4464,7 +4464,7 @@ static int socket_sockcreate_sid(const struct task_security_struct *tsec,
@@ -495,7 +495,7 @@ index a8cb29c..eec2092 100644
  		peer_sid = sksec->sid;
  		secmark_perm = PACKET__SEND;
  	}
-@@ -6846,6 +6841,7 @@ struct lsm_blob_sizes selinux_blob_sizes = {
+@@ -6847,6 +6842,7 @@ struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_cred = sizeof(struct task_security_struct),
  	.lbs_file = sizeof(struct file_security_struct),
  	.lbs_inode = sizeof(struct inode_security_struct),

@@ -45,7 +45,7 @@ index aea459c..99f99e8 100644
  nvme-fabrics-y				+= fabrics.o
  
 diff --git a/drivers/nvme/host/core.c b/drivers/nvme/host/core.c
-index d8869d9..8514cd3 100644
+index e26d119..3622add 100644
 --- a/drivers/nvme/host/core.c
 +++ b/drivers/nvme/host/core.c
 @@ -11,7 +11,6 @@
@@ -176,10 +176,10 @@ index e82cdae..43f3752 100644
  void nvme_remove_namespaces(struct nvme_ctrl *ctrl);
  
 diff --git a/drivers/nvme/host/pci.c b/drivers/nvme/host/pci.c
-index c8eeecc..a8020bb 100644
+index 0a5d064..ad8f266 100644
 --- a/drivers/nvme/host/pci.c
 +++ b/drivers/nvme/host/pci.c
-@@ -2301,6 +2301,10 @@ static void nvme_reset_work(struct work_struct *work)
+@@ -2304,6 +2304,10 @@ static void nvme_reset_work(struct work_struct *work)
  	if (result)
  		goto out;
  

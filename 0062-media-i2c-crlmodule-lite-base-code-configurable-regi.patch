@@ -83,7 +83,7 @@ index 4f1d5eb..6b1953a 100644
  config VIDEO_S5C73M3
  	tristate "Samsung S5C73M3 sensor support"
 diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
-index 4ad43e9..5860426 100644
+index b23bd05..f1e412a 100644
 --- a/drivers/media/i2c/Makefile
 +++ b/drivers/media/i2c/Makefile
 @@ -115,3 +115,4 @@ obj-$(CONFIG_VIDEO_CRLMODULE) += crlmodule/

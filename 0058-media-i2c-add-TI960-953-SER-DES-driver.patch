@@ -38,7 +38,7 @@ index 3a5f498..4f1d5eb 100644
  
  menu "Sensors used on soc_camera driver"
 diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
-index 96ec006..4ad43e9 100644
+index 8f906f7..b23bd05 100644
 --- a/drivers/media/i2c/Makefile
 +++ b/drivers/media/i2c/Makefile
 @@ -114,3 +114,4 @@ obj-$(CONFIG_SDR_MAX2175) += max2175.o

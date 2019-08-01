@@ -37,7 +37,7 @@ index fdaaafd..4a20d25 100644
  void snd_soc_dapm_shutdown(struct snd_soc_card *card);
  
 diff --git a/sound/soc/soc-dapm.c b/sound/soc/soc-dapm.c
-index 864de8e..877ede4 100644
+index f67e353..dbc25d9 100644
 --- a/sound/soc/soc-dapm.c
 +++ b/sound/soc/soc-dapm.c
 @@ -1456,11 +1456,11 @@ static void dapm_seq_insert(struct snd_soc_dapm_widget *new_widget,
@@ -252,7 +252,7 @@ index 864de8e..877ede4 100644
  }
  
  #ifdef CONFIG_DEBUG_FS
-@@ -2222,6 +2239,7 @@ static int soc_dapm_mux_update_power(struct snd_soc_card *card,
+@@ -2224,6 +2241,7 @@ static int soc_dapm_mux_update_power(struct snd_soc_card *card,
  	struct snd_soc_dapm_path *path;
  	int found = 0;
  	bool connect;
@@ -260,7 +260,7 @@ index 864de8e..877ede4 100644
  
  	lockdep_assert_held(&card->dapm_mutex);
  
-@@ -2237,8 +2255,11 @@ static int soc_dapm_mux_update_power(struct snd_soc_card *card,
+@@ -2239,8 +2257,11 @@ static int soc_dapm_mux_update_power(struct snd_soc_card *card,
  		soc_dapm_connect_path(path, connect, "mux update");
  	}
  
@@ -274,7 +274,7 @@ index 864de8e..877ede4 100644
  
  	return found;
  }
-@@ -2267,7 +2288,7 @@ static int soc_dapm_mixer_update_power(struct snd_soc_card *card,
+@@ -2269,7 +2290,7 @@ static int soc_dapm_mixer_update_power(struct snd_soc_card *card,
  				       int connect, int rconnect)
  {
  	struct snd_soc_dapm_path *path;
@@ -283,7 +283,7 @@ index 864de8e..877ede4 100644
  
  	lockdep_assert_held(&card->dapm_mutex);
  
-@@ -2302,8 +2323,11 @@ static int soc_dapm_mixer_update_power(struct snd_soc_card *card,
+@@ -2304,8 +2325,11 @@ static int soc_dapm_mixer_update_power(struct snd_soc_card *card,
  		found = 1;
  	}
  
@@ -297,7 +297,7 @@ index 864de8e..877ede4 100644
  
  	return found;
  }
-@@ -3064,6 +3088,7 @@ int snd_soc_dapm_new_widgets(struct snd_soc_card *card)
+@@ -3066,6 +3090,7 @@ int snd_soc_dapm_new_widgets(struct snd_soc_card *card)
  {
  	struct snd_soc_dapm_widget *w;
  	unsigned int val;
@@ -305,7 +305,7 @@ index 864de8e..877ede4 100644
  
  	mutex_lock_nested(&card->dapm_mutex, SND_SOC_DAPM_CLASS_INIT);
  
-@@ -3118,9 +3143,9 @@ int snd_soc_dapm_new_widgets(struct snd_soc_card *card)
+@@ -3120,9 +3145,9 @@ int snd_soc_dapm_new_widgets(struct snd_soc_card *card)
  		dapm_debugfs_add_widget(w);
  	}
  
@@ -317,7 +317,7 @@ index 864de8e..877ede4 100644
  }
  EXPORT_SYMBOL_GPL(snd_soc_dapm_new_widgets);
  
-@@ -4234,7 +4259,7 @@ void snd_soc_dapm_connect_dai_link_widgets(struct snd_soc_card *card)
+@@ -4236,7 +4261,7 @@ void snd_soc_dapm_connect_dai_link_widgets(struct snd_soc_card *card)
  	}
  }
  
@@ -326,7 +326,7 @@ index 864de8e..877ede4 100644
  	int event)
  {
  	int i;
-@@ -4243,7 +4268,7 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
+@@ -4245,7 +4270,7 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
  	for (i = 0; i < rtd->num_codecs; i++)
  		soc_dapm_dai_stream_event(rtd->codec_dais[i], stream, event);
  
@@ -335,7 +335,7 @@ index 864de8e..877ede4 100644
  }
  
  /**
-@@ -4257,14 +4282,17 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
+@@ -4259,14 +4284,17 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
   *
   * Returns 0 for success else error.
   */
