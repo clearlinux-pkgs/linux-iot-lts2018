@@ -4,7 +4,7 @@
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.1.1 20190730 gcc-9-branch@273913
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.1.1 20190806 gcc-9-branch@274133
 #
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=90101
