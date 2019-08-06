@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.62-base-190731T173147Z
+# quilt.tag:  lts-v4.19.62-base-190805T174224Z
 # config.tag: lts-v4.19.62-base-190731T173147Z
 
 %define ktarget0 iot-lts2018
@@ -1176,6 +1176,9 @@ Patch1122: 1122-dma-buf-hyper_dmabuf-delayed_export-protected-with-m.patch
 Patch1123: 1123-dma-buf-hyper_dmabuf-mutex-protection-on-unexport_io.patch
 Patch1124: 1124-dma-buf-hyper_dmabuf-release-double-check-exported.patch
 Patch1125: 1125-ASoC-Intel-Skylake-Fix-cores-power-managment.patch
+Patch1126: 1126-drm-i915-cfl-Add-a-new-CFL-PCI-ID.patch
+Patch1127: 1127-platform-x86-SEP-bug-fix-use-of-undeclared-var.patch
+Patch1128: 1128-platform-x86-SEP-BUG-fix-for-lbrcollection.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2368,6 +2371,9 @@ Linux kernel build files and install script
 %patch1123 -p1
 %patch1124 -p1
 %patch1125 -p1
+%patch1126 -p1
+%patch1127 -p1
+%patch1128 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
