@@ -17,7 +17,7 @@ Signed-off-by: Mateusz Polrola <mateuszx.potrola@intel.com>
  1 file changed, 18 insertions(+)
 
 diff --git a/drivers/iommu/intel-iommu.c b/drivers/iommu/intel-iommu.c
-index c143901..7d69de8 100644
+index b9af241..812d258 100644
 --- a/drivers/iommu/intel-iommu.c
 +++ b/drivers/iommu/intel-iommu.c
 @@ -61,6 +61,7 @@
