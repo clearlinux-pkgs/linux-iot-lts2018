@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.64-base-190807T162628Z
+# quilt.tag:  lts-v4.19.64-base-190809T171814Z
 # config.tag: lts-v4.19.64-base-190807T162628Z
 
 %define ktarget0 iot-lts2018
@@ -1179,6 +1179,14 @@ Patch1125: 1125-ASoC-Intel-Skylake-Fix-cores-power-managment.patch
 Patch1126: 1126-drm-i915-cfl-Add-a-new-CFL-PCI-ID.patch
 Patch1127: 1127-platform-x86-SEP-bug-fix-use-of-undeclared-var.patch
 Patch1128: 1128-platform-x86-SEP-BUG-fix-for-lbrcollection.patch
+Patch1129: 1129-drm-i915-gvt-fix-the-racing-condition-when-vgpu-dest.patch
+Patch1130: 1130-vhm-Expose-ACRN-IOCTL-interface-to-get-platform-info.patch
+Patch1131: 1131-vbs-set-memory-barrier-for-virtio_vq.patch
+Patch1132: 1132-i915-gvt-obtain-power-domain-to-take-the-snapshot-of.patch
+Patch1133: 1133-drivers-hyper_dmabuf-fix-potential-invalid-array-ind.patch
+Patch1134: 1134-drivers-hyper_dmabuf-fix-dead-lock-introduced-when-v.patch
+Patch1135: 1135-drivers-hyper_dmabuf-fix-dead-lock-in-fastpath_expor.patch
+Patch1136: 1136-drm-i915-gvt-release-the-handle-to-avoid-panic.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2374,6 +2382,14 @@ Linux kernel build files and install script
 %patch1126 -p1
 %patch1127 -p1
 %patch1128 -p1
+%patch1129 -p1
+%patch1130 -p1
+%patch1131 -p1
+%patch1132 -p1
+%patch1133 -p1
+%patch1134 -p1
+%patch1135 -p1
+%patch1136 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
