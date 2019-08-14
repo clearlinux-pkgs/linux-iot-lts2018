@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.64-base-190809T171814Z
+# quilt.tag:  lts-v4.19.64-base-190813T175233Z
 # config.tag: lts-v4.19.64-base-190809T171814Z
 
 %define ktarget0 iot-lts2018
@@ -1187,6 +1187,7 @@ Patch1133: 1133-drivers-hyper_dmabuf-fix-potential-invalid-array-ind.patch
 Patch1134: 1134-drivers-hyper_dmabuf-fix-dead-lock-introduced-when-v.patch
 Patch1135: 1135-drivers-hyper_dmabuf-fix-dead-lock-in-fastpath_expor.patch
 Patch1136: 1136-drm-i915-gvt-release-the-handle-to-avoid-panic.patch
+Patch1137: 1137-drm-i915-Remove-i915-ggtt-WA-since-GT-E.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2390,6 +2391,7 @@ Linux kernel build files and install script
 %patch1134 -p1
 %patch1135 -p1
 %patch1136 -p1
+%patch1137 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
