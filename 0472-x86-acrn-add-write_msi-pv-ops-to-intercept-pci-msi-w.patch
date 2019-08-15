@@ -68,10 +68,10 @@ index a042b54..3987e22 100644
  
  static void acrn_pin_vcpu(int cpu)
 diff --git a/arch/x86/include/asm/paravirt.h b/arch/x86/include/asm/paravirt.h
-index e375d42..f5af75b 100644
+index a046770..fa6468c 100644
 --- a/arch/x86/include/asm/paravirt.h
 +++ b/arch/x86/include/asm/paravirt.h
-@@ -807,6 +807,16 @@ static inline notrace unsigned long arch_local_irq_save(void)
+@@ -808,6 +808,16 @@ static inline notrace unsigned long arch_local_irq_save(void)
  	return f;
  }
  

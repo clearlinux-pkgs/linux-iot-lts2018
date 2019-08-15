@@ -62,10 +62,10 @@ index 12ebc4f..8283673 100644
                                  acrn_hv_callback_vector);
  }
 diff --git a/arch/x86/include/asm/paravirt.h b/arch/x86/include/asm/paravirt.h
-index f5af75b..e375d42 100644
+index fa6468c..a046770 100644
 --- a/arch/x86/include/asm/paravirt.h
 +++ b/arch/x86/include/asm/paravirt.h
-@@ -807,16 +807,6 @@ static inline notrace unsigned long arch_local_irq_save(void)
+@@ -808,16 +808,6 @@ static inline notrace unsigned long arch_local_irq_save(void)
  	return f;
  }
  
