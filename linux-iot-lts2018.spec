@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.66-base-190815T174728Z
+# quilt.tag:  lts-v4.19.66-base-190823T173102Z
 # config.tag: lts-v4.19.66-base-190815T174728Z
 
 %define ktarget0 iot-lts2018
@@ -1188,6 +1188,23 @@ Patch1134: 1134-drivers-hyper_dmabuf-fix-dead-lock-introduced-when-v.patch
 Patch1135: 1135-drivers-hyper_dmabuf-fix-dead-lock-in-fastpath_expor.patch
 Patch1136: 1136-drm-i915-gvt-release-the-handle-to-avoid-panic.patch
 Patch1137: 1137-drm-i915-Remove-i915-ggtt-WA-since-GT-E.patch
+Patch1138: 1138-media-ici-Add-ICI_FORMAT_RGB24-macro-for-24-bit-RGB.patch
+Patch1139: 1139-media-ici-Use-ICI_FORMAT_RGB24-for-packed-formats.patch
+Patch1140: 1140-media-i2c-crlmodule-lite-Add-ICI_FORMAT_RGB24-as-sup.patch
+Patch1141: 1141-media-intel-ipu4-VIRT-Remove-hash-table-entry-on-res.patch
+Patch1142: 1142-media-ipu-Move-ipu_buttress_tsc_ticks_to_ns-out-of-C.patch
+Patch1143: 1143-media-intel-ipu4-VIRT-Reorder-vbk_reset-and-ipu_vbk_.patch
+Patch1144: 1144-media-ici-Add-mutex-for-function-ici_isys_frame_buf_.patch
+Patch1145: 1145-Revert-media-ici-Fix-warning-when-stream_start-fails.patch
+Patch1146: 1146-media-ici-Use-IPU_FW_ISYS_SEND_TYPE_STREAM-STOP-when.patch
+Patch1147: 1147-media-intel-ipu4-Squashed-of-4-reverted-patches.patch
+Patch1148: 1148-media-i2c-fix-hdmi-YVYV-to-UYVY-color-incorrect-issu.patch
+Patch1149: 1149-media-ici-fix-close-stream-pipeline_set_power-was-ca.patch
+Patch1150: 1150-Revert-drm-i915-gvt-release-the-handle-to-avoid-pani.patch
+Patch1151: 1151-Revert-Change-the-priority-of-acrngt_emulation_threa.patch
+Patch1152: 1152-Revert-Reduce-the-unnecessary-interrupt-injection-fo.patch
+Patch1153: 1153-acrn_hvlog-use-ioremap-for-hvlog-to-avoid-memory-cra.patch
+Patch1154: 1154-drm-i915-add-GEN9-cache-sharing-control-in-debugfs.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2392,6 +2409,23 @@ Linux kernel build files and install script
 %patch1135 -p1
 %patch1136 -p1
 %patch1137 -p1
+%patch1138 -p1
+%patch1139 -p1
+%patch1140 -p1
+%patch1141 -p1
+%patch1142 -p1
+%patch1143 -p1
+%patch1144 -p1
+%patch1145 -p1
+%patch1146 -p1
+%patch1147 -p1
+%patch1148 -p1
+%patch1149 -p1
+%patch1150 -p1
+%patch1151 -p1
+%patch1152 -p1
+%patch1153 -p1
+%patch1154 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
