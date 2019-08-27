@@ -21,7 +21,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  5 files changed, 89 insertions(+), 17 deletions(-)
 
 diff --git a/include/sound/compress_driver.h b/include/sound/compress_driver.h
-index e87f2d5..934a004 100644
+index 127c271..2d31660 100644
 --- a/include/sound/compress_driver.h
 +++ b/include/sound/compress_driver.h
 @@ -45,6 +45,11 @@ struct snd_compr_runtime {

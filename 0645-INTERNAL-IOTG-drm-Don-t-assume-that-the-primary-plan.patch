@@ -157,7 +157,7 @@ index 8b546fd..bf1217d 100644
  			crtcs_bound++;
  		if (crtc->primary->fb == fb_helper->fb)
 diff --git a/drivers/gpu/drm/drm_framebuffer.c b/drivers/gpu/drm/drm_framebuffer.c
-index 781af1d..d2d2c30 100644
+index b64a6ff..46234dd 100644
 --- a/drivers/gpu/drm/drm_framebuffer.c
 +++ b/drivers/gpu/drm/drm_framebuffer.c
 @@ -891,7 +891,7 @@ static void legacy_remove_fb(struct drm_framebuffer *fb)

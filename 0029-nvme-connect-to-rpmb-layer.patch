@@ -135,7 +135,7 @@ index e26d119..3622add 100644
  
  	if (ret < 0)
 diff --git a/drivers/nvme/host/nvme.h b/drivers/nvme/host/nvme.h
-index e82cdae..43f3752 100644
+index d5e29b5..16cc88f 100644
 --- a/drivers/nvme/host/nvme.h
 +++ b/drivers/nvme/host/nvme.h
 @@ -21,6 +21,7 @@
