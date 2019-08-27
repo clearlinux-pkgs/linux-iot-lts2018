@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.66-base-190823T173102Z
+# quilt.tag:  lts-v4.19.68-base-190827T165035Z
 # config.tag: lts-v4.19.66-base-190823T173102Z
 
 %define ktarget0 iot-lts2018
@@ -1176,35 +1176,34 @@ Patch1122: 1122-dma-buf-hyper_dmabuf-delayed_export-protected-with-m.patch
 Patch1123: 1123-dma-buf-hyper_dmabuf-mutex-protection-on-unexport_io.patch
 Patch1124: 1124-dma-buf-hyper_dmabuf-release-double-check-exported.patch
 Patch1125: 1125-ASoC-Intel-Skylake-Fix-cores-power-managment.patch
-Patch1126: 1126-drm-i915-cfl-Add-a-new-CFL-PCI-ID.patch
-Patch1127: 1127-platform-x86-SEP-bug-fix-use-of-undeclared-var.patch
-Patch1128: 1128-platform-x86-SEP-BUG-fix-for-lbrcollection.patch
-Patch1129: 1129-drm-i915-gvt-fix-the-racing-condition-when-vgpu-dest.patch
-Patch1130: 1130-vhm-Expose-ACRN-IOCTL-interface-to-get-platform-info.patch
-Patch1131: 1131-vbs-set-memory-barrier-for-virtio_vq.patch
-Patch1132: 1132-i915-gvt-obtain-power-domain-to-take-the-snapshot-of.patch
-Patch1133: 1133-drivers-hyper_dmabuf-fix-potential-invalid-array-ind.patch
-Patch1134: 1134-drivers-hyper_dmabuf-fix-dead-lock-introduced-when-v.patch
-Patch1135: 1135-drivers-hyper_dmabuf-fix-dead-lock-in-fastpath_expor.patch
-Patch1136: 1136-drm-i915-gvt-release-the-handle-to-avoid-panic.patch
-Patch1137: 1137-drm-i915-Remove-i915-ggtt-WA-since-GT-E.patch
-Patch1138: 1138-media-ici-Add-ICI_FORMAT_RGB24-macro-for-24-bit-RGB.patch
-Patch1139: 1139-media-ici-Use-ICI_FORMAT_RGB24-for-packed-formats.patch
-Patch1140: 1140-media-i2c-crlmodule-lite-Add-ICI_FORMAT_RGB24-as-sup.patch
-Patch1141: 1141-media-intel-ipu4-VIRT-Remove-hash-table-entry-on-res.patch
-Patch1142: 1142-media-ipu-Move-ipu_buttress_tsc_ticks_to_ns-out-of-C.patch
-Patch1143: 1143-media-intel-ipu4-VIRT-Reorder-vbk_reset-and-ipu_vbk_.patch
-Patch1144: 1144-media-ici-Add-mutex-for-function-ici_isys_frame_buf_.patch
-Patch1145: 1145-Revert-media-ici-Fix-warning-when-stream_start-fails.patch
-Patch1146: 1146-media-ici-Use-IPU_FW_ISYS_SEND_TYPE_STREAM-STOP-when.patch
-Patch1147: 1147-media-intel-ipu4-Squashed-of-4-reverted-patches.patch
-Patch1148: 1148-media-i2c-fix-hdmi-YVYV-to-UYVY-color-incorrect-issu.patch
-Patch1149: 1149-media-ici-fix-close-stream-pipeline_set_power-was-ca.patch
-Patch1150: 1150-Revert-drm-i915-gvt-release-the-handle-to-avoid-pani.patch
-Patch1151: 1151-Revert-Change-the-priority-of-acrngt_emulation_threa.patch
-Patch1152: 1152-Revert-Reduce-the-unnecessary-interrupt-injection-fo.patch
-Patch1153: 1153-acrn_hvlog-use-ioremap-for-hvlog-to-avoid-memory-cra.patch
-Patch1154: 1154-drm-i915-add-GEN9-cache-sharing-control-in-debugfs.patch
+Patch1126: 1126-platform-x86-SEP-bug-fix-use-of-undeclared-var.patch
+Patch1127: 1127-platform-x86-SEP-BUG-fix-for-lbrcollection.patch
+Patch1128: 1128-drm-i915-gvt-fix-the-racing-condition-when-vgpu-dest.patch
+Patch1129: 1129-vhm-Expose-ACRN-IOCTL-interface-to-get-platform-info.patch
+Patch1130: 1130-vbs-set-memory-barrier-for-virtio_vq.patch
+Patch1131: 1131-i915-gvt-obtain-power-domain-to-take-the-snapshot-of.patch
+Patch1132: 1132-drivers-hyper_dmabuf-fix-potential-invalid-array-ind.patch
+Patch1133: 1133-drivers-hyper_dmabuf-fix-dead-lock-introduced-when-v.patch
+Patch1134: 1134-drivers-hyper_dmabuf-fix-dead-lock-in-fastpath_expor.patch
+Patch1135: 1135-drm-i915-gvt-release-the-handle-to-avoid-panic.patch
+Patch1136: 1136-drm-i915-Remove-i915-ggtt-WA-since-GT-E.patch
+Patch1137: 1137-media-ici-Add-ICI_FORMAT_RGB24-macro-for-24-bit-RGB.patch
+Patch1138: 1138-media-ici-Use-ICI_FORMAT_RGB24-for-packed-formats.patch
+Patch1139: 1139-media-i2c-crlmodule-lite-Add-ICI_FORMAT_RGB24-as-sup.patch
+Patch1140: 1140-media-intel-ipu4-VIRT-Remove-hash-table-entry-on-res.patch
+Patch1141: 1141-media-ipu-Move-ipu_buttress_tsc_ticks_to_ns-out-of-C.patch
+Patch1142: 1142-media-intel-ipu4-VIRT-Reorder-vbk_reset-and-ipu_vbk_.patch
+Patch1143: 1143-media-ici-Add-mutex-for-function-ici_isys_frame_buf_.patch
+Patch1144: 1144-Revert-media-ici-Fix-warning-when-stream_start-fails.patch
+Patch1145: 1145-media-ici-Use-IPU_FW_ISYS_SEND_TYPE_STREAM-STOP-when.patch
+Patch1146: 1146-media-intel-ipu4-Squashed-of-4-reverted-patches.patch
+Patch1147: 1147-media-i2c-fix-hdmi-YVYV-to-UYVY-color-incorrect-issu.patch
+Patch1148: 1148-media-ici-fix-close-stream-pipeline_set_power-was-ca.patch
+Patch1149: 1149-Revert-drm-i915-gvt-release-the-handle-to-avoid-pani.patch
+Patch1150: 1150-Revert-Change-the-priority-of-acrngt_emulation_threa.patch
+Patch1151: 1151-Revert-Reduce-the-unnecessary-interrupt-injection-fo.patch
+Patch1152: 1152-acrn_hvlog-use-ioremap-for-hvlog-to-avoid-memory-cra.patch
+Patch1153: 1153-drm-i915-add-GEN9-cache-sharing-control-in-debugfs.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2425,7 +2424,6 @@ Linux kernel build files and install script
 %patch1151 -p1
 %patch1152 -p1
 %patch1153 -p1
-%patch1154 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
