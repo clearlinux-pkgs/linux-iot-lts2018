@@ -1,10 +1,10 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.66 Kernel Configuration
+# Linux/x86 4.19.68 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.2.1 20190822 gcc-9-branch@274815
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.2.1 20190826 gcc-9-branch@274921
 #
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=90201
@@ -628,7 +628,7 @@ CONFIG_DCDBAS=y
 CONFIG_DMIID=y
 CONFIG_DMI_SYSFS=y
 CONFIG_DMI_SCAN_MACHINE_NON_EFI_FALLBACK=y
-# CONFIG_ISCSI_IBFT_FIND is not set
+# CONFIG_ISCSI_IBFT is not set
 # CONFIG_FW_CFG_SYSFS is not set
 # CONFIG_GOOGLE_FIRMWARE is not set
 
