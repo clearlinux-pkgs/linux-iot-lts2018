@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.68-base-190827T165035Z
+# quilt.tag:  lts-v4.19.68-base-190905T163916Z
 # config.tag: lts-v4.19.68-base-190827T165035Z
 
 %define ktarget0 iot-lts2018
@@ -1204,6 +1204,27 @@ Patch1150: 1150-Revert-Change-the-priority-of-acrngt_emulation_threa.patch
 Patch1151: 1151-Revert-Reduce-the-unnecessary-interrupt-injection-fo.patch
 Patch1152: 1152-acrn_hvlog-use-ioremap-for-hvlog-to-avoid-memory-cra.patch
 Patch1153: 1153-drm-i915-add-GEN9-cache-sharing-control-in-debugfs.patch
+Patch1154: 1154-isys-psys-package-lib2600b0-for-commit-id-5efdf9c.patch
+Patch1155: 1155-media-intel-ipu4-pdata-change-for-sensors-connected-.patch
+Patch1156: 1156-media-intel-ipu4-ox03a10-add-ficosa-module.patch
+Patch1157: 1157-media-intel-ipu4-ti960-split-ti953-code.patch
+Patch1158: 1158-media-intel-ipu4-ti960-add-metadata-support-for-x3a.patch
+Patch1159: 1159-media-intel-ipu4-update-metadata-info-for-x3a.patch
+Patch1160: 1160-media-intel-ipu4-ox03a10-fix-llp-and-fll-ctrl-for-ox.patch
+Patch1161: 1161-media-intel-ipu4-ox03a10-delete-unused-exposure-mode.patch
+Patch1162: 1162-media-intel-ipu4-fix-frame-counter-x3a-can-t-work-is.patch
+Patch1163: 1163-media-intel-ipu4-ox03a10-change-output-fps-to-30.patch
+Patch1164: 1164-media-intel-ipu4-ox03a10-change-metadata-set.patch
+Patch1165: 1165-media-intel-ipu4-ox03a10-ficosa-original-mode-1920x1.patch
+Patch1166: 1166-media-intel-ipu4-ox03a10-ficosa-mode-1920x1280-GRBG1.patch
+Patch1167: 1167-media-intel-ipu4-ox03a10-30-fps-for-mode-1920x1280.patch
+Patch1168: 1168-media-intel-ipu4-ox03a10-add-metadata-support-for-19.patch
+Patch1169: 1169-media-intel-ipu4-Fix-possible-deadlock.patch
+Patch1170: 1170-media-intel-ipu4-Add-clkdev_drop-to-avoid-memory-lea.patch
+Patch1171: 1171-media-intel-ipu4-rename-I2C_WA-to-readable-I2C_DYNAM.patch
+Patch1172: 1172-media-intel-ipu4-add-header-file-to-some-file-for-bu.patch
+Patch1173: 1173-media-intel-ipu4-dynamic-memory-alloc-for-clkdev_add.patch
+Patch1174: 1174-media-ici-fix-build-error-of-ti953-relate-parametes.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2424,6 +2445,27 @@ Linux kernel build files and install script
 %patch1151 -p1
 %patch1152 -p1
 %patch1153 -p1
+%patch1154 -p1
+%patch1155 -p1
+%patch1156 -p1
+%patch1157 -p1
+%patch1158 -p1
+%patch1159 -p1
+%patch1160 -p1
+%patch1161 -p1
+%patch1162 -p1
+%patch1163 -p1
+%patch1164 -p1
+%patch1165 -p1
+%patch1166 -p1
+%patch1167 -p1
+%patch1168 -p1
+%patch1169 -p1
+%patch1170 -p1
+%patch1171 -p1
+%patch1172 -p1
+%patch1173 -p1
+%patch1174 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
