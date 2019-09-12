@@ -19,7 +19,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  3 files changed, 318 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/core.c b/drivers/hwtracing/stm/core.c
-index 27b778d..1aca60d 100644
+index 15faebc..0b8a939 100644
 --- a/drivers/hwtracing/stm/core.c
 +++ b/drivers/hwtracing/stm/core.c
 @@ -318,11 +318,26 @@ static int stm_output_assign(struct stm_device *stm, unsigned int width,
@@ -186,7 +186,7 @@ index 27b778d..1aca60d 100644
  static int stm_char_open(struct inode *inode, struct file *file)
  {
  	struct stm_file *stmf;
-@@ -1180,6 +1318,8 @@ static int __init stm_core_init(void)
+@@ -1179,6 +1317,8 @@ static int __init stm_core_init(void)
  		goto err_src;
  
  	init_srcu_struct(&stm_source_srcu);

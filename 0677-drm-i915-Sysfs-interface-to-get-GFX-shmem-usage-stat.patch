@@ -111,10 +111,10 @@ index 19dfbf3..3d25ace 100644
  	bool "Always enable userptr support"
  	depends on DRM_I915
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 8f7ed15..5c25a82 100644
+index 0d93edc..557c713 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
-@@ -1557,6 +1557,10 @@ static void i915_driver_postclose(struct drm_device *dev, struct drm_file *file)
+@@ -1563,6 +1563,10 @@ static void i915_driver_postclose(struct drm_device *dev, struct drm_file *file)
  	i915_gem_release(dev, file);
  	mutex_unlock(&dev->struct_mutex);
  
@@ -125,7 +125,7 @@ index 8f7ed15..5c25a82 100644
  	kfree(file_priv);
  }
  
-@@ -2916,6 +2920,9 @@ static struct drm_driver driver = {
+@@ -2922,6 +2926,9 @@ static struct drm_driver driver = {
  	.lastclose = i915_driver_lastclose,
  	.postclose = i915_driver_postclose,
  

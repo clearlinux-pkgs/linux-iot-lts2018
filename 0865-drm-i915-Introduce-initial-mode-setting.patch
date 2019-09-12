@@ -54,7 +54,7 @@ index 517620b..c70a494 100644
 +
  obj-$(CONFIG_DRM_I915) += i915.o
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 5c25a82..c7f4f94 100644
+index 557c713..d345518 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -690,9 +690,11 @@ static int i915_load_modeset_init(struct drm_device *dev)
@@ -72,7 +72,7 @@ index 5c25a82..c7f4f94 100644
  
  	/* Only enable hotplug handling once the fbdev is fully set up. */
  	intel_hpd_init(dev_priv);
-@@ -1286,7 +1288,10 @@ static void i915_driver_register(struct drm_i915_private *dev_priv)
+@@ -1292,7 +1294,10 @@ static void i915_driver_register(struct drm_i915_private *dev_priv)
  	 * irqs are fully enabled. We do it last so that the async config
  	 * cannot run before the connectors are registered.
  	 */
@@ -84,7 +84,7 @@ index 5c25a82..c7f4f94 100644
  
  	/*
  	 * We need to coordinate the hotplugs with the asynchronous fbdev
-@@ -1475,6 +1480,11 @@ void i915_driver_unload(struct drm_device *dev)
+@@ -1481,6 +1486,11 @@ void i915_driver_unload(struct drm_device *dev)
  
  	i915_driver_unregister(dev_priv);
  
@@ -96,7 +96,7 @@ index 5c25a82..c7f4f94 100644
  	if (i915_gem_suspend(dev_priv))
  		DRM_ERROR("failed to idle hardware; continuing to unload!\n");
  
-@@ -1544,7 +1554,8 @@ static int i915_driver_open(struct drm_device *dev, struct drm_file *file)
+@@ -1550,7 +1560,8 @@ static int i915_driver_open(struct drm_device *dev, struct drm_file *file)
   */
  static void i915_driver_lastclose(struct drm_device *dev)
  {
