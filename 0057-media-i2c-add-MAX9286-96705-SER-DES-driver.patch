@@ -21,10 +21,10 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  create mode 100644 include/media/max9286.h
 
 diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
-index 3544b1a..3a5f498 100644
+index b603c6e..fe62038 100644
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
-@@ -1074,6 +1074,12 @@ config VIDEO_TI964
+@@ -1075,6 +1075,12 @@ config VIDEO_TI964
  	---help---
  	This is a driver for TI964 camera.
  

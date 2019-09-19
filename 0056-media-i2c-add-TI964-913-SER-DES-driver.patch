@@ -21,10 +21,10 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  create mode 100644 include/media/ti964.h
 
 diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
-index 7e34bdc..3544b1a 100644
+index 67ad205..b603c6e 100644
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
-@@ -1068,6 +1068,12 @@ config VIDEO_I2C
+@@ -1069,6 +1069,12 @@ config VIDEO_I2C
  	  To compile this driver as a module, choose M here: the
  	  module will be called video-i2c
  

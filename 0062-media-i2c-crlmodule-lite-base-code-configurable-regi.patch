@@ -71,10 +71,10 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  create mode 100644 include/media/lm3643.h
 
 diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
-index 4f1d5eb..6b1953a 100644
+index 5dda368..4d3ee27 100644
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
-@@ -948,6 +948,7 @@ config VIDEO_S5K5BAF
+@@ -949,6 +949,7 @@ config VIDEO_S5K5BAF
  source "drivers/media/i2c/smiapp/Kconfig"
  source "drivers/media/i2c/et8ek8/Kconfig"
  source "drivers/media/i2c/crlmodule/Kconfig"

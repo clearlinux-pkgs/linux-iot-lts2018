@@ -21,10 +21,10 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  create mode 100644 include/media/ti960.h
 
 diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
-index 3a5f498..4f1d5eb 100644
+index fe62038..5dda368 100644
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
-@@ -1080,6 +1080,12 @@ config VIDEO_MAX9286
+@@ -1081,6 +1081,12 @@ config VIDEO_MAX9286
  	---help---
  	This is a MAXIM 96705 Serializer and MAXIM 9286 CSI-2 Deserializer driver.
  

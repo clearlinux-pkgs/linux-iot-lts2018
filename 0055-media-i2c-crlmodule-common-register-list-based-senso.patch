@@ -102,10 +102,10 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  create mode 100644 include/uapi/linux/crlmodule.h
 
 diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
-index 63c9ac2..7e34bdc 100644
+index 8b1ae1d..67ad205 100644
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
-@@ -947,6 +947,7 @@ config VIDEO_S5K5BAF
+@@ -948,6 +948,7 @@ config VIDEO_S5K5BAF
  
  source "drivers/media/i2c/smiapp/Kconfig"
  source "drivers/media/i2c/et8ek8/Kconfig"
