@@ -32,7 +32,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.73-base-190918T170800Z
+# quilt.tag:  lts-v4.19.73-base-190919T160721Z
 # config.tag: lts-v4.19.73-base-190918T170800Z
 
 %define ktarget0 iot-lts2018
@@ -1226,6 +1226,7 @@ Patch1172: 1172-media-intel-ipu4-dynamic-memory-alloc-for-clkdev_add.patch
 Patch1173: 1173-media-ici-fix-build-error-of-ti953-relate-parametes.patch
 Patch1174: 1174-media-intel-ipu4-css-scci_IPU4_master_20190813-fw-re.patch
 Patch1175: 1175-media-update-ti960-gpio-pin-to-the-default-setting.patch
+Patch1176: 1176-USB-Fix-configuration-selection-issues-introduced-in.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2468,6 +2469,7 @@ Linux kernel build files and install script
 %patch1173 -p1
 %patch1174 -p1
 %patch1175 -p1
+%patch1176 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
