@@ -265,7 +265,7 @@ index 72d6435..51dacbb 100644
  {
  	return -ENOSYS;
 diff --git a/net/core/filter.c b/net/core/filter.c
-index c996380..5905747 100644
+index e6fa885..204a08f 100644
 --- a/net/core/filter.c
 +++ b/net/core/filter.c
 @@ -4288,7 +4288,7 @@ static int bpf_ipv4_fib_lookup(struct net *net, struct bpf_fib_lookup *params,

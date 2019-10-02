@@ -50,7 +50,7 @@ index c22062c..9390a33 100644
  	if (IS_ERR(crtc_state))
  		return PTR_ERR(crtc_state);
 diff --git a/drivers/gpu/drm/drm_crtc.c b/drivers/gpu/drm/drm_crtc.c
-index 6e241a3..dcfa240 100644
+index 6e241a3c..dcfa240 100644
 --- a/drivers/gpu/drm/drm_crtc.c
 +++ b/drivers/gpu/drm/drm_crtc.c
 @@ -410,6 +410,9 @@ int drm_mode_getcrtc(struct drm_device *dev,
