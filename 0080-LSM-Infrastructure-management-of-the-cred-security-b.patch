@@ -585,7 +585,7 @@ index 0b55d6a..0c6dce4 100644
  /*
   * Use IPv6 port labeling if IPv6 is enabled and secmarks
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index bb0d401..0b63915 100644
+index cd83ccc..cd61738 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -309,29 +309,20 @@ static struct inode_smack *new_inode_smack(struct smack_known *skp)
@@ -622,7 +622,7 @@ index bb0d401..0b63915 100644
  }
  
  /**
-@@ -1965,14 +1956,7 @@ static int smack_file_open(struct file *file)
+@@ -1966,14 +1957,7 @@ static int smack_file_open(struct file *file)
   */
  static int smack_cred_alloc_blank(struct cred *cred, gfp_t gfp)
  {
@@ -638,7 +638,7 @@ index bb0d401..0b63915 100644
  	return 0;
  }
  
-@@ -1989,10 +1973,6 @@ static void smack_cred_free(struct cred *cred)
+@@ -1990,10 +1974,6 @@ static void smack_cred_free(struct cred *cred)
  	struct list_head *l;
  	struct list_head *n;
  
@@ -649,7 +649,7 @@ index bb0d401..0b63915 100644
  	smk_destroy_label_list(&tsp->smk_relabel);
  
  	list_for_each_safe(l, n, &tsp->smk_rules) {
-@@ -2000,7 +1980,6 @@ static void smack_cred_free(struct cred *cred)
+@@ -2001,7 +1981,6 @@ static void smack_cred_free(struct cred *cred)
  		list_del(&rp->list);
  		kfree(rp);
  	}
@@ -657,7 +657,7 @@ index bb0d401..0b63915 100644
  }
  
  /**
-@@ -2015,14 +1994,10 @@ static int smack_cred_prepare(struct cred *new, const struct cred *old,
+@@ -2016,14 +1995,10 @@ static int smack_cred_prepare(struct cred *new, const struct cred *old,
  			      gfp_t gfp)
  {
  	struct task_smack *old_tsp = smack_cred(old);
@@ -674,7 +674,7 @@ index bb0d401..0b63915 100644
  
  	rc = smk_copy_rules(&new_tsp->smk_rules, &old_tsp->smk_rules, gfp);
  	if (rc != 0)
-@@ -2030,10 +2005,7 @@ static int smack_cred_prepare(struct cred *new, const struct cred *old,
+@@ -2031,10 +2006,7 @@ static int smack_cred_prepare(struct cred *new, const struct cred *old,
  
  	rc = smk_copy_relabel(&new_tsp->smk_relabel, &old_tsp->smk_relabel,
  				gfp);
@@ -686,7 +686,7 @@ index bb0d401..0b63915 100644
  }
  
  /**
-@@ -4665,6 +4637,10 @@ static int smack_dentry_create_files_as(struct dentry *dentry, int mode,
+@@ -4668,6 +4640,10 @@ static int smack_dentry_create_files_as(struct dentry *dentry, int mode,
  	return 0;
  }
  
@@ -697,7 +697,7 @@ index bb0d401..0b63915 100644
  static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(ptrace_access_check, smack_ptrace_access_check),
  	LSM_HOOK_INIT(ptrace_traceme, smack_ptrace_traceme),
-@@ -4843,23 +4819,35 @@ static __init void init_smack_known_list(void)
+@@ -4846,23 +4822,35 @@ static __init void init_smack_known_list(void)
   */
  static __init int smack_init(void)
  {
@@ -740,7 +740,7 @@ index bb0d401..0b63915 100644
  	smack_enabled = 1;
  
  	pr_info("Smack:  Initializing.\n");
-@@ -4873,20 +4861,9 @@ static __init int smack_init(void)
+@@ -4876,20 +4864,9 @@ static __init int smack_init(void)
  	pr_info("Smack:  IPv6 Netfilter enabled.\n");
  #endif
  

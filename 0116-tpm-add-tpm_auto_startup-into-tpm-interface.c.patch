@@ -21,10 +21,10 @@ Tested-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  3 files changed, 19 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm-chip.c b/drivers/char/tpm/tpm-chip.c
-index 46caadc..32db846 100644
+index 0b01eb7..3766f31 100644
 --- a/drivers/char/tpm/tpm-chip.c
 +++ b/drivers/char/tpm/tpm-chip.c
-@@ -451,14 +451,9 @@ int tpm_chip_register(struct tpm_chip *chip)
+@@ -452,14 +452,9 @@ int tpm_chip_register(struct tpm_chip *chip)
  {
  	int rc;
  

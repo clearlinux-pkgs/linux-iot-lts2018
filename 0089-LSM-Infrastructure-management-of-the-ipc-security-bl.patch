@@ -513,10 +513,10 @@ index f457dd3..42c36e3 100644
   * Is the directory transmuting?
   */
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index e865d2d..cb7929a 100644
+index 9ef4df0..8faa093 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
-@@ -2863,23 +2863,12 @@ static int smack_flags_to_may(int flags)
+@@ -2864,23 +2864,12 @@ static int smack_flags_to_may(int flags)
   */
  static int smack_msg_msg_alloc_security(struct msg_msg *msg)
  {
@@ -542,7 +542,7 @@ index e865d2d..cb7929a 100644
  /**
   * smack_of_ipc - the smack pointer for the ipc
   * @isp: the object
-@@ -2888,7 +2877,9 @@ static void smack_msg_msg_free_security(struct msg_msg *msg)
+@@ -2889,7 +2878,9 @@ static void smack_msg_msg_free_security(struct msg_msg *msg)
   */
  static struct smack_known *smack_of_ipc(struct kern_ipc_perm *isp)
  {
@@ -553,7 +553,7 @@ index e865d2d..cb7929a 100644
  }
  
  /**
-@@ -2899,23 +2890,12 @@ static struct smack_known *smack_of_ipc(struct kern_ipc_perm *isp)
+@@ -2900,23 +2891,12 @@ static struct smack_known *smack_of_ipc(struct kern_ipc_perm *isp)
   */
  static int smack_ipc_alloc_security(struct kern_ipc_perm *isp)
  {
@@ -579,7 +579,7 @@ index e865d2d..cb7929a 100644
  /**
   * smk_curacc_shm : check if current has access on shm
   * @isp : the object
-@@ -3213,7 +3193,8 @@ static int smack_msg_queue_msgrcv(struct kern_ipc_perm *isp, struct msg_msg *msg
+@@ -3214,7 +3194,8 @@ static int smack_msg_queue_msgrcv(struct kern_ipc_perm *isp, struct msg_msg *msg
   */
  static int smack_ipc_permission(struct kern_ipc_perm *ipp, short flag)
  {
@@ -589,7 +589,7 @@ index e865d2d..cb7929a 100644
  	int may = smack_flags_to_may(flag);
  	struct smk_audit_info ad;
  	int rc;
-@@ -3234,7 +3215,8 @@ static int smack_ipc_permission(struct kern_ipc_perm *ipp, short flag)
+@@ -3235,7 +3216,8 @@ static int smack_ipc_permission(struct kern_ipc_perm *ipp, short flag)
   */
  static void smack_ipc_getsecid(struct kern_ipc_perm *ipp, u32 *secid)
  {
@@ -599,7 +599,7 @@ index e865d2d..cb7929a 100644
  
  	*secid = iskp->smk_secid;
  }
-@@ -4561,6 +4543,8 @@ struct lsm_blob_sizes smack_blob_sizes = {
+@@ -4564,6 +4546,8 @@ struct lsm_blob_sizes smack_blob_sizes = {
  	.lbs_cred = sizeof(struct task_smack),
  	.lbs_file = sizeof(struct smack_known *),
  	.lbs_inode = sizeof(struct inode_smack),
@@ -608,7 +608,7 @@ index e865d2d..cb7929a 100644
  	.lbs_sock = sizeof(struct socket_smack),
  	.lbs_superblock = sizeof(struct superblock_smack),
  };
-@@ -4633,23 +4617,19 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
+@@ -4636,23 +4620,19 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(ipc_getsecid, smack_ipc_getsecid),
  
  	LSM_HOOK_INIT(msg_msg_alloc_security, smack_msg_msg_alloc_security),

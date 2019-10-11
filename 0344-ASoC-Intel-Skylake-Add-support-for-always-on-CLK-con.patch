@@ -151,7 +151,7 @@ index b52f1c0..1fd9a3a 100644
  			struct skl_module_cfg *mconfig,
  			struct skl_audio_data_format *out_fmt)
 diff --git a/sound/soc/intel/skylake/skl-nhlt.c b/sound/soc/intel/skylake/skl-nhlt.c
-index cf3d381..742b0cb 100644
+index 7063e86..b9bc3d1 100644
 --- a/sound/soc/intel/skylake/skl-nhlt.c
 +++ b/sound/soc/intel/skylake/skl-nhlt.c
 @@ -149,6 +149,26 @@ static bool skl_check_ep_match(struct device *dev, struct nhlt_endpoint *epnt,

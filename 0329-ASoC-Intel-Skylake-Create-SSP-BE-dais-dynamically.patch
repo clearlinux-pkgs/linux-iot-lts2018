@@ -18,7 +18,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  3 files changed, 111 insertions(+), 127 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-nhlt.c b/sound/soc/intel/skylake/skl-nhlt.c
-index b2873dd..cf3d381 100644
+index 30ef8c4..7063e86 100644
 --- a/sound/soc/intel/skylake/skl-nhlt.c
 +++ b/sound/soc/intel/skylake/skl-nhlt.c
 @@ -464,3 +464,39 @@ void skl_get_clks(struct skl *skl, struct skl_ssp_clk *ssp_clks)

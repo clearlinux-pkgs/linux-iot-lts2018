@@ -285,7 +285,7 @@ index 3304a1e..7a3d18f 100644
  	u32 sid;		/* SID of this object */
  	u16 sclass;		/* security class of this object */
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 633b4b8..4beec2f 100644
+index ba45ad0..a596352 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -288,24 +288,18 @@ static struct smack_known *smk_fetch(const char *name, struct inode *ip,
@@ -340,7 +340,7 @@ index 633b4b8..4beec2f 100644
  
  	return 0;
  }
-@@ -965,48 +955,10 @@ static int smack_inode_alloc_security(struct inode *inode)
+@@ -966,48 +956,10 @@ static int smack_inode_alloc_security(struct inode *inode)
  {
  	struct smack_known *skp = smk_of_current();
  
@@ -390,7 +390,7 @@ index 633b4b8..4beec2f 100644
  /**
   * smack_inode_init_security - copy out the smack from an inode
   * @inode: the newly created inode
-@@ -4632,6 +4584,7 @@ static int smack_dentry_create_files_as(struct dentry *dentry, int mode,
+@@ -4635,6 +4587,7 @@ static int smack_dentry_create_files_as(struct dentry *dentry, int mode,
  struct lsm_blob_sizes smack_blob_sizes = {
  	.lbs_cred = sizeof(struct task_smack),
  	.lbs_file = sizeof(struct smack_known *),
@@ -398,7 +398,7 @@ index 633b4b8..4beec2f 100644
  };
  
  static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
-@@ -4650,7 +4603,6 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
+@@ -4653,7 +4606,6 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(bprm_set_creds, smack_bprm_set_creds),
  
  	LSM_HOOK_INIT(inode_alloc_security, smack_inode_alloc_security),

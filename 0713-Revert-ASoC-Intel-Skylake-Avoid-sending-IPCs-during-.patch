@@ -22,7 +22,7 @@ Signed-off-by: Cezary Rojewski <cezary.rojewski@intel.com>
  2 files changed, 10 deletions(-)
 
 diff --git a/sound/soc/intel/common/sst-ipc.c b/sound/soc/intel/common/sst-ipc.c
-index 0037e21..e5d2df7 100644
+index fd93d58..81b413e 100644
 --- a/sound/soc/intel/common/sst-ipc.c
 +++ b/sound/soc/intel/common/sst-ipc.c
 @@ -98,10 +98,6 @@ static int ipc_tx_message(struct sst_generic_ipc *ipc, u64 header,

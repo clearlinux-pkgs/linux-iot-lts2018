@@ -11,7 +11,7 @@ Reviewed-on:
  1 file changed, 3 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 52b65bb..f9db7ea 100644
+index 3365fe5..91b8035 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -91,9 +91,6 @@ static ssize_t nhlt_write(struct file *file,

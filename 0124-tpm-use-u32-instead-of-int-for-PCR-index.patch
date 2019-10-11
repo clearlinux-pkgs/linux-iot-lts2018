@@ -61,7 +61,7 @@ index 9245ec5..88d2e01 100644
  	int rc;
  	struct tpm2_digest digest_list[ARRAY_SIZE(chip->active_banks)];
 diff --git a/drivers/char/tpm/tpm-sysfs.c b/drivers/char/tpm/tpm-sysfs.c
-index 96fc743..b88e08e 100644
+index 68da965..52e7b98 100644
 --- a/drivers/char/tpm/tpm-sysfs.c
 +++ b/drivers/char/tpm/tpm-sysfs.c
 @@ -102,7 +102,7 @@ static ssize_t pcrs_show(struct device *dev, struct device_attribute *attr,
@@ -107,7 +107,7 @@ index e0778d1..f27d1f3 100644
  int tpm2_get_random(struct tpm_chip *chip, u8 *dest, size_t max);
  void tpm2_flush_context_cmd(struct tpm_chip *chip, u32 handle,
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index 6b04648..6f30633 100644
+index 3f199a1..9acb8eb 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -449,7 +449,7 @@ int tpm1_get_timeouts(struct tpm_chip *chip)

@@ -45,7 +45,7 @@ index f58e1ef..b2d5776 100644
  extern void * memcpy(void *,const void *,__kernel_size_t);
  #endif
 diff --git a/lib/Kconfig.debug b/lib/Kconfig.debug
-index 3dea52f..dfd9fd0 100644
+index 46a910a..cc6d337 100644
 --- a/lib/Kconfig.debug
 +++ b/lib/Kconfig.debug
 @@ -1966,6 +1966,14 @@ config TEST_DEBUG_VIRTUAL

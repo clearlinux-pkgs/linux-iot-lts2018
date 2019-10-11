@@ -24,7 +24,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  3 files changed, 86 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 07b3309..f3c5e29 100644
+index 89b2948..7c3dcd0 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -56,6 +56,11 @@ struct nhlt_blob {

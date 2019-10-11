@@ -18,7 +18,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 2 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-nhlt.c b/sound/soc/intel/skylake/skl-nhlt.c
-index 742b0cb..284e765 100644
+index b9bc3d1..2f16440 100644
 --- a/sound/soc/intel/skylake/skl-nhlt.c
 +++ b/sound/soc/intel/skylake/skl-nhlt.c
 @@ -28,6 +28,8 @@ static guid_t osc_guid =

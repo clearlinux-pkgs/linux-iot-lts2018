@@ -42,7 +42,7 @@ index bf2ef1e..e0778d1 100644
  /* 128 bytes is an arbitrary cap. This could be as large as TPM_BUFSIZE - 18
   * bytes, but 128 is still a relatively large number of random bytes and
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index d418a27..6b04648 100644
+index 570622d..3f199a1 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -602,15 +602,8 @@ int tpm1_pcr_read(struct tpm_chip *chip, int pcr_idx, u8 *res_buf)

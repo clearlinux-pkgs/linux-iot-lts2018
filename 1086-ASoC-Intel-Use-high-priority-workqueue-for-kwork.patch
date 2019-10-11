@@ -17,7 +17,7 @@ Signed-off-by: Dominik Bozek <dominikx.bozek@intel.com>
  2 files changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/common/sst-ipc.c b/sound/soc/intel/common/sst-ipc.c
-index 5866f84..0eada7f 100644
+index 3465eca..07dabab 100644
 --- a/sound/soc/intel/common/sst-ipc.c
 +++ b/sound/soc/intel/common/sst-ipc.c
 @@ -126,7 +126,7 @@ static int ipc_tx_message(struct sst_generic_ipc *ipc, u64 header,

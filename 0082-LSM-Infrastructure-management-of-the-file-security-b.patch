@@ -281,10 +281,10 @@ index 0c6dce4..043525a 100644
   * Is the directory transmuting?
   */
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 0b63915..7284291 100644
+index cd61738..1273456 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
-@@ -1573,24 +1573,12 @@ static void smack_inode_getsecid(struct inode *inode, u32 *secid)
+@@ -1574,24 +1574,12 @@ static void smack_inode_getsecid(struct inode *inode, u32 *secid)
   */
  static int smack_file_alloc_security(struct file *file)
  {
@@ -311,7 +311,7 @@ index 0b63915..7284291 100644
  /**
   * smack_file_ioctl - Smack check on ioctls
   * @file: the object
-@@ -1815,7 +1803,9 @@ static int smack_mmap_file(struct file *file,
+@@ -1816,7 +1804,9 @@ static int smack_mmap_file(struct file *file,
   */
  static void smack_file_set_fowner(struct file *file)
  {
@@ -322,7 +322,7 @@ index 0b63915..7284291 100644
  }
  
  /**
-@@ -1832,6 +1822,7 @@ static void smack_file_set_fowner(struct file *file)
+@@ -1833,6 +1823,7 @@ static void smack_file_set_fowner(struct file *file)
  static int smack_file_send_sigiotask(struct task_struct *tsk,
  				     struct fown_struct *fown, int signum)
  {
@@ -330,7 +330,7 @@ index 0b63915..7284291 100644
  	struct smack_known *skp;
  	struct smack_known *tkp = smk_of_task(smack_cred(tsk->cred));
  	const struct cred *tcred;
-@@ -1845,7 +1836,8 @@ static int smack_file_send_sigiotask(struct task_struct *tsk,
+@@ -1846,7 +1837,8 @@ static int smack_file_send_sigiotask(struct task_struct *tsk,
  	file = container_of(fown, struct file, f_owner);
  
  	/* we don't log here as rc can be overriden */
@@ -340,7 +340,7 @@ index 0b63915..7284291 100644
  	rc = smk_access(skp, tkp, MAY_DELIVER, NULL);
  	rc = smk_bu_note("sigiotask", skp, tkp, MAY_DELIVER, rc);
  
-@@ -4639,6 +4631,7 @@ static int smack_dentry_create_files_as(struct dentry *dentry, int mode,
+@@ -4642,6 +4634,7 @@ static int smack_dentry_create_files_as(struct dentry *dentry, int mode,
  
  struct lsm_blob_sizes smack_blob_sizes = {
  	.lbs_cred = sizeof(struct task_smack),
@@ -348,7 +348,7 @@ index 0b63915..7284291 100644
  };
  
  static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
-@@ -4676,7 +4669,6 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
+@@ -4679,7 +4672,6 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(inode_getsecid, smack_inode_getsecid),
  
  	LSM_HOOK_INIT(file_alloc_security, smack_file_alloc_security),

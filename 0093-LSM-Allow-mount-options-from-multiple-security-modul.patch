@@ -354,7 +354,7 @@ index 071dca2..35df38a 100644
  
  		if (flags[i] == SBLABEL_MNT)
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 47b82ab..39a8580 100644
+index e3e6c74..219cbef 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -604,7 +604,7 @@ static int smack_parse_opts_str(char *options,

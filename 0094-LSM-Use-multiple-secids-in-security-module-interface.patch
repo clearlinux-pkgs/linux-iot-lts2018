@@ -1206,7 +1206,7 @@ index 8ffe7e1..067dd83 100644
  	memcpy(ctx->ctx_str, ctx_str, str_len);
  
 diff --git a/security/smack/smack_access.c b/security/smack/smack_access.c
-index 489d49a..1bbbd53 100644
+index 102c44f..c51e98d 100644
 --- a/security/smack/smack_access.c
 +++ b/security/smack/smack_access.c
 @@ -550,7 +550,9 @@ struct smack_known *smk_import_entry(const char *string, int len)
@@ -1221,10 +1221,10 @@ index 489d49a..1bbbd53 100644
  	 * If direct labeling works use it.
  	 * Otherwise use mapped labeling.
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 39a8580..dc7a2c4 100644
+index 219cbef..1cbe9cc 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
-@@ -1474,11 +1474,11 @@ static int smack_inode_listsecurity(struct inode *inode, char *buffer,
+@@ -1475,11 +1475,11 @@ static int smack_inode_listsecurity(struct inode *inode, char *buffer,
   * @inode: inode to extract the info from
   * @secid: where result will be saved
   */
@@ -1238,7 +1238,7 @@ index 39a8580..dc7a2c4 100644
  }
  
  /*
-@@ -1949,12 +1949,15 @@ static void smack_cred_transfer(struct cred *new, const struct cred *old)
+@@ -1950,12 +1950,15 @@ static void smack_cred_transfer(struct cred *new, const struct cred *old)
  	struct task_smack *old_tsp = smack_cred(old);
  	struct task_smack *new_tsp = smack_cred(new);
  
@@ -1259,7 +1259,7 @@ index 39a8580..dc7a2c4 100644
  }
  
  /**
-@@ -1964,13 +1967,13 @@ static void smack_cred_transfer(struct cred *new, const struct cred *old)
+@@ -1965,13 +1968,13 @@ static void smack_cred_transfer(struct cred *new, const struct cred *old)
   *
   * Sets the secid to contain a u32 version of the smack label.
   */
@@ -1275,7 +1275,7 @@ index 39a8580..dc7a2c4 100644
  	rcu_read_unlock();
  }
  
-@@ -1981,11 +1984,11 @@ static void smack_cred_getsecid(const struct cred *cred, u32 *secid)
+@@ -1982,11 +1985,11 @@ static void smack_cred_getsecid(const struct cred *cred, u32 *secid)
   *
   * Set the security data for a kernel service.
   */
@@ -1289,7 +1289,7 @@ index 39a8580..dc7a2c4 100644
  	return 0;
  }
  
-@@ -2071,11 +2074,11 @@ static int smack_task_getsid(struct task_struct *p)
+@@ -2072,11 +2075,11 @@ static int smack_task_getsid(struct task_struct *p)
   *
   * Sets the secid to contain a u32 version of the smack label.
   */
@@ -1303,7 +1303,7 @@ index 39a8580..dc7a2c4 100644
  }
  
  /**
-@@ -3215,12 +3218,12 @@ static int smack_ipc_permission(struct kern_ipc_perm *ipp, short flag)
+@@ -3216,12 +3219,12 @@ static int smack_ipc_permission(struct kern_ipc_perm *ipp, short flag)
   * @ipp: the object permissions
   * @secid: where result will be saved
   */
@@ -1318,7 +1318,7 @@ index 39a8580..dc7a2c4 100644
  }
  
  /**
-@@ -3733,7 +3736,7 @@ static struct smack_known *smack_from_secattr(struct netlbl_lsm_secattr *sap,
+@@ -3734,7 +3737,7 @@ static struct smack_known *smack_from_secattr(struct netlbl_lsm_secattr *sap,
  		/*
  		 * Looks like a fallback, which gives us a secid.
  		 */
@@ -1327,7 +1327,7 @@ index 39a8580..dc7a2c4 100644
  	/*
  	 * Without guidance regarding the smack value
  	 * for the packet fall back on the network
-@@ -3872,7 +3875,7 @@ static int smack_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
+@@ -3873,7 +3876,7 @@ static int smack_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
  		    proto != IPPROTO_TCP && proto != IPPROTO_DCCP)
  			break;
  #ifdef SMACK_IPV6_SECMARK_LABELING
@@ -1336,7 +1336,7 @@ index 39a8580..dc7a2c4 100644
  			skp = smack_from_secid(skb->secmark);
  		else
  			skp = smack_ipv6host_label(&sadd);
-@@ -3946,7 +3949,8 @@ static int smack_socket_getpeersec_stream(struct socket *sock,
+@@ -3949,7 +3952,8 @@ static int smack_socket_getpeersec_stream(struct socket *sock,
   * Sets the netlabel socket state on sk from parent
   */
  static int smack_socket_getpeersec_dgram(struct socket *sock,
@@ -1346,7 +1346,7 @@ index 39a8580..dc7a2c4 100644
  
  {
  	struct netlbl_lsm_secattr secattr;
-@@ -3974,9 +3978,11 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
+@@ -3977,9 +3981,11 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
  		break;
  	case PF_INET:
  #ifdef CONFIG_SECURITY_SMACK_NETFILTER
@@ -1361,7 +1361,7 @@ index 39a8580..dc7a2c4 100644
  #endif
  		/*
  		 * Translate what netlabel gave us.
-@@ -3997,7 +4003,7 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
+@@ -4000,7 +4006,7 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
  #endif
  		break;
  	}
@@ -1370,7 +1370,7 @@ index 39a8580..dc7a2c4 100644
  	if (s == 0)
  		return -EINVAL;
  	return 0;
-@@ -4071,9 +4077,11 @@ static int smack_inet_conn_request(struct sock *sk, struct sk_buff *skb,
+@@ -4074,9 +4080,11 @@ static int smack_inet_conn_request(struct sock *sk, struct sk_buff *skb,
  	 * If there is no secmark fall back to CIPSO.
  	 * The secmark is assumed to reflect policy better.
  	 */
@@ -1385,7 +1385,7 @@ index 39a8580..dc7a2c4 100644
  	}
  #endif /* CONFIG_SECURITY_SMACK_NETFILTER */
  
-@@ -4350,8 +4358,8 @@ static int smack_audit_rule_known(struct audit_krule *krule)
+@@ -4353,8 +4361,8 @@ static int smack_audit_rule_known(struct audit_krule *krule)
   * The core Audit hook. It's used to take the decision of
   * whether to audit or not to audit a given object.
   */
@@ -1396,7 +1396,7 @@ index 39a8580..dc7a2c4 100644
  {
  	struct smack_known *skp;
  	char *rule = vrule;
-@@ -4364,7 +4372,7 @@ static int smack_audit_rule_match(u32 secid, u32 field, u32 op, void *vrule,
+@@ -4367,7 +4375,7 @@ static int smack_audit_rule_match(u32 secid, u32 field, u32 op, void *vrule,
  	if (field != AUDIT_SUBJ_USER && field != AUDIT_OBJ_USER)
  		return 0;
  
@@ -1405,7 +1405,7 @@ index 39a8580..dc7a2c4 100644
  
  	/*
  	 * No need to do string comparisons. If a match occurs,
-@@ -4404,9 +4412,10 @@ static int smack_ismaclabel(const char *name)
+@@ -4407,9 +4415,10 @@ static int smack_ismaclabel(const char *name)
   *
   * Exists for networking code.
   */
@@ -1418,7 +1418,7 @@ index 39a8580..dc7a2c4 100644
  
  	if (secdata)
  		*secdata = skp->smk_known;
-@@ -4422,14 +4431,15 @@ static int smack_secid_to_secctx(u32 secid, char **secdata, u32 *seclen)
+@@ -4425,14 +4434,15 @@ static int smack_secid_to_secctx(u32 secid, char **secdata, u32 *seclen)
   *
   * Exists for audit and networking code.
   */

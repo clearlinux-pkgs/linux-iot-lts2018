@@ -221,7 +221,7 @@ index f66ae9d..74833f0 100644
  	const struct skl_dsp_ops *ops;
  	struct skl_dsp_cores *cores;
 diff --git a/sound/soc/intel/skylake/skl-nhlt.c b/sound/soc/intel/skylake/skl-nhlt.c
-index 284e765..73d6c98 100644
+index 2f16440..9142b06 100644
 --- a/sound/soc/intel/skylake/skl-nhlt.c
 +++ b/sound/soc/intel/skylake/skl-nhlt.c
 @@ -156,15 +156,15 @@ skl_get_nhlt_specific_cfg(struct skl *skl, u32 instance, u8 link_type,

@@ -57,7 +57,7 @@ index 6895f18..51d1476 100644
   * ideas of string buffer code in security/keys/trusted.h but is heap based
   * in order to keep the stack usage minimal.
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index b5c4fa1..d30f336 100644
+index f8411a3..2317716 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -571,29 +571,33 @@ int tpm1_get_random(struct tpm_chip *chip, u8 *dest, size_t max)

@@ -19,7 +19,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  3 files changed, 165 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index f9db7ea..23a5251 100644
+index 91b8035..4d48924 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -24,10 +24,14 @@

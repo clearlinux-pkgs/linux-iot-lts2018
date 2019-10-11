@@ -19,7 +19,7 @@ Reviewed-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/common/sst-ipc.c b/sound/soc/intel/common/sst-ipc.c
-index e5d2df7..5866f84 100644
+index 81b413e..3465eca 100644
 --- a/sound/soc/intel/common/sst-ipc.c
 +++ b/sound/soc/intel/common/sst-ipc.c
 @@ -78,7 +78,7 @@ static int tx_wait_done(struct sst_generic_ipc *ipc,

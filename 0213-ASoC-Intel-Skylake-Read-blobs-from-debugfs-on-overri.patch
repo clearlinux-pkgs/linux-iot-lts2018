@@ -15,7 +15,7 @@ Signed-off-by: Jeeja KP <jeeja.kp@intel.com>
  3 files changed, 42 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 9266e47..9ae0128 100644
+index 3fa36d1..7107f14 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -46,6 +46,27 @@ struct skl_debug {

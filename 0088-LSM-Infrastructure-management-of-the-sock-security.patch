@@ -638,10 +638,10 @@ index d73e9de..f457dd3 100644
  					const struct super_block *superblock)
  {
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 63be159..e865d2d 100644
+index 7a36ea1..9ef4df0 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
-@@ -1430,7 +1430,7 @@ static int smack_inode_getsecurity(struct inode *inode,
+@@ -1431,7 +1431,7 @@ static int smack_inode_getsecurity(struct inode *inode,
  		if (sock == NULL || sock->sk == NULL)
  			return -EOPNOTSUPP;
  
@@ -650,7 +650,7 @@ index 63be159..e865d2d 100644
  
  		if (strcmp(name, XATTR_SMACK_IPIN) == 0)
  			isp = ssp->smk_in;
-@@ -1812,7 +1812,7 @@ static int smack_file_receive(struct file *file)
+@@ -1813,7 +1813,7 @@ static int smack_file_receive(struct file *file)
  
  	if (inode->i_sb->s_magic == SOCKFS_MAGIC) {
  		sock = SOCKET_I(inode);
@@ -659,7 +659,7 @@ index 63be159..e865d2d 100644
  		tsp = smack_cred(current_cred());
  		/*
  		 * If the receiving process can't write to the
-@@ -2222,11 +2222,7 @@ static void smack_task_to_inode(struct task_struct *p, struct inode *inode)
+@@ -2223,11 +2223,7 @@ static void smack_task_to_inode(struct task_struct *p, struct inode *inode)
  static int smack_sk_alloc_security(struct sock *sk, int family, gfp_t gfp_flags)
  {
  	struct smack_known *skp = smk_of_current();
@@ -672,7 +672,7 @@ index 63be159..e865d2d 100644
  
  	/*
  	 * Sockets created by kernel threads receive web label.
-@@ -2240,11 +2236,10 @@ static int smack_sk_alloc_security(struct sock *sk, int family, gfp_t gfp_flags)
+@@ -2241,11 +2237,10 @@ static int smack_sk_alloc_security(struct sock *sk, int family, gfp_t gfp_flags)
  	}
  	ssp->smk_packet = NULL;
  
@@ -685,7 +685,7 @@ index 63be159..e865d2d 100644
  /**
   * smack_sk_free_security - Free a socket blob
   * @sk: the socket
-@@ -2253,7 +2248,6 @@ static int smack_sk_alloc_security(struct sock *sk, int family, gfp_t gfp_flags)
+@@ -2254,7 +2249,6 @@ static int smack_sk_alloc_security(struct sock *sk, int family, gfp_t gfp_flags)
   */
  static void smack_sk_free_security(struct sock *sk)
  {
@@ -693,7 +693,7 @@ index 63be159..e865d2d 100644
  	struct smk_port_label *spp;
  
  	if (sk->sk_family == PF_INET6) {
-@@ -2266,9 +2260,8 @@ static void smack_sk_free_security(struct sock *sk)
+@@ -2267,9 +2261,8 @@ static void smack_sk_free_security(struct sock *sk)
  		}
  		rcu_read_unlock();
  	}
@@ -704,7 +704,7 @@ index 63be159..e865d2d 100644
  
  /**
  * smack_ipv4host_label - check host based restrictions
-@@ -2386,7 +2379,7 @@ static struct smack_known *smack_ipv6host_label(struct sockaddr_in6 *sip)
+@@ -2387,7 +2380,7 @@ static struct smack_known *smack_ipv6host_label(struct sockaddr_in6 *sip)
  static int smack_netlabel(struct sock *sk, int labeled)
  {
  	struct smack_known *skp;
@@ -713,7 +713,7 @@ index 63be159..e865d2d 100644
  	int rc = 0;
  
  	/*
-@@ -2431,7 +2424,7 @@ static int smack_netlabel_send(struct sock *sk, struct sockaddr_in *sap)
+@@ -2432,7 +2425,7 @@ static int smack_netlabel_send(struct sock *sk, struct sockaddr_in *sap)
  	int rc;
  	int sk_lbl;
  	struct smack_known *hkp;
@@ -722,7 +722,7 @@ index 63be159..e865d2d 100644
  	struct smk_audit_info ad;
  
  	rcu_read_lock();
-@@ -2507,7 +2500,7 @@ static void smk_ipv6_port_label(struct socket *sock, struct sockaddr *address)
+@@ -2508,7 +2501,7 @@ static void smk_ipv6_port_label(struct socket *sock, struct sockaddr *address)
  {
  	struct sock *sk = sock->sk;
  	struct sockaddr_in6 *addr6;
@@ -731,7 +731,7 @@ index 63be159..e865d2d 100644
  	struct smk_port_label *spp;
  	unsigned short port = 0;
  
-@@ -2594,7 +2587,7 @@ static int smk_ipv6_port_check(struct sock *sk, struct sockaddr_in6 *address,
+@@ -2595,7 +2588,7 @@ static int smk_ipv6_port_check(struct sock *sk, struct sockaddr_in6 *address,
  				int act)
  {
  	struct smk_port_label *spp;
@@ -740,7 +740,7 @@ index 63be159..e865d2d 100644
  	struct smack_known *skp = NULL;
  	unsigned short port;
  	struct smack_known *object;
-@@ -2688,7 +2681,7 @@ static int smack_inode_setsecurity(struct inode *inode, const char *name,
+@@ -2689,7 +2682,7 @@ static int smack_inode_setsecurity(struct inode *inode, const char *name,
  	if (sock == NULL || sock->sk == NULL)
  		return -EOPNOTSUPP;
  
@@ -749,7 +749,7 @@ index 63be159..e865d2d 100644
  
  	if (strcmp(name, XATTR_SMACK_IPIN) == 0)
  		ssp->smk_in = skp;
-@@ -2736,7 +2729,7 @@ static int smack_socket_post_create(struct socket *sock, int family,
+@@ -2737,7 +2730,7 @@ static int smack_socket_post_create(struct socket *sock, int family,
  	 * Sockets created by kernel threads receive web label.
  	 */
  	if (unlikely(current->flags & PF_KTHREAD)) {
@@ -758,7 +758,7 @@ index 63be159..e865d2d 100644
  		ssp->smk_in = &smack_known_web;
  		ssp->smk_out = &smack_known_web;
  	}
-@@ -2761,8 +2754,8 @@ static int smack_socket_post_create(struct socket *sock, int family,
+@@ -2762,8 +2755,8 @@ static int smack_socket_post_create(struct socket *sock, int family,
  static int smack_socket_socketpair(struct socket *socka,
  		                   struct socket *sockb)
  {
@@ -769,7 +769,7 @@ index 63be159..e865d2d 100644
  
  	asp->smk_packet = bsp->smk_out;
  	bsp->smk_packet = asp->smk_out;
-@@ -2816,7 +2809,7 @@ static int smack_socket_connect(struct socket *sock, struct sockaddr *sap,
+@@ -2817,7 +2810,7 @@ static int smack_socket_connect(struct socket *sock, struct sockaddr *sap,
  		return 0;
  
  #ifdef SMACK_IPV6_SECMARK_LABELING
@@ -778,7 +778,7 @@ index 63be159..e865d2d 100644
  #endif
  
  	switch (sock->sk->sk_family) {
-@@ -3576,9 +3569,9 @@ static int smack_unix_stream_connect(struct sock *sock,
+@@ -3577,9 +3570,9 @@ static int smack_unix_stream_connect(struct sock *sock,
  {
  	struct smack_known *skp;
  	struct smack_known *okp;
@@ -791,7 +791,7 @@ index 63be159..e865d2d 100644
  	struct smk_audit_info ad;
  	int rc = 0;
  #ifdef CONFIG_AUDIT
-@@ -3624,8 +3617,8 @@ static int smack_unix_stream_connect(struct sock *sock,
+@@ -3625,8 +3618,8 @@ static int smack_unix_stream_connect(struct sock *sock,
   */
  static int smack_unix_may_send(struct socket *sock, struct socket *other)
  {
@@ -802,7 +802,7 @@ index 63be159..e865d2d 100644
  	struct smk_audit_info ad;
  	int rc;
  
-@@ -3662,7 +3655,7 @@ static int smack_socket_sendmsg(struct socket *sock, struct msghdr *msg,
+@@ -3663,7 +3656,7 @@ static int smack_socket_sendmsg(struct socket *sock, struct msghdr *msg,
  	struct sockaddr_in6 *sap = (struct sockaddr_in6 *) msg->msg_name;
  #endif
  #ifdef SMACK_IPV6_SECMARK_LABELING
@@ -811,7 +811,7 @@ index 63be159..e865d2d 100644
  	struct smack_known *rsp;
  #endif
  	int rc = 0;
-@@ -3827,7 +3820,7 @@ static int smk_skb_to_addr_ipv6(struct sk_buff *skb, struct sockaddr_in6 *sip)
+@@ -3828,7 +3821,7 @@ static int smk_skb_to_addr_ipv6(struct sk_buff *skb, struct sockaddr_in6 *sip)
  static int smack_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
  {
  	struct netlbl_lsm_secattr secattr;
@@ -820,7 +820,7 @@ index 63be159..e865d2d 100644
  	struct smack_known *skp = NULL;
  	int rc = 0;
  	struct smk_audit_info ad;
-@@ -3944,7 +3937,7 @@ static int smack_socket_getpeersec_stream(struct socket *sock,
+@@ -3947,7 +3940,7 @@ static int smack_socket_getpeersec_stream(struct socket *sock,
  	int slen = 1;
  	int rc = 0;
  
@@ -829,7 +829,7 @@ index 63be159..e865d2d 100644
  	if (ssp->smk_packet != NULL) {
  		rcp = ssp->smk_packet->smk_known;
  		slen = strlen(rcp) + 1;
-@@ -3994,7 +3987,7 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
+@@ -3997,7 +3990,7 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
  
  	switch (family) {
  	case PF_UNIX:
@@ -838,7 +838,7 @@ index 63be159..e865d2d 100644
  		s = ssp->smk_out->smk_secid;
  		break;
  	case PF_INET:
-@@ -4007,7 +4000,7 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
+@@ -4010,7 +4003,7 @@ static int smack_socket_getpeersec_dgram(struct socket *sock,
  		 * Translate what netlabel gave us.
  		 */
  		if (sock != NULL && sock->sk != NULL)
@@ -847,7 +847,7 @@ index 63be159..e865d2d 100644
  		netlbl_secattr_init(&secattr);
  		rc = netlbl_skbuff_getattr(skb, family, &secattr);
  		if (rc == 0) {
-@@ -4045,7 +4038,7 @@ static void smack_sock_graft(struct sock *sk, struct socket *parent)
+@@ -4048,7 +4041,7 @@ static void smack_sock_graft(struct sock *sk, struct socket *parent)
  	    (sk->sk_family != PF_INET && sk->sk_family != PF_INET6))
  		return;
  
@@ -856,7 +856,7 @@ index 63be159..e865d2d 100644
  	ssp->smk_in = skp;
  	ssp->smk_out = skp;
  	/* cssp->smk_packet is already set in smack_inet_csk_clone() */
-@@ -4065,7 +4058,7 @@ static int smack_inet_conn_request(struct sock *sk, struct sk_buff *skb,
+@@ -4068,7 +4061,7 @@ static int smack_inet_conn_request(struct sock *sk, struct sk_buff *skb,
  {
  	u16 family = sk->sk_family;
  	struct smack_known *skp;
@@ -865,7 +865,7 @@ index 63be159..e865d2d 100644
  	struct netlbl_lsm_secattr secattr;
  	struct sockaddr_in addr;
  	struct iphdr *hdr;
-@@ -4164,7 +4157,7 @@ static int smack_inet_conn_request(struct sock *sk, struct sk_buff *skb,
+@@ -4167,7 +4160,7 @@ static int smack_inet_conn_request(struct sock *sk, struct sk_buff *skb,
  static void smack_inet_csk_clone(struct sock *sk,
  				 const struct request_sock *req)
  {
@@ -874,7 +874,7 @@ index 63be159..e865d2d 100644
  	struct smack_known *skp;
  
  	if (req->peer_secid != 0) {
-@@ -4568,6 +4561,7 @@ struct lsm_blob_sizes smack_blob_sizes = {
+@@ -4571,6 +4564,7 @@ struct lsm_blob_sizes smack_blob_sizes = {
  	.lbs_cred = sizeof(struct task_smack),
  	.lbs_file = sizeof(struct smack_known *),
  	.lbs_inode = sizeof(struct inode_smack),
@@ -882,7 +882,7 @@ index 63be159..e865d2d 100644
  	.lbs_superblock = sizeof(struct superblock_smack),
  };
  
-@@ -4679,7 +4673,9 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
+@@ -4682,7 +4676,9 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(socket_getpeersec_stream, smack_socket_getpeersec_stream),
  	LSM_HOOK_INIT(socket_getpeersec_dgram, smack_socket_getpeersec_dgram),
  	LSM_HOOK_INIT(sk_alloc_security, smack_sk_alloc_security),

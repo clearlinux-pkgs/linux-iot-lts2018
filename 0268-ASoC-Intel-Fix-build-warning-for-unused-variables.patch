@@ -70,7 +70,7 @@ index 9fcf6c3..2db3473 100644
 -
 +#endif /* __SKL_COMPRESS_H__*/
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index ff6d835..8a20f86 100644
+index 0cf4a2f..d10d244 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -639,6 +639,8 @@ static ssize_t adsp_control_write(struct file *file,

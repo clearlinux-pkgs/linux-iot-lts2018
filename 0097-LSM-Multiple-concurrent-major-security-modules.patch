@@ -994,10 +994,10 @@ index b8e44b1..8f212fe 100644
  	switch (rc) {
  	case 0:
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index efacbda..f667a6f 100644
+index 31f6ecb..564f75f 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
-@@ -1233,9 +1233,9 @@ static int smack_inode_setxattr(struct dentry *dentry, const char *name,
+@@ -1234,9 +1234,9 @@ static int smack_inode_setxattr(struct dentry *dentry, const char *name,
  {
  	struct smk_audit_info ad;
  	struct smack_known *skp;
@@ -1010,7 +1010,7 @@ index efacbda..f667a6f 100644
  	int rc = 0;
  
  	/*
-@@ -1244,20 +1244,20 @@ static int smack_inode_setxattr(struct dentry *dentry, const char *name,
+@@ -1245,20 +1245,20 @@ static int smack_inode_setxattr(struct dentry *dentry, const char *name,
  	if (strcmp(name, XATTR_NAME_SMACK) == 0 ||
  	    strcmp(name, XATTR_NAME_SMACKIPIN) == 0 ||
  	    strcmp(name, XATTR_NAME_SMACKIPOUT) == 0) {
@@ -1038,7 +1038,7 @@ index efacbda..f667a6f 100644
  
  	if (check_priv && !smack_privileged(CAP_MAC_ADMIN))
  		rc = -EPERM;
-@@ -1271,11 +1271,11 @@ static int smack_inode_setxattr(struct dentry *dentry, const char *name,
+@@ -1272,11 +1272,11 @@ static int smack_inode_setxattr(struct dentry *dentry, const char *name,
  			rc = -EINVAL;
  	}
  
@@ -1054,7 +1054,7 @@ index efacbda..f667a6f 100644
  		rc = smk_bu_inode(d_backing_inode(dentry), MAY_WRITE, rc);
  	}
  
-@@ -2399,13 +2399,32 @@ static int smack_netlabel(struct sock *sk, int labeled)
+@@ -2400,13 +2400,32 @@ static int smack_netlabel(struct sock *sk, int labeled)
  	bh_lock_sock_nested(sk);
  
  	if (ssp->smk_out == smack_net_ambient ||
@@ -1089,7 +1089,7 @@ index efacbda..f667a6f 100644
  	bh_unlock_sock(sk);
  	local_bh_enable();
  
-@@ -3840,7 +3859,7 @@ static int smack_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
+@@ -3841,7 +3860,7 @@ static int smack_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
  		netlbl_secattr_init(&secattr);
  
  		rc = netlbl_skbuff_getattr(skb, family, &secattr);
@@ -1098,7 +1098,7 @@ index efacbda..f667a6f 100644
  			skp = smack_from_secattr(&secattr, ssp);
  		else
  			skp = smack_net_ambient;
-@@ -4440,11 +4459,15 @@ static int smack_secctx_to_secid(const char *secdata, u32 seclen,
+@@ -4443,11 +4462,15 @@ static int smack_secctx_to_secid(const char *secdata, u32 seclen,
  	return 0;
  }
  
@@ -1117,7 +1117,7 @@ index efacbda..f667a6f 100644
  
  static int smack_inode_notifysecctx(struct inode *inode, void *ctx, u32 ctxlen)
  {
-@@ -4682,6 +4705,9 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
+@@ -4685,6 +4708,9 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(ismaclabel, smack_ismaclabel),
  	LSM_HOOK_INIT(secid_to_secctx, smack_secid_to_secctx),
  	LSM_HOOK_INIT(secctx_to_secid, smack_secctx_to_secid),

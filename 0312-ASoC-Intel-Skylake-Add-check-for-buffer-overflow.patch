@@ -19,7 +19,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 4 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 8f6d11d..6dc4ef3 100644
+index 9e8e310..ca80fc5 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -603,6 +603,10 @@ static ssize_t adsp_control_write(struct file *file,

@@ -114,7 +114,7 @@ index f284a98..754f7bc 100644
  int tpm1_do_selftest(struct tpm_chip *chip);
  int tpm1_get_timeouts(struct tpm_chip *chip);
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index a69a023..3bd9f1f 100644
+index 8165948..d5ca158 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -666,3 +666,64 @@ int tpm1_auto_startup(struct tpm_chip *chip)

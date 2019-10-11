@@ -117,7 +117,7 @@ index 05c386b..22f89f4 100644
  int tpm_pm_suspend(struct device *dev);
  int tpm_pm_resume(struct device *dev);
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index 3bd0795..e02f0c1 100644
+index 1a875eb..046589b 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -469,3 +469,58 @@ ssize_t tpm1_getcap(struct tpm_chip *chip, u32 subcap_id, cap_t *cap,

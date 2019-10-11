@@ -64,7 +64,7 @@ index 260447d..403dac3 100644
  		return sst_ipc_tx_message_nowait(&byt->ipc, header,
  						NULL, 0);
 diff --git a/sound/soc/intel/common/sst-ipc.c b/sound/soc/intel/common/sst-ipc.c
-index dcff138..f4b0950 100644
+index 771734f..4270e8f 100644
 --- a/sound/soc/intel/common/sst-ipc.c
 +++ b/sound/soc/intel/common/sst-ipc.c
 @@ -52,7 +52,7 @@ static struct ipc_message *msg_get_empty(struct sst_generic_ipc *ipc)
@@ -316,7 +316,7 @@ index d33bdaf..557f780 100644
  		dev_err(dev, "ipc: module set parameter failed - %d\n", ret);
  
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 8a20f86..5cc274a 100644
+index d10d244..08e03b5 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -231,10 +231,12 @@ static ssize_t mod_control_write(struct file *file,

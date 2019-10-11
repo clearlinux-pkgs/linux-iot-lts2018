@@ -26,7 +26,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  3 files changed, 44 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/common/sst-ipc.c b/sound/soc/intel/common/sst-ipc.c
-index 03896bd..0037e21 100644
+index 8a62daa..fd93d58 100644
 --- a/sound/soc/intel/common/sst-ipc.c
 +++ b/sound/soc/intel/common/sst-ipc.c
 @@ -127,8 +127,15 @@ static int ipc_tx_message(struct sst_generic_ipc *ipc, u64 header,

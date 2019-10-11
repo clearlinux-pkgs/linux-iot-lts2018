@@ -15,7 +15,7 @@ Signed-off-by: Omair M Abdullah <omair.m.abdullah@intel.com>
  3 files changed, 20 insertions(+), 9 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 85850b4..52b65bb 100644
+index b684f47..3365fe5 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -42,12 +42,13 @@ struct skl_debug {

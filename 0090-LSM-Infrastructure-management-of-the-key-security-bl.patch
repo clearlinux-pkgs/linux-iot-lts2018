@@ -217,10 +217,10 @@ index 42c36e3..e50ed49 100644
   * Is the directory transmuting?
   */
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index cb7929a..f4ecd0a 100644
+index 8faa093..49fb76d 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
-@@ -4171,23 +4171,13 @@ static void smack_inet_csk_clone(struct sock *sk,
+@@ -4174,23 +4174,13 @@ static void smack_inet_csk_clone(struct sock *sk,
  static int smack_key_alloc(struct key *key, const struct cred *cred,
  			   unsigned long flags)
  {
@@ -246,7 +246,7 @@ index cb7929a..f4ecd0a 100644
  /**
   * smack_key_permission - Smack access on a key
   * @key_ref: gets to the object
-@@ -4200,6 +4190,8 @@ static void smack_key_free(struct key *key)
+@@ -4203,6 +4193,8 @@ static void smack_key_free(struct key *key)
  static int smack_key_permission(key_ref_t key_ref,
  				const struct cred *cred, unsigned perm)
  {
@@ -255,7 +255,7 @@ index cb7929a..f4ecd0a 100644
  	struct key *keyp;
  	struct smk_audit_info ad;
  	struct smack_known *tkp = smk_of_task(smack_cred(cred));
-@@ -4219,7 +4211,9 @@ static int smack_key_permission(key_ref_t key_ref,
+@@ -4222,7 +4214,9 @@ static int smack_key_permission(key_ref_t key_ref,
  	 * If the key hasn't been initialized give it access so that
  	 * it may do so.
  	 */
@@ -266,7 +266,7 @@ index cb7929a..f4ecd0a 100644
  		return 0;
  	/*
  	 * This should not occur
-@@ -4239,8 +4233,8 @@ static int smack_key_permission(key_ref_t key_ref,
+@@ -4242,8 +4236,8 @@ static int smack_key_permission(key_ref_t key_ref,
  		request |= MAY_READ;
  	if (perm & (KEY_NEED_WRITE | KEY_NEED_LINK | KEY_NEED_SETATTR))
  		request |= MAY_WRITE;
@@ -277,7 +277,7 @@ index cb7929a..f4ecd0a 100644
  	return rc;
  }
  
-@@ -4255,11 +4249,12 @@ static int smack_key_permission(key_ref_t key_ref,
+@@ -4258,11 +4252,12 @@ static int smack_key_permission(key_ref_t key_ref,
   */
  static int smack_key_getsecurity(struct key *key, char **_buffer)
  {
@@ -292,7 +292,7 @@ index cb7929a..f4ecd0a 100644
  		*_buffer = NULL;
  		return 0;
  	}
-@@ -4544,6 +4539,9 @@ struct lsm_blob_sizes smack_blob_sizes = {
+@@ -4547,6 +4542,9 @@ struct lsm_blob_sizes smack_blob_sizes = {
  	.lbs_file = sizeof(struct smack_known *),
  	.lbs_inode = sizeof(struct inode_smack),
  	.lbs_ipc = sizeof(struct smack_known *),
@@ -302,7 +302,7 @@ index cb7929a..f4ecd0a 100644
  	.lbs_msg_msg = sizeof(struct smack_known *),
  	.lbs_sock = sizeof(struct socket_smack),
  	.lbs_superblock = sizeof(struct superblock_smack),
-@@ -4663,7 +4661,6 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
+@@ -4666,7 +4664,6 @@ static struct security_hook_list smack_hooks[] __lsm_ro_after_init = {
   /* key management security hooks */
  #ifdef CONFIG_KEYS
  	LSM_HOOK_INIT(key_alloc, smack_key_alloc),
