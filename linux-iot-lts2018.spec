@@ -15,9 +15,6 @@
 
 Name:           linux-iot-lts2018
 Version:        4.19.78
-# upstream number is the number from PKT it consist in
-# YYMMDDHHMM a 10 length number
-%global upstreamnumber         1903221317
 Release:        96
 License:        GPL-2.0
 Summary:        The Linux kernel
@@ -2532,8 +2529,6 @@ InstallKernel() {
     cp  ${Target}/arch/x86/boot/bzImage ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
     chmod 755 ${KernelDir}/org.clearlinux.${Target}.%{version}-%{release}
 
-    echo lts-v4.19.78-base-191009T030555Z > ${KernelDir}/upstream-tag-${Kversion}
-
     mkdir -p %{buildroot}/usr/lib/modules
     make O=${Target} -s ARCH=${Arch} INSTALL_MOD_PATH=%{buildroot}/usr modules_install
 
@@ -2577,7 +2572,6 @@ cp -a LICENSES/* %{buildroot}/usr/share/package-licenses/linux-iot-lts2018
 /usr/lib/kernel/cmdline-%{kversion0}
 /usr/lib/kernel/org.clearlinux.%{ktarget0}.%{version}-%{release}
 /usr/lib/kernel/default-%{ktarget0}
-/usr/lib/kernel/upstream-tag-%{kversion0}
 /usr/lib/modules/%{kversion0}/kernel
 /usr/lib/modules/%{kversion0}/modules.*
 
@@ -2588,7 +2582,6 @@ cp -a LICENSES/* %{buildroot}/usr/share/package-licenses/linux-iot-lts2018
 /usr/lib/kernel/cmdline-%{kversion1}
 /usr/lib/kernel/org.clearlinux.%{ktarget1}.%{version}-%{release}
 /usr/lib/kernel/default-%{ktarget1}
-/usr/lib/kernel/upstream-tag-%{kversion1}
 /usr/lib/modules/%{kversion1}/kernel
 /usr/lib/modules/%{kversion1}/modules.*
 
