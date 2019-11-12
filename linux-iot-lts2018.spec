@@ -1234,6 +1234,7 @@ Patch1180: 1180-ASoC-Intel-Skylake-Recover-BXT-FW-on-DSP-boot-timeou.patch
 Patch9001: 9001-init-wait-for-partition-and-retry-scan.patch
 Patch9002: 9002-Add-boot-option-to-allow-unsigned-modules.patch
 Patch9003: 9003-add-workaround-for-binutils-optimization.patch
+Patch9004: 9004-x86-cpu-Add-Atom-Tremont-Jacobsville.patch
 
 %description
 The Linux IOT LTS2018 kernel.
@@ -2482,6 +2483,7 @@ Linux kernel build files and install script
 %patch9001 -p1
 %patch9002 -p1
 %patch9003 -p1
+%patch9004 -p1
 
 cp %{SOURCE1} .
 cp %{SOURCE2} .
