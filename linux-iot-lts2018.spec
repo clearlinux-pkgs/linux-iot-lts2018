@@ -1236,34 +1236,6 @@ Patch9002: 9002-Add-boot-option-to-allow-unsigned-modules.patch
 Patch9003: 9003-add-workaround-for-binutils-optimization.patch
 Patch9004: 9004-x86-cpu-Add-Atom-Tremont-Jacobsville.patch
 
-# TAA + IFU series
-Patch9005: 0001-KVM-x86-use-Intel-speculation-bugs-and-features-as-d.patch
-Patch9006: 0002-x86-msr-Add-the-IA32_TSX_CTRL-MSR.patch
-Patch9007: 0003-x86-cpu-Add-a-helper-function-x86_read_arch_cap_msr.patch
-Patch9008: 0004-x86-cpu-Add-a-tsx-cmdline-option-with-TSX-disabled-b.patch
-Patch9009: 0005-x86-speculation-taa-Add-mitigation-for-TSX-Async-Abo.patch
-Patch9010: 0006-x86-speculation-taa-Add-sysfs-reporting-for-TSX-Asyn.patch
-Patch9011: 0007-kvm-x86-Export-MDS_NO-0-to-guests-when-TSX-is-enable.patch
-Patch9012: 0008-x86-tsx-Add-auto-option-to-the-tsx-cmdline-parameter.patch
-Patch9013: 0009-x86-speculation-taa-Add-documentation-for-TSX-Async-.patch
-Patch9014: 0010-x86-tsx-Add-config-options-to-set-tsx-on-off-auto.patch
-Patch9015: 0011-x86-bugs-Add-ITLB_MULTIHIT-bug-infrastructure.patch
-Patch9016: 0012-x86-cpu-Add-Tremont-to-the-cpu-vulnerability-whiteli.patch
-Patch9017: 0013-cpu-speculation-Uninline-and-export-CPU-mitigations-.patch
-Patch9018: 0014-Documentation-Add-ITLB_MULTIHIT-documentation.patch
-Patch9019: 0015-x86-speculation-taa-Fix-printing-of-TAA_MSG_SMT-on-I.patch
-Patch9020: 0016-kvm-x86-powerpc-do-not-allow-clearing-largepages-deb.patch
-Patch9021: 0017-kvm-Convert-kvm_lock-to-a-mutex.patch
-Patch9022: 0018-kvm-mmu-Do-not-release-the-page-inside-mmu_set_spte.patch
-Patch9023: 0019-KVM-x86-make-FNAME-fetch-and-__direct_map-more-simil.patch
-Patch9024: 0020-KVM-x86-remove-now-unneeded-hugepage-gfn-adjustment.patch
-Patch9025: 0021-KVM-x86-change-kvm_mmu_page_get_gfn-BUG_ON-to-WARN_O.patch
-Patch9026: 0022-KVM-x86-add-tracepoints-around-__direct_map-and-FNAM.patch
-Patch9027: 0023-KVM-vmx-svm-always-run-with-EFER.NXE-1-when-shadow-p.patch
-Patch9028: 0024-kvm-mmu-ITLB_MULTIHIT-mitigation.patch
-Patch9029: 0025-kvm-Add-helper-function-for-creating-VM-worker-threa.patch
-Patch9030: 0026-kvm-x86-mmu-Recovery-of-shattered-NX-large-pages.patch
-
 %description
 The Linux IOT LTS2018 kernel.
 
@@ -2512,34 +2484,6 @@ Linux kernel build files and install script
 %patch9002 -p1
 %patch9003 -p1
 %patch9004 -p1
-
-# TAA + IFU series
-%patch9005 -p1
-%patch9006 -p1
-%patch9007 -p1
-%patch9008 -p1
-%patch9009 -p1
-%patch9010 -p1
-%patch9011 -p1
-%patch9012 -p1
-%patch9013 -p1
-%patch9014 -p1
-%patch9015 -p1
-%patch9016 -p1
-%patch9017 -p1
-%patch9018 -p1
-%patch9019 -p1
-%patch9020 -p1
-%patch9021 -p1
-%patch9022 -p1
-%patch9023 -p1
-%patch9024 -p1
-%patch9025 -p1
-%patch9026 -p1
-%patch9027 -p1
-%patch9028 -p1
-%patch9029 -p1
-%patch9030 -p1
 
 cp %{SOURCE1} .
 cp %{SOURCE2} .
