@@ -43,7 +43,7 @@ index 0038a2d..4662192 100644
  obj-$(subst m,y,$(CONFIG_HYPERV)) += hyperv/
  
 diff --git a/arch/x86/Kconfig b/arch/x86/Kconfig
-index 6e90dbe..065668f 100644
+index f913940..2a3c348 100644
 --- a/arch/x86/Kconfig
 +++ b/arch/x86/Kconfig
 @@ -778,6 +778,8 @@ config QUEUED_LOCK_STAT

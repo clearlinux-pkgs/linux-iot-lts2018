@@ -33,10 +33,10 @@ Change-Id: Iccf6b54c254e2b3d7053620c1b64ad8dda7632b8
  8 files changed, 87 insertions(+), 30 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 7ac61af..d1e2d2b 100644
+index 65ff6dd..f573f6f 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -2822,18 +2822,18 @@ ilk_disable_display_irq(struct drm_i915_private *dev_priv, uint32_t bits)
+@@ -2833,18 +2833,18 @@ ilk_disable_display_irq(struct drm_i915_private *dev_priv, uint32_t bits)
  	ilk_update_display_irq(dev_priv, bits, 0);
  }
  void bdw_update_pipe_irq(struct drm_i915_private *dev_priv,
@@ -279,7 +279,7 @@ index b51ad29..47b1dfe 100644
  
  /**
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 327e42e..98af16e 100644
+index d68c5a8..a4b6325 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -1530,6 +1530,9 @@ enum tc_port intel_port_to_tc(struct drm_i915_private *dev_priv,
@@ -332,10 +332,10 @@ index 77c123c..83ed6f5 100644
  
  static void ibx_set_fifo_underrun_reporting(struct drm_device *dev,
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index ead29a1..2f20205 100644
+index 220990e..96a0269 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
-@@ -3749,7 +3749,6 @@ bool intel_can_enable_sagv(struct drm_atomic_state *state)
+@@ -3757,7 +3757,6 @@ bool intel_can_enable_sagv(struct drm_atomic_state *state)
  	struct intel_crtc *crtc;
  	struct intel_plane *plane;
  	struct intel_crtc_state *cstate;
@@ -343,7 +343,7 @@ index ead29a1..2f20205 100644
  	int level, latency;
  	int sagv_block_time_us;
  
-@@ -3775,8 +3774,10 @@ bool intel_can_enable_sagv(struct drm_atomic_state *state)
+@@ -3783,8 +3782,10 @@ bool intel_can_enable_sagv(struct drm_atomic_state *state)
  		return false;
  
  	/* Since we're now guaranteed to only have one active CRTC... */

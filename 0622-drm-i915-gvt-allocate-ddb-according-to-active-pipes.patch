@@ -80,10 +80,10 @@ index 9344293..f4d9056 100644
  enum {
  	GVT_FAILSAFE_UNSUPPORTED_GUEST,
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index df17ea5..ead29a1 100644
+index 8190053..220990e 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
-@@ -5251,9 +5251,18 @@ skl_compute_ddb(struct drm_atomic_state *state)
+@@ -5259,9 +5259,18 @@ skl_compute_ddb(struct drm_atomic_state *state)
  	memcpy(ddb, &dev_priv->wm.skl_hw.ddb, sizeof(*ddb));
  
  #if IS_ENABLED(CONFIG_DRM_I915_GVT)

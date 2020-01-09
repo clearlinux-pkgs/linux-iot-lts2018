@@ -20,7 +20,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  4 files changed, 17 insertions(+)
 
 diff --git a/drivers/media/i2c/dw9714.c b/drivers/media/i2c/dw9714.c
-index 91fae01..bbd1344 100644
+index 3dc2100..660b2cf 100644
 --- a/drivers/media/i2c/dw9714.c
 +++ b/drivers/media/i2c/dw9714.c
 @@ -1,6 +1,7 @@

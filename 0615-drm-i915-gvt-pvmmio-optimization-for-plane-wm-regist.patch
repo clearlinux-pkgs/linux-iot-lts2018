@@ -62,10 +62,10 @@ index 9c76cab..82ab32e 100644
  };
  
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 01afc76..df17ea5 100644
+index 607500b..8190053 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
-@@ -5000,6 +5000,70 @@ static void skl_write_wm_level(struct drm_i915_private *dev_priv,
+@@ -5008,6 +5008,70 @@ static void skl_write_wm_level(struct drm_i915_private *dev_priv,
  	I915_WRITE(reg, val);
  }
  
@@ -136,7 +136,7 @@ index 01afc76..df17ea5 100644
  static void skl_write_plane_wm(struct intel_crtc *intel_crtc,
  			       const struct skl_plane_wm *wm,
  			       const struct skl_ddb_allocation *ddb,
-@@ -5011,6 +5075,21 @@ static void skl_write_plane_wm(struct intel_crtc *intel_crtc,
+@@ -5019,6 +5083,21 @@ static void skl_write_plane_wm(struct intel_crtc *intel_crtc,
  	int level, max_level = ilk_wm_max_level(dev_priv);
  	enum pipe pipe = intel_crtc->pipe;
  

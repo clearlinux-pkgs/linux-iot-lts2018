@@ -35,7 +35,7 @@ index 7da1e9b..9f3fed2 100644
  
  static inline struct intel_gvt *to_gvt(struct drm_i915_private *i915)
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index d727f89..77cbfd4 100644
+index af508d5..b025875 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -265,6 +265,22 @@ static void save_ring_hw_state(struct intel_vgpu *vgpu, int ring_id)

@@ -28,10 +28,10 @@ Signed-off-by: Stephen Rothwell <sfr@canb.auug.org.au>
  2 files changed, 36 insertions(+)
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index f11a4e0..ab37de9 100644
+index fc6a3f8..0619f46 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
-@@ -3125,6 +3125,14 @@
+@@ -3160,6 +3160,14 @@
  			timeout < 0: reboot immediately
  			Format: <timeout>
  
@@ -47,7 +47,7 @@ index f11a4e0..ab37de9 100644
  			on a WARN().
  
 diff --git a/kernel/panic.c b/kernel/panic.c
-index 6a6df23..fc8ed14 100644
+index 8138a67..96693c2 100644
 --- a/kernel/panic.c
 +++ b/kernel/panic.c
 @@ -46,6 +46,13 @@ int panic_on_warn __read_mostly;
@@ -89,7 +89,7 @@ index 6a6df23..fc8ed14 100644
  /**
   *	panic - halt the system
   *	@fmt: The text string to print
-@@ -250,6 +275,8 @@ void panic(const char *fmt, ...)
+@@ -251,6 +276,8 @@ void panic(const char *fmt, ...)
  	debug_locks_off();
  	console_flush_on_panic();
  
@@ -98,7 +98,7 @@ index 6a6df23..fc8ed14 100644
  	if (!panic_blink)
  		panic_blink = no_blink;
  
-@@ -654,6 +681,7 @@ void refcount_error_report(struct pt_regs *regs, const char *err)
+@@ -655,6 +682,7 @@ void refcount_error_report(struct pt_regs *regs, const char *err)
  #endif
  
  core_param(panic, panic_timeout, int, 0644);

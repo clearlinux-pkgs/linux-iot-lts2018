@@ -525,7 +525,7 @@ index 6227b40..697f18d 100644
  			rets = -EFAULT;
  			goto out;
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 7058475..384f1b6 100644
+index 0467d05..f385c27 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -203,6 +203,13 @@ struct mei_cl_cb {

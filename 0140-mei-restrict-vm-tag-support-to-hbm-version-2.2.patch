@@ -63,7 +63,7 @@ index b7d2487..69a59e3 100644
  #define MEI_HBM_CMD_OP_MSK                  0x7f
  /* Host bus message command RESPONSE */
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 685b78c..1187522 100644
+index 6552b41..f5110d9 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -433,6 +433,7 @@ struct mei_fw_version {
@@ -74,7 +74,7 @@ index 685b78c..1187522 100644
   *
   * @fw_ver : FW versions
   *
-@@ -513,6 +514,7 @@ struct mei_device {
+@@ -515,6 +516,7 @@ struct mei_device {
  	unsigned int hbm_f_ie_supported:1;
  	unsigned int hbm_f_os_supported:1;
  	unsigned int hbm_f_dr_supported:1;

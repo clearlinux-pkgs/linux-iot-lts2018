@@ -465,7 +465,7 @@ index 425c67e..013fc75 100644
  				}
  				break;
 diff --git a/kernel/auditsc.c b/kernel/auditsc.c
-index b2d1f04..2542e65 100644
+index 1513873..8018f6c 100644
 --- a/kernel/auditsc.c
 +++ b/kernel/auditsc.c
 @@ -112,7 +112,7 @@ struct audit_aux_data_pids {
@@ -622,7 +622,7 @@ index bbd6408..3b6b15e 100644
  EXPORT_SYMBOL(set_security_override_from_ctx);
  
 diff --git a/net/ipv4/ip_sockglue.c b/net/ipv4/ip_sockglue.c
-index b7a2612..88443b8 100644
+index 82f341e..d336d40 100644
 --- a/net/ipv4/ip_sockglue.c
 +++ b/net/ipv4/ip_sockglue.c
 @@ -131,14 +131,16 @@ static void ip_cmsg_recv_checksum(struct msghdr *msg, struct sk_buff *skb,
@@ -937,7 +937,7 @@ index 782ee19..4a397cd 100644
  	audit_info->sessionid = audit_get_sessionid(current);
  }
 diff --git a/net/unix/af_unix.c b/net/unix/af_unix.c
-index f601933..6e38c86 100644
+index d2d6ff0..086184d 100644
 --- a/net/unix/af_unix.c
 +++ b/net/unix/af_unix.c
 @@ -141,17 +141,17 @@ static struct hlist_head *unix_sockets_unbound(void *addr)

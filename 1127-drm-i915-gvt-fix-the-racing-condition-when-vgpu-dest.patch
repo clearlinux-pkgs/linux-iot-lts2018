@@ -36,7 +36,7 @@ index ff48b15..0215fc2 100644
  	}
  
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index be7ba1f..ec6ba62 100644
+index c6233fb..b5aa2cb 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -785,6 +785,11 @@ static struct intel_vgpu_workload *pick_next_workload(

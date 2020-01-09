@@ -45,7 +45,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  create mode 100644 tools/rpmb/rpmb.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 6c2ed56..ace2b39 100644
+index 20d2bec..6d38f98 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -12541,6 +12541,7 @@ F:	drivers/char/rpmb/*

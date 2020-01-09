@@ -214,7 +214,7 @@ index 098464d..1c9e204 100644
  	logical_ring_default_irqs(engine);
  
 diff --git a/drivers/gpu/drm/i915/intel_ringbuffer.h b/drivers/gpu/drm/i915/intel_ringbuffer.h
-index ff42345..a0118fb 100644
+index 83833ce..5b16911 100644
 --- a/drivers/gpu/drm/i915/intel_ringbuffer.h
 +++ b/drivers/gpu/drm/i915/intel_ringbuffer.h
 @@ -276,8 +276,9 @@ struct intel_engine_execlists {

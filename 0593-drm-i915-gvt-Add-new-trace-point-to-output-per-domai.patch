@@ -137,7 +137,7 @@ index b50c6b8..af592e3 100644
  DEFINE_EVENT(i915_request, i915_request_submit,
  	     TP_PROTO(struct i915_request *rq),
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index e389909..8552e73 100644
+index 1c96e92..1beb040 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -1394,6 +1394,11 @@ static inline bool intel_irqs_enabled(struct drm_i915_private *dev_priv)

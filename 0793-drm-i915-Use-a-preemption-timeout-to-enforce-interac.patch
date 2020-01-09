@@ -22,10 +22,10 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  3 files changed, 30 insertions(+), 10 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index de3db57..c0633ea 100644
+index 53459d5..6086085 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -3205,8 +3205,10 @@ int i915_gem_object_wait(struct drm_i915_gem_object *obj,
+@@ -3224,8 +3224,10 @@ int i915_gem_object_wait(struct drm_i915_gem_object *obj,
  			 struct intel_rps_client *rps);
  int i915_gem_object_wait_priority(struct drm_i915_gem_object *obj,
  				  unsigned int flags,
@@ -38,10 +38,10 @@ index de3db57..c0633ea 100644
  int __must_check
  i915_gem_object_set_to_wc_domain(struct drm_i915_gem_object *obj, bool write);
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index dd0c365..4404b71 100644
+index 406b587..89b8e64 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
-@@ -1417,7 +1417,8 @@ i915_gem_object_wait_reservation(struct reservation_object *resv,
+@@ -1425,7 +1425,8 @@ i915_gem_object_wait_reservation(struct reservation_object *resv,
  }
  
  static void __fence_set_priority(struct dma_fence *fence,
@@ -51,7 +51,7 @@ index dd0c365..4404b71 100644
  {
  	struct i915_request *rq;
  	struct intel_engine_cs *engine;
-@@ -1431,13 +1432,14 @@ static void __fence_set_priority(struct dma_fence *fence,
+@@ -1439,13 +1440,14 @@ static void __fence_set_priority(struct dma_fence *fence,
  	local_bh_disable();
  	rcu_read_lock(); /* RCU serialisation for set-wedged protection */
  	if (engine->schedule)
@@ -68,7 +68,7 @@ index dd0c365..4404b71 100644
  {
  	/* Recurse once into a fence-array */
  	if (dma_fence_is_array(fence)) {
-@@ -1445,16 +1447,17 @@ static void fence_set_priority(struct dma_fence *fence,
+@@ -1453,16 +1455,17 @@ static void fence_set_priority(struct dma_fence *fence,
  		int i;
  
  		for (i = 0; i < array->num_fences; i++)
@@ -89,7 +89,7 @@ index dd0c365..4404b71 100644
  {
  	struct dma_fence *excl;
  
-@@ -1469,7 +1472,7 @@ i915_gem_object_wait_priority(struct drm_i915_gem_object *obj,
+@@ -1477,7 +1480,7 @@ i915_gem_object_wait_priority(struct drm_i915_gem_object *obj,
  			return ret;
  
  		for (i = 0; i < count; i++) {
@@ -98,7 +98,7 @@ index dd0c365..4404b71 100644
  			dma_fence_put(shared[i]);
  		}
  
-@@ -1479,7 +1482,7 @@ i915_gem_object_wait_priority(struct drm_i915_gem_object *obj,
+@@ -1487,7 +1490,7 @@ i915_gem_object_wait_priority(struct drm_i915_gem_object *obj,
  	}
  
  	if (excl) {

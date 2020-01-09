@@ -249,7 +249,7 @@ index 0000000..21b7bc8
 +.. kernel-doc:: drivers/char/rpmb/rpmb_sim.c
 +
 diff --git a/MAINTAINERS b/MAINTAINERS
-index ace2b39..8fd5cd0 100644
+index 6d38f98..23ddb49 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -12541,6 +12541,7 @@ F:	drivers/char/rpmb/*

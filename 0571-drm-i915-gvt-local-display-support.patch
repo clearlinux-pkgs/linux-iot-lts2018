@@ -512,7 +512,7 @@ index 20cd4c8..e76412b 100644
  	int i;
  	if (dst_bytes > 4)
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 50d5649..e389909 100644
+index b1154d8..1c96e92 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -1718,6 +1718,7 @@ int intel_dp_rate_select(struct intel_dp *intel_dp, int rate);
@@ -524,7 +524,7 @@ index 50d5649..e389909 100644
  void intel_edp_drrs_enable(struct intel_dp *intel_dp,
  			   const struct intel_crtc_state *crtc_state);
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 425df81..01afc76 100644
+index 8d731eb..607500b 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -33,6 +33,10 @@
@@ -538,7 +538,7 @@ index 425df81..01afc76 100644
  /**
   * DOC: RC6
   *
-@@ -5167,6 +5171,14 @@ skl_compute_ddb(struct drm_atomic_state *state)
+@@ -5175,6 +5179,14 @@ skl_compute_ddb(struct drm_atomic_state *state)
  
  	memcpy(ddb, &dev_priv->wm.skl_hw.ddb, sizeof(*ddb));
  
@@ -553,7 +553,7 @@ index 425df81..01afc76 100644
  	for_each_new_intel_crtc_in_state(intel_state, crtc, cstate, i) {
  		ret = skl_allocate_pipe_ddb(cstate, ddb);
  		if (ret)
-@@ -5393,6 +5405,11 @@ static void skl_atomic_update_crtc_wm(struct intel_atomic_state *state,
+@@ -5401,6 +5413,11 @@ static void skl_atomic_update_crtc_wm(struct intel_atomic_state *state,
  	I915_WRITE(PIPE_WM_LINETIME(pipe), pipe_wm->linetime);
  
  	for_each_plane_id_on_crtc(crtc, plane_id) {

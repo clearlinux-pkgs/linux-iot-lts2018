@@ -146,7 +146,7 @@ index 8fa3bed..ec0886a 100644
  		       pv_plane_wm_mmio_write);
  	MMIO_PLANES_DH(PLANE_BUF_CFG, D_SKL_PLUS, NULL, NULL);
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 9d19215..0d93edc 100644
+index 2202dfc..5fa2da2 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -1346,6 +1346,24 @@ static void i915_welcome_messages(struct drm_i915_private *dev_priv)
@@ -196,10 +196,10 @@ index 9d19215..0d93edc 100644
  			goto out_cleanup_hw;
  	}
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index d1e2d2b..489f255 100644
+index f573f6f..969b45c 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -2672,6 +2672,11 @@ intel_info(const struct drm_i915_private *dev_priv)
+@@ -2683,6 +2683,11 @@ intel_info(const struct drm_i915_private *dev_priv)
  #define GT_FREQUENCY_MULTIPLIER 50
  #define GEN9_FREQ_SCALER 3
  
@@ -629,10 +629,10 @@ index c658a63..a8838bc 100644
  
  	intel_modeset_update_connector_atomic_state(dev);
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 98af16e..acf3d90 100644
+index a4b6325..3ed6373 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
-@@ -2124,6 +2124,9 @@ int intel_sprite_set_colorkey_ioctl(struct drm_device *dev, void *data,
+@@ -2127,6 +2127,9 @@ int intel_sprite_set_colorkey_ioctl(struct drm_device *dev, void *data,
  				    struct drm_file *file_priv);
  void intel_pipe_update_start(const struct intel_crtc_state *new_crtc_state);
  void intel_pipe_update_end(struct intel_crtc_state *new_crtc_state);
@@ -643,10 +643,10 @@ index 98af16e..acf3d90 100644
  		      const struct intel_crtc_state *crtc_state,
  		      const struct intel_plane_state *plane_state);
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 2f20205..bbbea83 100644
+index 96a0269..b4cdb3d 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
-@@ -807,11 +807,14 @@ static int intel_wm_num_levels(struct drm_i915_private *dev_priv)
+@@ -815,11 +815,14 @@ static int intel_wm_num_levels(struct drm_i915_private *dev_priv)
  static bool intel_wm_plane_visible(const struct intel_crtc_state *crtc_state,
  				   const struct intel_plane_state *plane_state)
  {
@@ -662,7 +662,7 @@ index 2f20205..bbbea83 100644
  
  	/*
  	 * Treat cursor with fb as always visible since cursor updates
-@@ -4012,11 +4015,15 @@ static uint_fixed_16_16_t
+@@ -4020,11 +4023,15 @@ static uint_fixed_16_16_t
  skl_plane_downscale_amount(const struct intel_crtc_state *cstate,
  			   const struct intel_plane_state *pstate)
  {
@@ -679,7 +679,7 @@ index 2f20205..bbbea83 100644
  	if (WARN_ON(!intel_wm_plane_visible(cstate, pstate)))
  		return u32_to_fixed16(0);
  
-@@ -4527,9 +4534,9 @@ skl_compute_plane_wm_params(const struct drm_i915_private *dev_priv,
+@@ -4535,9 +4542,9 @@ skl_compute_plane_wm_params(const struct drm_i915_private *dev_priv,
  			    const struct intel_plane_state *intel_pstate,
  			    struct skl_wm_params *wp, int plane_id)
  {
@@ -692,7 +692,7 @@ index 2f20205..bbbea83 100644
  	uint32_t interm_pbpl;
  	struct intel_atomic_state *state =
  		to_intel_atomic_state(cstate->base.state);
-@@ -4544,6 +4551,19 @@ skl_compute_plane_wm_params(const struct drm_i915_private *dev_priv,
+@@ -4552,6 +4559,19 @@ skl_compute_plane_wm_params(const struct drm_i915_private *dev_priv,
  		return -EINVAL;
  	}
  
@@ -712,7 +712,7 @@ index 2f20205..bbbea83 100644
  	wp->y_tiled = fb->modifier == I915_FORMAT_MOD_Y_TILED ||
  		      fb->modifier == I915_FORMAT_MOD_Yf_TILED ||
  		      fb->modifier == I915_FORMAT_MOD_Y_TILED_CCS ||
-@@ -4568,8 +4588,6 @@ skl_compute_plane_wm_params(const struct drm_i915_private *dev_priv,
+@@ -4576,8 +4596,6 @@ skl_compute_plane_wm_params(const struct drm_i915_private *dev_priv,
  		wp->width /= 2;
  
  	wp->cpp = fb->format->cpp[plane_id];
@@ -721,7 +721,7 @@ index 2f20205..bbbea83 100644
  
  	if (INTEL_GEN(dev_priv) >= 11 &&
  	    fb->modifier == I915_FORMAT_MOD_Yf_TILED && wp->cpp == 8)
-@@ -4600,6 +4618,9 @@ skl_compute_plane_wm_params(const struct drm_i915_private *dev_priv,
+@@ -4608,6 +4626,9 @@ skl_compute_plane_wm_params(const struct drm_i915_private *dev_priv,
  	if (apply_memory_bw_wa)
  		wp->y_min_scanlines *= 2;
  
@@ -731,7 +731,7 @@ index 2f20205..bbbea83 100644
  	wp->plane_bytes_per_line = wp->width * wp->cpp;
  	if (wp->y_tiled) {
  		interm_pbpl = DIV_ROUND_UP(wp->plane_bytes_per_line *
-@@ -4638,7 +4659,8 @@ static int skl_compute_plane_wm(const struct drm_i915_private *dev_priv,
+@@ -4646,7 +4667,8 @@ static int skl_compute_plane_wm(const struct drm_i915_private *dev_priv,
  				const struct skl_wm_level *result_prev,
  				struct skl_wm_level *result /* out */)
  {
@@ -741,7 +741,7 @@ index 2f20205..bbbea83 100644
  	uint32_t latency = dev_priv->wm.skl_latency[level];
  	uint_fixed_16_16_t method1, method2;
  	uint_fixed_16_16_t selected_result;
-@@ -4691,7 +4713,7 @@ static int skl_compute_plane_wm(const struct drm_i915_private *dev_priv,
+@@ -4699,7 +4721,7 @@ static int skl_compute_plane_wm(const struct drm_i915_private *dev_priv,
  					 wp->plane_blocks_per_line);
  
  	/* Display WA #1125: skl,bxt,kbl,glk */
@@ -750,7 +750,7 @@ index 2f20205..bbbea83 100644
  		res_blocks += fixed16_to_u32_round_up(wp->y_tile_minimum);
  
  	/* Display WA #1126: skl,bxt,kbl,glk */
-@@ -4749,12 +4771,16 @@ static int skl_compute_plane_wm(const struct drm_i915_private *dev_priv,
+@@ -4757,12 +4779,16 @@ static int skl_compute_plane_wm(const struct drm_i915_private *dev_priv,
  		if (level) {
  			return 0;
  		} else {
@@ -769,7 +769,7 @@ index 2f20205..bbbea83 100644
  			return -EINVAL;
  		}
  	}
-@@ -4785,18 +4811,16 @@ skl_compute_wm_levels(const struct drm_i915_private *dev_priv,
+@@ -4793,18 +4819,16 @@ skl_compute_wm_levels(const struct drm_i915_private *dev_priv,
  		      const struct intel_plane_state *intel_pstate,
  		      const struct skl_wm_params *wm_params,
  		      struct skl_plane_wm *wm,
@@ -791,7 +791,7 @@ index 2f20205..bbbea83 100644
  		return -EINVAL;
  
  	ddb_blocks = plane_id ?
-@@ -4826,7 +4850,8 @@ skl_compute_wm_levels(const struct drm_i915_private *dev_priv,
+@@ -4834,7 +4858,8 @@ skl_compute_wm_levels(const struct drm_i915_private *dev_priv,
  			return ret;
  	}
  
@@ -801,7 +801,7 @@ index 2f20205..bbbea83 100644
  		wm->is_planar = true;
  
  	return 0;
-@@ -4910,6 +4935,64 @@ static void skl_compute_transition_wm(struct intel_crtc_state *cstate,
+@@ -4918,6 +4943,64 @@ static void skl_compute_transition_wm(struct intel_crtc_state *cstate,
  	trans_wm->plane_en = false;
  }
  
@@ -866,7 +866,7 @@ index 2f20205..bbbea83 100644
  static int skl_build_pipe_wm(struct intel_crtc_state *cstate,
  			     struct skl_ddb_allocation *ddb,
  			     struct skl_pipe_wm *pipe_wm)
-@@ -4945,7 +5028,7 @@ static int skl_build_pipe_wm(struct intel_crtc_state *cstate,
+@@ -4953,7 +5036,7 @@ static int skl_build_pipe_wm(struct intel_crtc_state *cstate,
  			return ret;
  
  		ret = skl_compute_wm_levels(dev_priv, ddb, cstate,
@@ -875,7 +875,7 @@ index 2f20205..bbbea83 100644
  		if (ret)
  			return ret;
  
-@@ -4965,7 +5048,7 @@ static int skl_build_pipe_wm(struct intel_crtc_state *cstate,
+@@ -4973,7 +5056,7 @@ static int skl_build_pipe_wm(struct intel_crtc_state *cstate,
  
  			ret = skl_compute_wm_levels(dev_priv, ddb, cstate,
  						    intel_pstate, &wm_params,
@@ -884,7 +884,7 @@ index 2f20205..bbbea83 100644
  			if (ret)
  				return ret;
  		}
-@@ -5182,7 +5265,10 @@ static int skl_update_pipe_wm(struct drm_crtc_state *cstate,
+@@ -5190,7 +5273,10 @@ static int skl_update_pipe_wm(struct drm_crtc_state *cstate,
  	struct intel_crtc_state *intel_cstate = to_intel_crtc_state(cstate);
  	int ret;
  
@@ -896,7 +896,7 @@ index 2f20205..bbbea83 100644
  	if (ret)
  		return ret;
  
-@@ -5426,10 +5512,14 @@ skl_compute_wm(struct drm_atomic_state *state)
+@@ -5434,10 +5520,14 @@ skl_compute_wm(struct drm_atomic_state *state)
  	struct drm_crtc_state *cstate;
  	struct intel_atomic_state *intel_state = to_intel_atomic_state(state);
  	struct skl_ddb_values *results = &intel_state->wm_results;
@@ -911,7 +911,7 @@ index 2f20205..bbbea83 100644
  	/* Clear all dirty flags */
  	results->dirty_pipes = 0;
  
-@@ -5488,11 +5578,23 @@ static void skl_atomic_update_crtc_wm(struct intel_atomic_state *state,
+@@ -5496,11 +5586,23 @@ static void skl_atomic_update_crtc_wm(struct intel_atomic_state *state,
  	enum pipe pipe = crtc->pipe;
  	enum plane_id plane_id;
  

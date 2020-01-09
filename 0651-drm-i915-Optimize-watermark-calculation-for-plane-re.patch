@@ -14,10 +14,10 @@ Signed-off-by: Satyeshwar Singh <satyeshwar.singh@intel.com>
  1 file changed, 55 insertions(+), 51 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 2bb47a9..64e1b61 100644
+index 2cadc47..36ba039 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
-@@ -4936,13 +4936,63 @@ static void skl_compute_transition_wm(struct intel_crtc_state *cstate,
+@@ -4944,13 +4944,63 @@ static void skl_compute_transition_wm(struct intel_crtc_state *cstate,
  	trans_wm->plane_en = false;
  }
  
@@ -82,7 +82,7 @@ index 2bb47a9..64e1b61 100644
  	struct intel_crtc *crtc = to_intel_crtc(cstate->base.crtc);
  	struct drm_crtc_state *crtc_state = &cstate->base;
  	struct drm_plane *plane;
-@@ -4963,8 +5013,6 @@ static int skl_build_pipe_all_plane_wm(struct intel_crtc_state *cstate,
+@@ -4971,8 +5021,6 @@ static int skl_build_pipe_all_plane_wm(struct intel_crtc_state *cstate,
  	 * also assume cpp = 4 and tiling = x_tiled.
  	 */
  	for_each_universal_plane(dev_priv, pipe, plane_id) {
@@ -91,7 +91,7 @@ index 2bb47a9..64e1b61 100644
  		intel_pstate = NULL;
  
  		drm_atomic_crtc_state_for_each_plane_state(plane, pstate, crtc_state) {
-@@ -4974,20 +5022,10 @@ static int skl_build_pipe_all_plane_wm(struct intel_crtc_state *cstate,
+@@ -4982,20 +5030,10 @@ static int skl_build_pipe_all_plane_wm(struct intel_crtc_state *cstate,
  			}
  		}
  
@@ -114,7 +114,7 @@ index 2bb47a9..64e1b61 100644
  	}
  	pipe_wm->linetime = skl_compute_linetime_wm(cstate);
  
-@@ -4998,12 +5036,9 @@ static int skl_build_pipe_wm(struct intel_crtc_state *cstate,
+@@ -5006,12 +5044,9 @@ static int skl_build_pipe_wm(struct intel_crtc_state *cstate,
  			     struct skl_ddb_allocation *ddb,
  			     struct skl_pipe_wm *pipe_wm)
  {
@@ -127,7 +127,7 @@ index 2bb47a9..64e1b61 100644
  	int ret;
  
  	/*
-@@ -5016,43 +5051,12 @@ static int skl_build_pipe_wm(struct intel_crtc_state *cstate,
+@@ -5024,43 +5059,12 @@ static int skl_build_pipe_wm(struct intel_crtc_state *cstate,
  		const struct intel_plane_state *intel_pstate =
  						to_intel_plane_state(pstate);
  		enum plane_id plane_id = to_intel_plane(plane)->id;

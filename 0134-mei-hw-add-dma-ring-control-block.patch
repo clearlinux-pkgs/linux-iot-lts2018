@@ -91,10 +91,10 @@ index 6565592..4f09bbc 100644
 +
  #endif
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index a6796e3..033b5ef 100644
+index 76c44bc..5cb8a23 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
-@@ -597,6 +597,7 @@ void mei_cancel_work(struct mei_device *dev);
+@@ -601,6 +601,7 @@ void mei_cancel_work(struct mei_device *dev);
  int mei_dmam_ring_alloc(struct mei_device *dev);
  void mei_dmam_ring_free(struct mei_device *dev);
  bool mei_dma_ring_is_allocated(struct mei_device *dev);

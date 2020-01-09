@@ -18,10 +18,10 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index 9372877..765fa43 100644
+index c7d05ac..b912e1c 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
-@@ -5041,7 +5041,8 @@ void i915_gem_sanitize(struct drm_i915_private *i915)
+@@ -5063,7 +5063,8 @@ void i915_gem_sanitize(struct drm_i915_private *i915)
  	 * of the reset, so this could be applied to even earlier gen.
  	 */
  	err = -ENODEV;

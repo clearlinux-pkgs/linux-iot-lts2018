@@ -130,7 +130,7 @@ index 6937ef0..71e4d09 100644
  
  static bool csb_force_mmio(struct drm_i915_private *i915)
 diff --git a/drivers/gpu/drm/i915/intel_ringbuffer.h b/drivers/gpu/drm/i915/intel_ringbuffer.h
-index f5ffa6d..93daa92 100644
+index eaf1a16..4f39f6b 100644
 --- a/drivers/gpu/drm/i915/intel_ringbuffer.h
 +++ b/drivers/gpu/drm/i915/intel_ringbuffer.h
 @@ -567,6 +567,7 @@ struct intel_engine_cs {

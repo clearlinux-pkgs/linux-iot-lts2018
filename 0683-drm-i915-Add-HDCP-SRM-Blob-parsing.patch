@@ -20,7 +20,7 @@ Signed-off-by: Ramalingam C <ramalingam.c@intel.com>
  3 files changed, 165 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index a1f6593..75c4581 100644
+index 10883e0..8bc603e 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -429,6 +429,11 @@ struct intel_connector {

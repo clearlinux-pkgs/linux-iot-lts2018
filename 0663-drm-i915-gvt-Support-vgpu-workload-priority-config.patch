@@ -20,7 +20,7 @@ Reviewed-by: Min He <min.he@intel.com>
  3 files changed, 17 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index 7c41fb6..da2b176 100644
+index 50af02d..3f9e6a0 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -467,6 +467,15 @@ static void gen8_shadow_pid_cid(struct intel_vgpu_workload *workload)

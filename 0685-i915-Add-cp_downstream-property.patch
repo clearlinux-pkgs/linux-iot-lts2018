@@ -21,7 +21,7 @@ Signed-off-by: Romli, Khairul Anuar <khairul.anuar.romli@intel.com>
  3 files changed, 88 insertions(+), 35 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 75c4581..e8f7ad1 100644
+index 8bc603e..98a1472 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -434,6 +434,9 @@ struct intel_connector {

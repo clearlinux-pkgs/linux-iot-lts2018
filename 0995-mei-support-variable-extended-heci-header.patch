@@ -683,7 +683,7 @@ index 6531e03..750de6d 100644
  	if (*slots == -EOVERFLOW) {
  		/* overflow - reset */
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 96232c4..1cfd77b 100644
+index 07147c3..237e15c 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -433,6 +433,7 @@ struct mei_fw_version {
@@ -694,7 +694,7 @@ index 96232c4..1cfd77b 100644
   *
   * @hbuf_is_ready : query if the host host/write buffer is ready
   * @dr_dscr: DMA ring descriptors: TX, RX, and CTRL
-@@ -514,7 +515,8 @@ struct mei_device {
+@@ -516,7 +517,8 @@ struct mei_device {
  #endif /* CONFIG_PM */
  
  	unsigned char rd_msg_buf[MEI_RD_MSG_BUF_SIZE];

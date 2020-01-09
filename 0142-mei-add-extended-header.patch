@@ -330,7 +330,7 @@ index 055c2d8..6531e03 100644
  	}
  
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 6a815a1..5f033b7 100644
+index 8cbab0f..6888fe7 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -184,6 +184,7 @@ struct mei_cl;
@@ -349,7 +349,7 @@ index 6a815a1..5f033b7 100644
  	const struct file *fp;
  	int status;
  	u32 internal:1;
-@@ -744,10 +746,11 @@ static inline void mei_dbgfs_deregister(struct mei_device *dev) {}
+@@ -748,10 +750,11 @@ static inline void mei_dbgfs_deregister(struct mei_device *dev) {}
  int mei_register(struct mei_device *dev, struct device *parent);
  void mei_deregister(struct mei_device *dev);
  

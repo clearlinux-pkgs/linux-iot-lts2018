@@ -111,7 +111,7 @@ index 19dfbf3..3d25ace 100644
  	bool "Always enable userptr support"
  	depends on DRM_I915
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 0d93edc..557c713 100644
+index 5fa2da2..7a91c1e 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -1563,6 +1563,10 @@ static void i915_driver_postclose(struct drm_device *dev, struct drm_file *file)
@@ -125,7 +125,7 @@ index 0d93edc..557c713 100644
  	kfree(file_priv);
  }
  
-@@ -2922,6 +2926,9 @@ static struct drm_driver driver = {
+@@ -2925,6 +2929,9 @@ static struct drm_driver driver = {
  	.lastclose = i915_driver_lastclose,
  	.postclose = i915_driver_postclose,
  
@@ -136,7 +136,7 @@ index 0d93edc..557c713 100644
  	.gem_free_object_unlocked = i915_gem_free_object,
  	.gem_vm_ops = &i915_gem_vm_ops,
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 440ea4b..2de144a 100644
+index 13f693f..d3a7100 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -79,6 +79,9 @@
@@ -172,7 +172,7 @@ index 440ea4b..2de144a 100644
  /*
   * Every context ban increments per client ban score. Also
   * hangs in short succession increments ban score. If ban threshold
-@@ -997,6 +1009,10 @@ struct i915_gem_mm {
+@@ -998,6 +1010,10 @@ struct i915_gem_mm {
  	spinlock_t object_stat_lock;
  	u64 object_memory;
  	u32 object_count;
@@ -183,7 +183,7 @@ index 440ea4b..2de144a 100644
  };
  
  #define I915_IDLE_ENGINES_TIMEOUT (200) /* in ms */
-@@ -1670,6 +1686,10 @@ struct drm_i915_private {
+@@ -1671,6 +1687,10 @@ struct drm_i915_private {
  
  	bool preserve_bios_swizzle;
  
@@ -194,7 +194,7 @@ index 440ea4b..2de144a 100644
  	/* overlay */
  	struct intel_overlay *overlay;
  
-@@ -2911,6 +2931,11 @@ i915_gem_object_create(struct drm_i915_private *dev_priv, u64 size);
+@@ -2922,6 +2942,11 @@ i915_gem_object_create(struct drm_i915_private *dev_priv, u64 size);
  struct drm_i915_gem_object *
  i915_gem_object_create_from_data(struct drm_i915_private *dev_priv,
  				 const void *data, size_t size);
@@ -206,7 +206,7 @@ index 440ea4b..2de144a 100644
  void i915_gem_close_object(struct drm_gem_object *gem, struct drm_file *file);
  void i915_gem_free_object(struct drm_gem_object *obj);
  
-@@ -3342,6 +3367,19 @@ u32 i915_gem_fence_size(struct drm_i915_private *dev_priv, u32 size,
+@@ -3361,6 +3386,19 @@ u32 i915_gem_fence_size(struct drm_i915_private *dev_priv, u32 size,
  u32 i915_gem_fence_alignment(struct drm_i915_private *dev_priv, u32 size,
  			     unsigned int tiling, unsigned int stride);
  
@@ -226,7 +226,7 @@ index 440ea4b..2de144a 100644
  /* i915_debugfs.c */
  #ifdef CONFIG_DEBUG_FS
  int i915_debugfs_register(struct drm_i915_private *dev_priv);
-@@ -3381,6 +3419,13 @@ extern int i915_restore_state(struct drm_i915_private *dev_priv);
+@@ -3402,6 +3440,13 @@ extern int i915_restore_state(struct drm_i915_private *dev_priv);
  void i915_setup_sysfs(struct drm_i915_private *dev_priv);
  void i915_teardown_sysfs(struct drm_i915_private *dev_priv);
  
@@ -241,7 +241,7 @@ index 440ea4b..2de144a 100644
  int  intel_lpe_audio_init(struct drm_i915_private *dev_priv);
  void intel_lpe_audio_teardown(struct drm_i915_private *dev_priv);
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index e3ba929..0aa691f 100644
+index e610072..402db0d 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
 @@ -47,8 +47,852 @@
@@ -1097,7 +1097,7 @@ index e3ba929..0aa691f 100644
  static bool cpu_write_needs_clflush(struct drm_i915_gem_object *obj)
  {
  	if (obj->cache_dirty)
-@@ -1859,6 +2703,9 @@ i915_gem_mmap_ioctl(struct drm_device *dev, void *data,
+@@ -1867,6 +2711,9 @@ i915_gem_mmap_ioctl(struct drm_device *dev, void *data,
  	struct drm_i915_gem_mmap *args = data;
  	struct drm_i915_gem_object *obj;
  	unsigned long addr;
@@ -1107,7 +1107,7 @@ index e3ba929..0aa691f 100644
  
  	if (args->flags & ~(I915_MMAP_WC))
  		return -EINVAL;
-@@ -1912,6 +2759,12 @@ i915_gem_mmap_ioctl(struct drm_device *dev, void *data,
+@@ -1920,6 +2767,12 @@ i915_gem_mmap_ioctl(struct drm_device *dev, void *data,
  	}
  	i915_gem_object_put(obj);
  
@@ -1120,7 +1120,7 @@ index e3ba929..0aa691f 100644
  	args->addr_ptr = (uint64_t) addr;
  	return 0;
  
-@@ -2117,6 +2970,9 @@ vm_fault_t i915_gem_fault(struct vm_fault *vmf)
+@@ -2125,6 +2978,9 @@ vm_fault_t i915_gem_fault(struct vm_fault *vmf)
  			       (ggtt->gmadr.start + vma->node.start) >> PAGE_SHIFT,
  			       min_t(u64, vma->size, area->vm_end - area->vm_start),
  			       &ggtt->iomap);
@@ -1130,7 +1130,7 @@ index e3ba929..0aa691f 100644
  	if (ret)
  		goto err_fence;
  
-@@ -2374,6 +3230,19 @@ i915_gem_object_truncate(struct drm_i915_gem_object *obj)
+@@ -2382,6 +3238,19 @@ i915_gem_object_truncate(struct drm_i915_gem_object *obj)
  	shmem_truncate_range(file_inode(obj->base.filp), 0, (loff_t)-1);
  	obj->mm.madv = __I915_MADV_PURGED;
  	obj->mm.pages = ERR_PTR(-EFAULT);
@@ -1150,7 +1150,7 @@ index e3ba929..0aa691f 100644
  }
  
  /* Try to discard unwanted pages */
-@@ -2669,6 +3538,14 @@ static int i915_gem_object_get_pages_gtt(struct drm_i915_gem_object *obj)
+@@ -2677,6 +3546,14 @@ static int i915_gem_object_get_pages_gtt(struct drm_i915_gem_object *obj)
  	if (i915_gem_object_needs_bit17_swizzle(obj))
  		i915_gem_object_do_bit_17_swizzle(obj, st);
  
@@ -1165,7 +1165,7 @@ index e3ba929..0aa691f 100644
  	__i915_gem_object_set_pages(obj, st, sg_page_sizes);
  
  	return 0;
-@@ -4713,6 +5590,15 @@ void i915_gem_object_init(struct drm_i915_gem_object *obj,
+@@ -4735,6 +5612,15 @@ void i915_gem_object_init(struct drm_i915_gem_object *obj,
  	INIT_RADIX_TREE(&obj->mm.get_page.radix, GFP_KERNEL | __GFP_NOWARN);
  	mutex_init(&obj->mm.get_page.lock);
  
@@ -1181,7 +1181,7 @@ index e3ba929..0aa691f 100644
  	i915_gem_info_add_obj(to_i915(obj->base.dev), obj->base.size);
  }
  
-@@ -4846,6 +5732,17 @@ static bool discard_backing_storage(struct drm_i915_gem_object *obj)
+@@ -4868,6 +5754,17 @@ static bool discard_backing_storage(struct drm_i915_gem_object *obj)
  	return atomic_long_read(&obj->base.filp->f_count) == 1;
  }
  
@@ -1199,7 +1199,7 @@ index e3ba929..0aa691f 100644
  static void __i915_gem_free_objects(struct drm_i915_private *i915,
  				    struct llist_node *freed)
  {
-@@ -4899,6 +5796,16 @@ static void __i915_gem_free_objects(struct drm_i915_private *i915,
+@@ -4921,6 +5818,16 @@ static void __i915_gem_free_objects(struct drm_i915_private *i915,
  		if (obj->base.import_attach)
  			drm_prime_gem_destroy(&obj->base, NULL);
  
@@ -1216,7 +1216,7 @@ index e3ba929..0aa691f 100644
  		reservation_object_fini(&obj->__builtin_resv);
  		drm_gem_object_release(&obj->base);
  		i915_gem_info_remove_obj(i915, obj->base.size);
-@@ -5865,6 +6772,11 @@ void i915_gem_release(struct drm_device *dev, struct drm_file *file)
+@@ -5887,6 +6794,11 @@ void i915_gem_release(struct drm_device *dev, struct drm_file *file)
  	struct drm_i915_file_private *file_priv = file->driver_priv;
  	struct i915_request *request;
  
@@ -1228,7 +1228,7 @@ index e3ba929..0aa691f 100644
  	/* Clean up our request list when the client is going away, so that
  	 * later retire_requests won't dereference our soon-to-be-gone
  	 * file_priv.
-@@ -5890,15 +6802,57 @@ int i915_gem_open(struct drm_i915_private *i915, struct drm_file *file)
+@@ -5912,15 +6824,57 @@ int i915_gem_open(struct drm_i915_private *i915, struct drm_file *file)
  	file_priv->dev_priv = i915;
  	file_priv->file = file;
  

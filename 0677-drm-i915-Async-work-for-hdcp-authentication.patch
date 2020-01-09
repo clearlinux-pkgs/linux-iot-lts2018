@@ -30,7 +30,7 @@ index 0ae505a..b8a9d6a 100644
  	}
  	drm_connector_list_iter_end(&conn_iter);
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index acf3d90..f654052 100644
+index 3ed6373..6c073bf 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -428,6 +428,7 @@ struct intel_connector {

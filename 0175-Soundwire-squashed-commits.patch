@@ -790,14 +790,14 @@ Reviewed-on:
  drivers/sdw/sdw_cnl_priv.h          |  337 ++++
  drivers/sdw/sdw_maxim.c             |  146 ++
  drivers/sdw/sdw_priv.h              |  243 +++
- drivers/soundwire/Kconfig           |    1 +
+ drivers/soundwire/Kconfig           |    2 +-
  include/linux/mod_devicetable.h     |   13 +
  include/linux/regmap.h              |    7 +
  include/linux/sdw/sdw_cnl.h         |   96 ++
  include/linux/sdw/sdw_registers.h   |  157 ++
  include/linux/sdw_bus.h             | 1354 +++++++++++++++
  include/trace/events/sdw.h          |  232 +++
- 20 files changed, 9168 insertions(+)
+ 20 files changed, 9168 insertions(+), 1 deletion(-)
  create mode 100644 drivers/base/regmap/regmap-sdwint.c
  create mode 100644 drivers/sdw/Kconfig
  create mode 100644 drivers/sdw/Makefile
@@ -8210,14 +8210,15 @@ index 0000000..5ec3edc
 +
 +#endif /* _LINUX_SDW_PRIV_H */
 diff --git a/drivers/soundwire/Kconfig b/drivers/soundwire/Kconfig
-index 1ba1556..5deafa2 100644
+index c7708fe..05e6a80 100644
 --- a/drivers/soundwire/Kconfig
 +++ b/drivers/soundwire/Kconfig
-@@ -4,6 +4,7 @@
+@@ -4,7 +4,7 @@
  
  menuconfig SOUNDWIRE
  	tristate "SoundWire support"
-+	depends on !SDW
+-	depends on ACPI
++	depends on !SDW && ACPI
  	help
  	  SoundWire is a 2-Pin interface with data and clock line ratified
  	  by the MIPI Alliance. SoundWire is used for transporting data

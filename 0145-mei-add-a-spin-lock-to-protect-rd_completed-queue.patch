@@ -167,7 +167,7 @@ index 87281b3..6227b40 100644
  		else
  			mei_cl_read_start(cl, mei_cl_mtu(cl), file);
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 5f033b7..7058475 100644
+index 6888fe7..0467d05 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -227,6 +227,7 @@ struct mei_cl_cb {

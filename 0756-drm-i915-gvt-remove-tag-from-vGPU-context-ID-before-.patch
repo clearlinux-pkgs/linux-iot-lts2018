@@ -16,10 +16,10 @@ Reviewed-by: He, Min <min.he@intel.com>
  1 file changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem_context.c b/drivers/gpu/drm/i915/i915_gem_context.c
-index 0c8c68a..585ebf2 100644
+index 32eeabb..e170cd2 100644
 --- a/drivers/gpu/drm/i915/i915_gem_context.c
 +++ b/drivers/gpu/drm/i915/i915_gem_context.c
-@@ -513,7 +513,12 @@ int i915_gem_contexts_init(struct drm_i915_private *dev_priv)
+@@ -518,7 +518,12 @@ int i915_gem_contexts_init(struct drm_i915_private *dev_priv)
  	 * For easy recognisablity, we want the kernel context to be 0 and then
  	 * all user contexts will have non-zero hw_id.
  	 */

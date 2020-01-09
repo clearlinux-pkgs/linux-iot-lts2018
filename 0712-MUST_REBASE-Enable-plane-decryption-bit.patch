@@ -84,10 +84,10 @@ index a16a74d..273fdf3 100644
   * drm_plane_create_alpha_property - create a new alpha property
   * @plane: drm plane
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 9ae8fb3..ddf5850 100644
+index e1da295..d9e2fb7 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
-@@ -6544,6 +6544,7 @@ enum {
+@@ -6550,6 +6550,7 @@ enum {
  #define   PLANE_CTL_ALPHA_DISABLE		(0 << 4)
  #define   PLANE_CTL_ALPHA_SW_PREMULTIPLY	(2 << 4)
  #define   PLANE_CTL_ALPHA_HW_PREMULTIPLY	(3 << 4)

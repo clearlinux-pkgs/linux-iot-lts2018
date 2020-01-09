@@ -54,7 +54,7 @@ index c32e7d5..4fac40d 100644
  	mutex_unlock(&vgpu->gvt->sched_lock);
  }
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index 663a7c9..c2d733a 100644
+index d0e216d..0eb7b17 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -203,6 +203,7 @@ static inline bool is_gvt_request(struct i915_request *req)

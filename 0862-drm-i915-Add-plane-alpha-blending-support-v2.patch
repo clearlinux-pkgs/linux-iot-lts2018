@@ -36,7 +36,7 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  5 files changed, 69 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index c0633ea..fb65396 100644
+index 6086085..f981e49 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -558,6 +558,8 @@ struct intel_fbc {
@@ -49,10 +49,10 @@ index c0633ea..fb65396 100644
  
  		struct {
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index ddf5850..f82c86c 100644
+index d9e2fb7..3dd9a54 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
-@@ -6569,8 +6569,10 @@ enum {
+@@ -6575,8 +6575,10 @@ enum {
  #define _PLANE_KEYVAL_2_A			0x70294
  #define _PLANE_KEYMSK_1_A			0x70198
  #define _PLANE_KEYMSK_2_A			0x70298

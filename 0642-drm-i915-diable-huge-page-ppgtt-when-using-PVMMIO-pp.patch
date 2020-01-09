@@ -16,10 +16,10 @@ Reviewed-by: Xinyun Liu <xinyun.liu@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index 765fa43..e3ba929 100644
+index b912e1c..e610072 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
-@@ -5476,7 +5476,8 @@ int i915_gem_init(struct drm_i915_private *dev_priv)
+@@ -5498,7 +5498,8 @@ int i915_gem_init(struct drm_i915_private *dev_priv)
  	int ret;
  
  	/* We need to fallback to 4K pages if host doesn't support huge gtt. */

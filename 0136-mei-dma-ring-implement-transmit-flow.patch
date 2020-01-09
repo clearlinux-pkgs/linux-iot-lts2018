@@ -279,10 +279,10 @@ index 2d2ce6f..f809db5 100644
 +	WRITE_ONCE(ctrl->hbuf_wr_idx, ctrl->hbuf_wr_idx + slots);
 +}
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index bfd181f..685b78c 100644
+index 2b026ce..6552b41 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
-@@ -599,6 +599,8 @@ void mei_dmam_ring_free(struct mei_device *dev);
+@@ -603,6 +603,8 @@ void mei_dmam_ring_free(struct mei_device *dev);
  bool mei_dma_ring_is_allocated(struct mei_device *dev);
  void mei_dma_ring_reset(struct mei_device *dev);
  void mei_dma_ring_read(struct mei_device *dev, unsigned char *buf, u32 len);

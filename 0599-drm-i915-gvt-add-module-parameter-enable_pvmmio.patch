@@ -30,7 +30,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  6 files changed, 49 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 0797c3e..104e281 100644
+index 258278f..f5190c5 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -51,6 +51,7 @@
@@ -83,10 +83,10 @@ index 0797c3e..104e281 100644
  err_bridge:
  	pci_dev_put(dev_priv->bridge_dev);
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 9d446a0..02b4471 100644
+index 90968b0..c129605 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -1590,6 +1590,7 @@ struct drm_i915_private {
+@@ -1591,6 +1591,7 @@ struct drm_i915_private {
  	resource_size_t stolen_usable_size;	/* Total size minus reserved ranges */
  
  	void __iomem *regs;

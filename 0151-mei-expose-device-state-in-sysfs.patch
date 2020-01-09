@@ -200,10 +200,10 @@ index 59a6a7a..86d81cb 100644
  	if (ret) {
  		dev_err(clsdev, "cannot register debugfs ret = %d\n", ret);
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 384f1b6..96232c4 100644
+index f385c27..07147c3 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
-@@ -467,6 +467,8 @@ struct mei_fw_version {
+@@ -469,6 +469,8 @@ struct mei_fw_version {
   *
   * @dbgfs_dir   : debugfs mei root directory
   *
@@ -212,7 +212,7 @@ index 384f1b6..96232c4 100644
   * @ops:        : hw specific operations
   * @hw          : hw specific data
   */
-@@ -552,6 +554,7 @@ struct mei_device {
+@@ -556,6 +558,7 @@ struct mei_device {
  	struct dentry *dbgfs_dir;
  #endif /* CONFIG_DEBUG_FS */
  
@@ -220,7 +220,7 @@ index 384f1b6..96232c4 100644
  
  	const struct mei_hw_ops *ops;
  	char hw[0] __aligned(sizeof(void *));
-@@ -611,6 +614,14 @@ int mei_restart(struct mei_device *dev);
+@@ -615,6 +618,14 @@ int mei_restart(struct mei_device *dev);
  void mei_stop(struct mei_device *dev);
  void mei_cancel_work(struct mei_device *dev);
  

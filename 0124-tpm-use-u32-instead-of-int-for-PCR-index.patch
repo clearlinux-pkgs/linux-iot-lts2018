@@ -204,10 +204,10 @@ index 4609b94..b49a55c 100644
  {
  	return -ENODEV;
 diff --git a/security/integrity/ima/ima_crypto.c b/security/integrity/ima/ima_crypto.c
-index d9e7728..acf2c7d 100644
+index f63b4bd..655cd5c 100644
 --- a/security/integrity/ima/ima_crypto.c
 +++ b/security/integrity/ima/ima_crypto.c
-@@ -643,7 +643,7 @@ int ima_calc_buffer_hash(const void *buf, loff_t len,
+@@ -651,7 +651,7 @@ int ima_calc_buffer_hash(const void *buf, loff_t len,
  	return calc_buffer_shash(buf, len, hash);
  }
  
@@ -216,7 +216,7 @@ index d9e7728..acf2c7d 100644
  {
  	if (!ima_tpm_chip)
  		return;
-@@ -659,7 +659,8 @@ static int __init ima_calc_boot_aggregate_tfm(char *digest,
+@@ -667,7 +667,8 @@ static int __init ima_calc_boot_aggregate_tfm(char *digest,
  					      struct crypto_shash *tfm)
  {
  	u8 pcr_i[TPM_DIGEST_SIZE];

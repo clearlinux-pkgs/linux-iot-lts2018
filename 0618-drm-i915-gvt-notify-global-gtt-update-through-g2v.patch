@@ -26,10 +26,10 @@ Reviewed-by: He, Min <min.he@intel.com>
  2 files changed, 51 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem_gtt.c b/drivers/gpu/drm/i915/i915_gem_gtt.c
-index ed813e8..627921f 100644
+index cb940a5..d6baa2d 100644
 --- a/drivers/gpu/drm/i915/i915_gem_gtt.c
 +++ b/drivers/gpu/drm/i915/i915_gem_gtt.c
-@@ -2512,6 +2512,17 @@ static void gen8_set_pte(void __iomem *addr, gen8_pte_t pte)
+@@ -2513,6 +2513,17 @@ static void gen8_set_pte(void __iomem *addr, gen8_pte_t pte)
  	writeq(pte, addr);
  }
  
@@ -47,7 +47,7 @@ index ed813e8..627921f 100644
  static void gen8_ggtt_insert_page(struct i915_address_space *vm,
  				  dma_addr_t addr,
  				  u64 offset,
-@@ -2524,6 +2535,11 @@ static void gen8_ggtt_insert_page(struct i915_address_space *vm,
+@@ -2525,6 +2536,11 @@ static void gen8_ggtt_insert_page(struct i915_address_space *vm,
  
  	gen8_set_pte(pte, gen8_pte_encode(addr, level, 0));
  
@@ -59,7 +59,7 @@ index ed813e8..627921f 100644
  	ggtt->invalidate(vm->i915);
  }
  
-@@ -2548,6 +2564,20 @@ static void gen8_ggtt_insert_entries(struct i915_address_space *vm,
+@@ -2549,6 +2565,20 @@ static void gen8_ggtt_insert_entries(struct i915_address_space *vm,
  	for_each_sgt_dma(addr, sgt_iter, vma->pages)
  		gen8_set_pte(gtt_entries++, pte_encode | addr);
  
@@ -80,7 +80,7 @@ index ed813e8..627921f 100644
  	/*
  	 * We want to flush the TLBs only after we're certain all the PTE
  	 * updates have finished.
-@@ -2621,6 +2651,16 @@ static void gen8_ggtt_clear_range(struct i915_address_space *vm,
+@@ -2622,6 +2652,16 @@ static void gen8_ggtt_clear_range(struct i915_address_space *vm,
  
  	for (i = 0; i < num_entries; i++)
  		gen8_set_pte(&gtt_base[i], scratch_pte);

@@ -215,7 +215,7 @@ index 69a59e3..46843bc 100644
 +
  #endif
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 1187522..6a815a1 100644
+index f5110d9..8cbab0f 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -434,6 +434,7 @@ struct mei_fw_version {
@@ -226,7 +226,7 @@ index 1187522..6a815a1 100644
   *
   * @fw_ver : FW versions
   *
-@@ -515,6 +516,7 @@ struct mei_device {
+@@ -517,6 +518,7 @@ struct mei_device {
  	unsigned int hbm_f_os_supported:1;
  	unsigned int hbm_f_dr_supported:1;
  	unsigned int hbm_f_vm_supported:1;

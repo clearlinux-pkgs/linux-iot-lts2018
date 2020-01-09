@@ -24,10 +24,10 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  6 files changed, 142 insertions(+), 7 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem_context.c b/drivers/gpu/drm/i915/i915_gem_context.c
-index 585ebf2..08c6146 100644
+index e170cd2..8c4c0b1 100644
 --- a/drivers/gpu/drm/i915/i915_gem_context.c
 +++ b/drivers/gpu/drm/i915/i915_gem_context.c
-@@ -869,6 +869,15 @@ int i915_gem_context_getparam_ioctl(struct drm_device *dev, void *data,
+@@ -874,6 +874,15 @@ int i915_gem_context_getparam_ioctl(struct drm_device *dev, void *data,
  	case I915_CONTEXT_PARAM_PRIORITY:
  		args->value = ctx->sched.priority;
  		break;
@@ -43,7 +43,7 @@ index 585ebf2..08c6146 100644
  	default:
  		ret = -EINVAL;
  		break;
-@@ -944,6 +953,19 @@ int i915_gem_context_setparam_ioctl(struct drm_device *dev, void *data,
+@@ -949,6 +958,19 @@ int i915_gem_context_setparam_ioctl(struct drm_device *dev, void *data,
  		}
  		break;
  
@@ -64,7 +64,7 @@ index 585ebf2..08c6146 100644
  		ret = -EINVAL;
  		break;
 diff --git a/drivers/gpu/drm/i915/i915_gem_context.h b/drivers/gpu/drm/i915/i915_gem_context.h
-index b116e49..ded8144 100644
+index 834d395..837d522 100644
 --- a/drivers/gpu/drm/i915/i915_gem_context.h
 +++ b/drivers/gpu/drm/i915/i915_gem_context.h
 @@ -147,6 +147,19 @@ struct i915_gem_context {

@@ -129,7 +129,7 @@ index 8528c3d..0af9791 100644
  				*call_panic = 2;
  		} else {
 diff --git a/kernel/auditsc.c b/kernel/auditsc.c
-index 2542e65..c4b12c7 100644
+index 8018f6c..498d894 100644
 --- a/kernel/auditsc.c
 +++ b/kernel/auditsc.c
 @@ -1214,7 +1214,9 @@ static void show_special(struct audit_context *context, int *call_panic)
@@ -309,7 +309,7 @@ index 22474f5..42ee220 100644
  				     &secctx,
  				     &secctx_len) == 0) {
 diff --git a/net/unix/af_unix.c b/net/unix/af_unix.c
-index cbe0a57..9d5b683 100644
+index 30118f3..9b0a60b 100644
 --- a/net/unix/af_unix.c
 +++ b/net/unix/af_unix.c
 @@ -141,9 +141,10 @@ static struct hlist_head *unix_sockets_unbound(void *addr)

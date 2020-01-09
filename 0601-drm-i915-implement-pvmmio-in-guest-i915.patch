@@ -28,7 +28,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  5 files changed, 68 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 104e281..9d19215 100644
+index f5190c5..2202dfc 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -896,6 +896,7 @@ static int i915_driver_init_early(struct drm_i915_private *dev_priv,
@@ -40,7 +40,7 @@ index 104e281..9d19215 100644
  	mutex_init(&dev_priv->backlight_lock);
  	spin_lock_init(&dev_priv->uncore.lock);
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 02b4471..7ac61af 100644
+index c129605..65ff6dd 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -55,6 +55,7 @@
@@ -51,7 +51,7 @@ index 02b4471..7ac61af 100644
  #include "i915_utils.h"
  
  #include "intel_bios.h"
-@@ -1591,6 +1592,7 @@ struct drm_i915_private {
+@@ -1592,6 +1593,7 @@ struct drm_i915_private {
  
  	void __iomem *regs;
  	struct gvt_shared_page *shared_page;
@@ -59,7 +59,7 @@ index 02b4471..7ac61af 100644
  
  	struct intel_uncore uncore;
  
-@@ -2786,7 +2788,7 @@ static inline bool intel_gvt_active(struct drm_i915_private *dev_priv)
+@@ -2797,7 +2799,7 @@ static inline bool intel_gvt_active(struct drm_i915_private *dev_priv)
  	return dev_priv->gvt;
  }
  
@@ -68,7 +68,7 @@ index 02b4471..7ac61af 100644
  {
  	return dev_priv->vgpu.active;
  }
-@@ -3586,7 +3588,11 @@ static inline u64 intel_rc6_residency_us(struct drm_i915_private *dev_priv,
+@@ -3607,7 +3609,11 @@ static inline u64 intel_rc6_residency_us(struct drm_i915_private *dev_priv,
  static inline uint##x##_t __raw_i915_read##x(const struct drm_i915_private *dev_priv, \
  					     i915_reg_t reg) \
  { \
@@ -112,10 +112,10 @@ index d1a3e3e..c1089bd 100644
  	u64 magic;		/* VGT_MAGIC */
  	u16 version_major;
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 4e070af..9ae8fb3 100644
+index a6f4f32..e1da295 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
-@@ -10656,4 +10656,31 @@ enum skl_power_gate {
+@@ -10666,4 +10666,31 @@ enum skl_power_gate {
  						_ICL_DSC1_RC_BUF_THRESH_1_UDW_PB, \
  						_ICL_DSC1_RC_BUF_THRESH_1_UDW_PC)
  

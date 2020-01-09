@@ -54,7 +54,7 @@ index 517620b..c70a494 100644
 +
  obj-$(CONFIG_DRM_I915) += i915.o
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 557c713..d345518 100644
+index 7a91c1e..e139195 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -690,9 +690,11 @@ static int i915_load_modeset_init(struct drm_device *dev)
@@ -107,10 +107,10 @@ index 557c713..d345518 100644
  }
  
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index fb65396..03352f3 100644
+index f981e49..baab05d 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -1776,6 +1776,8 @@ struct drm_i915_private {
+@@ -1777,6 +1777,8 @@ struct drm_i915_private {
  	struct intel_pipe_crc pipe_crc[I915_MAX_PIPES];
  #endif
  
@@ -119,7 +119,7 @@ index fb65396..03352f3 100644
  	/* dpll and cdclk state is protected by connection_mutex */
  	int num_shared_dpll;
  	struct intel_shared_dpll shared_dplls[I915_NUM_PLLS];
-@@ -2764,6 +2766,11 @@ extern unsigned long i915_chipset_val(struct drm_i915_private *dev_priv);
+@@ -2775,6 +2777,11 @@ extern unsigned long i915_chipset_val(struct drm_i915_private *dev_priv);
  extern unsigned long i915_mch_val(struct drm_i915_private *dev_priv);
  extern unsigned long i915_gfx_val(struct drm_i915_private *dev_priv);
  extern void i915_update_gfx_val(struct drm_i915_private *dev_priv);

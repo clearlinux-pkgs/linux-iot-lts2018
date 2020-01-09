@@ -17,7 +17,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  2 files changed, 2 deletions(-)
 
 diff --git a/drivers/misc/mei/bus-fixup.c b/drivers/misc/mei/bus-fixup.c
-index a6f41f9..80215c3 100644
+index 198e030..99b386b 100644
 --- a/drivers/misc/mei/bus-fixup.c
 +++ b/drivers/misc/mei/bus-fixup.c
 @@ -17,7 +17,6 @@

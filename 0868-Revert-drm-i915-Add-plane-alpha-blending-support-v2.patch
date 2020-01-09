@@ -18,7 +18,7 @@ Tracked-On: PKT-1679
  5 files changed, 18 insertions(+), 69 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 03352f3..8a4fb73 100644
+index baab05d..52adbd4 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -558,8 +558,6 @@ struct intel_fbc {
@@ -31,10 +31,10 @@ index 03352f3..8a4fb73 100644
  
  		struct {
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index f82c86c..ddf5850 100644
+index 3dd9a54..d9e2fb7 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
-@@ -6569,10 +6569,8 @@ enum {
+@@ -6575,10 +6575,8 @@ enum {
  #define _PLANE_KEYVAL_2_A			0x70294
  #define _PLANE_KEYMSK_1_A			0x70198
  #define _PLANE_KEYMSK_2_A			0x70298

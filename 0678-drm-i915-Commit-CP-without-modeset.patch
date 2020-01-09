@@ -77,7 +77,7 @@ index b8a9d6a..0eb5f4e 100644
  	 * already, but still need the state for the delayed optimization. To
  	 * fix this:
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index f654052..a1f6593 100644
+index 6c073bf..10883e0 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -1942,10 +1942,13 @@ static inline void intel_backlight_device_unregister(struct intel_connector *con

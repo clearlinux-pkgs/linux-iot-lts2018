@@ -163,10 +163,10 @@ index 60c1550..a202f9f 100644
 +
  #endif
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index a4b4ab7..0797c3e 100644
+index b0d76a7..258278f 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
-@@ -2866,6 +2866,7 @@ static const struct drm_ioctl_desc i915_ioctls[] = {
+@@ -2869,6 +2869,7 @@ static const struct drm_ioctl_desc i915_ioctls[] = {
  	DRM_IOCTL_DEF_DRV(I915_PERF_ADD_CONFIG, i915_perf_add_config_ioctl, DRM_UNLOCKED|DRM_RENDER_ALLOW),
  	DRM_IOCTL_DEF_DRV(I915_PERF_REMOVE_CONFIG, i915_perf_remove_config_ioctl, DRM_UNLOCKED|DRM_RENDER_ALLOW),
  	DRM_IOCTL_DEF_DRV(I915_QUERY, i915_query_ioctl, DRM_UNLOCKED|DRM_RENDER_ALLOW),
@@ -175,10 +175,10 @@ index a4b4ab7..0797c3e 100644
  
  static struct drm_driver driver = {
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 5418ca7..219fa27 100644
+index 0f2fcee..33b564c 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -3246,6 +3246,8 @@ int i915_perf_remove_config_ioctl(struct drm_device *dev, void *data,
+@@ -3265,6 +3265,8 @@ int i915_perf_remove_config_ioctl(struct drm_device *dev, void *data,
  void i915_oa_init_reg_state(struct intel_engine_cs *engine,
  			    struct i915_gem_context *ctx,
  			    uint32_t *reg_state);

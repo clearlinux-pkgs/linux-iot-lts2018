@@ -20,10 +20,10 @@ Tracked-On: PKT-1750
  1 file changed, 7 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index ddf5850..1c5e6d8 100644
+index d9e2fb7..32bcdb9 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
-@@ -5642,6 +5642,9 @@ enum {
+@@ -5648,6 +5648,9 @@ enum {
  #define PIPE_B_OFFSET		0x71000
  #define PIPE_C_OFFSET		0x72000
  #define CHV_PIPE_C_OFFSET	0x74000
@@ -33,7 +33,7 @@ index ddf5850..1c5e6d8 100644
  /*
   * There's actually no pipe EDP. Some pipe registers have
   * simply shifted from the pipe to the transcoder, while
-@@ -10681,6 +10684,10 @@ static inline bool in_mmio_read_trap_list(u32 reg)
+@@ -10691,6 +10694,10 @@ static inline bool in_mmio_read_trap_list(u32 reg)
  	if (unlikely(reg == SBI_DATA.reg || reg == 0x6c060 || reg == 0x206c))
  		return true;
  

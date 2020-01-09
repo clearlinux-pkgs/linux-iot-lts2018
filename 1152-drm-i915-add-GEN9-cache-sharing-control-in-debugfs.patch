@@ -57,10 +57,10 @@ index 320564f..61b8a1f 100644
  	return 0;
  }
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index f1c8be2..bee1a50 100644
+index 673998b..12d3d15 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
-@@ -8367,6 +8367,9 @@ enum {
+@@ -8377,6 +8377,9 @@ enum {
  
  #define  HSW_IDICR				_MMIO(0x9008)
  #define    IDIHASHMSK(x)			(((x) & 0x3f) << 16)
