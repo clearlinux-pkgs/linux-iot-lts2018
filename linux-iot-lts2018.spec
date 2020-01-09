@@ -29,7 +29,7 @@ Source5:	fragment-sos
 
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
-# quilt.tag:  lts-v4.19.78-base-191009T030555Z
+# quilt.tag:  lts-v4.19.87-base-191205T190748Z
 # config.tag: lts-v4.19.78-base-191009T030555Z
 
 %define ktarget0 iot-lts2018
@@ -1228,6 +1228,10 @@ Patch1177: 1177-rpmb-vritio-FW-fix-rpmb-freeze-restore-code.patch
 Patch1178: 1178-media-intel-ipu4-resolve-compile-error-with-allyesco.patch
 Patch1179: 1179-isys-psys-package-lib2600b0-for-commit-id-2bf1545.patch
 Patch1180: 1180-ASoC-Intel-Skylake-Recover-BXT-FW-on-DSP-boot-timeou.patch
+Patch1181: 1181-acrn-vhm-continue-with-the-next-VM-if-req_buf-is-NUL.patch
+Patch1182: 1182-media-intel-ipu4-ov495-add-frame-description.patch
+Patch1183: 1183-media-intel-ipu4-ov495-frame-description-for-4-strea.patch
+Patch1184: 1184-ASoC-core-Do-not-return-for-dummy-codec-for-BXT_ULL-.patch
 #END XXXX: PK Series
 
 # Clear Linux Series
@@ -2477,6 +2481,10 @@ Linux kernel build files and install script
 %patch1178 -p1
 %patch1179 -p1
 %patch1180 -p1
+%patch1181 -p1
+%patch1182 -p1
+%patch1183 -p1
+%patch1184 -p1
 # End XXXX PK Series
 
 # Clear Linux Series
