@@ -1,10 +1,10 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.78 Kernel Configuration
+# Linux/x86 4.19.87 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.2.1 20191011 gcc-9-branch@276857
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 9.2.1 20200108 gcc-9-branch@279985
 #
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=90201
@@ -3776,10 +3776,10 @@ CONFIG_DRM_PANEL_ORIENTATION_QUIRKS=y
 #
 # Frame buffer Devices
 #
-CONFIG_FB=y
-# CONFIG_FIRMWARE_EDID is not set
 CONFIG_FB_CMDLINE=y
 CONFIG_FB_NOTIFY=y
+CONFIG_FB=y
+# CONFIG_FIRMWARE_EDID is not set
 CONFIG_FB_BOOT_VESA_SUPPORT=y
 CONFIG_FB_CFB_FILLRECT=y
 CONFIG_FB_CFB_COPYAREA=y
@@ -4519,7 +4519,6 @@ CONFIG_USB_SERIAL_SSU100=m
 # CONFIG_USB_EMI26 is not set
 # CONFIG_USB_ADUTUX is not set
 # CONFIG_USB_SEVSEG is not set
-# CONFIG_USB_RIO500 is not set
 # CONFIG_USB_LEGOTOWER is not set
 # CONFIG_USB_LCD is not set
 # CONFIG_USB_CYPRESS_CY7C63 is not set
