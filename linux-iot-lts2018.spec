@@ -14,13 +14,13 @@
 #
 
 Name:           linux-iot-lts2018
-Version:        4.19.78
-Release:        98
+Version:        4.19.87
+Release:        99
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.78.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.87.tar.xz
 Source1:        config-iot-lts2018
 Source2:        config-iot-lts2018-sos
 Source3:        cmdline-iot-lts2018
@@ -30,7 +30,7 @@ Source5:	fragment-sos
 # quilt.url: https://github.com/intel/linux-intel-quilt
 # quilt.branch: 4.19/base
 # quilt.tag:  lts-v4.19.87-base-191205T190748Z
-# config.tag: lts-v4.19.78-base-191009T030555Z
+# config.tag: lts-v4.19.87-base-191205T190748Z
 
 %define ktarget0 iot-lts2018
 %define kversion0 %{version}-%{release}.%{ktarget0}
@@ -1298,7 +1298,7 @@ Requires:       linux-iot-lts2018-license = %{version}-%{release}
 Linux kernel build files and install script
 
 %prep
-%setup -q -n linux-4.19.78
+%setup -q -n linux-4.19.87
 
 #patchXXXX PK Series
 %patch0001 -p1
