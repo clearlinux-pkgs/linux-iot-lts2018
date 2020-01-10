@@ -26,7 +26,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  7 files changed, 69 insertions(+), 6 deletions(-)
 
 diff --git a/sound/soc/intel/common/sst-dsp-priv.h b/sound/soc/intel/common/sst-dsp-priv.h
-index e7151a7..8e80c6f 100644
+index e7151a7e6bae..8e80c6f177f8 100644
 --- a/sound/soc/intel/common/sst-dsp-priv.h
 +++ b/sound/soc/intel/common/sst-dsp-priv.h
 @@ -128,6 +128,8 @@ struct sst_trace_window {
@@ -39,7 +39,7 @@ index e7151a7..8e80c6f 100644
  
  /*
 diff --git a/sound/soc/intel/skylake/skl-fwlog.c b/sound/soc/intel/skylake/skl-fwlog.c
-index 1aacf86..f750613 100644
+index 1aacf8625658..f7506135e311 100644
 --- a/sound/soc/intel/skylake/skl-fwlog.c
 +++ b/sound/soc/intel/skylake/skl-fwlog.c
 @@ -25,6 +25,8 @@
@@ -87,7 +87,7 @@ index 1aacf86..f750613 100644
  {
  	struct sst_dbg_rbuffer *buff = sst->trace_wind.dbg_buffers[core];
 diff --git a/sound/soc/intel/skylake/skl-fwlog.h b/sound/soc/intel/skylake/skl-fwlog.h
-index d6307ca..df91466 100644
+index d6307cafd156..df9146686ea2 100644
 --- a/sound/soc/intel/skylake/skl-fwlog.h
 +++ b/sound/soc/intel/skylake/skl-fwlog.h
 @@ -18,4 +18,6 @@ void skl_dsp_get_log_buff(struct sst_dsp *sst, int core);
@@ -98,7 +98,7 @@ index d6307ca..df91466 100644
 +int get_dsp_log_priority(struct skl *skl);
  #endif /* __SKL_FWLOG_H__ */
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 3336a23..4f88595 100644
+index 3336a23d9898..4f88595815a8 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -67,11 +67,6 @@ void skl_dsp_set_astate_cfg(struct skl_sst *ctx, u32 cnt, void *data)
@@ -123,7 +123,7 @@ index 3336a23..4f88595 100644
  	msg.large_param_id = ENABLE_LOGS;
  	msg.param_data_size = sizeof(log_msg);
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index b02b989..764e4dd 100644
+index b02b9897b7cf..764e4dd7ed2d 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1762,6 +1762,17 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
@@ -154,7 +154,7 @@ index b02b989..764e4dd 100644
  
  int skl_platform_register(struct device *dev)
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 52d73a4..95a2b66 100644
+index 52d73a4fc917..95a2b6672dcb 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -30,6 +30,7 @@
@@ -196,7 +196,7 @@ index 52d73a4..95a2b66 100644
  static int skl_tplg_tlv_control_get(struct snd_kcontrol *kcontrol,
  			unsigned int __user *data, unsigned int size)
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 44e4109..5998e69 100644
+index 44e4109ba4dc..5998e6926df3 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -533,4 +533,8 @@ int skl_dai_load(struct snd_soc_component *cmp, int index,

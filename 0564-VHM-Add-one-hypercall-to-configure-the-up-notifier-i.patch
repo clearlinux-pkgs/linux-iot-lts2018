@@ -23,7 +23,7 @@ Signed-off-by: Zhao Yakui <yakui.zhao@intel.com>
  3 files changed, 11 insertions(+)
 
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 9a76102..f3348f7 100644
+index 9a761022be08..f3348f7e3903 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -187,3 +187,8 @@ inline long hcall_vm_intr_monitor(unsigned long vmid, unsigned long addr)
@@ -36,7 +36,7 @@ index 9a76102..f3348f7 100644
 +	return acrn_hypercall1(HC_SET_CALLBACK_VECTOR, intr_vector);
 +}
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index c74f05f..c13257f 100644
+index c74f05fc9d47..c13257fcaaa1 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -69,6 +69,11 @@
@@ -52,7 +52,7 @@ index c74f05f..c13257f 100644
  /* VM management */
  #define HC_ID_VM_BASE               0x10UL
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 7f8b6bc..1300699 100644
+index 7f8b6bcecd09..130069926786 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -139,6 +139,7 @@ static inline long acrn_hypercall4(unsigned long hcall_id, unsigned long param1,

@@ -10,12 +10,12 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
 ---
  security/smack/smack.h        | 14 +++++++--
  security/smack/smack_access.c |  4 +--
- security/smack/smack_lsm.c    | 57 +++++++++++++++++------------------
- security/smack/smackfs.c      | 18 +++++------
- 4 files changed, 50 insertions(+), 43 deletions(-)
+ security/smack/smack_lsm.c    | 55 +++++++++++++++++------------------
+ security/smack/smackfs.c      | 18 ++++++------
+ 4 files changed, 49 insertions(+), 42 deletions(-)
 
 diff --git a/security/smack/smack.h b/security/smack/smack.h
-index f7db791..0b55d6a 100644
+index f7db791fb566..0b55d6a55b26 100644
 --- a/security/smack/smack.h
 +++ b/security/smack/smack.h
 @@ -356,6 +356,11 @@ extern struct list_head smack_onlycap_list;
@@ -59,7 +59,7 @@ index f7db791..0b55d6a 100644
  
  /*
 diff --git a/security/smack/smack_access.c b/security/smack/smack_access.c
-index c071c35..102c44f 100644
+index c071c356a963..102c44ffc45f 100644
 --- a/security/smack/smack_access.c
 +++ b/security/smack/smack_access.c
 @@ -275,7 +275,7 @@ int smk_tskacc(struct task_smack *tsp, struct smack_known *obj_known,
@@ -81,7 +81,7 @@ index c071c35..102c44f 100644
  	struct smack_known_list_elem *sklep;
  	int rc;
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 221de4c..cd83ccc 100644
+index 221de4c755c3..9d5d5584d2fa 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -122,7 +122,7 @@ static int smk_bu_note(char *note, struct smack_known *sskp,
@@ -129,15 +129,6 @@ index 221de4c..cd83ccc 100644
  	struct smack_known *sskp = tsp->smk_task;
  	struct inode *inode = file_inode(file);
  	struct inode_smack *isp = inode->i_security;
-@@ -431,7 +431,7 @@ static int smk_ptrace_rule_check(struct task_struct *tracer,
- 
- 	rcu_read_lock();
- 	tracercred = __task_cred(tracer);
--	tsp = tracercred->security;
-+	tsp = smack_cred(__task_cred(tracer));
- 	tracer_known = smk_of_task(tsp);
- 
- 	if ((mode & PTRACE_MODE_ATTACH) &&
 @@ -498,7 +498,7 @@ static int smack_ptrace_traceme(struct task_struct *ptp)
  	int rc;
  	struct smack_known *skp;
@@ -327,7 +318,7 @@ index 221de4c..cd83ccc 100644
  	int may;
  
 diff --git a/security/smack/smackfs.c b/security/smack/smackfs.c
-index f6482e5..9d2dde6 100644
+index f6482e53d55a..9d2dde608298 100644
 --- a/security/smack/smackfs.c
 +++ b/security/smack/smackfs.c
 @@ -2208,14 +2208,14 @@ static const struct file_operations smk_logging_ops = {

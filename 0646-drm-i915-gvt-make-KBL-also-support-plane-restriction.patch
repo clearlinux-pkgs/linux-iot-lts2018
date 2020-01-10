@@ -14,7 +14,7 @@ Reviewed-by: Min He <min.he@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index a8838bc..7311fc7 100644
+index c33d45974dda..7d7211e54e6f 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -15418,8 +15418,8 @@ static void intel_update_fdi_pll_freq(struct drm_i915_private *dev_priv)

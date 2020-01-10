@@ -27,7 +27,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  8 files changed, 158 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 3129a8f..97f7c46 100644
+index 3129a8f1503b..97f7c466e11d 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -238,6 +238,35 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -67,7 +67,7 @@ index 3129a8f..97f7c46 100644
  		pr_warn("Unknown IOCTL 0x%x\n", ioctl_num);
  		ret = 0;
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 1b25f4e..dc87d30 100644
+index 1b25f4ec4d06..dc87d30151d5 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -53,6 +53,11 @@
@@ -141,7 +141,7 @@ index 1b25f4e..dc87d30 100644
 +	return ret;
 +}
 diff --git a/drivers/vhm/vhm_vm_mngt.c b/drivers/vhm/vhm_vm_mngt.c
-index 564435f..048ab41 100644
+index 564435f2bb40..048ab41f4f9c 100644
 --- a/drivers/vhm/vhm_vm_mngt.c
 +++ b/drivers/vhm/vhm_vm_mngt.c
 @@ -95,6 +95,24 @@ void put_vm(struct vhm_vm *vm)
@@ -170,7 +170,7 @@ index 564435f..048ab41 100644
  {
  	list_add(list, &vhm_vm_list);
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index bc22373..cafb171 100644
+index bc2237331231..cafb171490ca 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -56,6 +56,20 @@
@@ -218,7 +218,7 @@ index bc22373..cafb171 100644
 +
  #endif /* ACRN_COMMON_H */
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index f57f2b6..7b438cc 100644
+index f57f2b62e972..7b438cc01b48 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -74,6 +74,13 @@
@@ -236,7 +236,7 @@ index f57f2b6..7b438cc 100644
  #define HC_ID_IOREQ_BASE            0x200UL
  #define HC_SET_IOREQ_BUFFER         _HC_ID(HC_ID, HC_ID_IOREQ_BASE + 0x00)
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 86b5f57..e372ea4 100644
+index 86b5f579687a..e372ea48fa81 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -139,6 +139,7 @@ static inline long acrn_hypercall4(unsigned long hyp_id, unsigned long param1,
@@ -257,7 +257,7 @@ index 86b5f57..e372ea4 100644
  
  #endif /* VHM_HYPERCALL_H */
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 01adcfa..3be6aca 100644
+index 01adcfade99c..3be6aca40844 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -64,6 +64,13 @@
@@ -275,7 +275,7 @@ index 01adcfa..3be6aca 100644
  #define IC_ID_IOREQ_BASE                0x200UL
  #define IC_SET_IOREQ_BUFFER             _IC_ID(IC_ID, IC_ID_IOREQ_BASE + 0x00)
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index eb41002..fb02c00 100644
+index eb410024157f..fb02c00ec5e2 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -77,6 +77,8 @@ struct vhm_vm {

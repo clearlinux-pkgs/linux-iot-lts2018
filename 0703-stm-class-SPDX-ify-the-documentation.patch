@@ -13,7 +13,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  1 file changed, 2 insertions(+)
 
 diff --git a/Documentation/trace/stm.rst b/Documentation/trace/stm.rst
-index 944994f..99f9996 100644
+index 944994fd6368..99f99963e5e7 100644
 --- a/Documentation/trace/stm.rst
 +++ b/Documentation/trace/stm.rst
 @@ -1,3 +1,5 @@

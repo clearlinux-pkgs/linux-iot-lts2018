@@ -55,7 +55,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  create mode 100644 drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
 
 diff --git a/drivers/gpu/drm/i915/Makefile b/drivers/gpu/drm/i915/Makefile
-index 5794f10..a5198df 100644
+index 5794f102f9b8..a5198df1b1ca 100644
 --- a/drivers/gpu/drm/i915/Makefile
 +++ b/drivers/gpu/drm/i915/Makefile
 @@ -79,6 +79,7 @@ i915-y += i915_cmd_parser.o \
@@ -67,7 +67,7 @@ index 5794f10..a5198df 100644
  	  intel_hangcheck.o \
  	  intel_lrc.o \
 diff --git a/drivers/gpu/drm/i915/gvt/fb_decoder.c b/drivers/gpu/drm/i915/gvt/fb_decoder.c
-index 85e6736..28f02cb 100644
+index 85e6736f0a32..28f02cb6c835 100644
 --- a/drivers/gpu/drm/i915/gvt/fb_decoder.c
 +++ b/drivers/gpu/drm/i915/gvt/fb_decoder.c
 @@ -37,6 +37,7 @@
@@ -150,7 +150,7 @@ index 85e6736..28f02cb 100644
 +	return ret;
 +}
 diff --git a/drivers/gpu/drm/i915/gvt/fb_decoder.h b/drivers/gpu/drm/i915/gvt/fb_decoder.h
-index 60c1550..a202f9f 100644
+index 60c155085029..a202f9f6e81a 100644
 --- a/drivers/gpu/drm/i915/gvt/fb_decoder.h
 +++ b/drivers/gpu/drm/i915/gvt/fb_decoder.h
 @@ -166,4 +166,8 @@ int intel_vgpu_decode_cursor_plane(struct intel_vgpu *vgpu,
@@ -163,7 +163,7 @@ index 60c1550..a202f9f 100644
 +
  #endif
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index b0d76a7..258278f 100644
+index b0d76a7a0946..258278fba559 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -2869,6 +2869,7 @@ static const struct drm_ioctl_desc i915_ioctls[] = {
@@ -175,7 +175,7 @@ index b0d76a7..258278f 100644
  
  static struct drm_driver driver = {
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 0f2fcee..33b564c 100644
+index 0f2fceefb8c2..33b564c07c56 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -3265,6 +3265,8 @@ int i915_perf_remove_config_ioctl(struct drm_device *dev, void *data,
@@ -189,7 +189,7 @@ index 0f2fcee..33b564c 100644
  int __must_check i915_gem_evict_something(struct i915_address_space *vm,
 diff --git a/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c b/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
 new file mode 100644
-index 0000000..fe72309
+index 000000000000..fe723099788d
 --- /dev/null
 +++ b/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
 @@ -0,0 +1,293 @@
@@ -487,7 +487,7 @@ index 0000000..fe72309
 +	return 0;
 +}
 diff --git a/include/uapi/drm/drm_fourcc.h b/include/uapi/drm/drm_fourcc.h
-index 721ab7e..39b9a73 100644
+index 721ab7e54d96..39b9a73a3c77 100644
 --- a/include/uapi/drm/drm_fourcc.h
 +++ b/include/uapi/drm/drm_fourcc.h
 @@ -100,6 +100,15 @@ extern "C" {
@@ -507,7 +507,7 @@ index 721ab7e..39b9a73 100644
  #define DRM_FORMAT_ABGR2101010	fourcc_code('A', 'B', '3', '0') /* [31:0] A:B:G:R 2:10:10:10 little endian */
  #define DRM_FORMAT_RGBA1010102	fourcc_code('R', 'A', '3', '0') /* [31:0] R:G:B:A 10:10:10:2 little endian */
 diff --git a/include/uapi/drm/i915_drm.h b/include/uapi/drm/i915_drm.h
-index 4671c91..a25ed47 100644
+index 4671c9150d4d..a25ed4719921 100644
 --- a/include/uapi/drm/i915_drm.h
 +++ b/include/uapi/drm/i915_drm.h
 @@ -319,6 +319,7 @@ typedef struct _drm_i915_sarea {

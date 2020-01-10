@@ -33,7 +33,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  create mode 100644 include/linux/vhm/acrn_vhm_mm.h
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 527e90b..3ea8de2 100644
+index 527e90b187cf..3ea8de27cb3e 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -78,6 +78,7 @@
@@ -91,14 +91,14 @@ index 527e90b..3ea8de2 100644
  	.unlocked_ioctl = vhm_dev_ioctl,
  };
 diff --git a/drivers/vhm/Makefile b/drivers/vhm/Makefile
-index 220697a..7e5ec42 100644
+index 220697aaccb7..7e5ec421fbc7 100644
 --- a/drivers/vhm/Makefile
 +++ b/drivers/vhm/Makefile
 @@ -1 +1 @@
 -obj-y += vhm_vm_mngt.o vhm_hypercall.o
 +obj-y += vhm_mm.o vhm_vm_mngt.o vhm_hypercall.o
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index ddc085d..d80087b 100644
+index ddc085d0fa11..d80087bcb5fb 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -53,6 +53,11 @@
@@ -115,7 +115,7 @@ index ddc085d..d80087b 100644
  	long ret = 0;
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
 new file mode 100644
-index 0000000..9dd0b94
+index 000000000000..9dd0b9414d3a
 --- /dev/null
 +++ b/drivers/vhm/vhm_mm.c
 @@ -0,0 +1,364 @@
@@ -484,7 +484,7 @@ index 0000000..9dd0b94
 +	return -EINVAL;
 +}
 diff --git a/drivers/vhm/vhm_vm_mngt.c b/drivers/vhm/vhm_vm_mngt.c
-index 61db04b..3c4e6d2 100644
+index 61db04b57362..3c4e6d2b2f23 100644
 --- a/drivers/vhm/vhm_vm_mngt.c
 +++ b/drivers/vhm/vhm_vm_mngt.c
 @@ -58,6 +58,7 @@
@@ -504,7 +504,7 @@ index 61db04b..3c4e6d2 100644
  		pr_info("vhm: freed vm\n");
  	}
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index f338a8f..ab6554d 100644
+index f338a8fbad3d..ab6554d017cb 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -74,8 +74,34 @@
@@ -544,7 +544,7 @@ index f338a8f..ab6554d 100644
  #endif /* ACRN_HV_DEFS_H */
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
 new file mode 100644
-index 0000000..325f2b2
+index 000000000000..325f2b2026e8
 --- /dev/null
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -0,0 +1,88 @@
@@ -637,7 +637,7 @@ index 0000000..325f2b2
 +
 +#endif
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index c07163d..e098a1f 100644
+index c07163dbc3bd..e098a1f959bf 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -139,6 +139,7 @@ static inline long acrn_hypercall4(unsigned long hyp_id, unsigned long param1,
@@ -649,7 +649,7 @@ index c07163d..e098a1f 100644
  inline long vhm_resume_vm(struct vhm_vm *vm);
  inline long vhm_pause_vm(struct vhm_vm *vm);
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index d8c81b6..8720924 100644
+index d8c81b6e9306..872092490259 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -64,4 +64,44 @@
@@ -698,7 +698,7 @@ index d8c81b6..8720924 100644
 +
  #endif /* VHM_IOCTL_DEFS_H */
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index dcb246a..4f1a0db 100644
+index dcb246af561a..4f1a0db2c54d 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -66,6 +66,8 @@ struct vhm_vm {

@@ -25,7 +25,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  2 files changed, 89 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_pvinfo.h b/drivers/gpu/drm/i915/i915_pvinfo.h
-index 9c76cab..82ab32e 100644
+index 9c76cab07010..82ab32e87805 100644
 --- a/drivers/gpu/drm/i915/i915_pvinfo.h
 +++ b/drivers/gpu/drm/i915/i915_pvinfo.h
 @@ -75,6 +75,13 @@ struct pv_plane_update {
@@ -62,7 +62,7 @@ index 9c76cab..82ab32e 100644
  };
  
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 607500b..8190053 100644
+index 607500b78c72..81900532f7ff 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -5008,6 +5008,70 @@ static void skl_write_wm_level(struct drm_i915_private *dev_priv,

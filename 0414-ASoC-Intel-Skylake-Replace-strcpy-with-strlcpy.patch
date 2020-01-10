@@ -12,7 +12,7 @@ Signed-off-by: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/cnl-acpi.c b/sound/soc/intel/skylake/cnl-acpi.c
-index 1bee574..bda9464 100644
+index 1bee574f2ab8..bda94640d966 100644
 --- a/sound/soc/intel/skylake/cnl-acpi.c
 +++ b/sound/soc/intel/skylake/cnl-acpi.c
 @@ -129,7 +129,7 @@ int cnl_sdw_get_master_caps(struct device *dev,

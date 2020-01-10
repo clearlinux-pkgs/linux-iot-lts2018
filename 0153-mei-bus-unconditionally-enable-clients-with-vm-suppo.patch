@@ -10,7 +10,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  1 file changed, 14 insertions(+)
 
 diff --git a/drivers/misc/mei/bus-fixup.c b/drivers/misc/mei/bus-fixup.c
-index 99b386b..4db59d0 100644
+index 99b386b18649..4db59d004ba5 100644
 --- a/drivers/misc/mei/bus-fixup.c
 +++ b/drivers/misc/mei/bus-fixup.c
 @@ -468,6 +468,19 @@ static void mei_nfc(struct mei_cl_device *cldev)

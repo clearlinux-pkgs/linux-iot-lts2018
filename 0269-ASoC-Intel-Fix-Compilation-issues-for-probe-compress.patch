@@ -16,7 +16,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  2 files changed, 5 insertions(+), 7 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-compress.c b/sound/soc/intel/skylake/skl-compress.c
-index a0b33e1..67f2b78 100644
+index a0b33e198722..67f2b78812b2 100644
 --- a/sound/soc/intel/skylake/skl-compress.c
 +++ b/sound/soc/intel/skylake/skl-compress.c
 @@ -26,11 +26,6 @@
@@ -32,7 +32,7 @@ index a0b33e1..67f2b78 100644
  struct hdac_ext_bus *get_bus_compr_ctx(struct snd_compr_stream *substream)
  {
 diff --git a/sound/soc/intel/skylake/skl-compress.h b/sound/soc/intel/skylake/skl-compress.h
-index 2db3473..abfff2d 100644
+index 2db347369c0c..abfff2d27f14 100644
 --- a/sound/soc/intel/skylake/skl-compress.h
 +++ b/sound/soc/intel/skylake/skl-compress.h
 @@ -20,8 +20,6 @@

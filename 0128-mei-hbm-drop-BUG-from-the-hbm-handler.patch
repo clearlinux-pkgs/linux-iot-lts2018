@@ -16,7 +16,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/misc/mei/hbm.c b/drivers/misc/mei/hbm.c
-index d39cc29..29a202f 100644
+index d39cc2909474..29a202f83458 100644
 --- a/drivers/misc/mei/hbm.c
 +++ b/drivers/misc/mei/hbm.c
 @@ -1278,8 +1278,8 @@ int mei_hbm_dispatch(struct mei_device *dev, struct mei_msg_hdr *hdr)

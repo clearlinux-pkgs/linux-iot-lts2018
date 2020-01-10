@@ -32,7 +32,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  11 files changed, 152 insertions(+), 194 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index ebada9a..e36a5e2 100644
+index ebada9a11552..e36a5e225e12 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -299,14 +299,13 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -53,7 +53,7 @@ index ebada9a..e36a5e2 100644
  			return -EFAULT;
  		break;
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
-index ef6f877..f2234e7 100644
+index ef6f8776e71c..f2234e73034d 100644
 --- a/drivers/vbs/vbs_rng.c
 +++ b/drivers/vbs/vbs_rng.c
 @@ -369,8 +369,7 @@ static int handle_kick(int client_id, int req_cnt)
@@ -67,7 +67,7 @@ index ef6f877..f2234e7 100644
  	}
  
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 11ca6b8..94a9593 100644
+index 11ca6b86baed..94a95933d51e 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -87,9 +87,9 @@ inline long hcall_set_ioreq_buffer(unsigned long vmid, unsigned long buffer)
@@ -83,7 +83,7 @@ index 11ca6b8..94a9593 100644
  
  inline long hcall_assert_irqline(unsigned long vmid, unsigned long irq)
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 6054e3d..08826c5 100644
+index 6054e3d00eb2..08826c575780 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -67,7 +67,7 @@
@@ -176,7 +176,7 @@ index 6054e3d..08826c5 100644
  	ret = hcall_set_ioreq_buffer(vm->vmid, virt_to_phys(&set_buffer));
  	if (ret < 0) {
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index 61ebb8c..b475aa9 100644
+index 61ebb8c508d2..b475aa91a348 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -152,13 +152,14 @@ int alloc_guest_memseg(struct vhm_vm *vm, struct vm_memseg *memseg)
@@ -253,7 +253,7 @@ index 61ebb8c..b475aa9 100644
  
  	/* hypercall to notify hv the guest EPT setting*/
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 0e9293d..aa61fbe 100644
+index 0e9293d08e01..aa61fbed2596 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -1,5 +1,5 @@
@@ -523,7 +523,7 @@ index 0e9293d..aa61fbe 100644
  
  #endif /* ACRN_COMMON_H */
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index eeac0e9..fa32243 100644
+index eeac0e9b4e76..fa32243a6407 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -1,5 +1,5 @@
@@ -633,7 +633,7 @@ index eeac0e9..fa32243 100644
 +
  #endif /* ACRN_HV_DEFS_H */
 diff --git a/include/linux/vhm/acrn_vhm_ioreq.h b/include/linux/vhm/acrn_vhm_ioreq.h
-index 0daf46d..fcec2c1 100644
+index 0daf46dcf9f7..fcec2c1e2eac 100644
 --- a/include/linux/vhm/acrn_vhm_ioreq.h
 +++ b/include/linux/vhm/acrn_vhm_ioreq.h
 @@ -63,16 +63,16 @@ int acrn_ioreq_create_client(unsigned long vmid, ioreq_handler_t handler,
@@ -657,7 +657,7 @@ index 0daf46d..fcec2c1 100644
  void acrn_ioreq_intercept_bdf(int client_id, int bus, int dev, int func);
  void acrn_ioreq_unintercept_bdf(int client_id);
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 1af6fd3..f0401ac 100644
+index 1af6fd3aa11b..f0401ac6a942 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -57,19 +57,6 @@
@@ -697,7 +697,7 @@ index 1af6fd3..f0401ac 100644
  int vhm_dev_mmap(struct file *file, struct vm_area_struct *vma);
  
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 35bb48a..5447e95 100644
+index 35bb48ae6cd3..5447e951bf4b 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -146,8 +146,7 @@ inline long hcall_set_memmap(unsigned long vmid,
@@ -711,7 +711,7 @@ index 35bb48a..5447e95 100644
  inline long hcall_deassert_irqline(unsigned long vmid, unsigned long irq);
  inline long hcall_pulse_irqline(unsigned long vmid, unsigned long irq);
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index df07e3c..79d91a8 100644
+index df07e3c93467..79d91a858226 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -156,4 +156,9 @@ struct ic_ptdev_irq {

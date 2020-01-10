@@ -22,7 +22,7 @@ Reviewed-by: Zhao, Yakui <yakui.zhao@intel.com>
  1 file changed, 17 insertions(+), 9 deletions(-)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 08826c5..b570b82 100644
+index 08826c575780..b570b826be95 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -91,8 +91,8 @@ struct ioreq_client {

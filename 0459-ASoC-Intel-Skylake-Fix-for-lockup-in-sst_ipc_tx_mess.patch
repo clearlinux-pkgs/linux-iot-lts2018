@@ -12,7 +12,7 @@ Signed-off-by: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index 0e7b5ce..9f2621d 100644
+index 0e7b5ce64b9e..9f2621d7a535 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -708,8 +708,8 @@ void skl_ipc_process_reply(struct sst_generic_ipc *ipc,

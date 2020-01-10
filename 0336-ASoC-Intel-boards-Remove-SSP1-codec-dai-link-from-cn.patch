@@ -21,7 +21,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 1 insertion(+), 13 deletions(-)
 
 diff --git a/sound/soc/intel/boards/cnl_rt274.c b/sound/soc/intel/boards/cnl_rt274.c
-index 4b434dc..ebfe741 100644
+index 4b434dc82b9f..ebfe74132da5 100644
 --- a/sound/soc/intel/boards/cnl_rt274.c
 +++ b/sound/soc/intel/boards/cnl_rt274.c
 @@ -295,21 +295,9 @@ static struct snd_soc_dai_link cnl_rt274_msic_dailink[] = {

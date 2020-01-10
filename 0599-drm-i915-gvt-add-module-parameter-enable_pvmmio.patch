@@ -30,7 +30,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  6 files changed, 49 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 258278f..f5190c5 100644
+index 258278fba559..f5190c530dc2 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -51,6 +51,7 @@
@@ -83,7 +83,7 @@ index 258278f..f5190c5 100644
  err_bridge:
  	pci_dev_put(dev_priv->bridge_dev);
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 90968b0..c129605 100644
+index 90968b05597d..c129605ab9a7 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -1591,6 +1591,7 @@ struct drm_i915_private {
@@ -95,7 +95,7 @@ index 90968b0..c129605 100644
  	struct intel_uncore uncore;
  
 diff --git a/drivers/gpu/drm/i915/i915_params.c b/drivers/gpu/drm/i915/i915_params.c
-index 8bdd404..062190f 100644
+index 8bdd4043b563..062190f99a28 100644
 --- a/drivers/gpu/drm/i915/i915_params.c
 +++ b/drivers/gpu/drm/i915/i915_params.c
 @@ -196,6 +196,11 @@ i915_param_named(domain_scaler_owner, int, 0400,
@@ -111,7 +111,7 @@ index 8bdd404..062190f 100644
  					 const char *name,
  					 const char *type,
 diff --git a/drivers/gpu/drm/i915/i915_params.h b/drivers/gpu/drm/i915/i915_params.h
-index 74865c2..3580948 100644
+index 74865c23f809..358094837650 100644
 --- a/drivers/gpu/drm/i915/i915_params.h
 +++ b/drivers/gpu/drm/i915/i915_params.h
 @@ -69,6 +69,7 @@ struct drm_printer;
@@ -123,7 +123,7 @@ index 74865c2..3580948 100644
  
  #define MEMBER(T, member, ...) T member;
 diff --git a/drivers/gpu/drm/i915/i915_pvinfo.h b/drivers/gpu/drm/i915/i915_pvinfo.h
-index dc9bdea..d1a3e3e 100644
+index dc9bdeaa3147..d1a3e3e68512 100644
 --- a/drivers/gpu/drm/i915/i915_pvinfo.h
 +++ b/drivers/gpu/drm/i915/i915_pvinfo.h
 @@ -49,6 +49,15 @@ enum vgt_g2v_type {
@@ -156,7 +156,7 @@ index dc9bdea..d1a3e3e 100644
  
  #define vgtif_reg(x) \
 diff --git a/drivers/gpu/drm/i915/i915_vgpu.c b/drivers/gpu/drm/i915/i915_vgpu.c
-index c4353c0..ddd637b 100644
+index c4353c097a11..ddd637b0a00e 100644
 --- a/drivers/gpu/drm/i915/i915_vgpu.c
 +++ b/drivers/gpu/drm/i915/i915_vgpu.c
 @@ -79,6 +79,15 @@ void i915_check_vgpu(struct drm_i915_private *dev_priv)

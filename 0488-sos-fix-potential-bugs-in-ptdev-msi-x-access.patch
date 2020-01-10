@@ -16,7 +16,7 @@ Signed-off-by: Shiqing Gao <shiqing.gao@intel.com>
  1 file changed, 20 insertions(+), 14 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index d3fd572..7894297 100644
+index d3fd572c1642..7894297ca872 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -402,7 +402,8 @@ static long vhm_dev_ioctl(struct file *filep,

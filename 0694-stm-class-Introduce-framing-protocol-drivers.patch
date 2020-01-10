@@ -19,7 +19,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  3 files changed, 318 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/core.c b/drivers/hwtracing/stm/core.c
-index 15faebc..0b8a939 100644
+index 15faebca1a41..0b8a93966c7c 100644
 --- a/drivers/hwtracing/stm/core.c
 +++ b/drivers/hwtracing/stm/core.c
 @@ -318,11 +318,26 @@ static int stm_output_assign(struct stm_device *stm, unsigned int width,
@@ -196,7 +196,7 @@ index 15faebc..0b8a939 100644
  	stm_core_up++;
  
 diff --git a/drivers/hwtracing/stm/policy.c b/drivers/hwtracing/stm/policy.c
-index a505f05..8bc9043 100644
+index a505f055f464..8bc90432ae69 100644
 --- a/drivers/hwtracing/stm/policy.c
 +++ b/drivers/hwtracing/stm/policy.c
 @@ -33,8 +33,18 @@ struct stp_policy_node {
@@ -450,7 +450,7 @@ index a505f05..8bc9043 100644
  	return ret;
  }
 diff --git a/drivers/hwtracing/stm/stm.h b/drivers/hwtracing/stm/stm.h
-index e5df08a..ed7f3d0 100644
+index e5df08ae59cf..ed7f3d07fa47 100644
 --- a/drivers/hwtracing/stm/stm.h
 +++ b/drivers/hwtracing/stm/stm.h
 @@ -10,20 +10,17 @@

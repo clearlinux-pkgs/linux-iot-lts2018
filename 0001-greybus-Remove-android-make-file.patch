@@ -14,7 +14,7 @@ Signed-off-by: Pottratz, Dwane <dwane.pottratz@intel.com>
 
 diff --git a/drivers/staging/greybus/tools/Android.mk b/drivers/staging/greybus/tools/Android.mk
 deleted file mode 100644
-index fdadbf6..0000000
+index fdadbf611757..000000000000
 --- a/drivers/staging/greybus/tools/Android.mk
 +++ /dev/null
 @@ -1,10 +0,0 @@

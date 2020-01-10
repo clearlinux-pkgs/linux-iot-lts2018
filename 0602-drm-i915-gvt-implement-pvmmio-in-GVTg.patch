@@ -28,7 +28,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  5 files changed, 186 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.c b/drivers/gpu/drm/i915/gvt/acrngt.c
-index 346a676..c6fff10 100644
+index 346a676d77bc..c6fff10a1679 100644
 --- a/drivers/gpu/drm/i915/gvt/acrngt.c
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.c
 @@ -838,6 +838,97 @@ static int acrngt_set_trap_area(unsigned long handle, u64 start,
@@ -138,7 +138,7 @@ index 346a676..c6fff10 100644
  };
  EXPORT_SYMBOL_GPL(acrn_gvt_mpt);
 diff --git a/drivers/gpu/drm/i915/gvt/handlers.c b/drivers/gpu/drm/i915/gvt/handlers.c
-index 88d34ef..14a75c6 100644
+index 88d34ef2c057..14a75c6dff4d 100644
 --- a/drivers/gpu/drm/i915/gvt/handlers.c
 +++ b/drivers/gpu/drm/i915/gvt/handlers.c
 @@ -1145,6 +1145,7 @@ static int pvinfo_mmio_read(struct intel_vgpu *vgpu, unsigned int offset,
@@ -272,7 +272,7 @@ index 88d34ef..14a75c6 100644
  }
  
 diff --git a/drivers/gpu/drm/i915/gvt/hypercall.h b/drivers/gpu/drm/i915/gvt/hypercall.h
-index d4b7929..4c55062 100644
+index d4b7929c8bee..4c550627e78e 100644
 --- a/drivers/gpu/drm/i915/gvt/hypercall.h
 +++ b/drivers/gpu/drm/i915/gvt/hypercall.h
 @@ -60,6 +60,8 @@ struct intel_gvt_mpt {
@@ -285,7 +285,7 @@ index d4b7929..4c55062 100644
  	int (*get_vfio_device)(void *vgpu);
  	void (*put_vfio_device)(void *vgpu);
 diff --git a/drivers/gpu/drm/i915/gvt/mpt.h b/drivers/gpu/drm/i915/gvt/mpt.h
-index feed7ad..6eef2e0 100644
+index feed7adb6fde..6eef2e01e46a 100644
 --- a/drivers/gpu/drm/i915/gvt/mpt.h
 +++ b/drivers/gpu/drm/i915/gvt/mpt.h
 @@ -300,6 +300,27 @@ static inline int intel_gvt_hypervisor_set_trap_area(
@@ -317,7 +317,7 @@ index feed7ad..6eef2e0 100644
   * intel_gvt_hypervisor_set_opregion - Set opregion for guest
   * @vgpu: a vGPU
 diff --git a/drivers/gpu/drm/i915/gvt/vgpu.c b/drivers/gpu/drm/i915/gvt/vgpu.c
-index 5cb4699..9e4a0b2 100644
+index 5cb46999b238..9e4a0b2b5f22 100644
 --- a/drivers/gpu/drm/i915/gvt/vgpu.c
 +++ b/drivers/gpu/drm/i915/gvt/vgpu.c
 @@ -75,6 +75,8 @@ void populate_pvinfo_page(struct intel_vgpu *vgpu)

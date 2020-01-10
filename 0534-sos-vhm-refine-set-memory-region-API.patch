@@ -21,7 +21,7 @@ Acked-by: Eddie Dong <eddie.dong@intel.com>
  6 files changed, 98 insertions(+), 135 deletions(-)
 
 diff --git a/drivers/vhm/vhm_hugetlb.c b/drivers/vhm/vhm_hugetlb.c
-index a83f00a..34ebbd9 100644
+index a83f00ad2e9d..34ebbd90acea 100644
 --- a/drivers/vhm/vhm_hugetlb.c
 +++ b/drivers/vhm/vhm_hugetlb.c
 @@ -120,11 +120,11 @@ static int add_guest_map(struct vhm_vm *vm, unsigned long vm0_gpa,
@@ -126,7 +126,7 @@ index a83f00a..34ebbd9 100644
  		put_page(page);
  	return ret;
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 8611bb1..9a92d68 100644
+index 8611bb1819d4..9a92d6888b90 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -102,14 +102,9 @@ inline long hcall_get_cpu_state(unsigned long cmd, unsigned long state_pa)
@@ -147,7 +147,7 @@ index 8611bb1..9a92d68 100644
  
  inline long hcall_write_protect_page(unsigned long vmid, unsigned long wp)
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index c7ca8e9..4d5854d 100644
+index c7ca8e99612d..4d5854d0c139 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -102,56 +102,59 @@ static bool _free_memblk(struct device *dev, u64 vm0_gpa, size_t len)
@@ -286,7 +286,7 @@ index c7ca8e9..4d5854d 100644
  
  void deinit_trusty(struct vhm_vm *vm)
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 74f8a13..223702c 100644
+index 74f8a137206d..223702c0330c 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -93,9 +93,8 @@
@@ -369,7 +369,7 @@ index 74f8a13..223702c 100644
  
  struct wp_data {
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 0769200..62aed34 100644
+index 0769200ea3bf..62aed3466e9f 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -99,12 +99,12 @@ void *map_guest_phys(unsigned long vmid, u64 uos_phys, size_t size);
@@ -444,7 +444,7 @@ index 0769200..62aed34 100644
 +int set_memory_regions(struct set_regions *regions);
  #endif
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 87a34fe..0a3869b 100644
+index 87a34fec8d90..0a3869b356b8 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -148,9 +148,7 @@ inline long hcall_query_vm_state(unsigned long vmid);

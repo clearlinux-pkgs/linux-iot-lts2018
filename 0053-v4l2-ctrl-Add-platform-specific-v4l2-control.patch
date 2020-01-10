@@ -10,7 +10,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 5 insertions(+), 1 deletion(-)
 
 diff --git a/include/uapi/linux/v4l2-controls.h b/include/uapi/linux/v4l2-controls.h
-index e4ee10e..4913a4f 100644
+index e4ee10ee917d..4913a4f78a08 100644
 --- a/include/uapi/linux/v4l2-controls.h
 +++ b/include/uapi/linux/v4l2-controls.h
 @@ -999,7 +999,11 @@ enum v4l2_jpeg_chroma_subsampling {

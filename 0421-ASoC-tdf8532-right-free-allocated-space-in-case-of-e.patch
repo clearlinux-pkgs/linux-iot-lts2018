@@ -26,7 +26,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  1 file changed, 9 insertions(+), 3 deletions(-)
 
 diff --git a/sound/soc/codecs/tdf8532.c b/sound/soc/codecs/tdf8532.c
-index dd4cebe..86b7430 100644
+index dd4cebec5cf9..86b7430f4c88 100644
 --- a/sound/soc/codecs/tdf8532.c
 +++ b/sound/soc/codecs/tdf8532.c
 @@ -107,11 +107,11 @@ static uint8_t tdf8532_read_wait_ack(struct tdf8532_priv *dev_data,

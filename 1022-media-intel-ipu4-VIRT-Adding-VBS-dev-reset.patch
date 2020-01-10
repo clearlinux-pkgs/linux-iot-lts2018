@@ -17,7 +17,7 @@ Signed-off-by: Bandi, Kushal <kushal.bandi@intel.com>
  1 file changed, 17 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
-index a4e0d87..c29294b 100644
+index a4e0d87e224f..c29294b186fe 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 @@ -51,9 +51,9 @@ static int ipu_vbk_hash_initialized;

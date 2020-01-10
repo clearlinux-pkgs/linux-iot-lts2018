@@ -14,7 +14,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 4 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index a124dab..a81e1b0 100644
+index a124dabc353a..a81e1b032a96 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -509,6 +509,7 @@ static int cnl_ipc_init(struct device *dev, struct skl_sst *cnl)

@@ -36,7 +36,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/misc/mei/spd/spd.h
 
 diff --git a/drivers/misc/mei/Kconfig b/drivers/misc/mei/Kconfig
-index c49e1d2..2a82520 100644
+index c49e1d2269af..2a82520f3e4e 100644
 --- a/drivers/misc/mei/Kconfig
 +++ b/drivers/misc/mei/Kconfig
 @@ -43,3 +43,5 @@ config INTEL_MEI_TXE
@@ -46,7 +46,7 @@ index c49e1d2..2a82520 100644
 +
 +source "drivers/misc/mei/spd/Kconfig"
 diff --git a/drivers/misc/mei/Makefile b/drivers/misc/mei/Makefile
-index cd6825a..f83e2fd 100644
+index cd6825afa8e1..f83e2fdc01d3 100644
 --- a/drivers/misc/mei/Makefile
 +++ b/drivers/misc/mei/Makefile
 @@ -23,3 +23,5 @@ mei-txe-objs += hw-txe.o
@@ -57,7 +57,7 @@ index cd6825a..f83e2fd 100644
 +obj-$(CONFIG_INTEL_MEI_SPD) += spd/
 diff --git a/drivers/misc/mei/spd/Kconfig b/drivers/misc/mei/spd/Kconfig
 new file mode 100644
-index 0000000..8347fbc
+index 000000000000..8347fbc9fbe0
 --- /dev/null
 +++ b/drivers/misc/mei/spd/Kconfig
 @@ -0,0 +1,12 @@
@@ -75,7 +75,7 @@ index 0000000..8347fbc
 +	  To compile this driver as a module, choose M here.
 diff --git a/drivers/misc/mei/spd/Makefile b/drivers/misc/mei/spd/Makefile
 new file mode 100644
-index 0000000..8e8aba9
+index 000000000000..8e8aba94b9ef
 --- /dev/null
 +++ b/drivers/misc/mei/spd/Makefile
 @@ -0,0 +1,11 @@
@@ -92,7 +92,7 @@ index 0000000..8e8aba9
 +ccflags-y += -D__CHECK_ENDIAN__
 diff --git a/drivers/misc/mei/spd/cmd.c b/drivers/misc/mei/spd/cmd.c
 new file mode 100644
-index 0000000..25d682d
+index 000000000000..25d682d7eb09
 --- /dev/null
 +++ b/drivers/misc/mei/spd/cmd.c
 @@ -0,0 +1,485 @@
@@ -583,7 +583,7 @@ index 0000000..25d682d
 +}
 diff --git a/drivers/misc/mei/spd/cmd.h b/drivers/misc/mei/spd/cmd.h
 new file mode 100644
-index 0000000..3f77550
+index 000000000000..3f77550f44ab
 --- /dev/null
 +++ b/drivers/misc/mei/spd/cmd.h
 @@ -0,0 +1,230 @@
@@ -819,7 +819,7 @@ index 0000000..3f77550
 +#endif /* _SPD_CMD_H */
 diff --git a/drivers/misc/mei/spd/debugfs.c b/drivers/misc/mei/spd/debugfs.c
 new file mode 100644
-index 0000000..dfbb62a
+index 000000000000..dfbb62a49fcc
 --- /dev/null
 +++ b/drivers/misc/mei/spd/debugfs.c
 @@ -0,0 +1,79 @@
@@ -904,7 +904,7 @@ index 0000000..dfbb62a
 +}
 diff --git a/drivers/misc/mei/spd/gpp.c b/drivers/misc/mei/spd/gpp.c
 new file mode 100644
-index 0000000..b5d1a27
+index 000000000000..b5d1a27a50ee
 --- /dev/null
 +++ b/drivers/misc/mei/spd/gpp.c
 @@ -0,0 +1,299 @@
@@ -1209,7 +1209,7 @@ index 0000000..b5d1a27
 +}
 diff --git a/drivers/misc/mei/spd/main.c b/drivers/misc/mei/spd/main.c
 new file mode 100644
-index 0000000..2adccce
+index 000000000000..2adccce70eaf
 --- /dev/null
 +++ b/drivers/misc/mei/spd/main.c
 @@ -0,0 +1,118 @@
@@ -1333,7 +1333,7 @@ index 0000000..2adccce
 +MODULE_DESCRIPTION("Storage Proxy driver based on mei bus");
 diff --git a/drivers/misc/mei/spd/spd.h b/drivers/misc/mei/spd/spd.h
 new file mode 100644
-index 0000000..cd30d0e
+index 000000000000..cd30d0ed18ae
 --- /dev/null
 +++ b/drivers/misc/mei/spd/spd.h
 @@ -0,0 +1,93 @@

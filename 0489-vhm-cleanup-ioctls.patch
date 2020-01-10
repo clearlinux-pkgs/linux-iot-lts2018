@@ -13,7 +13,7 @@ Signed-off-by: Edwin Zhai <edwin.zhai@intel.com>
  1 file changed, 15 insertions(+), 12 deletions(-)
 
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 60bfb29..d00b658 100644
+index 60bfb299e040..d00b6588f296 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -53,26 +53,29 @@

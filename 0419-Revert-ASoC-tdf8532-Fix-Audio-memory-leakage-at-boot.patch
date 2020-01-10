@@ -19,7 +19,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  1 file changed, 2 deletions(-)
 
 diff --git a/sound/soc/codecs/tdf8532.c b/sound/soc/codecs/tdf8532.c
-index 68decd0..a5e2a02 100644
+index 68decd023a9d..a5e2a028338c 100644
 --- a/sound/soc/codecs/tdf8532.c
 +++ b/sound/soc/codecs/tdf8532.c
 @@ -165,8 +165,6 @@ static int tdf8532_get_state(struct tdf8532_priv *dev_data,

@@ -21,7 +21,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 4 insertions(+), 3 deletions(-)
 
 diff --git a/include/uapi/sound/skl-tplg-interface.h b/include/uapi/sound/skl-tplg-interface.h
-index fc4e432..e5656fc 100644
+index fc4e4324f94b..e5656fc0ca02 100644
 --- a/include/uapi/sound/skl-tplg-interface.h
 +++ b/include/uapi/sound/skl-tplg-interface.h
 @@ -108,9 +108,10 @@ enum skl_dev_type {

@@ -21,7 +21,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  3 files changed, 9 deletions(-)
 
 diff --git a/include/uapi/sound/skl-tplg-interface.h b/include/uapi/sound/skl-tplg-interface.h
-index c014543..fc4e432 100644
+index c0145433d05e..fc4e4324f94b 100644
 --- a/include/uapi/sound/skl-tplg-interface.h
 +++ b/include/uapi/sound/skl-tplg-interface.h
 @@ -113,12 +113,6 @@ enum skl_dev_type {
@@ -38,7 +38,7 @@ index c014543..fc4e432 100644
   * enum skl_interleaving - interleaving style
   *
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index b4b2d1d..7945173 100644
+index b4b2d1dd0ee2..79451737be9e 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -411,7 +411,6 @@ static int cnl_sdw_bra_pipe_cfg_pb(struct skl_sst *ctx,
@@ -58,7 +58,7 @@ index b4b2d1d..7945173 100644
  	link_cpr_cfg.vbus_id = 0;
  	link_cpr_cfg.sdw_agg_enable = 0;
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index d17809b..0026524 100644
+index d17809b337ed..00265245beee 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -442,7 +442,6 @@ struct skl_module_cfg {

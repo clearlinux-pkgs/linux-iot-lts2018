@@ -26,7 +26,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  5 files changed, 31 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.c b/drivers/gpu/drm/i915/gvt/gvt.c
-index 8523fbc..25e0a58 100644
+index 8523fbc1e494..25e0a58a24a5 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.c
 +++ b/drivers/gpu/drm/i915/gvt/gvt.c
 @@ -511,6 +511,14 @@ int intel_gvt_init_device(struct drm_i915_private *dev_priv)
@@ -45,7 +45,7 @@ index 8523fbc..25e0a58 100644
  MODULE_SOFTDEP("pre: kvmgt");
  #endif
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 47ed178..9c29192 100644
+index 47ed1789ea28..9c291924c1d0 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -592,6 +592,7 @@ struct intel_gvt_ops {
@@ -57,7 +57,7 @@ index 47ed178..9c29192 100644
  enum {
  	GVT_FAILSAFE_UNSUPPORTED_GUEST,
 diff --git a/drivers/gpu/drm/i915/gvt/hypercall.h b/drivers/gpu/drm/i915/gvt/hypercall.h
-index 5af11cf..f14cff3 100644
+index 5af11cf1b482..f14cff32ae2f 100644
 --- a/drivers/gpu/drm/i915/gvt/hypercall.h
 +++ b/drivers/gpu/drm/i915/gvt/hypercall.h
 @@ -64,6 +64,7 @@ struct intel_gvt_mpt {
@@ -69,7 +69,7 @@ index 5af11cf..f14cff3 100644
  
  extern struct intel_gvt_mpt xengt_mpt;
 diff --git a/drivers/gpu/drm/i915/gvt/mpt.h b/drivers/gpu/drm/i915/gvt/mpt.h
-index 67f1999..feed7ad 100644
+index 67f19992b226..feed7adb6fde 100644
 --- a/drivers/gpu/drm/i915/gvt/mpt.h
 +++ b/drivers/gpu/drm/i915/gvt/mpt.h
 @@ -362,4 +362,12 @@ static inline bool intel_gvt_hypervisor_is_valid_gfn(
@@ -86,7 +86,7 @@ index 67f1999..feed7ad 100644
 +
  #endif /* _GVT_MPT_H_ */
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 5c71bf3..9e9a8c4 100644
+index 5c71bf36472b..9e9a8c448b4d 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -49,6 +49,10 @@

@@ -31,7 +31,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/char/rpmb/virtio_rpmb.c
 
 diff --git a/drivers/char/rpmb/Kconfig b/drivers/char/rpmb/Kconfig
-index c069664..48f11c1 100644
+index c069664eec92..48f11c19bbda 100644
 --- a/drivers/char/rpmb/Kconfig
 +++ b/drivers/char/rpmb/Kconfig
 @@ -30,3 +30,13 @@ config RPMB_SIM
@@ -49,7 +49,7 @@ index c069664..48f11c1 100644
 +	  via character device interface /dev/vrpmb.
 +	  This device interface is only for guest/frontend virtio driver.
 diff --git a/drivers/char/rpmb/Makefile b/drivers/char/rpmb/Makefile
-index 8bd1186..281c012 100644
+index 8bd1186948b0..281c012712ca 100644
 --- a/drivers/char/rpmb/Makefile
 +++ b/drivers/char/rpmb/Makefile
 @@ -3,5 +3,6 @@ obj-$(CONFIG_RPMB) += rpmb.o
@@ -61,7 +61,7 @@ index 8bd1186..281c012 100644
  ccflags-y += -D__CHECK_ENDIAN__
 diff --git a/drivers/char/rpmb/virtio_rpmb.c b/drivers/char/rpmb/virtio_rpmb.c
 new file mode 100644
-index 0000000..ef3487c
+index 000000000000..ef3487c98805
 --- /dev/null
 +++ b/drivers/char/rpmb/virtio_rpmb.c
 @@ -0,0 +1,305 @@

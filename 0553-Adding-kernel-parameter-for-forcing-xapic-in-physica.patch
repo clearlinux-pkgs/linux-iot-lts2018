@@ -15,7 +15,7 @@ Signed-off-by: Sainath Grandhi <sainath.grandhi@intel.com>
  1 file changed, 12 insertions(+)
 
 diff --git a/arch/x86/kernel/apic/apic_flat_64.c b/arch/x86/kernel/apic/apic_flat_64.c
-index e84c9eb..9ba0ac0 100644
+index e84c9eb4e5b4..9ba0ac0c8c1f 100644
 --- a/arch/x86/kernel/apic/apic_flat_64.c
 +++ b/arch/x86/kernel/apic/apic_flat_64.c
 @@ -29,6 +29,15 @@ static struct apic apic_flat;

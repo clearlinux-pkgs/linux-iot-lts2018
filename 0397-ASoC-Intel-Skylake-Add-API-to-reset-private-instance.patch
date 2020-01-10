@@ -25,7 +25,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  2 files changed, 15 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index 207bf3f..807f5b7 100644
+index 207bf3fe8ffd..807f5b7db0ae 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -307,6 +307,7 @@ int snd_skl_parse_uuids(struct sst_dsp *ctx, const struct firmware *fw,
@@ -37,7 +37,7 @@ index 207bf3f..807f5b7 100644
  				int module_id, int instance_id);
  void skl_freeup_uuid_list(struct skl_sst *ctx);
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index f20b842..8f4056e 100644
+index f20b842af4e4..8f4056ebf670 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -292,7 +292,21 @@ int skl_put_pvt_id(struct skl_sst *ctx, uuid_le *uuid_mod, int *pvt_id)

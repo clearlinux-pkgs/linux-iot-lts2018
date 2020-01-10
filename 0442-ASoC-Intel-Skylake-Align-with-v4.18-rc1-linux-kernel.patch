@@ -13,7 +13,7 @@ Signed-off-by: Cezary Rojewski <cezary.rojewski@intel.com>
  2 files changed, 1 insertion(+), 3 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 436e036..ee32aaa 100644
+index 436e0365aa76..ee32aaa68490 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -20,7 +20,7 @@
@@ -26,7 +26,7 @@ index 436e036..ee32aaa 100644
  struct sst_dsp;
  struct skl_sst;
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index e86b84e..c0ef5e7 100644
+index e86b84e9868d..c0ef5e78dbfa 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -629,8 +629,6 @@ int skl_tplg_dsp_log_get(struct snd_kcontrol *kcontrol,

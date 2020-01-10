@@ -10,7 +10,7 @@ Signed-off-by: Yadav, PramodX K <pramodx.k.yadav@intel.com>
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 97617b9..e684d67 100644
+index 97617b9ab5a0..e684d67109a6 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -992,7 +992,9 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {

@@ -15,7 +15,7 @@ Tracked-On: PKT-1554
  1 file changed, 14 insertions(+), 16 deletions(-)
 
 diff --git a/drivers/tty/cbc/cbc_link_layer.c b/drivers/tty/cbc/cbc_link_layer.c
-index a55cd8c..bd747aa 100644
+index a55cd8ce7add..bd747aac250f 100644
 --- a/drivers/tty/cbc/cbc_link_layer.c
 +++ b/drivers/tty/cbc/cbc_link_layer.c
 @@ -264,7 +264,8 @@ u8 cbc_core_on_receive_cbc_serial_data(u8 length, const u8 *rx_buf)

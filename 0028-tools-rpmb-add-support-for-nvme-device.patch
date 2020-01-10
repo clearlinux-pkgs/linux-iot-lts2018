@@ -10,7 +10,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 656 insertions(+), 160 deletions(-)
 
 diff --git a/tools/rpmb/rpmb.c b/tools/rpmb/rpmb.c
-index 1a507db..28b2280 100644
+index 1a507db2739e..28b2280776d5 100644
 --- a/tools/rpmb/rpmb.c
 +++ b/tools/rpmb/rpmb.c
 @@ -31,6 +31,11 @@

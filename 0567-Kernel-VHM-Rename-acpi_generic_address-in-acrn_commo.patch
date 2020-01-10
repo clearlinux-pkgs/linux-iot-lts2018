@@ -15,7 +15,7 @@ Signed-off-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 6949924..179957d 100644
+index 69499245a994..179957d273e9 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -481,7 +481,7 @@ struct acrn_vm_pci_msix_remap {

@@ -15,7 +15,7 @@ Signed-off-by: Mohit Sinha <mohit.sinha@intel.com>
  1 file changed, 15 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index c1f6d8b..9c8d923 100644
+index c1f6d8b6ab79..9c8d923fe358 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -21,7 +21,7 @@

@@ -15,7 +15,7 @@ Signed-off-by: Fei Jiang <fei.jiang@intel.com>
  1 file changed, 19 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_lrc.c b/drivers/gpu/drm/i915/intel_lrc.c
-index 929714a..098464d 100644
+index 929714a5797e..098464d57c19 100644
 --- a/drivers/gpu/drm/i915/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/intel_lrc.c
 @@ -186,7 +186,8 @@ static inline bool need_preempt(const struct intel_engine_cs *engine,

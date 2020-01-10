@@ -13,7 +13,7 @@ Signed-off-by: Tarun Vyas <tarun.vyas@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/staging/igb_avb/Kconfig b/drivers/staging/igb_avb/Kconfig
-index 2d3780b..5f4b325 100644
+index 2d3780b250c8..5f4b325140de 100644
 --- a/drivers/staging/igb_avb/Kconfig
 +++ b/drivers/staging/igb_avb/Kconfig
 @@ -1,6 +1,6 @@

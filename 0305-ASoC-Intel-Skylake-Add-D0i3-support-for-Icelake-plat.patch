@@ -24,7 +24,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  3 files changed, 16 insertions(+), 3 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index 6f9b24c..c1f6d8b 100644
+index 6f9b24c8c211..c1f6d8b6ab79 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -302,7 +302,7 @@ static int bxt_d0i3_target_state(struct sst_dsp *ctx)
@@ -55,7 +55,7 @@ index 6f9b24c..c1f6d8b 100644
  	int ret;
  	struct skl_ipc_d0ix_msg msg;
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index d5e2c32..5ee7b35 100644
+index d5e2c32b3f83..5ee7b350eb7f 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -389,6 +389,8 @@ static unsigned int cnl_get_errno(struct sst_dsp *ctx)
@@ -83,7 +83,7 @@ index d5e2c32..5ee7b35 100644
  	if (ret < 0)
  		return ret;
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index df37765..58c0c13 100644
+index df37765858c4..58c0c13c15aa 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -295,4 +295,10 @@ int skl_prepare_lib_load(struct skl_sst *skl, struct skl_lib_info *linfo,

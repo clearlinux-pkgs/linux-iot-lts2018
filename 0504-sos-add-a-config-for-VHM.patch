@@ -23,7 +23,7 @@ Reviewed-on:
  create mode 100644 drivers/vhm/Kconfig
 
 diff --git a/arch/x86/acrn/Kconfig b/arch/x86/acrn/Kconfig
-index 7788cb8..ce0abc8 100644
+index 7788cb8cfb4b..ce0abc8cdcad 100644
 --- a/arch/x86/acrn/Kconfig
 +++ b/arch/x86/acrn/Kconfig
 @@ -7,10 +7,6 @@ config ACRN
@@ -38,7 +38,7 @@ index 7788cb8..ce0abc8 100644
  	  This option is needed if were to run ACRN services linux on top of
  	  ACRN hypervisor.
 diff --git a/arch/x86/acrn/acrn.c b/arch/x86/acrn/acrn.c
-index 3987e22..eea9db8 100644
+index 3987e2287a9f..eea9db84ca89 100644
 --- a/arch/x86/acrn/acrn.c
 +++ b/arch/x86/acrn/acrn.c
 @@ -42,7 +42,7 @@ static uint32_t __init acrn_detect(void)
@@ -51,7 +51,7 @@ index 3987e22..eea9db8 100644
  #endif
  }
 diff --git a/drivers/Kconfig b/drivers/Kconfig
-index 08e4c41..c94b20a 100644
+index 08e4c4194fa1..c94b20af31ff 100644
 --- a/drivers/Kconfig
 +++ b/drivers/Kconfig
 @@ -223,4 +223,6 @@ source "drivers/slimbus/Kconfig"
@@ -62,7 +62,7 @@ index 08e4c41..c94b20a 100644
 +source "drivers/vhm/Kconfig"
  endmenu
 diff --git a/drivers/Makefile b/drivers/Makefile
-index 5794c09..b45c736 100644
+index 5794c097204c..b45c73684496 100644
 --- a/drivers/Makefile
 +++ b/drivers/Makefile
 @@ -184,8 +184,8 @@ obj-$(CONFIG_FPGA)		+= fpga/
@@ -76,7 +76,7 @@ index 5794c09..b45c736 100644
  obj-$(CONFIG_SIOX)		+= siox/
  obj-$(CONFIG_GNSS)		+= gnss/
 diff --git a/drivers/char/Makefile b/drivers/char/Makefile
-index 6371793..2f5697e 100644
+index 63717938df85..2f5697e20a5b 100644
 --- a/drivers/char/Makefile
 +++ b/drivers/char/Makefile
 @@ -59,4 +59,4 @@ obj-$(CONFIG_XILLYBUS)		+= xillybus/
@@ -87,7 +87,7 @@ index 6371793..2f5697e 100644
 +obj-$(CONFIG_ACRN_VHM) 		+= vhm/
 diff --git a/drivers/vhm/Kconfig b/drivers/vhm/Kconfig
 new file mode 100644
-index 0000000..0b0faee
+index 000000000000..0b0faeeff74a
 --- /dev/null
 +++ b/drivers/vhm/Kconfig
 @@ -0,0 +1,18 @@

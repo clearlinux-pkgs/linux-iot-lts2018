@@ -23,7 +23,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  2 files changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/sound/hda/ext/hdac_ext_stream.c b/sound/hda/ext/hdac_ext_stream.c
-index 0ede36f..492f858 100644
+index 0ede36f51e2e..492f85841ac0 100644
 --- a/sound/hda/ext/hdac_ext_stream.c
 +++ b/sound/hda/ext/hdac_ext_stream.c
 @@ -489,7 +489,6 @@ void snd_hdac_ext_stop_streams(struct hdac_bus *bus)
@@ -35,7 +35,7 @@ index 0ede36f..492f858 100644
  }
  EXPORT_SYMBOL_GPL(snd_hdac_ext_stop_streams);
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index cd24989..94f5ced 100644
+index cd24989d1918..94f5ced99439 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1110,6 +1110,8 @@ static void skl_shutdown(struct pci_dev *pci)

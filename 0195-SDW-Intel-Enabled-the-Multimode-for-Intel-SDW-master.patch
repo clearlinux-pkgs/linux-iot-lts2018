@@ -17,7 +17,7 @@ Reviewed-on:
  2 files changed, 33 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/sdw/sdw_cnl.c b/drivers/sdw/sdw_cnl.c
-index 9686aa2..21a61b4 100644
+index 9686aa2f9caf..21a61b4f010a 100644
 --- a/drivers/sdw/sdw_cnl.c
 +++ b/drivers/sdw/sdw_cnl.c
 @@ -440,7 +440,11 @@ static int sdw_init(struct cnl_sdw *sdw)
@@ -60,7 +60,7 @@ index 9686aa2..21a61b4 100644
  	 * Master broadcasts the clock_stop command to slaves, slaves
  	 * might be already suspended, so this return NO ACK, in that
 diff --git a/drivers/sdw/sdw_cnl_priv.h b/drivers/sdw/sdw_cnl_priv.h
-index 914f7ca..c994338 100644
+index 914f7cae2b01..c99433882dff 100644
 --- a/drivers/sdw/sdw_cnl_priv.h
 +++ b/drivers/sdw/sdw_cnl_priv.h
 @@ -26,11 +26,13 @@

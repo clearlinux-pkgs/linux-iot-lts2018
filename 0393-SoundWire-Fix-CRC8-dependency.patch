@@ -20,7 +20,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/sdw/Kconfig b/drivers/sdw/Kconfig
-index 660188b..7e5a57f 100644
+index 660188bd2c02..7e5a57f1f6d2 100644
 --- a/drivers/sdw/Kconfig
 +++ b/drivers/sdw/Kconfig
 @@ -1,6 +1,6 @@

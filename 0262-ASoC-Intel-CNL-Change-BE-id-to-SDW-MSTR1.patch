@@ -10,7 +10,7 @@ Signed-off-by: Shreyas NC <shreyas.nc@intel.com>
  1 file changed, 8 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 1cceaa5..4c85981 100644
+index 1cceaa5187a9..4c85981378c2 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1334,7 +1334,11 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {

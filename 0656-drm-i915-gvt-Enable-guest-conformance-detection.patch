@@ -21,7 +21,7 @@ Signed-off-by: Xinyun Liu <xinyun.liu@intel.com>
  2 files changed, 5 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/mmio_context.h b/drivers/gpu/drm/i915/gvt/mmio_context.h
-index 5c3b9ff..b5059de 100644
+index 5c3b9ff9f96a..b5059de42af9 100644
 --- a/drivers/gpu/drm/i915/gvt/mmio_context.h
 +++ b/drivers/gpu/drm/i915/gvt/mmio_context.h
 @@ -54,4 +54,5 @@ bool is_inhibit_context(struct intel_context *ce);
@@ -31,7 +31,7 @@ index 5c3b9ff..b5059de 100644
 +int intel_gvt_vgpu_conformance_check(struct intel_vgpu *vgpu, int ring_id);
  #endif
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index d099fc2..cf973bc 100644
+index d099fc2e4ec2..cf973bce9e74 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -711,6 +711,10 @@ static int dispatch_workload(struct intel_vgpu_workload *workload)

@@ -22,7 +22,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  4 files changed, 26 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_bios.c b/drivers/gpu/drm/i915/intel_bios.c
-index 1faa494..1f99373 100644
+index 1faa494e2bc9..1f99373dcd77 100644
 --- a/drivers/gpu/drm/i915/intel_bios.c
 +++ b/drivers/gpu/drm/i915/intel_bios.c
 @@ -1726,6 +1726,14 @@ void intel_bios_init(struct drm_i915_private *dev_priv)
@@ -41,7 +41,7 @@ index 1faa494..1f99373 100644
  
  	/* If the OpRegion does not have VBT, look in PCI ROM. */
 diff --git a/drivers/gpu/drm/i915/intel_ddi.c b/drivers/gpu/drm/i915/intel_ddi.c
-index b4b1f9c..0304a18 100644
+index b4b1f9ca05b6..0304a18690ea 100644
 --- a/drivers/gpu/drm/i915/intel_ddi.c
 +++ b/drivers/gpu/drm/i915/intel_ddi.c
 @@ -1882,7 +1882,7 @@ bool intel_ddi_connector_get_hw_state(struct intel_connector *intel_connector)
@@ -63,7 +63,7 @@ index b4b1f9c..0304a18 100644
  
  	if (intel_crtc_has_type(pipe_config, INTEL_OUTPUT_HDMI))
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 6902fd2..5c71bf3 100644
+index 6902fd2da19c..5c71bf36472b 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -11904,7 +11904,16 @@ verify_crtc_state(struct drm_crtc *crtc,
@@ -85,7 +85,7 @@ index 6902fd2..5c71bf3 100644
  		I915_STATE_WARN(1, "pipe state doesn't match!\n");
  		intel_dump_pipe_config(intel_crtc, pipe_config,
 diff --git a/drivers/gpu/drm/i915/intel_dp.c b/drivers/gpu/drm/i915/intel_dp.c
-index e76412b..735592a 100644
+index e76412b5a63e..735592abb4a6 100644
 --- a/drivers/gpu/drm/i915/intel_dp.c
 +++ b/drivers/gpu/drm/i915/intel_dp.c
 @@ -2075,7 +2075,12 @@ static void wait_panel_status(struct intel_dp *intel_dp,

@@ -18,7 +18,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  3 files changed, 234 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 4d48924..0cf4a2f 100644
+index 4d48924913bd..0cf4a2fa69a0 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -33,6 +33,19 @@
@@ -263,7 +263,7 @@ index 4d48924..0cf4a2f 100644
  
  	return d;
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index 33de8c9..767c6ed 100644
+index 33de8c939bc4..767c6edddc3a 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -127,6 +127,8 @@ struct skl_lib_info;
@@ -276,7 +276,7 @@ index 33de8c9..767c6ed 100644
  enum skl_dsp_states {
  	SKL_DSP_RUNNING = 1,
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index c6158d3..b8a1d8b 100644
+index c6158d37f557..b8a1d8b90fe1 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -32,6 +32,7 @@

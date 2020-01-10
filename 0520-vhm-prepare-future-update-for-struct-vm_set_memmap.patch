@@ -18,7 +18,7 @@ Signed-off-by: Jason Chen CJ <jason.cj.chen@intel.com>
  2 files changed, 5 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index 75ccd3f..fb09ed2 100644
+index 75ccd3f09a4e..fb09ed2f994f 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -167,7 +167,7 @@ int _mem_set_memmap(unsigned long vmid, unsigned long guest_gpa,
@@ -31,7 +31,7 @@ index 75ccd3f..fb09ed2 100644
  
  	/* hypercall to notify hv the guest EPT setting*/
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index cd0147f..d3af097 100644
+index cd0147f732bc..d3af0970f7d2 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -135,7 +135,9 @@ struct vm_set_memmap {

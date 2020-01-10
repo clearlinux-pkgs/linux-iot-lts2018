@@ -20,7 +20,7 @@ Signed-off-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
  1 file changed, 25 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/usb/roles/intel-xhci-usb-role-switch.c b/drivers/usb/roles/intel-xhci-usb-role-switch.c
-index 277de96..f9ed262 100644
+index 277de96181f9..f9ed262c15b3 100644
 --- a/drivers/usb/roles/intel-xhci-usb-role-switch.c
 +++ b/drivers/usb/roles/intel-xhci-usb-role-switch.c
 @@ -19,6 +19,7 @@

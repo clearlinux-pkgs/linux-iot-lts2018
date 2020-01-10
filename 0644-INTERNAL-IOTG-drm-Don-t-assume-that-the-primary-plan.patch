@@ -22,12 +22,12 @@ Change-Id: Ie16c4bdd19a3df25ca5c4241ded12b87ca5a106a
  drivers/gpu/drm/drm_fb_helper.c      |  2 ++
  drivers/gpu/drm/drm_framebuffer.c    |  2 +-
  drivers/gpu/drm/i915/i915_debugfs.c  | 39 ++++++++++++++++++----------
- drivers/gpu/drm/i915/intel_display.c | 14 ++++++----
+ drivers/gpu/drm/i915/intel_display.c | 11 ++++----
  drivers/gpu/drm/i915/intel_fbdev.c   | 11 ++++++--
- 8 files changed, 74 insertions(+), 22 deletions(-)
+ 8 files changed, 71 insertions(+), 22 deletions(-)
 
 diff --git a/drivers/gpu/drm/drm_atomic_helper.c b/drivers/gpu/drm/drm_atomic_helper.c
-index c22062c..9390a33 100644
+index c22062cc9992..9390a332ad65 100644
 --- a/drivers/gpu/drm/drm_atomic_helper.c
 +++ b/drivers/gpu/drm/drm_atomic_helper.c
 @@ -1074,7 +1074,7 @@ drm_atomic_helper_update_legacy_modeset_state(struct drm_device *dev,
@@ -50,7 +50,7 @@ index c22062c..9390a33 100644
  	if (IS_ERR(crtc_state))
  		return PTR_ERR(crtc_state);
 diff --git a/drivers/gpu/drm/drm_crtc.c b/drivers/gpu/drm/drm_crtc.c
-index 6e241a3..dcfa240 100644
+index 6e241a3c31ee..dcfa240bef62 100644
 --- a/drivers/gpu/drm/drm_crtc.c
 +++ b/drivers/gpu/drm/drm_crtc.c
 @@ -410,6 +410,9 @@ int drm_mode_getcrtc(struct drm_device *dev,
@@ -102,7 +102,7 @@ index 6e241a3..dcfa240 100644
  		/* If we have a mode we need a framebuffer. */
  		/* If we pass -1, set the mode with the currently bound fb */
 diff --git a/drivers/gpu/drm/drm_crtc_helper.c b/drivers/gpu/drm/drm_crtc_helper.c
-index 5a84c3b..aaa80d6 100644
+index 5a84c3bc915d..aaa80d640203 100644
 --- a/drivers/gpu/drm/drm_crtc_helper.c
 +++ b/drivers/gpu/drm/drm_crtc_helper.c
 @@ -185,6 +185,8 @@ static void __drm_helper_disable_unused_functions(struct drm_device *dev)
@@ -144,7 +144,7 @@ index 5a84c3b..aaa80d6 100644
  		plane_state = plane->funcs->atomic_duplicate_state(plane);
  	else {
 diff --git a/drivers/gpu/drm/drm_fb_helper.c b/drivers/gpu/drm/drm_fb_helper.c
-index 8b546fd..bf1217d 100644
+index 8b546fde139d..bf1217d4991e 100644
 --- a/drivers/gpu/drm/drm_fb_helper.c
 +++ b/drivers/gpu/drm/drm_fb_helper.c
 @@ -571,6 +571,8 @@ static bool drm_fb_helper_is_bound(struct drm_fb_helper *fb_helper)
@@ -157,7 +157,7 @@ index 8b546fd..bf1217d 100644
  			crtcs_bound++;
  		if (crtc->primary->fb == fb_helper->fb)
 diff --git a/drivers/gpu/drm/drm_framebuffer.c b/drivers/gpu/drm/drm_framebuffer.c
-index b64a6ff..46234dd 100644
+index b64a6ffc0aed..46234dd84cbf 100644
 --- a/drivers/gpu/drm/drm_framebuffer.c
 +++ b/drivers/gpu/drm/drm_framebuffer.c
 @@ -891,7 +891,7 @@ static void legacy_remove_fb(struct drm_framebuffer *fb)
@@ -170,7 +170,7 @@ index b64a6ff..46234dd 100644
  			if (drm_crtc_force_disable(crtc))
  				DRM_ERROR("failed to reset crtc %p when fb was deleted\n", crtc);
 diff --git a/drivers/gpu/drm/i915/i915_debugfs.c b/drivers/gpu/drm/i915/i915_debugfs.c
-index c8800a9..320564f 100644
+index c8800a9a89fc..320564fd8b4b 100644
 --- a/drivers/gpu/drm/i915/i915_debugfs.c
 +++ b/drivers/gpu/drm/i915/i915_debugfs.c
 @@ -3012,15 +3012,23 @@ static void intel_crtc_info(struct seq_file *m, struct intel_crtc *intel_crtc)
@@ -230,7 +230,7 @@ index c8800a9..320564f 100644
  			intel_plane_info(m, crtc);
  		}
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 0ebc356..c658a63 100644
+index 0ebc35641211..3c09e96a1b55 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -5270,8 +5270,8 @@ static void intel_post_plane_update(struct intel_crtc_state *old_crtc_state)
@@ -266,18 +266,8 @@ index 0ebc356..c658a63 100644
  
  	if (modeset) {
  		update_scanline_offset(intel_crtc);
-@@ -15697,6 +15698,9 @@ static void intel_modeset_readout_hw_state(struct drm_device *dev)
- 			dev_priv->active_crtcs |=
- 				1 << drm_crtc_index(&crtc->base);
- 
-+		if (crtc->base.primary)
-+			readout_plane_state(crtc);
-+
- 		DRM_DEBUG_KMS("[CRTC:%d:%s] hw state readout: %s\n",
- 			      crtc->base.base.id, crtc->base.name,
- 			      enableddisabled(crtc_state->base.active));
 diff --git a/drivers/gpu/drm/i915/intel_fbdev.c b/drivers/gpu/drm/i915/intel_fbdev.c
-index 2d6506c..310ee7e 100644
+index 2d6506c08bf7..310ee7eb45dc 100644
 --- a/drivers/gpu/drm/i915/intel_fbdev.c
 +++ b/drivers/gpu/drm/i915/intel_fbdev.c
 @@ -548,10 +548,17 @@ static bool intel_fbdev_init_bios(struct drm_device *dev,

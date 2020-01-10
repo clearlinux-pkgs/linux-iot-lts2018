@@ -21,7 +21,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  1 file changed, 12 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index 4c3efb4..3126240 100644
+index 4c3efb4178ff..31262400bf95 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -41,6 +41,8 @@

@@ -22,7 +22,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  1 file changed, 38 insertions(+), 32 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index d7ad18f..5130fb5 100644
+index d7ad18f6a55e..5130fb508bc9 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -75,6 +75,7 @@

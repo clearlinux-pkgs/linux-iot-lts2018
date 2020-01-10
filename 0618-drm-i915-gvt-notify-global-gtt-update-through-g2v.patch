@@ -26,7 +26,7 @@ Reviewed-by: He, Min <min.he@intel.com>
  2 files changed, 51 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem_gtt.c b/drivers/gpu/drm/i915/i915_gem_gtt.c
-index cb940a5..d6baa2d 100644
+index cb940a583c14..d6baa2d63a58 100644
 --- a/drivers/gpu/drm/i915/i915_gem_gtt.c
 +++ b/drivers/gpu/drm/i915/i915_gem_gtt.c
 @@ -2513,6 +2513,17 @@ static void gen8_set_pte(void __iomem *addr, gen8_pte_t pte)
@@ -98,7 +98,7 @@ index cb940a5..d6baa2d 100644
  
  static void bxt_vtd_ggtt_wa(struct i915_address_space *vm)
 diff --git a/drivers/gpu/drm/i915/i915_pvinfo.h b/drivers/gpu/drm/i915/i915_pvinfo.h
-index 82ab32e..c15d457 100644
+index 82ab32e87805..c15d4578bb5f 100644
 --- a/drivers/gpu/drm/i915/i915_pvinfo.h
 +++ b/drivers/gpu/drm/i915/i915_pvinfo.h
 @@ -49,6 +49,8 @@ enum vgt_g2v_type {

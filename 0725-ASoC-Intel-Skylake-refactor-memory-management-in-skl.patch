@@ -25,7 +25,7 @@ Tested-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  1 file changed, 41 insertions(+), 44 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index a905fe8..ae82438 100644
+index a905fe8a9410..ae824385507a 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -2145,80 +2145,79 @@ int skl_platform_register(struct device *dev)

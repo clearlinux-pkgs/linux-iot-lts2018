@@ -15,7 +15,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 
 diff --git a/Documentation/trace/sys-t.rst b/Documentation/trace/sys-t.rst
 new file mode 100644
-index 0000000..3d8eb92
+index 000000000000..3d8eb92735e9
 --- /dev/null
 +++ b/Documentation/trace/sys-t.rst
 @@ -0,0 +1,62 @@

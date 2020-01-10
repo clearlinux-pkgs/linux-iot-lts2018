@@ -15,7 +15,7 @@ Acked-by: Kim, Dongwon <dongwon.kim@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/Kconfig b/drivers/dma-buf/hyper_dmabuf/Kconfig
-index f15a8cd..17ea5b8 100644
+index f15a8cdf9250..17ea5b8323da 100644
 --- a/drivers/dma-buf/hyper_dmabuf/Kconfig
 +++ b/drivers/dma-buf/hyper_dmabuf/Kconfig
 @@ -1,7 +1,7 @@

@@ -54,7 +54,7 @@ Reviewed-by: Jiang, Fei <fei.jiang@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index b4cdb3d..2cadc47 100644
+index b4cdb3d85354..2cadc471425f 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -3810,6 +3810,7 @@ bool intel_can_enable_sagv(struct drm_atomic_state *state)

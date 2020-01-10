@@ -18,7 +18,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/sound/hda/hdac_controller.c b/sound/hda/hdac_controller.c
-index 74244d8..ff841cd 100644
+index 74244d8e2909..ff841cd452fd 100644
 --- a/sound/hda/hdac_controller.c
 +++ b/sound/hda/hdac_controller.c
 @@ -549,8 +549,9 @@ int snd_hdac_bus_handle_stream_irq(struct hdac_bus *bus, unsigned int status,

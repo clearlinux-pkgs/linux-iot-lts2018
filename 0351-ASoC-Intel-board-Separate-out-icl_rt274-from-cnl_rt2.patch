@@ -19,7 +19,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  create mode 100644 sound/soc/intel/boards/icl_rt274.c
 
 diff --git a/sound/soc/intel/boards/Kconfig b/sound/soc/intel/boards/Kconfig
-index d8b639c..e655978 100644
+index d8b639c426fa..e655978d3418 100644
 --- a/sound/soc/intel/boards/Kconfig
 +++ b/sound/soc/intel/boards/Kconfig
 @@ -340,6 +340,17 @@ config SND_SOC_INTEL_CNL_RT274_MACH
@@ -41,7 +41,7 @@ index d8b639c..e655978 100644
          tristate "Broxton with TDF8532 I2S mode"
  	depends on MFD_INTEL_LPSS && I2C && ACPI
 diff --git a/sound/soc/intel/boards/Makefile b/sound/soc/intel/boards/Makefile
-index dcd898c..239051c 100644
+index dcd898c0b4a2..239051cc6f22 100644
 --- a/sound/soc/intel/boards/Makefile
 +++ b/sound/soc/intel/boards/Makefile
 @@ -24,6 +24,7 @@ snd-soc-skl_rt286-objs := skl_rt286.o
@@ -61,7 +61,7 @@ index dcd898c..239051c 100644
  obj-$(CONFIG_SND_SOC_INTEL_CNL_RT700_MACH) += snd-soc-cnl_rt700.o
  obj-$(CONFIG_SND_SOC_INTEL_CNL_SVFPGA_MACH) += snd-soc-cnl_svfpga.o
 diff --git a/sound/soc/intel/boards/cnl_rt274.c b/sound/soc/intel/boards/cnl_rt274.c
-index e9e5959..07a876f 100644
+index e9e5959e256a..07a876f4f3b2 100644
 --- a/sound/soc/intel/boards/cnl_rt274.c
 +++ b/sound/soc/intel/boards/cnl_rt274.c
 @@ -477,7 +477,6 @@ static int snd_cnl_rt274_mc_probe(struct platform_device *pdev)
@@ -79,7 +79,7 @@ index e9e5959..07a876f 100644
 -MODULE_ALIAS("platform:icl_rt274");
 diff --git a/sound/soc/intel/boards/icl_rt274.c b/sound/soc/intel/boards/icl_rt274.c
 new file mode 100644
-index 0000000..f4d8557
+index 000000000000..f4d855766b81
 --- /dev/null
 +++ b/sound/soc/intel/boards/icl_rt274.c
 @@ -0,0 +1,373 @@

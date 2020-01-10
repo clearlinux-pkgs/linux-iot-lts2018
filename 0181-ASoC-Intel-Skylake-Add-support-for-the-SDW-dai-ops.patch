@@ -19,7 +19,7 @@ Signed-off-by: Hardik T Shah <hardik.t.shah@intel.com>
  create mode 100644 sound/soc/intel/skylake/skl-sdw-pcm.h
 
 diff --git a/sound/soc/intel/skylake/Makefile b/sound/soc/intel/skylake/Makefile
-index 86f6e1d..c5ee108 100644
+index 86f6e1d801af..c5ee108bf5d9 100644
 --- a/sound/soc/intel/skylake/Makefile
 +++ b/sound/soc/intel/skylake/Makefile
 @@ -1,5 +1,5 @@
@@ -30,7 +30,7 @@ index 86f6e1d..c5ee108 100644
  
  ifdef CONFIG_DEBUG_FS
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index fcd9523..74ec7e6 100644
+index fcd9523d759b..74ec7e65e5f7 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -28,6 +28,7 @@
@@ -157,7 +157,7 @@ index fcd9523..74ec7e6 100644
  
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.c b/sound/soc/intel/skylake/skl-sdw-pcm.c
 new file mode 100644
-index 0000000..90a11f4
+index 000000000000..90a11f47586b
 --- /dev/null
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.c
 @@ -0,0 +1,246 @@
@@ -409,7 +409,7 @@ index 0000000..90a11f4
 +}
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.h b/sound/soc/intel/skylake/skl-sdw-pcm.h
 new file mode 100644
-index 0000000..ab1314a
+index 000000000000..ab1314a6f408
 --- /dev/null
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.h
 @@ -0,0 +1,41 @@

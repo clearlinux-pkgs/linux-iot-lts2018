@@ -19,7 +19,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 7 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 321f0ca..b54e28a 100644
+index 321f0ca5b96a..b54e28a2c98e 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1082,6 +1082,13 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {

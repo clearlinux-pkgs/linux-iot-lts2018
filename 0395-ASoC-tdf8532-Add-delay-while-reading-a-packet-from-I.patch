@@ -22,7 +22,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/sound/soc/codecs/tdf8532.c b/sound/soc/codecs/tdf8532.c
-index e723ffe..a5e2a02 100644
+index e723ffebed0f..a5e2a028338c 100644
 --- a/sound/soc/codecs/tdf8532.c
 +++ b/sound/soc/codecs/tdf8532.c
 @@ -90,6 +90,7 @@ static uint8_t tdf8532_read_wait_ack(struct tdf8532_priv *dev_data,

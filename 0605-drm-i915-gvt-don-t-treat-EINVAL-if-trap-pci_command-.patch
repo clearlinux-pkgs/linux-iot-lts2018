@@ -14,7 +14,7 @@ Signed-off-by: Fei Jiang <fei.jiang@intel.com>
  1 file changed, 15 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/cfg_space.c b/drivers/gpu/drm/i915/gvt/cfg_space.c
-index 707b0a5..f6bcfcb 100644
+index 707b0a50da3c..f6bcfcb571b7 100644
 --- a/drivers/gpu/drm/i915/gvt/cfg_space.c
 +++ b/drivers/gpu/drm/i915/gvt/cfg_space.c
 @@ -295,9 +295,22 @@ int intel_vgpu_emulate_cfg_write(struct intel_vgpu *vgpu, unsigned int offset,

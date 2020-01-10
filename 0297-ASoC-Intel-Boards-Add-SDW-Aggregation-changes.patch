@@ -19,7 +19,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 70 insertions(+)
 
 diff --git a/sound/soc/intel/boards/cnl_rt700.c b/sound/soc/intel/boards/cnl_rt700.c
-index 740062a..ee8fe39 100644
+index 740062a4108a..ee8fe3934571 100644
 --- a/sound/soc/intel/boards/cnl_rt700.c
 +++ b/sound/soc/intel/boards/cnl_rt700.c
 @@ -44,13 +44,24 @@ struct cnl_rt700_mc_private {

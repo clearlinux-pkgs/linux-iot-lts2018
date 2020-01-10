@@ -21,7 +21,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  3 files changed, 144 insertions(+), 13 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 5d15501..1fc8ea0 100644
+index 5d15501af313..1fc8ea0f519b 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -1558,10 +1558,13 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
@@ -173,7 +173,7 @@ index 5d15501..1fc8ea0 100644
  out:
  	if (mei_hdr.msg_complete)
 diff --git a/drivers/misc/mei/dma-ring.c b/drivers/misc/mei/dma-ring.c
-index 2d2ce6f..f809db5 100644
+index 2d2ce6f4ef3b..f809db5c0129 100644
 --- a/drivers/misc/mei/dma-ring.c
 +++ b/drivers/misc/mei/dma-ring.c
 @@ -144,6 +144,27 @@ static size_t mei_dma_copy_from(struct mei_device *dev, unsigned char *buf,
@@ -279,7 +279,7 @@ index 2d2ce6f..f809db5 100644
 +	WRITE_ONCE(ctrl->hbuf_wr_idx, ctrl->hbuf_wr_idx + slots);
 +}
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 2b026ce..6552b41 100644
+index 2b026ce1c8de..6552b41e47a1 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -603,6 +603,8 @@ void mei_dmam_ring_free(struct mei_device *dev);

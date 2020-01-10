@@ -34,7 +34,7 @@ Singed-off-by: Fei Yang <fei.yang@intel.com>
  3 files changed, 16 insertions(+)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 6bf07e8..ff19cc3 100644
+index 6bf07e812d03..ff19cc3b76ba 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -220,6 +220,7 @@ int acrn_ioreq_create_client(unsigned long vmid, ioreq_handler_t handler,
@@ -102,7 +102,7 @@ index 6bf07e8..ff19cc3 100644
  unsigned int vhm_dev_poll(struct file *filep, poll_table *wait)
  {
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index 6bea668..0b9168f 100644
+index 6bea6688ddc0..0b9168f5672b 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -133,6 +133,7 @@ int add_memory_region(unsigned long vmid, unsigned long gpa,
@@ -130,7 +130,7 @@ index 6bea668..0b9168f 100644
  int map_guest_memseg(struct vhm_vm *vm, struct vm_memmap *memmap)
  {
 diff --git a/drivers/vhm/vhm_vm_mngt.c b/drivers/vhm/vhm_vm_mngt.c
-index 8f1a007..c186b97 100644
+index 8f1a00777dd4..c186b97a3c09 100644
 --- a/drivers/vhm/vhm_vm_mngt.c
 +++ b/drivers/vhm/vhm_vm_mngt.c
 @@ -80,6 +80,7 @@ struct vhm_vm *find_get_vm(unsigned long vmid)

@@ -15,7 +15,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  2 files changed, 66 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index faf1cba..6d01a4d 100644
+index faf1cba57abb..6d01a4d0d803 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -33,6 +33,7 @@ struct skl_debug {
@@ -105,7 +105,7 @@ index faf1cba..6d01a4d 100644
  
  err:
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 78aa8bd..28c62dd 100644
+index 78aa8bdcb619..28c62dda07db 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -103,6 +103,7 @@ struct skl {

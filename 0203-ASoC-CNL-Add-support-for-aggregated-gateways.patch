@@ -17,7 +17,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  2 files changed, 16 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index f63b50e..a9eaa4a 100644
+index f63b50e43257..a9eaa4aed643 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -566,7 +566,10 @@ static u32 skl_get_node_id(struct skl_sst *ctx,
@@ -33,7 +33,7 @@ index f63b50e..a9eaa4a 100644
  
  	default:
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 353c90c..44e4109 100644
+index 353c90cbd336..44e4109ba4dc 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -383,6 +383,16 @@ struct skl_module {

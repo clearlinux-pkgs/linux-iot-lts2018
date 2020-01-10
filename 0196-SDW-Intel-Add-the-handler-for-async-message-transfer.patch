@@ -15,7 +15,7 @@ Reviewed-on:
  1 file changed, 109 insertions(+), 39 deletions(-)
 
 diff --git a/drivers/sdw/sdw_cnl.c b/drivers/sdw/sdw_cnl.c
-index 21a61b4..a5fc6db 100644
+index 21a61b4f010a..a5fc6db79f83 100644
 --- a/drivers/sdw/sdw_cnl.c
 +++ b/drivers/sdw/sdw_cnl.c
 @@ -79,6 +79,12 @@ static inline void cnl_sdw_port_reg_writel(u32 __iomem *base, int offset,

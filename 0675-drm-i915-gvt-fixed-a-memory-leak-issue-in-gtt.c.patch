@@ -14,7 +14,7 @@ Signed-off-by: Min He <min.he@intel.com>
  2 files changed, 6 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/cfg_space.c b/drivers/gpu/drm/i915/gvt/cfg_space.c
-index 4cf3f1c..71a815d 100644
+index 4cf3f1c00cd2..71a815d81f2d 100644
 --- a/drivers/gpu/drm/i915/gvt/cfg_space.c
 +++ b/drivers/gpu/drm/i915/gvt/cfg_space.c
 @@ -173,8 +173,6 @@ int map_gttmmio(struct intel_vgpu *vgpu, bool map)
@@ -27,7 +27,7 @@ index 4cf3f1c..71a815d 100644
  				__func__, start, end, map);
  
 diff --git a/drivers/gpu/drm/i915/gvt/gtt.c b/drivers/gpu/drm/i915/gvt/gtt.c
-index ddc7257..5643397 100644
+index ddc725728bf8..56433977d19a 100644
 --- a/drivers/gpu/drm/i915/gvt/gtt.c
 +++ b/drivers/gpu/drm/i915/gvt/gtt.c
 @@ -1594,7 +1594,7 @@ static void free_ggtt_virtual_page_table(struct intel_vgpu_mm *mm)

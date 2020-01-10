@@ -17,7 +17,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  2 files changed, 86 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/misc/mei/hbm.c b/drivers/misc/mei/hbm.c
-index 29a202f..42e9071 100644
+index 29a202f83458..42e907170348 100644
 --- a/drivers/misc/mei/hbm.c
 +++ b/drivers/misc/mei/hbm.c
 @@ -65,6 +65,7 @@ const char *mei_hbm_state_str(enum mei_hbm_state state)
@@ -141,7 +141,7 @@ index 29a202f..42e9071 100644
  		dev_dbg(dev->dev, "hbm: client connect response: message received.\n");
  		mei_hbm_cl_res(dev, cl_cmd, MEI_FOP_CONNECT);
 diff --git a/drivers/misc/mei/hbm.h b/drivers/misc/mei/hbm.h
-index a2025a5..0171a7e 100644
+index a2025a5083a3..0171a7e79bab 100644
 --- a/drivers/misc/mei/hbm.h
 +++ b/drivers/misc/mei/hbm.h
 @@ -26,6 +26,7 @@ struct mei_cl;

@@ -14,7 +14,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  3 files changed, 21 insertions(+), 15 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index d6b2e71..fd17560 100644
+index d6b2e71802dc..fd17560c0195 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -276,7 +276,7 @@ static int __inode_security_revalidate(struct inode *inode,
@@ -134,7 +134,7 @@ index d6b2e71..fd17560 100644
  	spin_lock(&isec->lock);
  	isec->initialized = LABEL_INVALID;
 diff --git a/security/selinux/include/objsec.h b/security/selinux/include/objsec.h
-index 2586fbc..3304a1e 100644
+index 2586fbc7e38c..3304a1ee58a4 100644
 --- a/security/selinux/include/objsec.h
 +++ b/security/selinux/include/objsec.h
 @@ -172,4 +172,10 @@ static inline struct file_security_struct *selinux_file(const struct file *file)
@@ -149,7 +149,7 @@ index 2586fbc..3304a1e 100644
 +
  #endif /* _SELINUX_OBJSEC_H_ */
 diff --git a/security/selinux/selinuxfs.c b/security/selinux/selinuxfs.c
-index b5665bd..cc434e4 100644
+index b5665bdc29fc..cc434e45eaae 100644
 --- a/security/selinux/selinuxfs.c
 +++ b/security/selinux/selinuxfs.c
 @@ -1379,7 +1379,7 @@ static int sel_make_bools(struct selinux_fs_info *fsi)

@@ -18,10 +18,10 @@ Signed-off-by: Romli, Khairul Anuar <khairul.anuar.romli@intel.com>
  3 files changed, 24 insertions(+), 14 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 0ae505a..b8a9d6a 100644
+index f3a65581b9fb..876ccbf5dc06 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
-@@ -16286,6 +16286,7 @@ static void intel_hpd_poll_fini(struct drm_device *dev)
+@@ -16281,6 +16281,7 @@ static void intel_hpd_poll_fini(struct drm_device *dev)
  		if (connector->hdcp_shim) {
  			cancel_delayed_work_sync(&connector->hdcp_check_work);
  			cancel_work_sync(&connector->hdcp_prop_work);
@@ -30,7 +30,7 @@ index 0ae505a..b8a9d6a 100644
  	}
  	drm_connector_list_iter_end(&conn_iter);
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 3ed6373..6c073bf 100644
+index 3ed637377ed7..6c073bfdac7d 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -428,6 +428,7 @@ struct intel_connector {
@@ -42,7 +42,7 @@ index 3ed6373..6c073bf 100644
  
  struct intel_digital_connector_state {
 diff --git a/drivers/gpu/drm/i915/intel_hdcp.c b/drivers/gpu/drm/i915/intel_hdcp.c
-index 0cc6a86..ea938b9 100644
+index 0cc6a861bcf8..ea938b9146b0 100644
 --- a/drivers/gpu/drm/i915/intel_hdcp.c
 +++ b/drivers/gpu/drm/i915/intel_hdcp.c
 @@ -679,8 +679,14 @@ static int _intel_hdcp_enable(struct intel_connector *connector)

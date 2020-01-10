@@ -12,7 +12,7 @@ Signed-off-by: Hardik T Shah <hardik.t.shah@intel.com>
  1 file changed, 14 insertions(+)
 
 diff --git a/sound/soc/intel/boards/cnl_cs42l42.c b/sound/soc/intel/boards/cnl_cs42l42.c
-index 78fb9cc..879aa4e 100644
+index 78fb9cc1389e..879aa4e552f3 100644
 --- a/sound/soc/intel/boards/cnl_cs42l42.c
 +++ b/sound/soc/intel/boards/cnl_cs42l42.c
 @@ -47,6 +47,7 @@ struct cnl_cs42l42_mc_private {

@@ -16,7 +16,7 @@ Signed-off-by: Xiangyang Wu <xiangyang.wu@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index d45b27f..7482320 100644
+index d45b27f55451..7482320a36a8 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -178,10 +178,10 @@ struct acrn_create_vm {

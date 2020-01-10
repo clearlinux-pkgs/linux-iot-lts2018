@@ -28,7 +28,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  5 files changed, 68 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index f5190c5..2202dfc 100644
+index f5190c530dc2..2202dfcdf5a3 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -896,6 +896,7 @@ static int i915_driver_init_early(struct drm_i915_private *dev_priv,
@@ -40,7 +40,7 @@ index f5190c5..2202dfc 100644
  	mutex_init(&dev_priv->backlight_lock);
  	spin_lock_init(&dev_priv->uncore.lock);
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index c129605..65ff6dd 100644
+index c129605ab9a7..65ff6dd2c5a8 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -55,6 +55,7 @@
@@ -82,7 +82,7 @@ index c129605..65ff6dd 100644
  
  #define __raw_write(x, s) \
 diff --git a/drivers/gpu/drm/i915/i915_pvinfo.h b/drivers/gpu/drm/i915/i915_pvinfo.h
-index d1a3e3e..c1089bd 100644
+index d1a3e3e68512..c1089bdedd2e 100644
 --- a/drivers/gpu/drm/i915/i915_pvinfo.h
 +++ b/drivers/gpu/drm/i915/i915_pvinfo.h
 @@ -49,6 +49,15 @@ enum vgt_g2v_type {
@@ -112,7 +112,7 @@ index d1a3e3e..c1089bd 100644
  	u64 magic;		/* VGT_MAGIC */
  	u16 version_major;
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index a6f4f32..e1da295 100644
+index a6f4f32dd71c..e1da295a9c59 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
 @@ -10666,4 +10666,31 @@ enum skl_power_gate {
@@ -148,7 +148,7 @@ index a6f4f32..e1da295 100644
 +
  #endif /* _I915_REG_H_ */
 diff --git a/drivers/gpu/drm/i915/intel_lrc.c b/drivers/gpu/drm/i915/intel_lrc.c
-index c858627..929714a 100644
+index c858627a0a17..929714a5797e 100644
 --- a/drivers/gpu/drm/i915/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/intel_lrc.c
 @@ -468,6 +468,8 @@ static void execlists_submit_ports(struct intel_engine_cs *engine)

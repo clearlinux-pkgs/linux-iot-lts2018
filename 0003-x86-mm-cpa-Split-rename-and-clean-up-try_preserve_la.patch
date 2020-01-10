@@ -28,7 +28,7 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  1 file changed, 60 insertions(+), 61 deletions(-)
 
 diff --git a/arch/x86/mm/pageattr.c b/arch/x86/mm/pageattr.c
-index e2d4b25..ef7a230 100644
+index e2d4b25c7aa4..ef7a230b6742 100644
 --- a/arch/x86/mm/pageattr.c
 +++ b/arch/x86/mm/pageattr.c
 @@ -421,18 +421,18 @@ pte_t *lookup_address_in_pgd(pgd_t *pgd, unsigned long address,

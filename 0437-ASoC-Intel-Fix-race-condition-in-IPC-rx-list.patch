@@ -21,7 +21,7 @@ Reviewed-by: Wasko, Michal <michal.wasko@intel.com>
  1 file changed, 2 insertions(+), 3 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index 9370c47..0e7b5ce 100644
+index 9370c474c618..0e7b5ce64b9e 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -420,6 +420,7 @@ static struct ipc_message *skl_ipc_reply_get_msg(struct sst_generic_ipc *ipc,

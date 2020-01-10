@@ -14,7 +14,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 82c38fb..8f09b0a 100644
+index 72eacb50442e..d73183a23c7d 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -15541,7 +15541,7 @@ int intel_modeset_init(struct drm_device *dev)

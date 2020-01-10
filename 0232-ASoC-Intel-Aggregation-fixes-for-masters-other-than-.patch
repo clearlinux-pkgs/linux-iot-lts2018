@@ -10,7 +10,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 5 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 95a2b66..6bd9174 100644
+index 95a2b6672dcb..6bd91744ee1a 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -1908,12 +1908,11 @@ struct skl_sdw_caps_cfg {

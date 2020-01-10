@@ -26,7 +26,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  4 files changed, 83 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/i915_debugfs.c b/drivers/gpu/drm/i915/i915_debugfs.c
-index 4a1330a..c8800a9 100644
+index 4a1330a42a28..c8800a9a89fc 100644
 --- a/drivers/gpu/drm/i915/i915_debugfs.c
 +++ b/drivers/gpu/drm/i915/i915_debugfs.c
 @@ -1943,6 +1943,36 @@ static void describe_ctx_ring(struct seq_file *m, struct intel_ring *ring)
@@ -67,7 +67,7 @@ index 4a1330a..c8800a9 100644
  		struct i915_gem_context *ctx, struct intel_ring *ring,
  		struct intel_engine_cs *engine)
 diff --git a/drivers/gpu/drm/i915/i915_request.c b/drivers/gpu/drm/i915/i915_request.c
-index 5c2c93c..1bd2a7e 100644
+index 5c2c93cbab12..1bd2a7ef1885 100644
 --- a/drivers/gpu/drm/i915/i915_request.c
 +++ b/drivers/gpu/drm/i915/i915_request.c
 @@ -1054,6 +1054,7 @@ void i915_request_add(struct i915_request *request)
@@ -79,7 +79,7 @@ index 5c2c93c..1bd2a7e 100644
  	/*
  	 * Make sure that no request gazumped us - if it was allocated after
 diff --git a/drivers/gpu/drm/i915/i915_trace.h b/drivers/gpu/drm/i915/i915_trace.h
-index b50c6b8..af592e3 100644
+index b50c6b829715..af592e3d09a9 100644
 --- a/drivers/gpu/drm/i915/i915_trace.h
 +++ b/drivers/gpu/drm/i915/i915_trace.h
 @@ -679,6 +679,53 @@ DEFINE_EVENT(i915_request, i915_request_add,
@@ -137,7 +137,7 @@ index b50c6b8..af592e3 100644
  DEFINE_EVENT(i915_request, i915_request_submit,
  	     TP_PROTO(struct i915_request *rq),
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 1c96e92..1beb040 100644
+index 1c96e927e91a..1beb040b846f 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -1394,6 +1394,11 @@ static inline bool intel_irqs_enabled(struct drm_i915_private *dev_priv)

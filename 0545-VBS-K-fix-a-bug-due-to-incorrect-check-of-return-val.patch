@@ -16,7 +16,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
-index 45e17b0..fd2bb27 100644
+index 45e17b086c29..fd2bb27af66e 100644
 --- a/drivers/vbs/vbs_rng.c
 +++ b/drivers/vbs/vbs_rng.c
 @@ -256,8 +256,8 @@ static int handle_kick(int client_id, unsigned long *ioreqs_map)

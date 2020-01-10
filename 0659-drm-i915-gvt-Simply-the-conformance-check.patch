@@ -27,7 +27,7 @@ Signed-off-by: Xinyun Liu <xinyun.liu@intel.com>
  3 files changed, 37 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/cmd_parser.c b/drivers/gpu/drm/i915/gvt/cmd_parser.c
-index d69cc8e..150ba0f 100644
+index d69cc8e63a18..150ba0f07a5d 100644
 --- a/drivers/gpu/drm/i915/gvt/cmd_parser.c
 +++ b/drivers/gpu/drm/i915/gvt/cmd_parser.c
 @@ -966,6 +966,32 @@ static int cmd_handler_lri(struct parser_exec_state *s)
@@ -64,7 +64,7 @@ index d69cc8e..150ba0f 100644
  	return ret;
  }
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 882859c..7da1e9b 100644
+index 882859c20332..7da1e9bad5cc 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -239,6 +239,7 @@ struct intel_vgpu {
@@ -76,7 +76,7 @@ index 882859c..7da1e9b 100644
  
  /* validating GM healthy status*/
 diff --git a/drivers/gpu/drm/i915/gvt/mmio.c b/drivers/gpu/drm/i915/gvt/mmio.c
-index 4cb3f72..b6a974f 100644
+index 4cb3f72ab56a..b6a974f55805 100644
 --- a/drivers/gpu/drm/i915/gvt/mmio.c
 +++ b/drivers/gpu/drm/i915/gvt/mmio.c
 @@ -213,6 +213,14 @@ int intel_vgpu_emulate_mmio_write(struct intel_vgpu *vgpu, uint64_t pa,

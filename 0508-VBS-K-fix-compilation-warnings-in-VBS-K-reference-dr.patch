@@ -12,7 +12,7 @@ Reviewed-on:
  1 file changed, 27 insertions(+), 23 deletions(-)
 
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
-index cdfed63..88f6108 100644
+index cdfed63bb1ad..88f6108ca2e8 100644
 --- a/drivers/vbs/vbs_rng.c
 +++ b/drivers/vbs/vbs_rng.c
 @@ -124,15 +124,17 @@ static int vbs_rng_connection_cnt = 0;

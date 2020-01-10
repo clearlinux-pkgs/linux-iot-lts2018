@@ -21,7 +21,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
 
 diff --git a/drivers/misc/mei/dal/acp_format.h b/drivers/misc/mei/dal/acp_format.h
 new file mode 100644
-index 0000000..7fdef34
+index 000000000000..7fdef3407152
 --- /dev/null
 +++ b/drivers/misc/mei/dal/acp_format.h
 @@ -0,0 +1,198 @@
@@ -225,7 +225,7 @@ index 0000000..7fdef34
 +#endif /* _ACP_FORMAT_H */
 diff --git a/drivers/misc/mei/dal/acp_parser.c b/drivers/misc/mei/dal/acp_parser.c
 new file mode 100644
-index 0000000..462bd48
+index 000000000000..462bd4860692
 --- /dev/null
 +++ b/drivers/misc/mei/dal/acp_parser.c
 @@ -0,0 +1,507 @@
@@ -738,7 +738,7 @@ index 0000000..462bd48
 +}
 diff --git a/drivers/misc/mei/dal/acp_parser.h b/drivers/misc/mei/dal/acp_parser.h
 new file mode 100644
-index 0000000..1de625d
+index 000000000000..1de625de54f2
 --- /dev/null
 +++ b/drivers/misc/mei/dal/acp_parser.h
 @@ -0,0 +1,38 @@

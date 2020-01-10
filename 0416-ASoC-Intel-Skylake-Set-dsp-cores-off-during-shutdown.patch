@@ -27,7 +27,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  2 files changed, 10 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.c b/sound/soc/intel/skylake/skl-sst-dsp.c
-index 485c8b8..0f5e497 100644
+index 485c8b8c38a1..0f5e497e6f93 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.c
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.c
 @@ -310,6 +310,7 @@ int skl_dsp_disable_core(struct sst_dsp *ctx, unsigned int core_mask)
@@ -39,7 +39,7 @@ index 485c8b8..0f5e497 100644
  int skl_dsp_boot(struct sst_dsp *ctx)
  {
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 44718e8..cd24989 100644
+index 44718e849bd0..cd24989d1918 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1110,6 +1110,15 @@ static void skl_shutdown(struct pci_dev *pci)

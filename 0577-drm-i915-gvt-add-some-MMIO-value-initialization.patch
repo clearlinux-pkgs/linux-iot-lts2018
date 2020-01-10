@@ -21,7 +21,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  2 files changed, 16 insertions(+), 25 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/handlers.c b/drivers/gpu/drm/i915/gvt/handlers.c
-index e185532..495d6a2 100644
+index e1855328eba6..495d6a298924 100644
 --- a/drivers/gpu/drm/i915/gvt/handlers.c
 +++ b/drivers/gpu/drm/i915/gvt/handlers.c
 @@ -413,27 +413,9 @@ static int lcpll_ctl_mmio_write(struct intel_vgpu *vgpu, unsigned int offset,
@@ -73,7 +73,7 @@ index e185532..495d6a2 100644
  	MMIO_RO(PCH_PORT_HOTPLUG, D_ALL, 0,
  		PORTA_HOTPLUG_STATUS_MASK
 diff --git a/drivers/gpu/drm/i915/gvt/mmio.c b/drivers/gpu/drm/i915/gvt/mmio.c
-index 9bb9a85..4149eae 100644
+index 9bb9a85c992c..4149eae235b5 100644
 --- a/drivers/gpu/drm/i915/gvt/mmio.c
 +++ b/drivers/gpu/drm/i915/gvt/mmio.c
 @@ -282,6 +282,15 @@ void intel_vgpu_reset_mmio(struct intel_vgpu *vgpu, bool dmlr)

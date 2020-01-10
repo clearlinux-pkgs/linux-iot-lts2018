@@ -13,7 +13,7 @@ Signed-off-by: Wei Liu <weix.w.liu@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/Kconfig b/drivers/dma-buf/hyper_dmabuf/Kconfig
-index 999900b..1d91a11 100644
+index 999900b97625..1d91a114ba61 100644
 --- a/drivers/dma-buf/hyper_dmabuf/Kconfig
 +++ b/drivers/dma-buf/hyper_dmabuf/Kconfig
 @@ -3,7 +3,7 @@ menu "hyper_dmabuf options"

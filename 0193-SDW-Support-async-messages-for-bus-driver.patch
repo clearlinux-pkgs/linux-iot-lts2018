@@ -23,7 +23,7 @@ Reviewed-on:
  3 files changed, 77 insertions(+), 7 deletions(-)
 
 diff --git a/drivers/sdw/sdw.c b/drivers/sdw/sdw.c
-index 71f1532..5f4aea0 100644
+index 71f1532657da..5f4aea04a85b 100644
 --- a/drivers/sdw/sdw.c
 +++ b/drivers/sdw/sdw.c
 @@ -419,13 +419,12 @@ void sdw_lock_mstr(struct sdw_master *mstr)
@@ -139,7 +139,7 @@ index 71f1532..5f4aea0 100644
  	mutex_lock(&sdw_core.core_lock);
  	list_add_tail(&sdw_bus->bus_node, &sdw_core.bus_list);
 diff --git a/drivers/sdw/sdw_priv.h b/drivers/sdw/sdw_priv.h
-index 5ec3edc..42e9484 100644
+index 5ec3edc30d27..42e948440481 100644
 --- a/drivers/sdw/sdw_priv.h
 +++ b/drivers/sdw/sdw_priv.h
 @@ -196,6 +196,7 @@ struct sdw_bus {
@@ -163,7 +163,7 @@ index 5ec3edc..42e9484 100644
  
  #endif /* _LINUX_SDW_PRIV_H */
 diff --git a/include/linux/sdw_bus.h b/include/linux/sdw_bus.h
-index 01c846b..d16579b 100644
+index 01c846b0c695..d16579b35f8a 100644
 --- a/include/linux/sdw_bus.h
 +++ b/include/linux/sdw_bus.h
 @@ -337,6 +337,29 @@ struct sdw_slv_bra_capabilities {

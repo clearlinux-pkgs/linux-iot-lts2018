@@ -10,7 +10,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 5 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 67e8a1f..96cb7e1 100644
+index 67e8a1f14138..96cb7e1d45ce 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -256,6 +256,11 @@ static void skl_tplg_update_params(struct skl_module_fmt *fmt,

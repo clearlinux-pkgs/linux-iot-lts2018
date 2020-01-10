@@ -24,7 +24,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 1606aee..b2f62a2 100644
+index 1606aee09306..b2f62a2b5d95 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -4633,6 +4633,7 @@ static int skl_tplg_mfest_fill_dmactrl(struct device *dev,

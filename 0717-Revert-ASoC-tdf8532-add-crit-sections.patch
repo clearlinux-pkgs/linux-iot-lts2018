@@ -15,7 +15,7 @@ Signed-off-by: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
  2 files changed, 39 insertions(+), 55 deletions(-)
 
 diff --git a/sound/soc/codecs/tdf8532.c b/sound/soc/codecs/tdf8532.c
-index 9fc73b6..02e63f9 100644
+index 9fc73b69611c..02e63f95512b 100644
 --- a/sound/soc/codecs/tdf8532.c
 +++ b/sound/soc/codecs/tdf8532.c
 @@ -21,11 +21,8 @@
@@ -194,7 +194,7 @@ index 9fc73b6..02e63f9 100644
  		dev_err(&i2c->dev, "Failed to register codec: %d\n", ret);
  		goto out;
 diff --git a/sound/soc/codecs/tdf8532.h b/sound/soc/codecs/tdf8532.h
-index 0f35407..39353a0 100644
+index 0f3540707580..39353a04b3ba 100644
 --- a/sound/soc/codecs/tdf8532.h
 +++ b/sound/soc/codecs/tdf8532.h
 @@ -96,7 +96,6 @@ struct tdf8532_priv {

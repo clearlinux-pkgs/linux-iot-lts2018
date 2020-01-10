@@ -19,7 +19,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/sdw/sdw_cnl_priv.h b/drivers/sdw/sdw_cnl_priv.h
-index 504df88..b7f44e1 100644
+index 504df88d681a..b7f44e1f9d6f 100644
 --- a/drivers/sdw/sdw_cnl_priv.h
 +++ b/drivers/sdw/sdw_cnl_priv.h
 @@ -28,12 +28,13 @@

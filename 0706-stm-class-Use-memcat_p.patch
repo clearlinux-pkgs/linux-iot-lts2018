@@ -14,7 +14,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  1 file changed, 1 insertion(+), 28 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/policy.c b/drivers/hwtracing/stm/policy.c
-index 5e51bed..0910ec8 100644
+index 5e51bed0787b..0910ec807187 100644
 --- a/drivers/hwtracing/stm/policy.c
 +++ b/drivers/hwtracing/stm/policy.c
 @@ -202,33 +202,6 @@ static struct configfs_attribute *stp_policy_node_attrs[] = {

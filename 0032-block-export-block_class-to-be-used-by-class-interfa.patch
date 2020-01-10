@@ -13,7 +13,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/block/genhd.c b/block/genhd.c
-index 2b2a936..19acb96 100644
+index 2b2a936cf848..19acb969f408 100644
 --- a/block/genhd.c
 +++ b/block/genhd.c
 @@ -1303,6 +1303,7 @@ static void disk_release(struct device *dev)

@@ -12,7 +12,7 @@ Signed-off-by: Min He <min.he@intel.com>
  1 file changed, 3 insertions(+), 6 deletions(-)
 
 diff --git a/security/security.c b/security/security.c
-index e0651d3..11b1154 100644
+index e0651d3b2e41..11b11546c4e7 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -955,9 +955,9 @@ int security_inode_init_security(struct inode *inode, struct inode *dir,

@@ -11,7 +11,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  2 files changed, 6 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/misc/mei/debugfs.c b/drivers/misc/mei/debugfs.c
-index 67689cf..0a254cc 100644
+index 67689cf4e52d..0a254cceb2fa 100644
 --- a/drivers/misc/mei/debugfs.c
 +++ b/drivers/misc/mei/debugfs.c
 @@ -36,7 +36,7 @@ static ssize_t mei_dbgfs_read_meclients(struct file *fp, char __user *ubuf,
@@ -42,7 +42,7 @@ index 67689cf..0a254cc 100644
  			mei_me_cl_put(me_cl);
  		}
 diff --git a/drivers/misc/mei/hw.h b/drivers/misc/mei/hw.h
-index b4e0002..0a58234 100644
+index b4e00028ad0a..0a5823472bd7 100644
 --- a/drivers/misc/mei/hw.h
 +++ b/drivers/misc/mei/hw.h
 @@ -340,7 +340,8 @@ struct mei_client_properties {

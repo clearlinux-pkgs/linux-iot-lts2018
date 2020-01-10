@@ -45,7 +45,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  create mode 100644 tools/rpmb/rpmb.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 20d2bec..6d38f98 100644
+index 20d2beca5308..6d38f9824370 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -12541,6 +12541,7 @@ F:	drivers/char/rpmb/*
@@ -57,7 +57,7 @@ index 20d2bec..6d38f98 100644
  RTL2830 MEDIA DRIVER
  M:	Antti Palosaari <crope@iki.fi>
 diff --git a/tools/Makefile b/tools/Makefile
-index be02c8b..72f6446 100644
+index be02c8b904db..72f644639fcc 100644
 --- a/tools/Makefile
 +++ b/tools/Makefile
 @@ -22,6 +22,7 @@ help:
@@ -129,7 +129,7 @@ index be02c8b..72f6446 100644
  		gpio_clean objtool_clean leds_clean wmi_clean
 diff --git a/tools/rpmb/.gitignore b/tools/rpmb/.gitignore
 new file mode 100644
-index 0000000..218f680
+index 000000000000..218f680548e6
 --- /dev/null
 +++ b/tools/rpmb/.gitignore
 @@ -0,0 +1,2 @@
@@ -137,7 +137,7 @@ index 0000000..218f680
 +rpmb
 diff --git a/tools/rpmb/Makefile b/tools/rpmb/Makefile
 new file mode 100644
-index 0000000..c99d5f9
+index 000000000000..c99d5f9e9439
 --- /dev/null
 +++ b/tools/rpmb/Makefile
 @@ -0,0 +1,38 @@
@@ -181,7 +181,7 @@ index 0000000..c99d5f9
 +	$(INSTALL) $(prog) $(DESTDIR)$(bindir)
 diff --git a/tools/rpmb/rpmb.c b/tools/rpmb/rpmb.c
 new file mode 100644
-index 0000000..1a507db
+index 000000000000..1a507db2739e
 --- /dev/null
 +++ b/tools/rpmb/rpmb.c
 @@ -0,0 +1,1020 @@

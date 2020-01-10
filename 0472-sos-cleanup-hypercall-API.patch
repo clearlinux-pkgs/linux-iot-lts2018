@@ -20,7 +20,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  3 files changed, 283 insertions(+), 337 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 97c20d8..32de7ae 100644
+index 97c20d82154f..32de7aeb30a1 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -92,6 +92,16 @@ static struct device *vhm_device;
@@ -317,7 +317,7 @@ index 97c20d8..32de7ae 100644
  	}
  
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 0f3f6c1..11ca6b8 100644
+index 0f3f6c1c5f4c..11ca6b86baed 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -48,341 +48,97 @@
@@ -701,7 +701,7 @@ index 0f3f6c1..11ca6b8 100644
 +	return  acrn_hypercall2(HC_VM_GPA2HPA, vmid, addr);
  }
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index ce579e3..35bb48a 100644
+index ce579e3734ff..35bb48ae6cd3 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -52,14 +52,12 @@

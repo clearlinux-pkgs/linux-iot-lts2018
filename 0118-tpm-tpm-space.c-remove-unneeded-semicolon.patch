@@ -16,7 +16,7 @@ Reviewed-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/char/tpm/tpm2-space.c b/drivers/char/tpm/tpm2-space.c
-index d2e101b..dcdfde3 100644
+index d2e101b32482..dcdfde3c253e 100644
 --- a/drivers/char/tpm/tpm2-space.c
 +++ b/drivers/char/tpm/tpm2-space.c
 @@ -373,7 +373,7 @@ static int tpm2_map_response_header(struct tpm_chip *chip, u32 cc, u8 *rsp,

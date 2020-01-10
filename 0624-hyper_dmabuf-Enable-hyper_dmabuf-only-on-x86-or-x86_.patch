@@ -14,7 +14,7 @@ Reviewed-by: Mateusz Polrola <mateuszx.potrola@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/Kconfig b/drivers/dma-buf/hyper_dmabuf/Kconfig
-index 8899216..999900b 100644
+index 88992167c645..999900b97625 100644
 --- a/drivers/dma-buf/hyper_dmabuf/Kconfig
 +++ b/drivers/dma-buf/hyper_dmabuf/Kconfig
 @@ -3,6 +3,7 @@ menu "hyper_dmabuf options"

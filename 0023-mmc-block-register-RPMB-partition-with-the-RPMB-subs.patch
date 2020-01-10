@@ -27,11 +27,11 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
 Tested-by: Avri Altman <avri.altman@sandisk.com>
 ---
  drivers/mmc/core/Kconfig |   1 +
- drivers/mmc/core/block.c | 222 ++++++++++++++++++++++++++++++++++++++-
- 2 files changed, 220 insertions(+), 3 deletions(-)
+ drivers/mmc/core/block.c | 216 +++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 217 insertions(+)
 
 diff --git a/drivers/mmc/core/Kconfig b/drivers/mmc/core/Kconfig
-index 42e8906..96c7ff6 100644
+index 42e89060cd41..96c7ff63178c 100644
 --- a/drivers/mmc/core/Kconfig
 +++ b/drivers/mmc/core/Kconfig
 @@ -36,6 +36,7 @@ config PWRSEQ_SIMPLE
@@ -43,7 +43,7 @@ index 42e8906..96c7ff6 100644
  	help
  	  Say Y here to enable the MMC block device driver support.
 diff --git a/drivers/mmc/core/block.c b/drivers/mmc/core/block.c
-index eee004f..18054f8 100644
+index 60eac66dc9f0..eff40c2a61d4 100644
 --- a/drivers/mmc/core/block.c
 +++ b/drivers/mmc/core/block.c
 @@ -44,6 +44,7 @@
@@ -54,27 +54,7 @@ index eee004f..18054f8 100644
  
  #include <linux/uaccess.h>
  
-@@ -409,8 +410,8 @@ static int mmc_blk_ioctl_copy_to_user(struct mmc_ioc_cmd __user *ic_ptr,
- 	return 0;
- }
- 
--static int ioctl_rpmb_card_status_poll(struct mmc_card *card, u32 *status,
--				       u32 retries_max)
-+static int ioctl_mmc_blk_rpmb_status_poll(struct mmc_card *card, u32 *status,
-+					  u32 retries_max)
- {
- 	int err;
- 	u32 retry_count = 0;
-@@ -617,7 +618,7 @@ static int __mmc_blk_ioctl_cmd(struct mmc_card *card, struct mmc_blk_data *md,
- 		 * Ensure RPMB command has completed by polling CMD13
- 		 * "Send Status".
- 		 */
--		err = ioctl_rpmb_card_status_poll(card, &status, 5);
-+		err = ioctl_mmc_blk_rpmb_status_poll(card, &status, 5);
- 		if (err)
- 			dev_err(mmc_dev(card->host),
- 					"%s: Card Status=0x%08X, error %d\n",
-@@ -1121,6 +1122,217 @@ static void mmc_blk_issue_drv_op(struct mmc_queue *mq, struct request *req)
+@@ -1084,6 +1085,217 @@ static void mmc_blk_issue_drv_op(struct mmc_queue *mq, struct request *req)
  	blk_mq_end_request(req, ret ? BLK_STS_IOERR : BLK_STS_OK);
  }
  
@@ -292,7 +272,7 @@ index eee004f..18054f8 100644
  static void mmc_blk_issue_discard_rq(struct mmc_queue *mq, struct request *req)
  {
  	struct mmc_blk_data *md = mq->blkdata;
-@@ -2958,6 +3170,9 @@ static int mmc_blk_probe(struct mmc_card *card)
+@@ -2915,6 +3127,9 @@ static int mmc_blk_probe(struct mmc_card *card)
  			goto out;
  	}
  
@@ -302,7 +282,7 @@ index eee004f..18054f8 100644
  	/* Add two debugfs entries */
  	mmc_blk_add_debugfs(card, md);
  
-@@ -2986,6 +3201,7 @@ static void mmc_blk_remove(struct mmc_card *card)
+@@ -2943,6 +3158,7 @@ static void mmc_blk_remove(struct mmc_card *card)
  	struct mmc_blk_data *md = dev_get_drvdata(&card->dev);
  
  	mmc_blk_remove_debugfs(card, md);

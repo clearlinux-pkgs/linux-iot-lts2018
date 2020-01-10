@@ -17,7 +17,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  2 files changed, 2 deletions(-)
 
 diff --git a/drivers/misc/mei/bus-fixup.c b/drivers/misc/mei/bus-fixup.c
-index 198e030..99b386b 100644
+index 198e030e5b3d..99b386b18649 100644
 --- a/drivers/misc/mei/bus-fixup.c
 +++ b/drivers/misc/mei/bus-fixup.c
 @@ -17,7 +17,6 @@
@@ -29,7 +29,7 @@ index 198e030..99b386b 100644
  #include <linux/slab.h>
  #include <linux/uuid.h>
 diff --git a/drivers/misc/vmw_vmci/vmci_host.c b/drivers/misc/vmw_vmci/vmci_host.c
-index 83e0c95..be732e5 100644
+index 83e0c95d20a4..be732e5ead75 100644
 --- a/drivers/misc/vmw_vmci/vmci_host.c
 +++ b/drivers/misc/vmw_vmci/vmci_host.c
 @@ -15,7 +15,6 @@

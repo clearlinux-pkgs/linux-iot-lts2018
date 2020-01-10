@@ -19,7 +19,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  6 files changed, 18 insertions(+), 31 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index e36a5e2..d3fd572 100644
+index e36a5e225e12..d3fd572c1642 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -189,12 +189,12 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -64,7 +64,7 @@ index e36a5e2..d3fd572 100644
  		}
  
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 94a9593..b273847 100644
+index 94a95933d51e..b2738474afaf 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -57,9 +57,9 @@ inline long hcall_create_vm(unsigned long vminfo)
@@ -92,7 +92,7 @@ index 94a9593..b273847 100644
  {
  	return acrn_hypercall2(HC_VM_SET_MEMMAP, vmid, memmap);
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index aa61fbe..23f80ac 100644
+index aa61fbed2596..23f80acd92f6 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -141,13 +141,16 @@ struct vhm_request_buffer {
@@ -117,7 +117,7 @@ index aa61fbe..23f80ac 100644
  
  struct acrn_set_ioreq_buffer {
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index fa32243..eb1d4c9 100644
+index fa32243a6407..eb1d4c974a3e 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -70,10 +70,9 @@
@@ -134,7 +134,7 @@ index fa32243..eb1d4c9 100644
  /* IRQ and Interrupts */
  #define HC_ID_IRQ_BASE              0x100UL
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 5447e95..b40f8f8 100644
+index 5447e951bf4b..b40f8f898046 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -138,7 +138,7 @@ static inline long acrn_hypercall4(unsigned long hcall_id, unsigned long param1,
@@ -147,7 +147,7 @@ index 5447e95..b40f8f8 100644
  inline long hcall_destroy_vm(unsigned long vmid);
  inline long hcall_query_vm_state(unsigned long vmid);
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 79d91a8..e157d6a 100644
+index 79d91a858226..e157d6a86a66 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -60,10 +60,9 @@

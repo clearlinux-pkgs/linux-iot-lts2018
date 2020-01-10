@@ -24,7 +24,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  2 files changed, 3 insertions(+)
 
 diff --git a/include/sound/hdaudio_ext.h b/include/sound/hdaudio_ext.h
-index 2d93a03..6218167 100644
+index 2d93a039a286..62181677f009 100644
 --- a/include/sound/hdaudio_ext.h
 +++ b/include/sound/hdaudio_ext.h
 @@ -67,6 +67,7 @@ struct hdac_ext_stream {
@@ -36,7 +36,7 @@ index 2d93a03..6218167 100644
  	bool link_locked:1;
  	bool link_prepared;
 diff --git a/sound/hda/ext/hdac_ext_stream.c b/sound/hda/ext/hdac_ext_stream.c
-index 1b2a1c9..0ede36f 100644
+index 1b2a1c996422..0ede36f51e2e 100644
 --- a/sound/hda/ext/hdac_ext_stream.c
 +++ b/sound/hda/ext/hdac_ext_stream.c
 @@ -450,6 +450,8 @@ int snd_hdac_ext_stream_set_spib(struct hdac_bus *bus,

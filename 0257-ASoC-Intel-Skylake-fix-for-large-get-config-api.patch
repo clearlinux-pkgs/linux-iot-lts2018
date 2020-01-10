@@ -19,7 +19,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  3 files changed, 21 insertions(+), 10 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index fa8ef71..13d1898 100644
+index fa8ef710900c..13d1898da7fb 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -1538,5 +1538,5 @@ int skl_get_module_params(struct skl_sst *ctx, u32 *params, int size,
@@ -30,7 +30,7 @@ index fa8ef71..13d1898 100644
 +	return skl_ipc_get_large_config(&ctx->ipc, &msg, params, NULL, 0);
  }
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index b83a307..7b6ce92 100644
+index b83a3076a1e3..7b6ce92c9d0e 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -1002,12 +1002,13 @@ int skl_ipc_set_large_config(struct sst_generic_ipc *ipc,
@@ -90,7 +90,7 @@ index b83a307..7b6ce92 100644
  	}
  
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 0437e4c..e969ac9 100644
+index 0437e4cf1261..e969ac964daa 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -244,7 +244,8 @@ int skl_ipc_set_large_config(struct sst_generic_ipc *ipc,

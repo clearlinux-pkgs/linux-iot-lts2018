@@ -19,7 +19,7 @@ Tested-by: Shah, Hardik T <hardik.t.shah@intel.com>
  2 files changed, 12 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index d012198..3336a23 100644
+index d0121984cf4b..3336a23d9898 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -67,7 +67,11 @@ void skl_dsp_set_astate_cfg(struct skl_sst *ctx, u32 cnt, void *data)
@@ -35,7 +35,7 @@ index d012198..3336a23 100644
  /* set firmware logging state via IPC */
  int skl_dsp_enable_logging(struct sst_generic_ipc *ipc, int core, int enable)
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index 36c22c5..d34ff3f 100644
+index 36c22c57cf90..d34ff3ffeced 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -358,7 +358,11 @@ skl_process_log_buffer(struct sst_dsp *sst, struct skl_ipc_header header)

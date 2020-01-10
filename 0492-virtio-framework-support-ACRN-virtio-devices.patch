@@ -22,7 +22,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  5 files changed, 84 insertions(+)
 
 diff --git a/drivers/virtio/Kconfig b/drivers/virtio/Kconfig
-index 3589764..51d43fd 100644
+index 35897649c24f..51d43fd4bd2b 100644
 --- a/drivers/virtio/Kconfig
 +++ b/drivers/virtio/Kconfig
 @@ -83,4 +83,21 @@ config VIRTIO_MMIO_CMDLINE_DEVICES
@@ -48,7 +48,7 @@ index 3589764..51d43fd 100644
 +
  endif # VIRTIO_MENU
 diff --git a/drivers/virtio/virtio_pci_common.c b/drivers/virtio/virtio_pci_common.c
-index 45b04bc..770de55 100644
+index 45b04bc91f24..770de550e21a 100644
 --- a/drivers/virtio/virtio_pci_common.c
 +++ b/drivers/virtio/virtio_pci_common.c
 @@ -496,6 +496,35 @@ static const struct dev_pm_ops virtio_pci_pm_ops = {
@@ -88,7 +88,7 @@ index 45b04bc..770de55 100644
  };
  
 diff --git a/drivers/virtio/virtio_pci_legacy.c b/drivers/virtio/virtio_pci_legacy.c
-index de062fb..b21f103 100644
+index de062fb201bc..b21f1034054c 100644
 --- a/drivers/virtio/virtio_pci_legacy.c
 +++ b/drivers/virtio/virtio_pci_legacy.c
 @@ -215,9 +215,19 @@ int virtio_pci_legacy_probe(struct virtio_pci_device *vp_dev)
@@ -112,7 +112,7 @@ index de062fb..b21f103 100644
  	if (pci_dev->revision != VIRTIO_PCI_ABI_VERSION) {
  		printk(KERN_ERR "virtio_pci: expected ABI version %d, got %d\n",
 diff --git a/drivers/virtio/virtio_pci_modern.c b/drivers/virtio/virtio_pci_modern.c
-index 07571da..b7474e0 100644
+index 07571daccfec..b7474e0cce21 100644
 --- a/drivers/virtio/virtio_pci_modern.c
 +++ b/drivers/virtio/virtio_pci_modern.c
 @@ -590,11 +590,26 @@ int virtio_pci_modern_probe(struct virtio_pci_device *vp_dev)
@@ -143,7 +143,7 @@ index 07571da..b7474e0 100644
  		 * virtio device id, same as legacy driver always did.
  		 */
 diff --git a/include/uapi/linux/virtio_ids.h b/include/uapi/linux/virtio_ids.h
-index 6d5c3b2..a950196 100644
+index 6d5c3b2d4f4d..a95019652bb5 100644
 --- a/include/uapi/linux/virtio_ids.h
 +++ b/include/uapi/linux/virtio_ids.h
 @@ -44,4 +44,17 @@

@@ -20,7 +20,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/include/uapi/sound/asoc.h b/include/uapi/sound/asoc.h
-index 5b1411b..a74ca23 100644
+index 5b1411bf79c5..a74ca232f1fc 100644
 --- a/include/uapi/sound/asoc.h
 +++ b/include/uapi/sound/asoc.h
 @@ -88,7 +88,7 @@

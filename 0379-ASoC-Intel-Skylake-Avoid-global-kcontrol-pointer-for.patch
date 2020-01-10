@@ -27,7 +27,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  2 files changed, 14 insertions(+), 17 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 76e83d2..4fa372c 100644
+index 76e83d216e49..4fa372c1bf38 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -319,8 +319,6 @@ struct skl_sst {
@@ -40,7 +40,7 @@ index 76e83d2..4fa372c 100644
  };
  
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index fd04b51..98b668e 100644
+index fd04b5161bd4..98b668e554d8 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -3169,6 +3169,7 @@ int skl_dsp_cb_event(struct skl_sst *ctx, unsigned int event,

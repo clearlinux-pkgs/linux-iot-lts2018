@@ -9,7 +9,7 @@ Signed-off-by: Subhransu S. Prusty <subhransu.s.prusty@intel.com>
  1 file changed, 2 insertions(+)
 
 diff --git a/sound/soc/codecs/rt274.c b/sound/soc/codecs/rt274.c
-index 64a23a6..10475ca 100644
+index 64a23a6fdcaa..10475caa0ea8 100644
 --- a/sound/soc/codecs/rt274.c
 +++ b/sound/soc/codecs/rt274.c
 @@ -1183,6 +1183,7 @@ static int rt274_i2c_probe(struct i2c_client *i2c,

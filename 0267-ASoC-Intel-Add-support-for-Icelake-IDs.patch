@@ -21,7 +21,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  2 files changed, 16 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index bb7f242..dde1aeb 100644
+index bb7f24286d30..dde1aeb11153 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -274,6 +274,14 @@ static const struct skl_dsp_ops dsp_ops[] = {
@@ -40,7 +40,7 @@ index bb7f242..dde1aeb 100644
  
  static int cnl_sdw_bra_pipe_trigger(struct skl_sst *ctx, bool enable,
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index b037b0d..429e15a 100644
+index b037b0d566c0..429e15ab15a7 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1215,6 +1215,11 @@ static const struct snd_soc_acpi_mach sst_cnl_devdata[] = {

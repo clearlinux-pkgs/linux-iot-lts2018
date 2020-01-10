@@ -18,7 +18,7 @@ Tested-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  1 file changed, 12 insertions(+), 10 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index aa13d0f..570622d 100644
+index 05b772477bac..d418a27a75e0 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -718,12 +718,6 @@ int tpm1_auto_startup(struct tpm_chip *chip)

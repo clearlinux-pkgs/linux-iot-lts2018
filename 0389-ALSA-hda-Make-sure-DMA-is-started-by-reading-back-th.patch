@@ -19,7 +19,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 17 insertions(+)
 
 diff --git a/sound/hda/hdac_stream.c b/sound/hda/hdac_stream.c
-index 2ddda76..00954ef 100644
+index 2ddda76ba91d..00954efaa483 100644
 --- a/sound/hda/hdac_stream.c
 +++ b/sound/hda/hdac_stream.c
 @@ -49,6 +49,8 @@ EXPORT_SYMBOL_GPL(snd_hdac_stream_init);

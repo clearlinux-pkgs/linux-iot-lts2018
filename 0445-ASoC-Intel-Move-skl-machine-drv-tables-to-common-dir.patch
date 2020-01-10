@@ -17,7 +17,7 @@ Reviewed-by: Uzieblo, Olgierd <olgierd.uzieblo@intel.com>
  1 file changed, 30 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index e9f172d..fba0fae 100644
+index e9f172d10e3b..fba0faeeb292 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1154,40 +1154,10 @@ static void skl_remove(struct pci_dev *pci)

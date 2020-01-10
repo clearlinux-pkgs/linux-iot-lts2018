@@ -17,7 +17,7 @@ Signed-off-by: Sanyog Kale <sanyog.r.kale@intel.com>
  1 file changed, 68 insertions(+), 15 deletions(-)
 
 diff --git a/drivers/sdw/sdw_bwcalc.c b/drivers/sdw/sdw_bwcalc.c
-index 9c1ebc3..b76ace3 100644
+index 9c1ebc3297d2..b76ace3b0de7 100644
 --- a/drivers/sdw/sdw_bwcalc.c
 +++ b/drivers/sdw/sdw_bwcalc.c
 @@ -27,8 +27,19 @@

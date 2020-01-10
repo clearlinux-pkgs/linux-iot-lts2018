@@ -22,7 +22,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  1 file changed, 24 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/soc-utils.c b/sound/soc/soc-utils.c
-index e0c9349..8503a36 100644
+index e0c93496c0cd..8503a36beff7 100644
 --- a/sound/soc/soc-utils.c
 +++ b/sound/soc/soc-utils.c
 @@ -282,7 +282,28 @@ static const struct snd_soc_component_driver dummy_platform = {

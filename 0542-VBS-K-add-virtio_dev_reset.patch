@@ -19,7 +19,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  3 files changed, 28 insertions(+)
 
 diff --git a/drivers/vbs/vbs.c b/drivers/vbs/vbs.c
-index 9b7a279..7427942 100644
+index 9b7a279bca90..7427942c12f7 100644
 --- a/drivers/vbs/vbs.c
 +++ b/drivers/vbs/vbs.c
 @@ -304,6 +304,25 @@ long virtio_dev_init(struct virtio_dev_info *dev,
@@ -49,7 +49,7 @@ index 9b7a279..7427942 100644
  {
  	return 0;
 diff --git a/include/linux/vbs/vbs.h b/include/linux/vbs/vbs.h
-index 33ca072..30df8eb 100644
+index 33ca072c5a83..30df8ebf68a0 100644
 --- a/include/linux/vbs/vbs.h
 +++ b/include/linux/vbs/vbs.h
 @@ -275,4 +275,12 @@ long virtio_dev_deregister(struct virtio_dev_info *dev);
@@ -66,7 +66,7 @@ index 33ca072..30df8eb 100644
 +long virtio_dev_reset(struct virtio_dev_info *dev);
  #endif
 diff --git a/include/linux/vbs/vbs_common_if.h b/include/linux/vbs/vbs_common_if.h
-index 25d6002..59c6578 100644
+index 25d6002c92bb..59c65786c088 100644
 --- a/include/linux/vbs/vbs_common_if.h
 +++ b/include/linux/vbs/vbs_common_if.h
 @@ -92,5 +92,6 @@ struct vbs_dev_info {

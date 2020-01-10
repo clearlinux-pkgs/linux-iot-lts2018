@@ -16,7 +16,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  4 files changed, 16 insertions(+)
 
 diff --git a/drivers/misc/mei/debugfs.c b/drivers/misc/mei/debugfs.c
-index 7b5df8f..e3beb2a 100644
+index 7b5df8fd6c5a..e3beb2a93f71 100644
 --- a/drivers/misc/mei/debugfs.c
 +++ b/drivers/misc/mei/debugfs.c
 @@ -185,6 +185,8 @@ static ssize_t mei_dbgfs_read_devstate(struct file *fp, char __user *ubuf,
@@ -29,7 +29,7 @@ index 7b5df8f..e3beb2a 100644
  
  	pos += scnprintf(buf + pos, bufsz - pos, "pg:  %s, %s\n",
 diff --git a/drivers/misc/mei/hbm.c b/drivers/misc/mei/hbm.c
-index 13922e4..364f848 100644
+index 13922e43f406..364f848be180 100644
 --- a/drivers/misc/mei/hbm.c
 +++ b/drivers/misc/mei/hbm.c
 @@ -1064,6 +1064,12 @@ static void mei_hbm_config_features(struct mei_device *dev)
@@ -46,7 +46,7 @@ index 13922e4..364f848 100644
  
  /**
 diff --git a/drivers/misc/mei/hw.h b/drivers/misc/mei/hw.h
-index b7d2487..69a59e3 100644
+index b7d2487b8409..69a59e3cda17 100644
 --- a/drivers/misc/mei/hw.h
 +++ b/drivers/misc/mei/hw.h
 @@ -86,6 +86,12 @@
@@ -63,7 +63,7 @@ index b7d2487..69a59e3 100644
  #define MEI_HBM_CMD_OP_MSK                  0x7f
  /* Host bus message command RESPONSE */
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 6552b41..f5110d9 100644
+index 6552b41e47a1..f5110d9900f9 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -433,6 +433,7 @@ struct mei_fw_version {

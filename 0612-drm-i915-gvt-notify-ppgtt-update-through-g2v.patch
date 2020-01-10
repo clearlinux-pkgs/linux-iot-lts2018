@@ -33,7 +33,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  2 files changed, 51 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem_gtt.c b/drivers/gpu/drm/i915/i915_gem_gtt.c
-index b35af8c..cb940a5 100644
+index b35af8c055e1..cb940a583c14 100644
 --- a/drivers/gpu/drm/i915/i915_gem_gtt.c
 +++ b/drivers/gpu/drm/i915/i915_gem_gtt.c
 @@ -999,6 +999,8 @@ static void gen8_ppgtt_clear_4lvl(struct i915_address_space *vm,
@@ -110,7 +110,7 @@ index b35af8c..cb940a5 100644
  
  unwind_pdp:
 diff --git a/drivers/gpu/drm/i915/i915_pvinfo.h b/drivers/gpu/drm/i915/i915_pvinfo.h
-index 740b2da..9c76cab 100644
+index 740b2da14186..9c76cab07010 100644
 --- a/drivers/gpu/drm/i915/i915_pvinfo.h
 +++ b/drivers/gpu/drm/i915/i915_pvinfo.h
 @@ -46,6 +46,9 @@ enum vgt_g2v_type {

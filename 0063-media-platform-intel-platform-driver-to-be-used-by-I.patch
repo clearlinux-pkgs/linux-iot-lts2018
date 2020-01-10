@@ -25,7 +25,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  create mode 100644 include/media/ipu4-acpi.h
 
 diff --git a/drivers/media/platform/intel/Kconfig b/drivers/media/platform/intel/Kconfig
-index 7dc176a..31e117e 100644
+index 7dc176af66f2..31e117e225a7 100644
 --- a/drivers/media/platform/intel/Kconfig
 +++ b/drivers/media/platform/intel/Kconfig
 @@ -93,3 +93,16 @@ config INTEL_IPU4_OX03A10
@@ -46,7 +46,7 @@ index 7dc176a..31e117e 100644
 +        ---help---
 +        I2C bus number of ADV7481 Mondello
 diff --git a/drivers/media/platform/intel/Makefile b/drivers/media/platform/intel/Makefile
-index b6d4f78..cf4cd3b 100644
+index b6d4f786f20b..cf4cd3bfaa9b 100644
 --- a/drivers/media/platform/intel/Makefile
 +++ b/drivers/media/platform/intel/Makefile
 @@ -19,3 +19,5 @@ ccflags-y += -I$(srcpath)/$(src)/../../pci/intel/
@@ -57,7 +57,7 @@ index b6d4f78..cf4cd3b 100644
 +obj-$(CONFIG_VIDEO_INTEL_IPU)   += ipu4-acpi.o
 diff --git a/drivers/media/platform/intel/ipu4-acpi.c b/drivers/media/platform/intel/ipu4-acpi.c
 new file mode 100644
-index 0000000..94f5372
+index 000000000000..94f53727ddbf
 --- /dev/null
 +++ b/drivers/media/platform/intel/ipu4-acpi.c
 @@ -0,0 +1,1068 @@
@@ -1131,7 +1131,7 @@ index 0000000..94f5372
 +MODULE_DESCRIPTION("IPU4 ACPI support");
 diff --git a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 new file mode 100644
-index 0000000..9d2a2a0
+index 000000000000..9d2a2a086395
 --- /dev/null
 +++ b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 @@ -0,0 +1,201 @@
@@ -1338,7 +1338,7 @@ index 0000000..9d2a2a0
 +			ipu4_quirk);
 diff --git a/include/media/ipu4-acpi.h b/include/media/ipu4-acpi.h
 new file mode 100644
-index 0000000..b4c3611
+index 000000000000..b4c3611664f7
 --- /dev/null
 +++ b/include/media/ipu4-acpi.h
 @@ -0,0 +1,27 @@

@@ -17,7 +17,7 @@ Reviewed-on:
  1 file changed, 28 insertions(+), 3 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.c b/sound/soc/intel/skylake/skl-sdw-pcm.c
-index af8d117..504228e 100644
+index af8d117c34ed..504228e2cba5 100644
 --- a/sound/soc/intel/skylake/skl-sdw-pcm.c
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.c
 @@ -24,6 +24,7 @@

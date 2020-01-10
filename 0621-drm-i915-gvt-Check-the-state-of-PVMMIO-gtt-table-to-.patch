@@ -19,7 +19,7 @@ Reviewed-by: He, Min <min.he@intel.com>
  2 files changed, 10 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/cfg_space.c b/drivers/gpu/drm/i915/gvt/cfg_space.c
-index fd461db..505e255 100644
+index fd461db48a8d..505e255c4d8a 100644
 --- a/drivers/gpu/drm/i915/gvt/cfg_space.c
 +++ b/drivers/gpu/drm/i915/gvt/cfg_space.c
 @@ -152,6 +152,11 @@ int map_gttmmio(struct intel_vgpu *vgpu, bool map)
@@ -44,7 +44,7 @@ index fd461db..505e255 100644
  }
  
 diff --git a/drivers/gpu/drm/i915/gvt/gtt.h b/drivers/gpu/drm/i915/gvt/gtt.h
-index 5af949d..b3cfcae 100644
+index 5af949d8b316..b3cfcae4032a 100644
 --- a/drivers/gpu/drm/i915/gvt/gtt.h
 +++ b/drivers/gpu/drm/i915/gvt/gtt.h
 @@ -198,6 +198,9 @@ struct intel_vgpu_gtt {

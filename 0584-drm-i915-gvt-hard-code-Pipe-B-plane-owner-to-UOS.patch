@@ -15,7 +15,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  1 file changed, 7 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.c b/drivers/gpu/drm/i915/gvt/acrngt.c
-index fec5751..346a676 100644
+index fec5751a4bed..346a676d77bc 100644
 --- a/drivers/gpu/drm/i915/gvt/acrngt.c
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.c
 @@ -431,6 +431,13 @@ static int acrngt_sysfs_add_instance(struct acrngt_hvm_params *vp)

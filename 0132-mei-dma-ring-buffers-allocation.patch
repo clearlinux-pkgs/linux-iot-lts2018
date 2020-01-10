@@ -11,13 +11,13 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
 ---
  drivers/misc/mei/Makefile   |   1 +
  drivers/misc/mei/dma-ring.c | 103 ++++++++++++++++++++++++++++++++++++
- drivers/misc/mei/hw-me.c    |   6 +++
+ drivers/misc/mei/hw-me.c    |   4 ++
  drivers/misc/mei/mei_dev.h  |  20 +++++++
- 4 files changed, 130 insertions(+)
+ 4 files changed, 128 insertions(+)
  create mode 100644 drivers/misc/mei/dma-ring.c
 
 diff --git a/drivers/misc/mei/Makefile b/drivers/misc/mei/Makefile
-index f83e2fd..fe9d99d 100644
+index f83e2fdc01d3..fe9d99daeb4d 100644
 --- a/drivers/misc/mei/Makefile
 +++ b/drivers/misc/mei/Makefile
 @@ -9,6 +9,7 @@ mei-objs += hbm.o
@@ -30,7 +30,7 @@ index f83e2fd..fe9d99d 100644
  mei-$(CONFIG_DEBUG_FS) += debugfs.o
 diff --git a/drivers/misc/mei/dma-ring.c b/drivers/misc/mei/dma-ring.c
 new file mode 100644
-index 0000000..3680121
+index 000000000000..368012116196
 --- /dev/null
 +++ b/drivers/misc/mei/dma-ring.c
 @@ -0,0 +1,103 @@
@@ -138,10 +138,10 @@ index 0000000..3680121
 +	return !!dev->dr_dscr[DMA_DSCR_HOST].vaddr;
 +}
 diff --git a/drivers/misc/mei/hw-me.c b/drivers/misc/mei/hw-me.c
-index 60c8c84..4afcb79 100644
+index 60c8c84181a9..bdd51c0910ce 100644
 --- a/drivers/misc/mei/hw-me.c
 +++ b/drivers/misc/mei/hw-me.c
-@@ -1484,13 +1484,19 @@ struct mei_device *mei_me_dev_init(struct pci_dev *pdev,
+@@ -1484,6 +1484,7 @@ struct mei_device *mei_me_dev_init(struct pci_dev *pdev,
  {
  	struct mei_device *dev;
  	struct mei_me_hw *hw;
@@ -149,20 +149,18 @@ index 60c8c84..4afcb79 100644
  
  	dev = devm_kzalloc(&pdev->dev, sizeof(struct mei_device) +
  			   sizeof(struct mei_me_hw), GFP_KERNEL);
- 	if (!dev)
+@@ -1491,6 +1492,9 @@ struct mei_device *mei_me_dev_init(struct pci_dev *pdev,
  		return NULL;
-+
  	hw = to_me_hw(dev);
  
 +	for (i = 0; i < DMA_DSCR_NUM; i++)
 +		dev->dr_dscr[i].size = cfg->dma_size[i];
 +
-+
  	mei_device_init(dev, &pdev->dev, &mei_me_hw_ops);
  	hw->cfg = cfg;
  	dev->fw_f_fw_ver_supported = cfg->fw_ver_supported;
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index fc7a5e3..76c44bc 100644
+index fc7a5e3fbfcd..76c44bc9c3c9 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -122,6 +122,19 @@ struct mei_msg_data {

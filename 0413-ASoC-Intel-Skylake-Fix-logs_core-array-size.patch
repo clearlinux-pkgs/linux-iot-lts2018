@@ -16,7 +16,7 @@ Signed-off-by: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 36e699a..436e036 100644
+index 36e699a1765b..436e0365aa76 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -365,7 +365,7 @@ struct skl_log_state_msg {

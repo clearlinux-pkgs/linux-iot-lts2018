@@ -28,7 +28,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 23 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.c b/sound/soc/intel/skylake/skl-sst-dsp.c
-index 71e31ad..4b16e00 100644
+index 71e31ad0bb3f..4b16e0002cd4 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.c
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.c
 @@ -160,11 +160,24 @@ is_skl_dsp_core_enable(struct sst_dsp *ctx, unsigned int core_mask)

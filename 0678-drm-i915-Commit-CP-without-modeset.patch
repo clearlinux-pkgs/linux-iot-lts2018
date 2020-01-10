@@ -21,7 +21,7 @@ Signed-off-by: Romli, Khairul Anuar <khairul.anuar.romli@intel.com>
  4 files changed, 43 insertions(+), 13 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_ddi.c b/drivers/gpu/drm/i915/intel_ddi.c
-index 4c3c207..897ad63 100644
+index 4c3c207d11d6..897ad63815e0 100644
 --- a/drivers/gpu/drm/i915/intel_ddi.c
 +++ b/drivers/gpu/drm/i915/intel_ddi.c
 @@ -3009,11 +3009,6 @@ static void intel_enable_ddi(struct intel_encoder *encoder,
@@ -46,7 +46,7 @@ index 4c3c207..897ad63 100644
  		intel_disable_ddi_hdmi(encoder, old_crtc_state, old_conn_state);
  	else
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index b8a9d6a..0eb5f4e 100644
+index 876ccbf5dc06..9498352d39ec 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -12655,6 +12655,8 @@ static void intel_atomic_commit_tail(struct drm_atomic_state *state)
@@ -77,7 +77,7 @@ index b8a9d6a..0eb5f4e 100644
  	 * already, but still need the state for the delayed optimization. To
  	 * fix this:
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 6c073bf..10883e0 100644
+index 6c073bfdac7d..10883e04bfe6 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -1942,10 +1942,13 @@ static inline void intel_backlight_device_unregister(struct intel_connector *con
@@ -97,7 +97,7 @@ index 6c073bf..10883e0 100644
  bool is_hdcp_supported(struct drm_i915_private *dev_priv, enum port port);
  
 diff --git a/drivers/gpu/drm/i915/intel_hdcp.c b/drivers/gpu/drm/i915/intel_hdcp.c
-index ea938b9..7f87667 100644
+index ea938b9146b0..7f87667753b3 100644
 --- a/drivers/gpu/drm/i915/intel_hdcp.c
 +++ b/drivers/gpu/drm/i915/intel_hdcp.c
 @@ -806,7 +806,6 @@ void intel_hdcp_atomic_check(struct drm_connector *connector,

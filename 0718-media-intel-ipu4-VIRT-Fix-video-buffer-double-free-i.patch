@@ -19,7 +19,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  5 files changed, 170 insertions(+), 20 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index bd99ba1..2ef0c6d 100644
+index bd99ba14a8af..2ef0c6d86d9b 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -112,6 +112,41 @@ static void ici_put_userpages(struct device *dev,
@@ -132,7 +132,7 @@ index bd99ba1..2ef0c6d 100644
  
  int ici_isys_frame_buf_add_next(
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 6a2c6e1..3fed154 100644
+index 6a2c6e1c34fd..3fed1545327d 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -1156,6 +1156,8 @@ static int stream_fop_open(struct inode *inode, struct file *file)
@@ -145,7 +145,7 @@ index 6a2c6e1..3fed154 100644
  
  out_lib_init:
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
-index b6278f7..dc0be87 100644
+index b6278f7c921b..dc0be874c93b 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 @@ -22,6 +22,7 @@
@@ -280,7 +280,7 @@ index b6278f7..dc0be87 100644
  }
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
-index 322d8ea..26c1577 100644
+index 322d8ea2afc3..26c15772f3fd 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 @@ -65,6 +65,7 @@ int process_enum_nodes(struct ipu4_virtio_req_info *req_info)
@@ -348,7 +348,7 @@ index 322d8ea..26c1577 100644
  		return IPU4_REQ_ERROR;
  	else
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
-index ab06be7..a09af6a 100644
+index ab06be71a4c4..a09af6a931a8 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 @@ -141,6 +141,7 @@ int process_set_format(struct ipu4_virtio_req_info *req_info)

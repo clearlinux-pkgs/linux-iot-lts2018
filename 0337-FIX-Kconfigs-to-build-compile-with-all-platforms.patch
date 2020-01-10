@@ -11,7 +11,7 @@ Signed-off-by: Anamika Lal <anamikax.lal@intel.com>
  2 files changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/sdw/Kconfig b/drivers/sdw/Kconfig
-index 1b7e2cc..660188b 100644
+index 1b7e2cc2ebc3..660188bd2c02 100644
 --- a/drivers/sdw/Kconfig
 +++ b/drivers/sdw/Kconfig
 @@ -1,17 +1,18 @@
@@ -36,7 +36,7 @@ index 1b7e2cc..660188b 100644
  	  SoundWire Slave on FPGA platform for Intel CNL IP
  	  Mostly N for all the cases other than CNL Slave FPGA
 diff --git a/sound/soc/codecs/Kconfig b/sound/soc/codecs/Kconfig
-index 006be9a..934bd6e 100644
+index 006be9a90286..934bd6e4c53f 100644
 --- a/sound/soc/codecs/Kconfig
 +++ b/sound/soc/codecs/Kconfig
 @@ -81,7 +81,6 @@ config SND_SOC_ALL_CODECS

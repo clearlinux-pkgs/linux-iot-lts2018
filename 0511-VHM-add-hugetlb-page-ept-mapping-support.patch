@@ -22,7 +22,7 @@ Reviewed-on:
  5 files changed, 110 insertions(+), 21 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 8590d69..8d083a0 100644
+index 8590d69fa4e6..8d083a09bf06 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -129,6 +129,7 @@ static int vhm_dev_open(struct inode *inodep, struct file *filep)
@@ -34,7 +34,7 @@ index 8590d69..8d083a0 100644
  	vm_mutex_unlock(&vhm_vm_list_lock);
  	filep->private_data = vm;
 diff --git a/drivers/vhm/Kconfig b/drivers/vhm/Kconfig
-index e59b948..4ddb131 100644
+index e59b9487cd65..4ddb1314709a 100644
 --- a/drivers/vhm/Kconfig
 +++ b/drivers/vhm/Kconfig
 @@ -3,6 +3,7 @@ config ACRN_VHM
@@ -46,7 +46,7 @@ index e59b948..4ddb131 100644
  	default n
  	---help---
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index be6a47a..cc08fd9 100644
+index be6a47afad9a..cc08fd9d0965 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -110,31 +110,25 @@ static bool _free_memblk(struct device *dev, u64 vm0_gpa, size_t len)
@@ -202,7 +202,7 @@ index be6a47a..cc08fd9 100644
  		kfree(seg);
  	}
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 5bc7c66..a0a830d 100644
+index 5bc7c666f2ea..a0a830dec3fa 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -117,19 +117,30 @@ struct vm_memseg {
@@ -245,7 +245,7 @@ index 5bc7c66..a0a830d 100644
  };
  
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index e7bc8b2..306bd54 100644
+index e7bc8b2372f7..306bd54c4103 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -96,6 +96,7 @@ struct vhm_vm {

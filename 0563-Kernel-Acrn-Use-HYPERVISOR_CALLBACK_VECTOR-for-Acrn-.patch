@@ -21,7 +21,7 @@ Signed-off-by: Zhao Yakui <yakui.zhao@intel.com>
  create mode 100644 arch/x86/include/asm/acrnhyper.h
 
 diff --git a/arch/x86/acrn/acrn.c b/arch/x86/acrn/acrn.c
-index eea9db8..12ebc4f 100644
+index eea9db84ca89..12ebc4f93611 100644
 --- a/arch/x86/acrn/acrn.c
 +++ b/arch/x86/acrn/acrn.c
 @@ -34,6 +34,10 @@
@@ -90,7 +90,7 @@ index eea9db8..12ebc4f 100644
 +EXPORT_SYMBOL(acrn_setup_intr_irq);
 +EXPORT_SYMBOL(acrn_remove_intr_irq);
 diff --git a/arch/x86/entry/entry_64.S b/arch/x86/entry/entry_64.S
-index ccb5e34..1d1456a 100644
+index ccb5e3486aee..1d1456a30ef1 100644
 --- a/arch/x86/entry/entry_64.S
 +++ b/arch/x86/entry/entry_64.S
 @@ -1191,6 +1191,11 @@ apicinterrupt3 HYPERV_STIMER0_VECTOR \
@@ -107,7 +107,7 @@ index ccb5e34..1d1456a 100644
  idtentry stack_segment		do_stack_segment	has_error_code=1
 diff --git a/arch/x86/include/asm/acrnhyper.h b/arch/x86/include/asm/acrnhyper.h
 new file mode 100644
-index 0000000..1cfdb24
+index 000000000000..1cfdb24de696
 --- /dev/null
 +++ b/arch/x86/include/asm/acrnhyper.h
 @@ -0,0 +1,18 @@
@@ -130,7 +130,7 @@ index 0000000..1cfdb24
 +
 +#endif
 diff --git a/arch/x86/include/asm/hardirq.h b/arch/x86/include/asm/hardirq.h
-index d9069bb..5aa52d2 100644
+index d9069bb26c7f..5aa52d2c1dcd 100644
 --- a/arch/x86/include/asm/hardirq.h
 +++ b/arch/x86/include/asm/hardirq.h
 @@ -37,7 +37,7 @@ typedef struct {
@@ -143,7 +143,7 @@ index d9069bb..5aa52d2 100644
  #endif
  #if IS_ENABLED(CONFIG_HYPERV)
 diff --git a/arch/x86/kernel/irq.c b/arch/x86/kernel/irq.c
-index a975246..f5af4de 100644
+index a975246074b5..f5af4de6ad86 100644
 --- a/arch/x86/kernel/irq.c
 +++ b/arch/x86/kernel/irq.c
 @@ -134,7 +134,7 @@ int arch_show_interrupts(struct seq_file *p, int prec)

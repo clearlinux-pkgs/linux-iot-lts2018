@@ -33,14 +33,14 @@ Change-Id: I293c490be8994bb525e511c8d1b8324b3c70932c
  drivers/gpu/drm/i915/i915_drv.h      |   5 +
  drivers/gpu/drm/i915/i915_params.c   |  52 ++++++
  drivers/gpu/drm/i915/i915_params.h   |   2 +
- drivers/gpu/drm/i915/intel_display.c | 255 ++++++++++++++++++++++++++-
+ drivers/gpu/drm/i915/intel_display.c | 247 ++++++++++++++++++++++++++-
  drivers/gpu/drm/i915/intel_drv.h     |   3 +
  drivers/gpu/drm/i915/intel_pm.c      | 142 ++++++++++++---
  drivers/gpu/drm/i915/intel_sprite.c  |   2 +-
- 11 files changed, 509 insertions(+), 35 deletions(-)
+ 11 files changed, 504 insertions(+), 32 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/display.c b/drivers/gpu/drm/i915/gvt/display.c
-index 73a2dbb..b013d1b 100644
+index 73a2dbbaf79d..b013d1be62db 100644
 --- a/drivers/gpu/drm/i915/gvt/display.c
 +++ b/drivers/gpu/drm/i915/gvt/display.c
 @@ -485,6 +485,22 @@ static void intel_gvt_vblank_work(struct work_struct *w)
@@ -78,7 +78,7 @@ index 73a2dbb..b013d1b 100644
  			port = enc_to_dig_port(
  					&(connector->encoder->base))->base.port;
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.c b/drivers/gpu/drm/i915/gvt/gvt.c
-index 940443f..3105afe 100644
+index 940443f08dfd..3105afe1a6e5 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.c
 +++ b/drivers/gpu/drm/i915/gvt/gvt.c
 @@ -389,6 +389,12 @@ void intel_gvt_clean_device(struct drm_i915_private *dev_priv)
@@ -125,7 +125,7 @@ index 940443f..3105afe 100644
  
  out_clean_types:
 diff --git a/drivers/gpu/drm/i915/gvt/handlers.c b/drivers/gpu/drm/i915/gvt/handlers.c
-index 8fa3bed..ec0886a 100644
+index 8fa3bed75d61..ec0886ac8d2b 100644
 --- a/drivers/gpu/drm/i915/gvt/handlers.c
 +++ b/drivers/gpu/drm/i915/gvt/handlers.c
 @@ -3127,8 +3127,14 @@ static int init_skl_mmio_info(struct intel_gvt *gvt)
@@ -146,7 +146,7 @@ index 8fa3bed..ec0886a 100644
  		       pv_plane_wm_mmio_write);
  	MMIO_PLANES_DH(PLANE_BUF_CFG, D_SKL_PLUS, NULL, NULL);
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 2202dfc..5fa2da2 100644
+index 2202dfcdf5a3..5fa2da278670 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -1346,6 +1346,24 @@ static void i915_welcome_messages(struct drm_i915_private *dev_priv)
@@ -196,7 +196,7 @@ index 2202dfc..5fa2da2 100644
  			goto out_cleanup_hw;
  	}
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index f573f6f..969b45c 100644
+index f573f6ff51c4..969b45cb88ba 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -2683,6 +2683,11 @@ intel_info(const struct drm_i915_private *dev_priv)
@@ -212,7 +212,7 @@ index f573f6f..969b45c 100644
  
  static inline bool intel_vtd_active(void)
 diff --git a/drivers/gpu/drm/i915/i915_params.c b/drivers/gpu/drm/i915/i915_params.c
-index 062190f..4ffdd53 100644
+index 062190f99a28..4ffdd533bddc 100644
 --- a/drivers/gpu/drm/i915/i915_params.c
 +++ b/drivers/gpu/drm/i915/i915_params.c
 @@ -201,6 +201,56 @@ i915_param_named(enable_pvmmio, uint, 0400,
@@ -282,7 +282,7 @@ index 062190f..4ffdd53 100644
  		drm_printf(p, "i915.%s=%s\n", name, *(const char **)x);
  	else
 diff --git a/drivers/gpu/drm/i915/i915_params.h b/drivers/gpu/drm/i915/i915_params.h
-index 40aee5b..6b0f98c 100644
+index 40aee5b37645..6b0f98c37761 100644
 --- a/drivers/gpu/drm/i915/i915_params.h
 +++ b/drivers/gpu/drm/i915/i915_params.h
 @@ -55,6 +55,8 @@ struct drm_printer;
@@ -295,7 +295,7 @@ index 40aee5b..6b0f98c 100644
  	param(bool, alpha_support, IS_ENABLED(CONFIG_DRM_I915_ALPHA_SUPPORT)) \
  	param(bool, enable_hangcheck, true) \
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index c658a63..a8838bc 100644
+index 3c09e96a1b55..c33d45974dda 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -5391,15 +5391,37 @@ static void intel_pre_plane_update(struct intel_crtc_state *old_crtc_state,
@@ -594,7 +594,7 @@ index c658a63..a8838bc 100644
  		if (ret) {
  			drm_mode_config_cleanup(dev);
  			return ret;
-@@ -15736,10 +15968,15 @@ static void intel_modeset_readout_hw_state(struct drm_device *dev)
+@@ -15733,10 +15965,15 @@ static void intel_modeset_readout_hw_state(struct drm_device *dev)
  			struct intel_crtc_state *crtc_state;
  
  			crtc = intel_get_crtc_for_pipe(dev_priv, pipe);
@@ -603,33 +603,18 @@ index c658a63..a8838bc 100644
 +				encoder->base.crtc = NULL;
 +			} else {
 +				crtc_state = to_intel_crtc_state(crtc->base.state);
++
++				encoder->base.crtc = &crtc->base;
++				encoder->get_config(encoder, crtc_state);
  
 -			encoder->base.crtc = &crtc->base;
 -			encoder->get_config(encoder, crtc_state);
-+				encoder->base.crtc = &crtc->base;
-+				encoder->get_config(encoder, crtc_state);
-+
 +			}
  		} else {
  			encoder->base.crtc = NULL;
  		}
-@@ -15905,9 +16142,11 @@ intel_modeset_setup_hw_state(struct drm_device *dev,
- 		intel_sanitize_encoder(encoder);
- 
- 	for_each_intel_crtc(&dev_priv->drm, crtc) {
--		intel_sanitize_crtc(crtc, ctx);
--		intel_dump_pipe_config(crtc, crtc->config,
--				       "[setup_hw_state]");
-+		if (crtc) {
-+			intel_sanitize_crtc(crtc, ctx);
-+			intel_dump_pipe_config(crtc, crtc->config,
-+					"[setup_hw_state]");
-+		}
- 	}
- 
- 	intel_modeset_update_connector_atomic_state(dev);
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index a4b6325..3ed6373 100644
+index a4b6325c219e..3ed637377ed7 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -2127,6 +2127,9 @@ int intel_sprite_set_colorkey_ioctl(struct drm_device *dev, void *data,
@@ -643,7 +628,7 @@ index a4b6325..3ed6373 100644
  		      const struct intel_crtc_state *crtc_state,
  		      const struct intel_plane_state *plane_state);
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 96a0269..b4cdb3d 100644
+index 96a0269e80b3..b4cdb3d85354 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -815,11 +815,14 @@ static int intel_wm_num_levels(struct drm_i915_private *dev_priv)
@@ -936,7 +921,7 @@ index 96a0269..b4cdb3d 100644
  #if IS_ENABLED(CONFIG_DRM_I915_GVT)
  		if (dev_priv->gvt &&
 diff --git a/drivers/gpu/drm/i915/intel_sprite.c b/drivers/gpu/drm/i915/intel_sprite.c
-index 4b89ba3..e10a64a 100644
+index 4b89ba3e021c..e10a64a6265c 100644
 --- a/drivers/gpu/drm/i915/intel_sprite.c
 +++ b/drivers/gpu/drm/i915/intel_sprite.c
 @@ -1039,7 +1039,7 @@ g4x_plane_get_hw_state(struct intel_plane *plane,

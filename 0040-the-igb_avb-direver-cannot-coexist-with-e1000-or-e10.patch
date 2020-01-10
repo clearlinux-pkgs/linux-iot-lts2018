@@ -15,7 +15,7 @@ Signed-off-by: mark gross<mark.gross@intel.com>
  1 file changed, 3 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/staging/igb_avb/Kconfig b/drivers/staging/igb_avb/Kconfig
-index e3da46a..2d3780b 100644
+index e3da46a6f381..2d3780b250c8 100644
 --- a/drivers/staging/igb_avb/Kconfig
 +++ b/drivers/staging/igb_avb/Kconfig
 @@ -1,6 +1,6 @@

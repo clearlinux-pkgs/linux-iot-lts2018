@@ -21,7 +21,7 @@ Signed-off-by: Kareem,Shaik <kareem.m.shaik@intel.com>
  3 files changed, 111 insertions(+), 6 deletions(-)
 
 diff --git a/include/uapi/sound/snd_sst_tokens.h b/include/uapi/sound/snd_sst_tokens.h
-index 5d3d81a..7c01494 100644
+index 5d3d81af0c30..7c0149476820 100644
 --- a/include/uapi/sound/snd_sst_tokens.h
 +++ b/include/uapi/sound/snd_sst_tokens.h
 @@ -243,6 +243,12 @@
@@ -50,7 +50,7 @@ index 5d3d81a..7c01494 100644
  
  #endif
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 5f51deb..87f204b 100644
+index 5f51debc4638..87f204b77415 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -3926,6 +3926,63 @@ static int skl_tplg_get_str_tkn(struct device *dev,
@@ -168,7 +168,7 @@ index 5f51deb..87f204b 100644
  		off += ret;
  	}
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 2883d86..51cc193 100644
+index 2883d86d56fe..51cc193c3353 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -47,6 +47,8 @@

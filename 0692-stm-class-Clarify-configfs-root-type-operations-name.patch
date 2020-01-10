@@ -14,7 +14,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  1 file changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/policy.c b/drivers/hwtracing/stm/policy.c
-index 15d35d8..530448b 100644
+index 15d35d891643..530448bd5a34 100644
 --- a/drivers/hwtracing/stm/policy.c
 +++ b/drivers/hwtracing/stm/policy.c
 @@ -311,7 +311,7 @@ static const struct config_item_type stp_policy_type = {

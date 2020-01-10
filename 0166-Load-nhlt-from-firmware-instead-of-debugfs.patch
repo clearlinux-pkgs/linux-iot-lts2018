@@ -14,7 +14,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 22 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 50f16a0..e2b9c7c 100644
+index 50f16a0f6535..e2b9c7ce2a75 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -886,6 +886,7 @@ static int skl_probe(struct pci_dev *pci,

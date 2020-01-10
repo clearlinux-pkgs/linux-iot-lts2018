@@ -10,7 +10,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 16 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.c b/sound/soc/intel/skylake/skl-sdw-pcm.c
-index e41a3b3..ea9a3e1 100644
+index e41a3b38aa81..ea9a3e14434a 100644
 --- a/sound/soc/intel/skylake/skl-sdw-pcm.c
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.c
 @@ -124,18 +124,6 @@ int cnl_sdw_startup(struct snd_pcm_substream *substream,

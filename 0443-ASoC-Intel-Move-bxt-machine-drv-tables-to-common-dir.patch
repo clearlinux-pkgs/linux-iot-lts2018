@@ -17,7 +17,7 @@ Reviewed-by: Uzieblo, Olgierd <olgierd.uzieblo@intel.com>
  2 files changed, 33 insertions(+), 57 deletions(-)
 
 diff --git a/sound/soc/intel/common/soc-acpi-intel-bxt-match.c b/sound/soc/intel/common/soc-acpi-intel-bxt-match.c
-index f39386e..77cbd98 100644
+index f39386e540d3..77cbd98d3e22 100644
 --- a/sound/soc/intel/common/soc-acpi-intel-bxt-match.c
 +++ b/sound/soc/intel/common/soc-acpi-intel-bxt-match.c
 @@ -8,17 +8,39 @@
@@ -86,7 +86,7 @@ index f39386e..77cbd98 100644
  };
  EXPORT_SYMBOL_GPL(snd_soc_acpi_intel_bxt_machines);
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 3687668..875a487 100644
+index 3687668593ee..875a4875c49f 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1164,11 +1164,6 @@ static struct snd_soc_acpi_codecs kbl_codecs = {

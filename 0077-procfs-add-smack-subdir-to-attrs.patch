@@ -31,7 +31,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  5 files changed, 96 insertions(+), 21 deletions(-)
 
 diff --git a/Documentation/admin-guide/LSM/index.rst b/Documentation/admin-guide/LSM/index.rst
-index c980dfe..9842e21 100644
+index c980dfe9abf1..9842e21afd4a 100644
 --- a/Documentation/admin-guide/LSM/index.rst
 +++ b/Documentation/admin-guide/LSM/index.rst
 @@ -17,9 +17,8 @@ MAC extensions, other extensions can be built using the LSM to provide
@@ -62,7 +62,7 @@ index c980dfe..9842e21 100644
     :maxdepth: 1
  
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index 3b9b726..126c669 100644
+index 3b9b726b1a6c..126c6696bd70 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -140,9 +140,13 @@ struct pid_entry {
@@ -161,7 +161,7 @@ index 3b9b726..126c669 100644
  
  static int proc_attr_dir_readdir(struct file *file, struct dir_context *ctx)
 diff --git a/fs/proc/internal.h b/fs/proc/internal.h
-index 95b1419..f857978 100644
+index 95b14196f284..f8579787852e 100644
 --- a/fs/proc/internal.h
 +++ b/fs/proc/internal.h
 @@ -82,6 +82,7 @@ union proc_op {
@@ -173,7 +173,7 @@ index 95b1419..f857978 100644
  
  struct proc_inode {
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 75f4156..418de5d 100644
+index 75f4156c84d7..418de5d20ffb 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -390,8 +390,10 @@ int security_sem_semctl(struct kern_ipc_perm *sma, int cmd);
@@ -212,7 +212,7 @@ index 75f4156..418de5d 100644
  	return -EINVAL;
  }
 diff --git a/security/security.c b/security/security.c
-index 5ce2448..fb75d36 100644
+index 5ce2448f3a45..fb75d362ff48 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -1295,14 +1295,30 @@ void security_d_instantiate(struct dentry *dentry, struct inode *inode)

@@ -15,7 +15,7 @@ Signed-off-by: Sanyog Kale <sanyog.r.kale@intel.com>
  1 file changed, 23 deletions(-)
 
 diff --git a/drivers/sdw/sdw_bwcalc.c b/drivers/sdw/sdw_bwcalc.c
-index b76ace3..ea080f1 100644
+index b76ace3b0de7..ea080f101d0f 100644
 --- a/drivers/sdw/sdw_bwcalc.c
 +++ b/drivers/sdw/sdw_bwcalc.c
 @@ -117,12 +117,6 @@ int sdw_mstr_bw_init(struct sdw_bus *sdw_bs)

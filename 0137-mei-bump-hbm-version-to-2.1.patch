@@ -12,7 +12,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/misc/mei/hw.h b/drivers/misc/mei/hw.h
-index acbccb8..2b7f767 100644
+index acbccb8dba34..2b7f7677f8cc 100644
 --- a/drivers/misc/mei/hw.h
 +++ b/drivers/misc/mei/hw.h
 @@ -35,7 +35,7 @@

@@ -19,7 +19,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 2 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index c99b2c9..813cd73 100644
+index c99b2c931202..813cd73545e4 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -638,6 +638,8 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,

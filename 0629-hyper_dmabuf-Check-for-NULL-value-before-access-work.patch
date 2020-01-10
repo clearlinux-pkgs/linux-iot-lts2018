@@ -14,7 +14,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 4 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
-index e9f1d64..66cdcf6 100644
+index e9f1d64ee60b..66cdcf6eff78 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 @@ -574,14 +574,15 @@ static void delayed_unexport(struct work_struct *work)

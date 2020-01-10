@@ -14,7 +14,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 45 insertions(+), 8 deletions(-)
 
 diff --git a/include/media/v4l2-subdev.h b/include/media/v4l2-subdev.h
-index 4bd777a..889deab 100644
+index 4bd777a68d64..889deab36029 100644
 --- a/include/media/v4l2-subdev.h
 +++ b/include/media/v4l2-subdev.h
 @@ -332,29 +332,66 @@ enum v4l2_mbus_frame_desc_flags {
