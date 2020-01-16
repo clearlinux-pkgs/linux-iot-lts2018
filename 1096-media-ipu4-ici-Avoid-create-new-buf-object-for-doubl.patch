@@ -20,7 +20,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  2 files changed, 50 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index 3d2e5c96e184..20efc28c380b 100644
+index 3d2e5c96e..20efc28c3 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -69,7 +69,8 @@ static struct ici_frame_buf_wrapper
@@ -138,7 +138,7 @@ index 3d2e5c96e184..20efc28c380b 100644
  
  	pr_debug("%s: creating new buf object\n", __func__);
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.h b/drivers/media/pci/intel/ici/ici-isys-frame-buf.h
-index 5072e925e4ba..013f6dbbf54a 100644
+index 5072e925e..013f6dbbf 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.h
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.h
 @@ -52,6 +52,12 @@ typedef enum frame_buf_state_ {

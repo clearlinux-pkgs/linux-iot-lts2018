@@ -18,7 +18,7 @@ Reviewed-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  5 files changed, 92 insertions(+), 106 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 8a298d1d1426..374d5d7ef8bc 100644
+index 8a298d1d1..374d5d7ef 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -41,10 +41,10 @@ static struct vbe_static_kctl_domain kctl_domain_map[] = {
@@ -522,7 +522,7 @@ index 8a298d1d1426..374d5d7ef8bc 100644
  	dev_dbg(vbe->dev, "vq_idx %d\n", vq_idx);
  
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.h b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
-index 327f78f23d74..50c027e00436 100644
+index 327f78f23..50c027e00 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 @@ -38,7 +38,7 @@ struct snd_skl_vbe;
@@ -535,7 +535,7 @@ index 327f78f23d74..50c027e00436 100644
  int vbe_skl_attach(struct snd_skl_vbe *vbe, struct skl *skl);
  int vbe_skl_detach(struct snd_skl_vbe *vbe, struct skl *skl);
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index 879993bb91e7..be2cc77dcd83 100644
+index 879993bb9..be2cc77dc 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -29,7 +29,7 @@
@@ -548,7 +548,7 @@ index 879993bb91e7..be2cc77dcd83 100644
  struct vfe_stream_pos_desc {
  	u64 hw_ptr;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 0114633e76e5..d627eaf0f93d 100644
+index 0114633e7..d627eaf0f 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -85,7 +85,7 @@ inline int vfe_is_valid_fe_substream(struct snd_pcm_substream *substream)
@@ -605,7 +605,7 @@ index 0114633e76e5..d627eaf0f93d 100644
  		vfe_put_inbox_buffer(vfe, vfe->in_buff[idx]);
  	}
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-kctl.c b/sound/soc/intel/skylake/virtio/skl-virtio-kctl.c
-index fd97e3462929..b8cb4c190530 100644
+index fd97e3462..b8cb4c190 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-kctl.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-kctl.c
 @@ -210,7 +210,7 @@ int kctl_ipc_handle(u32 domain_id, const struct vfe_kctl_info *kctl_info,

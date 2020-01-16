@@ -16,7 +16,7 @@ Reviewed-on:
  create mode 100644 sound/soc/intel/boards/cnl_svfpga.c
 
 diff --git a/sound/soc/intel/boards/Kconfig b/sound/soc/intel/boards/Kconfig
-index 35787e69f31b..ca140a77d992 100644
+index 35787e69f..ca140a77d 100644
 --- a/sound/soc/intel/boards/Kconfig
 +++ b/sound/soc/intel/boards/Kconfig
 @@ -306,6 +306,17 @@ config SND_SOC_INTEL_CNL_CS42L42_MACH
@@ -38,7 +38,7 @@ index 35787e69f31b..ca140a77d992 100644
  
  endif ## SND_SOC_INTEL_MACH
 diff --git a/sound/soc/intel/boards/Makefile b/sound/soc/intel/boards/Makefile
-index 4298c5ad8ca0..4f2b9b38edd0 100644
+index 4298c5ad8..4f2b9b38e 100644
 --- a/sound/soc/intel/boards/Makefile
 +++ b/sound/soc/intel/boards/Makefile
 @@ -23,6 +23,7 @@ snd-soc-skl_rt286-objs := skl_rt286.o
@@ -56,7 +56,7 @@ index 4298c5ad8ca0..4f2b9b38edd0 100644
 +obj-$(CONFIG_SND_SOC_INTEL_CNL_SVFPGA_MACH) += snd-soc-cnl_svfpga.o
 diff --git a/sound/soc/intel/boards/cnl_svfpga.c b/sound/soc/intel/boards/cnl_svfpga.c
 new file mode 100644
-index 000000000000..312c0437ac15
+index 000000000..312c0437a
 --- /dev/null
 +++ b/sound/soc/intel/boards/cnl_svfpga.c
 @@ -0,0 +1,273 @@

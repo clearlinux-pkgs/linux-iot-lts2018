@@ -19,7 +19,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 7745b339de5b..e3eb142de07c 100644
+index 7745b339d..e3eb142de 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -788,6 +788,7 @@ static int skl_trace_compr_set_params(struct snd_compr_stream *stream,

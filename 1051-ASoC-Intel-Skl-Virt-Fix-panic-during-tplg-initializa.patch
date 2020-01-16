@@ -16,7 +16,7 @@ Signed-off-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  1 file changed, 19 insertions(+), 8 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 8b54d0808eb9..17d5e3de45f5 100644
+index 8b54d0808..17d5e3de4 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -282,7 +282,6 @@ static void vfe_cmd_handle_rx(struct virtqueue *vq)

@@ -23,7 +23,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  4 files changed, 58 insertions(+), 89 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-psys-virt.c b/drivers/media/pci/intel/ipu-psys-virt.c
-index cbbd8ed949f8..877f57e0d781 100644
+index cbbd8ed94..877f57e0d 100644
 --- a/drivers/media/pci/intel/ipu-psys-virt.c
 +++ b/drivers/media/pci/intel/ipu-psys-virt.c
 @@ -67,28 +67,24 @@ int virt_ipu_psys_get_manifest(struct ipu_psys_fh *fh,
@@ -177,7 +177,7 @@ index cbbd8ed949f8..877f57e0d781 100644
  		pr_err("%s: failed to get ipu_psys_buffer", __func__);
  		ret = -EFAULT;
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
-index 5a9009289dbc..ddbb8a32c6cd 100644
+index 5a9009289..ddbb8a32c 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 @@ -60,7 +60,8 @@ int process_enum_nodes(struct ipu4_virtio_req_info *req_info)
@@ -289,7 +289,7 @@ index 5a9009289dbc..ddbb8a32c6cd 100644
 -*/
 -
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
-index 31b7d141c4ef..1c71fd34f38a 100644
+index 31b7d141c..1c71fd34f 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
 @@ -42,11 +42,9 @@ int process_psys_querycap(struct ipu4_virtio_req_info *req_info)
@@ -308,7 +308,7 @@ index 31b7d141c4ef..1c71fd34f38a 100644
  		pr_err("%s: failed to get ipu_psys_capability %u %llu",
  			__func__, req_info->domid, req_info->request->payload);
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
-index 5da50e8e1f8e..841abc9d6252 100644
+index 5da50e8e1..841abc9d6 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 @@ -130,7 +130,8 @@ int process_set_format(struct ipu4_virtio_req_info *req_info)

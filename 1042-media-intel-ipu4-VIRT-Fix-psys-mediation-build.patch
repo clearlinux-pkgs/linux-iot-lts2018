@@ -14,7 +14,7 @@ Signed-off-by: Yang, Zhonghua <zhonghuax.yang@intel.com>
  1 file changed, 5 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ici/Makefile b/drivers/media/pci/intel/ici/Makefile
-index fb23912113fc..9e8a406041b4 100644
+index fb2391211..9e8a40604 100644
 --- a/drivers/media/pci/intel/ici/Makefile
 +++ b/drivers/media/pci/intel/ici/Makefile
 @@ -43,10 +43,14 @@ ici-isys-mod-objs += \

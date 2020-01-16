@@ -39,7 +39,7 @@ Acked-by: Anthony Xu <anthony.xu@intel.com>
  delete mode 100644 include/linux/vhm/vhm_msi.h
 
 diff --git a/arch/x86/acrn/acrn.c b/arch/x86/acrn/acrn.c
-index 12ebc4f93611..8283673604f9 100644
+index 12ebc4f93..828367360 100644
 --- a/arch/x86/acrn/acrn.c
 +++ b/arch/x86/acrn/acrn.c
 @@ -33,7 +33,6 @@
@@ -62,7 +62,7 @@ index 12ebc4f93611..8283673604f9 100644
                                  acrn_hv_callback_vector);
  }
 diff --git a/arch/x86/include/asm/paravirt.h b/arch/x86/include/asm/paravirt.h
-index fa6468c0a40b..a04677038872 100644
+index fa6468c0a..a04677038 100644
 --- a/arch/x86/include/asm/paravirt.h
 +++ b/arch/x86/include/asm/paravirt.h
 @@ -808,16 +808,6 @@ static inline notrace unsigned long arch_local_irq_save(void)
@@ -83,7 +83,7 @@ index fa6468c0a40b..a04677038872 100644
  /* Make sure as little as possible of this mess escapes. */
  #undef PARAVIRT_CALL
 diff --git a/arch/x86/include/asm/paravirt_types.h b/arch/x86/include/asm/paravirt_types.h
-index 9929ab59774b..4b75acc23b30 100644
+index 9929ab597..4b75acc23 100644
 --- a/arch/x86/include/asm/paravirt_types.h
 +++ b/arch/x86/include/asm/paravirt_types.h
 @@ -56,9 +56,6 @@ struct cpumask;
@@ -105,7 +105,7 @@ index 9929ab59774b..4b75acc23b30 100644
  
  struct pv_mmu_ops {
 diff --git a/arch/x86/kernel/paravirt.c b/arch/x86/kernel/paravirt.c
-index eaa8917dab73..8dc69d82567e 100644
+index eaa8917da..8dc69d825 100644
 --- a/arch/x86/kernel/paravirt.c
 +++ b/arch/x86/kernel/paravirt.c
 @@ -25,7 +25,6 @@
@@ -127,7 +127,7 @@ index eaa8917dab73..8dc69d82567e 100644
  
  __visible struct pv_cpu_ops pv_cpu_ops = {
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index a2217949ec74..dbed2dfbde65 100644
+index a2217949e..dbed2dfbd 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -522,12 +522,6 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -144,7 +144,7 @@ index a2217949ec74..dbed2dfbde65 100644
  			void __iomem *msix_entry;
  			struct table_iomems *ptr;
 diff --git a/drivers/pci/msi.c b/drivers/pci/msi.c
-index 5f0d8827645d..23a363fd4c59 100644
+index 5f0d88276..23a363fd4 100644
 --- a/drivers/pci/msi.c
 +++ b/drivers/pci/msi.c
 @@ -190,7 +190,7 @@ static void msi_mask_irq(struct msi_desc *desc, u32 mask, u32 flag)
@@ -166,7 +166,7 @@ index 5f0d8827645d..23a363fd4c59 100644
  	struct pci_dev *dev = msi_desc_to_pci_dev(entry);
  
 diff --git a/drivers/pci/pci.h b/drivers/pci/pci.h
-index 0dc0c1822049..44651e80c5dd 100644
+index 0dc0c1822..44651e80c 100644
 --- a/drivers/pci/pci.h
 +++ b/drivers/pci/pci.h
 @@ -172,8 +172,6 @@ static inline void pci_msix_clear_and_set_ctrl(struct pci_dev *dev, u16 clear, u
@@ -179,7 +179,7 @@ index 0dc0c1822049..44651e80c5dd 100644
  
  static inline int pci_no_d1d2(struct pci_dev *dev)
 diff --git a/drivers/vhm/Makefile b/drivers/vhm/Makefile
-index 4abfbfcba4aa..a1520388766a 100644
+index 4abfbfcba..a15203887 100644
 --- a/drivers/vhm/Makefile
 +++ b/drivers/vhm/Makefile
 @@ -1,2 +1,2 @@
@@ -187,7 +187,7 @@ index 4abfbfcba4aa..a1520388766a 100644
 -obj-y += vhm_mm.o vhm_hugetlb.o vhm_ioreq.o vhm_vm_mngt.o vhm_msi.o vhm_hypercall.o vhm_ioeventfd.o vhm_irqfd.o
 +obj-y += vhm_mm.o vhm_hugetlb.o vhm_ioreq.o vhm_vm_mngt.o vhm_hypercall.o vhm_ioeventfd.o vhm_irqfd.o
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 55289bd70e16..8390d7f794f9 100644
+index 55289bd70..8390d7f79 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -158,11 +158,6 @@ inline long hcall_reset_ptdev_intr_info(unsigned long vmid,
@@ -204,7 +204,7 @@ index 55289bd70e16..8390d7f794f9 100644
  	return  acrn_hypercall2(HC_VM_GPA2HPA, vmid, addr);
 diff --git a/drivers/vhm/vhm_msi.c b/drivers/vhm/vhm_msi.c
 deleted file mode 100644
-index 73affd60fc46..000000000000
+index 73affd60f..000000000
 --- a/drivers/vhm/vhm_msi.c
 +++ /dev/null
 @@ -1,135 +0,0 @@
@@ -344,7 +344,7 @@ index 73affd60fc46..000000000000
 -	entry->msg = *msg;
 -}
 diff --git a/include/linux/msi.h b/include/linux/msi.h
-index 9b0de9ed5387..be8ec813dbfb 100644
+index 9b0de9ed5..be8ec813d 100644
 --- a/include/linux/msi.h
 +++ b/include/linux/msi.h
 @@ -141,15 +141,7 @@ struct msi_desc *alloc_msi_entry(struct device *dev, int nvec,
@@ -365,7 +365,7 @@ index 9b0de9ed5387..be8ec813dbfb 100644
  u32 __pci_msix_desc_mask_irq(struct msi_desc *desc, u32 flag);
  u32 __pci_msi_desc_mask_irq(struct msi_desc *desc, u32 mask, u32 flag);
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 2c79bf3df6b4..5041f5ace282 100644
+index 2c79bf3df..5041f5ace 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -167,7 +167,6 @@ inline long hcall_set_ptdev_intr_info(unsigned long vmid,
@@ -378,7 +378,7 @@ index 2c79bf3df6b4..5041f5ace282 100644
  inline long hcall_profiling_ops(unsigned long cmd, unsigned long msr_nodes);
 diff --git a/include/linux/vhm/vhm_msi.h b/include/linux/vhm/vhm_msi.h
 deleted file mode 100644
-index 059e97a0e543..000000000000
+index 059e97a0e..000000000
 --- a/include/linux/vhm/vhm_msi.h
 +++ /dev/null
 @@ -1,61 +0,0 @@

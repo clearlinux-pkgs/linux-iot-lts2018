@@ -17,7 +17,7 @@ Reviewed-by: He, Min <min.he@intel.com>
  1 file changed, 7 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c b/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
-index f482eceb5c7f..6e58fa1fb1d2 100644
+index f482eceb5..6e58fa1fb 100644
 --- a/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
 +++ b/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
 @@ -115,6 +115,8 @@ i915_gem_object_create_gvtbuffer(struct drm_device *dev,

@@ -20,7 +20,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 126 insertions(+), 3 deletions(-)
 
 diff --git a/sound/soc/intel/boards/cnl_rt274.c b/sound/soc/intel/boards/cnl_rt274.c
-index ebfe74132da5..e9e5959e256a 100644
+index ebfe74132..e9e5959e2 100644
 --- a/sound/soc/intel/boards/cnl_rt274.c
 +++ b/sound/soc/intel/boards/cnl_rt274.c
 @@ -33,11 +33,27 @@

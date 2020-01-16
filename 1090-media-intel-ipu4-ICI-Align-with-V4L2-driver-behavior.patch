@@ -15,7 +15,7 @@ Signed-off-by: spoluri <sarat.chandra.poluri@intel.com>
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-dma.c b/drivers/media/pci/intel/ici/ici-dma.c
-index 430ece88af69..6b39bf226cbb 100644
+index 430ece88a..6b39bf226 100644
 --- a/drivers/media/pci/intel/ici/ici-dma.c
 +++ b/drivers/media/pci/intel/ici/ici-dma.c
 @@ -263,7 +263,8 @@ static void intel_ipu4_dma_free(struct device *dev, size_t size, void *vaddr,

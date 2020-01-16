@@ -17,7 +17,7 @@ Reviewed-by: Jason Chen CJ <jason.cj.chen@intel.com>
  1 file changed, 1 insertion(+), 10 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index e454b9efcda2..39204b5d7898 100644
+index e454b9efc..39204b5d7 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -96,7 +96,6 @@ static int    major;

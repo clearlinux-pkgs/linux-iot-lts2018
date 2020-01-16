@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
-index 82bebae98837..53db12e98b80 100644
+index 82bebae98..53db12e98 100644
 --- a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 @@ -1238,7 +1238,7 @@ static struct crlmodule_platform_data ov495_pdata = {

@@ -19,7 +19,7 @@ Tested-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index c41292b8fe2a..20a37d48d061 100644
+index c41292b8f..20a37d48d 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -426,6 +426,7 @@ static void vfe_not_handle_rx(struct virtqueue *vq)

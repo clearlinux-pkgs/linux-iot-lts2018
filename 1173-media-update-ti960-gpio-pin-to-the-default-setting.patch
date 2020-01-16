@@ -12,7 +12,7 @@ Signed-off-by: Yang Zhonghua<zhonghuax.yang@intel.com>
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
-index 8394143c3d29..703763fe7ccb 100644
+index 8394143c3..703763fe7 100644
 --- a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 @@ -1493,7 +1493,7 @@ static struct ti960_subdev_info ti960_subdevs_2[] = {
@@ -25,7 +25,7 @@ index 8394143c3d29..703763fe7ccb 100644
  };
  
 diff --git a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
-index 3101835ae94d..e3291ca5d995 100644
+index 3101835ae..e3291ca5d 100644
 --- a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 @@ -578,7 +578,7 @@ static struct ti960_subdev_info ti960_subdevs_2[] = {

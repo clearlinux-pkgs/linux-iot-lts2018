@@ -19,7 +19,7 @@ Signed-off-by: Bandi, Kushal <kushal.bandi@intel.com>
  5 files changed, 114 insertions(+), 20 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
-index 212132f5edc0..08a7ef3a6d38 100644
+index 212132f5e..08a7ef3a6 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 @@ -883,12 +883,11 @@ int virt_frame_buf_init(struct ici_isys_frame_buf_list *buf_list)
@@ -130,7 +130,7 @@ index 212132f5edc0..08a7ef3a6d38 100644
          pr_warn("ipu virt: PSYS init failed\n");
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
-index 6e040794aef0..8aaa5bbdda79 100644
+index 6e040794a..8aaa5bbdd 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 @@ -8,6 +8,7 @@
@@ -271,7 +271,7 @@ index 6e040794aef0..8aaa5bbdda79 100644
      pr_info("psys probe minor: %d\n", minor);
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.h b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.h
-index f84c1e2baf31..8de72c15b01c 100644
+index f84c1e2ba..8de72c15b 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.h
 @@ -15,7 +15,7 @@ struct virt_ipu_psys {
@@ -298,7 +298,7 @@ index f84c1e2baf31..8de72c15b01c 100644
 +
  #endif /* INTEL_IPU4_PARA_VIRT_PSYS_H_ */
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
-index 43caddb1550e..f1d184cdcbce 100644
+index 43caddb15..f1d184cdc 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
 @@ -109,6 +109,17 @@ enum intel_ipu4_virtio_command {
@@ -320,7 +320,7 @@ index 43caddb1550e..f1d184cdcbce 100644
  };
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-payload.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-payload.c
-index 44edf7414a15..28ed1cfcdecd 100644
+index 44edf7414..28ed1cfcd 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-payload.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-payload.c
 @@ -49,6 +49,20 @@ void intel_ipu4_virtio_create_req(struct ipu4_virtio_req *req,

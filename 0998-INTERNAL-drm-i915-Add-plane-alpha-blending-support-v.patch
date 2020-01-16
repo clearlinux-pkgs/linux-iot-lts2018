@@ -43,7 +43,7 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  5 files changed, 48 insertions(+), 12 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 52adbd4fbacd..baab05dad59a 100644
+index 52adbd4fb..baab05dad 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -558,6 +558,8 @@ struct intel_fbc {
@@ -56,7 +56,7 @@ index 52adbd4fbacd..baab05dad59a 100644
  
  		struct {
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 32bcdb94cc6b..673998b338ed 100644
+index 32bcdb94c..673998b33 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
 @@ -6578,8 +6578,10 @@ enum {
@@ -71,7 +71,7 @@ index 32bcdb94cc6b..673998b338ed 100644
  #define _PLANE_AUX_DIST_2_A			0x702c0
  #define _PLANE_AUX_OFFSET_1_A			0x701c4
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index d11d5b3618d5..498dfd275d20 100644
+index d11d5b361..498dfd275 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -3203,6 +3203,10 @@ int skl_check_plane_surface(const struct intel_crtc_state *crtc_state,
@@ -140,7 +140,7 @@ index d11d5b3618d5..498dfd275d20 100644
  
  	return intel_plane;
 diff --git a/drivers/gpu/drm/i915/intel_fbc.c b/drivers/gpu/drm/i915/intel_fbc.c
-index 728a20e1f638..c941e3378163 100644
+index 728a20e1f..c941e3378 100644
 --- a/drivers/gpu/drm/i915/intel_fbc.c
 +++ b/drivers/gpu/drm/i915/intel_fbc.c
 @@ -674,6 +674,8 @@ static void intel_fbc_update_state_cache(struct intel_crtc *crtc,
@@ -166,7 +166,7 @@ index 728a20e1f638..c941e3378163 100644
  	if ((IS_HASWELL(dev_priv) || IS_BROADWELL(dev_priv)) &&
  	    cache->crtc.hsw_bdw_pixel_rate >= dev_priv->cdclk.hw.cdclk * 95 / 100) {
 diff --git a/drivers/gpu/drm/i915/intel_sprite.c b/drivers/gpu/drm/i915/intel_sprite.c
-index 2c0cc897c41e..8a013f19fa99 100644
+index 2c0cc897c..8a013f19f 100644
 --- a/drivers/gpu/drm/i915/intel_sprite.c
 +++ b/drivers/gpu/drm/i915/intel_sprite.c
 @@ -319,6 +319,7 @@ skl_update_plane(struct intel_plane *plane,

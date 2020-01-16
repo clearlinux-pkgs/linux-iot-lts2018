@@ -18,7 +18,7 @@ Tracked-On: PKT-1679
  5 files changed, 18 insertions(+), 69 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index baab05dad59a..52adbd4fbacd 100644
+index baab05dad..52adbd4fb 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -558,8 +558,6 @@ struct intel_fbc {
@@ -31,7 +31,7 @@ index baab05dad59a..52adbd4fbacd 100644
  
  		struct {
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 3dd9a54a09ef..d9e2fb75e5b3 100644
+index 3dd9a54a0..d9e2fb75e 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
 @@ -6575,10 +6575,8 @@ enum {
@@ -46,7 +46,7 @@ index 3dd9a54a09ef..d9e2fb75e5b3 100644
  #define _PLANE_AUX_DIST_2_A			0x702c0
  #define _PLANE_AUX_OFFSET_1_A			0x701c4
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index c565bef11e3b..d11d5b3618d5 100644
+index c565bef11..d11d5b361 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -3203,10 +3203,6 @@ int skl_check_plane_surface(const struct intel_crtc_state *crtc_state,
@@ -154,7 +154,7 @@ index c565bef11e3b..d11d5b3618d5 100644
  
  	return primary;
 diff --git a/drivers/gpu/drm/i915/intel_fbc.c b/drivers/gpu/drm/i915/intel_fbc.c
-index c941e3378163..728a20e1f638 100644
+index c941e3378..728a20e1f 100644
 --- a/drivers/gpu/drm/i915/intel_fbc.c
 +++ b/drivers/gpu/drm/i915/intel_fbc.c
 @@ -674,8 +674,6 @@ static void intel_fbc_update_state_cache(struct intel_crtc *crtc,
@@ -180,7 +180,7 @@ index c941e3378163..728a20e1f638 100644
  	if ((IS_HASWELL(dev_priv) || IS_BROADWELL(dev_priv)) &&
  	    cache->crtc.hsw_bdw_pixel_rate >= dev_priv->cdclk.hw.cdclk * 95 / 100) {
 diff --git a/drivers/gpu/drm/i915/intel_sprite.c b/drivers/gpu/drm/i915/intel_sprite.c
-index 74d594232843..2c0cc897c41e 100644
+index 74d594232..2c0cc897c 100644
 --- a/drivers/gpu/drm/i915/intel_sprite.c
 +++ b/drivers/gpu/drm/i915/intel_sprite.c
 @@ -319,7 +319,6 @@ skl_update_plane(struct intel_plane *plane,

@@ -15,7 +15,7 @@ Signed-off-by: Anil Kumar <anil.kumar.k@intel.com>
  1 file changed, 8 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 9f70a4f7f252..719725f84aab 100644
+index 9f70a4f7f..719725f84 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -462,8 +462,10 @@ static int cnl_sdw_bra_pipe_cfg_pb(struct skl_sst *ctx,

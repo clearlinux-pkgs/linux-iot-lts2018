@@ -25,7 +25,7 @@ Tested-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  4 files changed, 68 insertions(+), 45 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm-interface.c b/drivers/char/tpm/tpm-interface.c
-index 8ed127d88e1c..df3cd2cb77ac 100644
+index 8ed127d88..df3cd2cb7 100644
 --- a/drivers/char/tpm/tpm-interface.c
 +++ b/drivers/char/tpm/tpm-interface.c
 @@ -423,47 +423,6 @@ ssize_t tpm_transmit_cmd(struct tpm_chip *chip, struct tpm_space *space,
@@ -77,7 +77,7 @@ index 8ed127d88e1c..df3cd2cb77ac 100644
  {
  	if (chip->flags & TPM_CHIP_FLAG_HAVE_TIMEOUTS)
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index 754f7bcb15fa..2eb73f6966c3 100644
+index 754f7bcb1..2eb73f696 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
 @@ -540,7 +540,6 @@ ssize_t tpm_transmit_cmd(struct tpm_chip *chip, struct tpm_space *space,
@@ -89,7 +89,7 @@ index 754f7bcb15fa..2eb73f6966c3 100644
  
  int tpm1_pm_suspend(struct tpm_chip *chip, int tpm_suspend_pcr);
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index 3bd9f1fa77ce..8a84db315676 100644
+index 3bd9f1fa7..8a84db315 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -308,6 +308,40 @@ unsigned long tpm1_calc_ordinal_duration(struct tpm_chip *chip, u32 ordinal)
@@ -148,7 +148,7 @@ index 3bd9f1fa77ce..8a84db315676 100644
  }
 +
 diff --git a/drivers/char/tpm/tpm2-cmd.c b/drivers/char/tpm/tpm2-cmd.c
-index c366a200f03b..910df422a343 100644
+index c366a200f..910df422a 100644
 --- a/drivers/char/tpm/tpm2-cmd.c
 +++ b/drivers/char/tpm/tpm2-cmd.c
 @@ -952,6 +952,36 @@ static int tpm2_get_cc_attrs_tbl(struct tpm_chip *chip)

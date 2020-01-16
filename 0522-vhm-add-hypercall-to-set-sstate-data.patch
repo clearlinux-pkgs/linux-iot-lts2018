@@ -20,7 +20,7 @@ Reviewed-by: Zhao, Yakui <yakui.zhao@intel.com>
  6 files changed, 38 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index fe8d16df129f..92075def6218 100644
+index fe8d16df1..92075def6 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -178,6 +178,19 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -44,7 +44,7 @@ index fe8d16df129f..92075def6218 100644
  
  	memset(&hc_pt_irq, 0, sizeof(hc_pt_irq));
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index bbdbea8d623c..93dfb661d133 100644
+index bbdbea8d6..93dfb661d 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -87,6 +87,11 @@ inline long hcall_setup_sbuf(unsigned long sbuf_head)
@@ -60,7 +60,7 @@ index bbdbea8d623c..93dfb661d133 100644
  {
  	return acrn_hypercall2(HC_PM_GET_CPU_STATE, cmd, state_pa);
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 00088dcc8d7d..d45b27f55451 100644
+index 00088dcc8..d45b27f55 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -336,6 +336,23 @@ struct cpu_px_data {
@@ -88,7 +88,7 @@ index 00088dcc8d7d..d45b27f55451 100644
   * @brief Info PM command from DM/VHM.
   *
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index d3af0970f7d2..7cfcf7a30813 100644
+index d3af0970f..7cfcf7a30 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -111,6 +111,7 @@
@@ -100,7 +100,7 @@ index d3af0970f7d2..7cfcf7a30813 100644
  #define ACRN_DOM0_VMID (0UL)
  #define ACRN_INVALID_VMID (-1)
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index ea4c3c2e416d..49e94ecc37b9 100644
+index ea4c3c2e4..49e94ecc3 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -145,6 +145,7 @@ inline long hcall_destroy_vm(unsigned long vmid);
@@ -112,7 +112,7 @@ index ea4c3c2e416d..49e94ecc37b9 100644
  inline long hcall_set_memmap(unsigned long vmid,
  		unsigned long memmap);
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 028096bde2ec..a9e71616cc80 100644
+index 028096bde..a9e71616c 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -105,6 +105,7 @@

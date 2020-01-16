@@ -23,7 +23,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  4 files changed, 45 insertions(+), 18 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index e874e75a15fc..ea6e57e6899f 100644
+index e874e75a1..ea6e57e68 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -262,4 +262,5 @@ int skl_prepare_lib_load(struct skl_sst *skl, struct skl_lib_info *linfo,
@@ -33,7 +33,7 @@ index e874e75a15fc..ea6e57e6899f 100644
 +int skl_get_firmware_configuration(struct sst_dsp *ctx);
  #endif /*__SKL_SST_DSP_H__*/
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index bc02740e5525..074014668f0a 100644
+index bc02740e5..074014668 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -39,6 +39,24 @@ enum skl_ipc_pipeline_state {
@@ -62,7 +62,7 @@ index bc02740e5525..074014668f0a 100644
  	u32 core_mask;
  	u32 dx_mask;
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 2ae405617876..59fb24bc0adc 100644
+index 2ae405617..59fb24bc0 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -446,3 +446,29 @@ void skl_release_library(struct skl_lib_info *linfo, int lib_count)
@@ -96,7 +96,7 @@ index 2ae405617876..59fb24bc0adc 100644
 +	return ret;
 +}
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 00265245beee..676a769374ae 100644
+index 00265245b..676a76937 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -514,24 +514,6 @@ struct mod_set_get {

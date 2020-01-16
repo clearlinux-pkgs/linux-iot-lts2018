@@ -15,7 +15,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  3 files changed, 9 insertions(+), 21 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c
-index bba6d1d607a8..84cfb065bddd 100644
+index bba6d1d60..84cfb065b 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c
 @@ -34,7 +34,6 @@
@@ -27,7 +27,7 @@ index bba6d1d607a8..84cfb065bddd 100644
  DECLARE_HASHTABLE(hyper_dmabuf_hash_imported, MAX_ENTRY_IMPORTED);
  DECLARE_HASHTABLE(hyper_dmabuf_hash_exported, MAX_ENTRY_EXPORTED);
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
-index 37ee894ec418..c5d99d2f12c9 100644
+index 37ee894ec..c5d99d2f1 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
 @@ -124,11 +124,9 @@ static void cmd_process_work(struct work_struct *work)
@@ -43,7 +43,7 @@ index 37ee894ec418..c5d99d2f12c9 100644
  	switch (req->cmd) {
  	case HYPER_DMABUF_EXPORT:
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
-index a8207b4be20f..10b5510b3816 100644
+index a8207b4be..10b5510b3 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
 @@ -106,14 +106,13 @@ static void hyper_dmabuf_ops_detach(struct dma_buf *dmabuf,

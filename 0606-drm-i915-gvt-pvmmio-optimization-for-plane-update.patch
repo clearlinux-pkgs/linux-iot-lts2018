@@ -21,7 +21,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  2 files changed, 94 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_pvinfo.h b/drivers/gpu/drm/i915/i915_pvinfo.h
-index c1089bdedd2e..740b2da14186 100644
+index c1089bded..740b2da14 100644
 --- a/drivers/gpu/drm/i915/i915_pvinfo.h
 +++ b/drivers/gpu/drm/i915/i915_pvinfo.h
 @@ -49,13 +49,37 @@ enum vgt_g2v_type {
@@ -72,7 +72,7 @@ index c1089bdedd2e..740b2da14186 100644
  
  /*
 diff --git a/drivers/gpu/drm/i915/intel_sprite.c b/drivers/gpu/drm/i915/intel_sprite.c
-index 11b7afc0a0d3..4b89ba3e021c 100644
+index 11b7afc0a..4b89ba3e0 100644
 --- a/drivers/gpu/drm/i915/intel_sprite.c
 +++ b/drivers/gpu/drm/i915/intel_sprite.c
 @@ -232,6 +232,68 @@ void intel_pipe_update_end(struct intel_crtc_state *new_crtc_state)

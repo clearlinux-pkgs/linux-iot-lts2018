@@ -25,7 +25,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  create mode 100644 drivers/gpu/drm/i915/gvt/acrngt.h
 
 diff --git a/drivers/gpu/drm/i915/Kconfig b/drivers/gpu/drm/i915/Kconfig
-index 33a458b7f1fc..19dfbf39f6ca 100644
+index 33a458b7f..19dfbf39f 100644
 --- a/drivers/gpu/drm/i915/Kconfig
 +++ b/drivers/gpu/drm/i915/Kconfig
 @@ -127,6 +127,15 @@ config DRM_I915_GVT_KVMGT
@@ -45,7 +45,7 @@ index 33a458b7f1fc..19dfbf39f6ca 100644
  menu "drm/i915 Debugging"
  depends on DRM_I915
 diff --git a/drivers/gpu/drm/i915/gvt/Makefile b/drivers/gpu/drm/i915/gvt/Makefile
-index b016dc753db9..0acb4dabc00c 100644
+index b016dc753..0acb4dabc 100644
 --- a/drivers/gpu/drm/i915/gvt/Makefile
 +++ b/drivers/gpu/drm/i915/gvt/Makefile
 @@ -5,6 +5,7 @@ GVT_SOURCE := gvt.o aperture_gm.o handlers.o vgpu.o trace_points.o firmware.o \
@@ -59,7 +59,7 @@ index b016dc753db9..0acb4dabc00c 100644
 +obj-$(CONFIG_DRM_I915_GVT_ACRN_GVT)    	+= $(GVT_DIR)/acrngt.o
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.c b/drivers/gpu/drm/i915/gvt/acrngt.c
 new file mode 100644
-index 000000000000..fec5751a4bed
+index 000000000..fec5751a4
 --- /dev/null
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.c
 @@ -0,0 +1,893 @@
@@ -958,7 +958,7 @@ index 000000000000..fec5751a4bed
 +module_exit(acrngt_exit);
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.h b/drivers/gpu/drm/i915/gvt/acrngt.h
 new file mode 100644
-index 000000000000..0799df2ec557
+index 000000000..0799df2ec
 --- /dev/null
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.h
 @@ -0,0 +1,81 @@
@@ -1044,7 +1044,7 @@ index 000000000000..0799df2ec557
 +
 +#endif
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.c b/drivers/gpu/drm/i915/gvt/gvt.c
-index 25e0a58a24a5..6261af450ee4 100644
+index 25e0a58a2..6261af450 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.c
 +++ b/drivers/gpu/drm/i915/gvt/gvt.c
 @@ -44,6 +44,7 @@ struct intel_gvt_host intel_gvt_host;
@@ -1068,7 +1068,7 @@ index 25e0a58a24a5..6261af450ee4 100644
  
  	/* Fail to load MPT modules - bail out */
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 9c291924c1d0..d673c46e3179 100644
+index 9c291924c..d673c46e3 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -55,6 +55,7 @@
@@ -1080,7 +1080,7 @@ index 9c291924c1d0..d673c46e3179 100644
  
  struct intel_gvt_host {
 diff --git a/drivers/gpu/drm/i915/gvt/hypercall.h b/drivers/gpu/drm/i915/gvt/hypercall.h
-index f14cff32ae2f..d4b7929c8bee 100644
+index f14cff32a..d4b7929c8 100644
 --- a/drivers/gpu/drm/i915/gvt/hypercall.h
 +++ b/drivers/gpu/drm/i915/gvt/hypercall.h
 @@ -69,5 +69,6 @@ struct intel_gvt_mpt {

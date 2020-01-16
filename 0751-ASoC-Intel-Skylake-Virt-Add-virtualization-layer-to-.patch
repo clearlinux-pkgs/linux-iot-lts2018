@@ -48,7 +48,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  create mode 100644 sound/soc/intel/skylake/virtio/skl-virtio.h
 
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 94cabe5b8afa..ef02c70035b6 100644
+index 94cabe5b8..ef02c7003 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -159,6 +159,9 @@ struct skl {
@@ -63,7 +63,7 @@ index 94cabe5b8afa..ef02c70035b6 100644
  #define skl_to_bus(s)  (&(s)->hbus)
 diff --git a/sound/soc/intel/skylake/virtio/Makefile b/sound/soc/intel/skylake/virtio/Makefile
 new file mode 100644
-index 000000000000..f9b693c44405
+index 000000000..f9b693c44
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/Makefile
 @@ -0,0 +1,10 @@
@@ -79,7 +79,7 @@ index 000000000000..f9b693c44405
 +endif
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 new file mode 100644
-index 000000000000..55a213575230
+index 000000000..55a213575
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -0,0 +1,815 @@
@@ -900,7 +900,7 @@ index 000000000000..55a213575230
 +}
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.h b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 new file mode 100644
-index 000000000000..67b1b7c752ac
+index 000000000..67b1b7c75
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 @@ -0,0 +1,73 @@
@@ -979,7 +979,7 @@ index 000000000000..67b1b7c752ac
 +#endif
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-card.c b/sound/soc/intel/skylake/virtio/skl-virtio-card.c
 new file mode 100644
-index 000000000000..0f35a641fa16
+index 000000000..0f35a641f
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-card.c
 @@ -0,0 +1,370 @@
@@ -1355,7 +1355,7 @@ index 000000000000..0f35a641fa16
 +MODULE_ALIAS("platform:skl-virtio-card");
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 new file mode 100644
-index 000000000000..d25b5986ead6
+index 000000000..d25b5986e
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -0,0 +1,153 @@
@@ -1514,7 +1514,7 @@ index 000000000000..d25b5986ead6
 +#endif
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 new file mode 100644
-index 000000000000..d406e6a9b21a
+index 000000000..d406e6a9b
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -0,0 +1,920 @@
@@ -2440,7 +2440,7 @@ index 000000000000..d406e6a9b21a
 +MODULE_LICENSE("GPL v2");
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 new file mode 100644
-index 000000000000..f49977e9ce33
+index 000000000..f49977e9c
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -0,0 +1,61 @@
@@ -2507,7 +2507,7 @@ index 000000000000..f49977e9ce33
 +#endif
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c b/sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c
 new file mode 100644
-index 000000000000..fa972782b94d
+index 000000000..fa972782b
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c
 @@ -0,0 +1,442 @@
@@ -2955,7 +2955,7 @@ index 000000000000..fa972782b94d
 +}
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-sst.c b/sound/soc/intel/skylake/virtio/skl-virtio-sst.c
 new file mode 100644
-index 000000000000..c3b3b4d6cd02
+index 000000000..c3b3b4d6c
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-sst.c
 @@ -0,0 +1,311 @@
@@ -3272,7 +3272,7 @@ index 000000000000..c3b3b4d6cd02
 +MODULE_DESCRIPTION("Intel Virtio FE IPC driver");
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio.h b/sound/soc/intel/skylake/virtio/skl-virtio.h
 new file mode 100644
-index 000000000000..935652be541a
+index 000000000..935652be5
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio.h
 @@ -0,0 +1,35 @@

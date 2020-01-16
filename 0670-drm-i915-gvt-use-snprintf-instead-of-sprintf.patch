@@ -16,7 +16,7 @@ Reviewed-by: He, Min <min.he@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/debugfs.c b/drivers/gpu/drm/i915/gvt/debugfs.c
-index 2ec89bcb59f1..c41e1e245789 100644
+index 2ec89bcb5..c41e1e245 100644
 --- a/drivers/gpu/drm/i915/gvt/debugfs.c
 +++ b/drivers/gpu/drm/i915/gvt/debugfs.c
 @@ -196,9 +196,9 @@ DEFINE_SIMPLE_ATTRIBUTE(vgpu_scan_nonprivbb_fops,

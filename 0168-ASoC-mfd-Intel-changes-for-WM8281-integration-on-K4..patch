@@ -15,7 +15,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  2 files changed, 197 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/mfd/arizona-i2c.c b/drivers/mfd/arizona-i2c.c
-index 5fe12961cfe5..84d29dec0ae1 100644
+index 5fe12961c..84d29dec0 100644
 --- a/drivers/mfd/arizona-i2c.c
 +++ b/drivers/mfd/arizona-i2c.c
 @@ -23,6 +23,141 @@
@@ -247,7 +247,7 @@ index 5fe12961cfe5..84d29dec0ae1 100644
  MODULE_DESCRIPTION("Arizona I2C bus interface");
  MODULE_AUTHOR("Mark Brown <broonie@opensource.wolfsonmicro.com>");
 diff --git a/drivers/mfd/arizona-irq.c b/drivers/mfd/arizona-irq.c
-index a307832d7e45..bf50bb41e4a7 100644
+index a307832d7..bf50bb41e 100644
 --- a/drivers/mfd/arizona-irq.c
 +++ b/drivers/mfd/arizona-irq.c
 @@ -377,7 +377,8 @@ int arizona_irq_init(struct arizona *arizona)

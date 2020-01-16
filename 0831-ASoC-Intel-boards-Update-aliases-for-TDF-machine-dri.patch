@@ -21,7 +21,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/boards/bxt_ivi_ull.c b/sound/soc/intel/boards/bxt_ivi_ull.c
-index fe9e28598bbe..ba5293d051b9 100644
+index fe9e28598..ba5293d05 100644
 --- a/sound/soc/intel/boards/bxt_ivi_ull.c
 +++ b/sound/soc/intel/boards/bxt_ivi_ull.c
 @@ -273,4 +273,4 @@ module_platform_driver(broxton_audio)
@@ -31,7 +31,7 @@ index fe9e28598bbe..ba5293d051b9 100644
 -MODULE_ALIAS("platform:bxtp_i2s_ull");
 +MODULE_ALIAS("platform:bxt_tdf8532");
 diff --git a/sound/soc/intel/boards/bxt_tdf8532.c b/sound/soc/intel/boards/bxt_tdf8532.c
-index 8e993425aaa1..464bbd82d957 100644
+index 8e993425a..464bbd82d 100644
 --- a/sound/soc/intel/boards/bxt_tdf8532.c
 +++ b/sound/soc/intel/boards/bxt_tdf8532.c
 @@ -429,4 +429,4 @@ module_platform_driver(broxton_tdf8532_audio)

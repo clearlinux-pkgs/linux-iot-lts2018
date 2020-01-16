@@ -17,7 +17,7 @@ Reviewed-on:
  1 file changed, 34 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/sdw/sdw_bwcalc.c b/drivers/sdw/sdw_bwcalc.c
-index ea080f101d0f..5b362dc0a2f4 100644
+index ea080f101..5b362dc0a 100644
 --- a/drivers/sdw/sdw_bwcalc.c
 +++ b/drivers/sdw/sdw_bwcalc.c
 @@ -260,14 +260,17 @@ int sdw_cfg_slv_params(struct sdw_bus *mstr_bs,

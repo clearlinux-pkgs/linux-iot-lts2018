@@ -24,7 +24,7 @@ Signed-off-by: Cezary Rojewski <cezary.rojewski@intel.com>
  3 files changed, 328 insertions(+), 6 deletions(-)
 
 diff --git a/sound/soc/intel/boards/bxt_tdf8532.c b/sound/soc/intel/boards/bxt_tdf8532.c
-index 27361e8f72d3..8e993425aaa1 100644
+index 27361e8f7..8e993425a 100644
 --- a/sound/soc/intel/boards/bxt_tdf8532.c
 +++ b/sound/soc/intel/boards/bxt_tdf8532.c
 @@ -90,6 +90,173 @@ static int bxt_tdf8532_ssp2_fixup(struct snd_soc_pcm_runtime *rtd,
@@ -202,7 +202,7 @@ index 27361e8f72d3..8e993425aaa1 100644
  	{
  		.name = "Bxt Compress Probe playback",
 diff --git a/sound/soc/intel/common/soc-acpi-intel-bxt-match.c b/sound/soc/intel/common/soc-acpi-intel-bxt-match.c
-index 77cbd98d3e22..4ceb3487e590 100644
+index 77cbd98d3..4ceb3487e 100644
 --- a/sound/soc/intel/common/soc-acpi-intel-bxt-match.c
 +++ b/sound/soc/intel/common/soc-acpi-intel-bxt-match.c
 @@ -15,10 +15,6 @@ static struct snd_soc_acpi_codecs bxt_codecs = {
@@ -233,7 +233,7 @@ index 77cbd98d3e22..4ceb3487e590 100644
  #endif
  	{},
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 01981c1a6bf2..de5e4ff6bea3 100644
+index 01981c1a6..de5e4ff6b 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1030,6 +1030,167 @@ struct skl_dsp_notify_ops cb_ops = {

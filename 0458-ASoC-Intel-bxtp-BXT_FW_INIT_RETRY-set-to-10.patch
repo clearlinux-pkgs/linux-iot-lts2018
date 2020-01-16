@@ -10,7 +10,7 @@ Signed-off-by: Gustaw Lewandowski <gustaw.lewandowski@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index cd7fbabef8ee..cde519de05dd 100644
+index cd7fbabef..cde519de0 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -59,7 +59,7 @@

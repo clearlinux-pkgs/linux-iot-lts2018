@@ -76,7 +76,7 @@ Signed-off-by: Jon Moeller <jon.moeller@intel.com>
  55 files changed, 800 insertions(+), 687 deletions(-)
 
 diff --git a/drivers/platform/x86/sepdk/Kconfig b/drivers/platform/x86/sepdk/Kconfig
-index ed9c94ec3d07..884c5055d304 100755
+index ed9c94ec3..884c5055d 100755
 --- a/drivers/platform/x86/sepdk/Kconfig
 +++ b/drivers/platform/x86/sepdk/Kconfig
 @@ -52,12 +52,3 @@ config SEP_MAXLOG_MODE
@@ -93,7 +93,7 @@ index ed9c94ec3d07..884c5055d304 100755
 -
 -
 diff --git a/drivers/platform/x86/sepdk/inc/control.h b/drivers/platform/x86/sepdk/inc/control.h
-index ecc93ceab221..73ecc2efeaa5 100644
+index ecc93ceab..73ecc2efe 100644
 --- a/drivers/platform/x86/sepdk/inc/control.h
 +++ b/drivers/platform/x86/sepdk/inc/control.h
 @@ -300,7 +300,11 @@ extern U32 *occupied_core_ids;
@@ -109,7 +109,7 @@ index ecc93ceab221..73ecc2efeaa5 100644
  /*
   * CONTROL_THIS_RAW_CPU()
 diff --git a/drivers/platform/x86/sepdk/inc/pmi.h b/drivers/platform/x86/sepdk/inc/pmi.h
-index 4fd71f74ceb9..88b02b1a04b4 100644
+index 4fd71f74c..88b02b1a0 100644
 --- a/drivers/platform/x86/sepdk/inc/pmi.h
 +++ b/drivers/platform/x86/sepdk/inc/pmi.h
 @@ -57,7 +57,7 @@
@@ -122,7 +122,7 @@ index 4fd71f74ceb9..88b02b1a04b4 100644
  
  extern U32 pmi_Get_CSD(U32, U32 *, U32 *);
 diff --git a/drivers/platform/x86/sepdk/sep/Makefile b/drivers/platform/x86/sepdk/sep/Makefile
-index 405e55d53c97..c616fc1f7ce8 100755
+index 405e55d53..c616fc1f7 100755
 --- a/drivers/platform/x86/sepdk/sep/Makefile
 +++ b/drivers/platform/x86/sepdk/sep/Makefile
 @@ -2,7 +2,7 @@ ccflags-y := -I$(src)/../include -I$(src)/../inc -I$(src)/..
@@ -168,7 +168,7 @@ index 405e55d53c97..c616fc1f7ce8 100755
 -						gfx.o     \
 -						unc_sa.o
 diff --git a/drivers/platform/x86/sepdk/sep/linuxos.c b/drivers/platform/x86/sepdk/sep/linuxos.c
-index fa29d7f0a3a8..1f877e6e4bc8 100755
+index fa29d7f0a..1f877e6e4 100755
 --- a/drivers/platform/x86/sepdk/sep/linuxos.c
 +++ b/drivers/platform/x86/sepdk/sep/linuxos.c
 @@ -81,8 +81,6 @@ static enum cpuhp_state cpuhp_sepdrv_state;
@@ -275,7 +275,7 @@ index fa29d7f0a3a8..1f877e6e4bc8 100755
  	return FALSE;
  }
 diff --git a/drivers/platform/x86/sepdk/sep/lwpmudrv.c b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
-index f13552c20774..bb53962d2695 100755
+index f13552c20..bb53962d2 100755
 --- a/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 +++ b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 @@ -100,9 +100,6 @@ MODULE_VERSION(SEP_NAME "_" SEP_VERSION_STR);
@@ -522,7 +522,7 @@ index f13552c20774..bb53962d2695 100755
  
  	SEP_DRV_LOG_TRACE("Outside of all interrupts.");
 diff --git a/drivers/platform/x86/sepdk/sep/pmi.c b/drivers/platform/x86/sepdk/sep/pmi.c
-index 44f335dbc885..934473f57efa 100755
+index 44f335dbc..934473f57 100755
 --- a/drivers/platform/x86/sepdk/sep/pmi.c
 +++ b/drivers/platform/x86/sepdk/sep/pmi.c
 @@ -422,7 +422,7 @@ asmlinkage VOID PMI_Interrupt_Handler(struct pt_regs *regs)
@@ -684,7 +684,7 @@ index 44f335dbc885..934473f57efa 100755
  }
  #endif
 diff --git a/drivers/platform/x86/socwatch/inc/sw_collector.h b/drivers/platform/x86/socwatch/inc/sw_collector.h
-index b771ab936b26..41430cbeddef 100644
+index b771ab936..41430cbed 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_collector.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_collector.h
 @@ -62,7 +62,7 @@
@@ -703,7 +703,7 @@ index b771ab936b26..41430cbeddef 100644
 -#endif // __SW_COLLECTOR_H__
 +#endif /* __SW_COLLECTOR_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_defines.h b/drivers/platform/x86/socwatch/inc/sw_defines.h
-index 15ccca1efed6..ab0f4911332d 100644
+index 15ccca1ef..ab0f49113 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_defines.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_defines.h
 @@ -146,11 +146,11 @@ typedef enum {
@@ -721,7 +721,7 @@ index 15ccca1efed6..ab0f4911332d 100644
 -#endif // _PW_DEFINES_H_
 +#endif /* _PW_DEFINES_H_ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_file_ops.h b/drivers/platform/x86/socwatch/inc/sw_file_ops.h
-index 7c5705cf942c..c3a30a17a7b0 100644
+index 7c5705cf9..c3a30a17a 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_file_ops.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_file_ops.h
 @@ -67,4 +67,4 @@ struct sw_file_ops {
@@ -731,7 +731,7 @@ index 7c5705cf942c..c3a30a17a7b0 100644
 -#endif // __SW_FILE_OPS_H__
 +#endif /* __SW_FILE_OPS_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_hardware_io.h b/drivers/platform/x86/socwatch/inc/sw_hardware_io.h
-index f93fa6b10d7a..5cc9ebe18cf1 100644
+index f93fa6b10..5cc9ebe18 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_hardware_io.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_hardware_io.h
 @@ -74,13 +74,15 @@ typedef bool (*sw_hw_op_post_config_func_t)(void);
@@ -759,7 +759,7 @@ index f93fa6b10d7a..5cc9ebe18cf1 100644
 -#endif // __SW_HARDWARE_IO_H__
 +#endif /* __SW_HARDWARE_IO_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_internal.h b/drivers/platform/x86/socwatch/inc/sw_internal.h
-index 8e88d5d5ea54..c8d9da330756 100644
+index 8e88d5d5e..c8d9da330 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_internal.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_internal.h
 @@ -66,28 +66,28 @@
@@ -813,7 +813,7 @@ index 8e88d5d5ea54..c8d9da330756 100644
 -#endif // __SW_DATA_STRUCTS_H__
 +#endif /* __SW_DATA_STRUCTS_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_ioctl.h b/drivers/platform/x86/socwatch/inc/sw_ioctl.h
-index baf93058c5c5..1f8e903a0e1c 100644
+index baf93058c..1f8e903a0 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_ioctl.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_ioctl.h
 @@ -62,11 +62,11 @@
@@ -966,7 +966,7 @@ index baf93058c5c5..1f8e903a0e1c 100644
 +#endif /* defined(CONFIG_COMPAT) && defined(CONFIG_X86_64) */
 +#endif /* __SW_IOCTL_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_kernel_defines.h b/drivers/platform/x86/socwatch/inc/sw_kernel_defines.h
-index 275b1bdfc25e..26328645b232 100644
+index 275b1bdfc..26328645b 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_kernel_defines.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_kernel_defines.h
 @@ -61,7 +61,7 @@
@@ -1022,7 +1022,7 @@ index 275b1bdfc25e..26328645b232 100644
 -#endif // _SW_KERNEL_DEFINES_H_
 +#endif /* _SW_KERNEL_DEFINES_H_ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_list.h b/drivers/platform/x86/socwatch/inc/sw_list.h
-index ecc646a99caa..9c17e50ac5bf 100644
+index ecc646a99..9c17e50ac 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_list.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_list.h
 @@ -73,4 +73,4 @@
@@ -1032,7 +1032,7 @@ index ecc646a99caa..9c17e50ac5bf 100644
 -#endif // __SW_LIST_H__
 +#endif /* __SW_LIST_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_lock_defs.h b/drivers/platform/x86/socwatch/inc/sw_lock_defs.h
-index 7c9d68c02f58..be44bfab01a7 100644
+index 7c9d68c02..be44bfab0 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_lock_defs.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_lock_defs.h
 @@ -95,4 +95,4 @@
@@ -1042,7 +1042,7 @@ index 7c9d68c02f58..be44bfab01a7 100644
 -#endif // __SW_LOCK_DEFS_H__
 +#endif /* __SW_LOCK_DEFS_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_mem.h b/drivers/platform/x86/socwatch/inc/sw_mem.h
-index 600b8881262c..0d6de7f3a21b 100644
+index 600b88812..0d6de7f3a 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_mem.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_mem.h
 @@ -79,4 +79,4 @@ void sw_release_pages(unsigned long addr, unsigned int alloc_size_in_bytes);
@@ -1052,7 +1052,7 @@ index 600b8881262c..0d6de7f3a21b 100644
 -#endif // _SW_MEM_H_
 +#endif /* _SW_MEM_H_ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_ops_provider.h b/drivers/platform/x86/socwatch/inc/sw_ops_provider.h
-index 43bd73fd3445..bb841bf65cb6 100644
+index 43bd73fd3..bb841bf65 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_ops_provider.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_ops_provider.h
 @@ -59,4 +59,4 @@
@@ -1062,7 +1062,7 @@ index 43bd73fd3445..bb841bf65cb6 100644
 -#endif // __SW_OPS_PROVIDER_H__
 +#endif /* __SW_OPS_PROVIDER_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_output_buffer.h b/drivers/platform/x86/socwatch/inc/sw_output_buffer.h
-index 17e59445ce85..8d6518222ce3 100644
+index 17e59445c..8d6518222 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_output_buffer.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_output_buffer.h
 @@ -59,7 +59,7 @@
@@ -1081,7 +1081,7 @@ index 17e59445ce85..8d6518222ce3 100644
 -#endif // _SW_OUTPUT_BUFFER_H_
 +#endif /* _SW_OUTPUT_BUFFER_H_ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_overhead_measurements.h b/drivers/platform/x86/socwatch/inc/sw_overhead_measurements.h
-index 7d9dc683119b..4052555419a8 100644
+index 7d9dc6831..405255541 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_overhead_measurements.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_overhead_measurements.h
 @@ -82,18 +82,18 @@
@@ -1133,7 +1133,7 @@ index 7d9dc683119b..4052555419a8 100644
 -#endif // _PW_OVERHEAD_MEASUREMENTS_H_
 +#endif /* _PW_OVERHEAD_MEASUREMENTS_H_ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_structs.h b/drivers/platform/x86/socwatch/inc/sw_structs.h
-index 7f53a9e2984c..de5ad2b6eb70 100644
+index 7f53a9e29..de5ad2b6e 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_structs.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_structs.h
 @@ -95,14 +95,17 @@ struct sw_key_value_payload {
@@ -1390,7 +1390,7 @@ index 7f53a9e2984c..de5ad2b6eb70 100644
 -#endif // __SW_STRUCTS_H__
 +#endif /* __SW_STRUCTS_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_telem.h b/drivers/platform/x86/socwatch/inc/sw_telem.h
-index 52e5119b557e..e324ff681b2e 100644
+index 52e5119b5..e324ff681 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_telem.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_telem.h
 @@ -57,8 +57,8 @@
@@ -1405,7 +1405,7 @@ index 52e5119b557e..e324ff681b2e 100644
  int sw_telem_init_func(struct sw_driver_io_descriptor *descriptor);
  void sw_read_telem_info(char *dst_vals, int cpu,
 diff --git a/drivers/platform/x86/socwatch/inc/sw_trace_notifier_provider.h b/drivers/platform/x86/socwatch/inc/sw_trace_notifier_provider.h
-index 3834a16d7ae8..3ec4930c9010 100644
+index 3834a16d7..3ec4930c9 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_trace_notifier_provider.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_trace_notifier_provider.h
 @@ -79,4 +79,4 @@ int sw_add_trace_notifier_providers(void);
@@ -1415,7 +1415,7 @@ index 3834a16d7ae8..3ec4930c9010 100644
 -#endif // __SW_TRACE_NOTIFIER_PROVIDER_H__
 +#endif /* __SW_TRACE_NOTIFIER_PROVIDER_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_tracepoint_handlers.h b/drivers/platform/x86/socwatch/inc/sw_tracepoint_handlers.h
-index db8294a9a137..d8a54c099d36 100644
+index db8294a9a..d8a54c099 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_tracepoint_handlers.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_tracepoint_handlers.h
 @@ -67,9 +67,14 @@ enum sw_trace_data_type {
@@ -1490,7 +1490,7 @@ index db8294a9a137..d8a54c099d36 100644
 -#endif // __SW_TRACEPOINT_HANDLERS_H__
 +#endif /* __SW_TRACEPOINT_HANDLERS_H__ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_types.h b/drivers/platform/x86/socwatch/inc/sw_types.h
-index 914ce9806965..156c92c8349a 100644
+index 914ce9806..156c92c83 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_types.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_types.h
 @@ -63,8 +63,8 @@
@@ -1554,7 +1554,7 @@ index 914ce9806965..156c92c8349a 100644
 -#endif // _PW_TYPES_H_
 +#endif /* _PW_TYPES_H_ */
 diff --git a/drivers/platform/x86/socwatch/inc/sw_version.h b/drivers/platform/x86/socwatch/inc/sw_version.h
-index 5797edffa64d..5476b0d79ac5 100644
+index 5797edffa..5476b0d79 100644
 --- a/drivers/platform/x86/socwatch/inc/sw_version.h
 +++ b/drivers/platform/x86/socwatch/inc/sw_version.h
 @@ -71,4 +71,4 @@
@@ -1564,7 +1564,7 @@ index 5797edffa64d..5476b0d79ac5 100644
 -#endif // __SW_VERSION_H__
 +#endif /* __SW_VERSION_H__ */
 diff --git a/drivers/platform/x86/socwatch/sw_collector.c b/drivers/platform/x86/socwatch/sw_collector.c
-index a6c8a9cec48b..db855bab4fd8 100644
+index a6c8a9cec..db855bab4 100644
 --- a/drivers/platform/x86/socwatch/sw_collector.c
 +++ b/drivers/platform/x86/socwatch/sw_collector.c
 @@ -498,7 +498,7 @@ void sw_handle_per_cpu_msg_i(void *info, enum sw_wakeup_action action)
@@ -1587,7 +1587,7 @@ index a6c8a9cec48b..db855bab4fd8 100644
  }
  
 diff --git a/drivers/platform/x86/socwatch/sw_driver.c b/drivers/platform/x86/socwatch/sw_driver.c
-index 35b516cfb26a..661a42555baa 100644
+index 35b516cfb..661a42555 100644
 --- a/drivers/platform/x86/socwatch/sw_driver.c
 +++ b/drivers/platform/x86/socwatch/sw_driver.c
 @@ -133,8 +133,8 @@ static bool sw_should_flush_buffer_i(void);
@@ -1783,7 +1783,7 @@ index 35b516cfb26a..661a42555baa 100644
  }
  
 diff --git a/drivers/platform/x86/socwatch/sw_file_ops.c b/drivers/platform/x86/socwatch/sw_file_ops.c
-index 06c88801a9ec..ea84d252a4d3 100644
+index 06c88801a..ea84d252a 100644
 --- a/drivers/platform/x86/socwatch/sw_file_ops.c
 +++ b/drivers/platform/x86/socwatch/sw_file_ops.c
 @@ -53,18 +53,18 @@
@@ -1866,7 +1866,7 @@ index 06c88801a9ec..ea84d252a4d3 100644
  		/* Cannot be EOF since that has already been checked above */
  		return -EIO;
 diff --git a/drivers/platform/x86/socwatch/sw_internal.c b/drivers/platform/x86/socwatch/sw_internal.c
-index a4a4dca9dc53..04544b8fecb3 100644
+index a4a4dca9d..04544b8fe 100644
 --- a/drivers/platform/x86/socwatch/sw_internal.c
 +++ b/drivers/platform/x86/socwatch/sw_internal.c
 @@ -85,7 +85,7 @@ void sw_schedule_work(const struct cpumask *mask, void (*work)(void *),
@@ -1908,7 +1908,7 @@ index a4a4dca9dc53..04544b8fecb3 100644
  			cpufreq_cpu_put(policy);
  			continue;
 diff --git a/drivers/platform/x86/socwatch/sw_mem.c b/drivers/platform/x86/socwatch/sw_mem.c
-index 0d1231c2e3a8..ac7725387c78 100644
+index 0d1231c2e..ac7725387 100644
 --- a/drivers/platform/x86/socwatch/sw_mem.c
 +++ b/drivers/platform/x86/socwatch/sw_mem.c
 @@ -92,7 +92,7 @@ static atomic_t pw_mem_should_panic = ATOMIC_INIT(0);
@@ -1936,7 +1936,7 @@ index 0d1231c2e3a8..ac7725387c78 100644
 -#endif // DO_TRACK_MEMORY_USAGE
 +#endif /* DO_TRACK_MEMORY_USAGE */
 diff --git a/drivers/platform/x86/socwatch/sw_ops_provider.c b/drivers/platform/x86/socwatch/sw_ops_provider.c
-index 1eb60d12b701..6e0c77204657 100644
+index 1eb60d12b..6e0c77204 100644
 --- a/drivers/platform/x86/socwatch/sw_ops_provider.c
 +++ b/drivers/platform/x86/socwatch/sw_ops_provider.c
 @@ -55,12 +55,12 @@
@@ -2196,7 +2196,7 @@ index 1eb60d12b701..6e0c77204657 100644
 +	/* NOP */
  }
 diff --git a/drivers/platform/x86/socwatch/sw_output_buffer.c b/drivers/platform/x86/socwatch/sw_output_buffer.c
-index d3b8e585595d..a0c1c5fedd05 100644
+index d3b8e5855..a0c1c5fed 100644
 --- a/drivers/platform/x86/socwatch/sw_output_buffer.c
 +++ b/drivers/platform/x86/socwatch/sw_output_buffer.c
 @@ -163,7 +163,7 @@ DECLARE_OVERHEAD_VARS(sw_produce_generic_msg_i);
@@ -2243,7 +2243,7 @@ index d3b8e585595d..a0c1c5fedd05 100644
  		bytes_read = seg->bytes_written;
  	} else {
 diff --git a/drivers/platform/x86/socwatch/sw_reader.c b/drivers/platform/x86/socwatch/sw_reader.c
-index c94e7e8983db..2e55ae1a54cc 100644
+index c94e7e898..2e55ae1a5 100644
 --- a/drivers/platform/x86/socwatch/sw_reader.c
 +++ b/drivers/platform/x86/socwatch/sw_reader.c
 @@ -123,7 +123,7 @@ void sw_wakeup_reader(enum sw_wakeup_action action)
@@ -2263,7 +2263,7 @@ index c94e7e8983db..2e55ae1a54cc 100644
 +#endif /* OVERHEAD */
  }
 diff --git a/drivers/platform/x86/socwatch/sw_telem.c b/drivers/platform/x86/socwatch/sw_telem.c
-index 9f8beb57da68..eccb37df44d5 100644
+index 9f8beb57d..eccb37df4 100644
 --- a/drivers/platform/x86/socwatch/sw_telem.c
 +++ b/drivers/platform/x86/socwatch/sw_telem.c
 @@ -299,7 +299,9 @@ int sw_telem_init_func(struct sw_driver_io_descriptor *descriptor)
@@ -2310,7 +2310,7 @@ index 9f8beb57da68..eccb37df44d5 100644
  	} else {
  		*data_dest = SW_TELEM_READ_FAIL_VALUE;
 diff --git a/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c b/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
-index d6ff34b65638..153fa7010295 100644
+index d6ff34b65..153fa7010 100644
 --- a/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
 +++ b/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
 @@ -71,7 +71,8 @@
@@ -2416,7 +2416,7 @@ index d6ff34b65638..153fa7010295 100644
  		sw_store_topology_change_i(action, cpu, core_id, pkg_id);
  		break;
 diff --git a/drivers/platform/x86/socwatch/sw_tracepoint_handlers.c b/drivers/platform/x86/socwatch/sw_tracepoint_handlers.c
-index bc335ce9a65e..8154f6b516c8 100644
+index bc335ce9a..8154f6b51 100644
 --- a/drivers/platform/x86/socwatch/sw_tracepoint_handlers.c
 +++ b/drivers/platform/x86/socwatch/sw_tracepoint_handlers.c
 @@ -78,7 +78,7 @@ static int s_trace_idx = -1, s_notifier_idx = -1;
@@ -2459,7 +2459,7 @@ index bc335ce9a65e..8154f6b516c8 100644
  		return sw_for_each_node_i(&s_notifier_list, func, priv,
  					  return_on_error);
 diff --git a/drivers/platform/x86/socwatchhv/control.c b/drivers/platform/x86/socwatchhv/control.c
-index 4d1c384b1fe8..120705e562d9 100644
+index 4d1c384b1..120705e56 100644
 --- a/drivers/platform/x86/socwatchhv/control.c
 +++ b/drivers/platform/x86/socwatchhv/control.c
 @@ -103,21 +103,22 @@ extern void CONTROL_Invoke_Cpu(int cpu_idx, void (*func)(pvoid), pvoid ctx)
@@ -2491,7 +2491,7 @@ index 4d1c384b1fe8..120705e562d9 100644
  extern void CONTROL_Invoke_Parallel_Service(void (*func)(pvoid), pvoid ctx,
  					    int blocking, int exclude)
 diff --git a/drivers/platform/x86/socwatchhv/inc/asm_helper.h b/drivers/platform/x86/socwatchhv/inc/asm_helper.h
-index d09a3bbd19cb..10e95190e4f0 100644
+index d09a3bbd1..10e95190e 100644
 --- a/drivers/platform/x86/socwatchhv/inc/asm_helper.h
 +++ b/drivers/platform/x86/socwatchhv/inc/asm_helper.h
 @@ -152,7 +152,7 @@
@@ -2504,7 +2504,7 @@ index d09a3bbd19cb..10e95190e4f0 100644
  
  #endif
 diff --git a/drivers/platform/x86/socwatchhv/inc/pw_types.h b/drivers/platform/x86/socwatchhv/inc/pw_types.h
-index b8a3ac855e53..8b56e5c265dc 100644
+index b8a3ac855..8b56e5c26 100644
 --- a/drivers/platform/x86/socwatchhv/inc/pw_types.h
 +++ b/drivers/platform/x86/socwatchhv/inc/pw_types.h
 @@ -63,8 +63,8 @@
@@ -2543,7 +2543,7 @@ index b8a3ac855e53..8b56e5c265dc 100644
 -#endif // _PW_TYPES_H_
 +#endif /* _PW_TYPES_H_ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/pw_version.h b/drivers/platform/x86/socwatchhv/inc/pw_version.h
-index 8e1cf1cc4d62..7f1a40d82d71 100644
+index 8e1cf1cc4..7f1a40d82 100644
 --- a/drivers/platform/x86/socwatchhv/inc/pw_version.h
 +++ b/drivers/platform/x86/socwatchhv/inc/pw_version.h
 @@ -64,4 +64,4 @@
@@ -2553,7 +2553,7 @@ index 8e1cf1cc4d62..7f1a40d82d71 100644
 -#endif // _PW_VERSION_H_
 +#endif /* _PW_VERSION_H_ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_defines.h b/drivers/platform/x86/socwatchhv/inc/sw_defines.h
-index 9c8995805464..f0ef6baceb3f 100644
+index 9c8995805..f0ef6bace 100644
 --- a/drivers/platform/x86/socwatchhv/inc/sw_defines.h
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_defines.h
 @@ -72,8 +72,8 @@
@@ -2582,7 +2582,7 @@ index 9c8995805464..f0ef6baceb3f 100644
 -#endif // _PW_DEFINES_H_
 +#endif /* _PW_DEFINES_H_ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_ioctl.h b/drivers/platform/x86/socwatchhv/inc/sw_ioctl.h
-index baf93058c5c5..1f8e903a0e1c 100644
+index baf93058c..1f8e903a0 100644
 --- a/drivers/platform/x86/socwatchhv/inc/sw_ioctl.h
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_ioctl.h
 @@ -62,11 +62,11 @@
@@ -2735,7 +2735,7 @@ index baf93058c5c5..1f8e903a0e1c 100644
 +#endif /* defined(CONFIG_COMPAT) && defined(CONFIG_X86_64) */
 +#endif /* __SW_IOCTL_H__ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_kernel_defines.h b/drivers/platform/x86/socwatchhv/inc/sw_kernel_defines.h
-index 23e939a732c7..d970236df8c7 100644
+index 23e939a73..d970236df 100644
 --- a/drivers/platform/x86/socwatchhv/inc/sw_kernel_defines.h
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_kernel_defines.h
 @@ -61,7 +61,7 @@
@@ -2791,7 +2791,7 @@ index 23e939a732c7..d970236df8c7 100644
 -#endif // _SW_KERNEL_DEFINES_H_
 +#endif /* _SW_KERNEL_DEFINES_H_ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_structs.h b/drivers/platform/x86/socwatchhv/inc/sw_structs.h
-index 94e58b5244f4..baac8520e7fd 100644
+index 94e58b524..baac8520e 100644
 --- a/drivers/platform/x86/socwatchhv/inc/sw_structs.h
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_structs.h
 @@ -95,14 +95,15 @@ struct sw_key_value_payload {
@@ -3037,7 +3037,7 @@ index 94e58b5244f4..baac8520e7fd 100644
 -#endif // __SW_STRUCTS_H__
 +#endif /* __SW_STRUCTS_H__ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_types.h b/drivers/platform/x86/socwatchhv/inc/sw_types.h
-index 914ce9806965..156c92c8349a 100644
+index 914ce9806..156c92c83 100644
 --- a/drivers/platform/x86/socwatchhv/inc/sw_types.h
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_types.h
 @@ -63,8 +63,8 @@
@@ -3101,7 +3101,7 @@ index 914ce9806965..156c92c8349a 100644
 -#endif // _PW_TYPES_H_
 +#endif /* _PW_TYPES_H_ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/sw_version.h b/drivers/platform/x86/socwatchhv/inc/sw_version.h
-index 5797edffa64d..5476b0d79ac5 100644
+index 5797edffa..5476b0d79 100644
 --- a/drivers/platform/x86/socwatchhv/inc/sw_version.h
 +++ b/drivers/platform/x86/socwatchhv/inc/sw_version.h
 @@ -71,4 +71,4 @@
@@ -3111,7 +3111,7 @@ index 5797edffa64d..5476b0d79ac5 100644
 -#endif // __SW_VERSION_H__
 +#endif /* __SW_VERSION_H__ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_acrn.h b/drivers/platform/x86/socwatchhv/inc/swhv_acrn.h
-index 06a9e090932b..2bcc97a84bbc 100644
+index 06a9e0909..2bcc97a84 100644
 --- a/drivers/platform/x86/socwatchhv/inc/swhv_acrn.h
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_acrn.h
 @@ -12,8 +12,8 @@
@@ -3141,7 +3141,7 @@ index 06a9e090932b..2bcc97a84bbc 100644
 -#endif // _SWHV_ACRN_H_
 +#endif /* _SWHV_ACRN_H_ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_acrn_sbuf.h b/drivers/platform/x86/socwatchhv/inc/swhv_acrn_sbuf.h
-index c5a08d1025ae..5f62c2d43e11 100644
+index c5a08d102..5f62c2d43 100644
 --- a/drivers/platform/x86/socwatchhv/inc/swhv_acrn_sbuf.h
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_acrn_sbuf.h
 @@ -84,7 +84,7 @@ int sbuf_get_variable(struct shared_buf *sbuf, void **data, uint32_t size)
@@ -3178,7 +3178,7 @@ index c5a08d1025ae..5f62c2d43e11 100644
 -#endif // _SWHV_ACRN_SBUF_H_
 +#endif /* _SWHV_ACRN_SBUF_H_ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_defines.h b/drivers/platform/x86/socwatchhv/inc/swhv_defines.h
-index 65239d566ae1..2f51a5d760f6 100644
+index 65239d566..2f51a5d76 100644
 --- a/drivers/platform/x86/socwatchhv/inc/swhv_defines.h
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_defines.h
 @@ -66,26 +66,26 @@
@@ -3243,7 +3243,7 @@ index 65239d566ae1..2f51a5d760f6 100644
 -#endif // _SWHV_DEFINES_H_
 +#endif /* _SWHV_DEFINES_H_ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_driver.h b/drivers/platform/x86/socwatchhv/inc/swhv_driver.h
-index 8ad0d672f095..f2f9f662b311 100644
+index 8ad0d672f..f2f9f662b 100644
 --- a/drivers/platform/x86/socwatchhv/inc/swhv_driver.h
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_driver.h
 @@ -57,8 +57,8 @@
@@ -3299,7 +3299,7 @@ index 8ad0d672f095..f2f9f662b311 100644
 -#endif // _SWHV_DRIVER_H_
 +#endif /* _SWHV_DRIVER_H_ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_ioctl.h b/drivers/platform/x86/socwatchhv/inc/swhv_ioctl.h
-index 690bbcd5ccba..0d2a368c12ca 100644
+index 690bbcd5c..0d2a368c1 100644
 --- a/drivers/platform/x86/socwatchhv/inc/swhv_ioctl.h
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_ioctl.h
 @@ -63,11 +63,11 @@
@@ -3328,7 +3328,7 @@ index 690bbcd5ccba..0d2a368c12ca 100644
 -#endif // __SWHV_IOCTL_H__
 +#endif /* __SWHV_IOCTL_H__ */
 diff --git a/drivers/platform/x86/socwatchhv/inc/swhv_structs.h b/drivers/platform/x86/socwatchhv/inc/swhv_structs.h
-index 67bac8e36ad4..d5fd717511ba 100644
+index 67bac8e36..d5fd71751 100644
 --- a/drivers/platform/x86/socwatchhv/inc/swhv_structs.h
 +++ b/drivers/platform/x86/socwatchhv/inc/swhv_structs.h
 @@ -117,26 +117,37 @@ struct swhv_driver_switch_io_descriptor {
@@ -3462,7 +3462,7 @@ index 67bac8e36ad4..d5fd717511ba 100644
 -#endif // _SWHV_STRUCTS_H_
 +#endif /* _SWHV_STRUCTS_H_ */
 diff --git a/drivers/platform/x86/socwatchhv/swhv_acrn.c b/drivers/platform/x86/socwatchhv/swhv_acrn.c
-index 926ff09819a7..962db47cec45 100644
+index 926ff0981..962db47ce 100644
 --- a/drivers/platform/x86/socwatchhv/swhv_acrn.c
 +++ b/drivers/platform/x86/socwatchhv/swhv_acrn.c
 @@ -34,10 +34,9 @@
@@ -3742,7 +3742,7 @@ index 926ff09819a7..962db47cec45 100644
  
  	return ret;
 diff --git a/drivers/platform/x86/socwatchhv/swhv_driver.c b/drivers/platform/x86/socwatchhv/swhv_driver.c
-index 369d8a69158f..7a4e6c57ab45 100644
+index 369d8a691..7a4e6c57a 100644
 --- a/drivers/platform/x86/socwatchhv/swhv_driver.c
 +++ b/drivers/platform/x86/socwatchhv/swhv_driver.c
 @@ -85,6 +85,7 @@

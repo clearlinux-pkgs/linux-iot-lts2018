@@ -54,7 +54,7 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  5 files changed, 143 insertions(+)
 
 diff --git a/drivers/gpu/drm/drm_atomic.c b/drivers/gpu/drm/drm_atomic.c
-index aeda2b5fe2ac..7c45d746e936 100644
+index aeda2b5fe..7c45d746e 100644
 --- a/drivers/gpu/drm/drm_atomic.c
 +++ b/drivers/gpu/drm/drm_atomic.c
 @@ -910,6 +910,8 @@ static int drm_atomic_plane_set_property(struct drm_plane *plane,
@@ -76,7 +76,7 @@ index aeda2b5fe2ac..7c45d746e936 100644
  		*val = state->rotation;
  	} else if (property == plane->zpos_property) {
 diff --git a/drivers/gpu/drm/drm_atomic_helper.c b/drivers/gpu/drm/drm_atomic_helper.c
-index 34e1225bd254..9a6763ac9c2c 100644
+index 34e1225bd..9a6763ac9 100644
 --- a/drivers/gpu/drm/drm_atomic_helper.c
 +++ b/drivers/gpu/drm/drm_atomic_helper.c
 @@ -3613,6 +3613,7 @@ void drm_atomic_helper_plane_reset(struct drm_plane *plane)
@@ -88,7 +88,7 @@ index 34e1225bd254..9a6763ac9c2c 100644
  }
  EXPORT_SYMBOL(drm_atomic_helper_plane_reset);
 diff --git a/drivers/gpu/drm/drm_blend.c b/drivers/gpu/drm/drm_blend.c
-index 183a7f6488c7..e0bbd1b004a5 100644
+index 183a7f648..e0bbd1b00 100644
 --- a/drivers/gpu/drm/drm_blend.c
 +++ b/drivers/gpu/drm/drm_blend.c
 @@ -107,6 +107,52 @@
@@ -226,7 +226,7 @@ index 183a7f6488c7..e0bbd1b004a5 100644
 +}
 +EXPORT_SYMBOL(drm_plane_create_blend_mode_property);
 diff --git a/include/drm/drm_blend.h b/include/drm/drm_blend.h
-index 74ba3e10b3a9..12912656ef08 100644
+index 74ba3e10b..12912656e 100644
 --- a/include/drm/drm_blend.h
 +++ b/include/drm/drm_blend.h
 @@ -27,6 +27,10 @@
@@ -248,7 +248,7 @@ index 74ba3e10b3a9..12912656ef08 100644
 +					 unsigned int supported_modes);
  #endif
 diff --git a/include/drm/drm_plane.h b/include/drm/drm_plane.h
-index 47d018e31bce..95c550a64ee8 100644
+index 47d018e31..95c550a64 100644
 --- a/include/drm/drm_plane.h
 +++ b/include/drm/drm_plane.h
 @@ -117,6 +117,7 @@ struct drm_plane_state {

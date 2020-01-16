@@ -13,7 +13,7 @@ Signed-off-by: Puunithaaraj Gopal <puunithaaraj.gopal@intel.com>
  1 file changed, 4 insertions(+)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys.c b/drivers/media/pci/intel/ici/ici-isys.c
-index 3301c71f20e2..917d5ed62eb8 100644
+index 3301c71f2..917d5ed62 100644
 --- a/drivers/media/pci/intel/ici/ici-isys.c
 +++ b/drivers/media/pci/intel/ici/ici-isys.c
 @@ -1266,6 +1266,10 @@ static int isys_isr_one_ici(struct ipu_bus_device *adev)

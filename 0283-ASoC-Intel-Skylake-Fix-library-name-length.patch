@@ -19,7 +19,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 0cde541f900c..6c037d2c8a3c 100644
+index 0cde541f9..6c037d2c8 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -72,7 +72,7 @@ struct skl_d0i3_data {

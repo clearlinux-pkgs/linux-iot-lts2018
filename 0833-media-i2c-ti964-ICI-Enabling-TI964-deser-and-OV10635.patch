@@ -30,7 +30,7 @@ Signed-off-by: Bandi, Kushal <kushal.bandi@intel.com>
  create mode 100644 drivers/media/i2c/ici/ti964_ici.c
 
 diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
-index 4d3ee27b80ba..07f112a37466 100644
+index 4d3ee27b8..07f112a37 100644
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
 @@ -1098,4 +1098,8 @@ endif
@@ -43,7 +43,7 @@ index 4d3ee27b80ba..07f112a37466 100644
 +
  endif
 diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
-index f1e412a8ca89..7c6a6ba46dc9 100644
+index f1e412a8c..7c6a6ba46 100644
 --- a/drivers/media/i2c/Makefile
 +++ b/drivers/media/i2c/Makefile
 @@ -116,3 +116,4 @@ obj-$(CONFIG_VIDEO_TI964) += ti964.o
@@ -53,7 +53,7 @@ index f1e412a8ca89..7c6a6ba46dc9 100644
 +obj-$(CONFIG_VIDEO_INTEL_ICI) += ici/
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_ov10635_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_ov10635_configuration.h
 new file mode 100644
-index 000000000000..012fdee46560
+index 000000000..012fdee46
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crl_ov10635_configuration.h
 @@ -0,0 +1,6360 @@
@@ -6418,7 +6418,7 @@ index 000000000000..012fdee46560
 +
 +#endif  /* __CRLMODULE_OV10635_CONFIGURATION_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-core.c b/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
-index 59896f45b0db..efc00151ccdd 100644
+index 59896f45b..efc00151c 100644
 --- a/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
 @@ -86,7 +86,7 @@ static int __crlmodule_get_crl_ctrl_index(struct crl_sensor *sensor,
@@ -7254,7 +7254,7 @@ index 59896f45b0db..efc00151ccdd 100644
  
  	ret = crlmodule_populate_ds(sensor, &client->dev);
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-data.c b/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
-index c22dc1fbf87a..000982f89a2e 100644
+index c22dc1fbf..000982f89 100644
 --- a/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
 @@ -8,6 +8,7 @@
@@ -7274,7 +7274,7 @@ index c22dc1fbf87a..000982f89a2e 100644
  
  /*
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-sensor-ds.h b/drivers/media/i2c/crlmodule-lite/crlmodule-sensor-ds.h
-index e8a6a6f85ae7..e34deb243009 100644
+index e8a6a6f85..e34deb243 100644
 --- a/drivers/media/i2c/crlmodule-lite/crlmodule-sensor-ds.h
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-sensor-ds.h
 @@ -426,6 +426,7 @@ struct crl_power_seq_entity {
@@ -7287,7 +7287,7 @@ index e8a6a6f85ae7..e34deb243009 100644
  struct crl_nvm_blob {
 diff --git a/drivers/media/i2c/ici/Kconfig b/drivers/media/i2c/ici/Kconfig
 new file mode 100644
-index 000000000000..db4fd7f79b22
+index 000000000..db4fd7f79
 --- /dev/null
 +++ b/drivers/media/i2c/ici/Kconfig
 @@ -0,0 +1,13 @@
@@ -7306,7 +7306,7 @@ index 000000000000..db4fd7f79b22
 +endif
 diff --git a/drivers/media/i2c/ici/Makefile b/drivers/media/i2c/ici/Makefile
 new file mode 100644
-index 000000000000..232f0cc76313
+index 000000000..232f0cc76
 --- /dev/null
 +++ b/drivers/media/i2c/ici/Makefile
 @@ -0,0 +1,2 @@
@@ -7314,7 +7314,7 @@ index 000000000000..232f0cc76313
 +obj-$(CONFIG_VIDEO_TI964_ICI) += ti964_ici.o
 diff --git a/drivers/media/i2c/ici/ti964_ici.c b/drivers/media/i2c/ici/ti964_ici.c
 new file mode 100644
-index 000000000000..0892007d94ca
+index 000000000..0892007d9
 --- /dev/null
 +++ b/drivers/media/i2c/ici/ti964_ici.c
 @@ -0,0 +1,1128 @@
@@ -8447,7 +8447,7 @@ index 000000000000..0892007d94ca
 +MODULE_DESCRIPTION("TI964 CSI2-Aggregator driver for RTOS reference");
 +
 diff --git a/drivers/media/pci/intel/ici/ici-isys.c b/drivers/media/pci/intel/ici/ici-isys.c
-index 466659baec24..ecae4d560317 100644
+index 466659bae..ecae4d560 100644
 --- a/drivers/media/pci/intel/ici/ici-isys.c
 +++ b/drivers/media/pci/intel/ici/ici-isys.c
 @@ -121,7 +121,7 @@ static int isys_determine_legacy_csi_lane_configuration(struct ici_isys *isys)
@@ -8976,7 +8976,7 @@ index 466659baec24..ecae4d560317 100644
  		else
  			status = 0;
 diff --git a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
-index 9d2a2a086395..f6bf4992670d 100644
+index 9d2a2a086..f6bf49926 100644
 --- a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 @@ -24,7 +24,7 @@
@@ -9212,7 +9212,7 @@ index 9d2a2a086395..f6bf4992670d 100644
  		NULL,
  	},
 diff --git a/include/media/crlmodule-lite.h b/include/media/crlmodule-lite.h
-index ce812e8d909d..ce0b18a31766 100644
+index ce812e8d9..ce0b18a31 100644
 --- a/include/media/crlmodule-lite.h
 +++ b/include/media/crlmodule-lite.h
 @@ -19,7 +19,9 @@ struct crlmodule_lite_platform_data {

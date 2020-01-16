@@ -27,7 +27,7 @@ Signed-off-by: Xinyun Liu <xinyun.liu@intel.com>
  3 files changed, 8 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/cmd_parser.c b/drivers/gpu/drm/i915/gvt/cmd_parser.c
-index d30c5e2e09e2..d69cc8e63a18 100644
+index d30c5e2e0..d69cc8e63 100644
 --- a/drivers/gpu/drm/i915/gvt/cmd_parser.c
 +++ b/drivers/gpu/drm/i915/gvt/cmd_parser.c
 @@ -808,7 +808,7 @@ static bool is_shadowed_mmio(unsigned int offset)
@@ -40,7 +40,7 @@ index d30c5e2e09e2..d69cc8e63a18 100644
  	return (offset >= 0x24d0 && offset < 0x2500);
  }
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 708d690b8c4f..882859c20332 100644
+index 708d690b8..882859c20 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -758,6 +758,8 @@ int intel_gvt_debugfs_init(struct intel_gvt *gvt);
@@ -53,7 +53,7 @@ index 708d690b8c4f..882859c20332 100644
  #include "mpt.h"
  
 diff --git a/drivers/gpu/drm/i915/gvt/mmio_context.c b/drivers/gpu/drm/i915/gvt/mmio_context.c
-index 99b01ab60dc3..e6c592f44b39 100644
+index 99b01ab60..e6c592f44 100644
 --- a/drivers/gpu/drm/i915/gvt/mmio_context.c
 +++ b/drivers/gpu/drm/i915/gvt/mmio_context.c
 @@ -590,12 +590,16 @@ void intel_gvt_switch_mmio(struct intel_vgpu *pre,

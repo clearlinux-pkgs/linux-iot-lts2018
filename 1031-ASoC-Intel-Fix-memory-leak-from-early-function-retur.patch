@@ -15,7 +15,7 @@ Signed-off-by: Wood, Brian J <brian.j.wood@intel.com>
  1 file changed, 8 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index af294f6fd23b..9f70a4f7f252 100644
+index af294f6fd..9f70a4f7f 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -540,8 +540,10 @@ static int cnl_sdw_bra_pipe_cfg_pb(struct skl_sst *ctx,

@@ -18,7 +18,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 46 insertions(+), 21 deletions(-)
 
 diff --git a/drivers/media/i2c/crlmodule/crl_ox03a10_common.h b/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
-index 7ef243bcdcb0..ceaed8f2466b 100644
+index 7ef243bcd..ceaed8f24 100644
 --- a/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
 +++ b/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
 @@ -174,7 +174,7 @@ static struct crl_register_write_rep ox03a10_1920_1088_12DCG[] = {
@@ -61,7 +61,7 @@ index 7ef243bcdcb0..ceaed8f2466b 100644
  };
  
 diff --git a/drivers/media/i2c/ti960-des.c b/drivers/media/i2c/ti960-des.c
-index 3414b8a75983..f410f61e71f3 100644
+index 3414b8a75..f410f61e7 100644
 --- a/drivers/media/i2c/ti960-des.c
 +++ b/drivers/media/i2c/ti960-des.c
 @@ -417,31 +417,42 @@ static const struct ti960_csi_data_format

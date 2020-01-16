@@ -23,7 +23,7 @@ Signed-off-by: Gopal, Puunithaaraj <puunithaaraj.gopal@intel.com>
 
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_ov495_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_ov495_configuration.h
 new file mode 100644
-index 000000000000..0cb801066462
+index 000000000..0cb801066
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crl_ov495_configuration.h
 @@ -0,0 +1,285 @@
@@ -313,7 +313,7 @@ index 000000000000..0cb801066462
 +
 +#endif  /* __CRLMODULE_OV495_CONFIGURATION_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-data.c b/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
-index 846d81254ba0..5a7e0f1a9a5a 100644
+index 846d81254..5a7e0f1a9 100644
 --- a/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
 @@ -10,6 +10,7 @@
@@ -333,7 +333,7 @@ index 846d81254ba0..5a7e0f1a9a5a 100644
  
  /*
 diff --git a/drivers/media/i2c/ici/Kconfig b/drivers/media/i2c/ici/Kconfig
-index dd967ac80d8f..de77387dc861 100644
+index dd967ac80..de77387dc 100644
 --- a/drivers/media/i2c/ici/Kconfig
 +++ b/drivers/media/i2c/ici/Kconfig
 @@ -14,6 +14,12 @@ config VIDEO_MAX9286_ICI
@@ -350,7 +350,7 @@ index dd967ac80d8f..de77387dc861 100644
  
  endif
 diff --git a/drivers/media/i2c/ici/Makefile b/drivers/media/i2c/ici/Makefile
-index 4450c5effb94..02a853174db5 100644
+index 4450c5eff..02a853174 100644
 --- a/drivers/media/i2c/ici/Makefile
 +++ b/drivers/media/i2c/ici/Makefile
 @@ -1,3 +1,4 @@
@@ -360,7 +360,7 @@ index 4450c5effb94..02a853174db5 100644
 +obj-$(CONFIG_VIDEO_TI960_ICI) += ti960_ici.o
 diff --git a/drivers/media/i2c/ici/ti960_ici.c b/drivers/media/i2c/ici/ti960_ici.c
 new file mode 100644
-index 000000000000..f5c82db649fe
+index 000000000..f5c82db64
 --- /dev/null
 +++ b/drivers/media/i2c/ici/ti960_ici.c
 @@ -0,0 +1,1343 @@
@@ -1708,7 +1708,7 @@ index 000000000000..f5c82db649fe
 +MODULE_LICENSE("Dual BSD/GPL");
 +MODULE_DESCRIPTION("TI960 CSI2-Aggregator driver");
 diff --git a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
-index 19aef79135a1..6dd4848779d9 100644
+index 19aef7913..6dd484877 100644
 --- a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 @@ -12,6 +12,7 @@
@@ -1927,7 +1927,7 @@ index 19aef79135a1..6dd4848779d9 100644
  		NULL,
  	},
 diff --git a/include/media/crlmodule-lite.h b/include/media/crlmodule-lite.h
-index ce0b18a31766..6ad6320407b3 100644
+index ce0b18a31..6ad632040 100644
 --- a/include/media/crlmodule-lite.h
 +++ b/include/media/crlmodule-lite.h
 @@ -18,6 +18,7 @@ struct crlmodule_lite_platform_data {

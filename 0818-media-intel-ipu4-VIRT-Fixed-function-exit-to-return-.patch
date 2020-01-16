@@ -16,7 +16,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  1 file changed, 25 insertions(+), 16 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
-index 841abc9d6252..b47deacb9a00 100644
+index 841abc9d6..b47deacb9 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 @@ -139,11 +139,14 @@ int process_set_format(struct ipu4_virtio_req_info *req_info)

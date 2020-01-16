@@ -15,7 +15,7 @@ Signed-off-by: Tian, Baofeng
  2 files changed, 31 insertions(+), 1 deletion(-)
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 9298d95230a6..2f1c343ba548 100644
+index 9298d9523..2f1c343ba 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -4013,6 +4013,9 @@
@@ -29,7 +29,7 @@ index 9298d95230a6..2f1c343ba548 100644
  			[KNL, SMP] Set scheduler's default relax_domain_level.
  			See Documentation/cgroup-v1/cpusets.txt.
 diff --git a/kernel/reboot.c b/kernel/reboot.c
-index 8fb44dec9ad7..ec0108927785 100644
+index 8fb44dec9..ec0108927 100644
 --- a/kernel/reboot.c
 +++ b/kernel/reboot.c
 @@ -43,6 +43,7 @@ int reboot_default = 1;

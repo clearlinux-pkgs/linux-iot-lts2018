@@ -24,7 +24,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  3 files changed, 68 insertions(+), 38 deletions(-)
 
 diff --git a/include/sound/soc-dapm.h b/include/sound/soc-dapm.h
-index 5165e3b30899..db4e6382725e 100644
+index 5165e3b30..db4e63827 100644
 --- a/include/sound/soc-dapm.h
 +++ b/include/sound/soc-dapm.h
 @@ -428,7 +428,7 @@ void snd_soc_dapm_free_widget(struct snd_soc_dapm_widget *w);
@@ -37,7 +37,7 @@ index 5165e3b30899..db4e6382725e 100644
  void snd_soc_dapm_shutdown(struct snd_soc_card *card);
  
 diff --git a/sound/soc/soc-dapm.c b/sound/soc/soc-dapm.c
-index 51187ca1efd0..89407870346c 100644
+index 51187ca1e..894078703 100644
 --- a/sound/soc/soc-dapm.c
 +++ b/sound/soc/soc-dapm.c
 @@ -1456,11 +1456,11 @@ static void dapm_seq_insert(struct snd_soc_dapm_widget *new_widget,
@@ -356,7 +356,7 @@ index 51187ca1efd0..89407870346c 100644
  
  /**
 diff --git a/sound/soc/soc-pcm.c b/sound/soc/soc-pcm.c
-index 15e3cf381c02..bc6eef457b43 100644
+index 15e3cf381..bc6eef457 100644
 --- a/sound/soc/soc-pcm.c
 +++ b/sound/soc/soc-pcm.c
 @@ -831,8 +831,10 @@ static int soc_pcm_prepare(struct snd_pcm_substream *substream)

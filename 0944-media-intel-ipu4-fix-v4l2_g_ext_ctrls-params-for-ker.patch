@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 6 insertions(+)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-csi2.c b/drivers/media/pci/intel/ipu-isys-csi2.c
-index 2473f926991f..0f3e122439c0 100644
+index 2473f9269..0f3e12243 100644
 --- a/drivers/media/pci/intel/ipu-isys-csi2.c
 +++ b/drivers/media/pci/intel/ipu-isys-csi2.c
 @@ -108,7 +108,13 @@ int ipu_isys_csi2_get_link_freq(struct ipu_isys_csi2 *csi2, __s64 *link_freq)

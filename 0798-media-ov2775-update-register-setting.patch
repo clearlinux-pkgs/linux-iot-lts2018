@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 9 insertions(+), 89 deletions(-)
 
 diff --git a/drivers/media/i2c/crlmodule/crl_ov2775_configuration.h b/drivers/media/i2c/crlmodule/crl_ov2775_configuration.h
-index 917891371ebe..1734ed686765 100644
+index 917891371..1734ed686 100644
 --- a/drivers/media/i2c/crlmodule/crl_ov2775_configuration.h
 +++ b/drivers/media/i2c/crlmodule/crl_ov2775_configuration.h
 @@ -16,7 +16,6 @@

@@ -14,7 +14,7 @@ Signed-off-by: Chen Meng J <meng.j.chen@intel.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
-index 07f112a37466..e17d9fefe759 100644
+index 07f112a37..e17d9fefe 100644
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
 @@ -1072,19 +1072,19 @@ config VIDEO_I2C

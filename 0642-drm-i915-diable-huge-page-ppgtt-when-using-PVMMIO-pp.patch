@@ -16,7 +16,7 @@ Reviewed-by: Xinyun Liu <xinyun.liu@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index b912e1c81ff6..e6100723680c 100644
+index b912e1c81..e61007236 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
 @@ -5498,7 +5498,8 @@ int i915_gem_init(struct drm_i915_private *dev_priv)

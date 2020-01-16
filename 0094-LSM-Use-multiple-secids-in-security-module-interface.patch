@@ -52,7 +52,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  27 files changed, 275 insertions(+), 165 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index e8632ce10c05..1bf50551c28d 100644
+index e8632ce10..1bf50551c 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -1552,7 +1552,7 @@ union security_list_options {
@@ -165,7 +165,7 @@ index e8632ce10c05..1bf50551c28d 100644
  #endif /* CONFIG_AUDIT */
  
 diff --git a/include/linux/security.h b/include/linux/security.h
-index ef87252b940d..0a9814a16631 100644
+index ef87252b9..0a9814a16 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -70,6 +70,25 @@ enum lsm_event {
@@ -195,7 +195,7 @@ index ef87252b940d..0a9814a16631 100644
  extern int cap_capable(const struct cred *cred, struct user_namespace *ns,
  		       int cap, int audit);
 diff --git a/include/net/flow.h b/include/net/flow.h
-index 8ce21793094e..aa29d11bc3d7 100644
+index 8ce217930..aa29d11bc 100644
 --- a/include/net/flow.h
 +++ b/include/net/flow.h
 @@ -11,6 +11,7 @@
@@ -225,7 +225,7 @@ index 8ce21793094e..aa29d11bc3d7 100644
  	fl4->flowi4_uid = uid;
  	fl4->daddr = daddr;
 diff --git a/include/net/netlabel.h b/include/net/netlabel.h
-index 72d6435fc16c..51dacbb88886 100644
+index 72d6435fc..51dacbb88 100644
 --- a/include/net/netlabel.h
 +++ b/include/net/netlabel.h
 @@ -111,7 +111,7 @@ struct calipso_doi;
@@ -265,10 +265,10 @@ index 72d6435fc16c..51dacbb88886 100644
  {
  	return -ENOSYS;
 diff --git a/net/core/filter.c b/net/core/filter.c
-index e6fa88506c00..204a08f8559b 100644
+index 91b950261..4f3b78ffa 100644
 --- a/net/core/filter.c
 +++ b/net/core/filter.c
-@@ -4288,7 +4288,7 @@ static int bpf_ipv4_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
+@@ -4289,7 +4289,7 @@ static int bpf_ipv4_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
  		err = fib_table_lookup(tb, &fl4, &res, FIB_LOOKUP_NOREF);
  	} else {
  		fl4.flowi4_mark = 0;
@@ -277,7 +277,7 @@ index e6fa88506c00..204a08f8559b 100644
  		fl4.flowi4_tun_key.tun_id = 0;
  		fl4.flowi4_uid = sock_net_uid(net, NULL);
  
-@@ -4399,7 +4399,7 @@ static int bpf_ipv6_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
+@@ -4400,7 +4400,7 @@ static int bpf_ipv6_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
  		f6i = ipv6_stub->fib6_table_lookup(net, tb, oif, &fl6, strict);
  	} else {
  		fl6.flowi6_mark = 0;
@@ -287,7 +287,7 @@ index e6fa88506c00..204a08f8559b 100644
  		fl6.flowi6_uid = sock_net_uid(net, NULL);
  
 diff --git a/net/ipv4/cipso_ipv4.c b/net/ipv4/cipso_ipv4.c
-index f0165c5f376b..8e2a4faa14c6 100644
+index f0165c5f3..8e2a4faa1 100644
 --- a/net/ipv4/cipso_ipv4.c
 +++ b/net/ipv4/cipso_ipv4.c
 @@ -1481,7 +1481,7 @@ static int cipso_v4_gentag_loc(const struct cipso_v4_doi *doi_def,
@@ -309,7 +309,7 @@ index f0165c5f376b..8e2a4faa14c6 100644
  
  	return 0;
 diff --git a/net/netlabel/netlabel_kapi.c b/net/netlabel/netlabel_kapi.c
-index ee3e5b6471a6..9fc319de9a21 100644
+index ee3e5b647..9fc319de9 100644
 --- a/net/netlabel/netlabel_kapi.c
 +++ b/net/netlabel/netlabel_kapi.c
 @@ -224,7 +224,7 @@ int netlbl_cfg_unlbl_static_add(struct net *net,
@@ -331,7 +331,7 @@ index ee3e5b6471a6..9fc319de9a21 100644
  
  /**
 diff --git a/net/netlabel/netlabel_unlabeled.c b/net/netlabel/netlabel_unlabeled.c
-index c92894c3e40a..780e4b932eb8 100644
+index c92894c3e..780e4b932 100644
 --- a/net/netlabel/netlabel_unlabeled.c
 +++ b/net/netlabel/netlabel_unlabeled.c
 @@ -80,7 +80,7 @@ struct netlbl_unlhsh_tbl {
@@ -462,7 +462,7 @@ index c92894c3e40a..780e4b932eb8 100644
  	audit_info.sessionid = 0;
  
 diff --git a/net/netlabel/netlabel_user.c b/net/netlabel/netlabel_user.c
-index 4676f5bb16ae..d5b5ce7e9aa2 100644
+index 4676f5bb1..d5b5ce7e9 100644
 --- a/net/netlabel/netlabel_user.c
 +++ b/net/netlabel/netlabel_user.c
 @@ -112,8 +112,8 @@ struct audit_buffer *netlbl_audit_start_common(int type,
@@ -477,7 +477,7 @@ index 4676f5bb16ae..d5b5ce7e9aa2 100644
  				     &secctx_len) == 0) {
  		audit_log_format(audit_buf, " subj=%s", secctx);
 diff --git a/net/netlabel/netlabel_user.h b/net/netlabel/netlabel_user.h
-index 4a397cde1a48..782ee194fdbd 100644
+index 4a397cde1..782ee194f 100644
 --- a/net/netlabel/netlabel_user.h
 +++ b/net/netlabel/netlabel_user.h
 @@ -48,7 +48,7 @@
@@ -490,7 +490,7 @@ index 4a397cde1a48..782ee194fdbd 100644
  	audit_info->sessionid = audit_get_sessionid(current);
  }
 diff --git a/net/xfrm/xfrm_policy.c b/net/xfrm/xfrm_policy.c
-index ce1b262ce964..777cda016a30 100644
+index ce1b262ce..777cda016 100644
 --- a/net/xfrm/xfrm_policy.c
 +++ b/net/xfrm/xfrm_policy.c
 @@ -1082,7 +1082,8 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
@@ -522,7 +522,7 @@ index ce1b262ce964..777cda016a30 100644
  	return err;
  }
 diff --git a/net/xfrm/xfrm_state.c b/net/xfrm/xfrm_state.c
-index 47a8ff972a2b..811a8b0a952c 100644
+index 47a8ff972..811a8b0a9 100644
 --- a/net/xfrm/xfrm_state.c
 +++ b/net/xfrm/xfrm_state.c
 @@ -1029,7 +1029,8 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,
@@ -536,7 +536,7 @@ index 47a8ff972a2b..811a8b0a952c 100644
  			x->km.state = XFRM_STATE_DEAD;
  			to_put = x;
 diff --git a/security/apparmor/audit.c b/security/apparmor/audit.c
-index eeaddfe0c0fb..d67faf77d6c5 100644
+index eeaddfe0c..d67faf77d 100644
 --- a/security/apparmor/audit.c
 +++ b/security/apparmor/audit.c
 @@ -225,14 +225,14 @@ int aa_audit_rule_known(struct audit_krule *rule)
@@ -557,7 +557,7 @@ index eeaddfe0c0fb..d67faf77d6c5 100644
  	if (!label)
  		return -ENOENT;
 diff --git a/security/apparmor/include/audit.h b/security/apparmor/include/audit.h
-index b8c8b1066b0a..8042046eef90 100644
+index b8c8b1066..8042046ee 100644
 --- a/security/apparmor/include/audit.h
 +++ b/security/apparmor/include/audit.h
 @@ -192,7 +192,7 @@ static inline int complain_error(int error)
@@ -570,7 +570,7 @@ index b8c8b1066b0a..8042046eef90 100644
  
  #endif /* __AA_AUDIT_H */
 diff --git a/security/apparmor/include/secid.h b/security/apparmor/include/secid.h
-index dee6fa3b6081..81f29538e415 100644
+index dee6fa3b6..81f29538e 100644
 --- a/security/apparmor/include/secid.h
 +++ b/security/apparmor/include/secid.h
 @@ -23,8 +23,9 @@ struct aa_label;
@@ -586,7 +586,7 @@ index dee6fa3b6081..81f29538e415 100644
  
  
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index c8644f247d7c..fdcf4e11b5a8 100644
+index c8644f247..fdcf4e11b 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -707,10 +707,10 @@ static void apparmor_bprm_committed_creds(struct linux_binprm *bprm)
@@ -613,7 +613,7 @@ index c8644f247d7c..fdcf4e11b5a8 100644
  {
  	/* TODO: requires secid support */
 diff --git a/security/apparmor/secid.c b/security/apparmor/secid.c
-index 4ccec1bcf6f5..3ef6f3704aeb 100644
+index 4ccec1bcf..3ef6f3704 100644
 --- a/security/apparmor/secid.c
 +++ b/security/apparmor/secid.c
 @@ -73,10 +73,10 @@ struct aa_label *aa_secid_to_label(u32 secid)
@@ -649,7 +649,7 @@ index 4ccec1bcf6f5..3ef6f3704aeb 100644
  	return 0;
  }
 diff --git a/security/security.c b/security/security.c
-index fd958c7ce780..45750bb08ea8 100644
+index fd958c7ce..45750bb08 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -132,6 +132,7 @@ int __init security_init(void)
@@ -833,7 +833,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  #endif /* CONFIG_AUDIT */
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 35df38af8827..9cd862600a29 100644
+index 35df38af8..9cd862600 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -3461,15 +3461,15 @@ static int selinux_inode_listsecurity(struct inode *inode, char *buffer, size_t
@@ -1017,7 +1017,7 @@ index 35df38af8827..9cd862600a29 100644
  
  static void selinux_release_secctx(char *secdata, u32 seclen)
 diff --git a/security/selinux/include/audit.h b/security/selinux/include/audit.h
-index 1bdf973433cc..c9cadad5660e 100644
+index 1bdf97343..c9cadad56 100644
 --- a/security/selinux/include/audit.h
 +++ b/security/selinux/include/audit.h
 @@ -51,7 +51,7 @@ void selinux_audit_rule_free(void *rule);
@@ -1030,7 +1030,7 @@ index 1bdf973433cc..c9cadad5660e 100644
  
  /**
 diff --git a/security/selinux/include/xfrm.h b/security/selinux/include/xfrm.h
-index a0b465316292..99bac3ccfebd 100644
+index a0b465316..99bac3ccf 100644
 --- a/security/selinux/include/xfrm.h
 +++ b/security/selinux/include/xfrm.h
 @@ -20,10 +20,12 @@ int selinux_xfrm_policy_delete(struct xfrm_sec_ctx *ctx);
@@ -1059,7 +1059,7 @@ index a0b465316292..99bac3ccfebd 100644
  
  static inline void selinux_xfrm_notify_policyload(void)
 diff --git a/security/selinux/netlabel.c b/security/selinux/netlabel.c
-index d684257abe5d..b8e44b1038b1 100644
+index d684257ab..b8e44b103 100644
 --- a/security/selinux/netlabel.c
 +++ b/security/selinux/netlabel.c
 @@ -122,7 +122,7 @@ static struct netlbl_lsm_secattr *selinux_netlbl_sock_getattr(
@@ -1072,7 +1072,7 @@ index d684257abe5d..b8e44b1038b1 100644
  
  	return NULL;
 diff --git a/security/selinux/ss/services.c b/security/selinux/ss/services.c
-index 4f45144e45f5..d6dd2a2e563f 100644
+index 4f45144e4..d6dd2a2e5 100644
 --- a/security/selinux/ss/services.c
 +++ b/security/selinux/ss/services.c
 @@ -3409,7 +3409,7 @@ int selinux_audit_rule_known(struct audit_krule *rule)
@@ -1116,7 +1116,7 @@ index 4f45144e45f5..d6dd2a2e563f 100644
  	mls_export_netlbl_lvl(policydb, ctx, secattr);
  	rc = mls_export_netlbl_cat(policydb, ctx, secattr);
 diff --git a/security/selinux/xfrm.c b/security/selinux/xfrm.c
-index 8ffe7e1053c4..067dd8307a9b 100644
+index 8ffe7e105..067dd8307 100644
 --- a/security/selinux/xfrm.c
 +++ b/security/selinux/xfrm.c
 @@ -153,7 +153,8 @@ static int selinux_xfrm_delete(struct xfrm_sec_ctx *ctx)
@@ -1206,7 +1206,7 @@ index 8ffe7e1053c4..067dd8307a9b 100644
  	memcpy(ctx->ctx_str, ctx_str, str_len);
  
 diff --git a/security/smack/smack_access.c b/security/smack/smack_access.c
-index 102c44ffc45f..c51e98d442f4 100644
+index 102c44ffc..c51e98d44 100644
 --- a/security/smack/smack_access.c
 +++ b/security/smack/smack_access.c
 @@ -550,7 +550,9 @@ struct smack_known *smk_import_entry(const char *string, int len)
@@ -1221,7 +1221,7 @@ index 102c44ffc45f..c51e98d442f4 100644
  	 * If direct labeling works use it.
  	 * Otherwise use mapped labeling.
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index e162d990b3a8..a1f6af076fae 100644
+index e162d990b..a1f6af076 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -1475,11 +1475,11 @@ static int smack_inode_listsecurity(struct inode *inode, char *buffer,
@@ -1438,7 +1438,7 @@ index e162d990b3a8..a1f6af076fae 100644
  }
  
 diff --git a/security/smack/smackfs.c b/security/smack/smackfs.c
-index 9d2dde608298..0a075c80abb4 100644
+index 9d2dde608..0a075c80a 100644
 --- a/security/smack/smackfs.c
 +++ b/security/smack/smackfs.c
 @@ -197,7 +197,7 @@ static void smk_netlabel_audit_set(struct netlbl_audit *nap)

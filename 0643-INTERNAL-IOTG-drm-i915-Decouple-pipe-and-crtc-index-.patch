@@ -33,7 +33,7 @@ Change-Id: Iccf6b54c254e2b3d7053620c1b64ad8dda7632b8
  8 files changed, 87 insertions(+), 30 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 65ff6dd2c5a8..f573f6ff51c4 100644
+index 65ff6dd2c..f573f6ff5 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -2833,18 +2833,18 @@ ilk_disable_display_irq(struct drm_i915_private *dev_priv, uint32_t bits)
@@ -61,7 +61,7 @@ index 65ff6dd2c5a8..f573f6ff51c4 100644
  void ibx_display_interrupt_update(struct drm_i915_private *dev_priv,
  				  uint32_t interrupt_mask,
 diff --git a/drivers/gpu/drm/i915/i915_irq.c b/drivers/gpu/drm/i915/i915_irq.c
-index 71977fb8725c..5e0e9f189418 100644
+index 71977fb87..5e0e9f189 100644
 --- a/drivers/gpu/drm/i915/i915_irq.c
 +++ b/drivers/gpu/drm/i915/i915_irq.c
 @@ -626,11 +626,12 @@ static void bdw_update_port_irq(struct drm_i915_private *dev_priv,
@@ -152,7 +152,7 @@ index 71977fb8725c..5e0e9f189418 100644
  			gvt_notify_vblank(dev_priv, pipe);
  #endif
 diff --git a/drivers/gpu/drm/i915/i915_trace.h b/drivers/gpu/drm/i915/i915_trace.h
-index af592e3d09a9..6f25961ad9ad 100644
+index af592e3d0..6f25961ad 100644
 --- a/drivers/gpu/drm/i915/i915_trace.h
 +++ b/drivers/gpu/drm/i915/i915_trace.h
 @@ -281,7 +281,7 @@ TRACE_EVENT(i915_pipe_update_start,
@@ -165,7 +165,7 @@ index af592e3d09a9..6f25961ad9ad 100644
  			   __entry->min = crtc->debug.min_vbl;
  			   __entry->max = crtc->debug.max_vbl;
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 0a5c04d92d9a..0ebc35641211 100644
+index 0a5c04d92..0ebc35641 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -11979,11 +11979,13 @@ verify_single_dpll_state(struct drm_i915_private *dev_priv,
@@ -256,7 +256,7 @@ index 0a5c04d92d9a..0ebc35641211 100644
  		pll->active_mask = pll->state.crtc_mask;
  
 diff --git a/drivers/gpu/drm/i915/intel_dpll_mgr.c b/drivers/gpu/drm/i915/intel_dpll_mgr.c
-index b51ad2917dbe..47b1dfe06152 100644
+index b51ad2917..47b1dfe06 100644
 --- a/drivers/gpu/drm/i915/intel_dpll_mgr.c
 +++ b/drivers/gpu/drm/i915/intel_dpll_mgr.c
 @@ -303,7 +303,7 @@ intel_reference_shared_dpll(struct intel_shared_dpll *pll,
@@ -279,7 +279,7 @@ index b51ad2917dbe..47b1dfe06152 100644
  
  /**
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index d68c5a855b5a..a4b6325c219e 100644
+index d68c5a855..a4b6325c2 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -1530,6 +1530,9 @@ enum tc_port intel_port_to_tc(struct drm_i915_private *dev_priv,
@@ -307,7 +307,7 @@ index d68c5a855b5a..a4b6325c219e 100644
  static inline void
  intel_wait_for_vblank_if_active(struct drm_i915_private *dev_priv, int pipe)
 diff --git a/drivers/gpu/drm/i915/intel_fifo_underrun.c b/drivers/gpu/drm/i915/intel_fifo_underrun.c
-index 77c123cc8817..83ed6f56ed56 100644
+index 77c123cc8..83ed6f56e 100644
 --- a/drivers/gpu/drm/i915/intel_fifo_underrun.c
 +++ b/drivers/gpu/drm/i915/intel_fifo_underrun.c
 @@ -181,11 +181,18 @@ static void broadwell_set_fifo_underrun_reporting(struct drm_device *dev,
@@ -332,7 +332,7 @@ index 77c123cc8817..83ed6f56ed56 100644
  
  static void ibx_set_fifo_underrun_reporting(struct drm_device *dev,
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 220990e23ac5..96a0269e80b3 100644
+index 220990e23..96a0269e8 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -3757,7 +3757,6 @@ bool intel_can_enable_sagv(struct drm_atomic_state *state)

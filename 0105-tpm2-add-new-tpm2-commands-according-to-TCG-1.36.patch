@@ -26,7 +26,7 @@ Tested-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  2 files changed, 118 insertions(+), 164 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index f20dc8ece348..0f08518b525d 100644
+index f20dc8ece..0f08518b5 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
 @@ -134,22 +134,31 @@ enum tpm2_algorithms {
@@ -78,7 +78,7 @@ index f20dc8ece348..0f08518b525d 100644
  
  enum tpm2_permanent_handles {
 diff --git a/drivers/char/tpm/tpm2-cmd.c b/drivers/char/tpm/tpm2-cmd.c
-index ef381caf5f43..9f0daaf3711a 100644
+index ef381caf5..9f0daaf37 100644
 --- a/drivers/char/tpm/tpm2-cmd.c
 +++ b/drivers/char/tpm/tpm2-cmd.c
 @@ -40,129 +40,100 @@ static struct tpm2_hash tpm2_hash_map[] = {

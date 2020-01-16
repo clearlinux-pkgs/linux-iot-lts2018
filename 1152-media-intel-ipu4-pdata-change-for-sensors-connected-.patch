@@ -20,7 +20,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  3 files changed, 146 insertions(+), 34 deletions(-)
 
 diff --git a/drivers/media/platform/intel/Kconfig b/drivers/media/platform/intel/Kconfig
-index 95e15c58cfef..2585e97ec71f 100644
+index 95e15c58c..2585e97ec 100644
 --- a/drivers/media/platform/intel/Kconfig
 +++ b/drivers/media/platform/intel/Kconfig
 @@ -94,6 +94,12 @@ config INTEL_IPU4_OX03A10
@@ -37,7 +37,7 @@ index 95e15c58cfef..2585e97ec71f 100644
  	bool "Compile platorm data for OV495"
  	depends on INTEL_IPU4_BXT_P_PDATA
 diff --git a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
-index 53db12e98b80..8394143c3d29 100644
+index 53db12e98..8394143c3 100644
 --- a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 @@ -1205,6 +1205,28 @@ static struct crlmodule_platform_data ox03a10_pdata = {
@@ -246,7 +246,7 @@ index 53db12e98b80..8394143c3d29 100644
  
  static struct ti960_pdata ti960_pdata = {
 diff --git a/include/media/crlmodule.h b/include/media/crlmodule.h
-index 91650c1a992a..f27917d722af 100644
+index 91650c1a9..f27917d72 100644
 --- a/include/media/crlmodule.h
 +++ b/include/media/crlmodule.h
 @@ -12,6 +12,14 @@

@@ -27,7 +27,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  5 files changed, 235 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index f4ebdce7446d..54bd83eb55b5 100644
+index f4ebdce74..54bd83eb5 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -1164,6 +1164,7 @@ int skl_free_dsp(struct skl *skl)
@@ -39,7 +39,7 @@ index f4ebdce7446d..54bd83eb55b5 100644
  
  	kfree(ctx->cores.state);
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 1457e351efc4..2da571f9c5f4 100644
+index 1457e351e..2da571f9c 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1963,6 +1963,9 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
@@ -53,7 +53,7 @@ index 1457e351efc4..2da571f9c5f4 100644
  	pm_runtime_mark_last_busy(component->dev);
  	pm_runtime_put_autosuspend(component->dev);
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index 58c0c13c15aa..7be2cdeb85b6 100644
+index 58c0c13c1..7be2cdeb8 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -137,6 +137,8 @@ struct skl_tlv_message {
@@ -83,7 +83,7 @@ index 58c0c13c15aa..7be2cdeb85b6 100644
 +void skl_module_sysfs_exit(struct skl_sst *ctx);
  #endif /*__SKL_SST_DSP_H__*/
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 7700b5c54934..f3b8d7bc68ec 100644
+index 7700b5c54..f3b8d7bc6 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -247,6 +247,9 @@ struct skl_sst {
@@ -97,7 +97,7 @@ index 7700b5c54934..f3b8d7bc68ec 100644
  
  struct skl_ipc_init_instance_msg {
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 2bd5565d5f80..0eaa88e6ae61 100644
+index 2bd5565d5..0eaa88e6a 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -23,11 +23,35 @@

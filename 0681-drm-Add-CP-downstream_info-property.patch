@@ -25,7 +25,7 @@ Signed-off-by: Romli, Khairul Anuar <khairul.anuar.romli@intel.com>
  4 files changed, 115 insertions(+), 9 deletions(-)
 
 diff --git a/drivers/gpu/drm/drm_atomic.c b/drivers/gpu/drm/drm_atomic.c
-index 1a4b44923aec..6df269924ac1 100644
+index 1a4b44923..6df269924 100644
 --- a/drivers/gpu/drm/drm_atomic.c
 +++ b/drivers/gpu/drm/drm_atomic.c
 @@ -1511,11 +1511,9 @@ drm_atomic_connector_get_property(struct drm_connector *connector,
@@ -44,7 +44,7 @@ index 1a4b44923aec..6df269924ac1 100644
  		return connector->funcs->atomic_get_property(connector,
  				state, property, val);
 diff --git a/drivers/gpu/drm/drm_connector.c b/drivers/gpu/drm/drm_connector.c
-index 6011d769d50b..8b21a017edaa 100644
+index 6011d769d..8b21a017e 100644
 --- a/drivers/gpu/drm/drm_connector.c
 +++ b/drivers/gpu/drm/drm_connector.c
 @@ -241,6 +241,7 @@ int drm_connector_init(struct drm_device *dev,
@@ -138,7 +138,7 @@ index 6011d769d50b..8b21a017edaa 100644
   * drm_connector_init_panel_orientation_property -
   *	initialize the connecters panel_orientation property
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index 97ea41dc678f..9fd96c96d598 100644
+index 97ea41dc6..9fd96c96d 100644
 --- a/include/drm/drm_connector.h
 +++ b/include/drm/drm_connector.h
 @@ -915,6 +915,13 @@ struct drm_connector {
@@ -185,7 +185,7 @@ index 97ea41dc678f..9fd96c96d598 100644
  	struct drm_connector *connector, int width, int height);
  
 diff --git a/include/uapi/drm/drm_mode.h b/include/uapi/drm/drm_mode.h
-index 8d67243952f4..926d80323b55 100644
+index 8d6724395..926d80323 100644
 --- a/include/uapi/drm/drm_mode.h
 +++ b/include/uapi/drm/drm_mode.h
 @@ -209,6 +209,34 @@ extern "C" {

@@ -19,7 +19,7 @@ Tested-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  2 files changed, 23 insertions(+), 33 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index 6895f183396b..51d147675b1f 100644
+index 6895f1833..51d147675 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
 @@ -382,13 +382,10 @@ typedef union {
@@ -57,7 +57,7 @@ index 6895f183396b..51d147675b1f 100644
   * ideas of string buffer code in security/keys/trusted.h but is heap based
   * in order to keep the stack usage minimal.
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index b5c4fa158c30..d30f336518f6 100644
+index b5c4fa158..d30f33651 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -571,29 +571,33 @@ int tpm1_get_random(struct tpm_chip *chip, u8 *dest, size_t max)

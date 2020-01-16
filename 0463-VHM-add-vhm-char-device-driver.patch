@@ -50,7 +50,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  create mode 100644 include/linux/vhm/vhm_vm_mngt.h
 
 diff --git a/drivers/Makefile b/drivers/Makefile
-index a1a8bf6df4d3..b260b5a5f222 100644
+index a1a8bf6df..b260b5a5f 100644
 --- a/drivers/Makefile
 +++ b/drivers/Makefile
 @@ -183,6 +183,7 @@ obj-$(CONFIG_FPGA)		+= fpga/
@@ -62,7 +62,7 @@ index a1a8bf6df4d3..b260b5a5f222 100644
  obj-$(CONFIG_SIOX)		+= siox/
  obj-$(CONFIG_GNSS)		+= gnss/
 diff --git a/drivers/char/Makefile b/drivers/char/Makefile
-index 88764b76d975..63717938df85 100644
+index 88764b76d..63717938d 100644
 --- a/drivers/char/Makefile
 +++ b/drivers/char/Makefile
 @@ -59,3 +59,4 @@ obj-$(CONFIG_XILLYBUS)		+= xillybus/
@@ -72,14 +72,14 @@ index 88764b76d975..63717938df85 100644
 +obj-$(CONFIG_ACRN)		+= vhm/
 diff --git a/drivers/char/vhm/Makefile b/drivers/char/vhm/Makefile
 new file mode 100644
-index 000000000000..cb801c70a37e
+index 000000000..cb801c70a
 --- /dev/null
 +++ b/drivers/char/vhm/Makefile
 @@ -0,0 +1 @@
 +obj-y += vhm_dev.o
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
 new file mode 100644
-index 000000000000..527e90b187cf
+index 000000000..527e90b18
 --- /dev/null
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -0,0 +1,247 @@
@@ -332,14 +332,14 @@ index 000000000000..527e90b187cf
 +MODULE_VERSION("0.1");
 diff --git a/drivers/vhm/Makefile b/drivers/vhm/Makefile
 new file mode 100644
-index 000000000000..220697aaccb7
+index 000000000..220697aac
 --- /dev/null
 +++ b/drivers/vhm/Makefile
 @@ -0,0 +1 @@
 +obj-y += vhm_vm_mngt.o vhm_hypercall.o
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
 new file mode 100644
-index 000000000000..ddc085d0fa11
+index 000000000..ddc085d0f
 --- /dev/null
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -0,0 +1,134 @@
@@ -479,7 +479,7 @@ index 000000000000..ddc085d0fa11
 +}
 diff --git a/drivers/vhm/vhm_vm_mngt.c b/drivers/vhm/vhm_vm_mngt.c
 new file mode 100644
-index 000000000000..61db04b57362
+index 000000000..61db04b57
 --- /dev/null
 +++ b/drivers/vhm/vhm_vm_mngt.c
 @@ -0,0 +1,107 @@
@@ -592,7 +592,7 @@ index 000000000000..61db04b57362
 +}
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
 new file mode 100644
-index 000000000000..08e47732f4d0
+index 000000000..08e47732f
 --- /dev/null
 +++ b/include/linux/vhm/acrn_common.h
 @@ -0,0 +1,65 @@
@@ -663,7 +663,7 @@ index 000000000000..08e47732f4d0
 +#endif /* ACRN_COMMON_H */
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
 new file mode 100644
-index 000000000000..f338a8fbad3d
+index 000000000..f338a8fba
 --- /dev/null
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -0,0 +1,81 @@
@@ -750,7 +750,7 @@ index 000000000000..f338a8fbad3d
 +#endif /* ACRN_HV_DEFS_H */
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
 new file mode 100644
-index 000000000000..c07163dbc3bd
+index 000000000..c07163dbc
 --- /dev/null
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -0,0 +1,148 @@
@@ -904,7 +904,7 @@ index 000000000000..c07163dbc3bd
 +#endif /* VHM_HYPERCALL_H */
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
 new file mode 100644
-index 000000000000..d8c81b6e9306
+index 000000000..d8c81b6e9
 --- /dev/null
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -0,0 +1,67 @@
@@ -977,7 +977,7 @@ index 000000000000..d8c81b6e9306
 +#endif /* VHM_IOCTL_DEFS_H */
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
 new file mode 100644
-index 000000000000..dcb246af561a
+index 000000000..dcb246af5
 --- /dev/null
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -0,0 +1,78 @@

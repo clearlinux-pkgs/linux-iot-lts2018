@@ -27,7 +27,7 @@ Signed-off-by: Yugang Fan
  9 files changed, 82 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/gpu/drm/drm_atomic.c b/drivers/gpu/drm/drm_atomic.c
-index 5c6eb8954a9d..7857ffbb9113 100644
+index 5c6eb8954..7857ffbb9 100644
 --- a/drivers/gpu/drm/drm_atomic.c
 +++ b/drivers/gpu/drm/drm_atomic.c
 @@ -574,6 +574,14 @@ int drm_atomic_crtc_set_property(struct drm_crtc *crtc,
@@ -55,7 +55,7 @@ index 5c6eb8954a9d..7857ffbb9113 100644
  		*val = (state->gamma_lut) ? state->gamma_lut->base.id : 0;
  	else if (property == config->prop_out_fence_ptr)
 diff --git a/drivers/gpu/drm/drm_atomic_helper.c b/drivers/gpu/drm/drm_atomic_helper.c
-index 9390a332ad65..34e1225bd254 100644
+index 9390a332a..34e1225bd 100644
 --- a/drivers/gpu/drm/drm_atomic_helper.c
 +++ b/drivers/gpu/drm/drm_atomic_helper.c
 @@ -3499,6 +3499,8 @@ void __drm_atomic_helper_crtc_duplicate_state(struct drm_crtc *crtc,
@@ -84,7 +84,7 @@ index 9390a332ad65..34e1225bd254 100644
  	crtc_state->color_mgmt_changed |= replaced;
  
 diff --git a/drivers/gpu/drm/drm_color_mgmt.c b/drivers/gpu/drm/drm_color_mgmt.c
-index b97e2de2c029..8fc8197059bd 100644
+index b97e2de2c..8fc819705 100644
 --- a/drivers/gpu/drm/drm_color_mgmt.c
 +++ b/drivers/gpu/drm/drm_color_mgmt.c
 @@ -64,6 +64,16 @@
@@ -119,7 +119,7 @@ index b97e2de2c029..8fc8197059bd 100644
  	if (gamma_lut_size) {
  		drm_object_attach_property(&crtc->base,
 diff --git a/drivers/gpu/drm/drm_fb_helper.c b/drivers/gpu/drm/drm_fb_helper.c
-index bf1217d4991e..599bcde6a6a9 100644
+index 04bc554b6..e9a488679 100644
 --- a/drivers/gpu/drm/drm_fb_helper.c
 +++ b/drivers/gpu/drm/drm_fb_helper.c
 @@ -1464,6 +1464,7 @@ static int setcmap_atomic(struct fb_cmap *cmap, struct fb_info *info)
@@ -131,7 +131,7 @@ index bf1217d4991e..599bcde6a6a9 100644
  						      gamma_lut);
  		crtc_state->color_mgmt_changed |= replaced;
 diff --git a/drivers/gpu/drm/drm_mode_config.c b/drivers/gpu/drm/drm_mode_config.c
-index 21e353bd3948..1d6ea4bb4838 100644
+index 21e353bd3..1d6ea4bb4 100644
 --- a/drivers/gpu/drm/drm_mode_config.c
 +++ b/drivers/gpu/drm/drm_mode_config.c
 @@ -332,6 +332,13 @@ static int drm_mode_create_standard_properties(struct drm_device *dev)
@@ -149,7 +149,7 @@ index 21e353bd3948..1d6ea4bb4838 100644
  			DRM_MODE_PROP_BLOB,
  			"GAMMA_LUT", 0);
 diff --git a/drivers/gpu/drm/i915/intel_color.c b/drivers/gpu/drm/i915/intel_color.c
-index c6a7beabd58d..8d41c8f7042a 100644
+index c6a7beabd..8d41c8f70 100644
 --- a/drivers/gpu/drm/i915/intel_color.c
 +++ b/drivers/gpu/drm/i915/intel_color.c
 @@ -230,13 +230,34 @@ static void ilk_load_csc_matrix(struct drm_crtc_state *crtc_state)
@@ -192,7 +192,7 @@ index c6a7beabd58d..8d41c8f7042a 100644
  		I915_WRITE(PIPE_CSC_MODE(pipe), 0);
  	} else {
 diff --git a/include/drm/drm_crtc.h b/include/drm/drm_crtc.h
-index 92e7fc7f05a4..5e4f8d83181d 100644
+index 92e7fc7f0..5e4f8d831 100644
 --- a/include/drm/drm_crtc.h
 +++ b/include/drm/drm_crtc.h
 @@ -265,6 +265,15 @@ struct drm_crtc_state {
@@ -212,7 +212,7 @@ index 92e7fc7f05a4..5e4f8d83181d 100644
  	 * @gamma_lut:
  	 *
 diff --git a/include/drm/drm_mode_config.h b/include/drm/drm_mode_config.h
-index a0b202e1d69a..f606d2d2cbe1 100644
+index a0b202e1d..f606d2d2c 100644
 --- a/include/drm/drm_mode_config.h
 +++ b/include/drm/drm_mode_config.h
 @@ -747,6 +747,11 @@ struct drm_mode_config {
@@ -228,7 +228,7 @@ index a0b202e1d69a..f606d2d2cbe1 100644
  	 * @gamma_lut_property: Optional CRTC property to set the LUT used to
  	 * convert the colors, after the CTM matrix, to the gamma space of the
 diff --git a/include/uapi/drm/drm_mode.h b/include/uapi/drm/drm_mode.h
-index 926d80323b55..6e9e2d66a83b 100644
+index 926d80323..6e9e2d66a 100644
 --- a/include/uapi/drm/drm_mode.h
 +++ b/include/uapi/drm/drm_mode.h
 @@ -647,6 +647,13 @@ struct drm_color_ctm {

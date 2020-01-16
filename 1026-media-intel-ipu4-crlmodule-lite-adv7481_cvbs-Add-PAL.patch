@@ -17,7 +17,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  1 file changed, 38 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h
-index b077c5cb09c4..afd27c2580fe 100644
+index b077c5cb0..afd27c258 100644
 --- a/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h
 +++ b/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h
 @@ -107,18 +107,18 @@ static struct crl_subdev_rect_rep adv7481_cvbs_ntsc_rects[] = {

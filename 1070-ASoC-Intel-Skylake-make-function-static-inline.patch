@@ -17,7 +17,7 @@ Signed-off-by: Pankaj Bharadiya <pankaj.laxminarayan.bharadiya@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index c900bdf691e5..1f459be850c6 100644
+index c900bdf69..1f459be85 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -266,7 +266,7 @@ static inline struct nhlt_specific_cfg

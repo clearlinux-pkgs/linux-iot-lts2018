@@ -16,7 +16,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  1 file changed, 4 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 3fed1545327d..33101efcc2a3 100644
+index 3fed15453..33101efcc 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -139,7 +139,6 @@ static int pipeline_set_power(struct ici_isys_stream *as,

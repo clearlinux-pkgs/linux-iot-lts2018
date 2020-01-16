@@ -20,7 +20,7 @@ Tracked-on: https://github.com/projectacrn/acrn-hypervisor/issues/1155
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 7d7211e54e6f..8211282a19aa 100644
+index 7d7211e54..8211282a1 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -15557,7 +15557,7 @@ int intel_modeset_init(struct drm_device *dev)

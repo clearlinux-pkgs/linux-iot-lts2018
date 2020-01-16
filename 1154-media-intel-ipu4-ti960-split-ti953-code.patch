@@ -23,7 +23,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  rename drivers/media/i2c/{ti960.c => ti960-des.c} (82%)
 
 diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
-index 7c6a6ba46dc9..b3a52636994e 100644
+index 7c6a6ba46..b3a526369 100644
 --- a/drivers/media/i2c/Makefile
 +++ b/drivers/media/i2c/Makefile
 @@ -114,6 +114,7 @@ obj-$(CONFIG_SDR_MAX2175) += max2175.o
@@ -36,7 +36,7 @@ index 7c6a6ba46dc9..b3a52636994e 100644
  obj-$(CONFIG_VIDEO_INTEL_ICI) += ici/
 diff --git a/drivers/media/i2c/ti953-ser.c b/drivers/media/i2c/ti953-ser.c
 new file mode 100644
-index 000000000000..70cefcc3a4a7
+index 000000000..70cefcc3a
 --- /dev/null
 +++ b/drivers/media/i2c/ti953-ser.c
 @@ -0,0 +1,133 @@
@@ -175,7 +175,7 @@ index 000000000000..70cefcc3a4a7
 +}
 diff --git a/drivers/media/i2c/ti953.h b/drivers/media/i2c/ti953.h
 new file mode 100644
-index 000000000000..b33baeff867b
+index 000000000..b33baeff8
 --- /dev/null
 +++ b/drivers/media/i2c/ti953.h
 @@ -0,0 +1,125 @@
@@ -308,7 +308,7 @@ diff --git a/drivers/media/i2c/ti960.c b/drivers/media/i2c/ti960-des.c
 similarity index 82%
 rename from drivers/media/i2c/ti960.c
 rename to drivers/media/i2c/ti960-des.c
-index 2430fcc85527..3414b8a75983 100644
+index 2430fcc85..3414b8a75 100644
 --- a/drivers/media/i2c/ti960.c
 +++ b/drivers/media/i2c/ti960-des.c
 @@ -18,6 +18,7 @@
@@ -814,7 +814,7 @@ index 2430fcc85527..3414b8a75983 100644
  	}
  
 diff --git a/drivers/media/i2c/ti960-reg.h b/drivers/media/i2c/ti960-reg.h
-index 60d9bf29a9b8..a878c63be480 100644
+index 60d9bf29a..a878c63be 100644
 --- a/drivers/media/i2c/ti960-reg.h
 +++ b/drivers/media/i2c/ti960-reg.h
 @@ -81,86 +81,12 @@ static const struct ti960_register_write ti960_init_settings[] = {

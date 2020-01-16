@@ -14,7 +14,7 @@ Reviewed-on:
  1 file changed, 15 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 74ec7e65e5f7..d93191514dca 100644
+index 74ec7e65e..d93191514 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1120,6 +1120,21 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {

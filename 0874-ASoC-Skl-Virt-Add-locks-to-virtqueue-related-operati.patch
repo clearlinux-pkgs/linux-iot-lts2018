@@ -20,7 +20,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  2 files changed, 36 insertions(+), 5 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 4efda251cf36..642a1c05113b 100644
+index 4efda251c..642a1c051 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -100,15 +100,19 @@ static int vfe_send_virtio_msg(struct snd_skl_vfe *vfe,
@@ -128,7 +128,7 @@ index 4efda251cf36..642a1c05113b 100644
  	vfe->ipc_cmd_tx_vq = vqs[SKL_VIRTIO_IPC_CMD_TX_VQ];
  	vfe->ipc_cmd_rx_vq = vqs[SKL_VIRTIO_IPC_CMD_RX_VQ];
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index f49977e9ce33..4b8e09e2c09a 100644
+index f49977e9c..4b8e09e2c 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -40,6 +40,7 @@ struct snd_skl_vfe {

@@ -16,7 +16,7 @@ Signed-off-by: Badiuzzaman Iskhandar <badiuzzaman.azzarfan.bin.iskhandar@intel.c
  1 file changed, 5 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_wopcm.c b/drivers/gpu/drm/i915/intel_wopcm.c
-index 5ff877ed7b12..10d1ea189775 100644
+index 5ff877ed7..10d1ea189 100644
 --- a/drivers/gpu/drm/i915/intel_wopcm.c
 +++ b/drivers/gpu/drm/i915/intel_wopcm.c
 @@ -63,6 +63,9 @@

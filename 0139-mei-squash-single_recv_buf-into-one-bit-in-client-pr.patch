@@ -15,7 +15,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/misc/mei/hw.h b/drivers/misc/mei/hw.h
-index 2b7f7677f8cc..b7d2487b8409 100644
+index 2b7f7677f..b7d2487b8 100644
 --- a/drivers/misc/mei/hw.h
 +++ b/drivers/misc/mei/hw.h
 @@ -311,7 +311,8 @@ struct mei_client_properties {

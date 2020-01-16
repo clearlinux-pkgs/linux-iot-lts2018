@@ -19,7 +19,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  5 files changed, 99 insertions(+), 96 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 27000252d20e..55b0f0899fbf 100644
+index 27000252d..55b0f0899 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -2030,6 +2030,7 @@ struct security_hook_list {
@@ -44,7 +44,7 @@ index 27000252d20e..55b0f0899fbf 100644
  
  #endif /* ! __LINUX_LSM_HOOKS_H */
 diff --git a/security/security.c b/security/security.c
-index 132817ced21a..9620309ee754 100644
+index 132817ced..9620309ee 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -41,6 +41,7 @@ struct security_hook_heads security_hook_heads __lsm_ro_after_init;
@@ -182,7 +182,7 @@ index 132817ced21a..9620309ee754 100644
  
  int security_dentry_init_security(struct dentry *dentry, int mode,
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index fd17560c0195..a09107c5b29e 100644
+index fd17560c0..a09107c5b 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -148,8 +148,6 @@ static int __init checkreqprot_setup(char *str)
@@ -269,7 +269,7 @@ index fd17560c0195..a09107c5b29e 100644
  
  	avtab_cache_init();
 diff --git a/security/selinux/include/objsec.h b/security/selinux/include/objsec.h
-index 3304a1ee58a4..7a3d18fa9b13 100644
+index 3304a1ee5..7a3d18fa9 100644
 --- a/security/selinux/include/objsec.h
 +++ b/security/selinux/include/objsec.h
 @@ -59,10 +59,7 @@ enum label_initialized {
@@ -285,7 +285,7 @@ index 3304a1ee58a4..7a3d18fa9b13 100644
  	u32 sid;		/* SID of this object */
  	u16 sclass;		/* security class of this object */
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 45468d3ee394..cf2a441b7a00 100644
+index 45468d3ee..cf2a441b7 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -288,24 +288,18 @@ static struct smack_known *smk_fetch(const char *name, struct inode *ip,

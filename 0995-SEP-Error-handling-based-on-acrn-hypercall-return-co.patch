@@ -16,7 +16,7 @@ Signed-off-by: Manisha Chinthapally <manisha.chinthapally@intel.com>
  3 files changed, 89 insertions(+), 27 deletions(-)
 
 diff --git a/drivers/platform/x86/sepdk/sep/lwpmudrv.c b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
-index 130081d5346b..5c5906dabbd5 100644
+index 130081d53..5c5906dab 100644
 --- a/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 +++ b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 @@ -2677,8 +2677,13 @@ static VOID lwpmudrv_Read_MSR(PVOID param)
@@ -190,7 +190,7 @@ index 130081d5346b..5c5906dabbd5 100644
  
  #if !defined(CONFIG_XEN_HAVE_VPMU)
 diff --git a/drivers/platform/x86/sepdk/sep/perfver4.c b/drivers/platform/x86/sepdk/sep/perfver4.c
-index ae8fa717f4bf..7995c3d20f49 100755
+index ae8fa717f..7995c3d20 100755
 --- a/drivers/platform/x86/sepdk/sep/perfver4.c
 +++ b/drivers/platform/x86/sepdk/sep/perfver4.c
 @@ -409,9 +409,12 @@ static VOID perfver4_Write_PMU(VOID *param)
@@ -228,7 +228,7 @@ index ae8fa717f4bf..7995c3d20f49 100755
  		     cpu_idx++) {
  			pcpu = &pcb[cpu_idx];
 diff --git a/drivers/platform/x86/sepdk/sep/utility.c b/drivers/platform/x86/sepdk/sep/utility.c
-index cc4f0cba5e9e..65fa379ff0a8 100755
+index cc4f0cba5..65fa379ff 100755
 --- a/drivers/platform/x86/sepdk/sep/utility.c
 +++ b/drivers/platform/x86/sepdk/sep/utility.c
 @@ -126,8 +126,13 @@ VOID UTILITY_Read_Cpuid(U64 cpuid_function, U64 *rax_value,

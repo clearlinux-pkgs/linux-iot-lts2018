@@ -27,7 +27,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 19 insertions(+), 8 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index b3591c8de471..1c53ba3c6172 100644
+index b3591c8de..1c53ba3c6 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -53,8 +53,8 @@

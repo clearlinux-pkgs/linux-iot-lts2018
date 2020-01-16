@@ -13,7 +13,7 @@ Signed-off-by: Marcin Pietraszko <marcin.pietraszko@intel.com>
  3 files changed, 23 insertions(+), 25 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 7709299f8078..097e6a9c4fb4 100644
+index 7709299f8..097e6a9c4 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -387,9 +387,6 @@ static int vbe_skl_prepare_dma(struct vbe_substream_info *substr_info,
@@ -64,7 +64,7 @@ index 7709299f8078..097e6a9c4fb4 100644
  }
  
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index be2cc77dcd83..7f395ed3bcd1 100644
+index be2cc77dc..7f395ed3b 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -7,6 +7,7 @@
@@ -93,7 +93,7 @@ index be2cc77dcd83..7f395ed3bcd1 100644
  	u32 chunk_size;
  	u32 chunks;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 17d5e3de45f5..c9475a0852e1 100644
+index 17d5e3de4..c9475a085 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -157,7 +157,8 @@ static int vfe_send_msg(struct snd_skl_vfe *vfe,

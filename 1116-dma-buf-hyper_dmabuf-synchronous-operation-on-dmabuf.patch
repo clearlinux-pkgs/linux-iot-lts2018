@@ -14,7 +14,7 @@ Signed-off-by: Dongwon Kim <dongwon.kim@intel.com>
  1 file changed, 16 insertions(+), 15 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
-index 8c3a830947e9..5d42bc487559 100644
+index 8c3a83094..5d42bc487 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
 @@ -50,7 +50,7 @@ int dmabuf_refcount(struct dma_buf *dma_buf)

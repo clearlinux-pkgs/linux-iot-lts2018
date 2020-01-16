@@ -11,7 +11,7 @@ Signed-off-by: Jason Chen CJ <jason.cj.chen@intel.com>
  1 file changed, 10 insertions(+), 1 deletion(-)
 
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index a6f46648c853..f27feb7a3e57 100644
+index a6f46648c..f27feb7a3 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -144,7 +144,7 @@ struct acrn_create_vm {

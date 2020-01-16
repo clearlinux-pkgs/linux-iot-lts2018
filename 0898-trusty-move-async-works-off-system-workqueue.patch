@@ -16,7 +16,7 @@ Reviewed-by: mark gross <mgross@linux.intel.com>
  2 files changed, 38 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/trusty/trusty-irq.c b/drivers/trusty/trusty-irq.c
-index aeb0918dc572..5a74d75ce820 100644
+index aeb0918dc..5a74d75ce 100644
 --- a/drivers/trusty/trusty-irq.c
 +++ b/drivers/trusty/trusty-irq.c
 @@ -57,6 +57,7 @@ struct trusty_irq_state {
@@ -67,7 +67,7 @@ index aeb0918dc572..5a74d75ce820 100644
  
  	return 0;
 diff --git a/drivers/trusty/trusty-virtio.c b/drivers/trusty/trusty-virtio.c
-index eb4c0d31e249..eaeb020e98f4 100644
+index eb4c0d31e..eaeb020e9 100644
 --- a/drivers/trusty/trusty-virtio.c
 +++ b/drivers/trusty/trusty-virtio.c
 @@ -46,6 +46,8 @@ struct trusty_ctx {

@@ -17,7 +17,7 @@ Signed-off-by: Pawel Furtak <pawel.furtak@intel.com>
  2 files changed, 321 insertions(+), 17 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index 279068bcd4f7..64e98049e9f9 100644
+index 279068bcd..64e98049e 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -35,7 +35,6 @@ struct vfe_stream_pos_desc {
@@ -29,7 +29,7 @@ index 279068bcd4f7..64e98049e9f9 100644
  
  struct vfe_dsp_ipc_msg {
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 5cbfc1cac333..2c33bcf70abc 100644
+index 5cbfc1cac..2c33bcf70 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -49,6 +49,309 @@ static struct snd_skl_vfe *get_virtio_audio_fe(void)

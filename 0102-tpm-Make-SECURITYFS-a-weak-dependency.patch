@@ -21,7 +21,7 @@ Signed-off-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/char/tpm/Kconfig b/drivers/char/tpm/Kconfig
-index 18c81cbe4704..536e55d3919f 100644
+index 18c81cbe4..536e55d39 100644
 --- a/drivers/char/tpm/Kconfig
 +++ b/drivers/char/tpm/Kconfig
 @@ -5,7 +5,7 @@

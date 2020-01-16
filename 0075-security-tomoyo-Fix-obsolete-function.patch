@@ -13,7 +13,7 @@ Signed-off-by: James Morris <james.morris@microsoft.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/security/tomoyo/common.c b/security/tomoyo/common.c
-index 03923a138ef5..9b38f94b5dd0 100644
+index 03923a138..9b38f94b5 100644
 --- a/security/tomoyo/common.c
 +++ b/security/tomoyo/common.c
 @@ -1660,7 +1660,8 @@ static void tomoyo_read_pid(struct tomoyo_io_buffer *head)

@@ -15,7 +15,7 @@ Change-Id: I683bc926e57b990eace51bb4c3dacaddf7e101f8
  1 file changed, 16 insertions(+), 16 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-buttress.c b/drivers/media/pci/intel/ipu-buttress.c
-index 33a644924b43..7967fe5410d3 100644
+index 33a644924..7967fe541 100644
 --- a/drivers/media/pci/intel/ipu-buttress.c
 +++ b/drivers/media/pci/intel/ipu-buttress.c
 @@ -1546,22 +1546,6 @@ static int ipu_buttress_start_tsc_sync_set(void *data, u64 val)

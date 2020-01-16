@@ -16,7 +16,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 11 insertions(+), 8 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index f7c832b300d0..2969e57e3e93 100644
+index f7c832b30..2969e57e3 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -533,21 +533,24 @@ int cnl_sst_dsp_init(struct device *dev, void __iomem *mmio_base, int irq,

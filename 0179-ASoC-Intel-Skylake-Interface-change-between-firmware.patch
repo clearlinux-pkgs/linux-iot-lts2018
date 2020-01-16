@@ -14,7 +14,7 @@ Signed-off-by: Hardik T Shah <hardik.t.shah@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index d94709ffd323..353c90cbd336 100644
+index d94709ffd..353c90cbd 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -200,8 +200,8 @@ union skl_connector_node_id {

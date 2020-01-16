@@ -12,7 +12,7 @@ Signed-off-by: Mateusz Polrola <mateuszx.potrola@intel.com>
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_be_drv.c b/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_be_drv.c
-index 67c79683407b..b308d7e00d18 100644
+index 67c796834..b308d7e00 100644
 --- a/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_be_drv.c
 +++ b/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_be_drv.c
 @@ -365,6 +365,8 @@ static int vbs_k_reset(struct virtio_be_priv *priv)

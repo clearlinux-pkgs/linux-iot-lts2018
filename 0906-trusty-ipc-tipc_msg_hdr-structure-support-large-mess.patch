@@ -17,7 +17,7 @@ Reviewed-on: #575370
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/trusty/trusty-ipc.c b/drivers/trusty/trusty-ipc.c
-index 363b0239310a..44843eb811bd 100644
+index 363b02393..44843eb81 100644
 --- a/drivers/trusty/trusty-ipc.c
 +++ b/drivers/trusty/trusty-ipc.c
 @@ -71,9 +71,9 @@ struct tipc_dev_config {

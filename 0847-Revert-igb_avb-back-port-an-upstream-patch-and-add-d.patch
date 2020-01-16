@@ -12,7 +12,7 @@ Change-Id: Ia12d43a9f589f136823e7377bf18cb58b81c2d44
  1 file changed, 1 insertion(+), 3 deletions(-)
 
 diff --git a/drivers/staging/igb_avb/igb_main.c b/drivers/staging/igb_avb/igb_main.c
-index 5c4e0e0f3454..8d772cfbe397 100644
+index 5c4e0e0f3..8d772cfbe 100644
 --- a/drivers/staging/igb_avb/igb_main.c
 +++ b/drivers/staging/igb_avb/igb_main.c
 @@ -484,8 +484,6 @@ u32 e1000_read_reg(struct e1000_hw *hw, u32 reg)

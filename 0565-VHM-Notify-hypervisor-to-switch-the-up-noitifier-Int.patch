@@ -20,7 +20,7 @@ Signed-off-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 14 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index c6a97e8305fd..f730467ca8d9 100644
+index c6a97e830..f730467ca 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -86,6 +86,7 @@

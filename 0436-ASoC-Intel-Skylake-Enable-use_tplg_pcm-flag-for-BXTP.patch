@@ -22,7 +22,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  1 file changed, 6 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 7b3faf895a46..3687668593ee 100644
+index 7b3faf895..368766859 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1188,6 +1188,10 @@ static struct skl_machine_pdata cnl_pdata = {

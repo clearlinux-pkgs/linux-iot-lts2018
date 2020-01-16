@@ -22,7 +22,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 67 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index e0d6f74a8fd5..f4ebdce7446d 100644
+index e0d6f74a8..f4ebdce74 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -2086,6 +2086,70 @@ static void fill_pin_params(struct skl_audio_data_format *pin_fmt,

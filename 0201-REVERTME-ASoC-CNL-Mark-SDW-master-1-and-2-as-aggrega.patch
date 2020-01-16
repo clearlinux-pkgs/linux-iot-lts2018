@@ -14,7 +14,7 @@ Reviewed-on:
  1 file changed, 8 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index e4d531680a5a..0caf9bf070a3 100644
+index e4d531680..0caf9bf07 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -509,8 +509,7 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,

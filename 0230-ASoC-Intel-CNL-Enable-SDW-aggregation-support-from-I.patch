@@ -10,7 +10,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 7 insertions(+)
 
 diff --git a/include/uapi/sound/skl-tplg-interface.h b/include/uapi/sound/skl-tplg-interface.h
-index 68eda1a15e39..47f033884b2f 100644
+index 68eda1a15..47f033884 100644
 --- a/include/uapi/sound/skl-tplg-interface.h
 +++ b/include/uapi/sound/skl-tplg-interface.h
 @@ -23,6 +23,8 @@

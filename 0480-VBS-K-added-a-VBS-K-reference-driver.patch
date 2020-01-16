@@ -36,7 +36,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  create mode 100644 drivers/vbs/vbs_rng.c
 
 diff --git a/drivers/vbs/Kconfig b/drivers/vbs/Kconfig
-index 156c3162fd63..e3bb44d6a5e9 100644
+index 156c3162f..e3bb44d6a 100644
 --- a/drivers/vbs/Kconfig
 +++ b/drivers/vbs/Kconfig
 @@ -18,3 +18,14 @@ config VBS_DEBUG
@@ -55,7 +55,7 @@ index 156c3162fd63..e3bb44d6a5e9 100644
 +	  The reference driver shows an example on how to use VBS-K
 +	  APIs.
 diff --git a/drivers/vbs/Makefile b/drivers/vbs/Makefile
-index cbd5076e2313..85e1cc252197 100644
+index cbd5076e2..85e1cc252 100644
 --- a/drivers/vbs/Makefile
 +++ b/drivers/vbs/Makefile
 @@ -2,3 +2,5 @@ ccflags-$(CONFIG_VBS_DEBUG)	:= -DDEBUG
@@ -66,7 +66,7 @@ index cbd5076e2313..85e1cc252197 100644
 +obj-$(CONFIG_VBS_RNG)		+= vbs_rng.o
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
 new file mode 100644
-index 000000000000..ef6f8776e71c
+index 000000000..ef6f8776e
 --- /dev/null
 +++ b/drivers/vbs/vbs_rng.c
 @@ -0,0 +1,589 @@

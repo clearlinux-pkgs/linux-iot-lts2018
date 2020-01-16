@@ -19,7 +19,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  create mode 100644 sound/soc/intel/boards/bxtp_ivi_rse_rt298.c
 
 diff --git a/sound/soc/intel/boards/Kconfig b/sound/soc/intel/boards/Kconfig
-index 44eac7c32e9b..c807cc465c47 100644
+index 44eac7c32..c807cc465 100644
 --- a/sound/soc/intel/boards/Kconfig
 +++ b/sound/soc/intel/boards/Kconfig
 @@ -382,6 +382,16 @@ config SND_SOC_INTEL_KBLR_RT298_MACH
@@ -40,7 +40,7 @@ index 44eac7c32e9b..c807cc465c47 100644
  
  endif ## SND_SOC_INTEL_MACH
 diff --git a/sound/soc/intel/boards/Makefile b/sound/soc/intel/boards/Makefile
-index f255f7ab0960..683737d503dc 100644
+index f255f7ab0..683737d50 100644
 --- a/sound/soc/intel/boards/Makefile
 +++ b/sound/soc/intel/boards/Makefile
 @@ -30,6 +30,7 @@ snd-soc-cnl_rt700-objs := cnl_rt700.o
@@ -58,7 +58,7 @@ index f255f7ab0960..683737d503dc 100644
 +obj-$(CONFIG_SND_SOC_INTEL_BXTP_IVI_RSE_MACH) += snd-soc-bxtp_ivi_rse_rt298.o
 diff --git a/sound/soc/intel/boards/bxtp_ivi_rse_rt298.c b/sound/soc/intel/boards/bxtp_ivi_rse_rt298.c
 new file mode 100644
-index 000000000000..25917c4a39d2
+index 000000000..25917c4a3
 --- /dev/null
 +++ b/sound/soc/intel/boards/bxtp_ivi_rse_rt298.c
 @@ -0,0 +1,359 @@

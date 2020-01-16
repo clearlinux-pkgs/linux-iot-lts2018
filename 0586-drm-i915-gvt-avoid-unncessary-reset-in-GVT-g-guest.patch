@@ -18,7 +18,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index c7d05ac7af3c..b912e1c81ff6 100644
+index c7d05ac7a..b912e1c81 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
 @@ -5063,7 +5063,8 @@ void i915_gem_sanitize(struct drm_i915_private *i915)

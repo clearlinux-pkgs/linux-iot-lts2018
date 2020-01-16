@@ -26,7 +26,7 @@ Reviewed-by: Felipe Balbi <felipe.balbi@linux.intel.com>
  1 file changed, 27 insertions(+)
 
 diff --git a/drivers/usb/core/generic.c b/drivers/usb/core/generic.c
-index bc8242bc4564..df38d5a32e95 100644
+index bc8242bc4..df38d5a32 100644
 --- a/drivers/usb/core/generic.c
 +++ b/drivers/usb/core/generic.c
 @@ -21,6 +21,7 @@

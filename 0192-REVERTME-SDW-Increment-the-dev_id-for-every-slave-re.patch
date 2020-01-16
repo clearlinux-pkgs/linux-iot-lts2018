@@ -17,7 +17,7 @@ Reviewed-on:
  1 file changed, 3 insertions(+)
 
 diff --git a/drivers/sdw/sdw.c b/drivers/sdw/sdw.c
-index 6a1ff5e59401..71f1532657da 100644
+index 6a1ff5e59..71f153265 100644
 --- a/drivers/sdw/sdw.c
 +++ b/drivers/sdw/sdw.c
 @@ -524,6 +524,8 @@ static void sdw_free_slv_number(struct sdw_master *mstr,

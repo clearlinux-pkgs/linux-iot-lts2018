@@ -19,7 +19,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  1 file changed, 9 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
-index 75e93e47fa83..4aa722216ae7 100644
+index 75e93e47f..4aa722216 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 @@ -318,9 +318,6 @@ static int ipu_vbk_release(struct inode *inode, struct file *f)

@@ -52,7 +52,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  create mode 100644 security/stacking.c
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index ed8205866789..16b20c35adcf 100644
+index ed8205866..16b20c35a 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -28,6 +28,7 @@
@@ -76,7 +76,7 @@ index ed8205866789..16b20c35adcf 100644
 +
  #endif /* ! __LINUX_LSM_HOOKS_H */
 diff --git a/include/linux/security.h b/include/linux/security.h
-index ca55adcc94ec..01703e2708f2 100644
+index ca55adcc9..01703e270 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -53,6 +53,7 @@ struct msg_msg;
@@ -176,7 +176,7 @@ index ca55adcc94ec..01703e2708f2 100644
  
  static inline int security_ipc_permission(struct kern_ipc_perm *ipcp,
 diff --git a/include/net/netlabel.h b/include/net/netlabel.h
-index 51dacbb88886..5c7e19498a81 100644
+index 51dacbb88..5c7e19498 100644
 --- a/include/net/netlabel.h
 +++ b/include/net/netlabel.h
 @@ -472,6 +472,8 @@ int netlbl_catmap_setlong(struct netlbl_lsm_catmap **catmap,
@@ -202,7 +202,7 @@ index 51dacbb88886..5c7e19498a81 100644
  {
  	return 0;
 diff --git a/include/uapi/linux/prctl.h b/include/uapi/linux/prctl.h
-index b17201edfa09..a10d54910652 100644
+index b17201edf..a10d54910 100644
 --- a/include/uapi/linux/prctl.h
 +++ b/include/uapi/linux/prctl.h
 @@ -220,4 +220,8 @@ struct prctl_mm_map {
@@ -215,7 +215,7 @@ index b17201edfa09..a10d54910652 100644
 +
  #endif /* _LINUX_PRCTL_H */
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 8cb5cd7c97e1..f579ba3fd6e7 100644
+index 8cb5cd7c9..f579ba3fd 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -1852,6 +1852,9 @@ static __latent_entropy struct task_struct *copy_process(
@@ -229,7 +229,7 @@ index 8cb5cd7c97e1..f579ba3fd6e7 100644
  	/* Perform scheduler related setup. Assign this task to a CPU. */
  	retval = sched_fork(clone_flags, p);
 diff --git a/net/ipv4/cipso_ipv4.c b/net/ipv4/cipso_ipv4.c
-index 8e2a4faa14c6..8528bbab78bc 100644
+index 8e2a4faa1..8528bbab7 100644
 --- a/net/ipv4/cipso_ipv4.c
 +++ b/net/ipv4/cipso_ipv4.c
 @@ -43,6 +43,7 @@
@@ -288,7 +288,7 @@ index 8e2a4faa14c6..8528bbab78bc 100644
  
  	return 0;
 diff --git a/net/netfilter/xt_SECMARK.c b/net/netfilter/xt_SECMARK.c
-index afc61be750ef..6af1f4fc837d 100644
+index afc61be75..6af1f4fc8 100644
 --- a/net/netfilter/xt_SECMARK.c
 +++ b/net/netfilter/xt_SECMARK.c
 @@ -59,7 +59,7 @@ static int checkentry_lsm(struct xt_secmark_target_info *info)
@@ -301,7 +301,7 @@ index afc61be750ef..6af1f4fc837d 100644
  	if (err) {
  		if (err == -EINVAL)
 diff --git a/net/netlabel/netlabel_kapi.c b/net/netlabel/netlabel_kapi.c
-index c383fd54ab79..9cf89cd17004 100644
+index c383fd54a..9cf89cd17 100644
 --- a/net/netlabel/netlabel_kapi.c
 +++ b/net/netlabel/netlabel_kapi.c
 @@ -1462,6 +1462,56 @@ int netlbl_cache_add(const struct sk_buff *skb, u16 family,
@@ -362,7 +362,7 @@ index c383fd54ab79..9cf89cd17004 100644
   * Protocol Engine Functions
   */
 diff --git a/net/unix/af_unix.c b/net/unix/af_unix.c
-index 086184db83f1..30118f3ce2d0 100644
+index 086184db8..30118f3ce 100644
 --- a/net/unix/af_unix.c
 +++ b/net/unix/af_unix.c
 @@ -142,11 +142,18 @@ static struct hlist_head *unix_sockets_unbound(void *addr)
@@ -385,7 +385,7 @@ index 086184db83f1..30118f3ce2d0 100644
  
  static inline bool unix_secdata_eq(struct scm_cookie *scm, struct sk_buff *skb)
 diff --git a/security/Kconfig b/security/Kconfig
-index b187bf5f7cf3..19a3e4424c05 100644
+index b187bf5f7..19a3e4424 100644
 --- a/security/Kconfig
 +++ b/security/Kconfig
 @@ -317,18 +317,8 @@ endmenu
@@ -435,7 +435,7 @@ index b187bf5f7cf3..19a3e4424c05 100644
  	bool "TOMOYO support is enabled by default"
  	depends on SECURITY_TOMOYO && SECURITY_STACKING
 diff --git a/security/Makefile b/security/Makefile
-index 4d2d3782ddef..9b2b87710de8 100644
+index 4d2d3782d..9b2b87710 100644
 --- a/security/Makefile
 +++ b/security/Makefile
 @@ -17,6 +17,7 @@ obj-$(CONFIG_MMU)			+= min_addr.o
@@ -447,7 +447,7 @@ index 4d2d3782ddef..9b2b87710de8 100644
  obj-$(CONFIG_SECURITY_SELINUX)		+= selinux/
  obj-$(CONFIG_SECURITY_SMACK)		+= smack/
 diff --git a/security/security.c b/security/security.c
-index b0ce65bf655f..72c2b7cbba9c 100644
+index b0ce65bf6..72c2b7cbb 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -29,12 +29,18 @@
@@ -953,7 +953,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  EXPORT_SYMBOL(security_secmark_relabel_packet);
  
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 150a8f8846de..dc2d83c8f297 100644
+index 150a8f884..dc2d83c8f 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -3237,13 +3237,12 @@ static int selinux_inode_setxattr(struct dentry *dentry, const char *name,
@@ -975,7 +975,7 @@ index 150a8f8846de..dc2d83c8f297 100644
  
  	sbsec = selinux_superblock(inode->i_sb);
 diff --git a/security/selinux/netlabel.c b/security/selinux/netlabel.c
-index b8e44b1038b1..8f212fe2a729 100644
+index b8e44b103..8f212fe2a 100644
 --- a/security/selinux/netlabel.c
 +++ b/security/selinux/netlabel.c
 @@ -413,6 +413,14 @@ int selinux_netlbl_socket_post_create(struct sock *sk, u16 family)
@@ -994,7 +994,7 @@ index b8e44b1038b1..8f212fe2a729 100644
  	switch (rc) {
  	case 0:
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index d12072b1ff83..dd0313001e5e 100644
+index d12072b1f..dd0313001 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -1234,9 +1234,9 @@ static int smack_inode_setxattr(struct dentry *dentry, const char *name,
@@ -1129,7 +1129,7 @@ index d12072b1ff83..dd0313001e5e 100644
  	LSM_HOOK_INIT(inode_getsecctx, smack_inode_getsecctx),
 diff --git a/security/stacking.c b/security/stacking.c
 new file mode 100644
-index 000000000000..7c9643323a1e
+index 000000000..7c9643323
 --- /dev/null
 +++ b/security/stacking.c
 @@ -0,0 +1,119 @@

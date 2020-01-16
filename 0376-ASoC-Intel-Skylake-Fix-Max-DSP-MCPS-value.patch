@@ -24,7 +24,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index c3e5ff49467f..fd04b5161bd4 100644
+index c3e5ff494..fd04b5161 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -5167,7 +5167,7 @@ static void skl_tplg_set_pipe_type(struct skl *skl, struct skl_pipe *pipe)

@@ -15,7 +15,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  create mode 100644 sound/soc/intel/boards/cnl_rt700.c
 
 diff --git a/sound/soc/intel/boards/Kconfig b/sound/soc/intel/boards/Kconfig
-index ca140a77d992..e6b065fa1dff 100644
+index ca140a77d..e6b065fa1 100644
 --- a/sound/soc/intel/boards/Kconfig
 +++ b/sound/soc/intel/boards/Kconfig
 @@ -306,6 +306,17 @@ config SND_SOC_INTEL_CNL_CS42L42_MACH
@@ -37,7 +37,7 @@ index ca140a77d992..e6b065fa1dff 100644
          tristate "Cannonlake with SVFPGA PDM SDW mode"
  	depends on MFD_INTEL_LPSS && I2C && ACPI
 diff --git a/sound/soc/intel/boards/Makefile b/sound/soc/intel/boards/Makefile
-index 4f2b9b38edd0..c5e0ff065610 100644
+index 4f2b9b38e..c5e0ff065 100644
 --- a/sound/soc/intel/boards/Makefile
 +++ b/sound/soc/intel/boards/Makefile
 @@ -23,6 +23,7 @@ snd-soc-skl_rt286-objs := skl_rt286.o
@@ -56,7 +56,7 @@ index 4f2b9b38edd0..c5e0ff065610 100644
  obj-$(CONFIG_SND_SOC_INTEL_CNL_SVFPGA_MACH) += snd-soc-cnl_svfpga.o
 diff --git a/sound/soc/intel/boards/cnl_rt700.c b/sound/soc/intel/boards/cnl_rt700.c
 new file mode 100644
-index 000000000000..e0b93e571fb9
+index 000000000..e0b93e571
 --- /dev/null
 +++ b/sound/soc/intel/boards/cnl_rt700.c
 @@ -0,0 +1,319 @@
@@ -380,7 +380,7 @@ index 000000000000..e0b93e571fb9
 +MODULE_ALIAS("platform:cnl_rt700");
 +MODULE_ALIAS("platform:icl_rt700");
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index d1b2740cd0c3..b037b0d566c0 100644
+index d1b2740cd..b037b0d56 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -499,12 +499,17 @@ static int skl_find_machine(struct skl *skl, void *driver_data)

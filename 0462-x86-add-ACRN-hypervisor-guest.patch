@@ -30,7 +30,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  create mode 100644 arch/x86/acrn/acrn.c
 
 diff --git a/arch/x86/Kbuild b/arch/x86/Kbuild
-index 0038a2d10a7a..466219296cd6 100644
+index 0038a2d10..466219296 100644
 --- a/arch/x86/Kbuild
 +++ b/arch/x86/Kbuild
 @@ -7,6 +7,8 @@ obj-$(CONFIG_KVM) += kvm/
@@ -43,7 +43,7 @@ index 0038a2d10a7a..466219296cd6 100644
  obj-$(subst m,y,$(CONFIG_HYPERV)) += hyperv/
  
 diff --git a/arch/x86/Kconfig b/arch/x86/Kconfig
-index f9139407fdb5..2a3c348f3ca1 100644
+index f9139407f..2a3c348f3 100644
 --- a/arch/x86/Kconfig
 +++ b/arch/x86/Kconfig
 @@ -778,6 +778,8 @@ config QUEUED_LOCK_STAT
@@ -57,7 +57,7 @@ index f9139407fdb5..2a3c348f3ca1 100644
  config KVM_GUEST
 diff --git a/arch/x86/acrn/Kconfig b/arch/x86/acrn/Kconfig
 new file mode 100644
-index 000000000000..0ba9e36c41f3
+index 000000000..0ba9e36c4
 --- /dev/null
 +++ b/arch/x86/acrn/Kconfig
 @@ -0,0 +1,15 @@
@@ -78,7 +78,7 @@ index 000000000000..0ba9e36c41f3
 +	  ACRN hypervisor.
 diff --git a/arch/x86/acrn/Makefile b/arch/x86/acrn/Makefile
 new file mode 100644
-index 000000000000..d961d8c5ee93
+index 000000000..d961d8c5e
 --- /dev/null
 +++ b/arch/x86/acrn/Makefile
 @@ -0,0 +1,2 @@
@@ -86,7 +86,7 @@ index 000000000000..d961d8c5ee93
 +obj-$(CONFIG_ACRN)	+= acrn.o
 diff --git a/arch/x86/acrn/acrn.c b/arch/x86/acrn/acrn.c
 new file mode 100644
-index 000000000000..a042b544af33
+index 000000000..a042b544a
 --- /dev/null
 +++ b/arch/x86/acrn/acrn.c
 @@ -0,0 +1,71 @@
@@ -162,7 +162,7 @@ index 000000000000..a042b544af33
 +};
 +EXPORT_SYMBOL(x86_hyper_acrn);
 diff --git a/arch/x86/include/asm/hypervisor.h b/arch/x86/include/asm/hypervisor.h
-index 8c5aaba6633f..50a30f6c668b 100644
+index 8c5aaba66..50a30f6c6 100644
 --- a/arch/x86/include/asm/hypervisor.h
 +++ b/arch/x86/include/asm/hypervisor.h
 @@ -29,6 +29,7 @@ enum x86_hypervisor_type {
@@ -174,7 +174,7 @@ index 8c5aaba6633f..50a30f6c668b 100644
  
  #ifdef CONFIG_HYPERVISOR_GUEST
 diff --git a/arch/x86/kernel/cpu/hypervisor.c b/arch/x86/kernel/cpu/hypervisor.c
-index 479ca4728de0..5a6f072e6748 100644
+index 479ca4728..5a6f072e6 100644
 --- a/arch/x86/kernel/cpu/hypervisor.c
 +++ b/arch/x86/kernel/cpu/hypervisor.c
 @@ -32,6 +32,7 @@ extern const struct hypervisor_x86 x86_hyper_xen_pv;

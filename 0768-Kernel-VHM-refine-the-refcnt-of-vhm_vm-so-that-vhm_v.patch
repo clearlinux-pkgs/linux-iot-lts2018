@@ -26,7 +26,7 @@ Signed-off-by: Yin, FengWei <fengwei.yin@intel.com>
  4 files changed, 56 insertions(+), 19 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index e6aa6f5d5aa3..30cafccb7296 100644
+index e6aa6f5d5..30cafccb7 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -131,7 +131,7 @@ static int vhm_dev_open(struct inode *inodep, struct file *filep)
@@ -55,7 +55,7 @@ index e6aa6f5d5aa3..30cafccb7296 100644
  	filep->private_data = NULL;
  	return 0;
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 9d77bc3be95c..ac950619df9b 100644
+index 9d77bc3be..ac950619d 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -253,8 +253,6 @@ int acrn_ioreq_create_client(unsigned long vmid, ioreq_handler_t handler,
@@ -132,7 +132,7 @@ index 9d77bc3be95c..ac950619df9b 100644
  
  void acrn_ioreq_driver_init()
 diff --git a/drivers/vhm/vhm_vm_mngt.c b/drivers/vhm/vhm_vm_mngt.c
-index c186b97a3c09..6bbcb1dddf57 100644
+index c186b97a3..6bbcb1ddd 100644
 --- a/drivers/vhm/vhm_vm_mngt.c
 +++ b/drivers/vhm/vhm_vm_mngt.c
 @@ -55,6 +55,7 @@
@@ -189,7 +189,7 @@ index c186b97a3c09..6bbcb1dddf57 100644
  {
  	struct vhm_vm *vm;
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index c307536417f8..cf61ed0af1a9 100644
+index c30753641..cf61ed0af 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -69,6 +69,11 @@ extern struct mutex vhm_vm_list_lock;

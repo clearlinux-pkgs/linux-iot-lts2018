@@ -19,7 +19,7 @@ Signed-off-by: Romli, Khairul Anuar <khairul.anuar.romli@intel.com>
  1 file changed, 57 insertions(+), 86 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_hdcp.c b/drivers/gpu/drm/i915/intel_hdcp.c
-index 7f87667753b3..a03a745544e2 100644
+index 7f8766775..a03a74554 100644
 --- a/drivers/gpu/drm/i915/intel_hdcp.c
 +++ b/drivers/gpu/drm/i915/intel_hdcp.c
 @@ -179,16 +179,60 @@ bool intel_hdcp_is_ksv_valid(u8 *ksv)

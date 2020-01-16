@@ -21,7 +21,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  create mode 100644 sound/soc/intel/boards/cnl_rt274.c
 
 diff --git a/sound/soc/intel/boards/Kconfig b/sound/soc/intel/boards/Kconfig
-index e6b065fa1dff..69e1081966a8 100644
+index e6b065fa1..69e108196 100644
 --- a/sound/soc/intel/boards/Kconfig
 +++ b/sound/soc/intel/boards/Kconfig
 @@ -328,6 +328,17 @@ config SND_SOC_INTEL_CNL_SVFPGA_MACH
@@ -43,7 +43,7 @@ index e6b065fa1dff..69e1081966a8 100644
  
  endif ## SND_SOC_INTEL_MACH
 diff --git a/sound/soc/intel/boards/Makefile b/sound/soc/intel/boards/Makefile
-index c5e0ff065610..72dfb2ccdb61 100644
+index c5e0ff065..72dfb2ccd 100644
 --- a/sound/soc/intel/boards/Makefile
 +++ b/sound/soc/intel/boards/Makefile
 @@ -22,6 +22,7 @@ snd-soc-kbl_rt5663_rt5514_max98927-objs := kbl_rt5663_rt5514_max98927.o
@@ -64,7 +64,7 @@ index c5e0ff065610..72dfb2ccdb61 100644
  obj-$(CONFIG_SND_SOC_INTEL_CNL_SVFPGA_MACH) += snd-soc-cnl_svfpga.o
 diff --git a/sound/soc/intel/boards/cnl_rt274.c b/sound/soc/intel/boards/cnl_rt274.c
 new file mode 100644
-index 000000000000..1b788f8e59a2
+index 000000000..1b788f8e5
 --- /dev/null
 +++ b/sound/soc/intel/boards/cnl_rt274.c
 @@ -0,0 +1,385 @@
@@ -454,7 +454,7 @@ index 000000000000..1b788f8e59a2
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:cnl_rt274");
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index a70d87e2f6ff..aec5d10f38bf 100644
+index a70d87e2f..aec5d10f3 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1215,7 +1215,7 @@ static const struct snd_soc_acpi_mach sst_cnl_devdata[] = {

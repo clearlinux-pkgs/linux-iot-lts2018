@@ -16,7 +16,7 @@ Tracked-On: PKT-2115
  1 file changed, 7 insertions(+)
 
 diff --git a/drivers/acrn/acrn_hvlog.c b/drivers/acrn/acrn_hvlog.c
-index da04aeb2e829..87b1cb23ddc9 100644
+index da04aeb2e..87b1cb23d 100644
 --- a/drivers/acrn/acrn_hvlog.c
 +++ b/drivers/acrn/acrn_hvlog.c
 @@ -65,6 +65,8 @@

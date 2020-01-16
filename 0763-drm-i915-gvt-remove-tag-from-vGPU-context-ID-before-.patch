@@ -16,7 +16,7 @@ Reviewed-by: He, Min <min.he@intel.com>
  1 file changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem_context.c b/drivers/gpu/drm/i915/i915_gem_context.c
-index 32eeabb11514..e170cd27cf94 100644
+index 32eeabb11..e170cd27c 100644
 --- a/drivers/gpu/drm/i915/i915_gem_context.c
 +++ b/drivers/gpu/drm/i915/i915_gem_context.c
 @@ -518,7 +518,12 @@ int i915_gem_contexts_init(struct drm_i915_private *dev_priv)

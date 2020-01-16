@@ -21,7 +21,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  2 files changed, 38 insertions(+), 22 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index 2ef0c6d86d9b..e38ba99392aa 100644
+index 2ef0c6d86..e38ba9939 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -31,7 +31,9 @@ static struct ici_frame_buf_wrapper
@@ -194,7 +194,7 @@ index 2ef0c6d86d9b..e38ba99392aa 100644
  }
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
-index b2c0f32d35fc..b0adf273bf0b 100644
+index b2c0f32d3..b0adf273b 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 @@ -221,14 +221,12 @@ static void handle_vq_kick(int client_id, int vq_idx)

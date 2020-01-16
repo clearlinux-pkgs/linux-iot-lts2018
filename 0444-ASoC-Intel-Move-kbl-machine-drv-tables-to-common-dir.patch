@@ -18,7 +18,7 @@ Reviewed-by: Uzieblo, Olgierd <olgierd.uzieblo@intel.com>
  2 files changed, 4 insertions(+), 79 deletions(-)
 
 diff --git a/sound/soc/intel/common/soc-acpi-intel-kbl-match.c b/sound/soc/intel/common/soc-acpi-intel-kbl-match.c
-index 0ee173ca437d..750a7f851a2c 100644
+index 0ee173ca4..750a7f851 100644
 --- a/sound/soc/intel/common/soc-acpi-intel-kbl-match.c
 +++ b/sound/soc/intel/common/soc-acpi-intel-kbl-match.c
 @@ -35,7 +35,11 @@ static struct snd_soc_acpi_codecs kbl_7219_98357_codecs = {
@@ -34,7 +34,7 @@ index 0ee173ca437d..750a7f851a2c 100644
  	},
  	{
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 875a4875c49f..e9f172d10e3b 100644
+index 875a4875c..e9f172d10 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1159,26 +1159,6 @@ static struct snd_soc_acpi_codecs skl_codecs = {

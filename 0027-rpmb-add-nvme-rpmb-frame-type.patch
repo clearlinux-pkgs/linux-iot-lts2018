@@ -14,7 +14,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  2 files changed, 60 insertions(+), 7 deletions(-)
 
 diff --git a/drivers/char/rpmb/cdev.c b/drivers/char/rpmb/cdev.c
-index bdac3894b111..028c7ecd2ac7 100644
+index bdac3894b..028c7ecd2 100644
 --- a/drivers/char/rpmb/cdev.c
 +++ b/drivers/char/rpmb/cdev.c
 @@ -67,18 +67,28 @@ static int rpmb_release(struct inode *inode, struct file *fp)
@@ -101,7 +101,7 @@ index bdac3894b111..028c7ecd2ac7 100644
  			goto out;
  	}
 diff --git a/include/uapi/linux/rpmb.h b/include/uapi/linux/rpmb.h
-index d304701cd258..f41a28ea9765 100644
+index d304701cd..f41a28ea9 100644
 --- a/include/uapi/linux/rpmb.h
 +++ b/include/uapi/linux/rpmb.h
 @@ -68,6 +68,44 @@ struct rpmb_frame_jdec {

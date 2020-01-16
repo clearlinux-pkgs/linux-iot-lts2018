@@ -23,7 +23,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
 
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_ar0231at_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_ar0231at_configuration.h
 new file mode 100644
-index 000000000000..7ea3560f33c7
+index 000000000..7ea3560f3
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crl_ar0231at_configuration.h
 @@ -0,0 +1,2411 @@
@@ -2439,7 +2439,7 @@ index 000000000000..7ea3560f33c7
 +
 +#endif /* __CRLMODULE_AR0231AT_CONFIGURATION_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-data.c b/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
-index 000982f89a2e..846d81254ba0 100644
+index 000982f89..846d81254 100644
 --- a/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
 @@ -9,6 +9,7 @@
@@ -2459,7 +2459,7 @@ index 000982f89a2e..846d81254ba0 100644
  
  /*
 diff --git a/drivers/media/i2c/ici/Kconfig b/drivers/media/i2c/ici/Kconfig
-index db4fd7f79b22..dd967ac80d8f 100644
+index db4fd7f79..dd967ac80 100644
 --- a/drivers/media/i2c/ici/Kconfig
 +++ b/drivers/media/i2c/ici/Kconfig
 @@ -8,6 +8,12 @@ config VIDEO_TI964_ICI
@@ -2476,7 +2476,7 @@ index db4fd7f79b22..dd967ac80d8f 100644
  
  endif
 diff --git a/drivers/media/i2c/ici/Makefile b/drivers/media/i2c/ici/Makefile
-index 232f0cc76313..4450c5effb94 100644
+index 232f0cc76..4450c5eff 100644
 --- a/drivers/media/i2c/ici/Makefile
 +++ b/drivers/media/i2c/ici/Makefile
 @@ -1,2 +1,3 @@
@@ -2485,7 +2485,7 @@ index 232f0cc76313..4450c5effb94 100644
 +obj-$(CONFIG_VIDEO_MAX9286_ICI) += max9286_ici.o
 diff --git a/drivers/media/i2c/ici/max9286_ici.c b/drivers/media/i2c/ici/max9286_ici.c
 new file mode 100644
-index 000000000000..8fc998ba8b18
+index 000000000..8fc998ba8
 --- /dev/null
 +++ b/drivers/media/i2c/ici/max9286_ici.c
 @@ -0,0 +1,1103 @@
@@ -3593,7 +3593,7 @@ index 000000000000..8fc998ba8b18
 +MODULE_LICENSE("GPL");
 +MODULE_DESCRIPTION("Maxim96705 serializer and Maxim9286 deserializer driver");
 diff --git a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
-index f6bf4992670d..df0c9619d9d1 100644
+index f6bf49926..df0c9619d 100644
 --- a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 @@ -12,6 +12,7 @@
@@ -3711,7 +3711,7 @@ index f6bf4992670d..df0c9619d9d1 100644
  		NULL,
  	},
 diff --git a/include/media/ici.h b/include/media/ici.h
-index bf5a542dafb3..353a5a7efb72 100644
+index bf5a542da..353a5a7ef 100644
 --- a/include/media/ici.h
 +++ b/include/media/ici.h
 @@ -81,6 +81,11 @@ enum ici_ext_sd_param_id {

@@ -24,7 +24,7 @@ Signed-off-by: Liu Shuo <shuo.liu@intel.com>
  4 files changed, 96 insertions(+), 7 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.c b/drivers/gpu/drm/i915/gvt/acrngt.c
-index e27b53b165aa..ff48b15ae9d4 100644
+index e27b53b16..ff48b15ae 100644
 --- a/drivers/gpu/drm/i915/gvt/acrngt.c
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.c
 @@ -33,6 +33,8 @@
@@ -147,7 +147,7 @@ index e27b53b165aa..ff48b15ae9d4 100644
  		" nr_vcpu %d\n", info->vm_id,info->client, info->nr_vcpu);
  
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.h b/drivers/gpu/drm/i915/gvt/acrngt.h
-index 0799df2ec557..ea8e411134e1 100644
+index 0799df2ec..ea8e41113 100644
 --- a/drivers/gpu/drm/i915/gvt/acrngt.h
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.h
 @@ -50,6 +50,11 @@ struct acrngt_hvm_dev {
@@ -175,7 +175,7 @@ index 0799df2ec557..ea8e411134e1 100644
  		struct intel_vgpu_type *type);
  void acrngt_instance_destroy(struct intel_vgpu *vgpu);
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index b0073edbe4a4..089406ebc2f1 100644
+index b0073edbe..089406ebc 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -241,6 +241,7 @@ struct intel_vgpu {
@@ -187,7 +187,7 @@ index b0073edbe4a4..089406ebc2f1 100644
  
  /* validating GM healthy status*/
 diff --git a/drivers/gpu/drm/i915/gvt/interrupt.c b/drivers/gpu/drm/i915/gvt/interrupt.c
-index 06ce906b6673..7bb9be5ae9fd 100644
+index 06ce906b6..7bb9be5ae 100644
 --- a/drivers/gpu/drm/i915/gvt/interrupt.c
 +++ b/drivers/gpu/drm/i915/gvt/interrupt.c
 @@ -28,10 +28,13 @@

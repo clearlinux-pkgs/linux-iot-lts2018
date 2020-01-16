@@ -32,7 +32,7 @@ Tested-by: Avri Altman <avri.altman@sandisk.com>
  3 files changed, 226 insertions(+)
 
 diff --git a/drivers/scsi/ufs/Kconfig b/drivers/scsi/ufs/Kconfig
-index e09fe6ab3572..a3c1982b213a 100644
+index e09fe6ab3..a3c1982b2 100644
 --- a/drivers/scsi/ufs/Kconfig
 +++ b/drivers/scsi/ufs/Kconfig
 @@ -38,6 +38,7 @@ config SCSI_UFSHCD
@@ -44,7 +44,7 @@ index e09fe6ab3572..a3c1982b213a 100644
  	This selects the support for UFS devices in Linux, say Y and make
  	  sure that you know the name of your UFS host adapter (the card
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 697c41a26514..78c677f36842 100644
+index 697c41a26..78c677f36 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
 @@ -37,11 +37,14 @@
@@ -319,7 +319,7 @@ index 697c41a26514..78c677f36842 100644
  	/* disable interrupts */
  	ufshcd_disable_intr(hba, hba->intr_mask);
 diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
-index c04bdbb1ea57..82b5e7d317f5 100644
+index c04bdbb1e..82b5e7d31 100644
 --- a/drivers/scsi/ufs/ufshcd.h
 +++ b/drivers/scsi/ufs/ufshcd.h
 @@ -458,6 +458,7 @@ struct ufs_stats {

@@ -14,7 +14,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 2 insertions(+)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-video.c b/drivers/media/pci/intel/ipu-isys-video.c
-index d3815d37b608..d149354364e4 100644
+index d3815d37b..d14935436 100644
 --- a/drivers/media/pci/intel/ipu-isys-video.c
 +++ b/drivers/media/pci/intel/ipu-isys-video.c
 @@ -1615,7 +1615,9 @@ int ipu_isys_video_set_streaming(struct ipu_isys_video *av,

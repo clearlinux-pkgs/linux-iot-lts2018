@@ -20,7 +20,7 @@ Signed-off-by: Lulko, KamilX <kamilx.lulko@intel.com>
  3 files changed, 58 insertions(+), 66 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index af84aab4689a..891d6ca8325b 100644
+index af84aab46..891d6ca83 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -656,6 +656,7 @@ int skl_ipc_process_notification(struct sst_generic_ipc *ipc,
@@ -32,7 +32,7 @@ index af84aab4689a..891d6ca8325b 100644
  			if (ret < 0) {
  				dev_err(ipc->dev,
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index d28913476d3b..abddf44562b3 100644
+index d28913476..abddf4456 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -481,7 +481,7 @@ int skl_ipc_process_notification(struct sst_generic_ipc *ipc,
@@ -45,7 +45,7 @@ index d28913476d3b..abddf44562b3 100644
  void skl_ipc_set_fw_cfg(struct sst_generic_ipc *ipc, u8 instance_id,
  			u16 module_id, u32 *data);
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 344892e70d86..856a6e86be52 100644
+index 344892e70..856a6e86b 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -35,6 +35,9 @@

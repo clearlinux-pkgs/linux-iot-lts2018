@@ -34,7 +34,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  create mode 100644 include/linux/vhm/vhm_msi.h
 
 diff --git a/arch/x86/acrn/Kconfig b/arch/x86/acrn/Kconfig
-index 0ba9e36c41f3..7788cb8cfb4b 100644
+index 0ba9e36c4..7788cb8cf 100644
 --- a/arch/x86/acrn/Kconfig
 +++ b/arch/x86/acrn/Kconfig
 @@ -8,6 +8,7 @@ config ACRN
@@ -46,7 +46,7 @@ index 0ba9e36c41f3..7788cb8cfb4b 100644
  	depends on !VMAP_STACK
  	help
 diff --git a/arch/x86/acrn/acrn.c b/arch/x86/acrn/acrn.c
-index a042b544af33..3987e2287a9f 100644
+index a042b544a..3987e2287 100644
 --- a/arch/x86/acrn/acrn.c
 +++ b/arch/x86/acrn/acrn.c
 @@ -33,6 +33,7 @@
@@ -68,7 +68,7 @@ index a042b544af33..3987e2287a9f 100644
  
  static void acrn_pin_vcpu(int cpu)
 diff --git a/arch/x86/include/asm/paravirt.h b/arch/x86/include/asm/paravirt.h
-index a04677038872..fa6468c0a40b 100644
+index a04677038..fa6468c0a 100644
 --- a/arch/x86/include/asm/paravirt.h
 +++ b/arch/x86/include/asm/paravirt.h
 @@ -808,6 +808,16 @@ static inline notrace unsigned long arch_local_irq_save(void)
@@ -89,7 +89,7 @@ index a04677038872..fa6468c0a40b 100644
  /* Make sure as little as possible of this mess escapes. */
  #undef PARAVIRT_CALL
 diff --git a/arch/x86/include/asm/paravirt_types.h b/arch/x86/include/asm/paravirt_types.h
-index 4b75acc23b30..06e01d87d76a 100644
+index 4b75acc23..06e01d87d 100644
 --- a/arch/x86/include/asm/paravirt_types.h
 +++ b/arch/x86/include/asm/paravirt_types.h
 @@ -56,6 +56,9 @@ struct cpumask;
@@ -111,7 +111,7 @@ index 4b75acc23b30..06e01d87d76a 100644
  
  struct pv_mmu_ops {
 diff --git a/arch/x86/kernel/paravirt.c b/arch/x86/kernel/paravirt.c
-index 8dc69d82567e..eaa8917dab73 100644
+index 8dc69d825..eaa8917da 100644
 --- a/arch/x86/kernel/paravirt.c
 +++ b/arch/x86/kernel/paravirt.c
 @@ -25,6 +25,7 @@
@@ -133,7 +133,7 @@ index 8dc69d82567e..eaa8917dab73 100644
  
  __visible struct pv_cpu_ops pv_cpu_ops = {
 diff --git a/drivers/pci/msi.c b/drivers/pci/msi.c
-index 23a363fd4c59..5f0d8827645d 100644
+index 23a363fd4..5f0d88276 100644
 --- a/drivers/pci/msi.c
 +++ b/drivers/pci/msi.c
 @@ -190,7 +190,7 @@ static void msi_mask_irq(struct msi_desc *desc, u32 mask, u32 flag)
@@ -155,7 +155,7 @@ index 23a363fd4c59..5f0d8827645d 100644
  	struct pci_dev *dev = msi_desc_to_pci_dev(entry);
  
 diff --git a/drivers/pci/pci.h b/drivers/pci/pci.h
-index e9ede82ee2c2..77c831f33f58 100644
+index e9ede82ee..77c831f33 100644
 --- a/drivers/pci/pci.h
 +++ b/drivers/pci/pci.h
 @@ -170,6 +170,8 @@ static inline void pci_msix_clear_and_set_ctrl(struct pci_dev *dev, u16 clear, u
@@ -168,7 +168,7 @@ index e9ede82ee2c2..77c831f33f58 100644
  
  static inline int pci_no_d1d2(struct pci_dev *dev)
 diff --git a/drivers/vhm/Makefile b/drivers/vhm/Makefile
-index 4bd960d564b3..b4d58a92dcfd 100644
+index 4bd960d56..b4d58a92d 100644
 --- a/drivers/vhm/Makefile
 +++ b/drivers/vhm/Makefile
 @@ -1 +1 @@
@@ -176,7 +176,7 @@ index 4bd960d564b3..b4d58a92dcfd 100644
 +obj-y += vhm_mm.o vhm_ioreq.o vhm_vm_mngt.o vhm_msi.o vhm_hypercall.o
 diff --git a/drivers/vhm/vhm_msi.c b/drivers/vhm/vhm_msi.c
 new file mode 100644
-index 000000000000..73affd60fc46
+index 000000000..73affd60f
 --- /dev/null
 +++ b/drivers/vhm/vhm_msi.c
 @@ -0,0 +1,135 @@
@@ -316,7 +316,7 @@ index 000000000000..73affd60fc46
 +	entry->msg = *msg;
 +}
 diff --git a/include/linux/msi.h b/include/linux/msi.h
-index be8ec813dbfb..9b0de9ed5387 100644
+index be8ec813d..9b0de9ed5 100644
 --- a/include/linux/msi.h
 +++ b/include/linux/msi.h
 @@ -141,7 +141,15 @@ struct msi_desc *alloc_msi_entry(struct device *dev, int nvec,
@@ -338,7 +338,7 @@ index be8ec813dbfb..9b0de9ed5387 100644
  u32 __pci_msi_desc_mask_irq(struct msi_desc *desc, u32 mask, u32 flag);
 diff --git a/include/linux/vhm/vhm_msi.h b/include/linux/vhm/vhm_msi.h
 new file mode 100644
-index 000000000000..059e97a0e543
+index 000000000..059e97a0e
 --- /dev/null
 +++ b/include/linux/vhm/vhm_msi.h
 @@ -0,0 +1,61 @@

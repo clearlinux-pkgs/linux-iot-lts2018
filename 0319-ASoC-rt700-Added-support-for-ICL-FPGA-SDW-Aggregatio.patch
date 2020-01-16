@@ -20,7 +20,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 1 insertion(+), 6 deletions(-)
 
 diff --git a/sound/soc/codecs/rt700-sdw.c b/sound/soc/codecs/rt700-sdw.c
-index 1c935e3a05e2..8a7fbc5a40c7 100644
+index 1c935e3a0..8a7fbc5a4 100644
 --- a/sound/soc/codecs/rt700-sdw.c
 +++ b/sound/soc/codecs/rt700-sdw.c
 @@ -348,15 +348,10 @@ static const struct sdw_slv_id rt700_id[] = {

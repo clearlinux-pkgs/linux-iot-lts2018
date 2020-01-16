@@ -28,7 +28,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  2 files changed, 19 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index db2e9af49ae6..0f2fceefb8c2 100644
+index db2e9af49..0f2fceefb 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -1838,6 +1838,10 @@ struct drm_i915_private {
@@ -43,7 +43,7 @@ index db2e9af49ae6..0f2fceefb8c2 100644
  #define MAX_GUC_CONTEXT_HW_ID (1 << 20) /* exclusive */
  #define GEN11_MAX_CONTEXT_HW_ID (1<<11) /* exclusive */
 diff --git a/drivers/gpu/drm/i915/i915_gem_context.c b/drivers/gpu/drm/i915/i915_gem_context.c
-index 7a0e6dbbad2e..1ef618f3ee39 100644
+index 7a0e6dbba..1ef618f3e 100644
 --- a/drivers/gpu/drm/i915/i915_gem_context.c
 +++ b/drivers/gpu/drm/i915/i915_gem_context.c
 @@ -91,6 +91,7 @@

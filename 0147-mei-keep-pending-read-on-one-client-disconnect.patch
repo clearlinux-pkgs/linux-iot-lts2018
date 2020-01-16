@@ -14,7 +14,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  2 files changed, 43 insertions(+), 10 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 07bd98b84380..01fbbe3933bf 100644
+index 07bd98b84..01fbbe393 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -453,6 +453,20 @@ static void mei_io_list_free_fp(struct list_head *head, const struct file *fp)
@@ -93,7 +93,7 @@ index 07bd98b84380..01fbbe3933bf 100644
  
  /**
 diff --git a/drivers/misc/mei/main.c b/drivers/misc/mei/main.c
-index 697f18d6b55a..7e6c3586cbcf 100644
+index 697f18d6b..7e6c3586c 100644
 --- a/drivers/misc/mei/main.c
 +++ b/drivers/misc/mei/main.c
 @@ -129,7 +129,7 @@ static int mei_release(struct inode *inode, struct file *file)

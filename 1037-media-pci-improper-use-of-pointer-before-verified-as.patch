@@ -15,7 +15,7 @@ Signed-off-by: Wood, Brian J <brian.j.wood@intel.com>
  1 file changed, 47 insertions(+), 28 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-wrapper.c b/drivers/media/pci/intel/ipu-wrapper.c
-index 047c1f2ee2cf..f2a70cb46ae8 100644
+index 047c1f2ee..f2a70cb46 100644
 --- a/drivers/media/pci/intel/ipu-wrapper.c
 +++ b/drivers/media/pci/intel/ipu-wrapper.c
 @@ -224,7 +224,8 @@ u64 shared_memory_alloc(unsigned int mmid, size_t bytes)

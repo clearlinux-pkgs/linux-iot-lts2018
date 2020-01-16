@@ -20,7 +20,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  6 files changed, 12 insertions(+), 12 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/Makefile b/drivers/media/pci/intel/ici/Makefile
-index 9e8a406041b4..2ba5949900a6 100644
+index 9e8a40604..2ba594990 100644
 --- a/drivers/media/pci/intel/ici/Makefile
 +++ b/drivers/media/pci/intel/ici/Makefile
 @@ -6,7 +6,7 @@ srcpath := $(srctree)
@@ -33,7 +33,7 @@ index 9e8a406041b4..2ba5949900a6 100644
  
  # work-around to re-use ipu4-css and libintel-ipu4_ici.c together when
 diff --git a/drivers/media/pci/intel/ici/ici-isys.c b/drivers/media/pci/intel/ici/ici-isys.c
-index 917d5ed62eb8..deec9df2322e 100644
+index 917d5ed62..deec9df23 100644
 --- a/drivers/media/pci/intel/ici/ici-isys.c
 +++ b/drivers/media/pci/intel/ici/ici-isys.c
 @@ -312,7 +312,7 @@ static int isys_register_ext_subdev(struct ici_isys *isys,
@@ -46,7 +46,7 @@ index 917d5ed62eb8..deec9df2322e 100644
  	if (bus < 0) {
  		dev_err(&isys->adev->dev, "Failed to find adapter!");
 diff --git a/drivers/media/pci/intel/ipu-buttress.c b/drivers/media/pci/intel/ipu-buttress.c
-index 947414be9fcd..757aa75a7108 100644
+index 947414be9..757aa75a7 100644
 --- a/drivers/media/pci/intel/ipu-buttress.c
 +++ b/drivers/media/pci/intel/ipu-buttress.c
 @@ -1266,7 +1266,7 @@ static void ipu_buttress_read_psys_fused_freqs(struct ipu_device *isp)
@@ -104,7 +104,7 @@ index 947414be9fcd..757aa75a7108 100644
  		return;
  
 diff --git a/drivers/media/pci/intel/ipu-buttress.h b/drivers/media/pci/intel/ipu-buttress.h
-index 2c5e93af6d54..f798881dc7cd 100644
+index 2c5e93af6..f798881dc 100644
 --- a/drivers/media/pci/intel/ipu-buttress.h
 +++ b/drivers/media/pci/intel/ipu-buttress.h
 @@ -132,7 +132,7 @@ ipu_buttress_ipc_send_bulk(struct ipu_device *isp,
@@ -118,7 +118,7 @@ index 2c5e93af6d54..f798881dc7cd 100644
 +#endif /* I2C_DYNAMIC */
  #endif /* IPU_BUTTRESS_H */
 diff --git a/drivers/media/pci/intel/ipu-isys.c b/drivers/media/pci/intel/ipu-isys.c
-index aa8dec010872..6c2745ac2f64 100644
+index aa8dec010..6c2745ac2 100644
 --- a/drivers/media/pci/intel/ipu-isys.c
 +++ b/drivers/media/pci/intel/ipu-isys.c
 @@ -377,7 +377,7 @@ static int isys_register_ext_subdev(struct ipu_isys *isys,
@@ -131,7 +131,7 @@ index aa8dec010872..6c2745ac2f64 100644
  	if (bus < 0) {
  		dev_err(&isys->adev->dev, "Failed to find adapter!");
 diff --git a/drivers/media/pci/intel/ipu4/Makefile b/drivers/media/pci/intel/ipu4/Makefile
-index dae16f35e7f2..d253c0a78dbc 100644
+index dae16f35e..d253c0a78 100644
 --- a/drivers/media/pci/intel/ipu4/Makefile
 +++ b/drivers/media/pci/intel/ipu4/Makefile
 @@ -7,7 +7,7 @@ endif

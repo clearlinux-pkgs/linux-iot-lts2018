@@ -30,7 +30,7 @@ Tracked-On: PKT-2618
  1 file changed, 25 insertions(+), 16 deletions(-)
 
 diff --git a/drivers/usb/core/generic.c b/drivers/usb/core/generic.c
-index df38d5a32e95..a0c610797247 100644
+index df38d5a32..a0c610797 100644
 --- a/drivers/usb/core/generic.c
 +++ b/drivers/usb/core/generic.c
 @@ -118,6 +118,31 @@ int usb_choose_configuration(struct usb_device *udev)

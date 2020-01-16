@@ -14,7 +14,7 @@ Signed-off-by: Zhang, Qi <qi1.zhang@intel.com>
  4 files changed, 12 insertions(+), 11 deletions(-)
 
 diff --git a/drivers/trusty/trusty-timer.c b/drivers/trusty/trusty-timer.c
-index 18e315c25067..6783a30b4a11 100644
+index 18e315c25..6783a30b4 100644
 --- a/drivers/trusty/trusty-timer.c
 +++ b/drivers/trusty/trusty-timer.c
 @@ -36,11 +36,6 @@ struct trusty_timer_dev_state {
@@ -39,7 +39,7 @@ index 18e315c25067..6783a30b4a11 100644
  	return HRTIMER_NORESTART;
  }
 diff --git a/drivers/trusty/trusty-virtio.c b/drivers/trusty/trusty-virtio.c
-index 66b4ee7caf0d..df066dda80d3 100644
+index 66b4ee7ca..df066dda8 100644
 --- a/drivers/trusty/trusty-virtio.c
 +++ b/drivers/trusty/trusty-virtio.c
 @@ -150,7 +150,7 @@ static bool trusty_virtio_notify(struct virtqueue *vq)
@@ -61,7 +61,7 @@ index 66b4ee7caf0d..df066dda80d3 100644
  		ret = -ENODEV;
  		dev_err(&pdev->dev, "Failed create trusty-kick-wq\n");
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index 4d33f269851d..8f80f9b84772 100755
+index 4d33f2698..8f80f9b84 100755
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -270,7 +270,6 @@ static long trusty_std_call32_work(void *args)
@@ -95,7 +95,7 @@ index 4d33f269851d..8f80f9b84772 100755
  }
  EXPORT_SYMBOL(trusty_enqueue_nop);
 diff --git a/include/linux/trusty/smcall.h b/include/linux/trusty/smcall.h
-index 3ab2f688cb33..55d25dddc4a8 100644
+index 3ab2f688c..55d25dddc 100644
 --- a/include/linux/trusty/smcall.h
 +++ b/include/linux/trusty/smcall.h
 @@ -152,4 +152,7 @@

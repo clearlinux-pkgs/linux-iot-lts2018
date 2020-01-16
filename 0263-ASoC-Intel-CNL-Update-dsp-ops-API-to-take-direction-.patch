@@ -16,7 +16,7 @@ Signed-off-by: Sanyog Kale <sanyog.r.kale@intel.com>
  4 files changed, 44 insertions(+), 28 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index 924c0dfa6ad7..2b169b40e6c4 100644
+index 924c0dfa6..2b169b40e 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -69,7 +69,8 @@ bxt_load_library(struct sst_dsp *ctx, struct skl_lib_info *linfo, int lib_count)
@@ -91,7 +91,7 @@ index 924c0dfa6ad7..2b169b40e6c4 100644
  	return ret;
  }
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index a81e1b032a96..784d92df7ac3 100644
+index a81e1b032..784d92df7 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -127,7 +127,8 @@ static int cnl_prepare_fw(struct sst_dsp *ctx, const void *fwdata, u32 fwsize)
@@ -135,7 +135,7 @@ index a81e1b032a96..784d92df7ac3 100644
  	return ret;
  }
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 13d1898da7fb..6fcd68c7bd1e 100644
+index 13d1898da..6fcd68c7b 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -127,7 +127,9 @@ static int skl_dsp_setup_spib(struct device *dev, unsigned int size,
@@ -201,7 +201,7 @@ index 13d1898da7fb..6fcd68c7bd1e 100644
  		return -EINVAL;
  
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index 767c6edddc3a..2a3ad2d43448 100644
+index 767c6eddd..2a3ad2d43 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -157,7 +157,6 @@ struct skl_dsp_fw_ops {

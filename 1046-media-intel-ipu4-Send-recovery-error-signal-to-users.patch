@@ -18,7 +18,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  3 files changed, 28 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-csi2.h b/drivers/media/pci/intel/ipu-isys-csi2.h
-index c1e6f34eff14..c6f513c50f12 100644
+index c1e6f34ef..c6f513c50 100644
 --- a/drivers/media/pci/intel/ipu-isys-csi2.h
 +++ b/drivers/media/pci/intel/ipu-isys-csi2.h
 @@ -114,7 +114,8 @@ struct ipu_isys_csi2 {
@@ -32,7 +32,7 @@ index c1e6f34eff14..c6f513c50f12 100644
  
  struct ipu_isys_csi2_timing {
 diff --git a/drivers/media/pci/intel/ipu-isys-video.c b/drivers/media/pci/intel/ipu-isys-video.c
-index 409301960596..49a42e1b9f7c 100644
+index 409301960..49a42e1b9 100644
 --- a/drivers/media/pci/intel/ipu-isys-video.c
 +++ b/drivers/media/pci/intel/ipu-isys-video.c
 @@ -1625,8 +1625,11 @@ int ipu_isys_video_set_streaming(struct ipu_isys_video *av,
@@ -67,7 +67,7 @@ index 409301960596..49a42e1b9f7c 100644
  	} else {
  		close_streaming_firmware(av);
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c b/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
-index ad06e5de374a..5292575db411 100644
+index ad06e5de3..5292575db 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
 +++ b/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
 @@ -1,6 +1,7 @@

@@ -24,7 +24,7 @@ Tracked-On: PKT-1617
  3 files changed, 13 insertions(+), 22 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 30cafccb7296..2a51fadac057 100644
+index 30cafccb7..2a51fadac 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -130,10 +130,10 @@ static int vhm_dev_open(struct inode *inodep, struct file *filep)
@@ -66,7 +66,7 @@ index 30cafccb7296..2a51fadac057 100644
  	filep->private_data = NULL;
  	return 0;
 diff --git a/drivers/vhm/vhm_vm_mngt.c b/drivers/vhm/vhm_vm_mngt.c
-index 6bbcb1dddf57..61207106d5de 100644
+index 6bbcb1ddd..61207106d 100644
 --- a/drivers/vhm/vhm_vm_mngt.c
 +++ b/drivers/vhm/vhm_vm_mngt.c
 @@ -64,21 +64,21 @@
@@ -120,7 +120,7 @@ index 6bbcb1dddf57..61207106d5de 100644
 -	mutex_unlock(mlock);
 -}
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index cf61ed0af1a9..6e61d4f80517 100644
+index cf61ed0af..6e61d4f80 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -61,9 +61,10 @@

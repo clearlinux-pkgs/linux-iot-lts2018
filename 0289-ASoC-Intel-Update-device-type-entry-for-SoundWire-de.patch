@@ -22,7 +22,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  3 files changed, 8 insertions(+), 5 deletions(-)
 
 diff --git a/include/uapi/sound/skl-tplg-interface.h b/include/uapi/sound/skl-tplg-interface.h
-index e1a7771f4873..c0145433d05e 100644
+index e1a7771f4..c0145433d 100644
 --- a/include/uapi/sound/skl-tplg-interface.h
 +++ b/include/uapi/sound/skl-tplg-interface.h
 @@ -108,7 +108,8 @@ enum skl_dev_type {
@@ -36,7 +36,7 @@ index e1a7771f4873..c0145433d05e 100644
  };
  
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 495f82fc5d65..b4b2d1dd0ee2 100644
+index 495f82fc5..b4b2d1dd0 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -476,7 +476,7 @@ static int cnl_sdw_bra_pipe_cfg_pb(struct skl_sst *ctx,
@@ -68,7 +68,7 @@ index 495f82fc5d65..b4b2d1dd0ee2 100644
  			(SKL_CONN_SOURCE == mconfig->hw_conn_type) ?
  			SKL_DMA_SDW_LINK_OUTPUT_CLASS :
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 113fa334b4bc..e5853df1ee57 100644
+index 113fa334b..e5853df1e 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -2120,7 +2120,8 @@ static u8 skl_tplg_be_link_type(int dev_type)

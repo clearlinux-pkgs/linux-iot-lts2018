@@ -23,7 +23,7 @@ Tested-by: Avri Altman <avri.altman@sandisk.com>
  1 file changed, 33 insertions(+)
 
 diff --git a/drivers/char/rpmb/core.c b/drivers/char/rpmb/core.c
-index 69a590106ae1..3bf3f0db54fb 100644
+index 69a590106..3bf3f0db5 100644
 --- a/drivers/char/rpmb/core.c
 +++ b/drivers/char/rpmb/core.c
 @@ -36,6 +36,38 @@ void rpmb_dev_put(struct rpmb_dev *rdev)

@@ -21,7 +21,7 @@ Tested-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  2 files changed, 15 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 72d5300cc19c..f9a819ae8fd4 100644
+index 72d5300cc..f9a819ae8 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -1127,8 +1127,7 @@ void vbe_skl_handle_kick(struct snd_skl_vbe *vbe, int vq_idx)
@@ -68,7 +68,7 @@ index 72d5300cc19c..f9a819ae8fd4 100644
  }
  
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.h b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
-index 50c027e00436..0d6f95007d92 100644
+index 50c027e00..0d6f95007 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 @@ -75,6 +75,8 @@ struct snd_skl_vbe {

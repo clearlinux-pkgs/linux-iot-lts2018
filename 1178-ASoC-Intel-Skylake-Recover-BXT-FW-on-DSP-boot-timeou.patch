@@ -21,7 +21,7 @@ Tracked-On: OAM-85035
  1 file changed, 10 insertions(+), 5 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index 7e20ba424efa..99663de91a71 100644
+index 7e20ba424..99663de91 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -589,13 +589,18 @@ static int bxt_set_dsp_D0(struct sst_dsp *ctx, unsigned int core_id)

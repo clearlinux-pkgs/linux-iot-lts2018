@@ -19,7 +19,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  create mode 100644 sound/soc/intel/skylake/virtio/Kconfig
 
 diff --git a/sound/soc/intel/Kconfig b/sound/soc/intel/Kconfig
-index e6334dda6237..70b2eb377627 100644
+index e6334dda6..70b2eb377 100644
 --- a/sound/soc/intel/Kconfig
 +++ b/sound/soc/intel/Kconfig
 @@ -143,3 +143,6 @@ endif ## SND_SOC_INTEL_SST_TOPLEVEL
@@ -31,7 +31,7 @@ index e6334dda6237..70b2eb377627 100644
 +source "sound/soc/intel/skylake/virtio/Kconfig"
 diff --git a/sound/soc/intel/skylake/virtio/Kconfig b/sound/soc/intel/skylake/virtio/Kconfig
 new file mode 100644
-index 000000000000..0926781de9d0
+index 000000000..0926781de
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/Kconfig
 @@ -0,0 +1,17 @@

@@ -16,7 +16,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  3 files changed, 24 insertions(+)
 
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 9a92d6888b90..d994835dd924 100644
+index 9a92d6888..d994835dd 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -92,6 +92,11 @@ inline long hcall_setup_sbuf(unsigned long sbuf_head)
@@ -32,7 +32,7 @@ index 9a92d6888b90..d994835dd924 100644
  {
  	return acrn_hypercall1(HC_PM_SET_SSTATE_DATA, sx_data_addr);
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 223702c0330c..24ca7be2c2b9 100644
+index 223702c03..24ca7be2c 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -108,6 +108,7 @@
@@ -68,7 +68,7 @@ index 223702c0330c..24ca7be2c2b9 100644
  	uint64_t gpa;		/* IN: gpa to translation */
  	uint64_t hpa;		/* OUT: -1 means invalid gpa */
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 0a3869b356b8..703b35bec053 100644
+index 0a3869b35..703b35bec 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -146,6 +146,7 @@ inline long hcall_destroy_vm(unsigned long vmid);

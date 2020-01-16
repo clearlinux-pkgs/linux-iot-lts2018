@@ -23,7 +23,7 @@ Reviewed-by: Jason Chen CJ <jason.cj.chen@intel.com>
  5 files changed, 21 insertions(+), 21 deletions(-)
 
 diff --git a/drivers/vbs/vbs.c b/drivers/vbs/vbs.c
-index 6c364364db3c..1d2e1b40728e 100644
+index 6c364364d..1d2e1b407 100644
 --- a/drivers/vbs/vbs.c
 +++ b/drivers/vbs/vbs.c
 @@ -145,22 +145,22 @@ long virtio_dev_deregister(struct virtio_dev_info *dev)
@@ -66,7 +66,7 @@ index 6c364364db3c..1d2e1b40728e 100644
  	}
  
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
-index 88f6108ca2e8..569d1d5d689c 100644
+index 88f6108ca..569d1d5d6 100644
 --- a/drivers/vbs/vbs_rng.c
 +++ b/drivers/vbs/vbs_rng.c
 @@ -122,7 +122,7 @@ static int vbs_rng_hash_initialized = 0;
@@ -103,7 +103,7 @@ index 88f6108ca2e8..569d1d5d689c 100644
  	if (val >= 0)
  		handle_vq_kick(rng, val);
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index bf55a0138943..c91a60598114 100644
+index bf55a0138..c91a60598 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -101,7 +101,7 @@ struct ioreq_client {
@@ -152,7 +152,7 @@ index bf55a0138943..c91a60598114 100644
  	if (ret < 0) {
  		pr_err("vhm-ioreq: failed to notify request finished !\n");
 diff --git a/include/linux/vbs/vbs.h b/include/linux/vbs/vbs.h
-index e4ecba020b08..33ca072c5a83 100644
+index e4ecba020..33ca072c5 100644
 --- a/include/linux/vbs/vbs.h
 +++ b/include/linux/vbs/vbs.h
 @@ -181,7 +181,7 @@ struct virtio_dev_info {
@@ -178,7 +178,7 @@ index e4ecba020b08..33ca072c5a83 100644
  
  #endif
 diff --git a/include/linux/vhm/acrn_vhm_ioreq.h b/include/linux/vhm/acrn_vhm_ioreq.h
-index fbf69b37d356..52b3ac83203c 100644
+index fbf69b37d..52b3ac832 100644
 --- a/include/linux/vhm/acrn_vhm_ioreq.h
 +++ b/include/linux/vhm/acrn_vhm_ioreq.h
 @@ -61,7 +61,7 @@

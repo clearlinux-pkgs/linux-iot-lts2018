@@ -12,7 +12,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  1 file changed, 1 insertion(+), 8 deletions(-)
 
 diff --git a/drivers/iommu/intel-iommu.c b/drivers/iommu/intel-iommu.c
-index 812d25801c13..498432db65da 100644
+index 812d25801..498432db6 100644
 --- a/drivers/iommu/intel-iommu.c
 +++ b/drivers/iommu/intel-iommu.c
 @@ -428,7 +428,6 @@ int intel_iommu_enabled = 0;

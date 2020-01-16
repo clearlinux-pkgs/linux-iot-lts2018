@@ -20,7 +20,7 @@ Reviewed-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  3 files changed, 44 insertions(+), 17 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 0751297dffc4..45abc70d7af5 100644
+index 0751297df..45abc70d7 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -238,11 +238,11 @@ static ssize_t mod_control_write(struct file *file,
@@ -38,7 +38,7 @@ index 0751297dffc4..45abc70d7af5 100644
  
  		break;
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index 9f2621d7a535..af84aab4689a 100644
+index 9f2621d7a..af84aab46 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -905,6 +905,31 @@ void skl_ipc_free(struct sst_generic_ipc *ipc)
@@ -202,7 +202,7 @@ index 9f2621d7a535..af84aab4689a 100644
  		ret = sst_ipc_tx_message_nowait(ipc, *ipc_header, NULL, 0);
  
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 5cdec13bbe50..d28913476d3b 100644
+index 5cdec13bb..d28913476 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -413,6 +413,8 @@ struct skl_module_notify {

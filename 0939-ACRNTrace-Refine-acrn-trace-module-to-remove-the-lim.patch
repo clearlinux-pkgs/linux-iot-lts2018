@@ -20,7 +20,7 @@ Tracked-On: PKT-1696
  1 file changed, 79 insertions(+), 98 deletions(-)
 
 diff --git a/drivers/acrn/acrn_trace.c b/drivers/acrn/acrn_trace.c
-index d48b03625223..852c8b0323a5 100644
+index d48b03625..852c8b032 100644
 --- a/drivers/acrn/acrn_trace.c
 +++ b/drivers/acrn/acrn_trace.c
 @@ -59,9 +59,12 @@

@@ -19,7 +19,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 3 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 351897bb3967..fb9fc5ae3f05 100644
+index 351897bb3..fb9fc5ae3 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -544,9 +544,6 @@ int skl_probe_attach_inj_dma(struct snd_soc_dapm_widget *w,

@@ -18,7 +18,7 @@ Signed-off-by: Puunithaaraj Gopal <puunithaaraj.gopal@intel.com>
  2 files changed, 16 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 8daa33ed2f86..d2acd90dabeb 100644
+index 8daa33ed2..d2acd90da 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -6,6 +6,7 @@
@@ -58,7 +58,7 @@ index 8daa33ed2f86..d2acd90dabeb 100644
  		dev_err(dev, "can't stop stream (%d)\n", rval);
  	} else {
 diff --git a/drivers/media/pci/intel/ipu-isys-video.c b/drivers/media/pci/intel/ipu-isys-video.c
-index 49a42e1b9f7c..e3d10544ef6e 100644
+index 49a42e1b9..e3d10544e 100644
 --- a/drivers/media/pci/intel/ipu-isys-video.c
 +++ b/drivers/media/pci/intel/ipu-isys-video.c
 @@ -1372,9 +1372,11 @@ static void stop_streaming_firmware(struct ipu_isys_video *av)

@@ -133,7 +133,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  create mode 100644 sound/soc/intel/skylake/skl-probe.h
 
 diff --git a/include/uapi/sound/skl-tplg-interface.h b/include/uapi/sound/skl-tplg-interface.h
-index 47f033884b2f..e1a7771f4873 100644
+index 47f033884..e1a7771f4 100644
 --- a/include/uapi/sound/skl-tplg-interface.h
 +++ b/include/uapi/sound/skl-tplg-interface.h
 @@ -18,6 +18,7 @@
@@ -171,7 +171,7 @@ index 47f033884b2f..e1a7771f4873 100644
  	u32 alh_stream_num;
  	u32 channel_mask;
 diff --git a/sound/hda/ext/hdac_ext_stream.c b/sound/hda/ext/hdac_ext_stream.c
-index 4bd95f4b2234..1b2a1c996422 100644
+index 4bd95f4b2..1b2a1c996 100644
 --- a/sound/hda/ext/hdac_ext_stream.c
 +++ b/sound/hda/ext/hdac_ext_stream.c
 @@ -586,9 +586,9 @@ hdac_ext_host_stream_compr_assign(struct hdac_ext_bus *ebus,
@@ -187,7 +187,7 @@ index 4bd95f4b2234..1b2a1c996422 100644
  }
  EXPORT_SYMBOL_GPL(hdac_ext_host_stream_compr_assign);
 diff --git a/sound/hda/hdac_stream.c b/sound/hda/hdac_stream.c
-index d3b1e22ac050..3c0c7c353566 100644
+index d3b1e22ac..3c0c7c353 100644
 --- a/sound/hda/hdac_stream.c
 +++ b/sound/hda/hdac_stream.c
 @@ -378,7 +378,8 @@ int snd_hdac_stream_setup_periods(struct hdac_stream *azx_dev)
@@ -234,7 +234,7 @@ index d3b1e22ac050..3c0c7c353566 100644
  		if (err < 0)
  			return err;
 diff --git a/sound/soc/intel/skylake/Makefile b/sound/soc/intel/skylake/Makefile
-index 831218ee43c8..9a3ddb969d4e 100644
+index 831218ee4..9a3ddb969 100644
 --- a/sound/soc/intel/skylake/Makefile
 +++ b/sound/soc/intel/skylake/Makefile
 @@ -1,6 +1,6 @@
@@ -247,7 +247,7 @@ index 831218ee43c8..9a3ddb969d4e 100644
    snd-soc-skl-objs += skl-debug.o
 diff --git a/sound/soc/intel/skylake/skl-compress.c b/sound/soc/intel/skylake/skl-compress.c
 new file mode 100644
-index 000000000000..c8b26e80b974
+index 000000000..c8b26e80b
 --- /dev/null
 +++ b/sound/soc/intel/skylake/skl-compress.c
 @@ -0,0 +1,132 @@
@@ -385,7 +385,7 @@ index 000000000000..c8b26e80b974
 +}
 diff --git a/sound/soc/intel/skylake/skl-compress.h b/sound/soc/intel/skylake/skl-compress.h
 new file mode 100644
-index 000000000000..9fcf6c38f5b8
+index 000000000..9fcf6c38f
 --- /dev/null
 +++ b/sound/soc/intel/skylake/skl-compress.h
 @@ -0,0 +1,35 @@
@@ -425,7 +425,7 @@ index 000000000000..9fcf6c38f5b8
 +				struct snd_compr_stream *substream);
 +
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 4f88595815a8..fa8ef710900c 100644
+index 4f8859581..fa8ef7109 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -787,6 +787,30 @@ static void skl_set_copier_format(struct skl_sst *ctx,
@@ -587,7 +587,7 @@ index 4f88595815a8..fa8ef710900c 100644
   * On module freeup, we need to unbind the module with modules
   * it is already bind.
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 764e4dd7ed2d..c82ab7071c15 100644
+index 764e4dd7e..c82ab7071 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -30,6 +30,7 @@
@@ -697,7 +697,7 @@ index 764e4dd7ed2d..c82ab7071c15 100644
  	pm_runtime_put_autosuspend(component->dev);
 diff --git a/sound/soc/intel/skylake/skl-probe.c b/sound/soc/intel/skylake/skl-probe.c
 new file mode 100644
-index 000000000000..7c206ec1b6a7
+index 000000000..7c206ec1b
 --- /dev/null
 +++ b/sound/soc/intel/skylake/skl-probe.c
 @@ -0,0 +1,324 @@
@@ -1027,7 +1027,7 @@ index 000000000000..7c206ec1b6a7
 +}
 diff --git a/sound/soc/intel/skylake/skl-probe.h b/sound/soc/intel/skylake/skl-probe.h
 new file mode 100644
-index 000000000000..a7b8f34712a2
+index 000000000..a7b8f3471
 --- /dev/null
 +++ b/sound/soc/intel/skylake/skl-probe.h
 @@ -0,0 +1,37 @@
@@ -1069,7 +1069,7 @@ index 000000000000..a7b8f34712a2
 +int skl_probe_compr_trigger(struct snd_compr_stream *substream, int cmd,
 +					struct snd_soc_dai *dai);
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index eb030dfb88ca..0437e4cf1261 100644
+index eb030dfb8..0437e4cf1 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -18,11 +18,15 @@
@@ -1130,7 +1130,7 @@ index eb030dfb88ca..0437e4cf1261 100644
  
  struct skl_ipc_init_instance_msg {
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 6bd91744ee1a..7aefd1cce3b3 100644
+index 6bd91744e..7aefd1cce 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -96,7 +96,7 @@ void skl_tplg_d0i3_put(struct skl *skl, enum d0i3_capability caps)
@@ -1387,7 +1387,7 @@ index 6bd91744ee1a..7aefd1cce3b3 100644
  
  static const struct snd_soc_tplg_kcontrol_ops skl_tplg_kcontrol_ops[] = {
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 5998e6926df3..94152704e22e 100644
+index 5998e6926..94152704e 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -96,6 +96,11 @@ enum skl_widget_type {
@@ -1486,7 +1486,7 @@ index 5998e6926df3..94152704e22e 100644
  int skl_pcm_host_dma_prepare(struct device *dev,
  			struct skl_pipe_params *params);
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index e2b9c7ce2a75..d1b2740cd0c3 100644
+index e2b9c7ce2..d1b2740cd 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -33,6 +33,7 @@

@@ -28,7 +28,7 @@ Author: Zhong,Fangjian <fangjian.zhong@intel.com>
  create mode 100644 include/linux/trusty/smwall.h
 
 diff --git a/drivers/trusty/Makefile b/drivers/trusty/Makefile
-index 9ca451e50dee..c1afb140ee00 100644
+index 9ca451e50..c1afb140e 100644
 --- a/drivers/trusty/Makefile
 +++ b/drivers/trusty/Makefile
 @@ -11,3 +11,4 @@ obj-$(CONFIG_TRUSTY_LOG)	+= trusty-log.o
@@ -37,7 +37,7 @@ index 9ca451e50dee..c1afb140ee00 100644
  obj-$(CONFIG_TRUSTY_VIRTIO_IPC)	+= trusty-ipc.o
 +obj-$(CONFIG_TRUSTY)		+= trusty-wall.o
 diff --git a/drivers/trusty/trusty-irq.c b/drivers/trusty/trusty-irq.c
-index 5b4686f4f85f..eda0bff48c40 100644
+index 5b4686f4f..eda0bff48 100644
 --- a/drivers/trusty/trusty-irq.c
 +++ b/drivers/trusty/trusty-irq.c
 @@ -59,24 +59,6 @@ struct trusty_irq_state {
@@ -76,7 +76,7 @@ index 5b4686f4f85f..eda0bff48c40 100644
  		goto err_register_hotcpu_notifier;
 diff --git a/drivers/trusty/trusty-wall.c b/drivers/trusty/trusty-wall.c
 new file mode 100644
-index 000000000000..3c33d724b3fa
+index 000000000..3c33d724b
 --- /dev/null
 +++ b/drivers/trusty/trusty-wall.c
 @@ -0,0 +1,199 @@
@@ -280,7 +280,7 @@ index 000000000000..3c33d724b3fa
 +MODULE_LICENSE("GPL v2");
 +MODULE_DESCRIPTION("Trusty smwall driver");
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index 4aa4a89799dc..0b3e75823be1 100644
+index 4aa4a8979..0b3e75823 100644
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -22,6 +22,7 @@
@@ -336,7 +336,7 @@ index 4aa4a89799dc..0b3e75823be1 100644
  static int __init trusty_driver_init(void)
  {
 diff --git a/include/linux/trusty/smcall.h b/include/linux/trusty/smcall.h
-index 037b3fa4429e..ee5dda2560b6 100644
+index 037b3fa44..ee5dda256 100644
 --- a/include/linux/trusty/smcall.h
 +++ b/include/linux/trusty/smcall.h
 @@ -1,5 +1,5 @@
@@ -374,7 +374,7 @@ index 037b3fa4429e..ee5dda2560b6 100644
  #define SMC_SC_VIRTIO_START	SMC_STDCALL_NR(SMC_ENTITY_TRUSTED_OS, 21)
 diff --git a/include/linux/trusty/smwall.h b/include/linux/trusty/smwall.h
 new file mode 100644
-index 000000000000..370d8b32f26a
+index 000000000..370d8b32f
 --- /dev/null
 +++ b/include/linux/trusty/smwall.h
 @@ -0,0 +1,90 @@
@@ -469,7 +469,7 @@ index 000000000000..370d8b32f26a
 +
 +#endif /* __LINUX_TRUSTY_SMWALL_H */
 diff --git a/include/linux/trusty/trusty.h b/include/linux/trusty/trusty.h
-index eaa833bdea73..029b0986566f 100644
+index eaa833bde..029b09865 100644
 --- a/include/linux/trusty/trusty.h
 +++ b/include/linux/trusty/trusty.h
 @@ -85,6 +85,19 @@ static inline void trusty_nop_init(struct trusty_nop *nop,

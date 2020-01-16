@@ -26,7 +26,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/sdw/sdw_cnl.c b/drivers/sdw/sdw_cnl.c
-index 9f8e77c20699..95eb7a8fab2b 100644
+index 9f8e77c20..95eb7a8fa 100644
 --- a/drivers/sdw/sdw_cnl.c
 +++ b/drivers/sdw/sdw_cnl.c
 @@ -1900,9 +1900,6 @@ static int cnl_sdw_xfer_bulk(struct sdw_master *mstr,

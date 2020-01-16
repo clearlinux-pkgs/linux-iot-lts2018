@@ -20,7 +20,7 @@ Signed-off-by: Pawel Furtak <pawel.furtak@intel.com>
  3 files changed, 141 insertions(+), 93 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index 7f395ed3bcd1..279068bcd4f7 100644
+index 7f395ed3b..279068bcd 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -35,6 +35,7 @@ struct vfe_stream_pos_desc {
@@ -43,7 +43,7 @@ index 7f395ed3bcd1..279068bcd4f7 100644
  struct vfe_pcm_dma_conf {
  	uint64_t addr;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index ae161266c78b..e4b43b835289 100644
+index ae161266c..e4b43b835 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -314,43 +314,29 @@ static void vfe_cmd_tx_done(struct virtqueue *vq)
@@ -380,7 +380,7 @@ index ae161266c78b..e4b43b835289 100644
  	ret = vfe_init_vqs(vfe);
  	if (ret < 0)
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index 7f62b6cb2474..3a9f9979bcad 100644
+index 7f62b6cb2..3a9f9979b 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -21,17 +21,15 @@

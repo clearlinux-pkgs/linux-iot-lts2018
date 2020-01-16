@@ -21,7 +21,7 @@ Reviewed-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  1 file changed, 12 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/char/tpm/Makefile b/drivers/char/tpm/Makefile
-index 4e9c33ca1f8f..efc785053627 100644
+index 4e9c33ca1..efc785053 100644
 --- a/drivers/char/tpm/Makefile
 +++ b/drivers/char/tpm/Makefile
 @@ -3,9 +3,18 @@

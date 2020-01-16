@@ -14,7 +14,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  3 files changed, 34 insertions(+), 29 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 109ab510bdb1..e7f402903ccc 100644
+index 109ab510b..e7f402903 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -228,7 +228,7 @@ static inline u32 cred_sid(const struct cred *cred)
@@ -246,7 +246,7 @@ index 109ab510bdb1..e7f402903ccc 100644
  		ksec->sid = tsec->keycreate_sid;
  	else
 diff --git a/security/selinux/include/objsec.h b/security/selinux/include/objsec.h
-index cc5e26b0161b..734b6833bdff 100644
+index cc5e26b01..734b6833b 100644
 --- a/security/selinux/include/objsec.h
 +++ b/security/selinux/include/objsec.h
 @@ -158,4 +158,9 @@ struct bpf_security_struct {
@@ -260,7 +260,7 @@ index cc5e26b0161b..734b6833bdff 100644
 +
  #endif /* _SELINUX_OBJSEC_H_ */
 diff --git a/security/selinux/xfrm.c b/security/selinux/xfrm.c
-index 91dc3783ed94..8ffe7e1053c4 100644
+index 91dc3783e..8ffe7e105 100644
 --- a/security/selinux/xfrm.c
 +++ b/security/selinux/xfrm.c
 @@ -79,7 +79,7 @@ static int selinux_xfrm_alloc_user(struct xfrm_sec_ctx **ctxp,

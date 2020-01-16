@@ -24,7 +24,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  3 files changed, 86 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 89b294878dea..7c3dcd06fe7b 100644
+index 89b294878..7c3dcd06f 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -56,6 +56,11 @@ struct nhlt_blob {
@@ -139,7 +139,7 @@ index 89b294878dea..7c3dcd06fe7b 100644
  
  err:
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 2c0cf7a96128..31384afe42b3 100644
+index 2c0cf7a96..31384afe4 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -2265,6 +2265,7 @@ int skl_create_pipeline(struct skl_sst *ctx, struct skl_pipe *pipe)
@@ -159,7 +159,7 @@ index 2c0cf7a96128..31384afe42b3 100644
  	return ret;
  }
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 10a414d77cb2..66f34ceae74e 100644
+index 10a414d77..66f34ceae 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -170,6 +170,7 @@ void skl_debug_init_module(struct skl_debug *d,

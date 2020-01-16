@@ -57,7 +57,7 @@ Change-Id: I1537ece66be9ffdca513b60306890bd58746f9c0
  3 files changed, 68 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.c b/drivers/gpu/drm/i915/gvt/gvt.c
-index 3105afe1a6e5..72b7dca9f4eb 100644
+index 3105afe1a..72b7dca9f 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.c
 +++ b/drivers/gpu/drm/i915/gvt/gvt.c
 @@ -354,6 +354,57 @@ void intel_gvt_allocate_ddb(struct intel_gvt *gvt,
@@ -149,7 +149,7 @@ index 3105afe1a6e5..72b7dca9f4eb 100644
  	intel_gvt_clean_vgpu_types(gvt);
  out_clean_thread:
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 9f3fed27445f..cf689150dbf7 100644
+index 9f3fed274..cf689150d 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -371,6 +371,9 @@ struct intel_gvt {
@@ -172,7 +172,7 @@ index 9f3fed27445f..cf689150dbf7 100644
  bool is_force_nonpriv_mmio(unsigned int offset);
  
 diff --git a/drivers/gpu/drm/i915/gvt/mmio.c b/drivers/gpu/drm/i915/gvt/mmio.c
-index 8a28db93bb1e..e6e38393595c 100644
+index 8a28db93b..e6e383935 100644
 --- a/drivers/gpu/drm/i915/gvt/mmio.c
 +++ b/drivers/gpu/drm/i915/gvt/mmio.c
 @@ -324,15 +324,14 @@ int intel_vgpu_init_mmio(struct intel_vgpu *vgpu)

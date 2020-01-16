@@ -15,7 +15,7 @@ Signed-off-by: stelukun <sreedhar.telukuntla@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/Makefile b/drivers/gpu/drm/i915/Makefile
-index c70a494bb213..9e145c95d89c 100644
+index c70a494bb..9e145c95d 100644
 --- a/drivers/gpu/drm/i915/Makefile
 +++ b/drivers/gpu/drm/i915/Makefile
 @@ -22,7 +22,7 @@ subdir-ccflags-y += $(call cc-disable-warning, unused-but-set-variable)

@@ -20,7 +20,7 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  1 file changed, 98 insertions(+), 64 deletions(-)
 
 diff --git a/arch/x86/mm/pageattr.c b/arch/x86/mm/pageattr.c
-index ef7a230b6742..fca0e0e396e0 100644
+index ef7a230b6..fca0e0e39 100644
 --- a/arch/x86/mm/pageattr.c
 +++ b/arch/x86/mm/pageattr.c
 @@ -286,84 +286,118 @@ static void cpa_flush_array(unsigned long *start, int numpages, int cache,

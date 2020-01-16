@@ -17,7 +17,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  4 files changed, 40 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 152aba23d95f..6e351c387928 100644
+index 152aba23d..6e351c387 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -316,6 +316,17 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -39,7 +39,7 @@ index 152aba23d95f..6e351c387928 100644
  		/* init ioreq buffer */
  		ret = acrn_ioreq_init(vm, (unsigned long)ioctl_param);
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index 4d5854d0c139..6bea6688ddc0 100644
+index 4d5854d0c..6bea6688d 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -208,6 +208,23 @@ int map_guest_memseg(struct vhm_vm *vm, struct vm_memmap *memmap)
@@ -67,7 +67,7 @@ index 4d5854d0c139..6bea6688ddc0 100644
  {
  	return hugepage_free_guest(vm);
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 62aed3466e9f..7b6b1b40615b 100644
+index 62aed3466..7b6b1b406 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -169,6 +169,17 @@ void free_guest_mem(struct vhm_vm *vm);
@@ -89,7 +89,7 @@ index 62aed3466e9f..7b6b1b40615b 100644
  void deinit_trusty(struct vhm_vm *vm);
  
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index cf4f63211aa2..6c09157a9bef 100644
+index cf4f63211..6c09157a9 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -94,6 +94,7 @@

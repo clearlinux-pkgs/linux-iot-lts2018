@@ -12,7 +12,7 @@ Signed-off-by: Vinod Koul <vinod.koul@intel.com>
  1 file changed, 6 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index ad639d55bafb..3fa36d1d9d17 100644
+index ad639d55b..3fa36d1d9 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -43,6 +43,7 @@ struct skl_debug {

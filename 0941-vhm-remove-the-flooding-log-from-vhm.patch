@@ -20,7 +20,7 @@ Tracked-On: PKT-1696
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/vhm/vhm_hugetlb.c b/drivers/vhm/vhm_hugetlb.c
-index 34ebbd90acea..72bbef13f062 100644
+index 34ebbd90a..72bbef13f 100644
 --- a/drivers/vhm/vhm_hugetlb.c
 +++ b/drivers/vhm/vhm_hugetlb.c
 @@ -101,7 +101,7 @@ static int add_guest_map(struct vhm_vm *vm, unsigned long vm0_gpa,

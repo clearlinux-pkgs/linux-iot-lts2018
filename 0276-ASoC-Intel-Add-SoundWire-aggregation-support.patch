@@ -21,7 +21,7 @@ Reviewed-by: Kp, Jeeja <jeeja.kp@intel.com>
  2 files changed, 6 insertions(+), 10 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index ae3c6aa5557e..790af2489d0e 100644
+index ae3c6aa55..790af2489 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -526,11 +526,7 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
@@ -60,7 +60,7 @@ index ae3c6aa5557e..790af2489d0e 100644
  		case 3:
  			p_data->sdw_regs = mmio_base + CNL_SDW_LINK_3_BASE;
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.c b/sound/soc/intel/skylake/skl-sdw-pcm.c
-index 564602c0ee12..2c5ba970e34c 100644
+index 564602c0e..2c5ba970e 100644
 --- a/sound/soc/intel/skylake/skl-sdw-pcm.c
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.c
 @@ -47,7 +47,7 @@ struct sdw_dma_data {

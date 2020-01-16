@@ -21,7 +21,7 @@ Signed-off-by: Romli, Khairul Anuar <khairul.anuar.romli@intel.com>
  3 files changed, 88 insertions(+), 35 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 8bc603ec9b66..98a147235a9c 100644
+index 8bc603ec9..98a147235 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -434,6 +434,9 @@ struct intel_connector {
@@ -35,7 +35,7 @@ index 8bc603ec9b66..98a147235a9c 100644
  
  struct intel_digital_connector_state {
 diff --git a/drivers/gpu/drm/i915/intel_hdcp.c b/drivers/gpu/drm/i915/intel_hdcp.c
-index 20f78b572d1b..d9869b64a3f1 100644
+index 20f78b572..d9869b64a 100644
 --- a/drivers/gpu/drm/i915/intel_hdcp.c
 +++ b/drivers/gpu/drm/i915/intel_hdcp.c
 @@ -234,25 +234,28 @@ int intel_hdcp_auth_downstream(struct intel_connector *connector)
@@ -365,7 +365,7 @@ index 20f78b572d1b..d9869b64a3f1 100644
  	mutex_init(&connector->hdcp_mutex);
  	INIT_DELAYED_WORK(&connector->hdcp_check_work, intel_hdcp_check_work);
 diff --git a/include/drm/drm_hdcp.h b/include/drm/drm_hdcp.h
-index f17eb2910bdb..8f5831d4b483 100644
+index f17eb2910..8f5831d4b 100644
 --- a/include/drm/drm_hdcp.h
 +++ b/include/drm/drm_hdcp.h
 @@ -20,6 +20,7 @@

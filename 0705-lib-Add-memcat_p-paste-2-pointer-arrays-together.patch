@@ -27,7 +27,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  create mode 100644 lib/test_memcat_p.c
 
 diff --git a/include/linux/string.h b/include/linux/string.h
-index f58e1ef76572..b2d577647c6f 100644
+index f58e1ef76..b2d577647 100644
 --- a/include/linux/string.h
 +++ b/include/linux/string.h
 @@ -131,6 +131,13 @@ static inline void *memset_p(void **p, void *v, __kernel_size_t n)
@@ -45,7 +45,7 @@ index f58e1ef76572..b2d577647c6f 100644
  extern void * memcpy(void *,const void *,__kernel_size_t);
  #endif
 diff --git a/lib/Kconfig.debug b/lib/Kconfig.debug
-index 46a910acce3f..cc6d3376cad4 100644
+index 46a910acc..cc6d3376c 100644
 --- a/lib/Kconfig.debug
 +++ b/lib/Kconfig.debug
 @@ -1966,6 +1966,14 @@ config TEST_DEBUG_VIRTUAL
@@ -64,7 +64,7 @@ index 46a910acce3f..cc6d3376cad4 100644
  
  config MEMTEST
 diff --git a/lib/Makefile b/lib/Makefile
-index 0ab808318202..722e4ec1180c 100644
+index 0ab808318..722e4ec11 100644
 --- a/lib/Makefile
 +++ b/lib/Makefile
 @@ -82,6 +82,7 @@ obj-$(CONFIG_TEST_UUID) += test_uuid.o
@@ -76,7 +76,7 @@ index 0ab808318202..722e4ec1180c 100644
  ifeq ($(CONFIG_DEBUG_KOBJECT),y)
  CFLAGS_kobject.o += -DDEBUG
 diff --git a/lib/string.c b/lib/string.c
-index 72125fd5b4a6..49b7fcdd12d2 100644
+index 72125fd5b..49b7fcdd1 100644
 --- a/lib/string.c
 +++ b/lib/string.c
 @@ -27,6 +27,7 @@
@@ -126,7 +126,7 @@ index 72125fd5b4a6..49b7fcdd12d2 100644
   * strstr - Find the first substring in a %NUL terminated string
 diff --git a/lib/test_memcat_p.c b/lib/test_memcat_p.c
 new file mode 100644
-index 000000000000..2b163a749ecb
+index 000000000..2b163a749
 --- /dev/null
 +++ b/lib/test_memcat_p.c
 @@ -0,0 +1,115 @@

@@ -28,7 +28,7 @@ Tracked-On: PKT-1617
  2 files changed, 27 insertions(+), 33 deletions(-)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 3f8bd4abe757..8b46f43aaec8 100644
+index 3f8bd4abe..8b46f43aa 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -207,7 +207,6 @@ int acrn_ioreq_create_client(unsigned long vmid, ioreq_handler_t handler,
@@ -199,7 +199,7 @@ index 3f8bd4abe757..8b46f43aaec8 100644
  	if (target_client > 0)
  		return acrn_ioreq_get_client(target_client);
 diff --git a/drivers/vhm/vhm_irqfd.c b/drivers/vhm/vhm_irqfd.c
-index b8c122d5ea1f..3eb832114fed 100644
+index b8c122d5e..3eb832114 100644
 --- a/drivers/vhm/vhm_irqfd.c
 +++ b/drivers/vhm/vhm_irqfd.c
 @@ -171,15 +171,14 @@ static void vhm_irqfd_shutdown(struct acrn_vhm_irqfd *irqfd)

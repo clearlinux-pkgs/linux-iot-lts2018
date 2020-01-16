@@ -36,7 +36,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  4 files changed, 76 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index 1d25ee3c1277..c28bc9a2fffa 100644
+index 1d25ee3c1..c28bc9a2f 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -435,6 +435,38 @@ int intel_gvt_scan_and_shadow_workload(struct intel_vgpu_workload *workload)
@@ -99,7 +99,7 @@ index 1d25ee3c1277..c28bc9a2fffa 100644
  
  	s->workloads = kmem_cache_create_usercopy("gvt-g_vgpu_workload",
 diff --git a/drivers/gpu/drm/i915/i915_debugfs.c b/drivers/gpu/drm/i915/i915_debugfs.c
-index b2e0c2348882..4a1330a42a28 100644
+index b2e0c2348..4a1330a42 100644
 --- a/drivers/gpu/drm/i915/i915_debugfs.c
 +++ b/drivers/gpu/drm/i915/i915_debugfs.c
 @@ -1943,6 +1943,19 @@ static void describe_ctx_ring(struct seq_file *m, struct intel_ring *ring)
@@ -162,10 +162,10 @@ index b2e0c2348882..4a1330a42a28 100644
  		}
  
 diff --git a/drivers/gpu/drm/i915/intel_lrc.c b/drivers/gpu/drm/i915/intel_lrc.c
-index 71e4d094aa76..c858627a0a17 100644
+index c8d5324f2..adfe6901b 100644
 --- a/drivers/gpu/drm/i915/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/intel_lrc.c
-@@ -2741,6 +2741,14 @@ populate_lr_context(struct i915_gem_context *ctx,
+@@ -2750,6 +2750,14 @@ populate_lr_context(struct i915_gem_context *ctx,
  			_MASKED_BIT_ENABLE(CTX_CTRL_ENGINE_CTX_RESTORE_INHIBIT |
  					   CTX_CTRL_ENGINE_CTX_SAVE_INHIBIT);
  
@@ -181,7 +181,7 @@ index 71e4d094aa76..c858627a0a17 100644
  	i915_gem_object_unpin_map(ctx_obj);
  	return ret;
 diff --git a/drivers/gpu/drm/i915/intel_ringbuffer.h b/drivers/gpu/drm/i915/intel_ringbuffer.h
-index 4f39f6b5d1e0..83833ce2a4f0 100644
+index 4f39f6b5d..83833ce2a 100644
 --- a/drivers/gpu/drm/i915/intel_ringbuffer.h
 +++ b/drivers/gpu/drm/i915/intel_ringbuffer.h
 @@ -797,6 +797,11 @@ intel_write_status_page(struct intel_engine_cs *engine, int reg, u32 value)

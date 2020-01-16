@@ -26,7 +26,7 @@ Signed-off-by: Mateusz Polrola <mateuszx.potrola@intel.com>
  8 files changed, 39 insertions(+), 33 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_drv.h b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_drv.h
-index 45c24fd8d25d..ad4839b9c0f2 100644
+index 45c24fd8d..ad4839b9c 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_drv.h
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_drv.h
 @@ -83,7 +83,7 @@ struct hyper_dmabuf_bknd_ops {
@@ -39,7 +39,7 @@ index 45c24fd8d25d..ad4839b9c0f2 100644
  	/* make shared pages unshared via hypervisor specific method */
  	int (*unshare_pages)(void **, int);
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
-index 66cdcf6eff78..62f83cc45f36 100644
+index 66cdcf6ef..62f83cc45 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 @@ -86,6 +86,7 @@ static int send_export_msg(struct exported_sgt_info *exported,
@@ -86,7 +86,7 @@ index 66cdcf6eff78..62f83cc45f36 100644
  
  	dev_dbg(hy_drv_priv->dev,
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
-index c5d99d2f12c9..d91a9eb3bed8 100644
+index c5d99d2f1..d91a9eb3b 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
 @@ -59,13 +59,14 @@ void hyper_dmabuf_create_req(struct hyper_dmabuf_req *req,
@@ -179,7 +179,7 @@ index c5d99d2f12c9..d91a9eb3bed8 100644
  		imported->valid = true;
  		hyper_dmabuf_register_imported(imported);
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_struct.h b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_struct.h
-index a11f804edfb3..f7b7de0e1432 100644
+index a11f804ed..f7b7de0e1 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_struct.h
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_struct.h
 @@ -117,7 +117,7 @@ struct imported_sgt_info {
@@ -192,7 +192,7 @@ index a11f804edfb3..f7b7de0e1432 100644
  	/* offset and size info of DMA_BUF */
  	int frst_ofst;
 diff --git a/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_shm.c b/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_shm.c
-index be5141c25191..b18f7cae0115 100644
+index be5141c25..b18f7cae0 100644
 --- a/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_shm.c
 +++ b/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_shm.c
 @@ -56,7 +56,7 @@ struct virtio_shared_pages_info {
@@ -228,7 +228,7 @@ index be5141c25191..b18f7cae0115 100644
  	ret = virtio_be_share_pages(pages, domid, nents, refs_info);
  #else
 diff --git a/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_shm.h b/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_shm.h
-index 05cbf5779f86..55f3e13ef2df 100644
+index 05cbf5779..55f3e13ef 100644
 --- a/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_shm.h
 +++ b/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_shm.h
 @@ -25,7 +25,7 @@
@@ -241,7 +241,7 @@ index 05cbf5779f86..55f3e13ef2df 100644
  		       void **refs_info);
  
 diff --git a/drivers/dma-buf/hyper_dmabuf/xen/hyper_dmabuf_xen_shm.c b/drivers/dma-buf/hyper_dmabuf/xen/hyper_dmabuf_xen_shm.c
-index c6a15f187fe3..5889485125e0 100644
+index c6a15f187..588948512 100644
 --- a/drivers/dma-buf/hyper_dmabuf/xen/hyper_dmabuf_xen_shm.c
 +++ b/drivers/dma-buf/hyper_dmabuf/xen/hyper_dmabuf_xen_shm.c
 @@ -73,8 +73,8 @@
@@ -256,7 +256,7 @@ index c6a15f187fe3..5889485125e0 100644
  	grant_ref_t lvl3_gref;
  	grant_ref_t *lvl2_table;
 diff --git a/drivers/dma-buf/hyper_dmabuf/xen/hyper_dmabuf_xen_shm.h b/drivers/dma-buf/hyper_dmabuf/xen/hyper_dmabuf_xen_shm.h
-index d5236b500075..f23deb394a00 100644
+index d5236b500..f23deb394 100644
 --- a/drivers/dma-buf/hyper_dmabuf/xen/hyper_dmabuf_xen_shm.h
 +++ b/drivers/dma-buf/hyper_dmabuf/xen/hyper_dmabuf_xen_shm.h
 @@ -29,8 +29,8 @@

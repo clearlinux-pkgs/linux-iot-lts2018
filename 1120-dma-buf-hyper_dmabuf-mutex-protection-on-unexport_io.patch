@@ -13,7 +13,7 @@ Signed-off-by: Dongwon Kim <dongwon.kim@intel.com>
  1 file changed, 8 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
-index 17b24d27c396..b18f70349021 100644
+index 17b24d27c..b18f70349 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 @@ -699,6 +699,8 @@ int hyper_dmabuf_unexport_ioctl(struct file *filp, void *data)

@@ -16,7 +16,7 @@ Signed-off-by: Manisha Chinthapally <manisha.chinthapally@intel.com>
  2 files changed, 7 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h b/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h
-index 629750152fdb..6afb2ac8839d 100644
+index 629750152..6afb2ac88 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h
 @@ -1475,7 +1475,8 @@ struct DRV_SETUP_INFO_NODE_S {
@@ -39,7 +39,7 @@ index 629750152fdb..6afb2ac8839d 100644
  #define DRV_SETUP_INFO_PTI_DISABLED 0
  #define DRV_SETUP_INFO_PTI_KPTI 1
 diff --git a/drivers/platform/x86/sepdk/sep/lwpmudrv.c b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
-index 6f6772433cce..799c61cde378 100644
+index 6f6772433..799c61cde 100644
 --- a/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 +++ b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 @@ -6173,6 +6173,9 @@ static OS_STATUS lwpmudrv_Get_Drv_Setup_Info(IOCTL_ARGS args)

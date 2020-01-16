@@ -14,7 +14,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/vbs/vbs.c b/drivers/vbs/vbs.c
-index 7427942c12f7..c2d8a5262a8d 100644
+index 7427942c1..c2d8a5262 100644
 --- a/drivers/vbs/vbs.c
 +++ b/drivers/vbs/vbs.c
 @@ -135,12 +135,15 @@ long virtio_dev_register(struct virtio_dev_info *dev)

@@ -14,7 +14,7 @@ Signed-off-by: Puunithaaraj Gopal <puunithaaraj.gopal@intel.com>
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 4523ce9ed0b0..3187cae74d75 100644
+index 4523ce9ed..3187cae74 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -426,7 +426,6 @@ static int start_stream_firmware(struct ici_isys_stream *as)

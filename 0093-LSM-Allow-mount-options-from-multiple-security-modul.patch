@@ -22,7 +22,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  5 files changed, 124 insertions(+), 92 deletions(-)
 
 diff --git a/fs/btrfs/super.c b/fs/btrfs/super.c
-index ddbad8d50949..ae42a937874e 100644
+index ddbad8d50..ae42a9378 100644
 --- a/fs/btrfs/super.c
 +++ b/fs/btrfs/super.c
 @@ -1492,15 +1492,15 @@ static int setup_security_options(struct btrfs_fs_info *fs_info,
@@ -47,7 +47,7 @@ index ddbad8d50949..ae42a937874e 100644
  		security_free_mnt_opts(sec_opts);
  	}
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 418de5d20ffb..ef87252b940d 100644
+index 418de5d20..ef87252b9 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -182,34 +182,55 @@ static inline const char *kernel_load_data_id_str(enum kernel_load_data_id id)
@@ -119,7 +119,7 @@ index 418de5d20ffb..ef87252b940d 100644
  
  /* prototypes */
 diff --git a/security/security.c b/security/security.c
-index d607739688cc..fd958c7ce780 100644
+index d60773968..fd958c7ce 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -787,9 +787,17 @@ int security_sb_set_mnt_opts(struct super_block *sb,
@@ -144,7 +144,7 @@ index d607739688cc..fd958c7ce780 100644
  EXPORT_SYMBOL(security_sb_set_mnt_opts);
  
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 071dca24396d..35df38af8827 100644
+index 071dca243..35df38af8 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -590,21 +590,23 @@ static int selinux_get_mnt_opts(const struct super_block *sb,
@@ -354,7 +354,7 @@ index 071dca24396d..35df38af8827 100644
  
  		if (flags[i] == SBLABEL_MNT)
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index c045158a6057..e162d990b3a8 100644
+index c045158a6..e162d990b 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -604,7 +604,7 @@ static int smack_parse_opts_str(char *options,

@@ -15,7 +15,7 @@ Signed-off-by: Zhou Furong <furong.zhou@intel.com>
  1 file changed, 9 insertions(+), 20 deletions(-)
 
 diff --git a/security/keystore/api_dal.c b/security/keystore/api_dal.c
-index d4f083a24cd3..31c351e18456 100644
+index d4f083a24..31c351e18 100644
 --- a/security/keystore/api_dal.c
 +++ b/security/keystore/api_dal.c
 @@ -119,13 +119,12 @@ static int dal_keystore_register_client(enum keystore_seed_type seed_type,

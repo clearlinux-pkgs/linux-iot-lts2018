@@ -16,7 +16,7 @@ Signed-off-by: Jeeja KP <jeeja.kp@intel.com>
  2 files changed, 3 insertions(+), 6 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 7107f14d0a89..b684f47eefee 100644
+index 7107f14d0..b684f47ee 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -87,6 +87,9 @@ static ssize_t nhlt_write(struct file *file,
@@ -30,7 +30,7 @@ index 7107f14d0a89..b684f47eefee 100644
  		/* allocate mem for blob */
  		blob->cfg = kzalloc(count, GFP_KERNEL);
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index bece49909e64..8da8ead85324 100644
+index bece49909..8da8ead85 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -1897,12 +1897,6 @@ static int skl_tplg_be_fill_pipe_params(struct snd_soc_dai *dai,

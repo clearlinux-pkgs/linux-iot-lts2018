@@ -21,7 +21,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  5 files changed, 89 insertions(+), 17 deletions(-)
 
 diff --git a/include/sound/compress_driver.h b/include/sound/compress_driver.h
-index 127c2713b543..2d316604e0f0 100644
+index 127c2713b..2d316604e 100644
 --- a/include/sound/compress_driver.h
 +++ b/include/sound/compress_driver.h
 @@ -45,6 +45,11 @@ struct snd_compr_runtime {
@@ -45,7 +45,7 @@ index 127c2713b543..2d316604e0f0 100644
  
  /**
 diff --git a/include/sound/hdaudio.h b/include/sound/hdaudio.h
-index 0aa0189017ba..5eee13a0c045 100644
+index 0aa018901..5eee13a0c 100644
 --- a/include/sound/hdaudio.h
 +++ b/include/sound/hdaudio.h
 @@ -487,6 +487,7 @@ struct hdac_stream {
@@ -65,7 +65,7 @@ index 0aa0189017ba..5eee13a0c045 100644
  	unsigned long start_wallclk;	/* start + minimum wallclk */
  	unsigned long period_wallclk;	/* wallclk for period */
 diff --git a/include/sound/hdaudio_ext.h b/include/sound/hdaudio_ext.h
-index f34aced69ca8..2d93a039a286 100644
+index f34aced69..2d93a039a 100644
 --- a/include/sound/hdaudio_ext.h
 +++ b/include/sound/hdaudio_ext.h
 @@ -88,6 +88,10 @@ void snd_hdac_link_free_all(struct hdac_bus *bus);
@@ -80,7 +80,7 @@ index f34aced69ca8..2d93a039a286 100644
  void snd_hdac_ext_stream_decouple(struct hdac_bus *bus,
  				struct hdac_ext_stream *azx_dev, bool decouple);
 diff --git a/sound/hda/ext/hdac_ext_stream.c b/sound/hda/ext/hdac_ext_stream.c
-index a835558ddbc9..4bd95f4b2234 100644
+index a835558dd..4bd95f4b2 100644
 --- a/sound/hda/ext/hdac_ext_stream.c
 +++ b/sound/hda/ext/hdac_ext_stream.c
 @@ -22,6 +22,8 @@
@@ -138,7 +138,7 @@ index a835558ddbc9..4bd95f4b2234 100644
 +}
 +EXPORT_SYMBOL_GPL(hdac_ext_host_stream_compr_assign);
 diff --git a/sound/hda/hdac_stream.c b/sound/hda/hdac_stream.c
-index eee422390d8e..d3b1e22ac050 100644
+index eee422390..d3b1e22ac 100644
 --- a/sound/hda/hdac_stream.c
 +++ b/sound/hda/hdac_stream.c
 @@ -10,6 +10,7 @@

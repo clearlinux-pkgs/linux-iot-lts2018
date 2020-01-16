@@ -20,7 +20,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  5 files changed, 106 insertions(+)
 
 diff --git a/drivers/misc/mei/debugfs.c b/drivers/misc/mei/debugfs.c
-index e3beb2a93f71..67689cf4e52d 100644
+index e3beb2a93..67689cf4e 100644
 --- a/drivers/misc/mei/debugfs.c
 +++ b/drivers/misc/mei/debugfs.c
 @@ -187,6 +187,8 @@ static ssize_t mei_dbgfs_read_devstate(struct file *fp, char __user *ubuf,
@@ -33,7 +33,7 @@ index e3beb2a93f71..67689cf4e52d 100644
  
  	pos += scnprintf(buf + pos, bufsz - pos, "pg:  %s, %s\n",
 diff --git a/drivers/misc/mei/hbm.c b/drivers/misc/mei/hbm.c
-index 364f848be180..06d6da212c3d 100644
+index 364f848be..06d6da212 100644
 --- a/drivers/misc/mei/hbm.c
 +++ b/drivers/misc/mei/hbm.c
 @@ -339,6 +339,39 @@ static int mei_hbm_dma_setup_req(struct mei_device *dev)
@@ -151,7 +151,7 @@ index 364f848be180..06d6da212c3d 100644
  		dev_dbg(dev->dev, "hbm: dma setup response: message received.\n");
  
 diff --git a/drivers/misc/mei/hbm.h b/drivers/misc/mei/hbm.h
-index 0171a7e79bab..df1515fde478 100644
+index 0171a7e79..df1515fde 100644
 --- a/drivers/misc/mei/hbm.h
 +++ b/drivers/misc/mei/hbm.h
 @@ -26,6 +26,7 @@ struct mei_cl;
@@ -171,7 +171,7 @@ index 0171a7e79bab..df1515fde478 100644
  	MEI_HBM_ENUM_CLIENTS,
  	MEI_HBM_CLIENT_PROPERTIES,
 diff --git a/drivers/misc/mei/hw.h b/drivers/misc/mei/hw.h
-index 69a59e3cda17..46843bc224a0 100644
+index 69a59e3cd..46843bc22 100644
 --- a/drivers/misc/mei/hw.h
 +++ b/drivers/misc/mei/hw.h
 @@ -92,6 +92,12 @@
@@ -215,7 +215,7 @@ index 69a59e3cda17..46843bc224a0 100644
 +
  #endif
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index f5110d9900f9..8cbab0f8e6a0 100644
+index f5110d990..8cbab0f8e 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -434,6 +434,7 @@ struct mei_fw_version {

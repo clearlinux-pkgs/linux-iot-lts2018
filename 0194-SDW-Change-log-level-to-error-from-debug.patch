@@ -14,7 +14,7 @@ Reviewed-on:
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/sdw/sdw.c b/drivers/sdw/sdw.c
-index 5f4aea04a85b..78c8cfd32d4c 100644
+index 5f4aea04a..78c8cfd32 100644
 --- a/drivers/sdw/sdw.c
 +++ b/drivers/sdw/sdw.c
 @@ -1844,7 +1844,7 @@ int sdw_config_stream(struct sdw_master *mstr,

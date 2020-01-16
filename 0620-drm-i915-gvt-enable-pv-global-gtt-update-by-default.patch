@@ -14,7 +14,7 @@ Reviewed-by: He, Min <min.he@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_params.h b/drivers/gpu/drm/i915/i915_params.h
-index 28769e6b6837..40aee5b37645 100644
+index 28769e6b6..40aee5b37 100644
 --- a/drivers/gpu/drm/i915/i915_params.h
 +++ b/drivers/gpu/drm/i915/i915_params.h
 @@ -71,7 +71,8 @@ struct drm_printer;

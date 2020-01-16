@@ -28,7 +28,7 @@ Signed-off-by: Stephen Rothwell <sfr@canb.auug.org.au>
  2 files changed, 36 insertions(+)
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 2f1c343ba548..f18e23a3e5b6 100644
+index 2f1c343ba..f18e23a3e 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -3160,6 +3160,14 @@
@@ -47,7 +47,7 @@ index 2f1c343ba548..f18e23a3e5b6 100644
  			on a WARN().
  
 diff --git a/kernel/panic.c b/kernel/panic.c
-index 8138a676fb7d..96693c24a171 100644
+index 8138a676f..96693c24a 100644
 --- a/kernel/panic.c
 +++ b/kernel/panic.c
 @@ -46,6 +46,13 @@ int panic_on_warn __read_mostly;

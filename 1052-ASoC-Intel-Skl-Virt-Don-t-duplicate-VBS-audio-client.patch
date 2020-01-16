@@ -18,7 +18,7 @@ Tested-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  1 file changed, 27 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virt-audio.c b/sound/soc/intel/skylake/virtio/skl-virt-audio.c
-index 0b712db04fe9..3ebbd623d7e3 100644
+index 0b712db04..3ebbd623d 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virt-audio.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virt-audio.c
 @@ -144,14 +144,22 @@ int vskl_vbs_register_client(struct snd_skl_vbe *vbe)

@@ -18,7 +18,7 @@ Tracked-On: PKT-2115
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 2a51fadac057..f7fb72aa2947 100644
+index 2a51fadac..f7fb72aa2 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -433,7 +433,7 @@ static long vhm_dev_ioctl(struct file *filep,

@@ -26,7 +26,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  5 files changed, 25 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index d57dc3972bc5..0d25f732da5b 100644
+index d57dc3972..0d25f732d 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -630,6 +630,23 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -54,7 +54,7 @@ index d57dc3972bc5..0d25f732da5b 100644
  		pr_warn("Unknown IOCTL 0x%x\n", ioctl_num);
  		ret = 0;
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index d994835dd924..666f9aeb87ad 100644
+index d994835dd..666f9aeb8 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -177,3 +177,8 @@ inline long hcall_vm_gpa2hpa(unsigned long vmid, unsigned long addr)
@@ -67,7 +67,7 @@ index d994835dd924..666f9aeb87ad 100644
 +	return  acrn_hypercall2(HC_VM_INTR_MONITOR, vmid, addr);
 +}
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 24ca7be2c2b9..2cd6172e8e1d 100644
+index 24ca7be2c..2cd6172e8 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -85,6 +85,7 @@
@@ -79,7 +79,7 @@ index 24ca7be2c2b9..2cd6172e8e1d 100644
  /* DM ioreq management */
  #define HC_ID_IOREQ_BASE            0x30UL
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 703b35bec053..062196ab1194 100644
+index 703b35bec..062196ab1 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -167,5 +167,6 @@ inline long hcall_reset_ptdev_intr_info(unsigned long vmid,
@@ -90,7 +90,7 @@ index 703b35bec053..062196ab1194 100644
  
  #endif /* VHM_HYPERCALL_H */
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 6c09157a9bef..063ebd5c7a93 100644
+index 6c09157a9..063ebd5c7 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -80,6 +80,7 @@

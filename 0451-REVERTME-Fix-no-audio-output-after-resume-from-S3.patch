@@ -17,7 +17,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/codecs/tdf8532.c b/sound/soc/codecs/tdf8532.c
-index 86b7430f4c88..f306b597b42d 100644
+index 86b7430f4..f306b597b 100644
 --- a/sound/soc/codecs/tdf8532.c
 +++ b/sound/soc/codecs/tdf8532.c
 @@ -268,7 +268,9 @@ static int tdf8532_dai_trigger(struct snd_pcm_substream *substream, int cmd,

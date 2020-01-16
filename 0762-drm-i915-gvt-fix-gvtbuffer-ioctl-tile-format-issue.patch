@@ -19,7 +19,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c b/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
-index fb1ced042a4e..c34599674867 100644
+index fb1ced042..c34599674 100644
 --- a/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
 +++ b/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
 @@ -65,6 +65,8 @@ static const struct drm_i915_gem_object_ops i915_gem_gvtbuffer_ops = {
