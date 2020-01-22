@@ -20,7 +20,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/codecs/tdf8532.h b/sound/soc/codecs/tdf8532.h
-index 6e3f2c147..39353a04b 100644
+index 6e3f2c147eac..39353a04b3ba 100644
 --- a/sound/soc/codecs/tdf8532.h
 +++ b/sound/soc/codecs/tdf8532.h
 @@ -16,7 +16,7 @@
@@ -33,7 +33,7 @@ index 6e3f2c147..39353a04b 100644
  #define CHNL_MAX 5
  
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index 76266d394..f66aae4c2 100644
+index 76266d3945e7..f66aae4c229f 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -59,7 +59,7 @@

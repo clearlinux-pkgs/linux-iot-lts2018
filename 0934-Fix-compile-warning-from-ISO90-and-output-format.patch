@@ -12,7 +12,7 @@ Change-Id: I96e6e4152151f1b26d5d2243974cc85bd7fc5bdd
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index 7bff133a4..f37a1a58d 100755
+index 7bff133a4610..f37a1a58dce8 100755
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -648,13 +648,14 @@ static int trusty_remove(struct platform_device *pdev)

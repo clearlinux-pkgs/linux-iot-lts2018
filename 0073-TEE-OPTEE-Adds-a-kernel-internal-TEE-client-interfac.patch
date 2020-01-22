@@ -20,7 +20,7 @@ Signed-off-by: Jens Wiklander <jens.wiklander@linaro.org>
 
 diff --git a/README.intel.optee b/README.intel.optee
 new file mode 100644
-index 000000000..0945d23cc
+index 000000000000..0945d23cc882
 --- /dev/null
 +++ b/README.intel.optee
 @@ -0,0 +1,13 @@
@@ -38,7 +38,7 @@ index 000000000..0945d23cc
 +
 +CONFIG_TEE and CONFIG_OPTEE in defconfig must be enabled for driver to compile.
 diff --git a/drivers/tee/tee_core.c b/drivers/tee/tee_core.c
-index dd46b7588..32e88eb4f 100644
+index dd46b758852a..32e88eb4f535 100644
 --- a/drivers/tee/tee_core.c
 +++ b/drivers/tee/tee_core.c
 @@ -38,15 +38,13 @@ static DEFINE_SPINLOCK(driver_lock);
@@ -194,7 +194,7 @@ index dd46b7588..32e88eb4f 100644
  {
  	int rc;
 diff --git a/include/linux/tee_drv.h b/include/linux/tee_drv.h
-index a2b3dfcee..392855b4a 100644
+index a2b3dfcee0b5..392855b4ac1c 100644
 --- a/include/linux/tee_drv.h
 +++ b/include/linux/tee_drv.h
 @@ -465,4 +465,77 @@ static inline bool tee_param_is_memref(struct tee_param *param)

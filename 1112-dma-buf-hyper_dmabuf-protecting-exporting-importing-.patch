@@ -15,7 +15,7 @@ Signed-off-by: Dongwon Kim <dongwon.kim@intel.com>
  3 files changed, 19 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
-index 107d28e39..1ede172e1 100644
+index 107d28e39e13..1ede172e1ad7 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 @@ -229,6 +229,8 @@ static int hyper_dmabuf_export_remote_ioctl(struct file *filp, void *data)
@@ -52,7 +52,7 @@ index 107d28e39..1ede172e1 100644
  }
  
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
-index 48db3fd8b..ac0508bdd 100644
+index 48db3fd8bb0e..ac0508bdd92f 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
 @@ -148,6 +148,7 @@ static void cmd_process_work(struct work_struct *work)
@@ -113,7 +113,7 @@ index 48db3fd8b..ac0508bdd 100644
  
  	case HYPER_DMABUF_OPS_TO_SOURCE:
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c
-index 3cd3d6c98..03cdedf84 100644
+index 3cd3d6c98c33..03cdedf84e44 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c
 @@ -163,14 +163,17 @@ int hyper_dmabuf_remote_sync(hyper_dmabuf_id_t hid, int ops)

@@ -17,7 +17,7 @@ Tracked-On: PKT-1852
  2 files changed, 2 insertions(+)
 
 diff --git a/drivers/acrn/acrn_hvlog.c b/drivers/acrn/acrn_hvlog.c
-index 65fbcebe0..da04aeb2e 100644
+index 65fbcebe06fb..da04aeb2e829 100644
 --- a/drivers/acrn/acrn_hvlog.c
 +++ b/drivers/acrn/acrn_hvlog.c
 @@ -353,6 +353,7 @@ static int __init acrn_hvlog_init(void)
@@ -29,7 +29,7 @@ index 65fbcebe0..da04aeb2e 100644
  	if (!ret)
  		pcpu_nr = hw_info.cpu_num;
 diff --git a/drivers/acrn/acrn_trace.c b/drivers/acrn/acrn_trace.c
-index 852c8b032..010acb987 100644
+index 852c8b0323a5..010acb9872c4 100644
 --- a/drivers/acrn/acrn_trace.c
 +++ b/drivers/acrn/acrn_trace.c
 @@ -185,6 +185,7 @@ static int __init acrn_trace_init(void)

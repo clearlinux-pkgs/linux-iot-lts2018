@@ -17,7 +17,7 @@ Reviewed-on:
  6 files changed, 12 insertions(+), 12 deletions(-)
 
 diff --git a/drivers/vbs/vbs.c b/drivers/vbs/vbs.c
-index 9d96f45b9..6c364364d 100644
+index 9d96f45b9644..6c364364db3c 100644
 --- a/drivers/vbs/vbs.c
 +++ b/drivers/vbs/vbs.c
 @@ -7,7 +7,7 @@
@@ -39,7 +39,7 @@ index 9d96f45b9..6c364364d 100644
   * Redistribution and use in source and binary forms, with or without
   * modification, are permitted provided that the following conditions
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
-index 2c7118680..cdfed63bb 100644
+index 2c71186801e7..cdfed63bb1ad 100644
 --- a/drivers/vbs/vbs_rng.c
 +++ b/drivers/vbs/vbs_rng.c
 @@ -7,7 +7,7 @@
@@ -61,7 +61,7 @@ index 2c7118680..cdfed63bb 100644
   * Redistribution and use in source and binary forms, with or without
   * modification, are permitted provided that the following conditions
 diff --git a/drivers/vbs/vq.c b/drivers/vbs/vq.c
-index 886f48225..9f7a829c7 100644
+index 886f48225de9..9f7a829c7a67 100644
 --- a/drivers/vbs/vq.c
 +++ b/drivers/vbs/vq.c
 @@ -7,7 +7,7 @@
@@ -83,7 +83,7 @@ index 886f48225..9f7a829c7 100644
   * Redistribution and use in source and binary forms, with or without
   * modification, are permitted provided that the following conditions
 diff --git a/include/linux/vbs/vbs.h b/include/linux/vbs/vbs.h
-index 725f1626d..e4ecba020 100644
+index 725f1626dbc6..e4ecba020b08 100644
 --- a/include/linux/vbs/vbs.h
 +++ b/include/linux/vbs/vbs.h
 @@ -7,7 +7,7 @@
@@ -105,7 +105,7 @@ index 725f1626d..e4ecba020 100644
   * Redistribution and use in source and binary forms, with or without
   * modification, are permitted provided that the following conditions
 diff --git a/include/linux/vbs/vbs_common_if.h b/include/linux/vbs/vbs_common_if.h
-index 91eb4e01d..25d6002c9 100644
+index 91eb4e01d95c..25d6002c92bb 100644
 --- a/include/linux/vbs/vbs_common_if.h
 +++ b/include/linux/vbs/vbs_common_if.h
 @@ -7,7 +7,7 @@
@@ -127,7 +127,7 @@ index 91eb4e01d..25d6002c9 100644
   * Redistribution and use in source and binary forms, with or without
   * modification, are permitted provided that the following conditions
 diff --git a/include/linux/vbs/vq.h b/include/linux/vbs/vq.h
-index 647466567..ca14f8f34 100644
+index 647466567db4..ca14f8f34888 100644
 --- a/include/linux/vbs/vq.h
 +++ b/include/linux/vbs/vq.h
 @@ -7,7 +7,7 @@

@@ -19,7 +19,7 @@ Signed-off-by: Gopal, Puunithaaraj <puunithaaraj.gopal@intel.com>
  4 files changed, 409 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-psys-virt.c b/drivers/media/pci/intel/ipu-psys-virt.c
-index 995f7f09c..af5a822bf 100644
+index 995f7f09c462..af5a822bfe93 100644
 --- a/drivers/media/pci/intel/ipu-psys-virt.c
 +++ b/drivers/media/pci/intel/ipu-psys-virt.c
 @@ -149,10 +149,325 @@ int virt_ipu_psys_unmap_buf(struct ipu_psys_fh *fh,
@@ -350,7 +350,7 @@ index 995f7f09c..af5a822bf 100644
  
  int virt_ipu_psys_dqevent(struct ipu_psys_fh *fh,
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
-index 67602a966..7751f471a 100644
+index 67602a96626f..7751f471af1d 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 @@ -135,6 +135,83 @@ int ipu_query_caps(struct ipu_psys_capability *caps,
@@ -447,7 +447,7 @@ index 67602a966..7751f471a 100644
  	case IPU_IOC_DQEVENT:
  		pr_debug("%s: IPU_IOC_DQEVENT", __func__);
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
-index de6053b29..e906f14b4 100644
+index de6053b293fd..e906f14b42bf 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
 @@ -63,7 +63,15 @@ int process_psys_putbuf(struct ipu4_virtio_req_info *req_info)
@@ -468,7 +468,7 @@ index de6053b29..e906f14b4 100644
  
  int process_psys_dqevent(struct ipu4_virtio_req_info *req_info)
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common-psys.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common-psys.h
-index 737a2bd4c..dbc421a1a 100644
+index 737a2bd4ce0e..dbc421a1a32a 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common-psys.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common-psys.h
 @@ -22,4 +22,10 @@ struct ipu_psys_buffer_wrap {

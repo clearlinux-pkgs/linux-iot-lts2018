@@ -30,7 +30,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  3 files changed, 16 insertions(+), 1 deletion(-)
 
 diff --git a/include/uapi/sound/skl-tplg-interface.h b/include/uapi/sound/skl-tplg-interface.h
-index 89844fb10..a3f0890c7 100644
+index 89844fb10aa5..a3f0890c75bd 100644
 --- a/include/uapi/sound/skl-tplg-interface.h
 +++ b/include/uapi/sound/skl-tplg-interface.h
 @@ -81,7 +81,8 @@ enum skl_module_type {
@@ -44,7 +44,7 @@ index 89844fb10..a3f0890c7 100644
  
  enum skl_core_affinity {
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 6cf06fa82..d0d60d740 100644
+index 6cf06fa8293a..d0d60d740441 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -34,6 +34,9 @@
@@ -89,7 +89,7 @@ index 6cf06fa82..d0d60d740 100644
  		break;
  
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 12639e4bb..f9ac42cdc 100644
+index 12639e4bba76..f9ac42cdc64d 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -167,6 +167,7 @@ struct skl_cpr_pin_fmt {

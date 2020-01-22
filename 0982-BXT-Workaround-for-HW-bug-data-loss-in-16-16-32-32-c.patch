@@ -19,7 +19,7 @@ Signed-off-by: Paweł Harłoziński <pawel.harlozinski@intel.com>
  4 files changed, 45 insertions(+), 23 deletions(-)
 
 diff --git a/include/sound/hdaudio.h b/include/sound/hdaudio.h
-index 5eee13a0c..0d422ab82 100644
+index 5eee13a0c045..0d422ab82701 100644
 --- a/include/sound/hdaudio.h
 +++ b/include/sound/hdaudio.h
 @@ -523,7 +523,8 @@ struct hdac_stream *snd_hdac_stream_assign(struct hdac_bus *bus,
@@ -49,7 +49,7 @@ index 5eee13a0c..0d422ab82 100644
  /* DSP lock helpers */
  #define snd_hdac_dsp_lock_init(dev)	mutex_init(&(dev)->dsp_mutex)
 diff --git a/include/sound/hdaudio_ext.h b/include/sound/hdaudio_ext.h
-index 5ebf57fa7..0cbf44b81 100644
+index 5ebf57fa778d..0cbf44b819e8 100644
 --- a/include/sound/hdaudio_ext.h
 +++ b/include/sound/hdaudio_ext.h
 @@ -137,16 +137,6 @@ void snd_hdac_ext_link_clear_stream_id(struct hdac_ext_link *link,
@@ -70,7 +70,7 @@ index 5ebf57fa7..0cbf44b81 100644
  
  /* ops common to all codec drivers */
 diff --git a/sound/hda/ext/hdac_ext_stream.c b/sound/hda/ext/hdac_ext_stream.c
-index fa7b80fcb..85ff1536b 100644
+index fa7b80fcba9d..85ff1536ba44 100644
 --- a/sound/hda/ext/hdac_ext_stream.c
 +++ b/sound/hda/ext/hdac_ext_stream.c
 @@ -126,19 +126,8 @@ void snd_hdac_ext_stream_decouple(struct hdac_bus *bus,
@@ -95,7 +95,7 @@ index fa7b80fcb..85ff1536b 100644
  EXPORT_SYMBOL_GPL(snd_hdac_ext_stream_decouple);
  
 diff --git a/sound/hda/hdac_stream.c b/sound/hda/hdac_stream.c
-index 67d672192..1b83a88ae 100644
+index 67d672192606..1b83a88ae4e5 100644
 --- a/sound/hda/hdac_stream.c
 +++ b/sound/hda/hdac_stream.c
 @@ -178,6 +178,33 @@ void snd_hdac_stream_reset(struct hdac_stream *azx_dev)

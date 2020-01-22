@@ -19,7 +19,7 @@ Acked-by: Eddie Dong <eddie.dong@intel.com>
  5 files changed, 17 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 4d76905e6..0eb31d8d8 100644
+index 4d76905e616d..0eb31d8d8535 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -418,6 +418,15 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -39,7 +39,7 @@ index 4d76905e6..0eb31d8d8 100644
  		struct acrn_msi_entry msi;
  
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 666f9aeb8..9a761022b 100644
+index 666f9aeb87ad..9a761022be08 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -142,6 +142,11 @@ inline long hcall_pulse_irqline(unsigned long vmid, unsigned long irq)
@@ -55,7 +55,7 @@ index 666f9aeb8..9a761022b 100644
  {
  	return acrn_hypercall2(HC_INJECT_MSI, vmid, msi);
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 2cd6172e8..6b7bfb421 100644
+index 2cd6172e8e1d..6b7bfb421301 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -86,6 +86,7 @@
@@ -67,7 +67,7 @@ index 2cd6172e8..6b7bfb421 100644
  /* DM ioreq management */
  #define HC_ID_IOREQ_BASE            0x30UL
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 062196ab1..7f8b6bcec 100644
+index 062196ab1194..7f8b6bcecd09 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -158,6 +158,7 @@ inline long hcall_notify_req_finish(unsigned long vmid, unsigned long vcpu);
@@ -79,7 +79,7 @@ index 062196ab1..7f8b6bcec 100644
  inline long hcall_assign_ptdev(unsigned long vmid, unsigned long bdf);
  inline long hcall_deassign_ptdev(unsigned long vmid, unsigned long bdf);
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 2007d58fa..fb7b154db 100644
+index 2007d58faa3f..fb7b154dbd6b 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -81,6 +81,7 @@

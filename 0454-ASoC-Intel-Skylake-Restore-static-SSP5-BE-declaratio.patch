@@ -18,7 +18,7 @@ Signed-off-by: Cezary Rojewski <cezary.rojewski@intel.com>
  1 file changed, 23 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 4b78132ea..080a5b626 100644
+index 4b78132eacfa..080a5b626514 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1187,6 +1187,29 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {

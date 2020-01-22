@@ -25,7 +25,7 @@ Reviewed-by: Slawinski, AmadeuszX <amadeuszx.slawinski@intel.com>
  2 files changed, 1 insertion(+), 69 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 0553c096e..e58857876 100644
+index 0553c096e847..e58857876416 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -421,55 +421,6 @@ static void skl_tplg_alloc_pipe_mem(struct skl *skl,
@@ -181,7 +181,7 @@ index 0553c096e..e58857876 100644
  
  	skl->tplg = fw;
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 7915ef02a..bafc0686c 100644
+index 7915ef02a551..bafc0686c525 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -68,9 +68,7 @@ static inline void skl_virt_device_unregister(struct skl *skl)

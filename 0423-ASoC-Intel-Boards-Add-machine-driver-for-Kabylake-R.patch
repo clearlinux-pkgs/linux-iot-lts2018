@@ -19,7 +19,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  create mode 100644 sound/soc/intel/boards/kblr_rt298.c
 
 diff --git a/sound/soc/intel/boards/Kconfig b/sound/soc/intel/boards/Kconfig
-index 45b1d5a03..44eac7c32 100644
+index 45b1d5a03ed0..44eac7c32e9b 100644
 --- a/sound/soc/intel/boards/Kconfig
 +++ b/sound/soc/intel/boards/Kconfig
 @@ -369,6 +369,19 @@ config SND_SOC_INTEL_BXT_ULL_MACH
@@ -43,7 +43,7 @@ index 45b1d5a03..44eac7c32 100644
  
  endif ## SND_SOC_INTEL_MACH
 diff --git a/sound/soc/intel/boards/Makefile b/sound/soc/intel/boards/Makefile
-index 9a77052f0..f255f7ab0 100644
+index 9a77052f0469..f255f7ab0960 100644
 --- a/sound/soc/intel/boards/Makefile
 +++ b/sound/soc/intel/boards/Makefile
 @@ -29,6 +29,7 @@ snd-soc-cnl_cs42l42-objs := cnl_cs42l42.o
@@ -61,7 +61,7 @@ index 9a77052f0..f255f7ab0 100644
 +obj-$(CONFIG_SND_SOC_INTEL_KBLR_RT298_MACH) += snd-soc-kblr_rt298.o
 diff --git a/sound/soc/intel/boards/kblr_rt298.c b/sound/soc/intel/boards/kblr_rt298.c
 new file mode 100644
-index 000000000..1007e0239
+index 000000000000..1007e0239bb9
 --- /dev/null
 +++ b/sound/soc/intel/boards/kblr_rt298.c
 @@ -0,0 +1,549 @@

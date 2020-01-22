@@ -17,7 +17,7 @@ Reviewed-by: Uzieblo, Olgierd <olgierd.uzieblo@intel.com>
  1 file changed, 9 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index fba0faeeb..f24d75929 100644
+index fba0faeeb292..f24d75929177 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1158,15 +1158,6 @@ static struct skl_machine_pdata cnl_pdata = {

@@ -13,7 +13,7 @@ Reviewed-by: Jason Chen CJ <jason.cj.chen@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
-index d91a9eb3b..fe9e4e233 100644
+index d91a9eb3bed8..fe9e4e2339a1 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
 @@ -217,7 +217,7 @@ static void cmd_process_work(struct work_struct *work)

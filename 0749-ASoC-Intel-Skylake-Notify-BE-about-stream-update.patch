@@ -20,7 +20,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index e192fb70f..deac8de7e 100644
+index e192fb70fa8f..deac8de7e125 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -238,8 +238,10 @@ static void skl_dum_set(struct hdac_bus *bus)

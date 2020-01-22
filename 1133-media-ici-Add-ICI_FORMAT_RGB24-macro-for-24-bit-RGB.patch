@@ -14,7 +14,7 @@ Signed-off-by: Puunithaaraj Gopal <puunithaaraj.gopal@intel.com>
  2 files changed, 20 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 3187cae74..d8c403ee6 100644
+index 3187cae74d75..d8c403ee69b1 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -74,23 +74,24 @@ const struct ici_isys_pixelformat ici_isys_pfmts_be_soc[] = {
@@ -60,7 +60,7 @@ index 3187cae74..d8c403ee6 100644
  
  struct pipeline_format_data {
 diff --git a/include/uapi/linux/ici.h b/include/uapi/linux/ici.h
-index 2855ec222..3560dc253 100644
+index 2855ec22290c..3560dc253fd9 100644
 --- a/include/uapi/linux/ici.h
 +++ b/include/uapi/linux/ici.h
 @@ -26,6 +26,7 @@

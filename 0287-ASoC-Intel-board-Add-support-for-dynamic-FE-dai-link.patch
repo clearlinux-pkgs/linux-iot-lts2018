@@ -23,7 +23,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 10 insertions(+), 64 deletions(-)
 
 diff --git a/sound/soc/intel/boards/cnl_rt274.c b/sound/soc/intel/boards/cnl_rt274.c
-index eebde84e7..21b40b895 100644
+index eebde84e7700..21b40b895629 100644
 --- a/sound/soc/intel/boards/cnl_rt274.c
 +++ b/sound/soc/intel/boards/cnl_rt274.c
 @@ -124,30 +124,6 @@ static int cnl_rt274_init(struct snd_soc_pcm_runtime *runtime)

@@ -13,7 +13,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  2 files changed, 14 insertions(+), 9 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 6e485d1ba..11fd96906 100644
+index 6e485d1ba2a4..11fd96906c04 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -397,7 +397,7 @@ static int file_alloc_security(struct file *file)
@@ -98,7 +98,7 @@ index 6e485d1ba..11fd96906 100644
  		rc = avc_has_perm(&selinux_state,
  				  sid, fsec->sid, SECCLASS_FD, FD__USE, &ad);
 diff --git a/security/selinux/include/objsec.h b/security/selinux/include/objsec.h
-index db1c7000a..2586fbc7e 100644
+index db1c7000ada3..2586fbc7e38c 100644
 --- a/security/selinux/include/objsec.h
 +++ b/security/selinux/include/objsec.h
 @@ -167,4 +167,9 @@ static inline struct task_security_struct *selinux_cred(const struct cred *cred)

@@ -16,7 +16,7 @@ Reviewed-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  1 file changed, 20 insertions(+), 12 deletions(-)
 
 diff --git a/sound/soc/codecs/tdf8532.c b/sound/soc/codecs/tdf8532.c
-index 02e63f955..da820c5dd 100644
+index 02e63f95512b..da820c5dd54c 100644
 --- a/sound/soc/codecs/tdf8532.c
 +++ b/sound/soc/codecs/tdf8532.c
 @@ -21,8 +21,11 @@

@@ -17,7 +17,7 @@ Signed-off-by: Aviad Nissel <aviad.nissel@intel.com>
  4 files changed, 267 insertions(+), 96 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index d46960fb5..763e44374 100644
+index d46960fb50dd..763e443742c5 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -1662,31 +1662,53 @@ int mei_cl_read_start(struct mei_cl *cl, size_t length, const struct file *fp)
@@ -323,7 +323,7 @@ index d46960fb5..763e44374 100644
  }
  
 diff --git a/drivers/misc/mei/hw.h b/drivers/misc/mei/hw.h
-index 90d118ae8..64f8a934c 100644
+index 90d118ae8434..64f8a934cb7d 100644
 --- a/drivers/misc/mei/hw.h
 +++ b/drivers/misc/mei/hw.h
 @@ -1,7 +1,6 @@
@@ -460,7 +460,7 @@ index 90d118ae8..64f8a934c 100644
   */
  struct hbm_notification_response {
 diff --git a/drivers/misc/mei/interrupt.c b/drivers/misc/mei/interrupt.c
-index 6531e036b..750de6d02 100644
+index 6531e036bb00..750de6d02819 100644
 --- a/drivers/misc/mei/interrupt.c
 +++ b/drivers/misc/mei/interrupt.c
 @@ -72,16 +72,21 @@ static inline int mei_cl_hbm_equal(struct mei_cl *cl,
@@ -683,7 +683,7 @@ index 6531e036b..750de6d02 100644
  	if (*slots == -EOVERFLOW) {
  		/* overflow - reset */
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 07147c31b..237e15c70 100644
+index 07147c31b102..237e15c70260 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -433,6 +433,7 @@ struct mei_fw_version {

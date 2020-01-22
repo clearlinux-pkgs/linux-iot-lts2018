@@ -19,7 +19,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  2 files changed, 32 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index d34ff3ffe..b83a3076a 100644
+index d34ff3ffeced..b83a3076a1e3 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -284,7 +284,8 @@ enum skl_ipc_module_msg {
@@ -67,7 +67,7 @@ index d34ff3ffe..b83a3076a 100644
  		struct skl_ipc_init_instance_msg *msg, void *param_data)
  {
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index a8de8cfac..eb030dfb8 100644
+index a8de8cfac6ee..eb030dfb88ca 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -194,6 +194,9 @@ int skl_ipc_restore_pipeline(struct sst_generic_ipc *ipc, u8 instance_id);

@@ -20,7 +20,7 @@ Reviewed-on:
  create mode 100644 sound/soc/codecs/svfpga.h
 
 diff --git a/sound/soc/codecs/Kconfig b/sound/soc/codecs/Kconfig
-index efb095dbc..461f41268 100644
+index efb095dbcd71..461f41268b68 100644
 --- a/sound/soc/codecs/Kconfig
 +++ b/sound/soc/codecs/Kconfig
 @@ -234,6 +234,7 @@ config SND_SOC_ALL_CODECS
@@ -55,7 +55,7 @@ index efb095dbc..461f41268 100644
  	tristate
  
 diff --git a/sound/soc/codecs/Makefile b/sound/soc/codecs/Makefile
-index 7ae7c85e8..f37fca3b9 100644
+index 7ae7c85e8219..f37fca3b9960 100644
 --- a/sound/soc/codecs/Makefile
 +++ b/sound/soc/codecs/Makefile
 @@ -46,6 +46,9 @@ snd-soc-cs35l33-objs := cs35l33.o
@@ -80,7 +80,7 @@ index 7ae7c85e8..f37fca3b9 100644
  obj-$(CONFIG_SND_SOC_CS42L52)	+= snd-soc-cs42l52.o
 diff --git a/sound/soc/codecs/svfpga-i2c.c b/sound/soc/codecs/svfpga-i2c.c
 new file mode 100644
-index 000000000..07dc09f9e
+index 000000000000..07dc09f9ec5a
 --- /dev/null
 +++ b/sound/soc/codecs/svfpga-i2c.c
 @@ -0,0 +1,90 @@
@@ -176,7 +176,7 @@ index 000000000..07dc09f9e
 +
 diff --git a/sound/soc/codecs/svfpga-sdw.c b/sound/soc/codecs/svfpga-sdw.c
 new file mode 100644
-index 000000000..1fa06ef82
+index 000000000000..1fa06ef82ab2
 --- /dev/null
 +++ b/sound/soc/codecs/svfpga-sdw.c
 @@ -0,0 +1,142 @@
@@ -324,7 +324,7 @@ index 000000000..1fa06ef82
 +MODULE_LICENSE("GPL");
 diff --git a/sound/soc/codecs/svfpga.c b/sound/soc/codecs/svfpga.c
 new file mode 100644
-index 000000000..49904dd02
+index 000000000000..49904dd029c2
 --- /dev/null
 +++ b/sound/soc/codecs/svfpga.c
 @@ -0,0 +1,485 @@
@@ -815,7 +815,7 @@ index 000000000..49904dd02
 +MODULE_LICENSE("GPL");
 diff --git a/sound/soc/codecs/svfpga.h b/sound/soc/codecs/svfpga.h
 new file mode 100644
-index 000000000..e9757e565
+index 000000000000..e9757e565943
 --- /dev/null
 +++ b/sound/soc/codecs/svfpga.h
 @@ -0,0 +1,398 @@

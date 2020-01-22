@@ -10,7 +10,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  1 file changed, 12 insertions(+), 9 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 01fbbe393..b598561ab 100644
+index 01fbbe3933bf..b598561abaee 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -426,14 +426,16 @@ static void mei_io_list_flush_cl(struct list_head *head,

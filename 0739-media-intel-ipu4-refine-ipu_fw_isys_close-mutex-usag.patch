@@ -17,7 +17,7 @@ Signed-off-by: Hui Xia <hui.xia@intel.com>
  2 files changed, 6 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-css/libintel-ipu4.c b/drivers/media/pci/intel/ipu4/ipu4-css/libintel-ipu4.c
-index a7128898e..59c9b5b85 100644
+index a7128898e449..59c9b5b858e0 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-css/libintel-ipu4.c
 +++ b/drivers/media/pci/intel/ipu4/ipu4-css/libintel-ipu4.c
 @@ -56,9 +56,11 @@ int ipu_fw_isys_close(struct ipu_isys *isys)
@@ -34,7 +34,7 @@ index a7128898e..59c9b5b85 100644
  		dev_err(dev, "Device close failure: %d\n", rval);
  
 diff --git a/drivers/media/pci/intel/ipu4/ipu4p-css/libintel-ipu4p.c b/drivers/media/pci/intel/ipu4/ipu4p-css/libintel-ipu4p.c
-index cb6fd0499..3704754be 100644
+index cb6fd0499c5c..3704754be71c 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4p-css/libintel-ipu4p.c
 +++ b/drivers/media/pci/intel/ipu4/ipu4p-css/libintel-ipu4p.c
 @@ -56,9 +56,11 @@ int ipu_fw_isys_close(struct ipu_isys *isys)

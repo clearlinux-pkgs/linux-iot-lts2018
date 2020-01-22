@@ -23,7 +23,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  2 files changed, 81 insertions(+)
 
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index 9dd0b9414..ea7604b19 100644
+index 9dd0b9414d3a..ea7604b19aaf 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -362,3 +362,82 @@ int vhm_dev_mmap(struct file *file, struct vm_area_struct *vma)
@@ -110,7 +110,7 @@ index 9dd0b9414..ea7604b19 100644
 +}
 +EXPORT_SYMBOL(unmap_guest_phys);
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 325f2b202..e701254bc 100644
+index 325f2b2026e8..e701254bc249 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -70,6 +70,8 @@

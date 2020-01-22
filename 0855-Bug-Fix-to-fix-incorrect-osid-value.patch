@@ -11,7 +11,7 @@ Signed-off-by: Manisha Chinthapally <manisha.chinthapally@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h b/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
-index aeee9516b..8346ea72d 100644
+index aeee9516bef2..8346ea72d587 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
 @@ -511,7 +511,7 @@ extern "C" {

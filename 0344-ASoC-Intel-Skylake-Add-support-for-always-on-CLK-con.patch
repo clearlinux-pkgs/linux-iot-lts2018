@@ -30,7 +30,7 @@ Signed-off-by: Kareem,Shaik <kareem.m.shaik@intel.com>
  6 files changed, 123 insertions(+), 8 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index b52f1c08d..1fd9a3afe 100644
+index b52f1c08d0a5..1fd9a3afe9a9 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -1169,6 +1169,10 @@ int skl_init_dsp(struct skl *skl)
@@ -151,7 +151,7 @@ index b52f1c08d..1fd9a3afe 100644
  			struct skl_module_cfg *mconfig,
  			struct skl_audio_data_format *out_fmt)
 diff --git a/sound/soc/intel/skylake/skl-nhlt.c b/sound/soc/intel/skylake/skl-nhlt.c
-index 7063e8669..b9bc3d12d 100644
+index 7063e8669763..b9bc3d12d0c0 100644
 --- a/sound/soc/intel/skylake/skl-nhlt.c
 +++ b/sound/soc/intel/skylake/skl-nhlt.c
 @@ -149,6 +149,26 @@ static bool skl_check_ep_match(struct device *dev, struct nhlt_endpoint *epnt,
@@ -182,7 +182,7 @@ index 7063e8669..b9bc3d12d 100644
  *skl_get_ep_blob(struct skl *skl, u32 instance, u8 link_type,
  			u8 s_fmt, u8 num_ch, u32 s_rate,
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 32c97d4b6..9424a763c 100644
+index 32c97d4b696d..9424a763c62c 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1854,6 +1854,10 @@ static int skl_platform_soc_probe(struct snd_soc_component *component)
@@ -197,7 +197,7 @@ index 32c97d4b6..9424a763c 100644
  		skl->skl_sst->update_d0i3c = skl_update_d0i3c;
  		skl_dsp_enable_notification(skl->skl_sst, false);
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 87f204b77..351897bb3 100644
+index 87f204b77415..351897bb3967 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -2548,18 +2548,13 @@ static int skl_tplg_be_fill_pipe_params(struct snd_soc_dai *dai,
@@ -223,7 +223,7 @@ index 87f204b77..351897bb3 100644
  		mconfig->formats_config.caps_size = cfg->size;
  		mconfig->formats_config.caps = (u32 *) &cfg->caps;
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 07d041fc8..8dbe73ee3 100644
+index 07d041fc8b72..8dbe73ee3d59 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -530,6 +530,7 @@ struct fw_ipc_data {
@@ -235,7 +235,7 @@ index 07d041fc8..8dbe73ee3 100644
  			u32 caps_size, u32 node_id);
  void skl_tplg_set_be_dmic_config(struct snd_soc_dai *dai,
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 51cc193c3..318b3c54c 100644
+index 51cc193c3353..318b3c54c44e 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -172,6 +172,9 @@ void skl_nhlt_free(struct nhlt_acpi_table *addr);

@@ -20,7 +20,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  1 file changed, 15 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index bc8d3afcf..c01875a2a 100644
+index bc8d3afcf7d1..c01875a2a61d 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -2632,7 +2632,9 @@ int skl_create_pipeline(struct skl_sst *ctx, struct skl_pipe *pipe)

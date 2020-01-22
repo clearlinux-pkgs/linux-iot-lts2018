@@ -20,7 +20,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  6 files changed, 100 insertions(+), 15 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 1fe9426ce..5d15501af 100644
+index 1fe9426ce48b..5d15501af313 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -461,7 +461,7 @@ struct mei_cl_cb *mei_cl_alloc_cb(struct mei_cl *cl, size_t length,
@@ -33,7 +33,7 @@ index 1fe9426ce..5d15501af 100644
  		mei_io_cb_free(cb);
  		return NULL;
 diff --git a/drivers/misc/mei/dma-ring.c b/drivers/misc/mei/dma-ring.c
-index 709013195..2d2ce6f4e 100644
+index 70901319534e..2d2ce6f4ef3b 100644
 --- a/drivers/misc/mei/dma-ring.c
 +++ b/drivers/misc/mei/dma-ring.c
 @@ -122,3 +122,66 @@ void mei_dma_ring_reset(struct mei_device *dev)
@@ -104,7 +104,7 @@ index 709013195..2d2ce6f4e 100644
 +	WRITE_ONCE(ctrl->dbuf_rd_idx, ctrl->dbuf_rd_idx + slots);
 +}
 diff --git a/drivers/misc/mei/hw.h b/drivers/misc/mei/hw.h
-index 4f09bbcdb..acbccb8db 100644
+index 4f09bbcdbc2a..acbccb8dba34 100644
 --- a/drivers/misc/mei/hw.h
 +++ b/drivers/misc/mei/hw.h
 @@ -206,6 +206,7 @@ enum  mei_cl_disconnect_status {
@@ -128,7 +128,7 @@ index 4f09bbcdb..acbccb8db 100644
  	u8 hbm_cmd;
  	u8 data[0];
 diff --git a/drivers/misc/mei/init.c b/drivers/misc/mei/init.c
-index 4888ebc07..eb026e2a0 100644
+index 4888ebc076b7..eb026e2a0537 100644
 --- a/drivers/misc/mei/init.c
 +++ b/drivers/misc/mei/init.c
 @@ -151,7 +151,7 @@ int mei_reset(struct mei_device *dev)
@@ -141,7 +141,7 @@ index 4888ebc07..eb026e2a0 100644
  	if (ret) {
  		dev_err(dev->dev, "hw_reset failed ret = %d\n", ret);
 diff --git a/drivers/misc/mei/interrupt.c b/drivers/misc/mei/interrupt.c
-index 5a661cbdf..055c2d89b 100644
+index 5a661cbdf2ae..055c2d89b310 100644
 --- a/drivers/misc/mei/interrupt.c
 +++ b/drivers/misc/mei/interrupt.c
 @@ -75,6 +75,8 @@ static inline int mei_cl_hbm_equal(struct mei_cl *cl,
@@ -267,7 +267,7 @@ index 5a661cbdf..055c2d89b 100644
  		/* overflow - reset */
  		dev_err(dev->dev, "resetting due to slots overflow.\n");
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 5cb8a23c9..2b026ce1c 100644
+index 5cb8a23c92be..2b026ce1c8de 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -499,7 +499,7 @@ struct mei_device {

@@ -17,7 +17,7 @@ Tracked-On: PKT-1635
  1 file changed, 10 insertions(+), 9 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c b/sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c
-index 225b2ab4a..647fbc0ee 100644
+index 225b2ab4a12d..647fbc0eeb5e 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c
 @@ -66,7 +66,7 @@ static int handle_kick(int client_id, unsigned long *ioreqs_map)

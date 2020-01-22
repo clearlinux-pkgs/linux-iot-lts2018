@@ -11,7 +11,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  1 file changed, 6 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
-index 3b5eae651..aff563bea 100644
+index 3b5eae651026..aff563bea39d 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
 @@ -20,7 +20,12 @@

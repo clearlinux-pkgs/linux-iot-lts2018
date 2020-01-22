@@ -18,7 +18,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  5 files changed, 39 insertions(+), 14 deletions(-)
 
 diff --git a/drivers/misc/mei/bus.c b/drivers/misc/mei/bus.c
-index ae915a516..e4c437318 100644
+index ae915a516659..e4c437318cd6 100644
 --- a/drivers/misc/mei/bus.c
 +++ b/drivers/misc/mei/bus.c
 @@ -161,7 +161,7 @@ ssize_t __mei_cl_recv(struct mei_cl *cl, u8 *buf, size_t length,
@@ -49,7 +49,7 @@ index ae915a516..e4c437318 100644
  	mutex_unlock(&bus->device_lock);
  
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 42f2e3021..24dc7aee8 100644
+index 42f2e30211ab..24dc7aee8c9d 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -511,15 +511,19 @@ struct mei_cl_cb *mei_cl_enqueue_ctrl_wr_cb(struct mei_cl *cl, size_t length,
@@ -105,7 +105,7 @@ index 42f2e3021..24dc7aee8 100644
  		    !WARN_ON(!cl->rx_flow_ctrl_creds))
  			cl->rx_flow_ctrl_creds--;
 diff --git a/drivers/misc/mei/client.h b/drivers/misc/mei/client.h
-index 64e318f58..13223b549 100644
+index 64e318f589b4..13223b549165 100644
 --- a/drivers/misc/mei/client.h
 +++ b/drivers/misc/mei/client.h
 @@ -95,8 +95,24 @@ int mei_cl_unlink(struct mei_cl *cl);
@@ -136,7 +136,7 @@ index 64e318f58..13223b549 100644
  				  enum mei_cb_file_ops type,
  				  const struct file *fp);
 diff --git a/drivers/misc/mei/main.c b/drivers/misc/mei/main.c
-index 87281b369..6227b401c 100644
+index 87281b3695e6..6227b401ce3e 100644
 --- a/drivers/misc/mei/main.c
 +++ b/drivers/misc/mei/main.c
 @@ -181,7 +181,7 @@ static ssize_t mei_read(struct file *file, char __user *ubuf,
@@ -167,7 +167,7 @@ index 87281b369..6227b401c 100644
  		else
  			mei_cl_read_start(cl, mei_cl_mtu(cl), file);
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 6888fe763..0467d0529 100644
+index 6888fe763376..0467d0529667 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -227,6 +227,7 @@ struct mei_cl_cb {

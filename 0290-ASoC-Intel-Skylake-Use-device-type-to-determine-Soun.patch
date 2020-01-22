@@ -20,7 +20,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.c b/sound/soc/intel/skylake/skl-sdw-pcm.c
-index 2c5ba970e..6b8c4dba5 100644
+index 2c5ba970e34c..6b8c4dba5b01 100644
 --- a/sound/soc/intel/skylake/skl-sdw-pcm.c
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.c
 @@ -90,9 +90,10 @@ int cnl_sdw_startup(struct snd_pcm_substream *substream,

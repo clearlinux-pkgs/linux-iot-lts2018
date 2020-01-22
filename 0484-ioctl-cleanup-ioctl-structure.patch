@@ -17,7 +17,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  1 file changed, 13 insertions(+), 17 deletions(-)
 
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index e157d6a86..60bfb299e 100644
+index e157d6a86a66..60bfb299e040 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -60,7 +60,7 @@

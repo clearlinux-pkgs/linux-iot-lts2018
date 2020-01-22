@@ -26,7 +26,7 @@ Signed-off-by: Puunithaaraj Gopal <puunithaaraj.gopal@intel.com>
  6 files changed, 98 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-csi2.c b/drivers/media/pci/intel/ici/ici-isys-csi2.c
-index 22cbc4ce1..d27119a9c 100644
+index 22cbc4ce10fd..d27119a9c5ef 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-csi2.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-csi2.c
 @@ -248,9 +248,27 @@ static void ici_isys_csi2_sof_event(struct ici_isys_csi2
@@ -58,7 +58,7 @@ index 22cbc4ce1..d27119a9c 100644
  }
  
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index 1dc8899e5..3d2e5c96e 100644
+index 1dc8899e5e7b..3d2e5c96e184 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -22,6 +22,49 @@
@@ -147,7 +147,7 @@ index 1dc8899e5..3d2e5c96e 100644
  	 * For interlaced buffers, the notification to user space
  	 * is postponed to capture_done event since the field
 diff --git a/drivers/media/pci/intel/ici/ici-isys-pipeline.h b/drivers/media/pci/intel/ici/ici-isys-pipeline.h
-index 8004d8df0..fa3da8dd4 100644
+index 8004d8df0c06..fa3da8dd42d4 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-pipeline.h
 +++ b/drivers/media/pci/intel/ici/ici-isys-pipeline.h
 @@ -40,6 +40,9 @@ struct ici_output_pin_data {
@@ -161,7 +161,7 @@ index 8004d8df0..fa3da8dd4 100644
  	int stream_handle;	/* stream handle for CSS API */
  	unsigned int nr_output_pins;	/* How many firmware pins? */
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 1241dfaee..ebcc72972 100644
+index 1241dfaee553..ebcc72972fd0 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -882,6 +882,9 @@ static int ici_isys_stream_on(struct file *file, void *fh)
@@ -175,7 +175,7 @@ index 1241dfaee..ebcc72972 100644
  	ip->csi2_be = NULL;
  	ip->asd_source = NULL;
 diff --git a/drivers/media/pci/intel/ici/ici-isys.c b/drivers/media/pci/intel/ici/ici-isys.c
-index 500491ee0..3301c71f2 100644
+index 500491ee038f..3301c71f20e2 100644
 --- a/drivers/media/pci/intel/ici/ici-isys.c
 +++ b/drivers/media/pci/intel/ici/ici-isys.c
 @@ -1254,6 +1254,16 @@ static int isys_isr_one_ici(struct ipu_bus_device *adev)
@@ -196,7 +196,7 @@ index 500491ee0..3301c71f2 100644
  	case IA_CSS_ISYS_RESP_TYPE_FRAME_EOF:
  		break;
 diff --git a/drivers/media/pci/intel/ici/ici-isys.h b/drivers/media/pci/intel/ici/ici-isys.h
-index db46d7e69..a8fe61a08 100644
+index db46d7e6935a..a8fe61a08797 100644
 --- a/drivers/media/pci/intel/ici/ici-isys.h
 +++ b/drivers/media/pci/intel/ici/ici-isys.h
 @@ -107,7 +107,6 @@ struct ici_isys {

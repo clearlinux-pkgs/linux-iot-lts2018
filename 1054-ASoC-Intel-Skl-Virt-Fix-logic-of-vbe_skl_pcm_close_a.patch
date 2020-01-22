@@ -16,7 +16,7 @@ Tested-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index faee11b06..7709299f8 100644
+index faee11b064d8..7709299f8078 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -601,12 +601,12 @@ static int vbe_skl_pcm_prepare(struct skl *sdev, int vm_id,

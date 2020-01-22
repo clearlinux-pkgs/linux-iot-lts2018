@@ -13,7 +13,7 @@ Subject: [PATCH] test configs use for clean and android bare metal BAT testing
 
 diff --git a/arch/x86/configs/android_test_defconfig b/arch/x86/configs/android_test_defconfig
 new file mode 100644
-index 000000000..82ef1999e
+index 000000000000..82ef1999e2a7
 --- /dev/null
 +++ b/arch/x86/configs/android_test_defconfig
 @@ -0,0 +1,6285 @@
@@ -6304,7 +6304,7 @@ index 000000000..82ef1999e
 +# CONFIG_UNWINDER_GUESS is not set
 diff --git a/arch/x86/configs/test_defconfig b/arch/x86/configs/test_defconfig
 new file mode 100644
-index 000000000..8874941c4
+index 000000000000..8874941c4240
 --- /dev/null
 +++ b/arch/x86/configs/test_defconfig
 @@ -0,0 +1,6498 @@

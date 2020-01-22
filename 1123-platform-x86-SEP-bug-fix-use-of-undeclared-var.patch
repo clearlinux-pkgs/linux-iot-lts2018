@@ -11,7 +11,7 @@ Signed-off-by: Manisha Chinthapally <manisha.chinthapally@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/platform/x86/sepdk/sep/cpumon.c b/drivers/platform/x86/sepdk/sep/cpumon.c
-index ac8ade14f..0547894da 100755
+index ac8ade14f106..0547894daf4c 100755
 --- a/drivers/platform/x86/sepdk/sep/cpumon.c
 +++ b/drivers/platform/x86/sepdk/sep/cpumon.c
 @@ -206,7 +206,7 @@ DRV_BOOL CPUMON_is_Offline_Allowed(void)

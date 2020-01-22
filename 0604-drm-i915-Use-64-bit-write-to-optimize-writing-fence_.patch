@@ -21,7 +21,7 @@ Reviewed-by:   He Min <min.he@intel.com>
  1 file changed, 12 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem_fence_reg.c b/drivers/gpu/drm/i915/i915_gem_fence_reg.c
-index d548ac05c..317e376cc 100644
+index d548ac05ccd7..317e376cc2da 100644
 --- a/drivers/gpu/drm/i915/i915_gem_fence_reg.c
 +++ b/drivers/gpu/drm/i915/i915_gem_fence_reg.c
 @@ -63,6 +63,7 @@ static void i965_write_fence_reg(struct drm_i915_fence_reg *fence,

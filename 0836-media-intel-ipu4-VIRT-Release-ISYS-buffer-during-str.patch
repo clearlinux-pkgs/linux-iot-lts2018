@@ -20,7 +20,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  4 files changed, 127 insertions(+), 24 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index e38ba9939..6c2b60841 100644
+index e38ba99392aa..6c2b608415bf 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -740,11 +740,12 @@ void ici_isys_frame_buf_stream_cancel(struct
@@ -64,7 +64,7 @@ index e38ba9939..6c2b60841 100644
  		spin_unlock_irqrestore(&buf_list->short_packet_queue_lock, flags);
  		unmap_buf(buf);
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index e45aa537c..65f2c54c5 100644
+index e45aa537c16b..65f2c54c529b 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -930,8 +930,8 @@ static int ici_isys_stream_on(struct file *file, void *fh)
@@ -91,7 +91,7 @@ index e45aa537c..65f2c54c5 100644
  	mutex_lock(&as->isys->mutex);
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
-index 34da94b81..5b4bac23f 100644
+index 34da94b81a60..5b4bac23f089 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 @@ -695,6 +695,8 @@ static int virt_stream_fop_release(struct inode *inode, struct file *file)
@@ -104,7 +104,7 @@ index 34da94b81..5b4bac23f 100644
  }
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
-index ddbb8a32c..81e28262f 100644
+index ddbb8a32c6cd..81e28262f266 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 @@ -53,13 +53,25 @@ int process_pipeline_close(struct ipu4_virtio_req_info *req_info)

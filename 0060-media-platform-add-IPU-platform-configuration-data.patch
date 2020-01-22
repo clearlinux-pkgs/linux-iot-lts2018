@@ -24,7 +24,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  create mode 100644 drivers/media/platform/intel/ipu4p-icl-rvp-pdata.c
 
 diff --git a/drivers/media/platform/Kconfig b/drivers/media/platform/Kconfig
-index 54fe90acb..76b671790 100644
+index 54fe90acb5b2..76b67179062d 100644
 --- a/drivers/media/platform/Kconfig
 +++ b/drivers/media/platform/Kconfig
 @@ -137,6 +137,7 @@ source "drivers/media/platform/am437x/Kconfig"
@@ -36,7 +36,7 @@ index 54fe90acb..76b671790 100644
  config VIDEO_TI_CAL
  	tristate "TI CAL (Camera Adaptation Layer) driver"
 diff --git a/drivers/media/platform/Makefile b/drivers/media/platform/Makefile
-index 41322ab65..f8c6a9c14 100644
+index 41322ab65802..f8c6a9c14add 100644
 --- a/drivers/media/platform/Makefile
 +++ b/drivers/media/platform/Makefile
 @@ -96,3 +96,4 @@ obj-$(CONFIG_VIDEO_QCOM_VENUS)		+= qcom/venus/
@@ -46,7 +46,7 @@ index 41322ab65..f8c6a9c14 100644
 +obj-y += intel/
 diff --git a/drivers/media/platform/intel/Kconfig b/drivers/media/platform/intel/Kconfig
 new file mode 100644
-index 000000000..7dc176af6
+index 000000000000..7dc176af66f2
 --- /dev/null
 +++ b/drivers/media/platform/intel/Kconfig
 @@ -0,0 +1,95 @@
@@ -147,7 +147,7 @@ index 000000000..7dc176af6
 +	"ox03a10 camera sensor"
 diff --git a/drivers/media/platform/intel/Makefile b/drivers/media/platform/intel/Makefile
 new file mode 100644
-index 000000000..b6d4f786f
+index 000000000000..b6d4f786f20b
 --- /dev/null
 +++ b/drivers/media/platform/intel/Makefile
 @@ -0,0 +1,21 @@
@@ -174,7 +174,7 @@ index 000000000..b6d4f786f
 +obj-$(CONFIG_INTEL_IPU4P_ICL_RVP_PDATA)   += ipu4p-icl-rvp-pdata.o
 diff --git a/drivers/media/platform/intel/ipu4-bxt-gp-pdata.c b/drivers/media/platform/intel/ipu4-bxt-gp-pdata.c
 new file mode 100644
-index 000000000..9acfafc9c
+index 000000000000..9acfafc9cf42
 --- /dev/null
 +++ b/drivers/media/platform/intel/ipu4-bxt-gp-pdata.c
 @@ -0,0 +1,123 @@
@@ -303,7 +303,7 @@ index 000000000..9acfafc9c
 +			ipu4_quirk);
 diff --git a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 new file mode 100644
-index 000000000..ba5707ade
+index 000000000000..ba5707adebdc
 --- /dev/null
 +++ b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 @@ -0,0 +1,1161 @@
@@ -1470,7 +1470,7 @@ index 000000000..ba5707ade
 +DECLARE_PCI_FIXUP_EARLY(PCI_VENDOR_ID_INTEL, IPU_PCI_ID, ipu4_quirk);
 diff --git a/drivers/media/platform/intel/ipu4p-icl-rvp-pdata.c b/drivers/media/platform/intel/ipu4p-icl-rvp-pdata.c
 new file mode 100644
-index 000000000..f3906f4d4
+index 000000000000..f3906f4d4fa1
 --- /dev/null
 +++ b/drivers/media/platform/intel/ipu4p-icl-rvp-pdata.c
 @@ -0,0 +1,181 @@

@@ -23,7 +23,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  2 files changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.c b/drivers/gpu/drm/i915/gvt/acrngt.c
-index ff48b15ae..0215fc23b 100644
+index ff48b15ae9d4..0215fc23b3e3 100644
 --- a/drivers/gpu/drm/i915/gvt/acrngt.c
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.c
 @@ -152,7 +152,7 @@ void acrngt_instance_destroy(struct intel_vgpu *vgpu)
@@ -36,7 +36,7 @@ index ff48b15ae..0215fc23b 100644
  	}
  
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index c6233fb61..b5aa2cbb2 100644
+index c6233fb61753..b5aa2cbb20fb 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -785,6 +785,11 @@ static struct intel_vgpu_workload *pick_next_workload(

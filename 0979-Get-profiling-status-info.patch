@@ -15,7 +15,7 @@ Signed-off-by: Manisha Chinthapally <manisha.chinthapally@intel.com>
  mode change 100755 => 100644 drivers/platform/x86/sepdk/sep/lwpmudrv.c
 
 diff --git a/drivers/platform/x86/sepdk/inc/lwpmudrv.h b/drivers/platform/x86/sepdk/inc/lwpmudrv.h
-index ae8a3aee2..d682ab632 100644
+index ae8a3aee26a1..d682ab632127 100644
 --- a/drivers/platform/x86/sepdk/inc/lwpmudrv.h
 +++ b/drivers/platform/x86/sepdk/inc/lwpmudrv.h
 @@ -545,6 +545,12 @@ struct profiling_pcpuid {
@@ -34,7 +34,7 @@ index ae8a3aee2..d682ab632 100644
 diff --git a/drivers/platform/x86/sepdk/sep/lwpmudrv.c b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 old mode 100755
 new mode 100644
-index be5310ef4..6f6772433
+index be5310ef43b8..6f6772433cce
 --- a/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 +++ b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 @@ -4235,6 +4235,7 @@ static OS_STATUS lwpmudrv_Prepare_Stop(void)

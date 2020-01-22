@@ -19,7 +19,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  6 files changed, 78 insertions(+), 52 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 0bef312ef..167ffbd4d 100644
+index 0bef312efd45..167ffbd4d0c0 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -2029,6 +2029,7 @@ struct security_hook_list {
@@ -31,7 +31,7 @@ index 0bef312ef..167ffbd4d 100644
  
  /*
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index c2566aaa1..15716b6ff 100644
+index c2566aaa138e..15716b6ff860 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -431,21 +431,21 @@ static int apparmor_file_open(struct file *file)
@@ -74,7 +74,7 @@ index c2566aaa1..15716b6ff 100644
  
  static struct security_hook_list apparmor_hooks[] __lsm_ro_after_init = {
 diff --git a/security/security.c b/security/security.c
-index b491c504a..0bc779634 100644
+index b491c504af03..0bc779634aa8 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -40,6 +40,8 @@
@@ -186,7 +186,7 @@ index b491c504a..0bc779634 100644
  	return rc;
  }
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 11fd96906..d6b2e7180 100644
+index 11fd96906c04..d6b2e71802dc 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -149,7 +149,6 @@ static int __init checkreqprot_setup(char *str)
@@ -265,7 +265,7 @@ index 11fd96906..d6b2e7180 100644
  
  	avtab_cache_init();
 diff --git a/security/smack/smack.h b/security/smack/smack.h
-index 0c6dce446..043525a52 100644
+index 0c6dce446825..043525a52e94 100644
 --- a/security/smack/smack.h
 +++ b/security/smack/smack.h
 @@ -362,6 +362,11 @@ static inline struct task_smack *smack_cred(const struct cred *cred)
@@ -281,7 +281,7 @@ index 0c6dce446..043525a52 100644
   * Is the directory transmuting?
   */
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 8e093cda0..4a3eca346 100644
+index 8e093cda01b3..4a3eca346c8f 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -1574,24 +1574,12 @@ static void smack_inode_getsecid(struct inode *inode, u32 *secid)

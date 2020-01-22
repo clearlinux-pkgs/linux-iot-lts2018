@@ -21,7 +21,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  4 files changed, 114 insertions(+), 80 deletions(-)
 
 diff --git a/drivers/scsi/ufs/ufs-sysfs.c b/drivers/scsi/ufs/ufs-sysfs.c
-index 8d9332bb7..0b221c5a2 100644
+index 8d9332bb7d0c..0b221c5a244c 100644
 --- a/drivers/scsi/ufs/ufs-sysfs.c
 +++ b/drivers/scsi/ufs/ufs-sysfs.c
 @@ -570,10 +570,11 @@ static ssize_t _name##_show(struct device *dev,				\
@@ -61,7 +61,7 @@ index 8d9332bb7..0b221c5a2 100644
  	kfree(desc_buf);						\
  	return ret;							\
 diff --git a/drivers/scsi/ufs/ufs.h b/drivers/scsi/ufs/ufs.h
-index c3bcaaec0..348471f55 100644
+index c3bcaaec0fc5..348471f55bf9 100644
 --- a/drivers/scsi/ufs/ufs.h
 +++ b/drivers/scsi/ufs/ufs.h
 @@ -617,7 +617,7 @@ struct ufs_dev_info {
@@ -74,7 +74,7 @@ index c3bcaaec0..348471f55 100644
  
  /**
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 3601e770d..697c41a26 100644
+index 3601e770da16..697c41a26514 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
 @@ -305,16 +305,6 @@ static void ufshcd_scsi_block_requests(struct ufs_hba *hba)
@@ -336,7 +336,7 @@ index 3601e770d..697c41a26 100644
  
  	ret = ufshcd_set_vccq_rail_unused(hba,
 diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
-index 33fdd3f28..c04bdbb1e 100644
+index 33fdd3f281ae..c04bdbb1ea57 100644
 --- a/drivers/scsi/ufs/ufshcd.h
 +++ b/drivers/scsi/ufs/ufshcd.h
 @@ -875,14 +875,17 @@ int ufshcd_read_desc_param(struct ufs_hba *hba,

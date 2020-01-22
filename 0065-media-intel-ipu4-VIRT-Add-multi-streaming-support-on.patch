@@ -35,7 +35,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  create mode 100644 drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.h
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index 8e62c273b..bd99ba14a 100644
+index 8e62c273b35a..bd99ba14a8af 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -495,6 +495,9 @@ int ici_isys_get_buf_virt(struct ici_isys_stream *as,
@@ -86,7 +86,7 @@ index 8e62c273b..bd99ba14a 100644
  	}
  }
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.h b/drivers/media/pci/intel/ici/ici-isys-stream.h
-index 77d89ed2e..457b123a6 100644
+index 77d89ed2ea79..457b123a65db 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.h
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.h
 @@ -50,7 +50,6 @@ struct ici_isys_stream {
@@ -98,7 +98,7 @@ index 77d89ed2e..457b123a6 100644
  
  #define to_intel_ipu4_isys_ici_stream(__buf_list) \
 diff --git a/drivers/media/pci/intel/virtio/Makefile.virt b/drivers/media/pci/intel/virtio/Makefile.virt
-index c3c30c4bf..75f481b3b 100644
+index c3c30c4bf921..75f481b3b71d 100644
 --- a/drivers/media/pci/intel/virtio/Makefile.virt
 +++ b/drivers/media/pci/intel/virtio/Makefile.virt
 @@ -8,11 +8,13 @@ $(TARGET_MODULE)-objs += ../virtio/intel-ipu4-virtio-common.o
@@ -116,7 +116,7 @@ index c3c30c4bf..75f481b3b 100644
  	$(TARGET_MODULE)-objs += ../virtio/intel-ipu4-virtio-fe-payload.o
  	$(TARGET_MODULE)-objs += ../virtio/intel-ipu4-virtio-fe.o
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
-index 3f6d541c8..23275846e 100644
+index 3f6d541c87fe..23275846e198 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 @@ -18,6 +18,7 @@
@@ -563,7 +563,7 @@ index 3f6d541c8..23275846e 100644
  
  module_init(virt_ici_init);
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.h b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.h
-index f44954b03..d6d9210d9 100644
+index f44954b03be2..d6d9210d937a 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.h
 @@ -18,10 +18,6 @@
@@ -578,7 +578,7 @@ index f44954b03..d6d9210d9 100644
  	struct mutex mutex;
  	struct ici_stream_device strm_dev;
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
-index b88fe6d75..3b5eae651 100644
+index b88fe6d75bc2..3b5eae651026 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
 @@ -10,15 +10,18 @@
@@ -854,7 +854,7 @@ index b88fe6d75..3b5eae651 100644
  	default:
  			return -EINVAL;
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.h
-index 25238f29b..18085882d 100644
+index 25238f29bc33..18085882de85 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.h
 @@ -12,14 +12,13 @@
@@ -875,7 +875,7 @@ index 25238f29b..18085882d 100644
  #endif
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
-index 3adf5b4c9..086421151 100644
+index 3adf5b4c9640..086421151f28 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 @@ -14,176 +14,321 @@
@@ -1230,7 +1230,7 @@ index 3adf5b4c9..086421151 100644
  
  /*
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.h
-index df65e8805..3da8c243a 100644
+index df65e88050ea..3da8c243a2bc 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.h
 @@ -11,16 +11,16 @@
@@ -1262,7 +1262,7 @@ index df65e8805..3da8c243a 100644
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-request-queue.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-request-queue.c
 new file mode 100644
-index 000000000..cee9b5551
+index 000000000000..cee9b55518c1
 --- /dev/null
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-request-queue.c
 @@ -0,0 +1,57 @@
@@ -1325,7 +1325,7 @@ index 000000000..cee9b5551
 +}
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-request-queue.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-request-queue.h
 new file mode 100644
-index 000000000..febcf7315
+index 000000000000..febcf73152e2
 --- /dev/null
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-request-queue.h
 @@ -0,0 +1,27 @@
@@ -1357,7 +1357,7 @@ index 000000000..febcf7315
 +
 +#endif
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
-index 9c6bbf6fb..c3257ea0d 100644
+index 9c6bbf6fb5be..c3257ea0dbd1 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 @@ -8,9 +8,9 @@
@@ -1835,7 +1835,7 @@ index 9c6bbf6fb..c3257ea0d 100644
  	return 0;
  }
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.h
-index 0d85b3561..04a84a4c3 100644
+index 0d85b3561274..04a84a4c365a 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.h
 @@ -10,16 +10,16 @@
@@ -1866,7 +1866,7 @@ index 0d85b3561..04a84a4c3 100644
  #endif
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
-index aa64d09ad..4359d7b99 100644
+index aa64d09adb35..4359d7b99c70 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 @@ -17,6 +17,7 @@
@@ -2127,7 +2127,7 @@ index aa64d09ad..4359d7b99 100644
  
  /* device specific function to cleanup itself */
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.h
-index 999b543b5..14929bb66 100644
+index 999b543b58f6..14929bb66b02 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.h
 @@ -8,8 +8,14 @@
@@ -2149,7 +2149,7 @@ index 999b543b5..14929bb66 100644
  
  #endif
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.c
-index 457c6bdf7..5e3b53c9c 100644
+index 457c6bdf78a8..5e3b53c9c6e1 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.c
 @@ -59,3 +59,80 @@ struct ipu4_virtio_fe_info *ipu4_virtio_fe_find_by_vmid(int vmid)
@@ -2235,7 +2235,7 @@ index 457c6bdf7..5e3b53c9c 100644
 +}
 \ No newline at end of file
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
-index 8b2260b46..78f40c3da 100644
+index 8b2260b46169..78f40c3dabad 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
 @@ -6,20 +6,19 @@
@@ -2318,7 +2318,7 @@ index 8b2260b46..78f40c3da 100644
  
  void ipu4_virtio_fe_table_init(void);
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-pipeline.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-pipeline.c
-index 0f5d8b6f8..8122d8177 100644
+index 0f5d8b6f83ec..8122d8177104 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-pipeline.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-pipeline.c
 @@ -11,6 +11,7 @@
@@ -2354,7 +2354,7 @@ index 0f5d8b6f8..8122d8177 100644
  }
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.c
 new file mode 100644
-index 000000000..09294da54
+index 000000000000..09294da549ab
 --- /dev/null
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.c
 @@ -0,0 +1,72 @@
@@ -2432,7 +2432,7 @@ index 000000000..09294da54
 +}
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.h
 new file mode 100644
-index 000000000..9a36c99f9
+index 000000000000..9a36c99f9b5b
 --- /dev/null
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.h
 @@ -0,0 +1,14 @@
@@ -2451,7 +2451,7 @@ index 000000000..9a36c99f9
 +
 +#endif
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
-index d95e52a09..29b8b4767 100644
+index d95e52a09b32..29b8b4767f02 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
 @@ -17,40 +17,54 @@ static DEFINE_IDA(index_ida);

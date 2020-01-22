@@ -16,7 +16,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index ee58561ce..1fe9426ce 100644
+index ee58561ceb08..1fe9426ce48b 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -1357,7 +1357,9 @@ int mei_cl_notify_request(struct mei_cl *cl,

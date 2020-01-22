@@ -19,7 +19,7 @@ Reviewed-on:
  1 file changed, 14 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.c b/sound/soc/intel/skylake/skl-sdw-pcm.c
-index 90a11f475..af8d117c3 100644
+index 90a11f47586b..af8d117c34ed 100644
 --- a/sound/soc/intel/skylake/skl-sdw-pcm.c
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.c
 @@ -113,6 +113,7 @@ int cnl_sdw_hw_params(struct snd_pcm_substream *substream,

@@ -16,7 +16,7 @@ Signed-off-by: Ng Khai Wen <khai.wen.ng@intel.com>
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
-index 7958fd836..ab5626cf6 100644
+index 7958fd836a12..ab5626cf6734 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 @@ -20,7 +20,7 @@
@@ -29,7 +29,7 @@ index 7958fd836..ab5626cf6 100644
  #define dev_to_stream(dev) \
  	container_of(dev, struct ici_isys_stream, strm_dev)
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
-index 5a02b8275..517b48d2e 100644
+index 5a02b8275de4..517b48d2ede1 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
 @@ -15,7 +15,7 @@

@@ -29,7 +29,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  create mode 100644 sound/soc/intel/boards/bxtp_ivi_m3.c
 
 diff --git a/sound/soc/intel/boards/Kconfig b/sound/soc/intel/boards/Kconfig
-index d98f82cf4..b38c4550f 100644
+index d98f82cf4a3c..b38c4550fa2d 100644
 --- a/sound/soc/intel/boards/Kconfig
 +++ b/sound/soc/intel/boards/Kconfig
 @@ -401,6 +401,15 @@ config SND_SOC_INTEL_BXTP_IVI_HU_MACH
@@ -49,7 +49,7 @@ index d98f82cf4..b38c4550f 100644
  
  endif ## SND_SOC_INTEL_MACH
 diff --git a/sound/soc/intel/boards/Makefile b/sound/soc/intel/boards/Makefile
-index 949db4b04..7bba4ac5a 100644
+index 949db4b0438d..7bba4ac5ab44 100644
 --- a/sound/soc/intel/boards/Makefile
 +++ b/sound/soc/intel/boards/Makefile
 @@ -32,6 +32,7 @@ snd-soc-bxt_ivi_ull-objs := bxt_ivi_ull.o
@@ -67,7 +67,7 @@ index 949db4b04..7bba4ac5a 100644
 +obj-$(CONFIG_SND_SOC_INTEL_BXTP_IVI_M3_MACH) += snd-soc-bxtp_ivi_m3.o
 diff --git a/sound/soc/intel/boards/bxtp_ivi_m3.c b/sound/soc/intel/boards/bxtp_ivi_m3.c
 new file mode 100644
-index 000000000..5dcafb979
+index 000000000000..5dcafb979a49
 --- /dev/null
 +++ b/sound/soc/intel/boards/bxtp_ivi_m3.c
 @@ -0,0 +1,327 @@

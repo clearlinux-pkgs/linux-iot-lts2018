@@ -17,7 +17,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 32 insertions(+)
 
 diff --git a/sound/soc/codecs/rt274.c b/sound/soc/codecs/rt274.c
-index f09f2d87a..64a23a6fd 100644
+index f09f2d87ac60..64a23a6fdcaa 100644
 --- a/sound/soc/codecs/rt274.c
 +++ b/sound/soc/codecs/rt274.c
 @@ -1224,7 +1224,39 @@ static struct i2c_driver rt274_i2c_driver = {

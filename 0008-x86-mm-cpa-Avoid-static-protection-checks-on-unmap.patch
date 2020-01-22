@@ -42,7 +42,7 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  1 file changed, 7 insertions(+)
 
 diff --git a/arch/x86/mm/pageattr.c b/arch/x86/mm/pageattr.c
-index 98e5c709b..67e77576f 100644
+index 98e5c709ba7f..67e77576f678 100644
 --- a/arch/x86/mm/pageattr.c
 +++ b/arch/x86/mm/pageattr.c
 @@ -526,6 +526,13 @@ static inline pgprot_t static_protections(pgprot_t prot, unsigned long start,

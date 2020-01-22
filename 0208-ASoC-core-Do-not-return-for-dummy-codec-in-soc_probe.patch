@@ -11,7 +11,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/soc-core.c b/sound/soc/soc-core.c
-index 18a7c5e68..d0a5af630 100644
+index a7048d8725e3..84c36401db54 100644
 --- a/sound/soc/soc-core.c
 +++ b/sound/soc/soc-core.c
 @@ -1242,10 +1242,10 @@ static int soc_probe_component(struct snd_soc_card *card,

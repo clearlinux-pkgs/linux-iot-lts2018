@@ -15,7 +15,7 @@ Signed-off-by: Dominik Bozek <dominikx.bozek@intel.com>
  1 file changed, 12 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 8f897fdaf..016798157 100644
+index 8f897fdafd4a..01679815791b 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -28,7 +28,8 @@

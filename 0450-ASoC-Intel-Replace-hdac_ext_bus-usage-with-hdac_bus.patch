@@ -27,7 +27,7 @@ Signed-off-by: Cezary Rojewski <cezary.rojewski@intel.com>
  12 files changed, 71 insertions(+), 73 deletions(-)
 
 diff --git a/include/sound/hdaudio_ext.h b/include/sound/hdaudio_ext.h
-index 62181677f..5ebf57fa7 100644
+index 62181677f009..5ebf57fa778d 100644
 --- a/include/sound/hdaudio_ext.h
 +++ b/include/sound/hdaudio_ext.h
 @@ -90,7 +90,7 @@ struct hdac_ext_stream *snd_hdac_ext_stream_assign(struct hdac_bus *bus,
@@ -40,7 +40,7 @@ index 62181677f..5ebf57fa7 100644
  				int direction);
  void snd_hdac_ext_stream_release(struct hdac_ext_stream *azx_dev, int type);
 diff --git a/sound/hda/ext/hdac_ext_stream.c b/sound/hda/ext/hdac_ext_stream.c
-index 492f85841..fa7b80fcb 100644
+index 492f85841ac0..fa7b80fcba9d 100644
 --- a/sound/hda/ext/hdac_ext_stream.c
 +++ b/sound/hda/ext/hdac_ext_stream.c
 @@ -552,21 +552,21 @@ int snd_hdac_ext_stream_set_lpib(struct hdac_ext_stream *stream, u32 value)
@@ -95,7 +95,7 @@ index 492f85841..fa7b80fcb 100644
  	}
  	return res;
 diff --git a/sound/soc/intel/skylake/skl-compress.c b/sound/soc/intel/skylake/skl-compress.c
-index 67f2b7881..d346b08ad 100644
+index 67f2b78812b2..d346b08ad044 100644
 --- a/sound/soc/intel/skylake/skl-compress.c
 +++ b/sound/soc/intel/skylake/skl-compress.c
 @@ -27,13 +27,12 @@
@@ -159,7 +159,7 @@ index 67f2b7881..d346b08ad 100644
  	return ret;
  }
 diff --git a/sound/soc/intel/skylake/skl-compress.h b/sound/soc/intel/skylake/skl-compress.h
-index abfff2d27..4b7f9d58e 100644
+index abfff2d27f14..4b7f9d58e513 100644
 --- a/sound/soc/intel/skylake/skl-compress.h
 +++ b/sound/soc/intel/skylake/skl-compress.h
 @@ -20,12 +20,12 @@
@@ -179,7 +179,7 @@ index abfff2d27..4b7f9d58e 100644
  				 size_t size);
  int skl_compr_free_pages(struct snd_compr_stream *substream);
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index f66ae9d70..74833f0cd 100644
+index f66ae9d702bc..74833f0cddfb 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -380,8 +380,7 @@ void skl_do_recovery(struct skl *skl)
@@ -221,7 +221,7 @@ index f66ae9d70..74833f0cd 100644
  	const struct skl_dsp_ops *ops;
  	struct skl_dsp_cores *cores;
 diff --git a/sound/soc/intel/skylake/skl-nhlt.c b/sound/soc/intel/skylake/skl-nhlt.c
-index 2f164404b..9142b0607 100644
+index 2f164404b239..9142b0607522 100644
 --- a/sound/soc/intel/skylake/skl-nhlt.c
 +++ b/sound/soc/intel/skylake/skl-nhlt.c
 @@ -156,15 +156,15 @@ skl_get_nhlt_specific_cfg(struct skl *skl, u32 instance, u8 link_type,
@@ -244,7 +244,7 @@ index 2f164404b..9142b0607 100644
  	}
  
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 15fbded46..4b78132ea 100644
+index 15fbded46dcb..4b78132eacfa 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -95,7 +95,7 @@ static int skl_substream_alloc_pages(struct hdac_bus *bus,
@@ -315,7 +315,7 @@ index 15fbded46..4b78132ea 100644
  	return 0;
  }
 diff --git a/sound/soc/intel/skylake/skl-probe.c b/sound/soc/intel/skylake/skl-probe.c
-index 2d9d0ea6c..166ffa1e0 100644
+index 2d9d0ea6c907..166ffa1e0d3e 100644
 --- a/sound/soc/intel/skylake/skl-probe.c
 +++ b/sound/soc/intel/skylake/skl-probe.c
 @@ -87,7 +87,7 @@ static int set_injector_stream(struct hdac_ext_stream *stream,
@@ -429,7 +429,7 @@ index 2d9d0ea6c..166ffa1e0 100644
  	struct hdac_stream *hstr;
  	int start;
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index b2f62a2b5..e1ce9a794 100644
+index b2f62a2b5d95..e1ce9a794cbd 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -2051,8 +2051,8 @@ int skl_tplg_dsp_log_get(struct snd_kcontrol *kcontrol,
@@ -486,7 +486,7 @@ index b2f62a2b5..e1ce9a794 100644
  	struct skl *skl = bus_to_skl(bus);
  	struct skl_module_cfg *mconfig;
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index c0ef5e78d..da3c8d190 100644
+index c0ef5e78dbfa..da3c8d19033b 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -553,7 +553,7 @@ int skl_dsp_set_dma_control(struct skl_sst *ctx, u32 *caps,
@@ -508,7 +508,7 @@ index c0ef5e78d..da3c8d190 100644
  int skl_dai_load(struct snd_soc_component *cmp, int index,
  		struct snd_soc_dai_driver *dai_drv,
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index db823eb92..5d1cbe428 100644
+index db823eb92126..5d1cbe428472 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -42,6 +42,10 @@
@@ -579,7 +579,7 @@ index db823eb92..5d1cbe428 100644
  #if !IS_ENABLED(CONFIG_SND_SOC_INTEL_CNL_FPGA)
  	skl_dmic_data.dmic_num = skl_get_dmic_geo(skl);
 diff --git a/sound/soc/soc-pcm.c b/sound/soc/soc-pcm.c
-index ddb0377e5..15e3cf381 100644
+index ddb0377e53a8..15e3cf381c02 100644
 --- a/sound/soc/soc-pcm.c
 +++ b/sound/soc/soc-pcm.c
 @@ -863,7 +863,7 @@ int soc_dai_hw_params(struct snd_pcm_substream *substream,

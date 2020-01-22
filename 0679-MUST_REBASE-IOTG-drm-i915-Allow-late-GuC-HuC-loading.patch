@@ -29,7 +29,7 @@ Signed-off-by: Badiuzzaman Iskhandar <badiuzzaman.azzarfan.bin.iskhandar@intel.c
  4 files changed, 88 insertions(+), 14 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index d3a7100b3..53459d547 100644
+index d3a7100b32f6..53459d5475b5 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -2146,6 +2146,8 @@ struct drm_i915_private {
@@ -50,7 +50,7 @@ index d3a7100b3..53459d547 100644
  void i915_gem_fini(struct drm_i915_private *dev_priv);
  void i915_gem_cleanup_engines(struct drm_i915_private *dev_priv);
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index 402db0dac..e9aad26ee 100644
+index 402db0dac1c4..e9aad26ee653 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
 @@ -6198,6 +6198,28 @@ static int __i915_gem_restart_engines(void *data)
@@ -123,7 +123,7 @@ index 402db0dac..e9aad26ee 100644
  	ret = intel_wopcm_init(&dev_priv->wopcm);
  	if (ret)
 diff --git a/drivers/gpu/drm/i915/i915_gem_context.c b/drivers/gpu/drm/i915/i915_gem_context.c
-index 1ef618f3e..32eeabb11 100644
+index 74917976d99e..29cd2281414b 100644
 --- a/drivers/gpu/drm/i915/i915_gem_context.c
 +++ b/drivers/gpu/drm/i915/i915_gem_context.c
 @@ -567,23 +567,55 @@ static int context_idr_cleanup(int id, void *p, void *data)
@@ -189,7 +189,7 @@ index 1ef618f3e..32eeabb11 100644
  	return 0;
  }
 diff --git a/drivers/gpu/drm/i915/intel_wopcm.c b/drivers/gpu/drm/i915/intel_wopcm.c
-index 74bf76f3f..5ff877ed7 100644
+index 74bf76f3fddc..5ff877ed7b12 100644
 --- a/drivers/gpu/drm/i915/intel_wopcm.c
 +++ b/drivers/gpu/drm/i915/intel_wopcm.c
 @@ -207,6 +207,13 @@ int intel_wopcm_init(struct intel_wopcm *wopcm)

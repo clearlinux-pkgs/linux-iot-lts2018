@@ -24,7 +24,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  7 files changed, 36 insertions(+)
 
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index dc87d3015..384b86e60 100644
+index dc87d30151d5..384b86e60c9c 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -73,6 +73,11 @@ inline long hcall_set_memmap(unsigned long vmid, unsigned long memmap)
@@ -40,7 +40,7 @@ index dc87d3015..384b86e60 100644
  {
  	long ret = 0;
 diff --git a/drivers/vhm/vhm_vm_mngt.c b/drivers/vhm/vhm_vm_mngt.c
-index d1aa4ba1a..8f1a00777 100644
+index d1aa4ba1a4f0..8f1a00777dd4 100644
 --- a/drivers/vhm/vhm_vm_mngt.c
 +++ b/drivers/vhm/vhm_vm_mngt.c
 @@ -130,6 +130,22 @@ int vhm_inject_msi(unsigned long vmid, unsigned long msi_addr,
@@ -67,7 +67,7 @@ index d1aa4ba1a..8f1a00777 100644
  {
  	list_add(list, &vhm_vm_list);
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index cafb17149..f0567aa0f 100644
+index cafb171490ca..f0567aa0f1dd 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -211,4 +211,9 @@ struct acrn_nmi_entry {
@@ -81,7 +81,7 @@ index cafb17149..f0567aa0f 100644
 +
  #endif /* ACRN_COMMON_H */
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 7b438cc01..d527a8fa8 100644
+index 7b438cc01b48..d527a8fa8435 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -86,9 +86,11 @@
@@ -97,7 +97,7 @@ index 7b438cc01..d527a8fa8 100644
  #define ACRN_DOM0_VMID (0UL)
  #define ACRN_INVALID_VMID (-1UL)
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index e701254bc..1af6fd3aa 100644
+index e701254bc249..1af6fd3aa11b 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -70,6 +70,12 @@
@@ -114,7 +114,7 @@ index e701254bc..1af6fd3aa 100644
  int unmap_guest_phys(unsigned long vmid, u64 uos_phys);
  int set_mmio_map(unsigned long vmid, unsigned long guest_gpa,
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index e372ea48f..f1ed9a07e 100644
+index e372ea48fa81..f1ed9a07e708 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -144,6 +144,7 @@ inline long hcall_set_ioreq_buffer(unsigned long vmid, unsigned long buffer);
@@ -126,7 +126,7 @@ index e372ea48f..f1ed9a07e 100644
  inline long vhm_resume_vm(struct vhm_vm *vm);
  inline long vhm_pause_vm(struct vhm_vm *vm);
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index 77c21c4bb..5edacb31d 100644
+index 77c21c4bba7a..5edacb31dc1b 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -86,6 +86,7 @@ void put_vm(struct vhm_vm *vm);

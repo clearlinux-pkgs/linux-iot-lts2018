@@ -22,7 +22,7 @@ Reviewed-by: Fei Jiang <fei.jiang@intel.com>
  3 files changed, 23 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.c b/drivers/gpu/drm/i915/gvt/gvt.c
-index e4a3823e1..940443f08 100644
+index e4a3823e1226..940443f08dfd 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.c
 +++ b/drivers/gpu/drm/i915/gvt/gvt.c
 @@ -317,22 +317,27 @@ void intel_gvt_init_pipe_info(struct intel_gvt *gvt);
@@ -67,7 +67,7 @@ index e4a3823e1..940443f08 100644
  	ret = intel_gvt_hypervisor_host_init(&dev_priv->drm.pdev->dev, gvt,
  				&intel_gvt_ops);
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 9344293ed..f4d905617 100644
+index 9344293ed692..f4d9056175ae 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -608,6 +608,8 @@ struct intel_gvt_ops {
@@ -80,7 +80,7 @@ index 9344293ed..f4d905617 100644
  enum {
  	GVT_FAILSAFE_UNSUPPORTED_GUEST,
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 81900532f..220990e23 100644
+index 81900532f7ff..220990e23ac5 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -5259,9 +5259,18 @@ skl_compute_ddb(struct drm_atomic_state *state)

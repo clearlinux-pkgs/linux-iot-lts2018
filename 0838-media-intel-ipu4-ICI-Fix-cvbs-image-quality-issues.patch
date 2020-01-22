@@ -17,7 +17,7 @@ Signed-off-by: Jin, Jia <jiax.jin@intel.com>
  1 file changed, 45 insertions(+), 27 deletions(-)
 
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h
-index 5ea1f7c01..b077c5cb0 100644
+index 5ea1f7c01f19..b077c5cb09c4 100644
 --- a/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h
 +++ b/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h
 @@ -9,33 +9,51 @@

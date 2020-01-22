@@ -15,7 +15,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 9 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
-index 569d1d5d6..45e17b086 100644
+index 569d1d5d689c..45e17b086c29 100644
 --- a/drivers/vbs/vbs_rng.c
 +++ b/drivers/vbs/vbs_rng.c
 @@ -123,7 +123,7 @@ static int vbs_rng_connection_cnt = 0;

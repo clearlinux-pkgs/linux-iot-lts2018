@@ -38,7 +38,7 @@ Signed-off-by: Xinyun Liu <xinyun.liu@intel.com>
  5 files changed, 46 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/cmd_parser.c b/drivers/gpu/drm/i915/gvt/cmd_parser.c
-index cdccccf78..d30c5e2e0 100644
+index cdccccf787b5..d30c5e2e09e2 100644
 --- a/drivers/gpu/drm/i915/gvt/cmd_parser.c
 +++ b/drivers/gpu/drm/i915/gvt/cmd_parser.c
 @@ -918,6 +918,15 @@ static int cmd_reg_handler(struct parser_exec_state *s,
@@ -58,7 +58,7 @@ index cdccccf78..d30c5e2e0 100644
  	intel_gvt_mmio_set_cmd_accessed(gvt, offset);
  	return 0;
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index bbf2489f2..68cc50f75 100644
+index bbf2489f251d..68cc50f75803 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -266,7 +266,7 @@ struct gvt_mmio_block {
@@ -112,7 +112,7 @@ index bbf2489f2..68cc50f75 100644
  void intel_gvt_debugfs_remove_vgpu(struct intel_vgpu *vgpu);
  int intel_gvt_debugfs_init(struct intel_gvt *gvt);
 diff --git a/drivers/gpu/drm/i915/gvt/handlers.c b/drivers/gpu/drm/i915/gvt/handlers.c
-index 0fc1fb37e..ce25433c6 100644
+index 0fc1fb37e1ef..ce25433c6d77 100644
 --- a/drivers/gpu/drm/i915/gvt/handlers.c
 +++ b/drivers/gpu/drm/i915/gvt/handlers.c
 @@ -92,7 +92,7 @@ static struct intel_gvt_mmio_info *find_mmio_info(struct intel_gvt *gvt,
@@ -125,7 +125,7 @@ index 0fc1fb37e..ce25433c6 100644
  		gvt_mmio_func read, gvt_mmio_func write)
  {
 diff --git a/drivers/gpu/drm/i915/gvt/mmio_context.c b/drivers/gpu/drm/i915/gvt/mmio_context.c
-index e872f4847..0221e87f3 100644
+index e872f4847fbe..0221e87f34db 100644
 --- a/drivers/gpu/drm/i915/gvt/mmio_context.c
 +++ b/drivers/gpu/drm/i915/gvt/mmio_context.c
 @@ -588,6 +588,8 @@ void intel_gvt_init_engine_mmio_context(struct intel_gvt *gvt)
@@ -138,7 +138,7 @@ index e872f4847..0221e87f3 100644
  	}
  }
 diff --git a/drivers/gpu/drm/i915/i915_pvinfo.h b/drivers/gpu/drm/i915/i915_pvinfo.h
-index c15d4578b..fd26872f1 100644
+index c15d4578bb5f..fd26872f15b6 100644
 --- a/drivers/gpu/drm/i915/i915_pvinfo.h
 +++ b/drivers/gpu/drm/i915/i915_pvinfo.h
 @@ -28,6 +28,12 @@

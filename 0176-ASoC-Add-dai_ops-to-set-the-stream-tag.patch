@@ -21,7 +21,7 @@ Signed-off-by: Hardik T Shah <hardik.t.shah@intel.com>
  2 files changed, 72 insertions(+)
 
 diff --git a/include/sound/soc-dai.h b/include/sound/soc-dai.h
-index f5d700411..c393f1126 100644
+index f5d70041108f..c393f1126839 100644
 --- a/include/sound/soc-dai.h
 +++ b/include/sound/soc-dai.h
 @@ -145,6 +145,13 @@ int snd_soc_dai_get_channel_map(struct snd_soc_dai *dai,
@@ -56,10 +56,10 @@ index f5d700411..c393f1126 100644
  	 * ALSA PCM audio operations - all optional.
  	 * Called by soc-core during audio PCM operations.
 diff --git a/sound/soc/soc-core.c b/sound/soc/soc-core.c
-index 62aa320c2..7f30e8ad3 100644
+index e45dfcb62b6a..f5291b2ea3e6 100644
 --- a/sound/soc/soc-core.c
 +++ b/sound/soc/soc-core.c
-@@ -2608,6 +2608,61 @@ int snd_soc_dai_set_tdm_slot(struct snd_soc_dai *dai,
+@@ -2610,6 +2610,61 @@ int snd_soc_dai_set_tdm_slot(struct snd_soc_dai *dai,
  }
  EXPORT_SYMBOL_GPL(snd_soc_dai_set_tdm_slot);
  

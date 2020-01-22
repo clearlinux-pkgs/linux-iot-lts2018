@@ -13,7 +13,7 @@ Change-Id: I3b55e9c24741b1b8482be7102e1107601f6f7f82
  1 file changed, 16 insertions(+), 14 deletions(-)
 
 diff --git a/drivers/tty/cbc/cbc_link_layer.c b/drivers/tty/cbc/cbc_link_layer.c
-index bd747aac2..a55cd8ce7 100644
+index bd747aac250f..a55cd8ce7add 100644
 --- a/drivers/tty/cbc/cbc_link_layer.c
 +++ b/drivers/tty/cbc/cbc_link_layer.c
 @@ -264,8 +264,7 @@ u8 cbc_core_on_receive_cbc_serial_data(u8 length, const u8 *rx_buf)

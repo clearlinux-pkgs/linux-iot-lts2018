@@ -19,7 +19,7 @@ Tested-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  2 files changed, 56 insertions(+), 14 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index d627eaf0f..1085d75cf 100644
+index d627eaf0f93d..1085d75cfa09 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -324,8 +324,42 @@ static void vfe_cmd_tx_done(struct virtqueue *vq)
@@ -119,7 +119,7 @@ index d627eaf0f..1085d75cf 100644
  	INIT_WORK(&vfe->posn_update_work, vfe_handle_posn);
  	INIT_WORK(&vfe->msg_timeout_work, vfe_not_tx_timeout_handler);
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index 74e7acbc6..fcc2dc29c 100644
+index 74e7acbc6856..fcc2dc29c3f7 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -25,6 +25,11 @@ struct vfe_substream_info {

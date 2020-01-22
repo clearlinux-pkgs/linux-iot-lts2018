@@ -22,7 +22,7 @@ Tracked-On: PKT-1617
  1 file changed, 9 insertions(+), 25 deletions(-)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 2f37ef958..3f8bd4abe 100644
+index 2f37ef958094..3f8bd4abe757 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -132,6 +132,8 @@ struct ioreq_client {

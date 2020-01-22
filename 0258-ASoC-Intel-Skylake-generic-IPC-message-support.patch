@@ -19,7 +19,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  3 files changed, 165 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 91b8035db..4d4892491 100644
+index 91b8035db84b..4d48924913bd 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -24,10 +24,14 @@
@@ -211,7 +211,7 @@ index 91b8035db..4d4892491 100644
  	return d;
  
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 94152704e..c6158d37f 100644
+index 94152704e22e..c6158d37f557 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -506,6 +506,14 @@ static inline struct skl *get_skl_ctx(struct device *dev)
@@ -230,7 +230,7 @@ index 94152704e..c6158d37f 100644
  	struct skl_pipe_params *params);
  int skl_dsp_set_dma_control(struct skl_sst *ctx, u32 *caps,
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 4056ea3de..4c7cb272a 100644
+index 4056ea3de714..4c7cb272a029 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -104,6 +104,7 @@ struct skl {

@@ -25,7 +25,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  5 files changed, 14 insertions(+), 7 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-compress.c b/sound/soc/intel/skylake/skl-compress.c
-index c8b26e80b..a0b33e198 100644
+index c8b26e80b974..a0b33e198722 100644
 --- a/sound/soc/intel/skylake/skl-compress.c
 +++ b/sound/soc/intel/skylake/skl-compress.c
 @@ -25,6 +25,7 @@
@@ -50,7 +50,7 @@ index c8b26e80b..a0b33e198 100644
  	if (!dmab)
  		return -ENOMEM;
 diff --git a/sound/soc/intel/skylake/skl-compress.h b/sound/soc/intel/skylake/skl-compress.h
-index 9fcf6c38f..2db347369 100644
+index 9fcf6c38f5b8..2db347369c0c 100644
 --- a/sound/soc/intel/skylake/skl-compress.h
 +++ b/sound/soc/intel/skylake/skl-compress.h
 @@ -18,7 +18,8 @@
@@ -70,7 +70,7 @@ index 9fcf6c38f..2db347369 100644
 -
 +#endif /* __SKL_COMPRESS_H__*/
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 0cf4a2fa6..d10d2444b 100644
+index 0cf4a2fa69a0..d10d2444bd6a 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -639,6 +639,8 @@ static ssize_t adsp_control_write(struct file *file,
@@ -93,7 +93,7 @@ index 0cf4a2fa6..d10d2444b 100644
  	}
  
 diff --git a/sound/soc/intel/skylake/skl-probe.c b/sound/soc/intel/skylake/skl-probe.c
-index 9c4d96ecc..b4f5fe422 100644
+index 9c4d96ecc762..b4f5fe4220cf 100644
 --- a/sound/soc/intel/skylake/skl-probe.c
 +++ b/sound/soc/intel/skylake/skl-probe.c
 @@ -23,10 +23,13 @@
@@ -120,7 +120,7 @@ index 9c4d96ecc..b4f5fe422 100644
  	u64 spib_pos = div64_u64(runtime->total_bytes_available,
  				    runtime->buffer_size);
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 429e15ab1..a70d87e2f 100644
+index 429e15ab15a7..a70d87e2f6ff 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -366,7 +366,7 @@ static int skl_resume(struct device *dev)

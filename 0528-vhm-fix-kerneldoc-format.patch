@@ -15,7 +15,7 @@ Acked-by: Yakui Zhao <yakui.zhao@intel.com>
  3 files changed, 4 insertions(+), 9 deletions(-)
 
 diff --git a/include/linux/vhm/acrn_vhm_ioreq.h b/include/linux/vhm/acrn_vhm_ioreq.h
-index de3a8aa4e..fbf69b37d 100644
+index de3a8aa4eaf6..fbf69b37d356 100644
 --- a/include/linux/vhm/acrn_vhm_ioreq.h
 +++ b/include/linux/vhm/acrn_vhm_ioreq.h
 @@ -52,9 +52,7 @@
@@ -30,7 +30,7 @@ index de3a8aa4e..fbf69b37d 100644
  
  #ifndef __ACRN_VHM_IOREQ_H__
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 5ff9af92f..21269e47b 100644
+index 5ff9af92f81f..21269e47b26a 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -52,9 +52,7 @@
@@ -45,7 +45,7 @@ index 5ff9af92f..21269e47b 100644
  
  #ifndef __ACRN_VHM_MM_H__
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index b5f6ca1f2..e89b78c7f 100644
+index b5f6ca1f2dea..e89b78c7fff5 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -55,9 +55,7 @@

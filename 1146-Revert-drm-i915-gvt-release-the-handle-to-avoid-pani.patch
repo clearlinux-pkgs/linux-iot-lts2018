@@ -12,7 +12,7 @@ Tracked-On: PKT-2559
  2 files changed, 5 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.c b/drivers/gpu/drm/i915/gvt/acrngt.c
-index 7911d63ff..0215fc23b 100644
+index 7911d63ffa0c..0215fc23b3e3 100644
 --- a/drivers/gpu/drm/i915/gvt/acrngt.c
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.c
 @@ -98,6 +98,9 @@ static int acrngt_emulation_timer_thread(void *data)
@@ -36,7 +36,7 @@ index 7911d63ff..0215fc23b 100644
  			kthread_stop(info->emulation_thread);
  			info->emulation_thread = NULL;
 diff --git a/drivers/gpu/drm/i915/gvt/interrupt.c b/drivers/gpu/drm/i915/gvt/interrupt.c
-index 3b7dbeb20..7bb9be5ae 100644
+index 3b7dbeb20c5e..7bb9be5ae9fd 100644
 --- a/drivers/gpu/drm/i915/gvt/interrupt.c
 +++ b/drivers/gpu/drm/i915/gvt/interrupt.c
 @@ -654,6 +654,8 @@ void intel_vgpu_trigger_virtual_event(struct intel_vgpu *vgpu,

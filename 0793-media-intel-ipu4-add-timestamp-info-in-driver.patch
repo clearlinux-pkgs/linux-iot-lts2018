@@ -18,7 +18,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-csi2.c b/drivers/media/pci/intel/ipu-isys-csi2.c
-index 87ecce7ce..2473f9269 100644
+index 87ecce7ce98d..2473f926991f 100644
 --- a/drivers/media/pci/intel/ipu-isys-csi2.c
 +++ b/drivers/media/pci/intel/ipu-isys-csi2.c
 @@ -850,8 +850,8 @@ void ipu_isys_csi2_sof_event(struct ipu_isys_csi2 *csi2, unsigned int vc)
@@ -33,7 +33,7 @@ index 87ecce7ce..2473f9269 100644
  
  void ipu_isys_csi2_eof_event(struct ipu_isys_csi2 *csi2, unsigned int vc)
 diff --git a/drivers/media/pci/intel/ipu-isys-queue.c b/drivers/media/pci/intel/ipu-isys-queue.c
-index 11f7da5dd..2f0db1af3 100644
+index 11f7da5dd0c7..2f0db1af3744 100644
 --- a/drivers/media/pci/intel/ipu-isys-queue.c
 +++ b/drivers/media/pci/intel/ipu-isys-queue.c
 @@ -1143,8 +1143,8 @@ ipu_isys_buf_calc_sequence_time(struct ipu_isys_buffer *ib,

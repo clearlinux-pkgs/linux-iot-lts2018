@@ -14,7 +14,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h b/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h
-index 6b3981522..2a28c075c 100644
+index 6b3981522a8f..2a28c075cda2 100644
 --- a/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h
 +++ b/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h
 @@ -1542,7 +1542,7 @@ struct crl_v4l2_ctrl ox03a10_v4l2_ctrls[] = {

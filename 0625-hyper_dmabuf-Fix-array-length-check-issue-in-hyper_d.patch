@@ -18,7 +18,7 @@ Reviewed-by: Wei Liu <weix.w.liu@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
-index 20274e1b9..e9f1d64ee 100644
+index 20274e1b9e20..e9f1d64ee60b 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 @@ -746,7 +746,7 @@ long hyper_dmabuf_ioctl(struct file *filp,

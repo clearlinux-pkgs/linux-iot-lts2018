@@ -10,7 +10,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 30 insertions(+)
 
 diff --git a/include/uapi/linux/videodev2.h b/include/uapi/linux/videodev2.h
-index fef1758ae..6964ab3cd 100644
+index fef1758ae2e4..6964ab3cdef9 100644
 --- a/include/uapi/linux/videodev2.h
 +++ b/include/uapi/linux/videodev2.h
 @@ -555,6 +555,7 @@ struct v4l2_pix_format {

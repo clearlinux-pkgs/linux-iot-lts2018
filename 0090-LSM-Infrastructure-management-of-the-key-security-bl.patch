@@ -20,7 +20,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  6 files changed, 75 insertions(+), 36 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index fba6908ff..dab23cf22 100644
+index fba6908ffd84..dab23cf22deb 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -2032,6 +2032,7 @@ struct lsm_blob_sizes {
@@ -32,7 +32,7 @@ index fba6908ff..dab23cf22 100644
  	int	lbs_sock;
  	int	lbs_superblock;
 diff --git a/security/security.c b/security/security.c
-index dd50b45e3..c44f5fba3 100644
+index dd50b45e390c..c44f5fba35db 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -120,6 +120,9 @@ int __init security_init(void)
@@ -109,7 +109,7 @@ index dd50b45e3..c44f5fba3 100644
  
  int security_key_permission(key_ref_t key_ref,
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 55b4c652e..9a66a8151 100644
+index 55b4c652ebff..9a66a815184a 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -6499,11 +6499,7 @@ static int selinux_key_alloc(struct key *k, const struct cred *cred,
@@ -181,7 +181,7 @@ index 55b4c652e..9a66a8151 100644
  	LSM_HOOK_INIT(key_getsecurity, selinux_key_getsecurity),
  #endif
 diff --git a/security/selinux/include/objsec.h b/security/selinux/include/objsec.h
-index 848ba2492..96cecdbcd 100644
+index 848ba24921c9..96cecdbcd3fb 100644
 --- a/security/selinux/include/objsec.h
 +++ b/security/selinux/include/objsec.h
 @@ -193,6 +193,13 @@ static inline struct ipc_security_struct *selinux_ipc(
@@ -199,7 +199,7 @@ index 848ba2492..96cecdbcd 100644
  {
  	return sock->sk_security;
 diff --git a/security/smack/smack.h b/security/smack/smack.h
-index 42c36e37b..e50ed4945 100644
+index 42c36e37b0bd..e50ed4945a40 100644
 --- a/security/smack/smack.h
 +++ b/security/smack/smack.h
 @@ -393,6 +393,13 @@ static inline struct smack_known **smack_ipc(const struct kern_ipc_perm *ipc)
@@ -217,7 +217,7 @@ index 42c36e37b..e50ed4945 100644
   * Is the directory transmuting?
   */
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 08bba9c52..53484d698 100644
+index 08bba9c52047..53484d6988f6 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -4174,23 +4174,13 @@ static void smack_inet_csk_clone(struct sock *sk,

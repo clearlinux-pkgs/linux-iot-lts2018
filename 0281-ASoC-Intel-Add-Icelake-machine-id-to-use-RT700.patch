@@ -20,7 +20,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 10 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index b6bc57e5a..42b23c31c 100644
+index b6bc57e5a044..42b23c31c335 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1216,12 +1216,22 @@ static const struct snd_soc_acpi_mach sst_cnl_devdata[] = {

@@ -12,7 +12,7 @@ Signed-off-by: Jason Chen CJ <jason.cj.chen@intel.com>
  2 files changed, 21 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 88fb0faf1..27844c87a 100644
+index 88fb0faf19fc..27844c87a41f 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -87,6 +87,9 @@
@@ -46,7 +46,7 @@ index 88fb0faf1..27844c87a 100644
  	memset(&ic_pt_irq, 0, sizeof(ic_pt_irq));
  	vm = (struct vhm_vm *)filep->private_data;
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index d00b6588f..258ec3982 100644
+index d00b6588f296..258ec3982da9 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -159,4 +159,9 @@ struct ioreq_notify {

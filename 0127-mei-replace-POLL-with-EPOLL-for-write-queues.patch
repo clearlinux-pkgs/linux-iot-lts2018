@@ -22,7 +22,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/misc/mei/main.c b/drivers/misc/mei/main.c
-index 4d77a6ae1..87281b369 100644
+index 4d77a6ae183a..87281b3695e6 100644
 --- a/drivers/misc/mei/main.c
 +++ b/drivers/misc/mei/main.c
 @@ -599,10 +599,10 @@ static __poll_t mei_poll(struct file *file, poll_table *wait)

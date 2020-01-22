@@ -16,7 +16,7 @@ Signed-off-by: Dominik Bozek <dominikx.bozek@intel.com>
  1 file changed, 5 insertions(+), 6 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 016798157..344892e70 100644
+index 01679815791b..344892e70d86 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -326,8 +326,8 @@ static int skl_check_ext_excep_data_avail(struct skl_sst *ctx, int idx)

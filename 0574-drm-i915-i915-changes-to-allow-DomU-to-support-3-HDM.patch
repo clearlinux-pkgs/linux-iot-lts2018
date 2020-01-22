@@ -27,7 +27,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  2 files changed, 21 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_ddi.c b/drivers/gpu/drm/i915/intel_ddi.c
-index 0304a1869..4c3c207d1 100644
+index 0304a18690ea..4c3c207d11d6 100644
 --- a/drivers/gpu/drm/i915/intel_ddi.c
 +++ b/drivers/gpu/drm/i915/intel_ddi.c
 @@ -3548,11 +3548,18 @@ void intel_ddi_init(struct drm_i915_private *dev_priv, enum port port)
@@ -62,7 +62,7 @@ index 0304a1869..4c3c207d1 100644
  			goto err;
  	}
 diff --git a/drivers/gpu/drm/i915/intel_hdmi.c b/drivers/gpu/drm/i915/intel_hdmi.c
-index 192972a7d..a3b6d078c 100644
+index 192972a7d287..a3b6d078ca24 100644
 --- a/drivers/gpu/drm/i915/intel_hdmi.c
 +++ b/drivers/gpu/drm/i915/intel_hdmi.c
 @@ -2182,6 +2182,14 @@ static u8 bxt_port_to_ddc_pin(struct drm_i915_private *dev_priv, enum port port)

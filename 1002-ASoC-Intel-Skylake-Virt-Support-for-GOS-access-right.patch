@@ -37,7 +37,7 @@ Tested-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  6 files changed, 278 insertions(+), 19 deletions(-)
 
 diff --git a/include/uapi/sound/snd_sst_tokens.h b/include/uapi/sound/snd_sst_tokens.h
-index c04dd0418..353899e33 100644
+index c04dd0418173..353899e33a3b 100644
 --- a/include/uapi/sound/snd_sst_tokens.h
 +++ b/include/uapi/sound/snd_sst_tokens.h
 @@ -283,6 +283,13 @@
@@ -68,7 +68,7 @@ index c04dd0418..353899e33 100644
  
  /*
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 573d78bdd..84b9d001e 100644
+index 573d78bdd7f0..84b9d001e35d 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -317,6 +317,10 @@ static u32 linear_gain[] = {
@@ -222,7 +222,7 @@ index 573d78bdd..84b9d001e 100644
  			if (ret < 0)
  				return ret;
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 6d09d8d89..d4b7d595e 100644
+index 6d09d8d891ce..d4b7d595e5fb 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -428,8 +428,16 @@ struct skl_gain_data {
@@ -243,7 +243,7 @@ index 6d09d8d89..d4b7d595e 100644
  	struct skl_module *module;
  	int res_idx;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 55a213575..43d98a587 100644
+index 55a213575230..43d98a587a89 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -32,6 +32,7 @@
@@ -488,7 +488,7 @@ index 55a213575..43d98a587 100644
  
  static int vbe_skl_cfg_hda(const struct skl *sdev, int vm_id,
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index cb3d04edb..5f1819a4d 100644
+index cb3d04edb0ce..5f1819a4de0e 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -27,6 +27,8 @@
@@ -521,7 +521,7 @@ index cb3d04edb..5f1819a4d 100644
  	u32 resource_length;
  	u32 ppcap;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 0ec32be1c..2a6812e1d 100644
+index 0ec32be1cd06..2a6812e1d323 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -41,6 +41,8 @@

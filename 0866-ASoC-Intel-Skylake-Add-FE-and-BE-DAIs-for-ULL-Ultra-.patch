@@ -15,7 +15,7 @@ Reviewed-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  1 file changed, 156 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 7e0d0657f..e94178440 100644
+index 7e0d0657f478..e94178440194 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1181,6 +1181,92 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {

@@ -18,7 +18,7 @@ Tracked-On: PKT-1617
  1 file changed, 4 insertions(+)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index ac950619d..3a8f69215 100644
+index ac950619df9b..3a8f69215871 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -981,6 +981,10 @@ int acrn_ioreq_complete_request(int client_id, uint64_t vcpu,

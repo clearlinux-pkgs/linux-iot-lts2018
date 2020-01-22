@@ -59,7 +59,7 @@ Signed-off-by: Yugang Fan
  10 files changed, 1375 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/drm_file.c b/drivers/gpu/drm/drm_file.c
-index 334addaca..644ae6f9a 100644
+index 334addaca9c5..644ae6f9a13e 100644
 --- a/drivers/gpu/drm/drm_file.c
 +++ b/drivers/gpu/drm/drm_file.c
 @@ -46,6 +46,10 @@
@@ -74,7 +74,7 @@ index 334addaca..644ae6f9a 100644
   * DOC: file operations
   *
 diff --git a/drivers/gpu/drm/drm_internal.h b/drivers/gpu/drm/drm_internal.h
-index 8750f3f02..6b2d7fe6e 100644
+index 8750f3f02b3f..6b2d7fe6efa9 100644
 --- a/drivers/gpu/drm/drm_internal.h
 +++ b/drivers/gpu/drm/drm_internal.h
 @@ -48,6 +48,11 @@ void drm_prime_remove_buf_handle_locked(struct drm_prime_file_private *prime_fpr
@@ -90,7 +90,7 @@ index 8750f3f02..6b2d7fe6e 100644
  void drm_minor_release(struct drm_minor *minor);
  
 diff --git a/drivers/gpu/drm/i915/Kconfig b/drivers/gpu/drm/i915/Kconfig
-index 19dfbf39f..3d25ace13 100644
+index 19dfbf39f6ca..3d25ace132e7 100644
 --- a/drivers/gpu/drm/i915/Kconfig
 +++ b/drivers/gpu/drm/i915/Kconfig
 @@ -84,6 +84,16 @@ config DRM_I915_COMPRESS_ERROR
@@ -111,7 +111,7 @@ index 19dfbf39f..3d25ace13 100644
  	bool "Always enable userptr support"
  	depends on DRM_I915
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 5fa2da278..7a91c1e69 100644
+index 5fa2da278670..7a91c1e6974e 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -1563,6 +1563,10 @@ static void i915_driver_postclose(struct drm_device *dev, struct drm_file *file)
@@ -136,7 +136,7 @@ index 5fa2da278..7a91c1e69 100644
  	.gem_free_object_unlocked = i915_gem_free_object,
  	.gem_vm_ops = &i915_gem_vm_ops,
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 13f693f84..d3a7100b3 100644
+index 13f693f8432d..d3a7100b32f6 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -79,6 +79,9 @@
@@ -241,7 +241,7 @@ index 13f693f84..d3a7100b3 100644
  int  intel_lpe_audio_init(struct drm_i915_private *dev_priv);
  void intel_lpe_audio_teardown(struct drm_i915_private *dev_priv);
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index e61007236..402db0dac 100644
+index e6100723680c..402db0dac1c4 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
 @@ -47,8 +47,852 @@
@@ -1287,7 +1287,7 @@ index e61007236..402db0dac 100644
  	return ret;
  }
 diff --git a/drivers/gpu/drm/i915/i915_gem_object.h b/drivers/gpu/drm/i915/i915_gem_object.h
-index 83e5e01fa..338709b66 100644
+index 83e5e01fa9ea..338709b6640e 100644
 --- a/drivers/gpu/drm/i915/i915_gem_object.h
 +++ b/drivers/gpu/drm/i915/i915_gem_object.h
 @@ -147,6 +147,10 @@ struct drm_i915_gem_object {
@@ -1313,7 +1313,7 @@ index 83e5e01fa..338709b66 100644
  	struct drm_dma_handle *phys_handle;
  
 diff --git a/drivers/gpu/drm/i915/i915_gpu_error.c b/drivers/gpu/drm/i915/i915_gpu_error.c
-index a262a64f5..a80344949 100644
+index a262a64f5625..a803449498f8 100644
 --- a/drivers/gpu/drm/i915/i915_gpu_error.c
 +++ b/drivers/gpu/drm/i915/i915_gpu_error.c
 @@ -91,6 +91,13 @@ static bool __i915_error_ok(struct drm_i915_error_state_buf *e)
@@ -1363,7 +1363,7 @@ index a262a64f5..a80344949 100644
  {
  	int page;
 diff --git a/drivers/gpu/drm/i915/i915_gpu_error.h b/drivers/gpu/drm/i915/i915_gpu_error.h
-index 8710fb18e..821bed7bd 100644
+index 8710fb18ed74..821bed7bd375 100644
 --- a/drivers/gpu/drm/i915/i915_gpu_error.h
 +++ b/drivers/gpu/drm/i915/i915_gpu_error.h
 @@ -307,6 +307,13 @@ struct drm_i915_error_state_buf {
@@ -1381,7 +1381,7 @@ index 8710fb18e..821bed7bd 100644
  __printf(2, 3)
  void i915_error_printf(struct drm_i915_error_state_buf *e, const char *f, ...);
 diff --git a/drivers/gpu/drm/i915/i915_sysfs.c b/drivers/gpu/drm/i915/i915_sysfs.c
-index e5e6f6bb2..4ff644202 100644
+index e5e6f6bb2b05..4ff644202743 100644
 --- a/drivers/gpu/drm/i915/i915_sysfs.c
 +++ b/drivers/gpu/drm/i915/i915_sysfs.c
 @@ -32,6 +32,10 @@

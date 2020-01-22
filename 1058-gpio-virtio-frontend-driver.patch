@@ -31,7 +31,7 @@ Tracked-On: PKT-1852
  create mode 100644 drivers/gpio/gpio-virtio.c
 
 diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
-index ed5122162..3b2baa063 100644
+index ed51221621a5..3b2baa0633b0 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
 @@ -1323,6 +1323,16 @@ config GPIO_SODAVILLE
@@ -52,7 +52,7 @@ index ed5122162..3b2baa063 100644
  
  menu "SPI GPIO expanders"
 diff --git a/drivers/gpio/Makefile b/drivers/gpio/Makefile
-index c256aff66..5e6e98a2c 100644
+index c256aff66a65..5e6e98a2ce97 100644
 --- a/drivers/gpio/Makefile
 +++ b/drivers/gpio/Makefile
 @@ -159,3 +159,4 @@ obj-$(CONFIG_GPIO_ZEVIO)	+= gpio-zevio.o
@@ -62,7 +62,7 @@ index c256aff66..5e6e98a2c 100644
 +obj-$(CONFIG_GPIO_VIRTIO) 	+= gpio-virtio.o
 diff --git a/drivers/gpio/gpio-virtio.c b/drivers/gpio/gpio-virtio.c
 new file mode 100644
-index 000000000..4cb45737e
+index 000000000000..4cb45737e639
 --- /dev/null
 +++ b/drivers/gpio/gpio-virtio.c
 @@ -0,0 +1,401 @@
@@ -468,7 +468,7 @@ index 000000000..4cb45737e
 +MODULE_AUTHOR("Intel Corporation");
 +MODULE_LICENSE("Dual BSD/GPL");
 diff --git a/drivers/virtio/virtio_pci_common.c b/drivers/virtio/virtio_pci_common.c
-index 770de550e..338a43c35 100644
+index 770de550e21a..338a43c35897 100644
 --- a/drivers/virtio/virtio_pci_common.c
 +++ b/drivers/virtio/virtio_pci_common.c
 @@ -524,6 +524,10 @@ static const struct pci_device_id virtio_pci_id_table[] = {

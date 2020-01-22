@@ -19,7 +19,7 @@ Signed-off-by: Fei Jiang <fei.jiang@intel.com>
  6 files changed, 22 insertions(+), 7 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 33b564c07..90968b055 100644
+index 33b564c07c56..90968b05597d 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -1307,6 +1307,7 @@ struct i915_workarounds {
@@ -31,7 +31,7 @@ index 33b564c07..90968b055 100644
  
  /* used in computing the new watermarks state */
 diff --git a/drivers/gpu/drm/i915/i915_pvinfo.h b/drivers/gpu/drm/i915/i915_pvinfo.h
-index eeaa3d506..dc9bdeaa3 100644
+index eeaa3d506d95..dc9bdeaa3147 100644
 --- a/drivers/gpu/drm/i915/i915_pvinfo.h
 +++ b/drivers/gpu/drm/i915/i915_pvinfo.h
 @@ -106,8 +106,9 @@ struct vgt_if {
@@ -46,7 +46,7 @@ index eeaa3d506..dc9bdeaa3 100644
  
  #define vgtif_reg(x) \
 diff --git a/drivers/gpu/drm/i915/i915_vgpu.c b/drivers/gpu/drm/i915/i915_vgpu.c
-index a6cb3e034..c4353c097 100644
+index a6cb3e034dd5..c4353c097a11 100644
 --- a/drivers/gpu/drm/i915/i915_vgpu.c
 +++ b/drivers/gpu/drm/i915/i915_vgpu.c
 @@ -76,6 +76,8 @@ void i915_check_vgpu(struct drm_i915_private *dev_priv)
@@ -59,7 +59,7 @@ index a6cb3e034..c4353c097 100644
  	dev_priv->vgpu.active = true;
  	DRM_INFO("Virtual GPU for Intel GVT-g detected.\n");
 diff --git a/drivers/gpu/drm/i915/intel_atomic.c b/drivers/gpu/drm/i915/intel_atomic.c
-index b04952bac..ec4a73e79 100644
+index b04952bacf77..ec4a73e79709 100644
 --- a/drivers/gpu/drm/i915/intel_atomic.c
 +++ b/drivers/gpu/drm/i915/intel_atomic.c
 @@ -316,7 +316,8 @@ int intel_atomic_setup_scalers(struct drm_i915_private *dev_priv,
@@ -91,7 +91,7 @@ index b04952bac..ec4a73e79 100644
  			scaler_state->scalers[*scaler_id].mode = PS_SCALER_MODE_DYN;
  		}
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 9e9a8c448..ac4d3dbd7 100644
+index 9e9a8c448b4d..ac4d3dbd7b82 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -8761,7 +8761,8 @@ static void skylake_get_pfit_config(struct intel_crtc *crtc,
@@ -117,7 +117,7 @@ index 9e9a8c448..ac4d3dbd7 100644
  
  	scaler_state->scaler_id = -1;
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 1beb040b8..d68c5a855 100644
+index 1beb040b846f..d68c5a855b5a 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -574,6 +574,7 @@ struct intel_initial_plane_config {

@@ -19,7 +19,7 @@ Reviewed-on:
  1 file changed, 38 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 8cc33fbec..52d73a4fc 100644
+index 8cc33fbec030..52d73a4fc917 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -1865,6 +1865,17 @@ static u8 skl_tplg_be_link_type(int dev_type)

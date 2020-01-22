@@ -813,7 +813,7 @@ Reviewed-on:
  create mode 100644 include/trace/events/sdw.h
 
 diff --git a/drivers/Kconfig b/drivers/Kconfig
-index ab4d43923..5af1a08bf 100644
+index ab4d43923c4d..5af1a08bff23 100644
 --- a/drivers/Kconfig
 +++ b/drivers/Kconfig
 @@ -212,6 +212,7 @@ source "drivers/tee/Kconfig"
@@ -825,7 +825,7 @@ index ab4d43923..5af1a08bf 100644
  source "drivers/visorbus/Kconfig"
  
 diff --git a/drivers/Makefile b/drivers/Makefile
-index 578f469f7..a1a8bf6df 100644
+index 578f469f72fb..a1a8bf6df4d3 100644
 --- a/drivers/Makefile
 +++ b/drivers/Makefile
 @@ -186,3 +186,4 @@ obj-$(CONFIG_MULTIPLEXER)	+= mux/
@@ -834,7 +834,7 @@ index 578f469f7..a1a8bf6df 100644
  obj-$(CONFIG_GNSS)		+= gnss/
 +obj-$(CONFIG_SDW)		+= sdw/
 diff --git a/drivers/base/regmap/Kconfig b/drivers/base/regmap/Kconfig
-index 8cd2ac650..d765f3788 100644
+index 8cd2ac650b50..d765f37887c8 100644
 --- a/drivers/base/regmap/Kconfig
 +++ b/drivers/base/regmap/Kconfig
 @@ -49,3 +49,14 @@ config REGMAP_SOUNDWIRE
@@ -853,7 +853,7 @@ index 8cd2ac650..d765f3788 100644
 +	  Enable this if regmap support is required for
 +	  soundwire slave devices.
 diff --git a/drivers/base/regmap/Makefile b/drivers/base/regmap/Makefile
-index f5b4e8851..d78c51ae3 100644
+index f5b4e8851d00..d78c51ae3da2 100644
 --- a/drivers/base/regmap/Makefile
 +++ b/drivers/base/regmap/Makefile
 @@ -16,3 +16,4 @@ obj-$(CONFIG_REGMAP_IRQ) += regmap-irq.o
@@ -863,7 +863,7 @@ index f5b4e8851..d78c51ae3 100644
 +obj-$(CONFIG_REGMAP_SDW) += regmap-sdwint.o
 diff --git a/drivers/base/regmap/regmap-sdwint.c b/drivers/base/regmap/regmap-sdwint.c
 new file mode 100644
-index 000000000..ed8c28db0
+index 000000000000..ed8c28db03b8
 --- /dev/null
 +++ b/drivers/base/regmap/regmap-sdwint.c
 @@ -0,0 +1,252 @@
@@ -1121,7 +1121,7 @@ index 000000000..ed8c28db0
 +MODULE_LICENSE("GPL v2");
 diff --git a/drivers/sdw/Kconfig b/drivers/sdw/Kconfig
 new file mode 100644
-index 000000000..90e954c39
+index 000000000000..90e954c392e0
 --- /dev/null
 +++ b/drivers/sdw/Kconfig
 @@ -0,0 +1,17 @@
@@ -1144,7 +1144,7 @@ index 000000000..90e954c39
 +
 diff --git a/drivers/sdw/Makefile b/drivers/sdw/Makefile
 new file mode 100644
-index 000000000..184682a88
+index 000000000000..184682a88a1a
 --- /dev/null
 +++ b/drivers/sdw/Makefile
 @@ -0,0 +1,5 @@
@@ -1155,7 +1155,7 @@ index 000000000..184682a88
 +obj-$(CONFIG_SDW_MAXIM_SLAVE)		+= sdw_maxim.o
 diff --git a/drivers/sdw/sdw.c b/drivers/sdw/sdw.c
 new file mode 100644
-index 000000000..6a1ff5e59
+index 000000000000..6a1ff5e59401
 --- /dev/null
 +++ b/drivers/sdw/sdw.c
 @@ -0,0 +1,2345 @@
@@ -3506,7 +3506,7 @@ index 000000000..6a1ff5e59
 +MODULE_ALIAS("platform:soundwire");
 diff --git a/drivers/sdw/sdw_bwcalc.c b/drivers/sdw/sdw_bwcalc.c
 new file mode 100644
-index 000000000..9c1ebc329
+index 000000000000..9c1ebc3297d2
 --- /dev/null
 +++ b/drivers/sdw/sdw_bwcalc.c
 @@ -0,0 +1,2366 @@
@@ -5878,7 +5878,7 @@ index 000000000..9c1ebc329
 +EXPORT_SYMBOL_GPL(sdw_bus_calc_bw_dis);
 diff --git a/drivers/sdw/sdw_cnl.c b/drivers/sdw/sdw_cnl.c
 new file mode 100644
-index 000000000..3f3317a67
+index 000000000000..3f3317a6707a
 --- /dev/null
 +++ b/drivers/sdw/sdw_cnl.c
 @@ -0,0 +1,1583 @@
@@ -7467,7 +7467,7 @@ index 000000000..3f3317a67
 +MODULE_AUTHOR("Hardik Shah <hardik.t.shah@intel.com>");
 diff --git a/drivers/sdw/sdw_cnl_priv.h b/drivers/sdw/sdw_cnl_priv.h
 new file mode 100644
-index 000000000..914f7cae2
+index 000000000000..914f7cae2b01
 --- /dev/null
 +++ b/drivers/sdw/sdw_cnl_priv.h
 @@ -0,0 +1,337 @@
@@ -7810,7 +7810,7 @@ index 000000000..914f7cae2
 +#endif /* _LINUX_SDW_CNL_H */
 diff --git a/drivers/sdw/sdw_maxim.c b/drivers/sdw/sdw_maxim.c
 new file mode 100644
-index 000000000..0081c5c00
+index 000000000000..0081c5c00497
 --- /dev/null
 +++ b/drivers/sdw/sdw_maxim.c
 @@ -0,0 +1,146 @@
@@ -7962,7 +7962,7 @@ index 000000000..0081c5c00
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/sdw/sdw_priv.h b/drivers/sdw/sdw_priv.h
 new file mode 100644
-index 000000000..5ec3edc30
+index 000000000000..5ec3edc30d27
 --- /dev/null
 +++ b/drivers/sdw/sdw_priv.h
 @@ -0,0 +1,243 @@
@@ -8210,7 +8210,7 @@ index 000000000..5ec3edc30
 +
 +#endif /* _LINUX_SDW_PRIV_H */
 diff --git a/drivers/soundwire/Kconfig b/drivers/soundwire/Kconfig
-index c7708feaa..97e88e5ba 100644
+index c7708feaa62e..97e88e5ba11f 100644
 --- a/drivers/soundwire/Kconfig
 +++ b/drivers/soundwire/Kconfig
 @@ -5,6 +5,7 @@
@@ -8222,7 +8222,7 @@ index c7708feaa..97e88e5ba 100644
  	  SoundWire is a 2-Pin interface with data and clock line ratified
  	  by the MIPI Alliance. SoundWire is used for transporting data
 diff --git a/include/linux/mod_devicetable.h b/include/linux/mod_devicetable.h
-index 867db9b93..56dba16ab 100644
+index 867db9b9384c..56dba16abb2e 100644
 --- a/include/linux/mod_devicetable.h
 +++ b/include/linux/mod_devicetable.h
 @@ -762,4 +762,17 @@ struct typec_device_id {
@@ -8244,7 +8244,7 @@ index 867db9b93..56dba16ab 100644
 +
  #endif /* LINUX_MOD_DEVICETABLE_H */
 diff --git a/include/linux/regmap.h b/include/linux/regmap.h
-index 379505a53..035129bf1 100644
+index 379505a53722..035129bf1ac5 100644
 --- a/include/linux/regmap.h
 +++ b/include/linux/regmap.h
 @@ -34,6 +34,7 @@ struct regmap_range_cfg;
@@ -8277,7 +8277,7 @@ index 379505a53..035129bf1 100644
   * for each call. No-op if CONFIG_LOCKDEP is not set.
 diff --git a/include/linux/sdw/sdw_cnl.h b/include/linux/sdw/sdw_cnl.h
 new file mode 100644
-index 000000000..acf223cba
+index 000000000000..acf223cba595
 --- /dev/null
 +++ b/include/linux/sdw/sdw_cnl.h
 @@ -0,0 +1,96 @@
@@ -8379,7 +8379,7 @@ index 000000000..acf223cba
 +
 diff --git a/include/linux/sdw/sdw_registers.h b/include/linux/sdw/sdw_registers.h
 new file mode 100644
-index 000000000..1abdf4bf8
+index 000000000000..1abdf4bf863a
 --- /dev/null
 +++ b/include/linux/sdw/sdw_registers.h
 @@ -0,0 +1,157 @@
@@ -8542,7 +8542,7 @@ index 000000000..1abdf4bf8
 +#endif
 diff --git a/include/linux/sdw_bus.h b/include/linux/sdw_bus.h
 new file mode 100644
-index 000000000..01c846b0c
+index 000000000000..01c846b0c695
 --- /dev/null
 +++ b/include/linux/sdw_bus.h
 @@ -0,0 +1,1354 @@
@@ -9902,7 +9902,7 @@ index 000000000..01c846b0c
 +#endif /*  _LINUX_SDW_BUS_H */
 diff --git a/include/trace/events/sdw.h b/include/trace/events/sdw.h
 new file mode 100644
-index 000000000..0c08e58a1
+index 000000000000..0c08e58a18bf
 --- /dev/null
 +++ b/include/trace/events/sdw.h
 @@ -0,0 +1,232 @@

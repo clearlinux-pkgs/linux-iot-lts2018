@@ -19,7 +19,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  1 file changed, 41 insertions(+), 11 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 2985c87fd..8b27ebb8c 100644
+index 2985c87fd387..8b27ebb8c812 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -881,6 +881,11 @@ static struct nhlt_acpi_table *vfe_skl_nhlt_init(struct device *dev)

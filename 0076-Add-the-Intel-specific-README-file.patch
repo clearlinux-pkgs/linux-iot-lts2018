@@ -13,7 +13,7 @@ Signed-off-by: Casey Schaufler <casey.schaufler@intel.com>
 
 diff --git a/README.intel.lsm-stacking b/README.intel.lsm-stacking
 new file mode 100644
-index 000000000..402d16eec
+index 000000000000..402d16eec546
 --- /dev/null
 +++ b/README.intel.lsm-stacking
 @@ -0,0 +1,17 @@

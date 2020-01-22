@@ -12,7 +12,7 @@ Signed-off-by: Chen Meng J <meng.j.chen@intel.com>
  1 file changed, 42 insertions(+), 50 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-buttress.c b/drivers/media/pci/intel/ipu-buttress.c
-index 757aa75a7..9a1ade0f1 100644
+index 757aa75a7108..9a1ade0f111d 100644
 --- a/drivers/media/pci/intel/ipu-buttress.c
 +++ b/drivers/media/pci/intel/ipu-buttress.c
 @@ -1267,24 +1267,12 @@ static void ipu_buttress_read_psys_fused_freqs(struct ipu_device *isp)

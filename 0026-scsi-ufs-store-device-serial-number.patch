@@ -17,7 +17,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  2 files changed, 33 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/scsi/ufs/ufs.h b/drivers/scsi/ufs/ufs.h
-index 348471f55..febed206a 100644
+index 348471f55bf9..febed206a1a7 100644
 --- a/drivers/scsi/ufs/ufs.h
 +++ b/drivers/scsi/ufs/ufs.h
 @@ -614,10 +614,14 @@ struct ufs_dev_info {
@@ -36,7 +36,7 @@ index 348471f55..febed206a 100644
  
  /**
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 78c677f36..b34a5c036 100644
+index 78c677f36842..b34a5c0364df 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
 @@ -43,6 +43,7 @@

@@ -30,7 +30,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/soc-pcm.c b/sound/soc/soc-pcm.c
-index 551bfc581..ddb0377e5 100644
+index 551bfc581fc1..ddb0377e53a8 100644
 --- a/sound/soc/soc-pcm.c
 +++ b/sound/soc/soc-pcm.c
 @@ -1623,6 +1623,8 @@ int dpcm_be_dai_startup(struct snd_soc_pcm_runtime *fe, int stream)

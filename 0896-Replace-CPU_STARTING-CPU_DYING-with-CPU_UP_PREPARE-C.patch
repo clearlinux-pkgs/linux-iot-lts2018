@@ -14,7 +14,7 @@ Signed-off-by: Deng, Wei A <wei.a.deng@intel.com>
  2 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/trusty/trusty-irq.c b/drivers/trusty/trusty-irq.c
-index 2c2a792a3..aeb0918dc 100644
+index 2c2a792a3636..aeb0918dc572 100644
 --- a/drivers/trusty/trusty-irq.c
 +++ b/drivers/trusty/trusty-irq.c
 @@ -280,10 +280,10 @@ static int trusty_irq_cpu_notify(struct notifier_block *nb,
@@ -31,7 +31,7 @@ index 2c2a792a3..aeb0918dc 100644
  		break;
  	}
 diff --git a/drivers/trusty/trusty-virtio.c b/drivers/trusty/trusty-virtio.c
-index f00c4ece0..a48f4f988 100644
+index f00c4ece03bf..a48f4f9884a8 100644
 --- a/drivers/trusty/trusty-virtio.c
 +++ b/drivers/trusty/trusty-virtio.c
 @@ -320,7 +320,7 @@ static struct virtqueue *_find_vq(struct virtio_device *vdev,

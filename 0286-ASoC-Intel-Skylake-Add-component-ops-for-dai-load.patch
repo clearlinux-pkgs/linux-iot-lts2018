@@ -20,7 +20,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 3 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index b8a1d8b90..d17809b33 100644
+index b8a1d8b90fe1..d17809b337ed 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -617,4 +617,7 @@ int skl_tplg_dsp_log_get(struct snd_kcontrol *kcontrol,

@@ -20,7 +20,7 @@ Tracked-On: PKT-1696
  1 file changed, 157 insertions(+), 190 deletions(-)
 
 diff --git a/drivers/acrn/acrn_hvlog.c b/drivers/acrn/acrn_hvlog.c
-index 84e04ee32..65fbcebe0 100644
+index 84e04ee32819..65fbcebe06fb 100644
 --- a/drivers/acrn/acrn_hvlog.c
 +++ b/drivers/acrn/acrn_hvlog.c
 @@ -57,15 +57,18 @@

@@ -16,7 +16,7 @@ Tracked-On: HSDES-1507003653
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 65f2c54c5..f764b2a06 100644
+index 65f2c54c529b..f764b2a06d07 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -534,7 +534,7 @@ static int start_stream_firmware(struct ici_isys_stream *as)

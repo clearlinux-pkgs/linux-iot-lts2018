@@ -24,7 +24,7 @@ Reviewed-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  1 file changed, 4 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm-interface.c b/drivers/char/tpm/tpm-interface.c
-index d9d90628a..ca8e74ae5 100644
+index d9d90628aa51..ca8e74ae52a3 100644
 --- a/drivers/char/tpm/tpm-interface.c
 +++ b/drivers/char/tpm/tpm-interface.c
 @@ -33,10 +33,6 @@

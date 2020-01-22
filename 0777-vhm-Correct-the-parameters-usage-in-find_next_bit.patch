@@ -15,7 +15,7 @@ Tracked-On: PKT-1617
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 3a8f69215..2f37ef958 100644
+index 3a8f69215871..2f37ef958094 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -299,8 +299,9 @@ void acrn_ioreq_clear_request(struct vhm_vm *vm)

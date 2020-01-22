@@ -15,7 +15,7 @@ Signed-off-by: Sanyog Kale <sanyog.r.kale@intel.com>
  7 files changed, 29 insertions(+), 16 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index 2b169b40e..6f9b24c8c 100644
+index 2b169b40e6c4..6f9b24c8c211 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -566,7 +566,7 @@ static struct sst_dsp_device skl_dev = {
@@ -28,7 +28,7 @@ index 2b169b40e..6f9b24c8c 100644
  	struct skl_sst *skl;
  	struct sst_dsp *sst;
 diff --git a/sound/soc/intel/skylake/cnl-sst-dsp.h b/sound/soc/intel/skylake/cnl-sst-dsp.h
-index 323cebc4e..5f0653b36 100644
+index 323cebc4e389..5f0653b36308 100644
 --- a/sound/soc/intel/skylake/cnl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/cnl-sst-dsp.h
 @@ -118,7 +118,7 @@ void cnl_ipc_free(struct sst_generic_ipc *ipc);
@@ -41,7 +41,7 @@ index 323cebc4e..5f0653b36 100644
  void cnl_sst_dsp_cleanup(struct device *dev, struct skl_sst *ctx);
  
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 784d92df7..ae3c6aa55 100644
+index 784d92df7ac3..ae3c6aa5557e 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -516,13 +516,14 @@ static int cnl_ipc_init(struct device *dev, struct skl_sst *cnl)
@@ -110,7 +110,7 @@ index 784d92df7..ae3c6aa55 100644
  		dev_err(cnl->dev, "%s SoundWire masters registration failed\n", __func__);
  		return ret;
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 28d990450..bb7f24286 100644
+index 28d990450463..bb7f24286d30 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -1049,9 +1049,8 @@ int skl_init_dsp(struct skl *skl)
@@ -126,7 +126,7 @@ index 28d990450..bb7f24286 100644
  	if (ret < 0)
  		goto unmap_mmio;
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index 2a3ad2d43..e874e75a1 100644
+index 2a3ad2d43448..e874e75a15fc 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -230,11 +230,11 @@ int skl_dsp_put_core(struct sst_dsp *ctx, unsigned int core_id);
@@ -146,7 +146,7 @@ index 2a3ad2d43..e874e75a1 100644
  int bxt_sst_init_fw(struct device *dev, struct skl_sst *ctx);
  void skl_sst_dsp_cleanup(struct device *dev, struct skl_sst *ctx);
 diff --git a/sound/soc/intel/skylake/skl-sst.c b/sound/soc/intel/skylake/skl-sst.c
-index 5951bbdf1..277e972eb 100644
+index 5951bbdf1f1a..277e972eb858 100644
 --- a/sound/soc/intel/skylake/skl-sst.c
 +++ b/sound/soc/intel/skylake/skl-sst.c
 @@ -528,7 +528,8 @@ static struct sst_dsp_device skl_dev = {
@@ -160,7 +160,7 @@ index 5951bbdf1..277e972eb 100644
  	struct skl_sst *skl;
  	struct sst_dsp *sst;
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 4c7cb272a..2bafc7d40 100644
+index 4c7cb272a029..2bafc7d40cec 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -125,10 +125,10 @@ struct skl_dsp_ops {

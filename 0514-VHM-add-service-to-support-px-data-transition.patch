@@ -25,7 +25,7 @@ Reviewed-on:
  6 files changed, 77 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index f4d2ec2b7..5000ed80e 100644
+index f4d2ec2b7e23..5000ed80e177 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -532,6 +532,46 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -76,7 +76,7 @@ index f4d2ec2b7..5000ed80e 100644
  		pr_warn("Unknown IOCTL 0x%x\n", ioctl_num);
  		ret = 0;
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index d0da22f2a..df87febaf 100644
+index d0da22f2a88b..df87febaf60d 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -82,6 +82,11 @@ inline long hcall_setup_sbuf(unsigned long sbuf_head)
@@ -92,7 +92,7 @@ index d0da22f2a..df87febaf 100644
  {
  	return acrn_hypercall2(HC_VM_SET_MEMMAP, vmid, memmap);
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index f27feb7a3..d48fe80f6 100644
+index f27feb7a3e57..d48fe80f6fab 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -206,4 +206,27 @@ struct acrn_vm_pci_msix_remap {
@@ -124,7 +124,7 @@ index f27feb7a3..d48fe80f6 100644
 +
  #endif /* ACRN_COMMON_H */
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 411f197f7..d2da1a760 100644
+index 411f197f7f3a..d2da1a760783 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -106,6 +106,10 @@
@@ -139,7 +139,7 @@ index 411f197f7..d2da1a760 100644
  #define ACRN_INVALID_VMID (-1)
  #define ACRN_INVALID_HPA (-1UL)
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index e56a16c55..237290694 100644
+index e56a16c5518f..2372906946d6 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -144,6 +144,7 @@ inline long hcall_pause_vm(unsigned long vmid);
@@ -151,7 +151,7 @@ index e56a16c55..237290694 100644
  		unsigned long memmap);
  inline long hcall_set_ioreq_buffer(unsigned long vmid,
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index eb8d0d08a..3b05d8228 100644
+index eb8d0d08a89d..3b05d8228e53 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -101,6 +101,10 @@

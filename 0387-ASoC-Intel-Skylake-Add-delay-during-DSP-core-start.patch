@@ -29,7 +29,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 4 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.c b/sound/soc/intel/skylake/skl-sst-dsp.c
-index 4b16e0002..b34f7b73e 100644
+index 4b16e0002cd4..b34f7b73e24e 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.c
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.c
 @@ -17,6 +17,7 @@

@@ -33,7 +33,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  3 files changed, 12 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index 20efc28c3..1a14e4c94 100644
+index 20efc28c380b..1a14e4c94f59 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -854,6 +854,7 @@ void ici_isys_frame_buf_stream_cancel(struct
@@ -53,7 +53,7 @@ index 20efc28c3..1a14e4c94 100644
  
  int ici_isys_frame_buf_add_next(
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index b2090b173..b1224facd 100644
+index b2090b173ccb..b1224facd4a5 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -1377,6 +1377,7 @@ int ici_isys_stream_init(
@@ -90,7 +90,7 @@ index b2090b173..b1224facd 100644
  
  #endif //ICI_ENABLED
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.h b/drivers/media/pci/intel/ici/ici-isys-stream.h
-index 457b123a6..ac30a43d8 100644
+index 457b123a65db..ac30a43d87a4 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.h
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.h
 @@ -30,6 +30,7 @@ struct ici_isys_pixelformat {

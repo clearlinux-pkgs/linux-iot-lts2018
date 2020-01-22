@@ -30,7 +30,7 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  5 files changed, 157 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_engine_cs.c b/drivers/gpu/drm/i915/intel_engine_cs.c
-index 2d1952849..7f3bcbd24 100644
+index 2d1952849d69..7f3bcbd2451b 100644
 --- a/drivers/gpu/drm/i915/intel_engine_cs.c
 +++ b/drivers/gpu/drm/i915/intel_engine_cs.c
 @@ -468,6 +468,9 @@ static void intel_engine_init_execlist(struct intel_engine_cs *engine)
@@ -52,7 +52,7 @@ index 2d1952849..7f3bcbd24 100644
  		tasklet_kill(&engine->execlists.tasklet);
  
 diff --git a/drivers/gpu/drm/i915/intel_guc_submission.c b/drivers/gpu/drm/i915/intel_guc_submission.c
-index 4aa5e6463..84e79f8bf 100644
+index 4aa5e6463e7b..84e79f8bf344 100644
 --- a/drivers/gpu/drm/i915/intel_guc_submission.c
 +++ b/drivers/gpu/drm/i915/intel_guc_submission.c
 @@ -748,6 +748,7 @@ static bool __guc_dequeue(struct intel_engine_cs *engine)
@@ -64,7 +64,7 @@ index 4aa5e6463..84e79f8bf 100644
  	if (submit)
  		port_assign(port, last);
 diff --git a/drivers/gpu/drm/i915/intel_lrc.c b/drivers/gpu/drm/i915/intel_lrc.c
-index bf537224e..6f8b58ef7 100644
+index bf537224e505..6f8b58ef7c26 100644
 --- a/drivers/gpu/drm/i915/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/intel_lrc.c
 @@ -616,6 +616,52 @@ static void inject_preempt_context(struct intel_engine_cs *engine)
@@ -214,7 +214,7 @@ index bf537224e..6f8b58ef7 100644
  	logical_ring_default_irqs(engine);
  
 diff --git a/drivers/gpu/drm/i915/intel_ringbuffer.h b/drivers/gpu/drm/i915/intel_ringbuffer.h
-index 83833ce2a..5b169112c 100644
+index 83833ce2a4f0..5b169112c226 100644
 --- a/drivers/gpu/drm/i915/intel_ringbuffer.h
 +++ b/drivers/gpu/drm/i915/intel_ringbuffer.h
 @@ -276,8 +276,9 @@ struct intel_engine_execlists {
@@ -240,7 +240,7 @@ index 83833ce2a..5b169112c 100644
  	 * @csb_write_reset: reset value for CSB write pointer
  	 *
 diff --git a/drivers/gpu/drm/i915/selftests/intel_lrc.c b/drivers/gpu/drm/i915/selftests/intel_lrc.c
-index 582566fae..dc8e217f8 100644
+index 582566faef09..dc8e217f8358 100644
 --- a/drivers/gpu/drm/i915/selftests/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/selftests/intel_lrc.c
 @@ -565,6 +565,70 @@ static int live_preempt_hang(void *arg)

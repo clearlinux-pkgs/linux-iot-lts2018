@@ -17,7 +17,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  1 file changed, 14 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-request-queue.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-request-queue.c
-index cee9b5551..53e059c62 100644
+index cee9b55518c1..53e059c62a7c 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-request-queue.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-request-queue.c
 @@ -47,11 +47,23 @@ void ipu4_virtio_be_req_queue_free(void)

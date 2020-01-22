@@ -20,7 +20,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  2 files changed, 21 insertions(+)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
-index b1ff094ea..b96e55ae2 100644
+index b1ff094eab4a..b96e55ae2d18 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 @@ -29,6 +29,7 @@ static struct ici_isys_pipeline_device *pipeline_dev;
@@ -62,7 +62,7 @@ index b1ff094ea..b96e55ae2 100644
  	if (pipeline_dev)
  		kfree((void *)pipeline_dev);
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
-index f2f57b086..d641e405d 100644
+index f2f57b086739..d641e405d5a9 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 @@ -45,6 +45,7 @@ extern long virt_psys_compat_ioctl32(struct file *file, unsigned int cmd,

@@ -13,7 +13,7 @@ Signed-off-by: Zhang, Qi <qi1.zhang@intel.com>
  1 file changed, 7 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index f37a1a58d..881924f88 100755
+index f37a1a58dce8..881924f88e4f 100755
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -72,13 +72,18 @@ static inline ulong smc_evmm(ulong r0, ulong r1, ulong r2, ulong r3)

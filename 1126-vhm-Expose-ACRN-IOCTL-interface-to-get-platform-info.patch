@@ -20,7 +20,7 @@ Acked-by: Eddie Dong <eddie.dong@intel.com>
  5 files changed, 38 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index f7fb72aa2..7018e7654 100644
+index f7fb72aa2947..7018e7654de2 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -188,6 +188,18 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -63,7 +63,7 @@ index f7fb72aa2..7018e7654 100644
  			api_version.major_version, api_version.minor_version);
  	} else {
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 4f6a133cd..7f4b68a0d 100644
+index 4f6a133cd6d0..7f4b68a0d555 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -63,6 +63,11 @@ inline long hcall_get_api_version(unsigned long api_version)
@@ -79,7 +79,7 @@ index 4f6a133cd..7f4b68a0d 100644
  {
  	return acrn_hypercall1(HC_CREATE_VM, vminfo);
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 0dec250bb..3f9d56d35 100644
+index 0dec250bb47b..3f9d56d35fc2 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -74,6 +74,7 @@
@@ -113,7 +113,7 @@ index 0dec250bb..3f9d56d35 100644
  enum profiling_cmd_type {
  	PROFILING_MSR_OPS = 0,
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 33acc64a4..8e5e732e4 100644
+index 33acc64a4cbf..8e5e732e40d2 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -139,6 +139,7 @@ static inline long acrn_hypercall4(unsigned long hcall_id, unsigned long param1,
@@ -125,7 +125,7 @@ index 33acc64a4..8e5e732e4 100644
  inline long hcall_create_vm(unsigned long vminfo);
  inline long hcall_start_vm(unsigned long vmid);
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index a98b00376..f359de8cd 100644
+index a98b003762b5..f359de8cdc19 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -64,6 +64,7 @@

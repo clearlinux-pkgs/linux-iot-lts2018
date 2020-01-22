@@ -18,7 +18,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  1 file changed, 13 insertions(+), 10 deletions(-)
 
 diff --git a/drivers/media/i2c/ici/max9286_ici.c b/drivers/media/i2c/ici/max9286_ici.c
-index 3400cc119..4345c705b 100644
+index 3400cc11946f..4345c705b081 100644
 --- a/drivers/media/i2c/ici/max9286_ici.c
 +++ b/drivers/media/i2c/ici/max9286_ici.c
 @@ -486,17 +486,20 @@ static int max9286_get_selection(struct ici_isys_node *node, struct ici_pad_sele

@@ -20,7 +20,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 5 insertions(+)
 
 diff --git a/sound/soc/intel/Kconfig b/sound/soc/intel/Kconfig
-index 487e4445f..9d2be10e4 100644
+index 487e4445f6a0..9d2be10e484c 100644
 --- a/sound/soc/intel/Kconfig
 +++ b/sound/soc/intel/Kconfig
 @@ -132,6 +132,11 @@ config SND_SOC_INTEL_CNL_FPGA

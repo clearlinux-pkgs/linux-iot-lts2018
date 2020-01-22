@@ -30,7 +30,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/char/rpmb/mux/key_sbl.h
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index e6b6ec974..9298d9523 100644
+index e6b6ec974eeb..9298d95230a6 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -741,6 +741,10 @@
@@ -45,7 +45,7 @@ index e6b6ec974..9298d9523 100644
  			time. See
  			Documentation/admin-guide/dynamic-debug-howto.rst for
 diff --git a/drivers/char/rpmb/mux/Makefile b/drivers/char/rpmb/mux/Makefile
-index 23234a88a..94999dd46 100644
+index 23234a88aa73..94999dd468db 100644
 --- a/drivers/char/rpmb/mux/Makefile
 +++ b/drivers/char/rpmb/mux/Makefile
 @@ -1,5 +1,8 @@
@@ -59,7 +59,7 @@ index 23234a88a..94999dd46 100644
  ccflags-y += -D__CHECK_ENDIAN__
 diff --git a/drivers/char/rpmb/mux/key.c b/drivers/char/rpmb/mux/key.c
 new file mode 100644
-index 000000000..e9df04765
+index 000000000000..e9df04765ad7
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/key.c
 @@ -0,0 +1,58 @@
@@ -123,7 +123,7 @@ index 000000000..e9df04765
 +}
 diff --git a/drivers/char/rpmb/mux/key.h b/drivers/char/rpmb/mux/key.h
 new file mode 100644
-index 000000000..8c17fbcfc
+index 000000000000..8c17fbcfc820
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/key.h
 @@ -0,0 +1,24 @@
@@ -153,7 +153,7 @@ index 000000000..8c17fbcfc
 +#endif /* !__RPMB_KEY_H__ */
 diff --git a/drivers/char/rpmb/mux/key_abl.c b/drivers/char/rpmb/mux/key_abl.c
 new file mode 100644
-index 000000000..bcb735562
+index 000000000000..bcb735562218
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/key_abl.c
 @@ -0,0 +1,143 @@
@@ -302,7 +302,7 @@ index 000000000..bcb735562
 +}
 diff --git a/drivers/char/rpmb/mux/key_abl.h b/drivers/char/rpmb/mux/key_abl.h
 new file mode 100644
-index 000000000..0d2a09abd
+index 000000000000..0d2a09abde60
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/key_abl.h
 @@ -0,0 +1,9 @@
@@ -317,7 +317,7 @@ index 000000000..0d2a09abd
 +#endif /* !__RPMB_KEY_ABL__ */
 diff --git a/drivers/char/rpmb/mux/key_sbl.c b/drivers/char/rpmb/mux/key_sbl.c
 new file mode 100644
-index 000000000..8a238ac7f
+index 000000000000..8a238ac7f5ae
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/key_sbl.c
 @@ -0,0 +1,166 @@
@@ -489,7 +489,7 @@ index 000000000..8a238ac7f
 +}
 diff --git a/drivers/char/rpmb/mux/key_sbl.h b/drivers/char/rpmb/mux/key_sbl.h
 new file mode 100644
-index 000000000..0483c1760
+index 000000000000..0483c176012c
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/key_sbl.h
 @@ -0,0 +1,9 @@
@@ -503,7 +503,7 @@ index 000000000..0483c1760
 +
 +#endif /* __RPMB_KEY_SBL__ */
 diff --git a/drivers/char/rpmb/mux/mux.c b/drivers/char/rpmb/mux/mux.c
-index 55901197d..c7caa0406 100644
+index 55901197d0a5..c7caa0406906 100644
 --- a/drivers/char/rpmb/mux/mux.c
 +++ b/drivers/char/rpmb/mux/mux.c
 @@ -5,6 +5,8 @@

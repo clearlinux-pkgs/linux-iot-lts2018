@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 15 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
-index b7d0558bc..82bebae98 100644
+index b7d0558bcae2..82bebae98837 100644
 --- a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 @@ -1199,7 +1199,12 @@ static struct crlmodule_platform_data ox03a10_pdata = {
@@ -47,7 +47,7 @@ index b7d0558bc..82bebae98 100644
  #endif
  
 diff --git a/include/media/crlmodule.h b/include/media/crlmodule.h
-index ead1beba7..91650c1a9 100644
+index ead1beba73f2..91650c1a992a 100644
 --- a/include/media/crlmodule.h
 +++ b/include/media/crlmodule.h
 @@ -29,7 +29,9 @@ struct crlmodule_platform_data {

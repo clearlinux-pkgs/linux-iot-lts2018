@@ -16,7 +16,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  3 files changed, 308 insertions(+), 71 deletions(-)
 
 diff --git a/drivers/media/i2c/ti960-reg.h b/drivers/media/i2c/ti960-reg.h
-index 260c17884..0f34651aa 100644
+index 260c17884c7d..0f34651aaa03 100644
 --- a/drivers/media/i2c/ti960-reg.h
 +++ b/drivers/media/i2c/ti960-reg.h
 @@ -9,6 +9,11 @@ struct ti960_register_write {
@@ -85,7 +85,7 @@ index 260c17884..0f34651aa 100644
  #define TI960_MIPI_1600MBPS	0x0
  #define TI960_CSI_ENABLE	0x1
 diff --git a/drivers/media/i2c/ti960.c b/drivers/media/i2c/ti960.c
-index 531611bb1..7ea1d578d 100644
+index 531611bb11b1..7ea1d578d1df 100644
 --- a/drivers/media/i2c/ti960.c
 +++ b/drivers/media/i2c/ti960.c
 @@ -25,6 +25,7 @@ struct ti960_subdev {
@@ -620,7 +620,7 @@ index 531611bb1..7ea1d578d 100644
  
  	va->regmap8 = devm_regmap_init_i2c(client,
 diff --git a/include/media/ti960.h b/include/media/ti960.h
-index 60e134fce..fe655c216 100644
+index 60e134fce6c5..fe655c216b41 100644
 --- a/include/media/ti960.h
 +++ b/include/media/ti960.h
 @@ -19,11 +19,16 @@

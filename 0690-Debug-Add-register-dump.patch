@@ -12,7 +12,7 @@ Signed-off-by: Duan, YayongX
  1 file changed, 17 insertions(+), 1 deletion(-)
 
 diff --git a/arch/x86/kernel/smp.c b/arch/x86/kernel/smp.c
-index b2b87b91f..5e8ebdfd4 100644
+index b2b87b91f336..5e8ebdfd4456 100644
 --- a/arch/x86/kernel/smp.c
 +++ b/arch/x86/kernel/smp.c
 @@ -117,6 +117,19 @@

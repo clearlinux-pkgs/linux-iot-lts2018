@@ -20,7 +20,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
 
 diff --git a/drivers/media/i2c/crlmodule/crl_ov495_configuration.h b/drivers/media/i2c/crlmodule/crl_ov495_configuration.h
 new file mode 100644
-index 000000000..6884cf503
+index 000000000000..6884cf503bb4
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule/crl_ov495_configuration.h
 @@ -0,0 +1,284 @@
@@ -309,7 +309,7 @@ index 000000000..6884cf503
 +
 +#endif  /* __CRLMODULE_OV495_CONFIGURATION_H_ */
 diff --git a/drivers/media/i2c/crlmodule/crlmodule-data.c b/drivers/media/i2c/crlmodule/crlmodule-data.c
-index d4143a53a..2c07ca06a 100644
+index d4143a53a7fa..2c07ca06a83a 100644
 --- a/drivers/media/i2c/crlmodule/crlmodule-data.c
 +++ b/drivers/media/i2c/crlmodule/crlmodule-data.c
 @@ -32,6 +32,7 @@
@@ -329,7 +329,7 @@ index d4143a53a..2c07ca06a 100644
  
  /*
 diff --git a/drivers/media/i2c/ti960.c b/drivers/media/i2c/ti960.c
-index 2761dbe17..12cacab51 100644
+index 2761dbe17bc8..12cacab51eef 100644
 --- a/drivers/media/i2c/ti960.c
 +++ b/drivers/media/i2c/ti960.c
 @@ -76,6 +76,8 @@ static const u8 ti960_op_sys_clock_reg_val[] = {
@@ -367,7 +367,7 @@ index 2761dbe17..12cacab51 100644
  
  	va->regmap8 = devm_regmap_init_i2c(client,
 diff --git a/drivers/media/platform/intel/Kconfig b/drivers/media/platform/intel/Kconfig
-index 31e117e22..95e15c58c 100644
+index 31e117e225a7..95e15c58cfef 100644
 --- a/drivers/media/platform/intel/Kconfig
 +++ b/drivers/media/platform/intel/Kconfig
 @@ -94,6 +94,12 @@ config INTEL_IPU4_OX03A10
@@ -384,7 +384,7 @@ index 31e117e22..95e15c58c 100644
          depends on VIDEO_INTEL_IPU && VIDEO_INTEL_ICI
          bool "Enable built in platform data for Broxton-P ICI driver"
 diff --git a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
-index de76065d6..b7d0558bc 100644
+index de76065d6699..b7d0558bcae2 100644
 --- a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 @@ -1203,6 +1203,29 @@ static struct crlmodule_platform_data ox03a10_pdata = {

@@ -13,7 +13,7 @@ Signed-off-by: Sinha, Mohit <mohit.sinha@intel.com>
  1 file changed, 21 insertions(+)
 
 diff --git a/sound/soc/intel/boards/bxt_tdf8532.c b/sound/soc/intel/boards/bxt_tdf8532.c
-index 027060b17..1e2b8be00 100644
+index 027060b17322..1e2b8be00127 100644
 --- a/sound/soc/intel/boards/bxt_tdf8532.c
 +++ b/sound/soc/intel/boards/bxt_tdf8532.c
 @@ -78,6 +78,27 @@ static const struct snd_soc_dapm_route broxton_tdf8532_map[] = {

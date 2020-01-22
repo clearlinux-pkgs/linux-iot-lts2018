@@ -16,7 +16,7 @@ Signed-off-by: Wood, Brian J <brian.j.wood@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/Makefile b/drivers/Makefile
-index b45c73684..78ef69c8a 100644
+index b45c73684496..78ef69c8ac9d 100644
 --- a/drivers/Makefile
 +++ b/drivers/Makefile
 @@ -58,6 +58,8 @@ obj-y				+= char/

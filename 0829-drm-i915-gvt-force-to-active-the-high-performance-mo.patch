@@ -23,7 +23,7 @@ Tracked-On: PKT-1642
  2 files changed, 20 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 7da1e9bad..9f3fed274 100644
+index 7da1e9bad5cc..9f3fed27445f 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -370,6 +370,7 @@ struct intel_gvt {
@@ -35,7 +35,7 @@ index 7da1e9bad..9f3fed274 100644
  
  static inline struct intel_gvt *to_gvt(struct drm_i915_private *i915)
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index af508d586..b025875ee 100644
+index af508d5860ea..b025875eee93 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -265,6 +265,22 @@ static void save_ring_hw_state(struct intel_vgpu *vgpu, int ring_id)

@@ -18,7 +18,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  5 files changed, 65 insertions(+), 11 deletions(-)
 
 diff --git a/Documentation/ABI/testing/sysfs-class-mei b/Documentation/ABI/testing/sysfs-class-mei
-index 17d7444a2..cb135822f 100644
+index 17d7444a2397..cb135822f2c0 100644
 --- a/Documentation/ABI/testing/sysfs-class-mei
 +++ b/Documentation/ABI/testing/sysfs-class-mei
 @@ -65,3 +65,18 @@ Description:	Display the ME firmware version.
@@ -41,7 +41,7 @@ index 17d7444a2..cb135822f 100644
 +		POWER_DOWN
 +		POWER_UP
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 657973beb..d46960fb5 100644
+index 657973bebcbf..d46960fb50dd 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -720,7 +720,7 @@ int mei_cl_unlink(struct mei_cl *cl)
@@ -54,7 +54,7 @@ index 657973beb..d46960fb5 100644
  
  	schedule_work(&dev->bus_rescan_work);
 diff --git a/drivers/misc/mei/init.c b/drivers/misc/mei/init.c
-index eb026e2a0..d75173dc1 100644
+index eb026e2a0537..d75173dc1b23 100644
 --- a/drivers/misc/mei/init.c
 +++ b/drivers/misc/mei/init.c
 @@ -133,12 +133,12 @@ int mei_reset(struct mei_device *dev)
@@ -150,7 +150,7 @@ index eb026e2a0..d75173dc1 100644
  	dev->open_handle_count = 0;
  
 diff --git a/drivers/misc/mei/main.c b/drivers/misc/mei/main.c
-index 59a6a7a19..86d81cb85 100644
+index 59a6a7a19621..86d81cb855fe 100644
 --- a/drivers/misc/mei/main.c
 +++ b/drivers/misc/mei/main.c
 @@ -1014,12 +1014,36 @@ static ssize_t fw_ver_show(struct device *device,
@@ -200,7 +200,7 @@ index 59a6a7a19..86d81cb85 100644
  	if (ret) {
  		dev_err(clsdev, "cannot register debugfs ret = %d\n", ret);
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index f385c27de..07147c31b 100644
+index f385c27de023..07147c31b102 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -469,6 +469,8 @@ struct mei_fw_version {

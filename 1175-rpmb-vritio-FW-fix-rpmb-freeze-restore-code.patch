@@ -14,7 +14,7 @@ Tracked-On: PKT-2681
  1 file changed, 59 insertions(+), 33 deletions(-)
 
 diff --git a/drivers/char/rpmb/virtio_rpmb.c b/drivers/char/rpmb/virtio_rpmb.c
-index ef3487c98..0fd81a80c 100644
+index ef3487c98805..0fd81a80c257 100644
 --- a/drivers/char/rpmb/virtio_rpmb.c
 +++ b/drivers/char/rpmb/virtio_rpmb.c
 @@ -57,8 +57,8 @@ static int rpmb_virtio_cmd_seq(struct device *dev, u8 target,

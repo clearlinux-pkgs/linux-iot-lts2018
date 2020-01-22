@@ -18,7 +18,7 @@ Signed-off-by: Pawel Furtak <pawel.furtak@intel.com>
  3 files changed, 8 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-card.c b/sound/soc/intel/skylake/virtio/skl-virtio-card.c
-index fa17f67b4..baf37a410 100644
+index fa17f67b4473..baf37a4107f0 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-card.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-card.c
 @@ -341,7 +341,7 @@ static int skl_virtio_card_probe(struct platform_device *pdev)
@@ -31,7 +31,7 @@ index fa17f67b4..baf37a410 100644
  }
  
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 20a37d48d..ae161266c 100644
+index 20a37d48d061..ae161266c78b 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -806,6 +806,12 @@ static int vfe_platform_register(struct snd_skl_vfe *vfe, struct device *dev)
@@ -48,7 +48,7 @@ index 20a37d48d..ae161266c 100644
  {
  	struct snd_soc_acpi_mach *mach = skl->mach;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio.h b/sound/soc/intel/skylake/virtio/skl-virtio.h
-index d2a031107..00b0cee28 100644
+index d2a031107630..00b0cee287e2 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio.h
 @@ -22,6 +22,7 @@ extern void vfe_sst_dsp_cleanup(struct device *dev, struct skl_sst *ctx);

@@ -19,7 +19,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/sound/soc/intel/Kconfig b/sound/soc/intel/Kconfig
-index c08d87821..e6334dda6 100644
+index c08d87821c9f..e6334dda6237 100644
 --- a/sound/soc/intel/Kconfig
 +++ b/sound/soc/intel/Kconfig
 @@ -49,7 +49,7 @@ config SND_SOC_INTEL_SST_FIRMWARE

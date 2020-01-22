@@ -17,7 +17,7 @@ Signed-off-by: Dominik Bozek <dominikx.bozek@intel.com>
  2 files changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/common/sst-ipc.c b/sound/soc/intel/common/sst-ipc.c
-index 3465eca8e..07dabab25 100644
+index 3465eca8ed1d..07dabab2553c 100644
 --- a/sound/soc/intel/common/sst-ipc.c
 +++ b/sound/soc/intel/common/sst-ipc.c
 @@ -126,7 +126,7 @@ static int ipc_tx_message(struct sst_generic_ipc *ipc, u64 header,
@@ -30,7 +30,7 @@ index 3465eca8e..07dabab25 100644
          } else {
                  spin_unlock_irqrestore(&ipc->dsp->spinlock, flags);
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index 891d6ca83..69b842f7f 100644
+index 891d6ca8325b..69b842f7f918 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -823,7 +823,8 @@ irqreturn_t skl_dsp_irq_thread_handler(int irq, void *context)

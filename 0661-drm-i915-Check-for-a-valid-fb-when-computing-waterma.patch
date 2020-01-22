@@ -15,7 +15,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 5 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 36ba0394f..b218b1a2c 100644
+index 36ba0394f6ca..b218b1a2c7f8 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -4554,6 +4554,11 @@ skl_compute_plane_wm_params(const struct drm_i915_private *dev_priv,

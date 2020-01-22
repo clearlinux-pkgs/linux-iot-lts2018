@@ -16,7 +16,7 @@ Reviewed-on:
  2 files changed, 24 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/sdw/sdw_cnl.c b/drivers/sdw/sdw_cnl.c
-index a5fc6db79..274966572 100644
+index a5fc6db79f83..274966572499 100644
 --- a/drivers/sdw/sdw_cnl.c
 +++ b/drivers/sdw/sdw_cnl.c
 @@ -1365,11 +1365,32 @@ static int cnl_sdw_port_activate_ch_post(struct sdw_master *mstr,
@@ -54,7 +54,7 @@ index a5fc6db79..274966572 100644
  }
  
 diff --git a/drivers/sdw/sdw_cnl_priv.h b/drivers/sdw/sdw_cnl_priv.h
-index c99433882..8e9d68c2b 100644
+index c99433882dff..8e9d68c2bc2c 100644
 --- a/drivers/sdw/sdw_cnl_priv.h
 +++ b/drivers/sdw/sdw_cnl_priv.h
 @@ -255,11 +255,12 @@

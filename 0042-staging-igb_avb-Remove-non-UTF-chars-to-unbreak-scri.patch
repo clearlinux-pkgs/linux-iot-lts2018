@@ -9,7 +9,7 @@ Signed-off-by: Tarun Vyas <tarun.vyas@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/staging/igb_avb/igb_avb.7 b/drivers/staging/igb_avb/igb_avb.7
-index ed8dba103..d17b3de3c 100755
+index ed8dba1036ad..d17b3de3c61e 100755
 --- a/drivers/staging/igb_avb/igb_avb.7
 +++ b/drivers/staging/igb_avb/igb_avb.7
 @@ -202,7 +202,7 @@ NOTE: EEE support requires autonegotiation.

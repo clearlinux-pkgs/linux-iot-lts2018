@@ -18,7 +18,7 @@ Tracked-On: OAM-76768
  2 files changed, 14 insertions(+), 10 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 374d5d7ef..faee11b06 100644
+index 374d5d7ef8bc..faee11b064d8 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -542,17 +542,19 @@ static int vbe_skl_pcm_close(const struct skl *sdev, int vm_id,
@@ -60,7 +60,7 @@ index 374d5d7ef..faee11b06 100644
  	u32 idx, num = ARRAY_SIZE(kctl_domain_map);
  	u32 size = strnlen(ctl_id->name, sizeof(ctl_id->name));
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio.h b/sound/soc/intel/skylake/virtio/skl-virtio.h
-index 390d31885..d2a031107 100644
+index 390d31885437..d2a031107630 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio.h
 @@ -11,6 +11,8 @@

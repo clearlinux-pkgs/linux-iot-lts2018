@@ -15,7 +15,7 @@ Signed-off-by: Mateusz Kalinowski <mateuszx.kalinowski@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/soc-core.c b/sound/soc/soc-core.c
-index 18a7c5e68..a5a5f633d 100644
+index a7048d8725e3..51f2e216ecca 100644
 --- a/sound/soc/soc-core.c
 +++ b/sound/soc/soc-core.c
 @@ -1243,7 +1243,8 @@ static int soc_probe_component(struct snd_soc_card *card,

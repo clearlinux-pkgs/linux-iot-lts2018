@@ -23,7 +23,7 @@ Tracked-On: PKT-1657
  1 file changed, 17 insertions(+)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
-index 62f83cc45..8fc3a56ff 100644
+index 62f83cc45f36..8fc3a56ffee6 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 @@ -450,6 +450,23 @@ static int hyper_dmabuf_export_fd_ioctl(struct file *filp, void *data)

@@ -25,7 +25,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  create mode 100644 drivers/hwtracing/stm/p_sys-t.c
 
 diff --git a/drivers/hwtracing/stm/Kconfig b/drivers/hwtracing/stm/Kconfig
-index 262e7891f..752dd6674 100644
+index 262e7891fb97..752dd66742bf 100644
 --- a/drivers/hwtracing/stm/Kconfig
 +++ b/drivers/hwtracing/stm/Kconfig
 @@ -26,6 +26,20 @@ config STM_PROTO_BASIC
@@ -50,7 +50,7 @@ index 262e7891f..752dd6674 100644
  	tristate "Dummy STM driver"
  	help
 diff --git a/drivers/hwtracing/stm/Makefile b/drivers/hwtracing/stm/Makefile
-index 1571de66e..1692fcd29 100644
+index 1571de66eca4..1692fcd29277 100644
 --- a/drivers/hwtracing/stm/Makefile
 +++ b/drivers/hwtracing/stm/Makefile
 @@ -4,8 +4,10 @@ obj-$(CONFIG_STM)	+= stm_core.o
@@ -66,7 +66,7 @@ index 1571de66e..1692fcd29 100644
  
 diff --git a/drivers/hwtracing/stm/p_sys-t.c b/drivers/hwtracing/stm/p_sys-t.c
 new file mode 100644
-index 000000000..ffeb057b7
+index 000000000000..ffeb057b777c
 --- /dev/null
 +++ b/drivers/hwtracing/stm/p_sys-t.c
 @@ -0,0 +1,302 @@

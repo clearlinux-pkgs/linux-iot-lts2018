@@ -85,7 +85,7 @@ Signed-off-by: Vinicius Costa Gomes <vinicius.gomes@intel.com>
  2 files changed, 17 insertions(+), 10 deletions(-)
 
 diff --git a/drivers/staging/igb_avb/igb.h b/drivers/staging/igb_avb/igb.h
-index c8bbf307f..4482f7407 100644
+index c8bbf307f908..4482f7407955 100644
 --- a/drivers/staging/igb_avb/igb.h
 +++ b/drivers/staging/igb_avb/igb.h
 @@ -562,6 +562,8 @@ struct igb_adapter {
@@ -98,7 +98,7 @@ index c8bbf307f..4482f7407 100644
  	u32 rx_itr_setting;
  	u32 tx_itr_setting;
 diff --git a/drivers/staging/igb_avb/igb_main.c b/drivers/staging/igb_avb/igb_main.c
-index 8d772cfbe..08dbf5d5a 100644
+index 8d772cfbe397..08dbf5d5a481 100644
 --- a/drivers/staging/igb_avb/igb_main.c
 +++ b/drivers/staging/igb_avb/igb_main.c
 @@ -707,7 +707,6 @@ static void igb_configure_msix(struct igb_adapter *adapter)

@@ -28,7 +28,7 @@ Tested-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  9 files changed, 188 insertions(+), 52 deletions(-)
 
 diff --git a/include/uapi/sound/snd_sst_tokens.h b/include/uapi/sound/snd_sst_tokens.h
-index 353899e33..70b141d8b 100644
+index 353899e33a3b..70b141d8b5a7 100644
 --- a/include/uapi/sound/snd_sst_tokens.h
 +++ b/include/uapi/sound/snd_sst_tokens.h
 @@ -283,7 +283,13 @@
@@ -57,7 +57,7 @@ index 353899e33..70b141d8b 100644
  	SKL_TKN_STR_CTL_NAME,
  	SKL_TKN_MAX = SKL_TKN_STR_CTL_NAME,
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 744617279..39cd014da 100644
+index 744617279cb0..39cd014dad4a 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -1243,6 +1243,7 @@ int skl_init_dsp(struct skl *skl)
@@ -69,7 +69,7 @@ index 744617279..39cd014da 100644
  	/* Set DMA clock controls */
  	ret = skl_dsp_set_dma_clk_controls(skl->skl_sst);
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index bff6c0c94..551598ea8 100644
+index bff6c0c948b1..551598ea8e6d 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -325,6 +325,8 @@ struct skl_sst {
@@ -82,7 +82,7 @@ index bff6c0c94..551598ea8 100644
  
  struct skl_ipc_init_instance_msg {
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index d0d4092b5..0553c096e 100644
+index d0d4092b5807..0553c096e847 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -3483,6 +3483,23 @@ static int skl_tplg_fill_pin(struct device *dev,
@@ -208,7 +208,7 @@ index d0d4092b5..0553c096e 100644
  		dev_err(dev, "Not a manifest token %d\n", tkn_elem->token);
  		return -EINVAL;
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index d4b7d595e..11fa46ecc 100644
+index d4b7d595e5fb..11fa46ecca19 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -428,6 +428,13 @@ struct skl_gain_data {
@@ -226,7 +226,7 @@ index d4b7d595e..11fa46ecc 100644
  	unsigned char name[SNDRV_CTL_ELEM_ID_NAME_MAXLEN];
  	u32 domain_id;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 8125cbde2..5f59c373c 100644
+index 8125cbde26df..5f59c373c8d1 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -90,6 +90,33 @@ struct snd_soc_dapm_widget *vbe_skl_find_kcontrol_widget(
@@ -327,7 +327,7 @@ index 8125cbde2..5f59c373c 100644
  		dev_err(vbe->dev, "Unknown command %d for tplg [%s].\n",
  			msg->header->cmd);
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index 0ddb833ae..bde10f93d 100644
+index 0ddb833aebc8..bde10f93df8a 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -28,6 +28,7 @@
@@ -359,7 +359,7 @@ index 0ddb833ae..bde10f93d 100644
  
  	VFE_MSG_CFG_HDA = VFE_MSG_CFG | 0x01,
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index c530ccc7f..422526b16 100644
+index c530ccc7fc08..422526b162a5 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -90,22 +90,6 @@ inline int vfe_is_valid_fe_substream(struct snd_pcm_substream *substream)
@@ -518,7 +518,7 @@ index c530ccc7f..422526b16 100644
  MODULE_DEVICE_TABLE(virtio, id_table);
  MODULE_DESCRIPTION("Intel Broxton Virtio FE Driver");
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index ec6cae0c3..7456b53c5 100644
+index ec6cae0c3b89..7456b53c5672 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -13,6 +13,7 @@

@@ -13,7 +13,7 @@ Signed-off-by: Zhong,Fangjian <fangjian.zhong@intel.com>
  2 files changed, 7 insertions(+), 98 deletions(-)
 
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index 8e7e715d7..2fc1b232f 100644
+index 8e7e715d7018..2fc1b232fee3 100644
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -25,10 +25,9 @@
@@ -167,7 +167,7 @@ index 8e7e715d7..2fc1b232f 100644
  
  err_api_version:
 diff --git a/include/linux/trusty/smcall.h b/include/linux/trusty/smcall.h
-index 974b7b3e7..1160890a3 100644
+index 974b7b3e753d..1160890a3d90 100644
 --- a/include/linux/trusty/smcall.h
 +++ b/include/linux/trusty/smcall.h
 @@ -123,23 +123,6 @@

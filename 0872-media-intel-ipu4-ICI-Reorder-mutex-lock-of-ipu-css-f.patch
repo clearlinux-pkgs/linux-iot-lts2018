@@ -15,7 +15,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ici/libintel-ipu4_ici.c b/drivers/media/pci/intel/ici/libintel-ipu4_ici.c
-index 685843775..bb226d70f 100644
+index 68584377548d..bb226d70f853 100644
 --- a/drivers/media/pci/intel/ici/libintel-ipu4_ici.c
 +++ b/drivers/media/pci/intel/ici/libintel-ipu4_ici.c
 @@ -56,9 +56,11 @@ int ici_fw_isys_close(struct ici_isys *isys)

@@ -18,7 +18,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  create mode 100644 sound/soc/intel/skylake/cnl-acpi.c
 
 diff --git a/include/linux/sdw/sdw_cnl.h b/include/linux/sdw/sdw_cnl.h
-index 6a9281c45..1a40244e4 100644
+index 6a9281c458b7..1a40244e466d 100644
 --- a/include/linux/sdw/sdw_cnl.h
 +++ b/include/linux/sdw/sdw_cnl.h
 @@ -27,7 +27,7 @@
@@ -43,7 +43,7 @@ index 6a9281c45..1a40244e4 100644
  #endif
  
 diff --git a/sound/soc/intel/skylake/Makefile b/sound/soc/intel/skylake/Makefile
-index 9a3ddb969..7b8cf119a 100644
+index 9a3ddb969d4e..7b8cf119aeae 100644
 --- a/sound/soc/intel/skylake/Makefile
 +++ b/sound/soc/intel/skylake/Makefile
 @@ -13,6 +13,10 @@ snd-soc-skl-ipc-objs := skl-sst-ipc.o skl-sst-dsp.o cnl-sst-dsp.o \
@@ -59,7 +59,7 @@ index 9a3ddb969..7b8cf119a 100644
  #Skylake Clock device support
 diff --git a/sound/soc/intel/skylake/cnl-acpi.c b/sound/soc/intel/skylake/cnl-acpi.c
 new file mode 100644
-index 000000000..1bee574f2
+index 000000000000..1bee574f2ab8
 --- /dev/null
 +++ b/sound/soc/intel/skylake/cnl-acpi.c
 @@ -0,0 +1,160 @@

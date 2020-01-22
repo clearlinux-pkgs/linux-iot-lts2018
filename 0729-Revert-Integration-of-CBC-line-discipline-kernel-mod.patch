@@ -57,7 +57,7 @@ Change-Id: I85f40a78be2752e2781217272dfbad6bd920e8e1
  delete mode 100644 include/uapi/linux/cbc/cbc-core.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 23ddb493e..20321e518 100644
+index 23ddb493e852..20321e518631 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -16270,3 +16270,4 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
@@ -66,7 +66,7 @@ index 23ddb493e..20321e518 100644
  F:	*/
 +
 diff --git a/drivers/tty/Kconfig b/drivers/tty/Kconfig
-index 7bd645d4e..e0a04bfc8 100644
+index 7bd645d4ed46..e0a04bfc873e 100644
 --- a/drivers/tty/Kconfig
 +++ b/drivers/tty/Kconfig
 @@ -442,8 +442,6 @@ config VCC
@@ -79,7 +79,7 @@ index 7bd645d4e..e0a04bfc8 100644
  	bool "Automatically load TTY Line Disciplines"
  	default y
 diff --git a/drivers/tty/Makefile b/drivers/tty/Makefile
-index 4ae674440..c72cafdf3 100644
+index 4ae6744406d4..c72cafdf32b4 100644
 --- a/drivers/tty/Makefile
 +++ b/drivers/tty/Makefile
 @@ -33,6 +33,5 @@ obj-$(CONFIG_PPC_EPAPR_HV_BYTECHAN) += ehv_bytechan.o
@@ -91,7 +91,7 @@ index 4ae674440..c72cafdf3 100644
  obj-y += ipwireless/
 diff --git a/drivers/tty/cbc/Kconfig b/drivers/tty/cbc/Kconfig
 deleted file mode 100644
-index c9cde7fa4..000000000
+index c9cde7fa43ca..000000000000
 --- a/drivers/tty/cbc/Kconfig
 +++ /dev/null
 @@ -1,22 +0,0 @@
@@ -119,7 +119,7 @@ index c9cde7fa4..000000000
 -
 diff --git a/drivers/tty/cbc/Makefile b/drivers/tty/cbc/Makefile
 deleted file mode 100644
-index c0517817f..000000000
+index c0517817f605..000000000000
 --- a/drivers/tty/cbc/Makefile
 +++ /dev/null
 @@ -1,14 +0,0 @@
@@ -140,7 +140,7 @@ index c0517817f..000000000
 \ No newline at end of file
 diff --git a/drivers/tty/cbc/cbc_core.c b/drivers/tty/cbc/cbc_core.c
 deleted file mode 100644
-index d9d15fa22..000000000
+index d9d15fa224ae..000000000000
 --- a/drivers/tty/cbc/cbc_core.c
 +++ /dev/null
 @@ -1,307 +0,0 @@
@@ -453,7 +453,7 @@ index d9d15fa22..000000000
 -module_exit(cbc_exit);
 diff --git a/drivers/tty/cbc/cbc_core.h b/drivers/tty/cbc/cbc_core.h
 deleted file mode 100644
-index 71e07a3f7..000000000
+index 71e07a3f7765..000000000000
 --- a/drivers/tty/cbc/cbc_core.h
 +++ /dev/null
 @@ -1,44 +0,0 @@
@@ -503,7 +503,7 @@ index 71e07a3f7..000000000
 -#endif /* CBC_CORE_MOD_H_ */
 diff --git a/drivers/tty/cbc/cbc_core_public.h b/drivers/tty/cbc/cbc_core_public.h
 deleted file mode 100644
-index 85928f6ef..000000000
+index 85928f6efc68..000000000000
 --- a/drivers/tty/cbc/cbc_core_public.h
 +++ /dev/null
 @@ -1,28 +0,0 @@
@@ -537,7 +537,7 @@ index 85928f6ef..000000000
 -
 diff --git a/drivers/tty/cbc/cbc_device.c b/drivers/tty/cbc/cbc_device.c
 deleted file mode 100644
-index 1933a8527..000000000
+index 1933a8527015..000000000000
 --- a/drivers/tty/cbc/cbc_device.c
 +++ /dev/null
 @@ -1,66 +0,0 @@
@@ -609,7 +609,7 @@ index 1933a8527..000000000
 -
 diff --git a/drivers/tty/cbc/cbc_device.h b/drivers/tty/cbc/cbc_device.h
 deleted file mode 100644
-index deb0cd922..000000000
+index deb0cd922316..000000000000
 --- a/drivers/tty/cbc/cbc_device.h
 +++ /dev/null
 @@ -1,107 +0,0 @@
@@ -722,7 +722,7 @@ index deb0cd922..000000000
 -#endif /* CBC_DEVICE_H_ */
 diff --git a/drivers/tty/cbc/cbc_device_manager.c b/drivers/tty/cbc/cbc_device_manager.c
 deleted file mode 100644
-index 0e74183d9..000000000
+index 0e74183d9828..000000000000
 --- a/drivers/tty/cbc/cbc_device_manager.c
 +++ /dev/null
 @@ -1,879 +0,0 @@
@@ -1607,7 +1607,7 @@ index 0e74183d9..000000000
 -}
 diff --git a/drivers/tty/cbc/cbc_device_manager.h b/drivers/tty/cbc/cbc_device_manager.h
 deleted file mode 100644
-index a6f9b45da..000000000
+index a6f9b45da1aa..000000000000
 --- a/drivers/tty/cbc/cbc_device_manager.h
 +++ /dev/null
 @@ -1,66 +0,0 @@
@@ -1679,7 +1679,7 @@ index a6f9b45da..000000000
 -#endif /* CBC_DEVICE_MANAGER_H */
 diff --git a/drivers/tty/cbc/cbc_link_checksum.c b/drivers/tty/cbc/cbc_link_checksum.c
 deleted file mode 100644
-index 69f0ca74c..000000000
+index 69f0ca74c3c8..000000000000
 --- a/drivers/tty/cbc/cbc_link_checksum.c
 +++ /dev/null
 @@ -1,59 +0,0 @@
@@ -1744,7 +1744,7 @@ index 69f0ca74c..000000000
 -}
 diff --git a/drivers/tty/cbc/cbc_link_checksum.h b/drivers/tty/cbc/cbc_link_checksum.h
 deleted file mode 100644
-index 9f8f50f2c..000000000
+index 9f8f50f2cbd7..000000000000
 --- a/drivers/tty/cbc/cbc_link_checksum.h
 +++ /dev/null
 @@ -1,44 +0,0 @@
@@ -1794,7 +1794,7 @@ index 9f8f50f2c..000000000
 -#endif /*_CBC_LINK_CHECKSUM_H_ */
 diff --git a/drivers/tty/cbc/cbc_link_layer.c b/drivers/tty/cbc/cbc_link_layer.c
 deleted file mode 100644
-index a55cd8ce7..000000000
+index a55cd8ce7add..000000000000
 --- a/drivers/tty/cbc/cbc_link_layer.c
 +++ /dev/null
 @@ -1,484 +0,0 @@
@@ -2284,7 +2284,7 @@ index a55cd8ce7..000000000
 -}
 diff --git a/drivers/tty/cbc/cbc_link_layer.h b/drivers/tty/cbc/cbc_link_layer.h
 deleted file mode 100644
-index ba70a99b0..000000000
+index ba70a99b04e6..000000000000
 --- a/drivers/tty/cbc/cbc_link_layer.h
 +++ /dev/null
 @@ -1,38 +0,0 @@
@@ -2328,7 +2328,7 @@ index ba70a99b0..000000000
 -
 diff --git a/drivers/tty/cbc/cbc_memory.c b/drivers/tty/cbc/cbc_memory.c
 deleted file mode 100644
-index 69cf65e89..000000000
+index 69cf65e8901a..000000000000
 --- a/drivers/tty/cbc/cbc_memory.c
 +++ /dev/null
 @@ -1,153 +0,0 @@
@@ -2487,7 +2487,7 @@ index 69cf65e89..000000000
 -
 diff --git a/drivers/tty/cbc/cbc_memory.h b/drivers/tty/cbc/cbc_memory.h
 deleted file mode 100644
-index d6e34fcd4..000000000
+index d6e34fcd48ca..000000000000
 --- a/drivers/tty/cbc/cbc_memory.h
 +++ /dev/null
 @@ -1,146 +0,0 @@
@@ -2639,7 +2639,7 @@ index d6e34fcd4..000000000
 -#endif /* CBC_DEVICE_H_ */
 diff --git a/drivers/tty/cbc/cbc_mux_multiplexer.c b/drivers/tty/cbc/cbc_mux_multiplexer.c
 deleted file mode 100644
-index 4439e34f5..000000000
+index 4439e34f5142..000000000000
 --- a/drivers/tty/cbc/cbc_mux_multiplexer.c
 +++ /dev/null
 @@ -1,145 +0,0 @@
@@ -2790,7 +2790,7 @@ index 4439e34f5..000000000
 -}
 diff --git a/drivers/tty/cbc/cbc_mux_multiplexer.h b/drivers/tty/cbc/cbc_mux_multiplexer.h
 deleted file mode 100644
-index aa24777d6..000000000
+index aa24777d6a13..000000000000
 --- a/drivers/tty/cbc/cbc_mux_multiplexer.h
 +++ /dev/null
 @@ -1,62 +0,0 @@
@@ -2858,7 +2858,7 @@ index aa24777d6..000000000
 -
 diff --git a/drivers/tty/cbc/cbc_types.h b/drivers/tty/cbc/cbc_types.h
 deleted file mode 100644
-index 28d6877ff..000000000
+index 28d6877ff36e..000000000000
 --- a/drivers/tty/cbc/cbc_types.h
 +++ /dev/null
 @@ -1,137 +0,0 @@
@@ -3001,7 +3001,7 @@ index 28d6877ff..000000000
 -#endif /* CBC_TYPES_H_ */
 diff --git a/include/cbc/cbc-core.h b/include/cbc/cbc-core.h
 deleted file mode 100644
-index 4bcdf52d8..000000000
+index 4bcdf52d84eb..000000000000
 --- a/include/cbc/cbc-core.h
 +++ /dev/null
 @@ -1,24 +0,0 @@
@@ -3031,7 +3031,7 @@ index 4bcdf52d8..000000000
 -#endif /* CBC_CORE_MOD_H_ */
 diff --git a/include/uapi/linux/cbc/cbc-core.h b/include/uapi/linux/cbc/cbc-core.h
 deleted file mode 100644
-index 4bcdf52d8..000000000
+index 4bcdf52d84eb..000000000000
 --- a/include/uapi/linux/cbc/cbc-core.h
 +++ /dev/null
 @@ -1,24 +0,0 @@
@@ -3060,7 +3060,7 @@ index 4bcdf52d8..000000000
 -
 -#endif /* CBC_CORE_MOD_H_ */
 diff --git a/include/uapi/linux/major.h b/include/uapi/linux/major.h
-index e08767b96..7e5fa8e15 100644
+index e08767b96a45..7e5fa8e15c43 100644
 --- a/include/uapi/linux/major.h
 +++ b/include/uapi/linux/major.h
 @@ -135,8 +135,6 @@
@@ -3073,7 +3073,7 @@ index e08767b96..7e5fa8e15 100644
  #define SCSI_DISK9_MAJOR	129
  #define SCSI_DISK10_MAJOR	130
 diff --git a/include/uapi/linux/tty.h b/include/uapi/linux/tty.h
-index 20217970e..376cccf39 100644
+index 20217970ebfd..376cccf397be 100644
 --- a/include/uapi/linux/tty.h
 +++ b/include/uapi/linux/tty.h
 @@ -6,7 +6,7 @@

@@ -28,7 +28,7 @@ Tested-by: Yin, FengWei <fengwei.yin@intel.com>
  2 files changed, 25 insertions(+), 27 deletions(-)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index ac934fcd6..b0ca41a40 100644
+index ac934fcd656f..b0ca41a402ea 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -729,12 +729,8 @@ static bool is_cfg_data(struct vhm_request *req)
@@ -128,7 +128,7 @@ index ac934fcd6..b0ca41a40 100644
  				break;
  			} else /* other or fallback client */
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index 65f647451..c30753641 100644
+index 65f647451fb8..c307536417f8 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -85,6 +85,7 @@ extern struct mutex vhm_vm_list_lock;

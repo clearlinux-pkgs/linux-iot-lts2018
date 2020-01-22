@@ -31,7 +31,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/misc/mei/dal/dal_dev.h
 
 diff --git a/drivers/misc/mei/Kconfig b/drivers/misc/mei/Kconfig
-index 49de44e48..94961573f 100644
+index 49de44e485a2..94961573f5f8 100644
 --- a/drivers/misc/mei/Kconfig
 +++ b/drivers/misc/mei/Kconfig
 @@ -53,4 +53,7 @@ config INTEL_MEI_VIRTIO
@@ -43,7 +43,7 @@ index 49de44e48..94961573f 100644
 +
  source "drivers/misc/mei/spd/Kconfig"
 diff --git a/drivers/misc/mei/Makefile b/drivers/misc/mei/Makefile
-index c632e7240..462fa2524 100644
+index c632e72406d6..462fa25242d8 100644
 --- a/drivers/misc/mei/Makefile
 +++ b/drivers/misc/mei/Makefile
 @@ -29,3 +29,4 @@ obj-$(CONFIG_INTEL_MEI_VIRTIO) += mei-virtio.o
@@ -53,7 +53,7 @@ index c632e7240..462fa2524 100644
 +obj-$(CONFIG_INTEL_MEI_DAL) += dal/
 diff --git a/drivers/misc/mei/dal/Kconfig b/drivers/misc/mei/dal/Kconfig
 new file mode 100644
-index 000000000..5d8356ae9
+index 000000000000..5d8356ae931e
 --- /dev/null
 +++ b/drivers/misc/mei/dal/Kconfig
 @@ -0,0 +1,7 @@
@@ -66,7 +66,7 @@ index 000000000..5d8356ae9
 +	  The DAL module exposes both user space api and kernel space api.
 diff --git a/drivers/misc/mei/dal/Makefile b/drivers/misc/mei/dal/Makefile
 new file mode 100644
-index 000000000..e073531bc
+index 000000000000..e073531bc88d
 --- /dev/null
 +++ b/drivers/misc/mei/dal/Makefile
 @@ -0,0 +1,9 @@
@@ -81,7 +81,7 @@ index 000000000..e073531bc
 +mei_dal-objs += bh_internal.o
 diff --git a/drivers/misc/mei/dal/dal_class.c b/drivers/misc/mei/dal/dal_class.c
 new file mode 100644
-index 000000000..607c63c3d
+index 000000000000..607c63c3dca9
 --- /dev/null
 +++ b/drivers/misc/mei/dal/dal_class.c
 @@ -0,0 +1,778 @@
@@ -865,7 +865,7 @@ index 000000000..607c63c3d
 +MODULE_LICENSE("GPL v2");
 diff --git a/drivers/misc/mei/dal/dal_dev.h b/drivers/misc/mei/dal/dal_dev.h
 new file mode 100644
-index 000000000..3cad5a85c
+index 000000000000..3cad5a85c5de
 --- /dev/null
 +++ b/drivers/misc/mei/dal/dal_dev.h
 @@ -0,0 +1,149 @@

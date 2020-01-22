@@ -19,7 +19,7 @@ Tested-by: Bozek, DominikX <dominikx.bozek@intel.com>
  1 file changed, 54 insertions(+)
 
 diff --git a/sound/soc/intel/boards/bxt_ivi_ull.c b/sound/soc/intel/boards/bxt_ivi_ull.c
-index ba5293d05..91baeb7f8 100644
+index ba5293d051b9..91baeb7f81e3 100644
 --- a/sound/soc/intel/boards/bxt_ivi_ull.c
 +++ b/sound/soc/intel/boards/bxt_ivi_ull.c
 @@ -95,6 +95,60 @@ static const struct snd_soc_dapm_route bxtp_ull_map[] = {

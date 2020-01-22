@@ -14,7 +14,7 @@ Signed-off-by: James Morris <james.morris@microsoft.com>
  1 file changed, 3 deletions(-)
 
 diff --git a/security/commoncap.c b/security/commoncap.c
-index 2e489d6a3..18a4fdf6f 100644
+index 2e489d6a3ac8..18a4fdf6f6eb 100644
 --- a/security/commoncap.c
 +++ b/security/commoncap.c
 @@ -684,9 +684,6 @@ static int get_file_caps(struct linux_binprm *bprm, bool *effective, bool *has_f

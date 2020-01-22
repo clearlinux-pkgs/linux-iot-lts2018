@@ -15,7 +15,7 @@ Change-Id: I7775f814a027c29a7cff084b585334ddfdd6c69f
  3 files changed, 1 insertion(+), 18 deletions(-)
 
 diff --git a/drivers/tty/cbc/cbc_device.c b/drivers/tty/cbc/cbc_device.c
-index 23728c04d..1933a8527 100644
+index 23728c04dd6e..1933a8527015 100644
 --- a/drivers/tty/cbc/cbc_device.c
 +++ b/drivers/tty/cbc/cbc_device.c
 @@ -18,10 +18,8 @@
@@ -31,7 +31,7 @@ index 23728c04d..1933a8527 100644
  
  void cbc_file_init(struct cbc_file_data *file)
 diff --git a/drivers/tty/cbc/cbc_device.h b/drivers/tty/cbc/cbc_device.h
-index 09c806716..deb0cd922 100644
+index 09c806716557..deb0cd922316 100644
 --- a/drivers/tty/cbc/cbc_device.h
 +++ b/drivers/tty/cbc/cbc_device.h
 @@ -22,7 +22,6 @@
@@ -52,7 +52,7 @@ index 09c806716..deb0cd922 100644
  };
  
 diff --git a/drivers/tty/cbc/cbc_device_manager.c b/drivers/tty/cbc/cbc_device_manager.c
-index 2c8c1cf96..0e74183d9 100644
+index 2c8c1cf966ca..0e74183d9828 100644
 --- a/drivers/tty/cbc/cbc_device_manager.c
 +++ b/drivers/tty/cbc/cbc_device_manager.c
 @@ -234,7 +234,6 @@ static int cbc_device_open(struct inode *inode, struct file *file)

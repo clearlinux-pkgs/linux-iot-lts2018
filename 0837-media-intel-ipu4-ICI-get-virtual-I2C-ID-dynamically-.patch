@@ -17,7 +17,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  2 files changed, 19 insertions(+), 7 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/Makefile b/drivers/media/pci/intel/ici/Makefile
-index 415df762f..fb2391211 100644
+index 415df762fe89..fb23912113fc 100644
 --- a/drivers/media/pci/intel/ici/Makefile
 +++ b/drivers/media/pci/intel/ici/Makefile
 @@ -6,7 +6,7 @@ srcpath := $(srctree)
@@ -30,7 +30,7 @@ index 415df762f..fb2391211 100644
  
  # work-around to re-use ipu4-css and libintel-ipu4_ici.c together when
 diff --git a/drivers/media/pci/intel/ici/ici-isys.c b/drivers/media/pci/intel/ici/ici-isys.c
-index 848fac9d1..500491ee0 100644
+index 848fac9d1b06..500491ee038f 100644
 --- a/drivers/media/pci/intel/ici/ici-isys.c
 +++ b/drivers/media/pci/intel/ici/ici-isys.c
 @@ -306,21 +306,33 @@ static int isys_register_ext_subdev(struct ici_isys *isys,

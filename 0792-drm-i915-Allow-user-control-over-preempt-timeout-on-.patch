@@ -24,10 +24,10 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  6 files changed, 142 insertions(+), 7 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem_context.c b/drivers/gpu/drm/i915/i915_gem_context.c
-index e170cd27c..8c4c0b1b7 100644
+index f1ab882bee8c..58c2689c287c 100644
 --- a/drivers/gpu/drm/i915/i915_gem_context.c
 +++ b/drivers/gpu/drm/i915/i915_gem_context.c
-@@ -874,6 +874,15 @@ int i915_gem_context_getparam_ioctl(struct drm_device *dev, void *data,
+@@ -875,6 +875,15 @@ int i915_gem_context_getparam_ioctl(struct drm_device *dev, void *data,
  	case I915_CONTEXT_PARAM_PRIORITY:
  		args->value = ctx->sched.priority;
  		break;
@@ -43,7 +43,7 @@ index e170cd27c..8c4c0b1b7 100644
  	default:
  		ret = -EINVAL;
  		break;
-@@ -949,6 +958,19 @@ int i915_gem_context_setparam_ioctl(struct drm_device *dev, void *data,
+@@ -950,6 +959,19 @@ int i915_gem_context_setparam_ioctl(struct drm_device *dev, void *data,
  		}
  		break;
  
@@ -64,7 +64,7 @@ index e170cd27c..8c4c0b1b7 100644
  		ret = -EINVAL;
  		break;
 diff --git a/drivers/gpu/drm/i915/i915_gem_context.h b/drivers/gpu/drm/i915/i915_gem_context.h
-index 834d3951d..837d522e5 100644
+index 834d3951d8a9..837d522e594c 100644
 --- a/drivers/gpu/drm/i915/i915_gem_context.h
 +++ b/drivers/gpu/drm/i915/i915_gem_context.h
 @@ -147,6 +147,19 @@ struct i915_gem_context {
@@ -88,7 +88,7 @@ index 834d3951d..837d522e5 100644
  	u32 ggtt_offset_bias;
  
 diff --git a/drivers/gpu/drm/i915/i915_request.c b/drivers/gpu/drm/i915/i915_request.c
-index b8b922f89..811595d32 100644
+index b8b922f8977e..811595d32eb6 100644
 --- a/drivers/gpu/drm/i915/i915_request.c
 +++ b/drivers/gpu/drm/i915/i915_request.c
 @@ -1127,8 +1127,11 @@ void i915_request_add(struct i915_request *request)
@@ -106,7 +106,7 @@ index b8b922f89..811595d32 100644
  	i915_sw_fence_commit(&request->submit);
  	local_bh_enable(); /* Kick the execlists tasklet if just scheduled */
 diff --git a/drivers/gpu/drm/i915/intel_lrc.c b/drivers/gpu/drm/i915/intel_lrc.c
-index 28c9fc6cb..ba63a6384 100644
+index 28c9fc6cb392..ba63a6384e93 100644
 --- a/drivers/gpu/drm/i915/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/intel_lrc.c
 @@ -1266,20 +1266,20 @@ static void submit_queue(struct intel_engine_cs *engine,
@@ -136,7 +136,7 @@ index 28c9fc6cb..ba63a6384 100644
  	spin_unlock_irqrestore(&engine->timeline.lock, flags);
  }
 diff --git a/drivers/gpu/drm/i915/selftests/intel_lrc.c b/drivers/gpu/drm/i915/selftests/intel_lrc.c
-index 4a89662e7..12a33a841 100644
+index 4a89662e7e07..12a33a8410ca 100644
 --- a/drivers/gpu/drm/i915/selftests/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/selftests/intel_lrc.c
 @@ -846,6 +846,90 @@ static int live_late_preempt_timeout(void *arg)
@@ -239,7 +239,7 @@ index 4a89662e7..12a33a841 100644
  
  	if (!HAS_EXECLISTS(i915))
 diff --git a/include/uapi/drm/i915_drm.h b/include/uapi/drm/i915_drm.h
-index a25ed4719..d66e8765f 100644
+index a25ed4719921..d66e8765f6af 100644
 --- a/include/uapi/drm/i915_drm.h
 +++ b/include/uapi/drm/i915_drm.h
 @@ -1459,6 +1459,18 @@ struct drm_i915_gem_context_param {

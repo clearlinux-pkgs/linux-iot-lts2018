@@ -42,7 +42,7 @@ Reviewed-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  delete mode 100644 sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c
 
 diff --git a/sound/soc/intel/skylake/Makefile b/sound/soc/intel/skylake/Makefile
-index 66d2fd14f..13ffff4bd 100644
+index 66d2fd14f2c5..13ffff4bd1b1 100644
 --- a/sound/soc/intel/skylake/Makefile
 +++ b/sound/soc/intel/skylake/Makefile
 @@ -2,8 +2,6 @@
@@ -62,7 +62,7 @@ index 66d2fd14f..13ffff4bd 100644
 +obj-$(CONFIG_SND_SOC_INTEL_SKYLAKE_VIRTIO_FE) += virtio/
 +obj-$(CONFIG_SND_SOC_INTEL_SKYLAKE_VIRTIO_BE) += virtio/
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index ee32aaa68..bff6c0c94 100644
+index ee32aaa68490..bff6c0c948b1 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -251,6 +251,8 @@ struct skl_notify_kctrl_info {
@@ -85,7 +85,7 @@ index ee32aaa68..bff6c0c94 100644
  	struct skl_probe_config probe_config;
  
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 84b9d001e..d0d4092b5 100644
+index 84b9d001e35d..d0d4092b5807 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -5339,7 +5339,7 @@ int skl_tplg_init(struct snd_soc_component *component, struct hdac_bus *bus)
@@ -98,7 +98,7 @@ index 84b9d001e..d0d4092b5 100644
  		dev_info(bus->dev, "tplg fw %s load failed with %d, falling back to dfw_sst.bin",
  				skl->tplg_name, ret);
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index deac8de7e..c16ad3b65 100644
+index deac8de7e125..c16ad3b65bb3 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -125,6 +125,12 @@ static void skl_clock_power_gating(struct device *dev, bool enable)
@@ -219,7 +219,7 @@ index deac8de7e..c16ad3b65 100644
  	skl_free_dsp(skl);
  	skl_machine_device_unregister(skl);
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index ef02c7003..7915ef02a 100644
+index ef02c70035b6..7915ef02a551 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -52,6 +52,21 @@
@@ -267,7 +267,7 @@ index ef02c7003..7915ef02a 100644
  
  #define skl_to_bus(s)  (&(s)->hbus)
 diff --git a/sound/soc/intel/skylake/virtio/Makefile b/sound/soc/intel/skylake/virtio/Makefile
-index 1c2aa5f6b..ea1546890 100644
+index 1c2aa5f6ba8d..ea15468907e6 100644
 --- a/sound/soc/intel/skylake/virtio/Makefile
 +++ b/sound/soc/intel/skylake/virtio/Makefile
 @@ -1,11 +1,10 @@
@@ -290,7 +290,7 @@ index 1c2aa5f6b..ea1546890 100644
 +obj-$(CONFIG_SND_SOC_INTEL_SKYLAKE_VIRTIO_BE) += snd-soc-skl-virtio-be.o
 diff --git a/sound/soc/intel/skylake/virtio/skl-virt-audio.c b/sound/soc/intel/skylake/virtio/skl-virt-audio.c
 new file mode 100644
-index 000000000..e2b288e8b
+index 000000000000..e2b288e8ba7e
 --- /dev/null
 +++ b/sound/soc/intel/skylake/virtio/skl-virt-audio.c
 @@ -0,0 +1,365 @@
@@ -660,7 +660,7 @@ index 000000000..e2b288e8b
 +MODULE_LICENSE("GPL v2");
 +MODULE_ALIAS("platform:skl-virt-audio");
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 66eaf60fb..c46d3964e 100644
+index 66eaf60fbad1..c46d3964e7ae 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -35,6 +35,16 @@
@@ -879,7 +879,7 @@ index 66eaf60fb..c46d3964e 100644
 +	return 0;
 +}
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.h b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
-index 93ab96d27..1a5840f85 100644
+index 93ab96d27281..1a5840f85d72 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 @@ -21,13 +21,31 @@
@@ -955,7 +955,7 @@ index 93ab96d27..1a5840f85 100644
 +
  #endif
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index 89e759fc0..97cb00e22 100644
+index 89e759fc01a0..97cb00e222ca 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -28,6 +28,7 @@
@@ -1005,7 +1005,7 @@ index 89e759fc0..97cb00e22 100644
  
  	VFE_MSG_POS_NOTI = VFE_MSG_POS | 0x01,
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index b6952cbca..0e4505bd5 100644
+index b6952cbcaf57..0e4505bd55ca 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -417,6 +417,28 @@ static void vfe_handle_posn(struct snd_skl_vfe *vfe,
@@ -1149,7 +1149,7 @@ index b6952cbca..0e4505bd5 100644
  
  no_mem:
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index 18303829c..ec6cae0c3 100644
+index 18303829c740..ec6cae0c3b89 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -24,6 +24,15 @@ struct vfe_substream_info {
@@ -1181,7 +1181,7 @@ index 18303829c..ec6cae0c3 100644
  	struct work_struct posn_update_work;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c b/sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c
 deleted file mode 100644
-index a3b4f2f94..000000000
+index a3b4f2f94a91..000000000000
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-miscdev.c
 +++ /dev/null
 @@ -1,463 +0,0 @@
@@ -1649,7 +1649,7 @@ index a3b4f2f94..000000000
 -	return 0;
 -}
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio.h b/sound/soc/intel/skylake/virtio/skl-virtio.h
-index 1a37ae599..390d31885 100644
+index 1a37ae599b85..390d31885437 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio.h
 @@ -10,18 +10,6 @@

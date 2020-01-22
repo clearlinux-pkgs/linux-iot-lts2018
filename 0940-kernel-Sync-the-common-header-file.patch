@@ -16,7 +16,7 @@ Tracked-On: PKT-1696
  1 file changed, 3 insertions(+), 5 deletions(-)
 
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index bb60888fb..030aed2bb 100644
+index bb60888fb59e..030aed2bb7cc 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -232,12 +232,10 @@ struct hc_ptdev_irq {

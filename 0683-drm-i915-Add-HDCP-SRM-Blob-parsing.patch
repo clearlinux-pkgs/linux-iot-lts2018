@@ -20,7 +20,7 @@ Signed-off-by: Ramalingam C <ramalingam.c@intel.com>
  3 files changed, 165 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_drv.h b/drivers/gpu/drm/i915/intel_drv.h
-index 10883e04b..8bc603ec9 100644
+index 10883e04bfe6..8bc603ec9b66 100644
 --- a/drivers/gpu/drm/i915/intel_drv.h
 +++ b/drivers/gpu/drm/i915/intel_drv.h
 @@ -429,6 +429,11 @@ struct intel_connector {
@@ -36,7 +36,7 @@ index 10883e04b..8bc603ec9 100644
  
  struct intel_digital_connector_state {
 diff --git a/drivers/gpu/drm/i915/intel_hdcp.c b/drivers/gpu/drm/i915/intel_hdcp.c
-index a03a74554..ca2c73469 100644
+index a03a745544e2..ca2c73469cb2 100644
 --- a/drivers/gpu/drm/i915/intel_hdcp.c
 +++ b/drivers/gpu/drm/i915/intel_hdcp.c
 @@ -10,6 +10,7 @@
@@ -212,7 +212,7 @@ index a03a74554..ca2c73469 100644
  	if (new_state->crtc && new_cp == DRM_MODE_CONTENT_PROTECTION_DESIRED)
  		intel_hdcp_enable(to_intel_connector(connector));
 diff --git a/include/drm/drm_hdcp.h b/include/drm/drm_hdcp.h
-index 98e63d870..f17eb2910 100644
+index 98e63d870139..f17eb2910bdb 100644
 --- a/include/drm/drm_hdcp.h
 +++ b/include/drm/drm_hdcp.h
 @@ -38,4 +38,18 @@

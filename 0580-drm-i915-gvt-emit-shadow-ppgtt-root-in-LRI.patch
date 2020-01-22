@@ -24,7 +24,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  3 files changed, 36 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/cmd_parser.c b/drivers/gpu/drm/i915/gvt/cmd_parser.c
-index be15289bf..c22a786df 100644
+index be15289bff9c..c22a786df095 100644
 --- a/drivers/gpu/drm/i915/gvt/cmd_parser.c
 +++ b/drivers/gpu/drm/i915/gvt/cmd_parser.c
 @@ -2710,6 +2710,33 @@ static int scan_wa_ctx(struct intel_shadow_wa_ctx *wa_ctx)
@@ -62,7 +62,7 @@ index be15289bf..c22a786df 100644
  {
  	struct intel_vgpu *vgpu = workload->vgpu;
 diff --git a/drivers/gpu/drm/i915/gvt/cmd_parser.h b/drivers/gpu/drm/i915/gvt/cmd_parser.h
-index 286703643..1356803a0 100644
+index 286703643002..1356803a0586 100644
 --- a/drivers/gpu/drm/i915/gvt/cmd_parser.h
 +++ b/drivers/gpu/drm/i915/gvt/cmd_parser.h
 @@ -46,4 +46,5 @@ int intel_gvt_scan_and_shadow_ringbuffer(struct intel_vgpu_workload *workload);
@@ -72,7 +72,7 @@ index 286703643..1356803a0 100644
 +int gvt_emit_pdps(struct intel_vgpu_workload *workload);
  #endif
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index 31262400b..bddd7ce94 100644
+index 31262400bf95..bddd7ce94d0d 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -619,6 +619,14 @@ static int prepare_workload(struct intel_vgpu_workload *workload)

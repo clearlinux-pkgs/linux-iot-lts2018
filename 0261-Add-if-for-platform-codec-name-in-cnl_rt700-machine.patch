@@ -12,7 +12,7 @@ Change-Id: I969ea974cdc02a802a576e23746cfdc4f4d9a7d5
  1 file changed, 16 insertions(+), 8 deletions(-)
 
 diff --git a/sound/soc/intel/boards/cnl_rt700.c b/sound/soc/intel/boards/cnl_rt700.c
-index e0b93e571..d49c3f9de 100644
+index e0b93e571fb9..d49c3f9de10e 100644
 --- a/sound/soc/intel/boards/cnl_rt700.c
 +++ b/sound/soc/intel/boards/cnl_rt700.c
 @@ -155,6 +155,14 @@ static int cnl_dmic_fixup(struct snd_soc_pcm_runtime *rtd,

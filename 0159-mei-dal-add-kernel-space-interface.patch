@@ -23,7 +23,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 include/linux/dal.h
 
 diff --git a/drivers/misc/mei/dal/Makefile b/drivers/misc/mei/dal/Makefile
-index 705f53e12..c0d8b3d4f 100644
+index 705f53e12a61..c0d8b3d4f58d 100644
 --- a/drivers/misc/mei/dal/Makefile
 +++ b/drivers/misc/mei/dal/Makefile
 @@ -8,3 +8,4 @@ mei_dal-objs += acp_parser.o
@@ -32,7 +32,7 @@ index 705f53e12..c0d8b3d4f 100644
  mei_dal-objs += dal_cdev.o
 +mei_dal-objs += dal_kdi.o
 diff --git a/drivers/misc/mei/dal/bh_external.c b/drivers/misc/mei/dal/bh_external.c
-index 0cbb17ead..067972826 100644
+index 0cbb17ead060..0679728266a4 100644
 --- a/drivers/misc/mei/dal/bh_external.c
 +++ b/drivers/misc/mei/dal/bh_external.c
 @@ -6,6 +6,7 @@
@@ -61,7 +61,7 @@ index 0cbb17ead..067972826 100644
  /**
   * bh_msg_is_response - check if message is response
 diff --git a/drivers/misc/mei/dal/bh_internal.c b/drivers/misc/mei/dal/bh_internal.c
-index 6aa24d40d..df3565a39 100644
+index 6aa24d40d5e0..df3565a394c2 100644
 --- a/drivers/misc/mei/dal/bh_internal.c
 +++ b/drivers/misc/mei/dal/bh_internal.c
 @@ -178,6 +178,7 @@ static struct bh_request_cmd *bh_request_alloc(const void *hdr,
@@ -123,7 +123,7 @@ index 6aa24d40d..df3565a39 100644
  
  /**
 diff --git a/drivers/misc/mei/dal/dal_class.c b/drivers/misc/mei/dal/dal_class.c
-index ccdf973a7..c5ce81bea 100644
+index ccdf973a7895..c5ce81bea961 100644
 --- a/drivers/misc/mei/dal/dal_class.c
 +++ b/drivers/misc/mei/dal/dal_class.c
 @@ -751,6 +751,9 @@ static void __exit mei_dal_exit(void)
@@ -159,7 +159,7 @@ index ccdf973a7..c5ce81bea 100644
  	dal_dev_exit();
  err_class:
 diff --git a/drivers/misc/mei/dal/dal_dev.h b/drivers/misc/mei/dal/dal_dev.h
-index 3cad5a85c..3c3c69655 100644
+index 3cad5a85c5de..3c3c696550c8 100644
 --- a/drivers/misc/mei/dal/dal_dev.h
 +++ b/drivers/misc/mei/dal/dal_dev.h
 @@ -146,4 +146,10 @@ void dal_dc_print(struct device *dev, struct dal_client *dc);
@@ -175,7 +175,7 @@ index 3cad5a85c..3c3c69655 100644
  #endif /* _DAL_KDI_H_ */
 diff --git a/drivers/misc/mei/dal/dal_kdi.c b/drivers/misc/mei/dal/dal_kdi.c
 new file mode 100644
-index 000000000..f39fb0055
+index 000000000000..f39fb0055b27
 --- /dev/null
 +++ b/drivers/misc/mei/dal/dal_kdi.c
 @@ -0,0 +1,478 @@
@@ -659,7 +659,7 @@ index 000000000..f39fb0055
 +}
 diff --git a/include/linux/dal.h b/include/linux/dal.h
 new file mode 100644
-index 000000000..19a016ba3
+index 000000000000..19a016ba3b9a
 --- /dev/null
 +++ b/include/linux/dal.h
 @@ -0,0 +1,59 @@

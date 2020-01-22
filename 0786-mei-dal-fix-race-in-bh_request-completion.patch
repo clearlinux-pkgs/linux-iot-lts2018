@@ -26,7 +26,7 @@ Signed-off-by: Yael Samet <yael.samet@intel.com>
  1 file changed, 69 insertions(+), 44 deletions(-)
 
 diff --git a/drivers/misc/mei/dal/bh_internal.c b/drivers/misc/mei/dal/bh_internal.c
-index df3565a39..48d4e1145 100644
+index df3565a394c2..48d4e1145977 100644
 --- a/drivers/misc/mei/dal/bh_internal.c
 +++ b/drivers/misc/mei/dal/bh_internal.c
 @@ -27,6 +27,7 @@ static u64 bh_host_id_number = MSG_SEQ_START_NUMBER;

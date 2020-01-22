@@ -19,7 +19,7 @@ Reviewed-on:
  2 files changed, 52 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index d93191514..80480eb94 100644
+index d93191514dca..80480eb94846 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1105,6 +1105,7 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {
@@ -91,7 +91,7 @@ index d93191514..80480eb94 100644
  },
  };
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.h b/sound/soc/intel/skylake/skl-sdw-pcm.h
-index ab1314a6f..7166ef999 100644
+index ab1314a6f408..7166ef9992ab 100644
 --- a/sound/soc/intel/skylake/skl-sdw-pcm.h
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.h
 @@ -24,6 +24,13 @@

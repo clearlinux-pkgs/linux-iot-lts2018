@@ -14,7 +14,7 @@ Signed-off-by: Satyeshwar Singh <satyeshwar.singh@intel.com>
  1 file changed, 55 insertions(+), 51 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 2cadc4714..36ba0394f 100644
+index 2cadc471425f..36ba0394f6ca 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -4944,13 +4944,63 @@ static void skl_compute_transition_wm(struct intel_crtc_state *cstate,
