@@ -15,7 +15,7 @@
 
 Name:           linux-iot-lts2018
 Version:        4.19.97
-Release:        104
+Release:        105
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
@@ -1235,7 +1235,6 @@ Patch1182: 1182-ASoC-core-Do-not-return-for-dummy-codec-for-BXT_ULL-.patch
 # Clear Linux Series
 Patch9001: 9001-init-wait-for-partition-and-retry-scan.patch
 Patch9002: 9002-Add-boot-option-to-allow-unsigned-modules.patch
-Patch9003: 9003-add-workaround-for-binutils-optimization.patch
 
 %description
 The Linux IOT LTS2018 kernel.
@@ -2485,7 +2484,6 @@ Linux kernel build files and install script
 # Clear Linux Series
 %patch9001 -p1
 %patch9002 -p1
-%patch9003 -p1
 
 cp %{SOURCE1} .
 cp %{SOURCE2} .
