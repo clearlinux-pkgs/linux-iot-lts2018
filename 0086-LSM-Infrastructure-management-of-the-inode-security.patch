@@ -19,10 +19,10 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  5 files changed, 99 insertions(+), 96 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 27000252d20e..55b0f0899fbf 100644
+index 2cd999bf9d70..ee77a6dc1c37 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -2030,6 +2030,7 @@ struct security_hook_list {
+@@ -2032,6 +2032,7 @@ struct security_hook_list {
  struct lsm_blob_sizes {
  	int	lbs_cred;
  	int	lbs_file;
@@ -30,7 +30,7 @@ index 27000252d20e..55b0f0899fbf 100644
  	int	lbs_task;
  };
  
-@@ -2093,10 +2094,12 @@ static inline void loadpin_add_hooks(void) { };
+@@ -2095,10 +2096,12 @@ static inline void loadpin_add_hooks(void) { };
  #endif
  
  extern int lsm_cred_alloc(struct cred *cred, gfp_t gfp);
@@ -44,7 +44,7 @@ index 27000252d20e..55b0f0899fbf 100644
  
  #endif /* ! __LINUX_LSM_HOOKS_H */
 diff --git a/security/security.c b/security/security.c
-index 132817ced21a..9620309ee754 100644
+index bc10f55ffd58..4d2f1d88eef8 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -41,6 +41,7 @@ struct security_hook_heads security_hook_heads __lsm_ro_after_init;
@@ -138,7 +138,7 @@ index 132817ced21a..9620309ee754 100644
  /*
   * Hook list operation macros.
   *
-@@ -599,14 +652,40 @@ EXPORT_SYMBOL(security_sb_parse_opts_str);
+@@ -595,14 +648,40 @@ EXPORT_SYMBOL(security_sb_parse_opts_str);
  
  int security_inode_alloc(struct inode *inode)
  {
@@ -182,7 +182,7 @@ index 132817ced21a..9620309ee754 100644
  
  int security_dentry_init_security(struct dentry *dentry, int mode,
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index fd17560c0195..a09107c5b29e 100644
+index a15f0d56a41c..9e08cbb6db92 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -148,8 +148,6 @@ static int __init checkreqprot_setup(char *str)

@@ -16,7 +16,7 @@ Signed-off-by: James Morris <james.morris@microsoft.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/kernel/seccomp.c b/kernel/seccomp.c
-index fd023ac24e10..5a2a9af4663e 100644
+index 56e69203b658..e31a7a925725 100644
 --- a/kernel/seccomp.c
 +++ b/kernel/seccomp.c
 @@ -195,7 +195,7 @@ static u32 seccomp_run_filters(const struct seccomp_data *sd,

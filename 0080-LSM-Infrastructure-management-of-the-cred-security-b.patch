@@ -33,10 +33,10 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  17 files changed, 303 insertions(+), 143 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 97a020c616ad..0bef312efd45 100644
+index 3833c871fd45..2b4d55c973ab 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -2024,6 +2024,13 @@ struct security_hook_list {
+@@ -2026,6 +2026,13 @@ struct security_hook_list {
  	char				*lsm;
  } __randomize_layout;
  
@@ -50,7 +50,7 @@ index 97a020c616ad..0bef312efd45 100644
  /*
   * Initializing a security_hook_list structure takes
   * up a lot of space in a source file. This macro takes
-@@ -2036,6 +2043,7 @@ struct security_hook_list {
+@@ -2038,6 +2045,7 @@ struct security_hook_list {
  extern struct security_hook_heads security_hook_heads;
  extern char *lsm_names;
  
@@ -58,7 +58,7 @@ index 97a020c616ad..0bef312efd45 100644
  extern void security_add_hooks(struct security_hook_list *hooks, int count,
  				char *lsm);
  
-@@ -2082,4 +2090,10 @@ void __init loadpin_add_hooks(void);
+@@ -2084,4 +2092,10 @@ void __init loadpin_add_hooks(void);
  static inline void loadpin_add_hooks(void) { };
  #endif
  
@@ -129,7 +129,7 @@ index bdf9e4cefe25..4fca9dac4345 100644
  done:
  	aa_put_label(label);
 diff --git a/security/apparmor/include/cred.h b/security/apparmor/include/cred.h
-index e287b7d0d4be..a90eae76d7c1 100644
+index 265ae6641a06..a757370f2a0c 100644
 --- a/security/apparmor/include/cred.h
 +++ b/security/apparmor/include/cred.h
 @@ -23,8 +23,22 @@
@@ -157,7 +157,7 @@ index e287b7d0d4be..a90eae76d7c1 100644
  /**
   * aa_cred_raw_label - obtain cred's label
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index 8b8b70620bbe..c2566aaa138e 100644
+index 730de4638b4e..2faea156372b 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -57,7 +57,7 @@ DEFINE_PER_CPU(struct aa_buffers, aa_buffers);
@@ -271,7 +271,7 @@ index c6b78a14da91..4551110f0496 100644
  	/* clear exec && prev information when restoring to previous context */
  	aa_clear_task_ctx_trans(ctx);
 diff --git a/security/security.c b/security/security.c
-index fb75d362ff48..b491c504af03 100644
+index 44416ebec44f..eee803e1a250 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -41,6 +41,8 @@ struct security_hook_heads security_hook_heads __lsm_ro_after_init;
@@ -381,7 +381,7 @@ index fb75d362ff48..b491c504af03 100644
  /*
   * Hook list operation macros.
   *
-@@ -998,7 +1079,15 @@ void security_task_free(struct task_struct *task)
+@@ -994,7 +1075,15 @@ void security_task_free(struct task_struct *task)
  
  int security_cred_alloc_blank(struct cred *cred, gfp_t gfp)
  {
@@ -398,7 +398,7 @@ index fb75d362ff48..b491c504af03 100644
  }
  
  void security_cred_free(struct cred *cred)
-@@ -1011,11 +1100,22 @@ void security_cred_free(struct cred *cred)
+@@ -1007,11 +1096,22 @@ void security_cred_free(struct cred *cred)
  		return;
  
  	call_void_hook(cred_free, cred);
@@ -423,7 +423,7 @@ index fb75d362ff48..b491c504af03 100644
  
  void security_transfer_creds(struct cred *new, const struct cred *old)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index e7f402903ccc..6e485d1ba2a4 100644
+index 24c445066f38..996b30f452b5 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -213,12 +213,9 @@ static void cred_init_security(void)

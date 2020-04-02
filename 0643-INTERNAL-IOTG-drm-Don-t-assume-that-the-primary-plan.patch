@@ -144,7 +144,7 @@ index 5a84c3bc915d..aaa80d640203 100644
  		plane_state = plane->funcs->atomic_duplicate_state(plane);
  	else {
 diff --git a/drivers/gpu/drm/drm_fb_helper.c b/drivers/gpu/drm/drm_fb_helper.c
-index f57fc1450b61..04bc554b637a 100644
+index da9a381d6b57..8cf32d9e2921 100644
 --- a/drivers/gpu/drm/drm_fb_helper.c
 +++ b/drivers/gpu/drm/drm_fb_helper.c
 @@ -571,6 +571,8 @@ static bool drm_fb_helper_is_bound(struct drm_fb_helper *fb_helper)

@@ -68,10 +68,10 @@ index 1dc351d8548b..09ec6ff305b4 100644
  extern int set_create_files_as(struct cred *, struct inode *);
  extern void __init cred_init(void);
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 0a9814a16631..a68fce10acde 100644
+index 615f136a32f2..a30887c379db 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
-@@ -352,7 +352,7 @@ int security_inode_killpriv(struct dentry *dentry);
+@@ -355,7 +355,7 @@ int security_inode_killpriv(struct dentry *dentry);
  int security_inode_getsecurity(struct inode *inode, const char *name, void **buffer, bool alloc);
  int security_inode_setsecurity(struct inode *inode, const char *name, const void *value, size_t size, int flags);
  int security_inode_listsecurity(struct inode *inode, char *buffer, size_t buffer_size);
@@ -80,7 +80,7 @@ index 0a9814a16631..a68fce10acde 100644
  int security_inode_copy_up(struct dentry *src, struct cred **new);
  int security_inode_copy_up_xattr(const char *name);
  int security_file_permission(struct file *file, int mask);
-@@ -377,8 +377,8 @@ int security_cred_alloc_blank(struct cred *cred, gfp_t gfp);
+@@ -380,8 +380,8 @@ int security_cred_alloc_blank(struct cred *cred, gfp_t gfp);
  void security_cred_free(struct cred *cred);
  int security_prepare_creds(struct cred *new, const struct cred *old, gfp_t gfp);
  void security_transfer_creds(struct cred *new, const struct cred *old);
@@ -91,7 +91,7 @@ index 0a9814a16631..a68fce10acde 100644
  int security_kernel_create_files_as(struct cred *new, struct inode *inode);
  int security_kernel_module_request(char *kmod_name);
  int security_kernel_load_data(enum kernel_load_data_id id);
-@@ -390,7 +390,7 @@ int security_task_fix_setuid(struct cred *new, const struct cred *old,
+@@ -393,7 +393,7 @@ int security_task_fix_setuid(struct cred *new, const struct cred *old,
  int security_task_setpgid(struct task_struct *p, pid_t pgid);
  int security_task_getpgid(struct task_struct *p);
  int security_task_getsid(struct task_struct *p);
@@ -100,7 +100,7 @@ index 0a9814a16631..a68fce10acde 100644
  int security_task_setnice(struct task_struct *p, int nice);
  int security_task_setioprio(struct task_struct *p, int ioprio);
  int security_task_getioprio(struct task_struct *p);
-@@ -407,7 +407,7 @@ int security_task_prctl(int option, unsigned long arg2, unsigned long arg3,
+@@ -410,7 +410,7 @@ int security_task_prctl(int option, unsigned long arg2, unsigned long arg3,
  			unsigned long arg4, unsigned long arg5);
  void security_task_to_inode(struct task_struct *p, struct inode *inode);
  int security_ipc_permission(struct kern_ipc_perm *ipcp, short flag);
@@ -109,7 +109,7 @@ index 0a9814a16631..a68fce10acde 100644
  int security_msg_msg_alloc(struct msg_msg *msg);
  void security_msg_msg_free(struct msg_msg *msg);
  int security_msg_queue_alloc(struct kern_ipc_perm *msq);
-@@ -436,8 +436,9 @@ int security_setprocattr(const char *lsm, const char *name, void *value,
+@@ -439,8 +439,9 @@ int security_setprocattr(const char *lsm, const char *name, void *value,
  			 size_t size);
  int security_netlink_send(struct sock *sk, struct sk_buff *skb);
  int security_ismaclabel(const char *name);
@@ -645,7 +645,7 @@ index 82f341e84fae..d336d403cb88 100644
  		return;
  
 diff --git a/net/netfilter/nf_conntrack_netlink.c b/net/netfilter/nf_conntrack_netlink.c
-index 7ba9ea55816a..39b22a30d2c1 100644
+index 31fa94064a62..5c85e3c6c68c 100644
 --- a/net/netfilter/nf_conntrack_netlink.c
 +++ b/net/netfilter/nf_conntrack_netlink.c
 @@ -333,8 +333,12 @@ static int ctnetlink_dump_secctx(struct sk_buff *skb, const struct nf_conn *ct)
@@ -662,7 +662,7 @@ index 7ba9ea55816a..39b22a30d2c1 100644
  	if (ret)
  		return 0;
  
-@@ -620,8 +624,12 @@ static inline int ctnetlink_secctx_size(const struct nf_conn *ct)
+@@ -623,8 +627,12 @@ static inline int ctnetlink_secctx_size(const struct nf_conn *ct)
  {
  #ifdef CONFIG_NF_CONNTRACK_SECMARK
  	int len, ret;
@@ -1193,10 +1193,10 @@ index 93babb60b05a..f7e753b72c4e 100644
  	struct ima_rule_entry *entry;
  	int action = 0, actmask = flags | (flags << 1);
 diff --git a/security/security.c b/security/security.c
-index 45750bb08ea8..7d16b9355373 100644
+index 26511761d824..4158d6d88d67 100644
 --- a/security/security.c
 +++ b/security/security.c
-@@ -1253,12 +1253,10 @@ int security_inode_listsecurity(struct inode *inode, char *buffer, size_t buffer
+@@ -1249,12 +1249,10 @@ int security_inode_listsecurity(struct inode *inode, char *buffer, size_t buffer
  }
  EXPORT_SYMBOL(security_inode_listsecurity);
  
@@ -1212,7 +1212,7 @@ index 45750bb08ea8..7d16b9355373 100644
  }
  
  int security_inode_copy_up(struct dentry *src, struct cred **new)
-@@ -1473,22 +1471,16 @@ void security_transfer_creds(struct cred *new, const struct cred *old)
+@@ -1469,22 +1467,16 @@ void security_transfer_creds(struct cred *new, const struct cred *old)
  	call_void_hook(cred_transfer, new, old);
  }
  
@@ -1240,7 +1240,7 @@ index 45750bb08ea8..7d16b9355373 100644
  }
  
  int security_kernel_create_files_as(struct cred *new, struct inode *inode)
-@@ -1561,13 +1553,10 @@ int security_task_getsid(struct task_struct *p)
+@@ -1557,13 +1549,10 @@ int security_task_getsid(struct task_struct *p)
  	return call_int_hook(task_getsid, 0, p);
  }
  
@@ -1257,7 +1257,7 @@ index 45750bb08ea8..7d16b9355373 100644
  }
  EXPORT_SYMBOL(security_task_getsecid);
  
-@@ -1647,13 +1636,10 @@ int security_ipc_permission(struct kern_ipc_perm *ipcp, short flag)
+@@ -1643,13 +1632,10 @@ int security_ipc_permission(struct kern_ipc_perm *ipcp, short flag)
  	return call_int_hook(ipc_permission, 0, ipcp, flag);
  }
  
@@ -1274,7 +1274,7 @@ index 45750bb08ea8..7d16b9355373 100644
  }
  
  int security_msg_msg_alloc(struct msg_msg *msg)
-@@ -1830,26 +1816,18 @@ int security_ismaclabel(const char *name)
+@@ -1826,26 +1812,18 @@ int security_ismaclabel(const char *name)
  }
  EXPORT_SYMBOL(security_ismaclabel);
  
@@ -1307,7 +1307,7 @@ index 45750bb08ea8..7d16b9355373 100644
  }
  EXPORT_SYMBOL(security_secctx_to_secid);
  
-@@ -1984,16 +1962,11 @@ int security_socket_getpeersec_stream(struct socket *sock, char __user *optval,
+@@ -1980,16 +1958,11 @@ int security_socket_getpeersec_stream(struct socket *sock, char __user *optval,
  				optval, optlen, len);
  }
  
@@ -1328,7 +1328,7 @@ index 45750bb08ea8..7d16b9355373 100644
  }
  EXPORT_SYMBOL(security_socket_getpeersec_dgram);
  
-@@ -2060,12 +2033,9 @@ void security_inet_conn_established(struct sock *sk,
+@@ -2056,12 +2029,9 @@ void security_inet_conn_established(struct sock *sk,
  }
  EXPORT_SYMBOL(security_inet_conn_established);
  
@@ -1343,7 +1343,7 @@ index 45750bb08ea8..7d16b9355373 100644
  }
  EXPORT_SYMBOL(security_secmark_relabel_packet);
  
-@@ -2202,12 +2172,10 @@ int security_xfrm_state_alloc(struct xfrm_state *x,
+@@ -2198,12 +2168,10 @@ int security_xfrm_state_alloc(struct xfrm_state *x,
  EXPORT_SYMBOL(security_xfrm_state_alloc);
  
  int security_xfrm_state_alloc_acquire(struct xfrm_state *x,
@@ -1359,7 +1359,7 @@ index 45750bb08ea8..7d16b9355373 100644
  }
  
  int security_xfrm_state_delete(struct xfrm_state *x)
-@@ -2221,12 +2189,10 @@ void security_xfrm_state_free(struct xfrm_state *x)
+@@ -2217,12 +2185,10 @@ void security_xfrm_state_free(struct xfrm_state *x)
  	call_void_hook(xfrm_state_free_security, x);
  }
  
@@ -1375,7 +1375,7 @@ index 45750bb08ea8..7d16b9355373 100644
  }
  
  int security_xfrm_state_pol_flow_match(struct xfrm_state *x,
-@@ -2253,22 +2219,19 @@ int security_xfrm_state_pol_flow_match(struct xfrm_state *x,
+@@ -2249,22 +2215,19 @@ int security_xfrm_state_pol_flow_match(struct xfrm_state *x,
  	return rc;
  }
  
@@ -1405,7 +1405,7 @@ index 45750bb08ea8..7d16b9355373 100644
  	BUG_ON(rc);
  }
  EXPORT_SYMBOL(security_skb_classify_flow);
-@@ -2328,13 +2291,10 @@ void security_audit_rule_free(void *lsmrule)
+@@ -2324,13 +2287,10 @@ void security_audit_rule_free(void *lsmrule)
  	call_void_hook(audit_rule_free, lsmrule);
  }
  

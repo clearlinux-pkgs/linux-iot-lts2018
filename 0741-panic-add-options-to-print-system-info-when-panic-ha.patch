@@ -28,10 +28,10 @@ Signed-off-by: Stephen Rothwell <sfr@canb.auug.org.au>
  2 files changed, 36 insertions(+)
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 2f1c343ba548..f18e23a3e5b6 100644
+index 44aeb8efc484..73b9930fa07f 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
-@@ -3160,6 +3160,14 @@
+@@ -3166,6 +3166,14 @@
  			timeout < 0: reboot immediately
  			Format: <timeout>
  

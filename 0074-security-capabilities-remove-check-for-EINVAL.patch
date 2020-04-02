@@ -14,10 +14,10 @@ Signed-off-by: James Morris <james.morris@microsoft.com>
  1 file changed, 3 deletions(-)
 
 diff --git a/security/commoncap.c b/security/commoncap.c
-index 2e489d6a3ac8..18a4fdf6f6eb 100644
+index 3023b4ad38a7..182b3280305e 100644
 --- a/security/commoncap.c
 +++ b/security/commoncap.c
-@@ -684,9 +684,6 @@ static int get_file_caps(struct linux_binprm *bprm, bool *effective, bool *has_f
+@@ -683,9 +683,6 @@ static int get_file_caps(struct linux_binprm *bprm, bool *effective, bool *has_f
  	}
  
  	rc = bprm_caps_from_vfs_caps(&vcaps, bprm, effective, has_fcap);

@@ -356,7 +356,7 @@ index 51187ca1efd0..89407870346c 100644
  
  /**
 diff --git a/sound/soc/soc-pcm.c b/sound/soc/soc-pcm.c
-index 15e3cf381c02..bc6eef457b43 100644
+index 4af673c68c21..dcc0fa540b85 100644
 --- a/sound/soc/soc-pcm.c
 +++ b/sound/soc/soc-pcm.c
 @@ -831,8 +831,10 @@ static int soc_pcm_prepare(struct snd_pcm_substream *substream)

@@ -173,10 +173,10 @@ index 95b14196f284..f8579787852e 100644
  
  struct proc_inode {
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 75f4156c84d7..418de5d20ffb 100644
+index d2240605edc4..96eb8d4cf764 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
-@@ -390,8 +390,10 @@ int security_sem_semctl(struct kern_ipc_perm *sma, int cmd);
+@@ -393,8 +393,10 @@ int security_sem_semctl(struct kern_ipc_perm *sma, int cmd);
  int security_sem_semop(struct kern_ipc_perm *sma, struct sembuf *sops,
  			unsigned nsops, int alter);
  void security_d_instantiate(struct dentry *dentry, struct inode *inode);
@@ -212,10 +212,10 @@ index 75f4156c84d7..418de5d20ffb 100644
  	return -EINVAL;
  }
 diff --git a/security/security.c b/security/security.c
-index 5ce2448f3a45..fb75d362ff48 100644
+index 9478444bf93f..44416ebec44f 100644
 --- a/security/security.c
 +++ b/security/security.c
-@@ -1295,14 +1295,30 @@ void security_d_instantiate(struct dentry *dentry, struct inode *inode)
+@@ -1291,14 +1291,30 @@ void security_d_instantiate(struct dentry *dentry, struct inode *inode)
  }
  EXPORT_SYMBOL(security_d_instantiate);
  

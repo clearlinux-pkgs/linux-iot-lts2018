@@ -14,7 +14,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  3 files changed, 21 insertions(+), 15 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index d6b2e71802dc..fd17560c0195 100644
+index 0a10ebd2cfd2..a15f0d56a41c 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -276,7 +276,7 @@ static int __inode_security_revalidate(struct inode *inode,

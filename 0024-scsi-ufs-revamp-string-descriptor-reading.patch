@@ -74,7 +74,7 @@ index c3bcaaec0fc5..348471f55bf9 100644
  
  /**
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 3601e770da16..697c41a26514 100644
+index f4fcaee41dc2..696d1e66028d 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
 @@ -305,16 +305,6 @@ static void ufshcd_scsi_block_requests(struct ufs_hba *hba)
@@ -258,7 +258,7 @@ index 3601e770da16..697c41a26514 100644
  }
  
  /**
-@@ -6297,6 +6322,9 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
+@@ -6300,6 +6325,9 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
  	u8 model_index;
  	u8 *desc_buf;
  
@@ -268,7 +268,7 @@ index 3601e770da16..697c41a26514 100644
  	buff_len = max_t(size_t, hba->desc_size.dev_desc,
  			 QUERY_DESC_MAX_SIZE + 1);
  	desc_buf = kmalloc(buff_len, GFP_KERNEL);
-@@ -6320,31 +6348,31 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
+@@ -6323,31 +6351,31 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
  				     desc_buf[DEVICE_DESC_PARAM_MANF_ID + 1];
  
  	model_index = desc_buf[DEVICE_DESC_PARAM_PRDCT_NAME];
@@ -314,7 +314,7 @@ index 3601e770da16..697c41a26514 100644
  static void ufs_fixup_device_setup(struct ufs_hba *hba,
  				   struct ufs_dev_desc *dev_desc)
  {
-@@ -6353,8 +6381,9 @@ static void ufs_fixup_device_setup(struct ufs_hba *hba,
+@@ -6356,8 +6384,9 @@ static void ufs_fixup_device_setup(struct ufs_hba *hba,
  	for (f = ufs_fixups; f->quirk; f++) {
  		if ((f->card.wmanufacturerid == dev_desc->wmanufacturerid ||
  		     f->card.wmanufacturerid == UFS_ANY_VENDOR) &&
@@ -326,7 +326,7 @@ index 3601e770da16..697c41a26514 100644
  			hba->dev_quirks |= f->quirk;
  	}
  }
-@@ -6637,6 +6666,8 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
+@@ -6640,6 +6669,8 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
  	}
  
  	ufs_fixup_device_setup(hba, &card);

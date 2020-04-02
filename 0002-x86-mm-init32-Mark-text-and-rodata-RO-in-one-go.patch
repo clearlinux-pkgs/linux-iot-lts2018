@@ -34,10 +34,10 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  1 file changed, 4 insertions(+), 19 deletions(-)
 
 diff --git a/arch/x86/mm/init_32.c b/arch/x86/mm/init_32.c
-index 979e0a02cbe1..142c7d9f89cc 100644
+index 79b95910fd9f..f06165ad1300 100644
 --- a/arch/x86/mm/init_32.c
 +++ b/arch/x86/mm/init_32.c
-@@ -923,34 +923,19 @@ static void mark_nxdata_nx(void)
+@@ -920,34 +920,19 @@ static void mark_nxdata_nx(void)
  void mark_rodata_ro(void)
  {
  	unsigned long start = PFN_ALIGN(_text);

@@ -59,7 +59,7 @@ index f7db791fb566..0b55d6a55b26 100644
  
  /*
 diff --git a/security/smack/smack_access.c b/security/smack/smack_access.c
-index c071c356a963..102c44ffc45f 100644
+index a7855c61c05c..485ccd117781 100644
 --- a/security/smack/smack_access.c
 +++ b/security/smack/smack_access.c
 @@ -275,7 +275,7 @@ int smk_tskacc(struct task_smack *tsp, struct smack_known *obj_known,

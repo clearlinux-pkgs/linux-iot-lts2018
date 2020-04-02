@@ -19,10 +19,10 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  6 files changed, 78 insertions(+), 52 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 0bef312efd45..167ffbd4d0c0 100644
+index 2b4d55c973ab..a8bf4c14a219 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -2029,6 +2029,7 @@ struct security_hook_list {
+@@ -2031,6 +2031,7 @@ struct security_hook_list {
   */
  struct lsm_blob_sizes {
  	int	lbs_cred;
@@ -31,7 +31,7 @@ index 0bef312efd45..167ffbd4d0c0 100644
  
  /*
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index c2566aaa138e..15716b6ff860 100644
+index 2faea156372b..d77d451a06dd 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -431,21 +431,21 @@ static int apparmor_file_open(struct file *file)
@@ -74,7 +74,7 @@ index c2566aaa138e..15716b6ff860 100644
  
  static struct security_hook_list apparmor_hooks[] __lsm_ro_after_init = {
 diff --git a/security/security.c b/security/security.c
-index b491c504af03..0bc779634aa8 100644
+index eee803e1a250..51d4a0285b28 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -40,6 +40,8 @@
@@ -137,7 +137,7 @@ index b491c504af03..0bc779634aa8 100644
  }
  
  /*
-@@ -962,12 +994,28 @@ int security_file_permission(struct file *file, int mask)
+@@ -958,12 +990,28 @@ int security_file_permission(struct file *file, int mask)
  
  int security_file_alloc(struct file *file)
  {
@@ -167,7 +167,7 @@ index b491c504af03..0bc779634aa8 100644
  }
  
  int security_file_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
-@@ -1085,7 +1133,7 @@ int security_cred_alloc_blank(struct cred *cred, gfp_t gfp)
+@@ -1081,7 +1129,7 @@ int security_cred_alloc_blank(struct cred *cred, gfp_t gfp)
  		return rc;
  
  	rc = call_int_hook(cred_alloc_blank, 0, cred, gfp);
@@ -176,7 +176,7 @@ index b491c504af03..0bc779634aa8 100644
  		security_cred_free(cred);
  	return rc;
  }
-@@ -1113,7 +1161,7 @@ int security_prepare_creds(struct cred *new, const struct cred *old, gfp_t gfp)
+@@ -1109,7 +1157,7 @@ int security_prepare_creds(struct cred *new, const struct cred *old, gfp_t gfp)
  		return rc;
  
  	rc = call_int_hook(cred_prepare, 0, new, old, gfp);
@@ -186,7 +186,7 @@ index b491c504af03..0bc779634aa8 100644
  	return rc;
  }
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 11fd96906c04..d6b2e71802dc 100644
+index ccc3adf8c6ec..0a10ebd2cfd2 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -149,7 +149,6 @@ static int __init checkreqprot_setup(char *str)

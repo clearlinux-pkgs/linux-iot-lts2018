@@ -34,10 +34,10 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  15 files changed, 175 insertions(+), 40 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 16b20c35adcf..8ce4cb2121b3 100644
+index 1b27b8bcc779..381dae9c3ec5 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -1701,8 +1701,8 @@ union security_list_options {
+@@ -1703,8 +1703,8 @@ union security_list_options {
  				const struct request_sock *req);
  	void (*inet_conn_established)(struct sock *sk, struct sk_buff *skb);
  	int (*secmark_relabel_packet)(struct secids *secid);
@@ -49,10 +49,10 @@ index 16b20c35adcf..8ce4cb2121b3 100644
  					struct flowi *fl);
  	int (*tun_dev_alloc_security)(void **security);
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 01703e2708f2..35f08a886d12 100644
+index aed6376768bb..2a95fcfc4b14 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
-@@ -80,15 +80,9 @@ enum lsm_event {
+@@ -83,15 +83,9 @@ enum lsm_event {
  
  struct secids {
  	u32 common;
@@ -143,7 +143,7 @@ index 8018f6cbd9be..498d8942c344 100644
  			} else {
  				audit_log_format(ab, " obj=%s", ctx);
 diff --git a/net/netfilter/nf_conntrack_netlink.c b/net/netfilter/nf_conntrack_netlink.c
-index 39b22a30d2c1..f09eaa144e20 100644
+index 5c85e3c6c68c..2e4646b27c5d 100644
 --- a/net/netfilter/nf_conntrack_netlink.c
 +++ b/net/netfilter/nf_conntrack_netlink.c
 @@ -335,8 +335,13 @@ static int ctnetlink_dump_secctx(struct sk_buff *skb, const struct nf_conn *ct)
@@ -160,7 +160,7 @@ index 39b22a30d2c1..f09eaa144e20 100644
  
  	ret = security_secid_to_secctx(&secid, &secctx, &len);
  	if (ret)
-@@ -626,8 +631,13 @@ static inline int ctnetlink_secctx_size(const struct nf_conn *ct)
+@@ -629,8 +634,13 @@ static inline int ctnetlink_secctx_size(const struct nf_conn *ct)
  	int len, ret;
  	struct secids secid;
  
@@ -338,7 +338,7 @@ index 27cd4c078799..cdd733be7ecd 100644
  #else
  static inline void unix_get_secdata(struct scm_cookie *scm, struct sk_buff *skb)
 diff --git a/security/security.c b/security/security.c
-index 72c2b7cbba9c..e0651d3b2e41 100644
+index 96e795600adb..5a8047fcb9cd 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -351,10 +351,9 @@ void __init security_add_blobs(struct lsm_blob_sizes *needed)
@@ -354,7 +354,7 @@ index 72c2b7cbba9c..e0651d3b2e41 100644
  	 */
  	if (needed->lbs_sock && blob_sizes.lbs_sock == 0)
  		blob_sizes.lbs_sock = sizeof(struct secids);
-@@ -2242,11 +2241,17 @@ int security_socket_getpeersec_dgram(struct socket *sock, struct sk_buff *skb,
+@@ -2238,11 +2237,17 @@ int security_socket_getpeersec_dgram(struct socket *sock, struct sk_buff *skb,
  #ifdef CONFIG_SECURITY_STACKING
  	struct security_hook_list *hp;
  	int rc = -ENOPROTOOPT;
@@ -374,7 +374,7 @@ index 72c2b7cbba9c..e0651d3b2e41 100644
  
  	return rc;
  #else
-@@ -2336,18 +2341,32 @@ int security_secmark_relabel_packet(struct secids *secid)
+@@ -2332,18 +2337,32 @@ int security_secmark_relabel_packet(struct secids *secid)
  }
  EXPORT_SYMBOL(security_secmark_relabel_packet);
  
@@ -412,7 +412,7 @@ index 72c2b7cbba9c..e0651d3b2e41 100644
  {
  	return call_int_hook(tun_dev_alloc_security, 0, security);
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index dc2d83c8f297..2bc986ecafff 100644
+index ddc9af8fa5ea..d6945570fe42 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -50,6 +50,7 @@

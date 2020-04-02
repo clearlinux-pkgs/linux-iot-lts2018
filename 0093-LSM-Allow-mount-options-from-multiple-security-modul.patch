@@ -22,7 +22,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  5 files changed, 124 insertions(+), 92 deletions(-)
 
 diff --git a/fs/btrfs/super.c b/fs/btrfs/super.c
-index ddbad8d50949..ae42a937874e 100644
+index 6a5b16a119ed..665d1ab16cc1 100644
 --- a/fs/btrfs/super.c
 +++ b/fs/btrfs/super.c
 @@ -1492,15 +1492,15 @@ static int setup_security_options(struct btrfs_fs_info *fs_info,
@@ -47,10 +47,10 @@ index ddbad8d50949..ae42a937874e 100644
  		security_free_mnt_opts(sec_opts);
  	}
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 418de5d20ffb..ef87252b940d 100644
+index 96eb8d4cf764..43f221c253f2 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
-@@ -182,34 +182,55 @@ static inline const char *kernel_load_data_id_str(enum kernel_load_data_id id)
+@@ -185,34 +185,55 @@ static inline const char *kernel_load_data_id_str(enum kernel_load_data_id id)
  
  #ifdef CONFIG_SECURITY
  
@@ -119,10 +119,10 @@ index 418de5d20ffb..ef87252b940d 100644
  
  /* prototypes */
 diff --git a/security/security.c b/security/security.c
-index d607739688cc..fd958c7ce780 100644
+index d642befd1e0c..468695df6559 100644
 --- a/security/security.c
 +++ b/security/security.c
-@@ -787,9 +787,17 @@ int security_sb_set_mnt_opts(struct super_block *sb,
+@@ -783,9 +783,17 @@ int security_sb_set_mnt_opts(struct super_block *sb,
  				unsigned long kern_flags,
  				unsigned long *set_kern_flags)
  {
@@ -144,7 +144,7 @@ index d607739688cc..fd958c7ce780 100644
  EXPORT_SYMBOL(security_sb_set_mnt_opts);
  
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 071dca24396d..35df38af8827 100644
+index 093eeddc2162..aeae28a447cb 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -590,21 +590,23 @@ static int selinux_get_mnt_opts(const struct super_block *sb,

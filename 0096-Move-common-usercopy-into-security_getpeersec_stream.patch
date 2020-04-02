@@ -20,7 +20,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  6 files changed, 48 insertions(+), 54 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 1bf50551c28d..ed8205866789 100644
+index f259cb09958f..687159d80911 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -850,9 +850,8 @@
@@ -35,7 +35,7 @@ index 1bf50551c28d..ed8205866789 100644
   *	@len as input is the maximum length to copy to userspace provided
   *	by the caller.
   *	Return 0 if all is well, otherwise, typical getsockopt return
-@@ -1685,9 +1684,8 @@ union security_list_options {
+@@ -1687,9 +1686,8 @@ union security_list_options {
  	int (*socket_setsockopt)(struct socket *sock, int level, int optname);
  	int (*socket_shutdown)(struct socket *sock, int how);
  	int (*socket_sock_rcv_skb)(struct sock *sk, struct sk_buff *skb);
@@ -48,7 +48,7 @@ index 1bf50551c28d..ed8205866789 100644
  					struct sk_buff *skb,
  					struct secids *secid);
 diff --git a/include/linux/security.h b/include/linux/security.h
-index a68fce10acde..ca55adcc94ec 100644
+index a30887c379db..fd9fbd3ee81f 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -1403,8 +1403,10 @@ static inline int security_sock_rcv_skb(struct sock *sk,
@@ -65,7 +65,7 @@ index a68fce10acde..ca55adcc94ec 100644
  	return -ENOPROTOOPT;
  }
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index fdcf4e11b5a8..a8f4314bbfc7 100644
+index cda6efa6470a..82fd70238ef2 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -1026,10 +1026,8 @@ static struct aa_label *sk_peer_label(struct sock *sk)
@@ -113,10 +113,10 @@ index fdcf4e11b5a8..a8f4314bbfc7 100644
  	end_current_label_crit_section(label);
  
 diff --git a/security/security.c b/security/security.c
-index 7d16b9355373..b0ce65bf655f 100644
+index 4158d6d88d67..65e01da41ab9 100644
 --- a/security/security.c
 +++ b/security/security.c
-@@ -1958,8 +1958,21 @@ EXPORT_SYMBOL(security_sock_rcv_skb);
+@@ -1954,8 +1954,21 @@ EXPORT_SYMBOL(security_sock_rcv_skb);
  int security_socket_getpeersec_stream(struct socket *sock, char __user *optval,
  				      int __user *optlen, unsigned len)
  {
@@ -141,7 +141,7 @@ index 7d16b9355373..b0ce65bf655f 100644
  
  int security_socket_getpeersec_dgram(struct socket *sock, struct sk_buff *skb,
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 9cd862600a29..150a8f8846de 100644
+index 5817d2cb9a3e..f8da43d0dcdd 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -5035,10 +5035,8 @@ static int selinux_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)

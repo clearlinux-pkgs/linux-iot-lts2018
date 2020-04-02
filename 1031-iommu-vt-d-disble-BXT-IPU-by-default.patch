@@ -12,10 +12,10 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  1 file changed, 1 insertion(+), 8 deletions(-)
 
 diff --git a/drivers/iommu/intel-iommu.c b/drivers/iommu/intel-iommu.c
-index 812d25801c13..498432db65da 100644
+index 91c8af9f1fdb..a0d032fe16c9 100644
 --- a/drivers/iommu/intel-iommu.c
 +++ b/drivers/iommu/intel-iommu.c
-@@ -428,7 +428,6 @@ int intel_iommu_enabled = 0;
+@@ -427,7 +427,6 @@ int intel_iommu_enabled = 0;
  EXPORT_SYMBOL_GPL(intel_iommu_enabled);
  
  static int dmar_map_gfx = 1;
@@ -23,7 +23,7 @@ index 812d25801c13..498432db65da 100644
  static int dmar_forcedac;
  static int intel_iommu_strict;
  static int intel_iommu_superpage = 1;
-@@ -535,10 +534,6 @@ static int __init intel_iommu_setup(char *str)
+@@ -534,10 +533,6 @@ static int __init intel_iommu_setup(char *str)
  		} else if (!strncmp(str, "igfx_off", 8)) {
  			dmar_map_gfx = 0;
  			pr_info("Disable GFX device mapping\n");
@@ -34,7 +34,7 @@ index 812d25801c13..498432db65da 100644
  		} else if (!strncmp(str, "forcedac", 8)) {
  			pr_info("Forcing DAC for PCI devices\n");
  			dmar_forcedac = 1;
-@@ -5451,9 +5446,7 @@ DECLARE_PCI_FIXUP_HEADER(PCI_VENDOR_ID_INTEL, 0x006a, quirk_calpella_no_shadow_g
+@@ -5454,9 +5449,7 @@ DECLARE_PCI_FIXUP_HEADER(PCI_VENDOR_ID_INTEL, 0x006a, quirk_calpella_no_shadow_g
  
  static void quirk_broxton_ipu(struct pci_dev *dev)
  {

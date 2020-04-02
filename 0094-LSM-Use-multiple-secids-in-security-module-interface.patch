@@ -52,10 +52,10 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  27 files changed, 275 insertions(+), 165 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index e8632ce10c05..1bf50551c28d 100644
+index 28d3ebffca1b..f259cb09958f 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -1552,7 +1552,7 @@ union security_list_options {
+@@ -1554,7 +1554,7 @@ union security_list_options {
  					int flags);
  	int (*inode_listsecurity)(struct inode *inode, char *buffer,
  					size_t buffer_size);
@@ -64,7 +64,7 @@ index e8632ce10c05..1bf50551c28d 100644
  	int (*inode_copy_up)(struct dentry *src, struct cred **new);
  	int (*inode_copy_up_xattr)(const char *name);
  
-@@ -1582,8 +1582,8 @@ union security_list_options {
+@@ -1584,8 +1584,8 @@ union security_list_options {
  	int (*cred_prepare)(struct cred *new, const struct cred *old,
  				gfp_t gfp);
  	void (*cred_transfer)(struct cred *new, const struct cred *old);
@@ -75,7 +75,7 @@ index e8632ce10c05..1bf50551c28d 100644
  	int (*kernel_create_files_as)(struct cred *new, struct inode *inode);
  	int (*kernel_module_request)(char *kmod_name);
  	int (*kernel_load_data)(enum kernel_load_data_id id);
-@@ -1595,7 +1595,7 @@ union security_list_options {
+@@ -1597,7 +1597,7 @@ union security_list_options {
  	int (*task_setpgid)(struct task_struct *p, pid_t pgid);
  	int (*task_getpgid)(struct task_struct *p);
  	int (*task_getsid)(struct task_struct *p);
@@ -84,7 +84,7 @@ index e8632ce10c05..1bf50551c28d 100644
  	int (*task_setnice)(struct task_struct *p, int nice);
  	int (*task_setioprio)(struct task_struct *p, int ioprio);
  	int (*task_getioprio)(struct task_struct *p);
-@@ -1613,7 +1613,7 @@ union security_list_options {
+@@ -1615,7 +1615,7 @@ union security_list_options {
  	void (*task_to_inode)(struct task_struct *p, struct inode *inode);
  
  	int (*ipc_permission)(struct kern_ipc_perm *ipcp, short flag);
@@ -93,7 +93,7 @@ index e8632ce10c05..1bf50551c28d 100644
  
  	int (*msg_msg_alloc_security)(struct msg_msg *msg);
  	void (*msg_msg_free_security)(struct msg_msg *msg);
-@@ -1649,8 +1649,10 @@ union security_list_options {
+@@ -1651,8 +1651,10 @@ union security_list_options {
  	int (*getprocattr)(struct task_struct *p, char *name, char **value);
  	int (*setprocattr)(const char *name, void *value, size_t size);
  	int (*ismaclabel)(const char *name);
@@ -106,7 +106,7 @@ index e8632ce10c05..1bf50551c28d 100644
  	void (*release_secctx)(char *secdata, u32 seclen);
  
  	void (*inode_invalidate_secctx)(struct inode *inode);
-@@ -1685,20 +1687,21 @@ union security_list_options {
+@@ -1687,20 +1689,21 @@ union security_list_options {
  	int (*socket_sock_rcv_skb)(struct sock *sk, struct sk_buff *skb);
  	int (*socket_getpeersec_stream)(struct socket *sock,
  					char __user *optval,
@@ -132,7 +132,7 @@ index e8632ce10c05..1bf50551c28d 100644
  	void (*secmark_refcount_inc)(void);
  	void (*secmark_refcount_dec)(void);
  	void (*req_classify_flow)(const struct request_sock *req,
-@@ -1737,15 +1740,16 @@ union security_list_options {
+@@ -1739,15 +1742,16 @@ union security_list_options {
  				struct xfrm_user_sec_ctx *sec_ctx);
  	int (*xfrm_state_alloc_acquire)(struct xfrm_state *x,
  					struct xfrm_sec_ctx *polsec,
@@ -153,7 +153,7 @@ index e8632ce10c05..1bf50551c28d 100644
  #endif	/* CONFIG_SECURITY_NETWORK_XFRM */
  
  	/* key management security hooks */
-@@ -1762,8 +1766,8 @@ union security_list_options {
+@@ -1764,8 +1768,8 @@ union security_list_options {
  	int (*audit_rule_init)(u32 field, u32 op, char *rulestr,
  				void **lsmrule);
  	int (*audit_rule_known)(struct audit_krule *krule);
@@ -165,10 +165,10 @@ index e8632ce10c05..1bf50551c28d 100644
  #endif /* CONFIG_AUDIT */
  
 diff --git a/include/linux/security.h b/include/linux/security.h
-index ef87252b940d..0a9814a16631 100644
+index 43f221c253f2..615f136a32f2 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
-@@ -70,6 +70,25 @@ enum lsm_event {
+@@ -73,6 +73,25 @@ enum lsm_event {
  	LSM_POLICY_CHANGE,
  };
  
@@ -193,7 +193,7 @@ index ef87252b940d..0a9814a16631 100644
 +
  /* These functions are in security/commoncap.c */
  extern int cap_capable(const struct cred *cred, struct user_namespace *ns,
- 		       int cap, int audit);
+ 		       int cap, unsigned int opts);
 diff --git a/include/net/flow.h b/include/net/flow.h
 index 8ce21793094e..aa29d11bc3d7 100644
 --- a/include/net/flow.h
@@ -265,7 +265,7 @@ index 72d6435fc16c..51dacbb88886 100644
  {
  	return -ENOSYS;
 diff --git a/net/core/filter.c b/net/core/filter.c
-index 91b950261975..4f3b78ffa2a6 100644
+index 9daf1a4118b5..25714073005c 100644
 --- a/net/core/filter.c
 +++ b/net/core/filter.c
 @@ -4289,7 +4289,7 @@ static int bpf_ipv4_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
@@ -586,7 +586,7 @@ index dee6fa3b6081..81f29538e415 100644
  
  
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index c8644f247d7c..fdcf4e11b5a8 100644
+index b9345e450f62..cda6efa6470a 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -707,10 +707,10 @@ static void apparmor_bprm_committed_creds(struct linux_binprm *bprm)
@@ -649,7 +649,7 @@ index 4ccec1bcf6f5..3ef6f3704aeb 100644
  	return 0;
  }
 diff --git a/security/security.c b/security/security.c
-index fd958c7ce780..45750bb08ea8 100644
+index 468695df6559..26511761d824 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -132,6 +132,7 @@ int __init security_init(void)
@@ -660,7 +660,7 @@ index fd958c7ce780..45750bb08ea8 100644
  #endif /* CONFIG_SECURITY_LSM_DEBUG */
  
  	return 0;
-@@ -1254,7 +1255,10 @@ EXPORT_SYMBOL(security_inode_listsecurity);
+@@ -1250,7 +1251,10 @@ EXPORT_SYMBOL(security_inode_listsecurity);
  
  void security_inode_getsecid(struct inode *inode, u32 *secid)
  {
@@ -672,7 +672,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  
  int security_inode_copy_up(struct dentry *src, struct cred **new)
-@@ -1471,14 +1475,20 @@ void security_transfer_creds(struct cred *new, const struct cred *old)
+@@ -1467,14 +1471,20 @@ void security_transfer_creds(struct cred *new, const struct cred *old)
  
  void security_cred_getsecid(const struct cred *c, u32 *secid)
  {
@@ -696,7 +696,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  
  int security_kernel_create_files_as(struct cred *new, struct inode *inode)
-@@ -1553,8 +1563,11 @@ int security_task_getsid(struct task_struct *p)
+@@ -1549,8 +1559,11 @@ int security_task_getsid(struct task_struct *p)
  
  void security_task_getsecid(struct task_struct *p, u32 *secid)
  {
@@ -710,7 +710,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  EXPORT_SYMBOL(security_task_getsecid);
  
-@@ -1636,8 +1649,11 @@ int security_ipc_permission(struct kern_ipc_perm *ipcp, short flag)
+@@ -1632,8 +1645,11 @@ int security_ipc_permission(struct kern_ipc_perm *ipcp, short flag)
  
  void security_ipc_getsecid(struct kern_ipc_perm *ipcp, u32 *secid)
  {
@@ -724,7 +724,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  
  int security_msg_msg_alloc(struct msg_msg *msg)
-@@ -1816,15 +1832,24 @@ EXPORT_SYMBOL(security_ismaclabel);
+@@ -1812,15 +1828,24 @@ EXPORT_SYMBOL(security_ismaclabel);
  
  int security_secid_to_secctx(u32 secid, char **secdata, u32 *seclen)
  {
@@ -752,7 +752,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  EXPORT_SYMBOL(security_secctx_to_secid);
  
-@@ -1961,8 +1986,14 @@ int security_socket_getpeersec_stream(struct socket *sock, char __user *optval,
+@@ -1957,8 +1982,14 @@ int security_socket_getpeersec_stream(struct socket *sock, char __user *optval,
  
  int security_socket_getpeersec_dgram(struct socket *sock, struct sk_buff *skb, u32 *secid)
  {
@@ -769,7 +769,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  EXPORT_SYMBOL(security_socket_getpeersec_dgram);
  
-@@ -2031,7 +2062,10 @@ EXPORT_SYMBOL(security_inet_conn_established);
+@@ -2027,7 +2058,10 @@ EXPORT_SYMBOL(security_inet_conn_established);
  
  int security_secmark_relabel_packet(u32 secid)
  {
@@ -781,7 +781,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  EXPORT_SYMBOL(security_secmark_relabel_packet);
  
-@@ -2170,7 +2204,10 @@ EXPORT_SYMBOL(security_xfrm_state_alloc);
+@@ -2166,7 +2200,10 @@ EXPORT_SYMBOL(security_xfrm_state_alloc);
  int security_xfrm_state_alloc_acquire(struct xfrm_state *x,
  				      struct xfrm_sec_ctx *polsec, u32 secid)
  {
@@ -793,7 +793,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  
  int security_xfrm_state_delete(struct xfrm_state *x)
-@@ -2186,7 +2223,10 @@ void security_xfrm_state_free(struct xfrm_state *x)
+@@ -2182,7 +2219,10 @@ void security_xfrm_state_free(struct xfrm_state *x)
  
  int security_xfrm_policy_lookup(struct xfrm_sec_ctx *ctx, u32 fl_secid, u8 dir)
  {
@@ -805,7 +805,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  
  int security_xfrm_state_pol_flow_match(struct xfrm_state *x,
-@@ -2215,7 +2255,13 @@ int security_xfrm_state_pol_flow_match(struct xfrm_state *x,
+@@ -2211,7 +2251,13 @@ int security_xfrm_state_pol_flow_match(struct xfrm_state *x,
  
  int security_xfrm_decode_session(struct sk_buff *skb, u32 *secid)
  {
@@ -820,7 +820,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  
  void security_skb_classify_flow(struct sk_buff *skb, struct flowi *fl)
-@@ -2285,7 +2331,10 @@ void security_audit_rule_free(void *lsmrule)
+@@ -2281,7 +2327,10 @@ void security_audit_rule_free(void *lsmrule)
  int security_audit_rule_match(u32 secid, u32 field, u32 op, void *lsmrule,
  			      struct audit_context *actx)
  {
@@ -833,7 +833,7 @@ index fd958c7ce780..45750bb08ea8 100644
  }
  #endif /* CONFIG_AUDIT */
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 35df38af8827..9cd862600a29 100644
+index aeae28a447cb..5817d2cb9a3e 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -3461,15 +3461,15 @@ static int selinux_inode_listsecurity(struct inode *inode, char *buffer, size_t
@@ -1206,7 +1206,7 @@ index 8ffe7e1053c4..067dd8307a9b 100644
  	memcpy(ctx->ctx_str, ctx_str, str_len);
  
 diff --git a/security/smack/smack_access.c b/security/smack/smack_access.c
-index 102c44ffc45f..c51e98d442f4 100644
+index 485ccd117781..54f308ca6aba 100644
 --- a/security/smack/smack_access.c
 +++ b/security/smack/smack_access.c
 @@ -550,7 +550,9 @@ struct smack_known *smk_import_entry(const char *string, int len)

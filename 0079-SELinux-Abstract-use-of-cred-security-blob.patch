@@ -14,7 +14,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  3 files changed, 34 insertions(+), 29 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 109ab510bdb1..e7f402903ccc 100644
+index 040c843968dc..24c445066f38 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -228,7 +228,7 @@ static inline u32 cred_sid(const struct cred *cred)

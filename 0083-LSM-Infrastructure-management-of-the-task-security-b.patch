@@ -18,10 +18,10 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  4 files changed, 62 insertions(+), 27 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 167ffbd4d0c0..27000252d20e 100644
+index a8bf4c14a219..2cd999bf9d70 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -2030,6 +2030,7 @@ struct security_hook_list {
+@@ -2032,6 +2032,7 @@ struct security_hook_list {
  struct lsm_blob_sizes {
  	int	lbs_cred;
  	int	lbs_file;
@@ -29,7 +29,7 @@ index 167ffbd4d0c0..27000252d20e 100644
  };
  
  /*
-@@ -2095,6 +2096,7 @@ extern int lsm_cred_alloc(struct cred *cred, gfp_t gfp);
+@@ -2097,6 +2098,7 @@ extern int lsm_cred_alloc(struct cred *cred, gfp_t gfp);
  
  #ifdef CONFIG_SECURITY
  void lsm_early_cred(struct cred *cred);
@@ -81,7 +81,7 @@ index 55edaa1d83f8..039c1e60887a 100644
  }
  
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index 15716b6ff860..c97dc3dbb515 100644
+index d77d451a06dd..0569735e3475 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -91,19 +91,14 @@ static void apparmor_task_free(struct task_struct *task)
@@ -131,7 +131,7 @@ index 15716b6ff860..c97dc3dbb515 100644
  	return 0;
  }
 diff --git a/security/security.c b/security/security.c
-index 0bc779634aa8..132817ced21a 100644
+index 51d4a0285b28..bc10f55ffd58 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -111,6 +111,7 @@ int __init security_init(void)
@@ -197,7 +197,7 @@ index 0bc779634aa8..132817ced21a 100644
  /*
   * Hook list operation macros.
   *
-@@ -1117,12 +1159,22 @@ int security_file_open(struct file *file)
+@@ -1113,12 +1155,22 @@ int security_file_open(struct file *file)
  
  int security_task_alloc(struct task_struct *task, unsigned long clone_flags)
  {

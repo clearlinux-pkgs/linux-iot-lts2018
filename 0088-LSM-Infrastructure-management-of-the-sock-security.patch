@@ -24,10 +24,10 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  10 files changed, 141 insertions(+), 117 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 2d1078add107..68056153953d 100644
+index ddd18e6b2eec..94965059c3f8 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -2031,6 +2031,7 @@ struct lsm_blob_sizes {
+@@ -2033,6 +2033,7 @@ struct lsm_blob_sizes {
  	int	lbs_cred;
  	int	lbs_file;
  	int	lbs_inode;
@@ -53,7 +53,7 @@ index ec7228e857a9..79f66b9e117d 100644
  #define DEFINE_AUDIT_NET(NAME, OP, SK, F, T, P)				  \
  	struct lsm_network_audit NAME ## _net = { .sk = (SK),		  \
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index c97dc3dbb515..abfe9777f498 100644
+index 0569735e3475..748c260b628a 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -754,33 +754,15 @@ static int apparmor_task_kill(struct task_struct *target, struct siginfo *info,
@@ -146,7 +146,7 @@ index c97dc3dbb515..abfe9777f498 100644
  	LSM_HOOK_INIT(sk_clone_security, apparmor_sk_clone_security),
  
 diff --git a/security/security.c b/security/security.c
-index 378b8d4da6a6..244bcf558155 100644
+index f6238c8489be..55dfdc0c428f 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -29,6 +29,7 @@
@@ -202,7 +202,7 @@ index 378b8d4da6a6..244bcf558155 100644
  /**
   * lsm_superblock_alloc - allocate a composite superblock blob
   * @sb: the superblock that needs a blob
-@@ -1797,12 +1822,21 @@ EXPORT_SYMBOL(security_socket_getpeersec_dgram);
+@@ -1793,12 +1818,21 @@ EXPORT_SYMBOL(security_socket_getpeersec_dgram);
  
  int security_sk_alloc(struct sock *sk, int family, gfp_t priority)
  {
@@ -226,7 +226,7 @@ index 378b8d4da6a6..244bcf558155 100644
  
  void security_sk_clone(const struct sock *sk, struct sock *newsk)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 7d2df61a3bf8..223c94694278 100644
+index c4baec577951..4b8e387152bf 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -4464,7 +4464,7 @@ static int socket_sockcreate_sid(const struct task_security_struct *tsec,

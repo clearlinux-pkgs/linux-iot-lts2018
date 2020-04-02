@@ -22,10 +22,10 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  7 files changed, 78 insertions(+), 63 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 55b0f0899fbf..2d1078add107 100644
+index ee77a6dc1c37..ddd18e6b2eec 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -2031,6 +2031,7 @@ struct lsm_blob_sizes {
+@@ -2033,6 +2033,7 @@ struct lsm_blob_sizes {
  	int	lbs_cred;
  	int	lbs_file;
  	int	lbs_inode;
@@ -34,7 +34,7 @@ index 55b0f0899fbf..2d1078add107 100644
  };
  
 diff --git a/security/security.c b/security/security.c
-index 9620309ee754..378b8d4da6a6 100644
+index 4d2f1d88eef8..f6238c8489be 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -117,6 +117,7 @@ int __init security_init(void)
@@ -81,7 +81,7 @@ index 9620309ee754..378b8d4da6a6 100644
  /*
   * Hook list operation macros.
   *
-@@ -573,12 +596,21 @@ void security_bprm_committed_creds(struct linux_binprm *bprm)
+@@ -569,12 +592,21 @@ void security_bprm_committed_creds(struct linux_binprm *bprm)
  
  int security_sb_alloc(struct super_block *sb)
  {
@@ -105,7 +105,7 @@ index 9620309ee754..378b8d4da6a6 100644
  
  int security_sb_copy_data(char *orig, char *copy)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index a09107c5b29e..7d2df61a3bf8 100644
+index 9e08cbb6db92..c4baec577951 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -333,7 +333,8 @@ static struct inode_security_struct *backing_inode_security(struct dentry *dentr

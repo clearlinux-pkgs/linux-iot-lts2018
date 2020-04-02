@@ -52,7 +52,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  create mode 100644 security/stacking.c
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index ed8205866789..16b20c35adcf 100644
+index 687159d80911..1b27b8bcc779 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -28,6 +28,7 @@
@@ -63,7 +63,7 @@ index ed8205866789..16b20c35adcf 100644
  
  /**
   * union security_list_options - Linux Security Module hook function list
-@@ -2109,4 +2110,11 @@ void lsm_early_task(struct task_struct *task);
+@@ -2111,4 +2112,11 @@ void lsm_early_task(struct task_struct *task);
  void lsm_early_inode(struct inode *inode);
  #endif
  
@@ -76,7 +76,7 @@ index ed8205866789..16b20c35adcf 100644
 +
  #endif /* ! __LINUX_LSM_HOOKS_H */
 diff --git a/include/linux/security.h b/include/linux/security.h
-index ca55adcc94ec..01703e2708f2 100644
+index fd9fbd3ee81f..aed6376768bb 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -53,6 +53,7 @@ struct msg_msg;
@@ -85,9 +85,9 @@ index ca55adcc94ec..01703e2708f2 100644
  struct mm_struct;
 +struct sk_buff;
  
- /* If capable should audit the security request */
- #define SECURITY_CAP_NOAUDIT 0
-@@ -70,6 +71,33 @@ enum lsm_event {
+ /* Default (no) options for the capable function */
+ #define CAP_OPT_NONE 0x0
+@@ -73,6 +74,33 @@ enum lsm_event {
  	LSM_POLICY_CHANGE,
  };
  
@@ -121,7 +121,7 @@ index ca55adcc94ec..01703e2708f2 100644
  struct secids {
  	union {
  		u32 common;
-@@ -84,6 +112,8 @@ static inline bool secid_valid(const struct secids *secids)
+@@ -87,6 +115,8 @@ static inline bool secid_valid(const struct secids *secids)
  	return secids->common != 0;
  }
  
@@ -130,7 +130,7 @@ index ca55adcc94ec..01703e2708f2 100644
  static inline void secid_init(struct secids *secid)
  {
  	memset(secid, 0, sizeof(*secid));
-@@ -120,7 +150,6 @@ extern int cap_task_setnice(struct task_struct *p, int nice);
+@@ -123,7 +153,6 @@ extern int cap_task_setnice(struct task_struct *p, int nice);
  extern int cap_vm_enough_memory(struct mm_struct *mm, long pages);
  
  struct msghdr;
@@ -215,10 +215,10 @@ index b17201edfa09..a10d54910652 100644
 +
  #endif /* _LINUX_PRCTL_H */
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 8cb5cd7c97e1..f579ba3fd6e7 100644
+index 1a2d18e98bf9..5b231ea4a74e 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
-@@ -1852,6 +1852,9 @@ static __latent_entropy struct task_struct *copy_process(
+@@ -1862,6 +1862,9 @@ static __latent_entropy struct task_struct *copy_process(
  	p->sequential_io	= 0;
  	p->sequential_io_avg	= 0;
  #endif
@@ -447,7 +447,7 @@ index 4d2d3782ddef..9b2b87710de8 100644
  obj-$(CONFIG_SECURITY_SELINUX)		+= selinux/
  obj-$(CONFIG_SECURITY_SMACK)		+= smack/
 diff --git a/security/security.c b/security/security.c
-index b0ce65bf655f..72c2b7cbba9c 100644
+index 65e01da41ab9..96e795600adb 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -29,12 +29,18 @@
@@ -529,7 +529,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  /*
   * Hook list operation macros.
   *
-@@ -879,8 +921,12 @@ int security_inode_init_security(struct inode *inode, struct inode *dir,
+@@ -875,8 +917,12 @@ int security_inode_init_security(struct inode *inode, struct inode *dir,
  				 const initxattrs initxattrs, void *fs_data)
  {
  	struct xattr new_xattrs[MAX_LSM_EVM_XATTR + 1];
@@ -544,7 +544,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  
  	if (unlikely(IS_PRIVATE(inode)))
  		return 0;
-@@ -888,23 +934,41 @@ int security_inode_init_security(struct inode *inode, struct inode *dir,
+@@ -884,23 +930,41 @@ int security_inode_init_security(struct inode *inode, struct inode *dir,
  	if (!initxattrs)
  		return call_int_hook(inode_init_security, -EOPNOTSUPP, inode,
  				     dir, qstr, NULL, NULL, NULL);
@@ -600,7 +600,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  	return (ret == -EOPNOTSUPP) ? 0 : ret;
  }
  EXPORT_SYMBOL(security_inode_init_security);
-@@ -1133,18 +1197,22 @@ int security_inode_getattr(const struct path *path)
+@@ -1129,18 +1193,22 @@ int security_inode_getattr(const struct path *path)
  int security_inode_setxattr(struct dentry *dentry, const char *name,
  			    const void *value, size_t size, int flags)
  {
@@ -631,7 +631,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  		ret = cap_inode_setxattr(dentry, name, value, size, flags);
  	if (ret)
  		return ret;
-@@ -1608,12 +1676,65 @@ int security_task_kill(struct task_struct *p, struct siginfo *info,
+@@ -1604,12 +1672,65 @@ int security_task_kill(struct task_struct *p, struct siginfo *info,
  	return call_int_hook(task_kill, 0, p, info, sig, cred);
  }
  
@@ -697,7 +697,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  
  	hlist_for_each_entry(hp, &security_hook_heads.task_prctl, list) {
  		thisrc = hp->hook.task_prctl(option, arg2, arg3, arg4, arg5);
-@@ -1783,9 +1904,17 @@ int security_getprocattr(struct task_struct *p, const char *lsm, char *name,
+@@ -1779,9 +1900,17 @@ int security_getprocattr(struct task_struct *p, const char *lsm, char *name,
  				char **value)
  {
  	struct security_hook_list *hp;
@@ -716,7 +716,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  			continue;
  		return hp->hook.getprocattr(p, name, value);
  	}
-@@ -1796,9 +1925,17 @@ int security_setprocattr(const char *lsm, const char *name, void *value,
+@@ -1792,9 +1921,17 @@ int security_setprocattr(const char *lsm, const char *name, void *value,
  			 size_t size)
  {
  	struct security_hook_list *hp;
@@ -735,7 +735,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  			continue;
  		return hp->hook.setprocattr(name, value, size);
  	}
-@@ -1818,22 +1955,60 @@ EXPORT_SYMBOL(security_ismaclabel);
+@@ -1814,22 +1951,60 @@ EXPORT_SYMBOL(security_ismaclabel);
  
  int security_secid_to_secctx(struct secids *secid, char **secdata, u32 *seclen)
  {
@@ -796,7 +796,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  }
  EXPORT_SYMBOL(security_release_secctx);
  
-@@ -1851,13 +2026,80 @@ EXPORT_SYMBOL(security_inode_notifysecctx);
+@@ -1847,13 +2022,80 @@ EXPORT_SYMBOL(security_inode_notifysecctx);
  
  int security_inode_setsecctx(struct dentry *dentry, void *ctx, u32 ctxlen)
  {
@@ -877,7 +877,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  }
  EXPORT_SYMBOL(security_inode_getsecctx);
  
-@@ -1958,12 +2200,31 @@ EXPORT_SYMBOL(security_sock_rcv_skb);
+@@ -1954,12 +2196,31 @@ EXPORT_SYMBOL(security_sock_rcv_skb);
  int security_socket_getpeersec_stream(struct socket *sock, char __user *optval,
  				      int __user *optlen, unsigned len)
  {
@@ -912,7 +912,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  	if (rc == 0) {
  		tlen = strlen(tval) + 1;
  		if (put_user(tlen, optlen))
-@@ -1978,8 +2239,20 @@ int security_socket_getpeersec_stream(struct socket *sock, char __user *optval,
+@@ -1974,8 +2235,20 @@ int security_socket_getpeersec_stream(struct socket *sock, char __user *optval,
  int security_socket_getpeersec_dgram(struct socket *sock, struct sk_buff *skb,
  				     struct secids *secid)
  {
@@ -933,7 +933,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  }
  EXPORT_SYMBOL(security_socket_getpeersec_dgram);
  
-@@ -2048,7 +2321,18 @@ EXPORT_SYMBOL(security_inet_conn_established);
+@@ -2044,7 +2317,18 @@ EXPORT_SYMBOL(security_inet_conn_established);
  
  int security_secmark_relabel_packet(struct secids *secid)
  {
@@ -953,7 +953,7 @@ index b0ce65bf655f..72c2b7cbba9c 100644
  EXPORT_SYMBOL(security_secmark_relabel_packet);
  
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 150a8f8846de..dc2d83c8f297 100644
+index f8da43d0dcdd..ddc9af8fa5ea 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -3237,13 +3237,12 @@ static int selinux_inode_setxattr(struct dentry *dentry, const char *name,

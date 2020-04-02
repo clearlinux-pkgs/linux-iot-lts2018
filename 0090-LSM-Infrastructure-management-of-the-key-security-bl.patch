@@ -20,10 +20,10 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  6 files changed, 75 insertions(+), 36 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index fba6908ffd84..dab23cf22deb 100644
+index 7f5117c632de..b0993ae97795 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -2032,6 +2032,7 @@ struct lsm_blob_sizes {
+@@ -2034,6 +2034,7 @@ struct lsm_blob_sizes {
  	int	lbs_file;
  	int	lbs_inode;
  	int	lbs_ipc;
@@ -32,7 +32,7 @@ index fba6908ffd84..dab23cf22deb 100644
  	int	lbs_sock;
  	int	lbs_superblock;
 diff --git a/security/security.c b/security/security.c
-index dd50b45e390c..c44f5fba35db 100644
+index c94b0aa70147..ae6ec99807ab 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -120,6 +120,9 @@ int __init security_init(void)
@@ -85,7 +85,7 @@ index dd50b45e390c..c44f5fba35db 100644
  /**
   * lsm_msg_msg_alloc - allocate a composite msg_msg blob
   * @mp: the msg_msg that needs a blob
-@@ -2171,12 +2200,21 @@ EXPORT_SYMBOL(security_skb_classify_flow);
+@@ -2167,12 +2196,21 @@ EXPORT_SYMBOL(security_skb_classify_flow);
  int security_key_alloc(struct key *key, const struct cred *cred,
  		       unsigned long flags)
  {
@@ -109,7 +109,7 @@ index dd50b45e390c..c44f5fba35db 100644
  
  int security_key_permission(key_ref_t key_ref,
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 55b4c652ebff..9a66a815184a 100644
+index 93e03252cb7e..49bf393ed5b4 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -6499,11 +6499,7 @@ static int selinux_key_alloc(struct key *k, const struct cred *cred,

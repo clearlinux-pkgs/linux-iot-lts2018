@@ -21,10 +21,10 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  6 files changed, 146 insertions(+), 131 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 68056153953d..fba6908ffd84 100644
+index 94965059c3f8..7f5117c632de 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -2031,6 +2031,8 @@ struct lsm_blob_sizes {
+@@ -2033,6 +2033,8 @@ struct lsm_blob_sizes {
  	int	lbs_cred;
  	int	lbs_file;
  	int	lbs_inode;
@@ -34,7 +34,7 @@ index 68056153953d..fba6908ffd84 100644
  	int	lbs_superblock;
  	int	lbs_task;
 diff --git a/security/security.c b/security/security.c
-index 244bcf558155..dd50b45e390c 100644
+index 55dfdc0c428f..c94b0aa70147 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -28,6 +28,7 @@
@@ -112,7 +112,7 @@ index 244bcf558155..dd50b45e390c 100644
  /**
   * lsm_sock_alloc - allocate a composite sock blob
   * @sock: the sock that needs a blob
-@@ -1532,22 +1579,40 @@ void security_ipc_getsecid(struct kern_ipc_perm *ipcp, u32 *secid)
+@@ -1528,22 +1575,40 @@ void security_ipc_getsecid(struct kern_ipc_perm *ipcp, u32 *secid)
  
  int security_msg_msg_alloc(struct msg_msg *msg)
  {
@@ -155,7 +155,7 @@ index 244bcf558155..dd50b45e390c 100644
  }
  
  int security_msg_queue_associate(struct kern_ipc_perm *msq, int msqflg)
-@@ -1574,12 +1639,21 @@ int security_msg_queue_msgrcv(struct kern_ipc_perm *msq, struct msg_msg *msg,
+@@ -1570,12 +1635,21 @@ int security_msg_queue_msgrcv(struct kern_ipc_perm *msq, struct msg_msg *msg,
  
  int security_shm_alloc(struct kern_ipc_perm *shp)
  {
@@ -178,7 +178,7 @@ index 244bcf558155..dd50b45e390c 100644
  }
  
  int security_shm_associate(struct kern_ipc_perm *shp, int shmflg)
-@@ -1599,12 +1673,21 @@ int security_shm_shmat(struct kern_ipc_perm *shp, char __user *shmaddr, int shmf
+@@ -1595,12 +1669,21 @@ int security_shm_shmat(struct kern_ipc_perm *shp, char __user *shmaddr, int shmf
  
  int security_sem_alloc(struct kern_ipc_perm *sma)
  {
@@ -202,7 +202,7 @@ index 244bcf558155..dd50b45e390c 100644
  
  int security_sem_associate(struct kern_ipc_perm *sma, int semflg)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 223c94694278..55b4c652ebff 100644
+index 4b8e387152bf..93e03252cb7e 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -5857,51 +5857,22 @@ static int selinux_netlink_send(struct sock *sk, struct sk_buff *skb)

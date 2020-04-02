@@ -63,10 +63,10 @@ index 9842e21afd4a..d3d8af174042 100644
  A list of the active security modules can be found by reading
  ``/sys/kernel/security/lsm``. This is a comma separated list, and
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index dab23cf22deb..e8632ce10c05 100644
+index b0993ae97795..28d3ebffca1b 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
-@@ -2085,7 +2085,7 @@ static inline void security_delete_hooks(struct security_hook_list *hooks,
+@@ -2087,7 +2087,7 @@ static inline void security_delete_hooks(struct security_hook_list *hooks,
  #define __lsm_ro_after_init	__ro_after_init
  #endif /* CONFIG_SECURITY_WRITABLE_HOOKS */
  
@@ -184,7 +184,7 @@ index 0447d9d8c875..b187bf5f7cf3 100644
 +
 +endmenu
 diff --git a/security/apparmor/include/cred.h b/security/apparmor/include/cred.h
-index a90eae76d7c1..be7575adf6f0 100644
+index a757370f2a0c..01fa41f1462b 100644
 --- a/security/apparmor/include/cred.h
 +++ b/security/apparmor/include/cred.h
 @@ -25,7 +25,11 @@
@@ -286,7 +286,7 @@ index 039c1e60887a..4fbe9370e6e0 100644
  
  /*
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index abfe9777f498..c8644f247d7c 100644
+index 748c260b628a..b9345e450f62 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -1526,7 +1526,9 @@ static int __init apparmor_init(void)
@@ -312,7 +312,7 @@ index abfe9777f498..c8644f247d7c 100644
  		apparmor_enabled = false;
  		return 0;
 diff --git a/security/security.c b/security/security.c
-index 5284159f4d5a..d607739688cc 100644
+index aeec03f49b02..d642befd1e0c 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -38,6 +38,7 @@
@@ -376,7 +376,7 @@ index 5284159f4d5a..d607739688cc 100644
  
  /**
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 9a66a815184a..071dca24396d 100644
+index 49bf393ed5b4..093eeddc2162 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -7000,7 +7000,8 @@ static __init int selinux_init(void)
