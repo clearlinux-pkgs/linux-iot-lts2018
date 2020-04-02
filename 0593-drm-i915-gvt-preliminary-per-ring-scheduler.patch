@@ -528,10 +528,10 @@ index 043c2ff07a7c..3cec02d2ac1a 100644
  	spinlock_t mmio_context_lock;
  	/* can be null when owner is host */
 diff --git a/drivers/gpu/drm/i915/gvt/vgpu.c b/drivers/gpu/drm/i915/gvt/vgpu.c
-index c628be05fbfe..d83e48b53d62 100644
+index 9cf769f8ebb2..37e922d84dd3 100644
 --- a/drivers/gpu/drm/i915/gvt/vgpu.c
 +++ b/drivers/gpu/drm/i915/gvt/vgpu.c
-@@ -525,6 +525,8 @@ void intel_gvt_reset_vgpu_locked(struct intel_vgpu *vgpu, bool dmlr,
+@@ -531,6 +531,8 @@ void intel_gvt_reset_vgpu_locked(struct intel_vgpu *vgpu, bool dmlr,
  	struct intel_gvt *gvt = vgpu->gvt;
  	struct intel_gvt_workload_scheduler *scheduler = &gvt->scheduler;
  	unsigned int resetting_eng = dmlr ? ALL_ENGINES : engine_mask;
@@ -540,7 +540,7 @@ index c628be05fbfe..d83e48b53d62 100644
  
  	gvt_dbg_core("------------------------------------------\n");
  	gvt_dbg_core("resseting vgpu%d, dmlr %d, engine_mask %08x\n",
-@@ -537,7 +539,10 @@ void intel_gvt_reset_vgpu_locked(struct intel_vgpu *vgpu, bool dmlr,
+@@ -543,7 +545,10 @@ void intel_gvt_reset_vgpu_locked(struct intel_vgpu *vgpu, bool dmlr,
  	 * The current_vgpu will set to NULL after stopping the
  	 * scheduler when the reset is triggered by current vgpu.
  	 */

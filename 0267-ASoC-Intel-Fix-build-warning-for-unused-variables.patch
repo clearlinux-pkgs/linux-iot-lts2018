@@ -70,10 +70,10 @@ index 9fcf6c38f5b8..2db347369c0c 100644
 -
 +#endif /* __SKL_COMPRESS_H__*/
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 0cf4a2fa69a0..d10d2444bd6a 100644
+index 8abab9281dfe..08e57ace2030 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
-@@ -639,6 +639,8 @@ static ssize_t adsp_control_write(struct file *file,
+@@ -641,6 +641,8 @@ static ssize_t adsp_control_write(struct file *file,
  	}
  
  	err = kstrtouint(buf, 10, &dsp_property);
@@ -82,7 +82,7 @@ index 0cf4a2fa69a0..d10d2444bd6a 100644
  
  	if ((dsp_property == DMA_CONTROL) || (dsp_property == ENABLE_LOGS)) {
  		dev_err(d->dev, "invalid input !! not readable\n");
-@@ -648,6 +650,9 @@ static ssize_t adsp_control_write(struct file *file,
+@@ -650,6 +652,9 @@ static ssize_t adsp_control_write(struct file *file,
  
  	if (tx_param == 1) {
  		err = kstrtouint(id, 10, &tx_param_id);

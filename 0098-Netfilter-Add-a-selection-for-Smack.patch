@@ -115,10 +115,10 @@ index 1f2a708413f5..5245a9748599 100644
  
  struct xt_secmark_target_info {
 diff --git a/kernel/audit.c b/kernel/audit.c
-index 8528c3d446b7..0af9791c363a 100644
+index 5a463ecc254d..1d82b5b1a34a 100644
 --- a/kernel/audit.c
 +++ b/kernel/audit.c
-@@ -2168,7 +2168,9 @@ void audit_log_name(struct audit_context *context, struct audit_names *n,
+@@ -2170,7 +2170,9 @@ void audit_log_name(struct audit_context *context, struct audit_names *n,
  		u32 len;
  		if (security_secid_to_secctx(
  			&n->osid, &ctx, &len)) {
@@ -175,7 +175,7 @@ index 5c85e3c6c68c..2e4646b27c5d 100644
  	ret = security_secid_to_secctx(&secid, NULL, &len);
  	if (ret)
 diff --git a/net/netfilter/nf_conntrack_standalone.c b/net/netfilter/nf_conntrack_standalone.c
-index fa25411dfb42..f2e2fba232c4 100644
+index 9ebd932f15e0..c85c2e1a3e74 100644
 --- a/net/netfilter/nf_conntrack_standalone.c
 +++ b/net/netfilter/nf_conntrack_standalone.c
 @@ -173,8 +173,13 @@ static void ct_show_secctx(struct seq_file *s, const struct nf_conn *ct)
@@ -412,7 +412,7 @@ index 96e795600adb..5a8047fcb9cd 100644
  {
  	return call_int_hook(tun_dev_alloc_security, 0, security);
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index ddc9af8fa5ea..d6945570fe42 100644
+index 2796be9ed74e..107eb4fa3337 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -50,6 +50,7 @@
@@ -423,7 +423,7 @@ index ddc9af8fa5ea..d6945570fe42 100644
  #include <linux/tty.h>
  #include <net/icmp.h>
  #include <net/ip.h>		/* for local_port_range[] */
-@@ -5384,13 +5385,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
+@@ -5387,13 +5388,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
  			    PACKET__RELABELTO, NULL);
  }
  

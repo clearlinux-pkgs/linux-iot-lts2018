@@ -14,7 +14,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  3 files changed, 34 insertions(+), 29 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 040c843968dc..24c445066f38 100644
+index c574285966f9..3cbb76828e76 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -228,7 +228,7 @@ static inline u32 cred_sid(const struct cred *cred)
@@ -135,7 +135,7 @@ index 040c843968dc..24c445066f38 100644
  		dir, qstr,
  		inode_mode_to_security_class(inode->i_mode),
  		&newsid);
-@@ -3534,7 +3534,7 @@ static int selinux_inode_copy_up(struct dentry *src, struct cred **new)
+@@ -3537,7 +3537,7 @@ static int selinux_inode_copy_up(struct dentry *src, struct cred **new)
  			return -ENOMEM;
  	}
  
@@ -144,7 +144,7 @@ index 040c843968dc..24c445066f38 100644
  	/* Get label from overlay inode and set it in create_sid */
  	selinux_inode_getsecid(d_inode(src), &sid);
  	tsec->create_sid = sid;
-@@ -3954,7 +3954,7 @@ static int selinux_cred_alloc_blank(struct cred *cred, gfp_t gfp)
+@@ -3957,7 +3957,7 @@ static int selinux_cred_alloc_blank(struct cred *cred, gfp_t gfp)
   */
  static void selinux_cred_free(struct cred *cred)
  {
@@ -153,7 +153,7 @@ index 040c843968dc..24c445066f38 100644
  
  	/*
  	 * cred->security == NULL if security_cred_alloc_blank() or
-@@ -3974,7 +3974,7 @@ static int selinux_cred_prepare(struct cred *new, const struct cred *old,
+@@ -3977,7 +3977,7 @@ static int selinux_cred_prepare(struct cred *new, const struct cred *old,
  	const struct task_security_struct *old_tsec;
  	struct task_security_struct *tsec;
  
@@ -162,7 +162,7 @@ index 040c843968dc..24c445066f38 100644
  
  	tsec = kmemdup(old_tsec, sizeof(struct task_security_struct), gfp);
  	if (!tsec)
-@@ -3989,8 +3989,8 @@ static int selinux_cred_prepare(struct cred *new, const struct cred *old,
+@@ -3992,8 +3992,8 @@ static int selinux_cred_prepare(struct cred *new, const struct cred *old,
   */
  static void selinux_cred_transfer(struct cred *new, const struct cred *old)
  {
@@ -173,7 +173,7 @@ index 040c843968dc..24c445066f38 100644
  
  	*tsec = *old_tsec;
  }
-@@ -4006,7 +4006,7 @@ static void selinux_cred_getsecid(const struct cred *c, u32 *secid)
+@@ -4009,7 +4009,7 @@ static void selinux_cred_getsecid(const struct cred *c, u32 *secid)
   */
  static int selinux_kernel_act_as(struct cred *new, u32 secid)
  {
@@ -182,7 +182,7 @@ index 040c843968dc..24c445066f38 100644
  	u32 sid = current_sid();
  	int ret;
  
-@@ -4031,7 +4031,7 @@ static int selinux_kernel_act_as(struct cred *new, u32 secid)
+@@ -4034,7 +4034,7 @@ static int selinux_kernel_act_as(struct cred *new, u32 secid)
  static int selinux_kernel_create_files_as(struct cred *new, struct inode *inode)
  {
  	struct inode_security_struct *isec = inode_security(inode);
@@ -191,7 +191,7 @@ index 040c843968dc..24c445066f38 100644
  	u32 sid = current_sid();
  	int ret;
  
-@@ -4580,7 +4580,7 @@ static int sock_has_perm(struct sock *sk, u32 perms)
+@@ -4583,7 +4583,7 @@ static int sock_has_perm(struct sock *sk, u32 perms)
  static int selinux_socket_create(int family, int type,
  				 int protocol, int kern)
  {
@@ -200,7 +200,7 @@ index 040c843968dc..24c445066f38 100644
  	u32 newsid;
  	u16 secclass;
  	int rc;
-@@ -4600,7 +4600,7 @@ static int selinux_socket_create(int family, int type,
+@@ -4603,7 +4603,7 @@ static int selinux_socket_create(int family, int type,
  static int selinux_socket_post_create(struct socket *sock, int family,
  				      int type, int protocol, int kern)
  {
@@ -209,7 +209,7 @@ index 040c843968dc..24c445066f38 100644
  	struct inode_security_struct *isec = inode_security_novalidate(SOCK_INODE(sock));
  	struct sk_security_struct *sksec;
  	u16 sclass = socket_type_to_security_class(family, type, protocol);
-@@ -5484,7 +5484,7 @@ static int selinux_secmark_relabel_packet(u32 sid)
+@@ -5487,7 +5487,7 @@ static int selinux_secmark_relabel_packet(u32 sid)
  	const struct task_security_struct *__tsec;
  	u32 tsid;
  
@@ -218,7 +218,7 @@ index 040c843968dc..24c445066f38 100644
  	tsid = __tsec->sid;
  
  	return avc_has_perm(&selinux_state,
-@@ -6421,7 +6421,7 @@ static int selinux_getprocattr(struct task_struct *p,
+@@ -6424,7 +6424,7 @@ static int selinux_getprocattr(struct task_struct *p,
  	unsigned len;
  
  	rcu_read_lock();
@@ -227,7 +227,7 @@ index 040c843968dc..24c445066f38 100644
  
  	if (current != p) {
  		error = avc_has_perm(&selinux_state,
-@@ -6544,7 +6544,7 @@ static int selinux_setprocattr(const char *name, void *value, size_t size)
+@@ -6547,7 +6547,7 @@ static int selinux_setprocattr(const char *name, void *value, size_t size)
  	   operation.  See selinux_bprm_set_creds for the execve
  	   checks and may_create for the file creation checks. The
  	   operation will then fail if the context is not permitted. */
@@ -236,7 +236,7 @@ index 040c843968dc..24c445066f38 100644
  	if (!strcmp(name, "exec")) {
  		tsec->exec_sid = sid;
  	} else if (!strcmp(name, "fscreate")) {
-@@ -6677,7 +6677,7 @@ static int selinux_key_alloc(struct key *k, const struct cred *cred,
+@@ -6680,7 +6680,7 @@ static int selinux_key_alloc(struct key *k, const struct cred *cred,
  	if (!ksec)
  		return -ENOMEM;
  

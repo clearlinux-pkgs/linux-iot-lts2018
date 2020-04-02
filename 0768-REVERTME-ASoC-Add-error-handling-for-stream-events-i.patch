@@ -37,7 +37,7 @@ index 5165e3b30899..db4e6382725e 100644
  void snd_soc_dapm_shutdown(struct snd_soc_card *card);
  
 diff --git a/sound/soc/soc-dapm.c b/sound/soc/soc-dapm.c
-index 51187ca1efd0..89407870346c 100644
+index f3cad7137bc0..5a6ff28366aa 100644
 --- a/sound/soc/soc-dapm.c
 +++ b/sound/soc/soc-dapm.c
 @@ -1456,11 +1456,11 @@ static void dapm_seq_insert(struct snd_soc_dapm_widget *new_widget,
@@ -356,7 +356,7 @@ index 51187ca1efd0..89407870346c 100644
  
  /**
 diff --git a/sound/soc/soc-pcm.c b/sound/soc/soc-pcm.c
-index 4af673c68c21..dcc0fa540b85 100644
+index 4ca0c9254643..1ef3917186fb 100644
 --- a/sound/soc/soc-pcm.c
 +++ b/sound/soc/soc-pcm.c
 @@ -831,8 +831,10 @@ static int soc_pcm_prepare(struct snd_pcm_substream *substream)

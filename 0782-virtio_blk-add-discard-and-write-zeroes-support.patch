@@ -27,7 +27,7 @@ Tracked-On: PKT-1617
  2 files changed, 135 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/block/virtio_blk.c b/drivers/block/virtio_blk.c
-index dd64f586679e..f88d39ca53fb 100644
+index 728c9a9609f0..c8eb83f1716b 100644
 --- a/drivers/block/virtio_blk.c
 +++ b/drivers/block/virtio_blk.c
 @@ -18,6 +18,7 @@
@@ -122,7 +122,7 @@ index dd64f586679e..f88d39ca53fb 100644
  	num = blk_rq_map_sg(hctx->queue, req, vbr->sg);
  	if (num) {
  		if (rq_data_dir(req) == WRITE)
-@@ -779,6 +832,32 @@ static int virtblk_probe(struct virtio_device *vdev)
+@@ -781,6 +834,32 @@ static int virtblk_probe(struct virtio_device *vdev)
  	if (!err && opt_io_size)
  		blk_queue_io_opt(q, blk_size * opt_io_size);
  
@@ -155,7 +155,7 @@ index dd64f586679e..f88d39ca53fb 100644
  	virtblk_update_capacity(vblk, false);
  	virtio_device_ready(vdev);
  
-@@ -887,14 +966,14 @@ static unsigned int features_legacy[] = {
+@@ -889,14 +968,14 @@ static unsigned int features_legacy[] = {
  	VIRTIO_BLK_F_SCSI,
  #endif
  	VIRTIO_BLK_F_FLUSH, VIRTIO_BLK_F_TOPOLOGY, VIRTIO_BLK_F_CONFIG_WCE,

@@ -18,7 +18,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  3 files changed, 234 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 4d48924913bd..0cf4a2fa69a0 100644
+index 48d7093b205c..8abab9281dfe 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -33,6 +33,19 @@
@@ -49,7 +49,7 @@ index 4d48924913bd..0cf4a2fa69a0 100644
  };
  
  struct nhlt_specific_cfg
-@@ -551,6 +565,196 @@ static int skl_init_nhlt(struct skl_debug *d)
+@@ -553,6 +567,196 @@ static int skl_init_nhlt(struct skl_debug *d)
  	return 0;
  }
  
@@ -246,7 +246,7 @@ index 4d48924913bd..0cf4a2fa69a0 100644
  struct skl_debug *skl_debugfs_init(struct skl *skl)
  {
  	struct skl_debug *d;
-@@ -559,6 +763,7 @@ struct skl_debug *skl_debugfs_init(struct skl *skl)
+@@ -561,6 +765,7 @@ struct skl_debug *skl_debugfs_init(struct skl *skl)
  	if (!d)
  		return NULL;
  
@@ -254,7 +254,7 @@ index 4d48924913bd..0cf4a2fa69a0 100644
  	/* create the debugfs dir with platform component's debugfs as parent */
  	d->fs = debugfs_create_dir("dsp",
  				   skl->component->debugfs_root);
-@@ -591,6 +796,7 @@ struct skl_debug *skl_debugfs_init(struct skl *skl)
+@@ -593,6 +798,7 @@ struct skl_debug *skl_debugfs_init(struct skl *skl)
  	}
  
  	skl_init_nhlt(d);

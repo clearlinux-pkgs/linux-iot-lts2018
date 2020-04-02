@@ -16,7 +16,7 @@ Signed-off-by: Jeeja KP <jeeja.kp@intel.com>
  2 files changed, 3 insertions(+), 6 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 7107f14d0a89..b684f47eefee 100644
+index d2eb212c2875..5daa89d396a1 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -87,6 +87,9 @@ static ssize_t nhlt_write(struct file *file,

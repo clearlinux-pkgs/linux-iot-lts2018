@@ -232,7 +232,7 @@ index d05c5516a472..b55fc82027e0 100644
  #define SKL_PLANE_REG_TO_PLANE(reg) ((((reg) & 0xFFF) - 0x180) >> 8)
  #define SKL_FLIP_EVENT(pipe, plane) (PRIMARY_A_FLIP_DONE + (plane)*3 + pipe)
 diff --git a/drivers/gpu/drm/i915/gvt/vgpu.c b/drivers/gpu/drm/i915/gvt/vgpu.c
-index d83e48b53d62..5cb46999b238 100644
+index 37e922d84dd3..01d5e133e471 100644
 --- a/drivers/gpu/drm/i915/gvt/vgpu.c
 +++ b/drivers/gpu/drm/i915/gvt/vgpu.c
 @@ -37,6 +37,11 @@

@@ -12,7 +12,7 @@ Signed-off-by: Vinod Koul <vinod.koul@intel.com>
  1 file changed, 88 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 6d01a4d0d803..ad639d55bafb 100644
+index d848f5fe0956..9f3a596bb060 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -22,10 +22,17 @@
@@ -96,7 +96,7 @@ index 6d01a4d0d803..ad639d55bafb 100644
  };
  
  static ssize_t skl_print_pins(struct skl_module_pin *m_pin, char *buf,
-@@ -166,7 +229,6 @@ static const struct file_operations mcfg_fops = {
+@@ -168,7 +231,6 @@ static const struct file_operations mcfg_fops = {
  	.llseek = default_llseek,
  };
  
@@ -104,7 +104,7 @@ index 6d01a4d0d803..ad639d55bafb 100644
  void skl_debug_init_module(struct skl_debug *d,
  			struct snd_soc_dapm_widget *w,
  			struct skl_module_cfg *mconfig)
-@@ -222,6 +284,15 @@ static const struct file_operations soft_regs_ctrl_fops = {
+@@ -224,6 +286,15 @@ static const struct file_operations soft_regs_ctrl_fops = {
  	.llseek = default_llseek,
  };
  
@@ -120,7 +120,7 @@ index 6d01a4d0d803..ad639d55bafb 100644
  static ssize_t nhlt_control_read(struct file *file,
  			char __user *user_buf, size_t count, loff_t *ppos)
  {
-@@ -245,12 +316,14 @@ static ssize_t nhlt_control_write(struct file *file,
+@@ -247,12 +318,14 @@ static ssize_t nhlt_control_write(struct file *file,
  		return -EFAULT;
  	buf[len] = 0;
  
@@ -138,7 +138,7 @@ index 6d01a4d0d803..ad639d55bafb 100644
  
  	/* Userspace has been fiddling around behind the kernel's back */
  	add_taint(TAINT_USER, LOCKDEP_NOW_UNRELIABLE);
-@@ -267,6 +340,9 @@ static const struct file_operations ssp_cntrl_nhlt_fops = {
+@@ -269,6 +342,9 @@ static const struct file_operations ssp_cntrl_nhlt_fops = {
  
  static int skl_init_nhlt(struct skl_debug *d)
  {
@@ -148,7 +148,7 @@ index 6d01a4d0d803..ad639d55bafb 100644
  	if (!debugfs_create_file("control",
  				0644, d->nhlt,
  				d, &ssp_cntrl_nhlt_fops)) {
-@@ -274,6 +350,14 @@ static int skl_init_nhlt(struct skl_debug *d)
+@@ -276,6 +352,14 @@ static int skl_init_nhlt(struct skl_debug *d)
  		return -EIO;
  	}
  

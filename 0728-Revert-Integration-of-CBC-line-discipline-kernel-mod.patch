@@ -57,7 +57,7 @@ Change-Id: I85f40a78be2752e2781217272dfbad6bd920e8e1
  delete mode 100644 include/uapi/linux/cbc/cbc-core.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 23ddb493e852..20321e518631 100644
+index 6f3451bc74a0..dc19976f50f4 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -16270,3 +16270,4 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git

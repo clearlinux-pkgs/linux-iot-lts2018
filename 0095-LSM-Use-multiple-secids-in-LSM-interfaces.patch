@@ -323,7 +323,7 @@ index 1ce365f4c256..43236b02ddcd 100644
  		if (!err) {
  			put_cmsg(msg, SOL_SOCKET, SCM_SECURITY, seclen, secdata);
 diff --git a/kernel/audit.c b/kernel/audit.c
-index 2a8058764aa6..8528c3d446b7 100644
+index 1f08c38e604a..5a463ecc254d 100644
 --- a/kernel/audit.c
 +++ b/kernel/audit.c
 @@ -138,7 +138,7 @@ static u32	audit_backlog_wait_time = AUDIT_BACKLOG_WAIT_TIME;
@@ -335,7 +335,7 @@ index 2a8058764aa6..8528c3d446b7 100644
  
  /* Records can be lost in several ways:
     0) [suppressed in audit_alloc]
-@@ -1417,20 +1417,21 @@ static int audit_receive_msg(struct sk_buff *skb, struct nlmsghdr *nlh)
+@@ -1419,20 +1419,21 @@ static int audit_receive_msg(struct sk_buff *skb, struct nlmsghdr *nlh)
  	}
  	case AUDIT_SIGNAL_INFO:
  		len = 0;
@@ -361,7 +361,7 @@ index 2a8058764aa6..8528c3d446b7 100644
  			memcpy(sig_data->ctx, ctx, len);
  			security_release_secctx(ctx, len);
  		}
-@@ -2162,12 +2163,12 @@ void audit_log_name(struct audit_context *context, struct audit_names *n,
+@@ -2164,12 +2165,12 @@ void audit_log_name(struct audit_context *context, struct audit_names *n,
  				 from_kgid(&init_user_ns, n->gid),
  				 MAJOR(n->rdev),
  				 MINOR(n->rdev));
@@ -377,7 +377,7 @@ index 2a8058764aa6..8528c3d446b7 100644
  			if (call_panic)
  				*call_panic = 2;
  		} else {
-@@ -2205,13 +2206,13 @@ int audit_log_task_context(struct audit_buffer *ab)
+@@ -2207,13 +2208,13 @@ int audit_log_task_context(struct audit_buffer *ab)
  	char *ctx = NULL;
  	unsigned len;
  	int error;
@@ -443,10 +443,10 @@ index 214e14948370..246a4721577d 100644
  extern int audit_filter(int msgtype, unsigned int listtype);
  
 diff --git a/kernel/auditfilter.c b/kernel/auditfilter.c
-index 425c67e4f568..013fc75bcb8b 100644
+index 1c8a48abda80..482cdd44009d 100644
 --- a/kernel/auditfilter.c
 +++ b/kernel/auditfilter.c
-@@ -1325,7 +1325,7 @@ int audit_filter(int msgtype, unsigned int listtype)
+@@ -1332,7 +1332,7 @@ int audit_filter(int msgtype, unsigned int listtype)
  		for (i = 0; i < e->rule.field_count; i++) {
  			struct audit_field *f = &e->rule.fields[i];
  			pid_t pid;
@@ -455,7 +455,7 @@ index 425c67e4f568..013fc75bcb8b 100644
  
  			switch (f->type) {
  			case AUDIT_PID:
-@@ -1356,7 +1356,7 @@ int audit_filter(int msgtype, unsigned int listtype)
+@@ -1363,7 +1363,7 @@ int audit_filter(int msgtype, unsigned int listtype)
  			case AUDIT_SUBJ_CLR:
  				if (f->lsm_rule) {
  					security_task_getsecid(current, &sid);
@@ -677,7 +677,7 @@ index 31fa94064a62..5c85e3c6c68c 100644
  		return 0;
  
 diff --git a/net/netfilter/nf_conntrack_standalone.c b/net/netfilter/nf_conntrack_standalone.c
-index 13279f683da9..fa25411dfb42 100644
+index 4c94f3ba2ae4..9ebd932f15e0 100644
 --- a/net/netfilter/nf_conntrack_standalone.c
 +++ b/net/netfilter/nf_conntrack_standalone.c
 @@ -171,8 +171,12 @@ static void ct_show_secctx(struct seq_file *s, const struct nf_conn *ct)

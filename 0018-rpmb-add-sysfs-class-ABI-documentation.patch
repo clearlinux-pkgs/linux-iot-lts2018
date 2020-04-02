@@ -48,7 +48,7 @@ index 000000000000..a9d45aa77f77
 +		The /sys/class/rpmb/rpmbN directory is created for
 +		each RPMB registered device.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 8dec8dfa5c4b..d5d94a63db31 100644
+index f6067825c678..626602d34a1c 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -12539,6 +12539,7 @@ L:	linux-kernel@vger.kernel.org

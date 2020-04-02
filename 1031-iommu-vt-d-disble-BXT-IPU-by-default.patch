@@ -12,7 +12,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  1 file changed, 1 insertion(+), 8 deletions(-)
 
 diff --git a/drivers/iommu/intel-iommu.c b/drivers/iommu/intel-iommu.c
-index 91c8af9f1fdb..a0d032fe16c9 100644
+index 5cfa1076962d..dd424d0ca6ba 100644
 --- a/drivers/iommu/intel-iommu.c
 +++ b/drivers/iommu/intel-iommu.c
 @@ -427,7 +427,6 @@ int intel_iommu_enabled = 0;
@@ -34,7 +34,7 @@ index 91c8af9f1fdb..a0d032fe16c9 100644
  		} else if (!strncmp(str, "forcedac", 8)) {
  			pr_info("Forcing DAC for PCI devices\n");
  			dmar_forcedac = 1;
-@@ -5454,9 +5449,7 @@ DECLARE_PCI_FIXUP_HEADER(PCI_VENDOR_ID_INTEL, 0x006a, quirk_calpella_no_shadow_g
+@@ -5457,9 +5452,7 @@ DECLARE_PCI_FIXUP_HEADER(PCI_VENDOR_ID_INTEL, 0x006a, quirk_calpella_no_shadow_g
  
  static void quirk_broxton_ipu(struct pci_dev *dev)
  {

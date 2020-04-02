@@ -54,10 +54,10 @@ index 14fa2ea047fa..6030e41cc6bb 100644
  	addr = *(u32 *)(vgpu_cfg_space(vgpu) + MSI_CAP_ADDRESS(offset));
  	data = *(u16 *)(vgpu_cfg_space(vgpu) + MSI_CAP_DATA(offset));
 diff --git a/drivers/gpu/drm/i915/gvt/vgpu.c b/drivers/gpu/drm/i915/gvt/vgpu.c
-index 5411b402f728..17221f9f8030 100644
+index 08e99dd14344..b28bc3af3eaf 100644
 --- a/drivers/gpu/drm/i915/gvt/vgpu.c
 +++ b/drivers/gpu/drm/i915/gvt/vgpu.c
-@@ -505,6 +505,7 @@ struct intel_vgpu *intel_gvt_create_vgpu(struct intel_gvt *gvt,
+@@ -511,6 +511,7 @@ struct intel_vgpu *intel_gvt_create_vgpu(struct intel_gvt *gvt,
  		/* calculate left instance change for types */
  		intel_gvt_update_vgpu_types(gvt);
  	mutex_unlock(&gvt->lock);

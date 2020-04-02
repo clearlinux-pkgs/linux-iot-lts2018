@@ -20,7 +20,7 @@ Reviewed-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  3 files changed, 44 insertions(+), 17 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 0751297dffc4..45abc70d7af5 100644
+index 28060ea2e86e..e5acb86c4ee9 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -238,11 +238,11 @@ static ssize_t mod_control_write(struct file *file,

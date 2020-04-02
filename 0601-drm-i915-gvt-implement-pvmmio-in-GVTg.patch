@@ -317,7 +317,7 @@ index feed7adb6fde..6eef2e01e46a 100644
   * intel_gvt_hypervisor_set_opregion - Set opregion for guest
   * @vgpu: a vGPU
 diff --git a/drivers/gpu/drm/i915/gvt/vgpu.c b/drivers/gpu/drm/i915/gvt/vgpu.c
-index 5cb46999b238..9e4a0b2b5f22 100644
+index 01d5e133e471..d4c20295bee3 100644
 --- a/drivers/gpu/drm/i915/gvt/vgpu.c
 +++ b/drivers/gpu/drm/i915/gvt/vgpu.c
 @@ -75,6 +75,8 @@ void populate_pvinfo_page(struct intel_vgpu *vgpu)
@@ -329,7 +329,7 @@ index 5cb46999b238..9e4a0b2b5f22 100644
  	gvt_dbg_core("Populate PVINFO PAGE for vGPU %d\n", vgpu->id);
  	gvt_dbg_core("aperture base [GMADR] 0x%llx size 0x%llx\n",
  		vgpu_aperture_gmadr_base(vgpu), vgpu_aperture_sz(vgpu));
-@@ -540,6 +542,7 @@ void intel_gvt_reset_vgpu_locked(struct intel_vgpu *vgpu, bool dmlr,
+@@ -546,6 +548,7 @@ void intel_gvt_reset_vgpu_locked(struct intel_vgpu *vgpu, bool dmlr,
  	unsigned int resetting_eng = dmlr ? ALL_ENGINES : engine_mask;
  	enum intel_engine_id i;
  	struct intel_engine_cs *engine;
@@ -337,14 +337,14 @@ index 5cb46999b238..9e4a0b2b5f22 100644
  
  	gvt_dbg_core("------------------------------------------\n");
  	gvt_dbg_core("resseting vgpu%d, dmlr %d, engine_mask %08x\n",
-@@ -574,6 +577,7 @@ void intel_gvt_reset_vgpu_locked(struct intel_vgpu *vgpu, bool dmlr,
+@@ -580,6 +583,7 @@ void intel_gvt_reset_vgpu_locked(struct intel_vgpu *vgpu, bool dmlr,
  
  		intel_vgpu_reset_mmio(vgpu, dmlr);
  		populate_pvinfo_page(vgpu);
 +		vgpu_vreg_t(vgpu, vgtif_reg(enable_pvmmio)) = enable_pvmmio;
- 		intel_vgpu_reset_display(vgpu);
  
  		if (dmlr) {
+ 			intel_vgpu_reset_display(vgpu);
 -- 
 https://clearlinux.org
 

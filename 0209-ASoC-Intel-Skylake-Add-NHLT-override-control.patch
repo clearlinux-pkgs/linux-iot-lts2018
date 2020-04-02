@@ -15,7 +15,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  2 files changed, 66 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index faf1cba57abb..6d01a4d0d803 100644
+index a0714c0e6e8b..d848f5fe0956 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -33,6 +33,7 @@ struct skl_debug {
@@ -26,7 +26,7 @@ index faf1cba57abb..6d01a4d0d803 100644
  	u8 fw_read_buff[FW_REG_BUF];
  };
  
-@@ -221,6 +222,61 @@ static const struct file_operations soft_regs_ctrl_fops = {
+@@ -223,6 +224,61 @@ static const struct file_operations soft_regs_ctrl_fops = {
  	.llseek = default_llseek,
  };
  
@@ -88,7 +88,7 @@ index faf1cba57abb..6d01a4d0d803 100644
  struct skl_debug *skl_debugfs_init(struct skl *skl)
  {
  	struct skl_debug *d;
-@@ -253,6 +309,15 @@ struct skl_debug *skl_debugfs_init(struct skl *skl)
+@@ -255,6 +311,15 @@ struct skl_debug *skl_debugfs_init(struct skl *skl)
  		goto err;
  	}
  

@@ -423,7 +423,7 @@ index 44416ebec44f..eee803e1a250 100644
  
  void security_transfer_creds(struct cred *new, const struct cred *old)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 24c445066f38..996b30f452b5 100644
+index 3cbb76828e76..a47ff07fa40b 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -213,12 +213,9 @@ static void cred_init_security(void)
@@ -441,7 +441,7 @@ index 24c445066f38..996b30f452b5 100644
  }
  
  /*
-@@ -3934,53 +3931,17 @@ static int selinux_task_alloc(struct task_struct *task,
+@@ -3937,53 +3934,17 @@ static int selinux_task_alloc(struct task_struct *task,
  			    sid, sid, SECCLASS_PROCESS, PROCESS__FORK, NULL);
  }
  
@@ -498,7 +498,7 @@ index 24c445066f38..996b30f452b5 100644
  	return 0;
  }
  
-@@ -6940,6 +6901,10 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
+@@ -6943,6 +6904,10 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
  }
  #endif
  
@@ -509,7 +509,7 @@ index 24c445066f38..996b30f452b5 100644
  static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(binder_set_context_mgr, selinux_binder_set_context_mgr),
  	LSM_HOOK_INIT(binder_transaction, selinux_binder_transaction),
-@@ -7022,8 +6987,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -7025,8 +6990,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(file_open, selinux_file_open),
  
  	LSM_HOOK_INIT(task_alloc, selinux_task_alloc),
@@ -518,7 +518,7 @@ index 24c445066f38..996b30f452b5 100644
  	LSM_HOOK_INIT(cred_prepare, selinux_cred_prepare),
  	LSM_HOOK_INIT(cred_transfer, selinux_cred_transfer),
  	LSM_HOOK_INIT(cred_getsecid, selinux_cred_getsecid),
-@@ -7179,11 +7142,19 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -7182,11 +7145,19 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  
  static __init int selinux_init(void)
  {

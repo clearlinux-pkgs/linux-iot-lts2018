@@ -15,7 +15,7 @@ Signed-off-by: Omair M Abdullah <omair.m.abdullah@intel.com>
  3 files changed, 20 insertions(+), 9 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index b684f47eefee..3365fe5ea9a7 100644
+index 5daa89d396a1..bd88b70e99dd 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -42,12 +42,13 @@ struct skl_debug {
@@ -46,7 +46,7 @@ index b684f47eefee..3365fe5ea9a7 100644
  
  	default:
  		break;
-@@ -315,7 +319,7 @@ static void skl_exit_nhlt(struct skl_debug *d)
+@@ -317,7 +321,7 @@ static void skl_exit_nhlt(struct skl_debug *d)
  
  	/* free blob memory, if allocated */
  	for (i = 0; i < MAX_SSP; i++)
@@ -55,7 +55,7 @@ index b684f47eefee..3365fe5ea9a7 100644
  }
  
  static ssize_t nhlt_control_read(struct file *file,
-@@ -376,11 +380,16 @@ static int skl_init_nhlt(struct skl_debug *d)
+@@ -378,11 +382,16 @@ static int skl_init_nhlt(struct skl_debug *d)
  	}
  
  	for (i = 0; i < MAX_SSP; i++) {

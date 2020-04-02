@@ -61,7 +61,7 @@ Tracked-On: PKT-1554
  create mode 100644 include/uapi/linux/cbc/cbc-core.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 20321e518631..a6be3c4ee0ba 100644
+index dc19976f50f4..23e99f25f1cb 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -12513,6 +12513,11 @@ L:	linux-serial@vger.kernel.org

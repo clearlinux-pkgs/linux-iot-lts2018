@@ -316,7 +316,7 @@ index d33bdaf92c57..557f7800f373 100644
  		dev_err(dev, "ipc: module set parameter failed - %d\n", ret);
  
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index d10d2444bd6a..08e03b554b7c 100644
+index 08e57ace2030..cda607835e1c 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -231,10 +231,12 @@ static ssize_t mod_control_write(struct file *file,
@@ -348,7 +348,7 @@ index d10d2444bd6a..08e03b554b7c 100644
  
  		d->ipc_data[0] = 0;
  		break;
-@@ -717,10 +719,12 @@ static ssize_t adsp_control_write(struct file *file,
+@@ -719,10 +721,12 @@ static ssize_t adsp_control_write(struct file *file,
  
  	if (tx_param == 1)
  		skl_ipc_get_large_config(&ctx->ipc, &msg,

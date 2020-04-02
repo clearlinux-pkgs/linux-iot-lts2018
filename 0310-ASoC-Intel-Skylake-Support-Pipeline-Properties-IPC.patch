@@ -25,7 +25,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 18 insertions(+), 5 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index fc19c1c8894d..9e8e31052da2 100644
+index c1ae218a5009..0a12736cf22b 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -34,6 +34,8 @@
@@ -45,7 +45,7 @@ index fc19c1c8894d..9e8e31052da2 100644
  #define SCHEDULERS_INFO_SZ	0x34
  #define GATEWAYS_INFO_SZ	0x4e4
  #define MEMORY_STATE_INFO_SZ	0x1000
-@@ -585,7 +588,7 @@ static ssize_t adsp_control_write(struct file *file,
+@@ -587,7 +590,7 @@ static ssize_t adsp_control_write(struct file *file,
  	struct skl_sst *ctx = d->skl->skl_sst;
  	struct skl_ipc_large_config_msg msg;
  	char id[8];
@@ -54,7 +54,7 @@ index fc19c1c8894d..9e8e31052da2 100644
  	int j = 0, bufsize, tx_param = 0, tx_param_id;
  	int len = min(count, (sizeof(buf)-1));
  
-@@ -622,7 +625,8 @@ static ssize_t adsp_control_write(struct file *file,
+@@ -624,7 +627,8 @@ static ssize_t adsp_control_write(struct file *file,
  		if (err)
  			return -EINVAL;
  
@@ -64,7 +64,7 @@ index fc19c1c8894d..9e8e31052da2 100644
  	}
  
  	ipc_data = kzalloc(DSP_BUF, GFP_ATOMIC);
-@@ -657,6 +661,10 @@ static ssize_t adsp_control_write(struct file *file,
+@@ -659,6 +663,10 @@ static ssize_t adsp_control_write(struct file *file,
  	replysz = PIPELINE_LIST_INFO_SZ;
  	break;
  
@@ -75,7 +75,7 @@ index fc19c1c8894d..9e8e31052da2 100644
  	case SCHEDULERS_INFO:
  	replysz = SCHEDULERS_INFO_SZ;
  	break;
-@@ -681,13 +689,18 @@ static ssize_t adsp_control_write(struct file *file,
+@@ -683,13 +691,18 @@ static ssize_t adsp_control_write(struct file *file,
  
  	msg.module_id = 0x0;
  	msg.instance_id = 0x0;

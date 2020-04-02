@@ -64,7 +64,7 @@ Tested-by: Avri Altman <avri.altman@sandisk.com>
  create mode 100644 include/linux/rpmb.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index d735500d3dad..8dec8dfa5c4b 100644
+index b9f9da0b886f..f6067825c678 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -12533,6 +12533,13 @@ F:	include/net/rose.h

@@ -30,10 +30,10 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/char/rpmb/mux/key_sbl.h
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 8bf0c0532046..926f62c98af6 100644
+index 1a5101b7e853..8ce2b2d91736 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
-@@ -741,6 +741,10 @@
+@@ -745,6 +745,10 @@
  			Format: <port#>,<type>
  			See also Documentation/input/devices/joystick-parport.rst
  

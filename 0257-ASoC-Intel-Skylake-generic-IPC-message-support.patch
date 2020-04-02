@@ -19,7 +19,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  3 files changed, 165 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 91b8035db84b..4d48924913bd 100644
+index cfab5dbdd5d0..48d7093b205c 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -24,10 +24,14 @@
@@ -202,7 +202,7 @@ index 91b8035db84b..4d48924913bd 100644
  static ssize_t skl_print_pins(struct skl_module_pin *m_pin, char *buf,
  				int max_pin, ssize_t size, bool direction)
  {
-@@ -437,6 +591,7 @@ struct skl_debug *skl_debugfs_init(struct skl *skl)
+@@ -439,6 +593,7 @@ struct skl_debug *skl_debugfs_init(struct skl *skl)
  	}
  
  	skl_init_nhlt(d);

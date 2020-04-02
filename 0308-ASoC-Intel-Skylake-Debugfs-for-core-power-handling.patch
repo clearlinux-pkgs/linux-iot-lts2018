@@ -30,7 +30,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 75 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 08e03b554b7c..329f8097f8d3 100644
+index cda607835e1c..39293c7a31ae 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -16,6 +16,8 @@
@@ -42,7 +42,7 @@ index 08e03b554b7c..329f8097f8d3 100644
  #include "skl.h"
  #include "skl-sst-dsp.h"
  #include "skl-sst-ipc.h"
-@@ -764,6 +766,73 @@ static int skl_init_adsp(struct skl_debug *d)
+@@ -766,6 +768,73 @@ static int skl_init_adsp(struct skl_debug *d)
  	return 0;
  }
  
@@ -116,7 +116,7 @@ index 08e03b554b7c..329f8097f8d3 100644
  struct skl_debug *skl_debugfs_init(struct skl *skl)
  {
  	struct skl_debug *d;
-@@ -797,6 +866,12 @@ struct skl_debug *skl_debugfs_init(struct skl *skl)
+@@ -799,6 +868,12 @@ struct skl_debug *skl_debugfs_init(struct skl *skl)
  		goto err;
  	}
  
