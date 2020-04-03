@@ -962,10 +962,10 @@ index 2318e2e2748f..991fe3a695a3 100644
  #else
  static inline void unix_get_secdata(struct scm_cookie *scm, struct sk_buff *skb)
 diff --git a/net/xfrm/xfrm_policy.c b/net/xfrm/xfrm_policy.c
-index 777cda016a30..7de46bf96863 100644
+index 12a268b75985..0a962b6716d8 100644
 --- a/net/xfrm/xfrm_policy.c
 +++ b/net/xfrm/xfrm_policy.c
-@@ -1083,7 +1083,7 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
+@@ -1085,7 +1085,7 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
  	match = xfrm_selector_match(sel, fl, family);
  	if (match)
  		ret = security_xfrm_policy_lookup(pol->security,
@@ -974,7 +974,7 @@ index 777cda016a30..7de46bf96863 100644
  						  dir);
  
  	return ret;
-@@ -1202,7 +1202,7 @@ static struct xfrm_policy *xfrm_sk_policy_lookup(const struct sock *sk, int dir,
+@@ -1204,7 +1204,7 @@ static struct xfrm_policy *xfrm_sk_policy_lookup(const struct sock *sk, int dir,
  				goto out;
  			}
  			err = security_xfrm_policy_lookup(pol->security,
@@ -983,7 +983,7 @@ index 777cda016a30..7de46bf96863 100644
  						      dir);
  			if (!err) {
  				if (!xfrm_pol_hold_rcu(pol))
-@@ -2302,7 +2302,7 @@ int __xfrm_decode_session(struct sk_buff *skb, struct flowi *fl,
+@@ -2304,7 +2304,7 @@ int __xfrm_decode_session(struct sk_buff *skb, struct flowi *fl,
  
  	afinfo->decode_session(skb, fl, reverse);
  

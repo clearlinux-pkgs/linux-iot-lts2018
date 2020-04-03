@@ -490,10 +490,10 @@ index 4a397cde1a48..782ee194fdbd 100644
  	audit_info->sessionid = audit_get_sessionid(current);
  }
 diff --git a/net/xfrm/xfrm_policy.c b/net/xfrm/xfrm_policy.c
-index ce1b262ce964..777cda016a30 100644
+index b30c074160e3..12a268b75985 100644
 --- a/net/xfrm/xfrm_policy.c
 +++ b/net/xfrm/xfrm_policy.c
-@@ -1082,7 +1082,8 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
+@@ -1084,7 +1084,8 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
  
  	match = xfrm_selector_match(sel, fl, family);
  	if (match)
@@ -503,7 +503,7 @@ index ce1b262ce964..777cda016a30 100644
  						  dir);
  
  	return ret;
-@@ -1201,7 +1202,7 @@ static struct xfrm_policy *xfrm_sk_policy_lookup(const struct sock *sk, int dir,
+@@ -1203,7 +1204,7 @@ static struct xfrm_policy *xfrm_sk_policy_lookup(const struct sock *sk, int dir,
  				goto out;
  			}
  			err = security_xfrm_policy_lookup(pol->security,
@@ -512,7 +512,7 @@ index ce1b262ce964..777cda016a30 100644
  						      dir);
  			if (!err) {
  				if (!xfrm_pol_hold_rcu(pol))
-@@ -2301,7 +2302,7 @@ int __xfrm_decode_session(struct sk_buff *skb, struct flowi *fl,
+@@ -2303,7 +2304,7 @@ int __xfrm_decode_session(struct sk_buff *skb, struct flowi *fl,
  
  	afinfo->decode_session(skb, fl, reverse);
  
