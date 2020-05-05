@@ -29,7 +29,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  7 files changed, 186 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 9d413b816437..ea500be81329 100644
+index 9d413b816..ea500be81 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -1224,6 +1224,8 @@ int skl_init_dsp(struct skl *skl)
@@ -42,7 +42,7 @@ index 9d413b816437..ea500be81329 100644
  	ret = skl_dsp_set_dma_clk_controls(skl->skl_sst);
  	if (ret < 0)
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index 6736c89c6520..207bf3fe8ffd 100644
+index 6736c89c6..207bf3fe8 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -241,6 +241,7 @@ struct skl_notify_data {
@@ -54,7 +54,7 @@ index 6736c89c6520..207bf3fe8ffd 100644
  
  struct skl_dsp_notify_ops {
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index cfdf2ce3733b..5a8766acc1e2 100644
+index cfdf2ce37..5a8766acc 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -198,6 +198,8 @@
@@ -144,7 +144,7 @@ index cfdf2ce3733b..5a8766acc1e2 100644
  		default:
  			dev_err(ipc->dev, "ipc: Unhandled error msg=%x\n",
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index bc083b0a0d4f..5db66e257887 100644
+index bc083b0a0..5db66e257 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -29,6 +29,7 @@ struct sst_generic_ipc;
@@ -178,7 +178,7 @@ index bc083b0a0d4f..5db66e257887 100644
  
  struct skl_ipc_init_instance_msg {
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index f1d3518fc770..bf93980bf106 100644
+index f1d3518fc..bf93980bf 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -2642,6 +2642,96 @@ int skl_tplg_be_update_params(struct snd_soc_dai *dai,
@@ -304,7 +304,7 @@ index f1d3518fc770..bf93980bf106 100644
  		return -EINVAL;
  	}
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index ce4069607dda..4c09a0896e42 100644
+index ce4069607..4c09a0896 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -617,4 +617,12 @@ int skl_dsp_crash_dump_read(struct skl_sst *ctx);
@@ -321,7 +321,7 @@ index ce4069607dda..4c09a0896e42 100644
 +
  #endif
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 4b18925e871b..6897be8b89a4 100644
+index 4b18925e8..6897be8b8 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -37,6 +37,7 @@

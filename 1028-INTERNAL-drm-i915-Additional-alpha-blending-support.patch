@@ -21,7 +21,7 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  2 files changed, 16 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 498dfd275d20..b465bcacfc2d 100644
+index 498dfd275..b465bcacf 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -13905,7 +13905,7 @@ intel_primary_plane_create(struct drm_i915_private *dev_priv, enum pipe pipe)
@@ -48,7 +48,7 @@ index 498dfd275d20..b465bcacfc2d 100644
  
  	return primary;
 diff --git a/drivers/gpu/drm/i915/intel_sprite.c b/drivers/gpu/drm/i915/intel_sprite.c
-index 8a013f19fa99..b388a6b5b402 100644
+index 8a013f19f..b388a6b5b 100644
 --- a/drivers/gpu/drm/i915/intel_sprite.c
 +++ b/drivers/gpu/drm/i915/intel_sprite.c
 @@ -1755,6 +1755,14 @@ intel_sprite_plane_create(struct drm_i915_private *dev_priv,

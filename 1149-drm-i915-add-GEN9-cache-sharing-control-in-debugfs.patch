@@ -15,7 +15,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  2 files changed, 16 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_debugfs.c b/drivers/gpu/drm/i915/i915_debugfs.c
-index 320564fd8b4b..61b8a1ff7adc 100644
+index 320564fd8..61b8a1ff7 100644
 --- a/drivers/gpu/drm/i915/i915_debugfs.c
 +++ b/drivers/gpu/drm/i915/i915_debugfs.c
 @@ -4267,7 +4267,8 @@ i915_cache_sharing_get(void *data, u64 *val)
@@ -57,7 +57,7 @@ index 320564fd8b4b..61b8a1ff7adc 100644
  	return 0;
  }
 diff --git a/drivers/gpu/drm/i915/i915_reg.h b/drivers/gpu/drm/i915/i915_reg.h
-index 673998b338ed..12d3d15b45fe 100644
+index 673998b33..12d3d15b4 100644
 --- a/drivers/gpu/drm/i915/i915_reg.h
 +++ b/drivers/gpu/drm/i915/i915_reg.h
 @@ -8377,6 +8377,9 @@ enum {

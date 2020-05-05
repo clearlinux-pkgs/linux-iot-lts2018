@@ -13,7 +13,7 @@ Signed-off-by: Zhang, Qi <qi1.zhang@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/trusty/trusty-timer.c b/drivers/trusty/trusty-timer.c
-index ca6ea5799eeb..7359cf8bd3d9 100644
+index ca6ea5799..7359cf8bd 100644
 --- a/drivers/trusty/trusty-timer.c
 +++ b/drivers/trusty/trusty-timer.c
 @@ -143,8 +143,7 @@ static int trusty_timer_probe(struct platform_device *pdev)

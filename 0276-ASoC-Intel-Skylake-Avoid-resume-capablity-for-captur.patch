@@ -21,7 +21,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 5 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 07faaa2c80a4..9890374bfaa4 100644
+index 07faaa2c8..9890374bf 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -540,7 +540,11 @@ static int skl_pcm_trigger(struct snd_pcm_substream *substream, int cmd,

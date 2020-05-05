@@ -13,7 +13,7 @@ Signed-off-by: Dongwon Kim <dongwon.kim@intel.com>
  1 file changed, 7 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c
-index 03cdedf84e44..3ce8162fecfd 100644
+index 03cdedf84..3ce8162fe 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c
 @@ -158,13 +158,15 @@ int hyper_dmabuf_remote_sync(hyper_dmabuf_id_t hid, int ops)

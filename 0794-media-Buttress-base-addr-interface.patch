@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ipu-wrapper.c b/drivers/media/pci/intel/ipu-wrapper.c
-index 9e06887dd857..47fa06202fdd 100644
+index 9e06887dd..47fa06202 100644
 --- a/drivers/media/pci/intel/ipu-wrapper.c
 +++ b/drivers/media/pci/intel/ipu-wrapper.c
 @@ -51,6 +51,7 @@ static struct wrapper_base *get_mem_sub_system(int mmid)
@@ -27,7 +27,7 @@ index 9e06887dd857..47fa06202fdd 100644
  	return NULL;
  }
 diff --git a/drivers/media/pci/intel/ipu-wrapper.h b/drivers/media/pci/intel/ipu-wrapper.h
-index b7df285e1142..52ca2d1593cd 100644
+index b7df285e1..52ca2d159 100644
 --- a/drivers/media/pci/intel/ipu-wrapper.h
 +++ b/drivers/media/pci/intel/ipu-wrapper.h
 @@ -9,7 +9,6 @@

@@ -21,7 +21,7 @@ Signed-off-by: Manisha Chinthapally <manisha.chinthapally@intel.com>
  7 files changed, 4 insertions(+), 24 deletions(-)
 
 diff --git a/drivers/platform/x86/sepdk/inc/utility.h b/drivers/platform/x86/sepdk/inc/utility.h
-index c5eca9612b00..d470a656a4a1 100644
+index c5eca9612..d470a656a 100644
 --- a/drivers/platform/x86/sepdk/inc/utility.h
 +++ b/drivers/platform/x86/sepdk/inc/utility.h
 @@ -53,7 +53,7 @@ extern DISPATCH_NODE unc_power_dispatch;
@@ -34,7 +34,7 @@ index c5eca9612b00..d470a656a4a1 100644
  
  extern U64 SYS_Read_MSR(U32 msr);
 diff --git a/drivers/platform/x86/sepdk/sep/linuxos.c b/drivers/platform/x86/sepdk/sep/linuxos.c
-index 08da10e614d8..fa29d7f0a3a8 100755
+index 08da10e61..fa29d7f0a 100755
 --- a/drivers/platform/x86/sepdk/sep/linuxos.c
 +++ b/drivers/platform/x86/sepdk/sep/linuxos.c
 @@ -263,6 +263,7 @@ static DRV_BOOL linuxos_Equal_VM_Exe_File(struct vm_area_struct *vma)
@@ -55,7 +55,7 @@ index 08da10e614d8..fa29d7f0a3a8 100755
  
  #if defined(DRV_EM64T)
 diff --git a/drivers/platform/x86/sepdk/sep/pebs.c b/drivers/platform/x86/sepdk/sep/pebs.c
-index 7537c1136ec4..0a428dc5a7bd 100755
+index 7537c1136..0a428dc5a 100755
 --- a/drivers/platform/x86/sepdk/sep/pebs.c
 +++ b/drivers/platform/x86/sepdk/sep/pebs.c
 @@ -961,7 +961,6 @@ VOID PEBS_Flush_Buffer(VOID *param)
@@ -76,7 +76,7 @@ index 7537c1136ec4..0a428dc5a7bd 100755
  		{
  			if ((!DEV_CONFIG_enable_adaptive_pebs(pcfg) &&
 diff --git a/drivers/platform/x86/sepdk/sep/sys_info.c b/drivers/platform/x86/sepdk/sep/sys_info.c
-index b72ce2894c82..cf5a90c6c543 100755
+index b72ce2894..cf5a90c6c 100755
 --- a/drivers/platform/x86/sepdk/sep/sys_info.c
 +++ b/drivers/platform/x86/sepdk/sep/sys_info.c
 @@ -317,7 +317,6 @@ static void sys_info_Fill_CPUID(U32 num_cpuids, U32 basic_funcs,
@@ -100,7 +100,7 @@ index b72ce2894c82..cf5a90c6c543 100755
  				num_logical_per_physical =
  					(U32)((rbx & 0xff0000) >> 16);
 diff --git a/drivers/platform/x86/sepdk/sep/unc_common.c b/drivers/platform/x86/sepdk/sep/unc_common.c
-index 5442734a91f7..9ad1632aaafb 100755
+index 5442734a9..9ad1632aa 100755
 --- a/drivers/platform/x86/sepdk/sep/unc_common.c
 +++ b/drivers/platform/x86/sepdk/sep/unc_common.c
 @@ -266,7 +266,6 @@ VOID UNC_COMMON_PCI_Scan_For_Uncore(PVOID param, U32 dev_node,
@@ -121,7 +121,7 @@ index 5442734a91f7..9ad1632aaafb 100755
  	for (i = 0; i < num_pkgs; i++) {
  		for (len = 0; len < num_registers; len++) {
 diff --git a/drivers/platform/x86/sepdk/sep/unc_gt.c b/drivers/platform/x86/sepdk/sep/unc_gt.c
-index 34e7650da94b..3d07888dac33 100755
+index 34e7650da..3d07888da 100755
 --- a/drivers/platform/x86/sepdk/sep/unc_gt.c
 +++ b/drivers/platform/x86/sepdk/sep/unc_gt.c
 @@ -399,7 +399,6 @@ static VOID unc_gt_Read_PMU_Data(PVOID param)
@@ -141,7 +141,7 @@ index 34e7650da94b..3d07888dac33 100755
  	FOR_EACH_PCI_DATA_REG_RAW(pecb, i, dev_idx)
  	{
 diff --git a/drivers/platform/x86/sepdk/sep/unc_mmio.c b/drivers/platform/x86/sepdk/sep/unc_mmio.c
-index b1d997d0f405..148925dea263 100755
+index b1d997d0f..148925dea 100755
 --- a/drivers/platform/x86/sepdk/sep/unc_mmio.c
 +++ b/drivers/platform/x86/sepdk/sep/unc_mmio.c
 @@ -251,9 +251,7 @@ static void unc_mmio_Enable_PMU(PVOID param)

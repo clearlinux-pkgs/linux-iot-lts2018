@@ -17,7 +17,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 3 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-psys.c b/drivers/media/pci/intel/ipu-psys.c
-index de69adb470c3..345285caaa99 100644
+index de69adb47..345285caa 100644
 --- a/drivers/media/pci/intel/ipu-psys.c
 +++ b/drivers/media/pci/intel/ipu-psys.c
 @@ -543,9 +543,6 @@ static int ipu_psys_release(struct inode *inode, struct file *file)

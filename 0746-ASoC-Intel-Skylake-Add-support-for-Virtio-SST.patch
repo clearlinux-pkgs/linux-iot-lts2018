@@ -18,7 +18,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  1 file changed, 11 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 814b6a553f1e..744617279cb0 100644
+index 814b6a553..744617279 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -33,6 +33,7 @@

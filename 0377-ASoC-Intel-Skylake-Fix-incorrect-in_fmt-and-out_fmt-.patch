@@ -21,7 +21,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 891e24842be3..84acb0630373 100644
+index 891e24842..84acb0630 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -410,8 +410,8 @@ static int cnl_sdw_bra_pipe_cfg_pb(struct skl_sst *ctx,

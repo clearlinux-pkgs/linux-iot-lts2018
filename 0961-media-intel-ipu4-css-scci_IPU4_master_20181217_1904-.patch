@@ -16,7 +16,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-css/ia_css_fw_pkg_release.h b/drivers/media/pci/intel/ipu4/ipu4-css/ia_css_fw_pkg_release.h
-index 57f2e6fdac2c..c1c9c0dbfb6d 100644
+index 57f2e6fda..c1c9c0dbf 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-css/ia_css_fw_pkg_release.h
 +++ b/drivers/media/pci/intel/ipu4/ipu4-css/ia_css_fw_pkg_release.h
 @@ -11,4 +11,4 @@
@@ -26,7 +26,7 @@ index 57f2e6fdac2c..c1c9c0dbfb6d 100644
 -#define IA_CSS_FW_PKG_RELEASE  0x20181108
 +#define IA_CSS_FW_PKG_RELEASE  0x20181217
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-css/lib2600psys/lib/DSS_V2_program_group/ia_css_fw_pkg_release.h b/drivers/media/pci/intel/ipu4/ipu4-css/lib2600psys/lib/DSS_V2_program_group/ia_css_fw_pkg_release.h
-index 57f2e6fdac2c..c1c9c0dbfb6d 100644
+index 57f2e6fda..c1c9c0dbf 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-css/lib2600psys/lib/DSS_V2_program_group/ia_css_fw_pkg_release.h
 +++ b/drivers/media/pci/intel/ipu4/ipu4-css/lib2600psys/lib/DSS_V2_program_group/ia_css_fw_pkg_release.h
 @@ -11,4 +11,4 @@

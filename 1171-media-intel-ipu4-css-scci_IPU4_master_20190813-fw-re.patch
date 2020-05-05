@@ -15,7 +15,7 @@ Tracked-On: PKT-2639
  3 files changed, 5 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-css/ia_css_fw_pkg_release.h b/drivers/media/pci/intel/ipu4/ipu4-css/ia_css_fw_pkg_release.h
-index b939cf739802..9a60f1aa0af8 100644
+index b939cf739..9a60f1aa0 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-css/ia_css_fw_pkg_release.h
 +++ b/drivers/media/pci/intel/ipu4/ipu4-css/ia_css_fw_pkg_release.h
 @@ -11,4 +11,4 @@
@@ -25,7 +25,7 @@ index b939cf739802..9a60f1aa0af8 100644
 -#define IA_CSS_FW_PKG_RELEASE  0x20190320
 +#define IA_CSS_FW_PKG_RELEASE  0x20190813
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-css/lib2600/config/isys/subsystem_bxtB0.mk b/drivers/media/pci/intel/ipu4/ipu4-css/lib2600/config/isys/subsystem_bxtB0.mk
-index da142032349f..c4549f3c45c5 100644
+index da1420323..c4549f3c4 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-css/lib2600/config/isys/subsystem_bxtB0.mk
 +++ b/drivers/media/pci/intel/ipu4/ipu4-css/lib2600/config/isys/subsystem_bxtB0.mk
 @@ -46,6 +46,9 @@ WA_HSD1209062354		 = 1
@@ -39,7 +39,7 @@ index da142032349f..c4549f3c45c5 100644
  SOFT_RESET_IBUF_STREAM_START_SUPPORT = 1
  
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-css/lib2600psys/lib/DSS_V2_program_group/ia_css_fw_pkg_release.h b/drivers/media/pci/intel/ipu4/ipu4-css/lib2600psys/lib/DSS_V2_program_group/ia_css_fw_pkg_release.h
-index b939cf739802..9a60f1aa0af8 100644
+index b939cf739..9a60f1aa0 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-css/lib2600psys/lib/DSS_V2_program_group/ia_css_fw_pkg_release.h
 +++ b/drivers/media/pci/intel/ipu4/ipu4-css/lib2600psys/lib/DSS_V2_program_group/ia_css_fw_pkg_release.h
 @@ -11,4 +11,4 @@

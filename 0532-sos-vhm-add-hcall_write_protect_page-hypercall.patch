@@ -18,7 +18,7 @@ Signed-off-by: Li, Fei1 <fei1.li@intel.com>
  5 files changed, 46 insertions(+), 23 deletions(-)
 
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 2c51c366c60f..8611bb1819d4 100644
+index 2c51c366c..8611bb181 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -112,6 +112,11 @@ inline long hcall_set_memmaps(unsigned long pa_memmaps)
@@ -34,7 +34,7 @@ index 2c51c366c60f..8611bb1819d4 100644
  {
  	return acrn_hypercall2(HC_SET_IOREQ_BUFFER, vmid, buffer);
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index f663558ae943..c7ca8e99612d 100644
+index f663558ae..c7ca8e996 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -159,12 +159,27 @@ int set_memmaps(struct set_memmaps *memmaps)
@@ -71,7 +71,7 @@ index f663558ae943..c7ca8e99612d 100644
  
  int map_guest_memseg(struct vhm_vm *vm, struct vm_memmap *memmap)
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 67316fb49999..74f8a137206d 100644
+index 67316fb49..74f8a1372 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -96,6 +96,7 @@
@@ -103,7 +103,7 @@ index 67316fb49999..74f8a137206d 100644
  	uint16_t pcpu_id;
  	uint16_t reserved;
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 645a8a56531e..0769200ea3bf 100644
+index 645a8a565..0769200ea 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -137,29 +137,16 @@ int unset_mmio_map(unsigned long vmid, unsigned long guest_gpa,
@@ -142,7 +142,7 @@ index 645a8a56531e..0769200ea3bf 100644
  int vhm_dev_mmap(struct file *file, struct vm_area_struct *vma);
  
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 4de5e46b9d0f..87a34fec8d90 100644
+index 4de5e46b9..87a34fec8 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -151,6 +151,8 @@ inline long hcall_get_cpu_state(unsigned long cmd, unsigned long state_pa);

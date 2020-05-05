@@ -18,7 +18,7 @@ Tested-by: Yin, FengWei <fengwei.yin@intel.com>
  1 file changed, 16 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 7e067ac4923d..ac934fcd656f 100644
+index 7e067ac49..ac934fcd6 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -51,6 +51,7 @@

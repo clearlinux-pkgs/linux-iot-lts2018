@@ -18,7 +18,7 @@ Reviewed-by: Uzieblo, Olgierd <olgierd.uzieblo@intel.com>
  2 files changed, 8 insertions(+), 22 deletions(-)
 
 diff --git a/sound/soc/intel/common/soc-acpi-intel-cnl-match.c b/sound/soc/intel/common/soc-acpi-intel-cnl-match.c
-index ec8e28e7b937..9abc557b7b54 100644
+index ec8e28e7b..9abc557b7 100644
 --- a/sound/soc/intel/common/soc-acpi-intel-cnl-match.c
 +++ b/sound/soc/intel/common/soc-acpi-intel-cnl-match.c
 @@ -15,6 +15,7 @@ static struct skl_machine_pdata cnl_pdata = {
@@ -44,7 +44,7 @@ index ec8e28e7b937..9abc557b7b54 100644
  };
  EXPORT_SYMBOL_GPL(snd_soc_acpi_intel_cnl_machines);
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 5c3db449d678..db823eb92126 100644
+index 5c3db449d..db823eb92 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -1154,28 +1154,6 @@ static void skl_remove(struct pci_dev *pci)

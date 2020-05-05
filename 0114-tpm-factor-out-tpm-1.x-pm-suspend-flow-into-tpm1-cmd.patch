@@ -21,7 +21,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  3 files changed, 68 insertions(+), 50 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm-interface.c b/drivers/char/tpm/tpm-interface.c
-index e0a3c086e67f..8ed127d88e1c 100644
+index e0a3c086e..8ed127d88 100644
 --- a/drivers/char/tpm/tpm-interface.c
 +++ b/drivers/char/tpm/tpm-interface.c
 @@ -595,15 +595,6 @@ int tpm_send(struct tpm_chip *chip, void *cmd, size_t buflen)
@@ -101,7 +101,7 @@ index e0a3c086e67f..8ed127d88e1c 100644
  	return rc;
  }
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index f284a98a9455..754f7bcb15fa 100644
+index fd502b0e7..0453bc455 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
 @@ -542,6 +542,8 @@ ssize_t tpm_transmit_cmd(struct tpm_chip *chip, struct tpm_space *space,
@@ -114,7 +114,7 @@ index f284a98a9455..754f7bcb15fa 100644
  int tpm1_do_selftest(struct tpm_chip *chip);
  int tpm1_get_timeouts(struct tpm_chip *chip);
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index a69a02366c32..3bd9f1fa77ce 100644
+index a69a02366..3bd9f1fa7 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -666,3 +666,64 @@ int tpm1_auto_startup(struct tpm_chip *chip)

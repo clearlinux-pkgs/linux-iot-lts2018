@@ -12,7 +12,7 @@ Signed-off-by: Diwakar, Praveen <praveen.diwakar@intel.com>
  1 file changed, 10 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 5ee7b350eb7f..9441a724ea59 100644
+index 5ee7b350e..9441a724e 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -272,6 +272,16 @@ static int cnl_load_base_firmware(struct sst_dsp *ctx)

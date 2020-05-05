@@ -15,7 +15,7 @@ Tracked-On: PKT-2559
  4 files changed, 7 insertions(+), 96 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.c b/drivers/gpu/drm/i915/gvt/acrngt.c
-index 0215fc23b3e3..defa892d8d52 100644
+index 0215fc23b..defa892d8 100644
 --- a/drivers/gpu/drm/i915/gvt/acrngt.c
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.c
 @@ -33,8 +33,6 @@
@@ -138,7 +138,7 @@ index 0215fc23b3e3..defa892d8d52 100644
  		" nr_vcpu %d\n", info->vm_id,info->client, info->nr_vcpu);
  
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.h b/drivers/gpu/drm/i915/gvt/acrngt.h
-index ea8e411134e1..0799df2ec557 100644
+index ea8e41113..0799df2ec 100644
 --- a/drivers/gpu/drm/i915/gvt/acrngt.h
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.h
 @@ -50,11 +50,6 @@ struct acrngt_hvm_dev {
@@ -166,7 +166,7 @@ index ea8e411134e1..0799df2ec557 100644
  		struct intel_vgpu_type *type);
  void acrngt_instance_destroy(struct intel_vgpu *vgpu);
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 089406ebc2f1..b0073edbe4a4 100644
+index 089406ebc..b0073edbe 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -241,7 +241,6 @@ struct intel_vgpu {
@@ -178,7 +178,7 @@ index 089406ebc2f1..b0073edbe4a4 100644
  
  /* validating GM healthy status*/
 diff --git a/drivers/gpu/drm/i915/gvt/interrupt.c b/drivers/gpu/drm/i915/gvt/interrupt.c
-index 7bb9be5ae9fd..06ce906b6673 100644
+index 7bb9be5ae..06ce906b6 100644
 --- a/drivers/gpu/drm/i915/gvt/interrupt.c
 +++ b/drivers/gpu/drm/i915/gvt/interrupt.c
 @@ -28,13 +28,10 @@

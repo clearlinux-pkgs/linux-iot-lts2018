@@ -18,7 +18,7 @@ Signed-off-by: Poluri, Sarat Chandra <sarat.chandra.poluri@intel.com>
  2 files changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream-device.c b/drivers/media/pci/intel/ici/ici-isys-stream-device.c
-index 96336980db7d..98c839b92a65 100644
+index 96336980d..98c839b92 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream-device.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream-device.c
 @@ -319,6 +319,7 @@ int stream_device_register(struct ici_stream_device *strm_dev)
@@ -30,7 +30,7 @@ index 96336980db7d..98c839b92a65 100644
  	cdev_init(&strm_dev->cdev, &ici_stream_fops);
  	strm_dev->cdev.owner = ici_stream_fops.owner;
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 09fcd02671fb..1384fc3d0f37 100644
+index 09fcd0267..1384fc3d0 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -1165,8 +1165,6 @@ static int stream_fop_open(struct inode *inode, struct file *file)

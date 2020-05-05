@@ -44,7 +44,7 @@ Signed-off-by: Liu Xinyun <xinyun.liu@intel.com>
  3 files changed, 47 insertions(+), 11 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
-index 8fc3a56ffee6..107d28e39e13 100644
+index 8fc3a56ff..107d28e39 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 @@ -439,24 +439,32 @@ static int hyper_dmabuf_export_fd_ioctl(struct file *filp, void *data)
@@ -86,7 +86,7 @@ index 8fc3a56ffee6..107d28e39e13 100644
  		}
  		get_dma_buf(imported->dma_buf);
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
-index 3864f4b6a856..8426fbeefd76 100644
+index 3864f4b6a..8426fbeef 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
 @@ -42,11 +42,11 @@
@@ -175,7 +175,7 @@ index 3864f4b6a856..8426fbeefd76 100644
  
  static int hyper_dmabuf_ops_begin_cpu_access(struct dma_buf *dmabuf,
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.h b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.h
-index c5505a41f0fe..f2b88a818ce9 100644
+index c5505a41f..f2b88a818 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.h
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.h
 @@ -29,4 +29,6 @@ int hyper_dmabuf_export_fd(struct imported_sgt_info *imported, int flags);

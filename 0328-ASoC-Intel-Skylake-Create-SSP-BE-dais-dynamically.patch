@@ -18,7 +18,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  3 files changed, 111 insertions(+), 127 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-nhlt.c b/sound/soc/intel/skylake/skl-nhlt.c
-index 30ef8c498e82..7063e8669763 100644
+index 30ef8c498..7063e8669 100644
 --- a/sound/soc/intel/skylake/skl-nhlt.c
 +++ b/sound/soc/intel/skylake/skl-nhlt.c
 @@ -464,3 +464,39 @@ void skl_get_clks(struct skl *skl, struct skl_ssp_clk *ssp_clks)
@@ -62,7 +62,7 @@ index 30ef8c498e82..7063e8669763 100644
 +	}
 +}
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 6ad99373e007..80fa279f3583 100644
+index 6ad99373e..80fa279f3 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1126,126 +1126,6 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
@@ -302,7 +302,7 @@ index 6ad99373e007..80fa279f3583 100644
  		dev_err(dev, "soc component registration failed %d\n", ret);
  err:
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 01d54513b029..2883d86d56fe 100644
+index 01d54513b..2883d86d5 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -71,6 +71,11 @@ struct skl_fw_config {

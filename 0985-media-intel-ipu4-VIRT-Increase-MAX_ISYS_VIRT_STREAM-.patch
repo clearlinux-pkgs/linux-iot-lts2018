@@ -20,7 +20,7 @@ Signed-off-by: Gopal, Puunithaaraj <puunithaaraj.gopal@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
-index 3edab4270da0..b5cc8dd16b92 100644
+index 3edab4270..b5cc8dd16 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
 @@ -18,7 +18,7 @@

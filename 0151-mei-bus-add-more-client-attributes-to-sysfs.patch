@@ -12,7 +12,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  3 files changed, 120 insertions(+)
 
 diff --git a/Documentation/ABI/testing/sysfs-bus-mei b/Documentation/ABI/testing/sysfs-bus-mei
-index 3f8701e8fa24..f48e27bfa368 100644
+index 3f8701e8f..f48e27bfa 100644
 --- a/Documentation/ABI/testing/sysfs-bus-mei
 +++ b/Documentation/ABI/testing/sysfs-bus-mei
 @@ -26,3 +26,31 @@ KernelVersion:	4.3
@@ -48,7 +48,7 @@ index 3f8701e8fa24..f48e27bfa368 100644
 +Description:	Stores mei client maximum message length
 +		Format: %d
 diff --git a/drivers/misc/mei/bus.c b/drivers/misc/mei/bus.c
-index 0327827f1f99..2b28321873f7 100644
+index 0327827f1..2b2832187 100644
 --- a/drivers/misc/mei/bus.c
 +++ b/drivers/misc/mei/bus.c
 @@ -829,11 +829,55 @@ static ssize_t modalias_show(struct device *dev, struct device_attribute *a,
@@ -108,7 +108,7 @@ index 0327827f1f99..2b28321873f7 100644
  };
  ATTRIBUTE_GROUPS(mei_cldev);
 diff --git a/drivers/misc/mei/client.h b/drivers/misc/mei/client.h
-index eb147094b459..6c9986dfd5a0 100644
+index eb147094b..6c9986dfd 100644
 --- a/drivers/misc/mei/client.h
 +++ b/drivers/misc/mei/client.h
 @@ -79,6 +79,54 @@ static inline u8 mei_me_cl_ver(const struct mei_me_client *me_cl)

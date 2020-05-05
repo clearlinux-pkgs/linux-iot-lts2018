@@ -26,7 +26,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  create mode 100644 sound/soc/intel/skylake/skl-fwlog.h
 
 diff --git a/sound/soc/intel/common/sst-dsp-priv.h b/sound/soc/intel/common/sst-dsp-priv.h
-index acf06a4f5144..e7151a7e6bae 100644
+index acf06a4f5..e7151a7e6 100644
 --- a/sound/soc/intel/common/sst-dsp-priv.h
 +++ b/sound/soc/intel/common/sst-dsp-priv.h
 @@ -21,7 +21,9 @@
@@ -95,7 +95,7 @@ index acf06a4f5144..e7151a7e6bae 100644
 +
  #endif
 diff --git a/sound/soc/intel/skylake/Makefile b/sound/soc/intel/skylake/Makefile
-index c5ee108bf5d9..831218ee43c8 100644
+index c5ee108bf..831218ee4 100644
 --- a/sound/soc/intel/skylake/Makefile
 +++ b/sound/soc/intel/skylake/Makefile
 @@ -11,7 +11,7 @@ obj-$(CONFIG_SND_SOC_INTEL_SKYLAKE) += snd-soc-skl.o
@@ -109,7 +109,7 @@ index c5ee108bf5d9..831218ee43c8 100644
  
 diff --git a/sound/soc/intel/skylake/skl-fwlog.c b/sound/soc/intel/skylake/skl-fwlog.c
 new file mode 100644
-index 000000000000..bc25b9e22252
+index 000000000..bc25b9e22
 --- /dev/null
 +++ b/sound/soc/intel/skylake/skl-fwlog.c
 @@ -0,0 +1,168 @@
@@ -283,7 +283,7 @@ index 000000000000..bc25b9e22252
 +MODULE_LICENSE("GPL v2");
 diff --git a/sound/soc/intel/skylake/skl-fwlog.h b/sound/soc/intel/skylake/skl-fwlog.h
 new file mode 100644
-index 000000000000..06304de3d2ab
+index 000000000..06304de3d
 --- /dev/null
 +++ b/sound/soc/intel/skylake/skl-fwlog.h
 @@ -0,0 +1,20 @@

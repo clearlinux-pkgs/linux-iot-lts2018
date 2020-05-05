@@ -18,7 +18,7 @@ Acked-by: Eddie Dong <eddie.dong@intel.com>
  4 files changed, 39 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 75cdbb730fa9..964aee295cda 100644
+index 75cdbb730..964aee295 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -226,6 +226,14 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -46,7 +46,7 @@ index 75cdbb730fa9..964aee295cda 100644
  		if (ret < 0) {
  			pr_err("failed to destroy VM %ld\n", vm->vmid);
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index fb09ed2f994f..bff448208836 100644
+index fb09ed2f9..bff448208 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -305,6 +305,31 @@ int check_guest_mem(struct vhm_vm *vm)
@@ -82,7 +82,7 @@ index fb09ed2f994f..bff448208836 100644
  {
  	struct vhm_vm *vm = vma->vm_file->private_data;
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 87d668f735dc..5ff9af92f81f 100644
+index 87d668f73..5ff9af92f 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -198,6 +198,9 @@ int alloc_guest_memseg(struct vhm_vm *vm, struct vm_memseg *memseg);
@@ -96,7 +96,7 @@ index 87d668f735dc..5ff9af92f81f 100644
  	unsigned long host_gpa, unsigned long len,
  	unsigned int mem_type, unsigned int mem_access_right,
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index 14e9fe7a4d5f..b5f6ca1f2dea 100644
+index 14e9fe7a4..b5f6ca1f2 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -94,6 +94,7 @@ struct vhm_vm {

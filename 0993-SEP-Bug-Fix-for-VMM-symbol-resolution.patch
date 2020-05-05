@@ -17,7 +17,7 @@ Signed-off-by: Manisha <manisha.chinthapally@intel.com>
  3 files changed, 6 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h b/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
-index 8346ea72d587..0120aeea9631 100644
+index 8346ea72d..0120aeea9 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
 @@ -511,7 +511,7 @@ extern "C" {
@@ -30,7 +30,7 @@ index 8346ea72d587..0120aeea9631 100644
  #define PERF_HW_VER4 (5)
  #if defined(__cplusplus)
 diff --git a/drivers/platform/x86/sepdk/sep/linuxos.c b/drivers/platform/x86/sepdk/sep/linuxos.c
-index 1f877e6e4bc8..3ef35ac66b49 100755
+index 1f877e6e4..3ef35ac66 100755
 --- a/drivers/platform/x86/sepdk/sep/linuxos.c
 +++ b/drivers/platform/x86/sepdk/sep/linuxos.c
 @@ -161,7 +161,9 @@ static S32 linuxos_Load_Image_Notify_Routine(char *name, U64 base, U32 size,
@@ -54,7 +54,7 @@ index 1f877e6e4bc8..3ef35ac66b49 100755
  
  	for (modules = (struct list_head *)(THIS_MODULE->list.prev);
 diff --git a/drivers/platform/x86/sepdk/sep/lwpmudrv.c b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
-index 799c61cde378..130081d5346b 100644
+index 799c61cde..130081d53 100644
 --- a/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 +++ b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 @@ -5993,7 +5993,7 @@ static OS_STATUS lwpmudrv_Get_Sample_Drop_Info(IOCTL_ARGS args)

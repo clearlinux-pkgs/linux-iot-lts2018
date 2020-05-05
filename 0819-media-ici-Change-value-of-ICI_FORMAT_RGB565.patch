@@ -15,7 +15,7 @@ Signed-off-by: Gopal, Puunithaaraj <puunithaaraj.gopal@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/include/uapi/linux/ici.h b/include/uapi/linux/ici.h
-index 92cf555aabc8..2855ec22290c 100644
+index 92cf555aa..2855ec222 100644
 --- a/include/uapi/linux/ici.h
 +++ b/include/uapi/linux/ici.h
 @@ -26,7 +26,7 @@

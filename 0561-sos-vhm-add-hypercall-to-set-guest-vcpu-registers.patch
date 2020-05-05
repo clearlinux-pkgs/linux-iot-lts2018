@@ -17,7 +17,7 @@ Acked-by: Eddie Dong <eddie.dong@intel.com>
  4 files changed, 90 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 0eb31d8d8535..c6a97e8305fd 100644
+index 0eb31d8d8..c6a97e830 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -311,6 +311,23 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -45,7 +45,7 @@ index 0eb31d8d8535..c6a97e8305fd 100644
  		struct vm_memmap memmap;
  
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index dfe89309fb17..69499245a994 100644
+index dfe89309f..69499245a 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -273,6 +273,77 @@ struct acrn_create_vcpu {
@@ -127,7 +127,7 @@ index dfe89309fb17..69499245a994 100644
   * @brief Info to set ioreq buffer for a created VM
   *
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 6b7bfb421301..c74f05fc9d47 100644
+index 6b7bfb421..c74f05fc9 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -78,6 +78,7 @@
@@ -139,7 +139,7 @@ index 6b7bfb421301..c74f05fc9d47 100644
  /* IRQ and Interrupts */
  #define HC_ID_IRQ_BASE              0x20UL
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index fb7b154dbd6b..73be2dde243d 100644
+index fb7b154db..73be2dde2 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -73,6 +73,7 @@

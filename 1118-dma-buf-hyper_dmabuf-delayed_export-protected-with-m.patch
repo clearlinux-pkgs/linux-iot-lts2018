@@ -15,7 +15,7 @@ Signed-off-by: Dongwon Kim <dongwon.kim@intel.com>
  3 files changed, 38 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
-index 1ede172e1ad7..17b24d27c396 100644
+index 1ede172e1..17b24d27c 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 @@ -235,8 +235,8 @@ static int hyper_dmabuf_export_remote_ioctl(struct file *filp, void *data)
@@ -73,7 +73,7 @@ index 1ede172e1ad7..17b24d27c396 100644
  
  /* Schedule unexport of dmabuf.
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c
-index 85e07789a58a..aedb6c292a09 100644
+index 85e07789a..aedb6c292 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c
 @@ -197,8 +197,8 @@ struct exported_sgt_info *hyper_dmabuf_find_exported(hyper_dmabuf_id_t hid)
@@ -108,7 +108,7 @@ index 85e07789a58a..aedb6c292a09 100644
  {
  	struct list_entry_imported *info_entry;
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.h b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.h
-index 715bfc1f3ec7..943698f4d526 100644
+index 715bfc1f3..943698f4d 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.h
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.h
 @@ -49,10 +49,13 @@ int hyper_dmabuf_table_destroy(void);

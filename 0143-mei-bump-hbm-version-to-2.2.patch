@@ -13,7 +13,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/misc/mei/hw.h b/drivers/misc/mei/hw.h
-index 0a5823472bd7..90d118ae8434 100644
+index 0a5823472..90d118ae8 100644
 --- a/drivers/misc/mei/hw.h
 +++ b/drivers/misc/mei/hw.h
 @@ -35,7 +35,7 @@

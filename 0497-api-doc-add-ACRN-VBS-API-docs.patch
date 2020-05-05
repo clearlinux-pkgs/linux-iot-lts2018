@@ -24,7 +24,7 @@ Signed-off-by: Hao Li <hao.l.li@intel.com>
  create mode 100644 Documentation/virtual/acrn/vhm.rst
 
 diff --git a/Documentation/virtual/00-INDEX b/Documentation/virtual/00-INDEX
-index af0d23968ee7..257aec22dbff 100644
+index af0d23968..257aec22d 100644
 --- a/Documentation/virtual/00-INDEX
 +++ b/Documentation/virtual/00-INDEX
 @@ -9,3 +9,6 @@ kvm/
@@ -36,7 +36,7 @@ index af0d23968ee7..257aec22dbff 100644
 +	- ACRN Project. See also http://github.com/projectacrn/
 diff --git a/Documentation/virtual/acrn/00-INDEX b/Documentation/virtual/acrn/00-INDEX
 new file mode 100644
-index 000000000000..5beb50eef9e1
+index 000000000..5beb50eef
 --- /dev/null
 +++ b/Documentation/virtual/acrn/00-INDEX
 @@ -0,0 +1,8 @@
@@ -50,7 +50,7 @@ index 000000000000..5beb50eef9e1
 +	- virtio and backend service (VBS) APIs.
 diff --git a/Documentation/virtual/acrn/conf.py b/Documentation/virtual/acrn/conf.py
 new file mode 100644
-index 000000000000..ed247df22700
+index 000000000..ed247df22
 --- /dev/null
 +++ b/Documentation/virtual/acrn/conf.py
 @@ -0,0 +1,5 @@
@@ -61,7 +61,7 @@ index 000000000000..ed247df22700
 +tags.add("subproject")
 diff --git a/Documentation/virtual/acrn/index.rst b/Documentation/virtual/acrn/index.rst
 new file mode 100644
-index 000000000000..3630d4fe3207
+index 000000000..3630d4fe3
 --- /dev/null
 +++ b/Documentation/virtual/acrn/index.rst
 @@ -0,0 +1,17 @@
@@ -84,7 +84,7 @@ index 000000000000..3630d4fe3207
 +   * :ref:`genindex`
 diff --git a/Documentation/virtual/acrn/vbs.rst b/Documentation/virtual/acrn/vbs.rst
 new file mode 100644
-index 000000000000..40a0683a1c0b
+index 000000000..40a0683a1
 --- /dev/null
 +++ b/Documentation/virtual/acrn/vbs.rst
 @@ -0,0 +1,20 @@
@@ -110,7 +110,7 @@ index 000000000000..40a0683a1c0b
 +.. kernel-doc:: include/linux/vbs/vq.h
 diff --git a/Documentation/virtual/acrn/vhm.rst b/Documentation/virtual/acrn/vhm.rst
 new file mode 100644
-index 000000000000..56d498a016b0
+index 000000000..56d498a01
 --- /dev/null
 +++ b/Documentation/virtual/acrn/vhm.rst
 @@ -0,0 +1,5 @@
@@ -120,7 +120,7 @@ index 000000000000..56d498a016b0
 +
 +The Virtio and Hypervisor service Module (VHM) in part of ACRN Project.
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
-index 87965bafbbb3..2c71186801e7 100644
+index 87965bafb..2c7118680 100644
 --- a/drivers/vbs/vbs_rng.c
 +++ b/drivers/vbs/vbs_rng.c
 @@ -91,6 +91,15 @@ enum {
@@ -140,7 +140,7 @@ index 87965bafbbb3..2c71186801e7 100644
  	struct virtio_dev_info dev;
  	struct virtio_vq_info vqs[VBS_K_RNG_VQ_MAX];
 diff --git a/include/linux/vbs/vbs.h b/include/linux/vbs/vbs.h
-index b2e185e115c8..725f1626dbc6 100644
+index b2e185e11..725f1626d 100644
 --- a/include/linux/vbs/vbs.h
 +++ b/include/linux/vbs/vbs.h
 @@ -66,19 +66,26 @@
@@ -368,7 +368,7 @@ index b2e185e115c8..725f1626dbc6 100644
  
  #endif
 diff --git a/include/linux/vbs/vq.h b/include/linux/vbs/vq.h
-index 9ebde05e4663..9e865b8dff05 100644
+index 9ebde05e4..9e865b8df 100644
 --- a/include/linux/vbs/vq.h
 +++ b/include/linux/vbs/vq.h
 @@ -101,7 +101,13 @@

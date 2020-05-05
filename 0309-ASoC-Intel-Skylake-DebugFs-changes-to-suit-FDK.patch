@@ -24,7 +24,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 16 insertions(+), 51 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 39293c7a31ae..c1ae218a5009 100644
+index 39293c7a3..c1ae218a5 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -151,37 +151,11 @@ static ssize_t mod_control_read(struct file *file,

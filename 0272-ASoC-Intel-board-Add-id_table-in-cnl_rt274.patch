@@ -19,7 +19,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 8 insertions(+)
 
 diff --git a/sound/soc/intel/boards/cnl_rt274.c b/sound/soc/intel/boards/cnl_rt274.c
-index 1b788f8e59a2..20058f9c7fd1 100644
+index 1b788f8e5..20058f9c7 100644
 --- a/sound/soc/intel/boards/cnl_rt274.c
 +++ b/sound/soc/intel/boards/cnl_rt274.c
 @@ -370,12 +370,19 @@ static int snd_cnl_rt274_mc_probe(struct platform_device *pdev)

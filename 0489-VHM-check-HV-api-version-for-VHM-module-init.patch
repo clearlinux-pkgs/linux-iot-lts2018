@@ -12,7 +12,7 @@ Signed-off-by: Yonghua Huang <yonghua.huang@intel.com>
  1 file changed, 18 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 7894297ca872..88fb0faf19fc 100644
+index 7894297ca..88fb0faf1 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -565,12 +565,30 @@ static const struct file_operations fops = {

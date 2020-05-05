@@ -18,7 +18,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  4 files changed, 24 insertions(+)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 32de7aeb30a1..d7ad18f6a55e 100644
+index 32de7aeb3..d7ad18f6a 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -224,6 +224,23 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -46,7 +46,7 @@ index 32de7aeb30a1..d7ad18f6a55e 100644
  		struct vm_memseg memseg;
  
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 5723e5e2d537..2fa43a288ee5 100644
+index 5723e5e2d..2fa43a288 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -193,6 +193,11 @@ struct acrn_create_vm {
@@ -62,7 +62,7 @@ index 5723e5e2d537..2fa43a288ee5 100644
  	long req_buf;			/* IN: gpa of per VM request_buffer*/
  } __attribute__((aligned(8)));
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 3e43da56813d..329c38b961e5 100644
+index 3e43da568..329c38b96 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -73,6 +73,7 @@
@@ -74,7 +74,7 @@ index 3e43da56813d..329c38b961e5 100644
  /* IRQ and Interrupts */
  #define HC_ID_IRQ_BASE              0x100UL
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 8d03d38b788d..5ec2d10fc350 100644
+index 8d03d38b7..5ec2d10fc 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -63,6 +63,7 @@

@@ -19,7 +19,7 @@ Signed-off-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 2 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/mmio_context.c b/drivers/gpu/drm/i915/gvt/mmio_context.c
-index 4e99cd0e4fbe..a69263163e34 100644
+index 4e99cd0e4..a69263163 100644
 --- a/drivers/gpu/drm/i915/gvt/mmio_context.c
 +++ b/drivers/gpu/drm/i915/gvt/mmio_context.c
 @@ -619,6 +619,7 @@ static void get_host_mmio_snapshot(struct intel_gvt *gvt)

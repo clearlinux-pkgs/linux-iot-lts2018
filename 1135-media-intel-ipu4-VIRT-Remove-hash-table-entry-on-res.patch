@@ -16,7 +16,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  1 file changed, 28 insertions(+), 11 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
-index a4b950a128d7..75e93e47fa83 100644
+index a4b950a12..75e93e47f 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 @@ -77,17 +77,6 @@ static void ipu_vbk_hash_init(void)

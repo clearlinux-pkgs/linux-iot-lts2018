@@ -42,7 +42,7 @@ Signed-off-by: Daniel Charles <daniel.charles@intel.com>
  create mode 100644 drivers/gpu/drm/i915/intel_initial_modeset.c
 
 diff --git a/drivers/gpu/drm/i915/Makefile b/drivers/gpu/drm/i915/Makefile
-index 517620bcbadd..c70a494bb213 100644
+index 517620bcb..c70a494bb 100644
 --- a/drivers/gpu/drm/i915/Makefile
 +++ b/drivers/gpu/drm/i915/Makefile
 @@ -190,4 +190,7 @@ endif
@@ -54,7 +54,7 @@ index 517620bcbadd..c70a494bb213 100644
 +
  obj-$(CONFIG_DRM_I915) += i915.o
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index 7a91c1e6974e..e1391951e244 100644
+index 7a91c1e69..e1391951e 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -690,9 +690,11 @@ static int i915_load_modeset_init(struct drm_device *dev)
@@ -107,7 +107,7 @@ index 7a91c1e6974e..e1391951e244 100644
  }
  
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index f981e49980f2..baab05dad59a 100644
+index f981e4998..baab05dad 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -1777,6 +1777,8 @@ struct drm_i915_private {
@@ -132,7 +132,7 @@ index f981e49980f2..baab05dad59a 100644
  
  int intel_engines_init_mmio(struct drm_i915_private *dev_priv);
 diff --git a/drivers/gpu/drm/i915/i915_params.c b/drivers/gpu/drm/i915/i915_params.c
-index e594fd3cf6c9..c588edb4a41d 100644
+index e594fd3cf..c588edb4a 100644
 --- a/drivers/gpu/drm/i915/i915_params.c
 +++ b/drivers/gpu/drm/i915/i915_params.c
 @@ -178,6 +178,9 @@ i915_param_named(gvt_workload_priority, int, 0600,
@@ -146,7 +146,7 @@ index e594fd3cf6c9..c588edb4a41d 100644
          "scaler owners for each domain and for each pipe ids can be from 0-F");
  
 diff --git a/drivers/gpu/drm/i915/i915_params.h b/drivers/gpu/drm/i915/i915_params.h
-index a0d1d7e7a3ac..9df42e8d99c0 100644
+index a0d1d7e7a..9df42e8d9 100644
 --- a/drivers/gpu/drm/i915/i915_params.h
 +++ b/drivers/gpu/drm/i915/i915_params.h
 @@ -76,6 +76,7 @@ struct drm_printer;
@@ -159,7 +159,7 @@ index a0d1d7e7a3ac..9df42e8d99c0 100644
  
 diff --git a/drivers/gpu/drm/i915/intel_initial_modeset.c b/drivers/gpu/drm/i915/intel_initial_modeset.c
 new file mode 100644
-index 000000000000..4a3a6e7b0f9b
+index 000000000..4a3a6e7b0
 --- /dev/null
 +++ b/drivers/gpu/drm/i915/intel_initial_modeset.c
 @@ -0,0 +1,489 @@

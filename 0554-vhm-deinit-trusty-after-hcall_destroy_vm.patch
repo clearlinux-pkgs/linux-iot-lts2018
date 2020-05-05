@@ -31,7 +31,7 @@ Acked-by: Anthony Xu <anthony.xu@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 6e351c387928..d57dc3972bc5 100644
+index 6e351c387..d57dc3972 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -276,13 +276,13 @@ static long vhm_dev_ioctl(struct file *filep,

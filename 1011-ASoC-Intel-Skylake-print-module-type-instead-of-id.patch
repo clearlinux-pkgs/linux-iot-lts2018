@@ -22,7 +22,7 @@ Tested-by: gkblditp <gkblditp@intel.com>
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 39cd014dad4a..af294f6fd23b 100644
+index 39cd014da..af294f6fd 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -2001,8 +2001,9 @@ static int skl_set_module_format(struct skl_sst *ctx,

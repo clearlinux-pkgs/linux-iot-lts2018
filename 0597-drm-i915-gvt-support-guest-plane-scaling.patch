@@ -26,7 +26,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  8 files changed, 130 insertions(+), 37 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/display.c b/drivers/gpu/drm/i915/gvt/display.c
-index 58b32dbd50e3..73a2dbbaf79d 100644
+index 58b32dbd5..73a2dbbaf 100644
 --- a/drivers/gpu/drm/i915/gvt/display.c
 +++ b/drivers/gpu/drm/i915/gvt/display.c
 @@ -478,15 +478,33 @@ static void intel_gvt_vblank_work(struct work_struct *w)
@@ -65,7 +65,7 @@ index 58b32dbd50e3..73a2dbbaf79d 100644
  }
  
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 718cf020e963..64139240207f 100644
+index 718cf020e..641392402 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -309,6 +309,7 @@ struct intel_gvt_pipe_info {
@@ -89,7 +89,7 @@ index 718cf020e963..64139240207f 100644
  					    u32 offset, u32 val, bool low)
  {
 diff --git a/drivers/gpu/drm/i915/gvt/handlers.c b/drivers/gpu/drm/i915/gvt/handlers.c
-index 91fe0a44367d..88d34ef2c057 100644
+index 91fe0a443..88d34ef2c 100644
 --- a/drivers/gpu/drm/i915/gvt/handlers.c
 +++ b/drivers/gpu/drm/i915/gvt/handlers.c
 @@ -1161,6 +1161,7 @@ static int pvinfo_mmio_read(struct intel_vgpu *vgpu, unsigned int offset,
@@ -217,7 +217,7 @@ index 91fe0a44367d..88d34ef2c057 100644
  	MMIO_PLANES_DH(PLANE_CTL, D_SKL_PLUS, NULL, skl_plane_mmio_write);
  	MMIO_PLANES_DH(PLANE_STRIDE, D_SKL_PLUS, NULL, skl_plane_mmio_write);
 diff --git a/drivers/gpu/drm/i915/gvt/reg.h b/drivers/gpu/drm/i915/gvt/reg.h
-index d05c5516a472..b55fc82027e0 100644
+index d05c5516a..b55fc8202 100644
 --- a/drivers/gpu/drm/i915/gvt/reg.h
 +++ b/drivers/gpu/drm/i915/gvt/reg.h
 @@ -59,6 +59,10 @@
@@ -232,7 +232,7 @@ index d05c5516a472..b55fc82027e0 100644
  #define SKL_PLANE_REG_TO_PLANE(reg) ((((reg) & 0xFFF) - 0x180) >> 8)
  #define SKL_FLIP_EVENT(pipe, plane) (PRIMARY_A_FLIP_DONE + (plane)*3 + pipe)
 diff --git a/drivers/gpu/drm/i915/gvt/vgpu.c b/drivers/gpu/drm/i915/gvt/vgpu.c
-index 37e922d84dd3..01d5e133e471 100644
+index 37e922d84..01d5e133e 100644
 --- a/drivers/gpu/drm/i915/gvt/vgpu.c
 +++ b/drivers/gpu/drm/i915/gvt/vgpu.c
 @@ -37,6 +37,11 @@
@@ -263,7 +263,7 @@ index 37e922d84dd3..01d5e133e471 100644
  	gvt_dbg_core("aperture base [GMADR] 0x%llx size 0x%llx\n",
  		vgpu_aperture_gmadr_base(vgpu), vgpu_aperture_sz(vgpu));
 diff --git a/drivers/gpu/drm/i915/i915_params.c b/drivers/gpu/drm/i915/i915_params.c
-index 295e981e4a39..8bdd4043b563 100644
+index 295e981e4..8bdd4043b 100644
 --- a/drivers/gpu/drm/i915/i915_params.c
 +++ b/drivers/gpu/drm/i915/i915_params.c
 @@ -174,6 +174,28 @@ i915_param_named(enable_dpcd_backlight, bool, 0600,
@@ -296,7 +296,7 @@ index 295e981e4a39..8bdd4043b563 100644
  					 const char *name,
  					 const char *type,
 diff --git a/drivers/gpu/drm/i915/i915_params.h b/drivers/gpu/drm/i915/i915_params.h
-index 6c4d4a21474b..74865c23f809 100644
+index 6c4d4a214..74865c23f 100644
 --- a/drivers/gpu/drm/i915/i915_params.h
 +++ b/drivers/gpu/drm/i915/i915_params.h
 @@ -68,6 +68,7 @@ struct drm_printer;
@@ -308,7 +308,7 @@ index 6c4d4a21474b..74865c23f809 100644
  
  #define MEMBER(T, member, ...) T member;
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index ac4d3dbd7b82..0a5c04d92d9a 100644
+index ac4d3dbd7..0a5c04d92 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -13951,6 +13951,11 @@ static void intel_crtc_init_scalers(struct intel_crtc *crtc,

@@ -22,7 +22,7 @@ Reviewed-by: He, Min <min.he@intel.com>
  3 files changed, 20 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_atomic_plane.c b/drivers/gpu/drm/i915/intel_atomic_plane.c
-index dcba645cabb8..b950fabb4bbf 100644
+index dcba645ca..b950fabb4 100644
 --- a/drivers/gpu/drm/i915/intel_atomic_plane.c
 +++ b/drivers/gpu/drm/i915/intel_atomic_plane.c
 @@ -182,7 +182,8 @@ int intel_plane_atomic_check_with_state(const struct intel_crtc_state *old_crtc_
@@ -36,7 +36,7 @@ index dcba645cabb8..b950fabb4bbf 100644
  	else
  		crtc_state->nv12_planes &= ~BIT(intel_plane->id);
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index d73183a23c7d..f3a65581b9fb 100644
+index d73183a23..f3a65581b 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -4976,6 +4976,10 @@ static int skl_update_scaler_plane(struct intel_crtc_state *crtc_state,
@@ -51,7 +51,7 @@ index d73183a23c7d..f3a65581b9fb 100644
  	case DRM_FORMAT_RGB565:
  	case DRM_FORMAT_XBGR8888:
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index b218b1a2c7f8..dcf4941aeb9a 100644
+index b218b1a2c..dcf4941ae 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -824,6 +824,11 @@ static bool intel_wm_plane_visible(const struct intel_crtc_state *crtc_state,

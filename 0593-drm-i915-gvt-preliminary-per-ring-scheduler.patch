@@ -19,7 +19,7 @@ Acknowledged-by: Singh, Satyeshwar <satyeshwar.singh@intel.com>
  5 files changed, 147 insertions(+), 92 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index d673c46e3179..718cf020e963 100644
+index d673c46e3..718cf020e 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -183,7 +183,7 @@ struct intel_vgpu {
@@ -32,7 +32,7 @@ index d673c46e3179..718cf020e963 100644
  
  	struct intel_vgpu_fence fence;
 diff --git a/drivers/gpu/drm/i915/gvt/sched_policy.c b/drivers/gpu/drm/i915/gvt/sched_policy.c
-index 4fac40d26549..f5127e07570b 100644
+index 4fac40d26..f5127e075 100644
 --- a/drivers/gpu/drm/i915/gvt/sched_policy.c
 +++ b/drivers/gpu/drm/i915/gvt/sched_policy.c
 @@ -34,15 +34,11 @@
@@ -465,7 +465,7 @@ index 4fac40d26549..f5127e07570b 100644
  
  	mutex_unlock(&vgpu->gvt->sched_lock);
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index c28bc9a2fffa..d099fc2e4ec2 100644
+index c28bc9a2f..d099fc2e4 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -745,17 +745,18 @@ static struct intel_vgpu_workload *pick_next_workload(
@@ -510,7 +510,7 @@ index c28bc9a2fffa..d099fc2e4ec2 100644
  
  	mutex_unlock(&gvt->sched_lock);
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.h b/drivers/gpu/drm/i915/gvt/scheduler.h
-index 043c2ff07a7c..3cec02d2ac1a 100644
+index 043c2ff07..3cec02d2a 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.h
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.h
 @@ -37,10 +37,10 @@
@@ -528,7 +528,7 @@ index 043c2ff07a7c..3cec02d2ac1a 100644
  	spinlock_t mmio_context_lock;
  	/* can be null when owner is host */
 diff --git a/drivers/gpu/drm/i915/gvt/vgpu.c b/drivers/gpu/drm/i915/gvt/vgpu.c
-index 9cf769f8ebb2..37e922d84dd3 100644
+index 9cf769f8e..37e922d84 100644
 --- a/drivers/gpu/drm/i915/gvt/vgpu.c
 +++ b/drivers/gpu/drm/i915/gvt/vgpu.c
 @@ -531,6 +531,8 @@ void intel_gvt_reset_vgpu_locked(struct intel_vgpu *vgpu, bool dmlr,

@@ -69,7 +69,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 3 insertions(+)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
-index b18f70349021..712718df56a7 100644
+index b18f70349..712718df5 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ioctl.c
 @@ -155,9 +155,12 @@ static int fastpath_export(hyper_dmabuf_id_t hid, int sz_priv, char *priv)

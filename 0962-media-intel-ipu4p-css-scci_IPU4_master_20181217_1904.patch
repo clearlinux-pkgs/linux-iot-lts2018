@@ -18,7 +18,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  4 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu4/ipu4p-css/ia_css_fw_pkg_release.h b/drivers/media/pci/intel/ipu4/ipu4p-css/ia_css_fw_pkg_release.h
-index 48b6c6d9b21d..c1c9c0dbfb6d 100644
+index 48b6c6d9b..c1c9c0dbf 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4p-css/ia_css_fw_pkg_release.h
 +++ b/drivers/media/pci/intel/ipu4/ipu4p-css/ia_css_fw_pkg_release.h
 @@ -11,4 +11,4 @@
@@ -28,7 +28,7 @@ index 48b6c6d9b21d..c1c9c0dbfb6d 100644
 -#define IA_CSS_FW_PKG_RELEASE  0x20181119
 +#define IA_CSS_FW_PKG_RELEASE  0x20181217
 diff --git a/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600/cpd_binary/ia_css_fw_pkg_release.h b/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600/cpd_binary/ia_css_fw_pkg_release.h
-index 48b6c6d9b21d..c1c9c0dbfb6d 100644
+index 48b6c6d9b..c1c9c0dbf 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600/cpd_binary/ia_css_fw_pkg_release.h
 +++ b/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600/cpd_binary/ia_css_fw_pkg_release.h
 @@ -11,4 +11,4 @@
@@ -38,7 +38,7 @@ index 48b6c6d9b21d..c1c9c0dbfb6d 100644
 -#define IA_CSS_FW_PKG_RELEASE  0x20181119
 +#define IA_CSS_FW_PKG_RELEASE  0x20181217
 diff --git a/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600psys/lib/CNL_program_group/ia_css_fw_pkg_release.h b/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600psys/lib/CNL_program_group/ia_css_fw_pkg_release.h
-index 48b6c6d9b21d..c1c9c0dbfb6d 100644
+index 48b6c6d9b..c1c9c0dbf 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600psys/lib/CNL_program_group/ia_css_fw_pkg_release.h
 +++ b/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600psys/lib/CNL_program_group/ia_css_fw_pkg_release.h
 @@ -11,4 +11,4 @@
@@ -48,7 +48,7 @@ index 48b6c6d9b21d..c1c9c0dbfb6d 100644
 -#define IA_CSS_FW_PKG_RELEASE  0x20181119
 +#define IA_CSS_FW_PKG_RELEASE  0x20181217
 diff --git a/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600psys/lib/ICL_program_group/ia_css_fw_pkg_release.h b/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600psys/lib/ICL_program_group/ia_css_fw_pkg_release.h
-index 48b6c6d9b21d..c1c9c0dbfb6d 100644
+index 48b6c6d9b..c1c9c0dbf 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600psys/lib/ICL_program_group/ia_css_fw_pkg_release.h
 +++ b/drivers/media/pci/intel/ipu4/ipu4p-css/lib2600psys/lib/ICL_program_group/ia_css_fw_pkg_release.h
 @@ -11,4 +11,4 @@

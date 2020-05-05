@@ -19,7 +19,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  3 files changed, 14 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/Makefile b/sound/soc/intel/skylake/Makefile
-index f36c0bb6e6c2..66d2fd14f2c5 100644
+index f36c0bb6e..66d2fd14f 100644
 --- a/sound/soc/intel/skylake/Makefile
 +++ b/sound/soc/intel/skylake/Makefile
 @@ -2,6 +2,8 @@
@@ -32,7 +32,7 @@ index f36c0bb6e6c2..66d2fd14f2c5 100644
    snd-soc-skl-objs += skl-debug.o
  endif
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 7969d6b7a85e..7e0d0657f478 100644
+index 7969d6b7a..7e0d0657f 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -959,7 +959,9 @@ static const struct snd_soc_dai_ops skl_dmic_dai_ops = {
@@ -46,7 +46,7 @@ index 7969d6b7a85e..7e0d0657f478 100644
  
  static const struct snd_soc_dai_ops skl_link_dai_ops = {
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 17efe6fce345..573d78bdd7f0 100644
+index 17efe6fce..573d78bdd 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -668,6 +668,16 @@ static int skl_tplg_update_be_blob(struct snd_soc_dapm_widget *w,

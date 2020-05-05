@@ -12,7 +12,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  1 file changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/security/security.c b/security/security.c
-index ae6ec99807ab..aeec03f49b02 100644
+index ae6ec9980..aeec03f49 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -1246,7 +1246,7 @@ int security_file_alloc(struct file *file)

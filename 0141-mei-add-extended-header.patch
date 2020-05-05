@@ -18,7 +18,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  5 files changed, 89 insertions(+), 45 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 1fc8ea0f519b..42f2e30211ab 100644
+index 1fc8ea0f5..42f2e3021 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -386,6 +386,7 @@ static struct mei_cl_cb *mei_io_cb_init(struct mei_cl *cl,
@@ -200,7 +200,7 @@ index 1fc8ea0f519b..42f2e30211ab 100644
  	else
  		mei_tx_cb_enqueue(cb, &dev->write_list);
 diff --git a/drivers/misc/mei/hbm.c b/drivers/misc/mei/hbm.c
-index 06d6da212c3d..d635f6519961 100644
+index 06d6da212..d635f6519 100644
 --- a/drivers/misc/mei/hbm.c
 +++ b/drivers/misc/mei/hbm.c
 @@ -136,19 +136,15 @@ void mei_hbm_reset(struct mei_device *dev)
@@ -229,7 +229,7 @@ index 06d6da212c3d..d635f6519961 100644
  
  /**
 diff --git a/drivers/misc/mei/hw.h b/drivers/misc/mei/hw.h
-index 46843bc224a0..b4e00028ad0a 100644
+index 46843bc22..b4e00028a 100644
 --- a/drivers/misc/mei/hw.h
 +++ b/drivers/misc/mei/hw.h
 @@ -211,6 +211,17 @@ enum  mei_cl_disconnect_status {
@@ -277,7 +277,7 @@ index 46843bc224a0..b4e00028ad0a 100644
  struct mei_bus_message {
  	u8 hbm_cmd;
 diff --git a/drivers/misc/mei/interrupt.c b/drivers/misc/mei/interrupt.c
-index 055c2d89b310..6531e036bb00 100644
+index 055c2d89b..6531e036b 100644
 --- a/drivers/misc/mei/interrupt.c
 +++ b/drivers/misc/mei/interrupt.c
 @@ -101,6 +101,7 @@ static int mei_cl_irq_read_msg(struct mei_cl *cl,
@@ -330,7 +330,7 @@ index 055c2d89b310..6531e036bb00 100644
  	}
  
 diff --git a/drivers/misc/mei/mei_dev.h b/drivers/misc/mei/mei_dev.h
-index 8cbab0f8e6a0..6888fe763376 100644
+index 8cbab0f8e..6888fe763 100644
 --- a/drivers/misc/mei/mei_dev.h
 +++ b/drivers/misc/mei/mei_dev.h
 @@ -184,6 +184,7 @@ struct mei_cl;

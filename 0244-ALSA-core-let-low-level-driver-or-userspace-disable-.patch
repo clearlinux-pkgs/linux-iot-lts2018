@@ -22,7 +22,7 @@ Signed-off-by: Subhransu S. Prusty <subhransu.s.prusty@intel.com>
  3 files changed, 8 insertions(+)
 
 diff --git a/include/sound/pcm.h b/include/sound/pcm.h
-index d6bd3caf6878..2eef65a9404e 100644
+index d6bd3caf6..2eef65a94 100644
 --- a/include/sound/pcm.h
 +++ b/include/sound/pcm.h
 @@ -379,6 +379,7 @@ struct snd_pcm_runtime {
@@ -34,7 +34,7 @@ index d6bd3caf6878..2eef65a9404e 100644
  	/* -- SW params -- */
  	int tstamp_mode;		/* mmap timestamp is updated */
 diff --git a/include/uapi/sound/asound.h b/include/uapi/sound/asound.h
-index ed0a120d4f08..ff57e4c89de4 100644
+index ed0a120d4..ff57e4c89 100644
 --- a/include/uapi/sound/asound.h
 +++ b/include/uapi/sound/asound.h
 @@ -377,6 +377,7 @@ typedef int snd_pcm_hw_param_t;
@@ -46,7 +46,7 @@ index ed0a120d4f08..ff57e4c89de4 100644
  struct snd_interval {
  	unsigned int min, max;
 diff --git a/sound/core/pcm_native.c b/sound/core/pcm_native.c
-index f03ceaff75b5..03c39384299a 100644
+index f03ceaff7..03c393842 100644
 --- a/sound/core/pcm_native.c
 +++ b/sound/core/pcm_native.c
 @@ -727,6 +727,8 @@ static int snd_pcm_hw_params(struct snd_pcm_substream *substream,

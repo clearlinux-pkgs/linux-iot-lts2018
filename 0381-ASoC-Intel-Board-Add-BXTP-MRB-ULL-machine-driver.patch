@@ -22,7 +22,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  create mode 100644 sound/soc/intel/boards/bxt_ivi_ull.c
 
 diff --git a/sound/soc/intel/boards/Kconfig b/sound/soc/intel/boards/Kconfig
-index e655978d3418..45b1d5a03ed0 100644
+index e655978d3..45b1d5a03 100644
 --- a/sound/soc/intel/boards/Kconfig
 +++ b/sound/soc/intel/boards/Kconfig
 @@ -360,6 +360,15 @@ config SND_SOC_INTEL_BXT_TDF8532_MACH
@@ -42,7 +42,7 @@ index e655978d3418..45b1d5a03ed0 100644
  
  endif ## SND_SOC_INTEL_MACH
 diff --git a/sound/soc/intel/boards/Makefile b/sound/soc/intel/boards/Makefile
-index 239051cc6f22..9a77052f0469 100644
+index 239051cc6..9a77052f0 100644
 --- a/sound/soc/intel/boards/Makefile
 +++ b/sound/soc/intel/boards/Makefile
 @@ -28,6 +28,7 @@ snd-soc-icl-rt274-objs := icl_rt274.o
@@ -60,7 +60,7 @@ index 239051cc6f22..9a77052f0469 100644
 +obj-$(CONFIG_SND_SOC_INTEL_BXT_ULL_MACH) += snd-soc-bxt_ivi_ull.o
 diff --git a/sound/soc/intel/boards/bxt_ivi_ull.c b/sound/soc/intel/boards/bxt_ivi_ull.c
 new file mode 100644
-index 000000000000..22ae8ab30a1d
+index 000000000..22ae8ab30
 --- /dev/null
 +++ b/sound/soc/intel/boards/bxt_ivi_ull.c
 @@ -0,0 +1,330 @@

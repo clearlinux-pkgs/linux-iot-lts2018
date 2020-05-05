@@ -21,7 +21,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  2 files changed, 11 insertions(+), 23 deletions(-)
 
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 2fa43a288ee5..0e9293d08e01 100644
+index 2fa43a288..0e9293d08 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -56,12 +56,6 @@
@@ -85,7 +85,7 @@ index 2fa43a288ee5..0e9293d08e01 100644
  	enum irq_type type;
  	unsigned short virt_bdf;	/* IN: Device virtual BDF# */
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 329c38b961e5..1d21bf21c91c 100644
+index 329c38b96..1d21bf21c 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -127,4 +127,9 @@ struct vm_set_memmap {

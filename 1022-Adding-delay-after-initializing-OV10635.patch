@@ -17,7 +17,7 @@ Signed-off-by: khaiwenn <khai.wen.ng@intel.com>
  1 file changed, 2 insertions(+)
 
 diff --git a/drivers/media/i2c/ici/ti964_ici.c b/drivers/media/i2c/ici/ti964_ici.c
-index ec9129556e8e..dafcf6945ab5 100644
+index ec9129556..dafcf6945 100644
 --- a/drivers/media/i2c/ici/ti964_ici.c
 +++ b/drivers/media/i2c/ici/ti964_ici.c
 @@ -426,6 +426,8 @@ static int ti964_registered(struct ici_ext_subdev_register *reg)

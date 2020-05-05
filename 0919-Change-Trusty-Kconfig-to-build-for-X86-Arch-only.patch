@@ -14,7 +14,7 @@ Signed-off-by: weideng <wei.a.deng@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/drivers/trusty/Kconfig b/drivers/trusty/Kconfig
-index 7b58db5e9a21..7d26922ed84c 100644
+index 7b58db5e9..7d26922ed 100644
 --- a/drivers/trusty/Kconfig
 +++ b/drivers/trusty/Kconfig
 @@ -6,6 +6,7 @@ menu "Trusty"

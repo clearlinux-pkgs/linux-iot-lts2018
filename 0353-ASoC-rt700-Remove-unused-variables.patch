@@ -15,7 +15,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 5 insertions(+), 14 deletions(-)
 
 diff --git a/sound/soc/codecs/rt700.c b/sound/soc/codecs/rt700.c
-index c88aa16a4280..03bab55537b6 100644
+index c88aa16a4..03bab5553 100644
 --- a/sound/soc/codecs/rt700.c
 +++ b/sound/soc/codecs/rt700.c
 @@ -557,8 +557,6 @@ static int rt700_index_read(struct regmap *regmap,

@@ -18,7 +18,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  3 files changed, 11 insertions(+), 7 deletions(-)
 
 diff --git a/drivers/media/i2c/ici/max9286_ici.c b/drivers/media/i2c/ici/max9286_ici.c
-index 8fc998ba8b18..3400cc11946f 100644
+index 8fc998ba8..3400cc119 100644
 --- a/drivers/media/i2c/ici/max9286_ici.c
 +++ b/drivers/media/i2c/ici/max9286_ici.c
 @@ -486,10 +486,13 @@ static int max9286_get_selection(struct ici_isys_node *node, struct ici_pad_sele
@@ -59,7 +59,7 @@ index 8fc998ba8b18..3400cc11946f 100644
  
  		client2 = i2c_new_device(client->adapter, &info->board_info);
 diff --git a/drivers/media/i2c/ici/ti964_ici.c b/drivers/media/i2c/ici/ti964_ici.c
-index 0892007d94ca..ec9129556e8e 100644
+index 0892007d9..ec9129556 100644
 --- a/drivers/media/i2c/ici/ti964_ici.c
 +++ b/drivers/media/i2c/ici/ti964_ici.c
 @@ -565,6 +565,7 @@ static int ti964_set_power(struct ici_isys_node *node, int on)
@@ -79,7 +79,7 @@ index 0892007d94ca..ec9129556e8e 100644
  static int ti964_rx_port_config(struct ti964 *va, int sink, int rx_port)
  {
 diff --git a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
-index df0c9619d9d1..19aef79135a1 100644
+index df0c9619d..19aef7913 100644
 --- a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 @@ -187,7 +187,7 @@ static struct crlmodule_lite_platform_data ov10635_pdata = {

@@ -16,7 +16,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 63 insertions(+), 30 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-subdev.c b/drivers/media/pci/intel/ipu-isys-subdev.c
-index 01d698528272..a710450143e8 100644
+index 01d698528..a71045014 100644
 --- a/drivers/media/pci/intel/ipu-isys-subdev.c
 +++ b/drivers/media/pci/intel/ipu-isys-subdev.c
 @@ -223,7 +223,7 @@ static int target_valid(struct v4l2_subdev *sd, unsigned int target,
@@ -219,7 +219,7 @@ index 01d698528272..a710450143e8 100644
  
  int ipu_isys_subdev_get_sel(struct v4l2_subdev *sd,
 diff --git a/drivers/media/pci/intel/ipu-isys-subdev.h b/drivers/media/pci/intel/ipu-isys-subdev.h
-index 0835a0f4ef6b..034b3562e859 100644
+index 0835a0f4e..034b3562e 100644
 --- a/drivers/media/pci/intel/ipu-isys-subdev.h
 +++ b/drivers/media/pci/intel/ipu-isys-subdev.h
 @@ -121,7 +121,7 @@ u32 ipu_isys_subdev_code_to_uncompressed(u32 sink_code);

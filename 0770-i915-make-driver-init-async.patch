@@ -20,7 +20,7 @@ Signed-off-by: Feng Tang <feng.tang@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/drivers/gpu/drm/i915/i915_pci.c b/drivers/gpu/drm/i915/i915_pci.c
-index 1df3ce134cd0..fcf5e3f41b01 100644
+index 1df3ce134..fcf5e3f41 100644
 --- a/drivers/gpu/drm/i915/i915_pci.c
 +++ b/drivers/gpu/drm/i915/i915_pci.c
 @@ -737,6 +737,7 @@ static struct pci_driver i915_pci_driver = {

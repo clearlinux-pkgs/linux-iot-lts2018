@@ -18,7 +18,7 @@ Signed-off-by: Min Lim <min.yeol.lim@intel.com>
  2 files changed, 23 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/platform/x86/sepdk/sep/lwpmudrv.c b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
-index ccc78629b028..be5310ef43b8 100755
+index ccc78629b..be5310ef4 100755
 --- a/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 +++ b/drivers/platform/x86/sepdk/sep/lwpmudrv.c
 @@ -2241,6 +2241,8 @@ static VOID lwpmudrv_ACRN_Buffer_Read(
@@ -54,7 +54,7 @@ index ccc78629b028..be5310ef43b8 100755
  
  	SEP_DRV_LOG_TRACE("Outside of all interrupts.");
 diff --git a/drivers/platform/x86/sepdk/sep/pmi.c b/drivers/platform/x86/sepdk/sep/pmi.c
-index 934473f57efa..516a7f002764 100755
+index 934473f57..516a7f002 100755
 --- a/drivers/platform/x86/sepdk/sep/pmi.c
 +++ b/drivers/platform/x86/sepdk/sep/pmi.c
 @@ -442,10 +442,21 @@ VOID PMI_Buffer_Handler(PVOID data)

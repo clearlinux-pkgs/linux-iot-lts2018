@@ -29,7 +29,7 @@ Reviewed-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  6 files changed, 150 insertions(+), 151 deletions(-)
 
 diff --git a/drivers/char/tpm/st33zp24/st33zp24.c b/drivers/char/tpm/st33zp24/st33zp24.c
-index 694fc58888c1..13dc614b7ebc 100644
+index 694fc5888..13dc614b7 100644
 --- a/drivers/char/tpm/st33zp24/st33zp24.c
 +++ b/drivers/char/tpm/st33zp24/st33zp24.c
 @@ -649,7 +649,7 @@ int st33zp24_pm_resume(struct device *dev)
@@ -42,7 +42,7 @@ index 694fc58888c1..13dc614b7ebc 100644
  	return ret;
  } /* st33zp24_pm_resume() */
 diff --git a/drivers/char/tpm/tpm-interface.c b/drivers/char/tpm/tpm-interface.c
-index 41e041922e39..e0a3c086e67f 100644
+index 41e041922..e0a3c086e 100644
 --- a/drivers/char/tpm/tpm-interface.c
 +++ b/drivers/char/tpm/tpm-interface.c
 @@ -476,59 +476,6 @@ int tpm_get_timeouts(struct tpm_chip *chip)
@@ -218,7 +218,7 @@ index 41e041922e39..e0a3c086e67f 100644
   * tpm_send - send a TPM command
   * @chip:	a &struct tpm_chip instance, %NULL for the default chip
 diff --git a/drivers/char/tpm/tpm-sysfs.c b/drivers/char/tpm/tpm-sysfs.c
-index 9cb771e96f28..6b2eda26c638 100644
+index 9cb771e96..6b2eda26c 100644
 --- a/drivers/char/tpm/tpm-sysfs.c
 +++ b/drivers/char/tpm/tpm-sysfs.c
 @@ -118,7 +118,7 @@ static ssize_t pcrs_show(struct device *dev, struct device_attribute *attr,
@@ -231,7 +231,7 @@ index 9cb771e96f28..6b2eda26c638 100644
  			break;
  		str += sprintf(str, "PCR-%02d: ", i);
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index 22f89f41ad52..f284a98a9455 100644
+index cdcd7228e..fd502b0e7 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
 @@ -543,12 +543,12 @@ ssize_t tpm_transmit_cmd(struct tpm_chip *chip, struct tpm_space *space,
@@ -258,7 +258,7 @@ index 22f89f41ad52..f284a98a9455 100644
  #ifdef CONFIG_ACPI
  extern void tpm_add_ppi(struct tpm_chip *chip);
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index e02f0c1c822f..a69a02366c32 100644
+index e02f0c1c8..a69a02366 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -524,3 +524,145 @@ int tpm1_get_random(struct tpm_chip *chip, u8 *out, size_t max)
@@ -408,10 +408,10 @@ index e02f0c1c822f..a69a02366c32 100644
 +	return rc;
 +}
 diff --git a/drivers/char/tpm/tpm_tis_core.c b/drivers/char/tpm/tpm_tis_core.c
-index 855b6d5d5a82..bb0c2e160562 100644
+index eaaa40e57..650409c02 100644
 --- a/drivers/char/tpm/tpm_tis_core.c
 +++ b/drivers/char/tpm/tpm_tis_core.c
-@@ -1056,7 +1056,7 @@ int tpm_tis_resume(struct device *dev)
+@@ -1062,7 +1062,7 @@ int tpm_tis_resume(struct device *dev)
  	 * an error code but for unknown reason it isn't handled.
  	 */
  	if (!(chip->flags & TPM_CHIP_FLAG_TPM2))

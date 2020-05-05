@@ -14,7 +14,7 @@ Signed-off-by: Qi, Yadong <yadong.qi@intel.com>
  1 file changed, 13 insertions(+), 11 deletions(-)
 
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index e253ee498ab5..4d33f269851d 100755
+index e253ee498..4d33f2698 100755
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -56,26 +56,28 @@ struct trusty_smc_interface {

@@ -21,7 +21,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 17 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-buttress.c b/drivers/media/pci/intel/ipu-buttress.c
-index d19e965543c4..33a644924b43 100644
+index d19e96554..33a644924 100644
 --- a/drivers/media/pci/intel/ipu-buttress.c
 +++ b/drivers/media/pci/intel/ipu-buttress.c
 @@ -368,11 +368,14 @@ EXPORT_SYMBOL_GPL(ipu_buttress_ipc_send_bulk);
@@ -64,7 +64,7 @@ index d19e965543c4..33a644924b43 100644
  		dev_err(&isp->pdev->dev, "CSE authenticate_run failed\n");
  		goto iunit_power_off;
 diff --git a/drivers/media/pci/intel/ipu4/ipu-platform-buttress-regs.h b/drivers/media/pci/intel/ipu4/ipu-platform-buttress-regs.h
-index ffd770c88198..34f2f7855089 100644
+index ffd770c88..34f2f7855 100644
 --- a/drivers/media/pci/intel/ipu4/ipu-platform-buttress-regs.h
 +++ b/drivers/media/pci/intel/ipu4/ipu-platform-buttress-regs.h
 @@ -212,10 +212,15 @@ enum {

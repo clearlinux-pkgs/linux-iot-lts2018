@@ -21,7 +21,7 @@ Tracked-On: PKT-1657
  3 files changed, 18 insertions(+)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c
-index 84cfb065bddd..7b6ce1f067a2 100644
+index 84cfb065b..7b6ce1f06 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.c
 @@ -290,3 +290,18 @@ void hyper_dmabuf_foreach_exported(
@@ -44,7 +44,7 @@ index 84cfb065bddd..7b6ce1f067a2 100644
 +	}
 +}
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.h b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.h
-index f7102f5db75d..81250e5c5eab 100644
+index f7102f5db..81250e5c5 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.h
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_list.h
 @@ -61,6 +61,7 @@ struct imported_sgt_info *hyper_dmabuf_find_imported(hyper_dmabuf_id_t hid);
@@ -56,7 +56,7 @@ index f7102f5db75d..81250e5c5eab 100644
  void hyper_dmabuf_foreach_exported(void (*func)(struct exported_sgt_info *,
  				   void *attr), void *attr);
 diff --git a/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_be_drv.c b/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_be_drv.c
-index 1be021876e47..c29793997bbc 100644
+index 1be021876..c29793997 100644
 --- a/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_be_drv.c
 +++ b/drivers/dma-buf/hyper_dmabuf/virtio/hyper_dmabuf_virtio_be_drv.c
 @@ -40,6 +40,7 @@

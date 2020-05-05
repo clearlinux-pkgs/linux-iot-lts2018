@@ -15,7 +15,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  2 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/media/i2c/ici/ti960_ici.c b/drivers/media/i2c/ici/ti960_ici.c
-index f5c82db649fe..02eb8d7739d6 100644
+index f5c82db64..02eb8d773 100644
 --- a/drivers/media/i2c/ici/ti960_ici.c
 +++ b/drivers/media/i2c/ici/ti960_ici.c
 @@ -1299,7 +1299,7 @@ static int ti960_suspend(struct device *dev)
@@ -28,7 +28,7 @@ index f5c82db649fe..02eb8d7739d6 100644
  	struct ici_ext_subdev *subdev = i2c_get_clientdata(client);
  
 diff --git a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
-index 6dd4848779d9..3101835ae94d 100644
+index 6dd484877..3101835ae 100644
 --- a/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-ici-bxt-p-pdata.c
 @@ -163,8 +163,8 @@ static struct ipu_isys_subdev_info magna_ti964_crl_sd = {

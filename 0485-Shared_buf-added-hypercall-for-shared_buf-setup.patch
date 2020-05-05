@@ -15,7 +15,7 @@ Signed-off-by: Li, Fei1 <fei1.li@intel.com>
  5 files changed, 29 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/acrn/sbuf.c b/drivers/acrn/sbuf.c
-index dcf203222c5b..8849ce28a06c 100644
+index dcf203222..8849ce28a 100644
 --- a/drivers/acrn/sbuf.c
 +++ b/drivers/acrn/sbuf.c
 @@ -57,6 +57,8 @@
@@ -54,7 +54,7 @@ index dcf203222c5b..8849ce28a06c 100644
  				uint64_t paddr)
  {
 diff --git a/drivers/acrn/sbuf.h b/drivers/acrn/sbuf.h
-index 7f3694920232..73608c35046c 100644
+index 7f3694920..73608c350 100644
 --- a/drivers/acrn/sbuf.h
 +++ b/drivers/acrn/sbuf.h
 @@ -114,6 +114,7 @@ static inline void sbuf_add_flags(shared_buf_t *sbuf, uint64_t flags)
@@ -66,7 +66,7 @@ index 7f3694920232..73608c35046c 100644
  
  #endif /* SHARED_BUF_H */
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 741b8bd837cc..d0da22f2a88b 100644
+index 741b8bd83..d0da22f2a 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -77,6 +77,11 @@ inline long hcall_destroy_vm(unsigned long vmid)
@@ -82,7 +82,7 @@ index 741b8bd837cc..d0da22f2a88b 100644
  {
  	return acrn_hypercall2(HC_VM_SET_MEMMAP, vmid, memmap);
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index bb57fb4f5cdd..688d69b6f5b0 100644
+index bb57fb4f5..688d69b6f 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -104,7 +104,7 @@
@@ -95,7 +95,7 @@ index bb57fb4f5cdd..688d69b6f5b0 100644
  #define ACRN_DOM0_VMID (0UL)
  #define ACRN_INVALID_VMID (-1)
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index f4a5793f3ef7..e56a16c5518f 100644
+index f4a5793f3..e56a16c55 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -143,6 +143,7 @@ inline long hcall_start_vm(unsigned long vmid);

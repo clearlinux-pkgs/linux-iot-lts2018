@@ -14,7 +14,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-video.c b/drivers/media/pci/intel/ipu-isys-video.c
-index 38fffcf777b5..57d96a2cde88 100644
+index 38fffcf77..57d96a2cd 100644
 --- a/drivers/media/pci/intel/ipu-isys-video.c
 +++ b/drivers/media/pci/intel/ipu-isys-video.c
 @@ -50,7 +50,7 @@ const struct ipu_isys_pixelformat ipu_isys_pfmts_be_soc[] = {

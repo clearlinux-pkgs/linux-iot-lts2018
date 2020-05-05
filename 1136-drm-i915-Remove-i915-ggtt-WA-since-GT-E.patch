@@ -14,7 +14,7 @@ Signed-off-by: Yang, Dong <dong.yang@intel.com>
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index c7fdcd2563c5..3f1a37f787d4 100644
+index c7fdcd256..3f1a37f78 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -2477,6 +2477,8 @@ intel_info(const struct drm_i915_private *dev_priv)

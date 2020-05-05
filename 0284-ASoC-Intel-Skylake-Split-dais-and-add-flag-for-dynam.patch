@@ -25,7 +25,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 59 insertions(+), 59 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index b54e28a2c98e..23f457b1889d 100644
+index b54e28a2c..23f457b18 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -971,46 +971,6 @@ static struct snd_soc_dai_ops skl_sdw_dai_ops = {

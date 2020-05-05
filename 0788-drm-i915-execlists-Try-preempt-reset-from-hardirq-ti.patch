@@ -27,7 +27,7 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  2 files changed, 144 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_lrc.c b/drivers/gpu/drm/i915/intel_lrc.c
-index 6f8b58ef7c26..7ac79e1a4e9c 100644
+index 6f8b58ef7..7ac79e1a4 100644
 --- a/drivers/gpu/drm/i915/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/intel_lrc.c
 @@ -616,6 +616,37 @@ static void inject_preempt_context(struct intel_engine_cs *engine)
@@ -79,7 +79,7 @@ index 6f8b58ef7c26..7ac79e1a4e9c 100644
  	return HRTIMER_NORESTART;
  }
 diff --git a/drivers/gpu/drm/i915/selftests/intel_lrc.c b/drivers/gpu/drm/i915/selftests/intel_lrc.c
-index dc8e217f8358..9d5672b2ea38 100644
+index dc8e217f8..9d5672b2e 100644
 --- a/drivers/gpu/drm/i915/selftests/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/selftests/intel_lrc.c
 @@ -629,6 +629,116 @@ static int live_preempt_timeout(void *arg)

@@ -13,7 +13,7 @@ Signed-off-by: Casey Schaufler <casey.schaufler@intel.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 2a95fcfc4b14..e98b45ab7a1e 100644
+index 2a95fcfc4..e98b45ab7 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -875,7 +875,7 @@ static inline int security_inode_listsecurity(struct inode *inode, char *buffer,

@@ -22,7 +22,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 12 insertions(+), 81 deletions(-)
 
 diff --git a/sound/soc/intel/boards/cnl_rt700.c b/sound/soc/intel/boards/cnl_rt700.c
-index d49c3f9de10e..740062a4108a 100644
+index d49c3f9de..740062a41 100644
 --- a/sound/soc/intel/boards/cnl_rt700.c
 +++ b/sound/soc/intel/boards/cnl_rt700.c
 @@ -80,45 +80,6 @@ static const struct snd_kcontrol_new cnl_rt700_controls[] = {

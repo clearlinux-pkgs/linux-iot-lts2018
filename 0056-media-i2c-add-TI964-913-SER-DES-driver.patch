@@ -21,7 +21,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  create mode 100644 include/media/ti964.h
 
 diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
-index 67ad20526e8b..b603c6e6338e 100644
+index 67ad20526..b603c6e63 100644
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
 @@ -1069,6 +1069,12 @@ config VIDEO_I2C
@@ -38,7 +38,7 @@ index 67ad20526e8b..b603c6e6338e 100644
  
  menu "Sensors used on soc_camera driver"
 diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
-index 80f37a422568..520a470ab0be 100644
+index 80f37a422..520a470ab 100644
 --- a/drivers/media/i2c/Makefile
 +++ b/drivers/media/i2c/Makefile
 @@ -112,3 +112,4 @@ obj-$(CONFIG_VIDEO_IMX274)	+= imx274.o
@@ -48,7 +48,7 @@ index 80f37a422568..520a470ab0be 100644
 +obj-$(CONFIG_VIDEO_TI964) += ti964.o
 diff --git a/drivers/media/i2c/ti964-reg.h b/drivers/media/i2c/ti964-reg.h
 new file mode 100644
-index 000000000000..e916c41b74a1
+index 000000000..e916c41b7
 --- /dev/null
 +++ b/drivers/media/i2c/ti964-reg.h
 @@ -0,0 +1,128 @@
@@ -182,7 +182,7 @@ index 000000000000..e916c41b74a1
 +#endif
 diff --git a/drivers/media/i2c/ti964.c b/drivers/media/i2c/ti964.c
 new file mode 100644
-index 000000000000..606eef257ca6
+index 000000000..606eef257
 --- /dev/null
 +++ b/drivers/media/i2c/ti964.c
 @@ -0,0 +1,1368 @@
@@ -1556,7 +1556,7 @@ index 000000000000..606eef257ca6
 +MODULE_DESCRIPTION("TI964 CSI2-Aggregator driver");
 diff --git a/include/media/ti964.h b/include/media/ti964.h
 new file mode 100644
-index 000000000000..ab5ee210efe4
+index 000000000..ab5ee210e
 --- /dev/null
 +++ b/include/media/ti964.h
 @@ -0,0 +1,59 @@

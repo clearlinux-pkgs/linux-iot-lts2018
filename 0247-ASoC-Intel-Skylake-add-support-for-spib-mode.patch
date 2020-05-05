@@ -23,7 +23,7 @@ Signed-off-by: Subhransu S. Prusty <subhransu.s.prusty@intel.com>
  1 file changed, 44 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index c82ab7071c15..97617b9ab5a0 100644
+index c82ab7071..97617b9ab 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -46,7 +46,8 @@ static const struct snd_pcm_hardware azx_pcm_hw = {

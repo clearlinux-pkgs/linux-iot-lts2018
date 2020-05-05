@@ -13,7 +13,7 @@ Signed-off-by: Zhang, Qi <qi1.zhang@intel.com>
  1 file changed, 40 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index 8f80f9b84772..7bff133a4610 100755
+index 8f80f9b84..7bff133a4 100755
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -27,7 +27,8 @@

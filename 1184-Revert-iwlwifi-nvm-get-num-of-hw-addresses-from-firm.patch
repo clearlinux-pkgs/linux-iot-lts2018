@@ -12,7 +12,7 @@ Tracked-On: PKT-3177
  2 files changed, 8 insertions(+), 16 deletions(-)
 
 diff --git a/drivers/net/wireless/intel/iwlwifi/fw/api/nvm-reg.h b/drivers/net/wireless/intel/iwlwifi/fw/api/nvm-reg.h
-index d22c1eefba6a..6c5338364794 100644
+index d22c1eefb..6c5338364 100644
 --- a/drivers/net/wireless/intel/iwlwifi/fw/api/nvm-reg.h
 +++ b/drivers/net/wireless/intel/iwlwifi/fw/api/nvm-reg.h
 @@ -165,7 +165,7 @@ struct iwl_nvm_access_resp {
@@ -70,7 +70,7 @@ index d22c1eefba6a..6c5338364794 100644
  /**
   * struct iwl_nvm_access_complete_cmd - NVM_ACCESS commands are completed
 diff --git a/drivers/net/wireless/intel/iwlwifi/iwl-nvm-parse.c b/drivers/net/wireless/intel/iwlwifi/iwl-nvm-parse.c
-index a6e64787a345..a80fd0743748 100644
+index a6e64787a..a80fd0743 100644
 --- a/drivers/net/wireless/intel/iwlwifi/iwl-nvm-parse.c
 +++ b/drivers/net/wireless/intel/iwlwifi/iwl-nvm-parse.c
 @@ -1359,7 +1359,6 @@ struct iwl_nvm_data *iwl_get_nvm(struct iwl_trans *trans,

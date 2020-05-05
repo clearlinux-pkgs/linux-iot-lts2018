@@ -24,7 +24,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  10 files changed, 141 insertions(+), 117 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index ddd18e6b2eec..94965059c3f8 100644
+index ddd18e6b2..94965059c 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -2033,6 +2033,7 @@ struct lsm_blob_sizes {
@@ -36,7 +36,7 @@ index ddd18e6b2eec..94965059c3f8 100644
  	int	lbs_task;
  };
 diff --git a/security/apparmor/include/net.h b/security/apparmor/include/net.h
-index ec7228e857a9..79f66b9e117d 100644
+index ec7228e85..79f66b9e1 100644
 --- a/security/apparmor/include/net.h
 +++ b/security/apparmor/include/net.h
 @@ -55,7 +55,11 @@ struct aa_sk_ctx {
@@ -53,7 +53,7 @@ index ec7228e857a9..79f66b9e117d 100644
  #define DEFINE_AUDIT_NET(NAME, OP, SK, F, T, P)				  \
  	struct lsm_network_audit NAME ## _net = { .sk = (SK),		  \
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index 0569735e3475..748c260b628a 100644
+index 0569735e3..748c260b6 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -754,33 +754,15 @@ static int apparmor_task_kill(struct task_struct *target, struct siginfo *info,
@@ -146,7 +146,7 @@ index 0569735e3475..748c260b628a 100644
  	LSM_HOOK_INIT(sk_clone_security, apparmor_sk_clone_security),
  
 diff --git a/security/security.c b/security/security.c
-index f6238c8489be..55dfdc0c428f 100644
+index f6238c848..55dfdc0c4 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -29,6 +29,7 @@
@@ -226,7 +226,7 @@ index f6238c8489be..55dfdc0c428f 100644
  
  void security_sk_clone(const struct sock *sk, struct sock *newsk)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 3f9c0299be58..2674485457ef 100644
+index 3f9c0299b..267448545 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -4467,7 +4467,7 @@ static int socket_sockcreate_sid(const struct task_security_struct *tsec,
@@ -504,7 +504,7 @@ index 3f9c0299be58..2674485457ef 100644
  };
  
 diff --git a/security/selinux/include/objsec.h b/security/selinux/include/objsec.h
-index d64c4f6adb35..92010a72d153 100644
+index d64c4f6ad..92010a72d 100644
 --- a/security/selinux/include/objsec.h
 +++ b/security/selinux/include/objsec.h
 @@ -181,4 +181,9 @@ static inline struct superblock_security_struct *selinux_superblock(
@@ -518,7 +518,7 @@ index d64c4f6adb35..92010a72d153 100644
 +
  #endif /* _SELINUX_OBJSEC_H_ */
 diff --git a/security/selinux/netlabel.c b/security/selinux/netlabel.c
-index 6fd9954e1c08..d684257abe5d 100644
+index 6fd9954e1..d684257ab 100644
 --- a/security/selinux/netlabel.c
 +++ b/security/selinux/netlabel.c
 @@ -31,6 +31,7 @@
@@ -622,7 +622,7 @@ index 6fd9954e1c08..d684257abe5d 100644
  	if (sksec->nlbl_state != NLBL_REQSKB &&
  	    sksec->nlbl_state != NLBL_CONNLABELED)
 diff --git a/security/smack/smack.h b/security/smack/smack.h
-index d73e9def586c..f457dd3b4aa0 100644
+index d73e9def5..f457dd3b4 100644
 --- a/security/smack/smack.h
 +++ b/security/smack/smack.h
 @@ -372,6 +372,11 @@ static inline struct inode_smack *smack_inode(const struct inode *inode)
@@ -638,7 +638,7 @@ index d73e9def586c..f457dd3b4aa0 100644
  					const struct super_block *superblock)
  {
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 70ff833200cc..3d528bcc00e7 100644
+index 70ff83320..3d528bcc0 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -1431,7 +1431,7 @@ static int smack_inode_getsecurity(struct inode *inode,
@@ -893,7 +893,7 @@ index 70ff833200cc..3d528bcc00e7 100644
  	LSM_HOOK_INIT(inet_conn_request, smack_inet_conn_request),
  	LSM_HOOK_INIT(inet_csk_clone, smack_inet_csk_clone),
 diff --git a/security/smack/smack_netfilter.c b/security/smack/smack_netfilter.c
-index e36d17835d4f..701a1cc1bdcc 100644
+index e36d17835..701a1cc1b 100644
 --- a/security/smack/smack_netfilter.c
 +++ b/security/smack/smack_netfilter.c
 @@ -31,8 +31,8 @@ static unsigned int smack_ipv6_output(void *priv,

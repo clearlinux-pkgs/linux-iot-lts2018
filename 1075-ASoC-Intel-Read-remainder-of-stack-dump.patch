@@ -14,7 +14,7 @@ Signed-off-by: Lulko, KamilX <kamilx.lulko@intel.com>
  1 file changed, 12 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 856a6e86be52..4e210992d48b 100644
+index 856a6e86b..4e210992d 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -409,10 +409,20 @@ int skl_dsp_crash_dump_read(struct skl_sst *ctx, int idx, int stack_size)

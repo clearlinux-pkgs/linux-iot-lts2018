@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/drivers/media/i2c/crlmodule/crl_ox03a10_common.h b/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
-index dc7ab02c85bc..1765cb20fa70 100644
+index dc7ab02c8..1765cb20f 100644
 --- a/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
 +++ b/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
 @@ -529,6 +529,7 @@ static struct crl_register_write_rep ox03a10_1920_1088_12DCG[] = {

@@ -25,7 +25,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  5 files changed, 55 insertions(+), 114 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/Makefile b/drivers/gpu/drm/i915/Makefile
-index a5198df1b1ca..517620bcbadd 100644
+index a5198df1b..517620bcb 100644
 --- a/drivers/gpu/drm/i915/Makefile
 +++ b/drivers/gpu/drm/i915/Makefile
 @@ -79,7 +79,6 @@ i915-y += i915_cmd_parser.o \
@@ -46,7 +46,7 @@ index a5198df1b1ca..517620bcbadd 100644
  endif
  
 diff --git a/drivers/gpu/drm/i915/gvt/fb_decoder.c b/drivers/gpu/drm/i915/gvt/fb_decoder.c
-index f8ce268286bb..0d616c500db4 100644
+index f8ce26828..0d616c500 100644
 --- a/drivers/gpu/drm/i915/gvt/fb_decoder.c
 +++ b/drivers/gpu/drm/i915/gvt/fb_decoder.c
 @@ -513,70 +513,3 @@ int intel_vgpu_decode_sprite_plane(struct intel_vgpu *vgpu,
@@ -121,7 +121,7 @@ index f8ce268286bb..0d616c500db4 100644
 -	return ret;
 -}
 diff --git a/drivers/gpu/drm/i915/gvt/fb_decoder.h b/drivers/gpu/drm/i915/gvt/fb_decoder.h
-index 51626759534b..6c51fe00d421 100644
+index 516267595..6c51fe00d 100644
 --- a/drivers/gpu/drm/i915/gvt/fb_decoder.h
 +++ b/drivers/gpu/drm/i915/gvt/fb_decoder.h
 @@ -169,9 +169,4 @@ int intel_vgpu_decode_cursor_plane(struct intel_vgpu *vgpu,
@@ -135,7 +135,7 @@ index 51626759534b..6c51fe00d421 100644
 -
  #endif
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 969b45cb88ba..13f693f8432d 100644
+index 969b45cb8..13f693f84 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -3274,8 +3274,16 @@ int i915_perf_remove_config_ioctl(struct drm_device *dev, void *data,
@@ -156,7 +156,7 @@ index 969b45cb88ba..13f693f8432d 100644
  /* i915_gem_evict.c */
  int __must_check i915_gem_evict_something(struct i915_address_space *vm,
 diff --git a/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c b/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
-index 6e58fa1fb1d2..fb1ced042a4e 100644
+index 6e58fa1fb..fb1ced042 100644
 --- a/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
 +++ b/drivers/gpu/drm/i915/i915_gem_gvtbuffer.c
 @@ -148,53 +148,59 @@ static int gvt_decode_information(struct drm_device *dev,

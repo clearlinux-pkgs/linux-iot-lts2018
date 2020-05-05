@@ -17,7 +17,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  1 file changed, 8 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-psys.c b/drivers/media/pci/intel/ipu-psys.c
-index f342951ee550..345285caaa99 100644
+index f342951ee..345285caa 100644
 --- a/drivers/media/pci/intel/ipu-psys.c
 +++ b/drivers/media/pci/intel/ipu-psys.c
 @@ -516,6 +516,9 @@ static int ipu_psys_release(struct inode *inode, struct file *file)

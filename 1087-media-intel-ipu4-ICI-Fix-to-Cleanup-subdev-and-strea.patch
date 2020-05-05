@@ -16,7 +16,7 @@ Signed-off-by: spoluri <sarat.chandra.poluri@intel.com>
  2 files changed, 18 insertions(+), 15 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-csi2.c b/drivers/media/pci/intel/ici/ici-isys-csi2.c
-index e03417b349df..22cbc4ce10fd 100644
+index e03417b34..22cbc4ce1 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-csi2.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-csi2.c
 @@ -523,8 +523,12 @@ EXPORT_SYMBOL(ici_isys_csi2_init);
@@ -35,7 +35,7 @@ index e03417b349df..22cbc4ce10fd 100644
  EXPORT_SYMBOL(ici_isys_csi2_cleanup);
  
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index cc9870cb8082..1241dfaee553 100644
+index cc9870cb8..1241dfaee 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -905,21 +905,21 @@ static int ici_isys_stream_on(struct file *file, void *fh)

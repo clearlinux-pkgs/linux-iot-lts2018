@@ -14,7 +14,7 @@ Signed-off-by: Diwakar, Praveen <praveen.diwakar@intel.com>
  3 files changed, 166 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index 402fb875272c..baec42299419 100644
+index 402fb8752..baec42299 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -163,6 +163,19 @@ enum skl_fw_info_type {
@@ -46,7 +46,7 @@ index 402fb875272c..baec42299419 100644
  int bxt_set_dsp_D0i0(struct sst_dsp *ctx);
  
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index f3b8d7bc68ec..43d3eedad780 100644
+index f3b8d7bc6..43d3eedad 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -188,6 +188,44 @@ struct skl_fw_property_info {
@@ -105,7 +105,7 @@ index f3b8d7bc68ec..43d3eedad780 100644
  	struct skl_sysfs_tree *sysfs_tree;
  };
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 0eaa88e6ae61..7288893ce61a 100644
+index 0eaa88e6a..7288893ce 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -359,6 +359,117 @@ int snd_skl_parse_uuids(struct sst_dsp *ctx, const struct firmware *fw,

@@ -26,7 +26,7 @@ Acked-by: Eddie Dong <eddie.dong@intel.com>
  3 files changed, 16 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 1286f7750906..152aba23d95f 100644
+index 1286f7750..152aba23d 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -230,8 +230,17 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -59,7 +59,7 @@ index 1286f7750906..152aba23d95f 100644
  	}
  
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 5716bc5968d5..960723b1778d 100644
+index 5716bc596..960723b17 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -881,7 +881,7 @@ int acrn_ioreq_init(struct vhm_vm *vm, unsigned long vma)
@@ -72,7 +72,7 @@ index 5716bc5968d5..960723b1778d 100644
  	ret = get_user_pages_fast(vma, 1, 1, &page);
  	if (unlikely(ret != 1) || (page == NULL)) {
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 6269b07dcea4..dfe89309fb17 100644
+index 6269b07dc..dfe89309f 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -253,8 +253,11 @@ struct acrn_create_vm {

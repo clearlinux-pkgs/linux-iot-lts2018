@@ -22,7 +22,7 @@ Acked-by: Anthony Xu <anthony.xu@intel.com>
  4 files changed, 79 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index dbed2dfbde65..6970def28b0c 100644
+index dbed2dfbd..6970def28 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -395,6 +395,24 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -51,7 +51,7 @@ index dbed2dfbde65..6970def28b0c 100644
  		ret = hcall_set_irqline(vm->vmid, ioctl_param);
  		if (ret < 0) {
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index ff19cc3b76ba..1759fd43b2fd 100644
+index ff19cc3b7..1759fd43b 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -135,6 +135,14 @@ static inline bool is_range_type(uint32_t type)
@@ -135,7 +135,7 @@ index ff19cc3b76ba..1759fd43b2fd 100644
  {
  	struct ioreq_client *client;
 diff --git a/include/linux/vhm/acrn_vhm_ioreq.h b/include/linux/vhm/acrn_vhm_ioreq.h
-index 52b3ac83203c..5b32f153c050 100644
+index 52b3ac832..5b32f153c 100644
 --- a/include/linux/vhm/acrn_vhm_ioreq.h
 +++ b/include/linux/vhm/acrn_vhm_ioreq.h
 @@ -160,6 +160,15 @@ int acrn_ioreq_distribute_request(struct vhm_vm *vm);
@@ -155,7 +155,7 @@ index 52b3ac83203c..5b32f153c050 100644
   * acrn_ioreq_intercept_bdf - set intercept bdf info of ioreq client
   *
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 19ebf54e57f3..a98b003762b5 100644
+index 19ebf54e5..a98b00376 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -88,6 +88,7 @@

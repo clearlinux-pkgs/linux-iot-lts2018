@@ -17,7 +17,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  1 file changed, 62 insertions(+), 25 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 8b27ebb8c812..0ae0bba2b376 100644
+index 8b27ebb8c..0ae0bba2b 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -942,17 +942,40 @@ static int vfe_skl_init(struct virtio_device *vdev)

@@ -14,7 +14,7 @@ Signed-off-by: Mateusz Polrola <mateuszx.potrola@intel.com>
  2 files changed, 12 insertions(+)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
-index 10b5510b3816..3bd13c584ffc 100644
+index 10b5510b3..3bd13c584 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
 @@ -30,6 +30,7 @@
@@ -63,7 +63,7 @@ index 10b5510b3816..3bd13c584ffc 100644
  	.unmap = hyper_dmabuf_ops_kunmap,
  	.mmap = hyper_dmabuf_ops_mmap,
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c
-index a82fd7b087b8..3cd3d6c98c33 100644
+index a82fd7b08..3cd3d6c98 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_remote_sync.c
 @@ -30,6 +30,7 @@

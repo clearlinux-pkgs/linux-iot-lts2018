@@ -21,7 +21,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
 
 diff --git a/drivers/media/i2c/crlmodule/crl_ox03a10_common.h b/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
 new file mode 100644
-index 000000000000..7ef243bcdcb0
+index 000000000..7ef243bcd
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
 @@ -0,0 +1,1696 @@
@@ -1722,7 +1722,7 @@ index 000000000000..7ef243bcdcb0
 +
 +#endif /* __CRLMODULE_OX03A10_COMMON_H_ */
 diff --git a/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h b/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h
-index 2a28c075cda2..cb2c89cbfb9b 100644
+index 2a28c075c..cb2c89cbf 100644
 --- a/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h
 +++ b/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h
 @@ -9,21 +9,7 @@
@@ -3395,7 +3395,7 @@ index 2a28c075cda2..cb2c89cbfb9b 100644
  	.pll_configs = ox03a10_pll_configurations,
 diff --git a/drivers/media/i2c/crlmodule/crl_ox03a10_ficosa_configuration.h b/drivers/media/i2c/crlmodule/crl_ox03a10_ficosa_configuration.h
 new file mode 100644
-index 000000000000..eaf262852608
+index 000000000..eaf262852
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule/crl_ox03a10_ficosa_configuration.h
 @@ -0,0 +1,57 @@
@@ -3457,7 +3457,7 @@ index 000000000000..eaf262852608
 +
 +#endif /* __CRLMODULE_OX03A10_FICOSA_CONFIGURATION_H_ */
 diff --git a/drivers/media/i2c/crlmodule/crlmodule-data.c b/drivers/media/i2c/crlmodule/crlmodule-data.c
-index 2c07ca06a83a..d6a370a16746 100644
+index 2c07ca06a..d6a370a16 100644
 --- a/drivers/media/i2c/crlmodule/crlmodule-data.c
 +++ b/drivers/media/i2c/crlmodule/crlmodule-data.c
 @@ -32,6 +32,7 @@

@@ -22,7 +22,7 @@ Signed-off-by: Lulko, KamilX <kamilx.lulko@intel.com>
  1 file changed, 40 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 4e210992d48b..4df9a08b8fb2 100644
+index 4e210992d..4df9a08b8 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -316,6 +316,39 @@ void skl_reset_instance_id(struct skl_sst *ctx)

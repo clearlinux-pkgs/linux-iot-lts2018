@@ -16,7 +16,7 @@ Signed-off-by: Liu Shuo <shuo.liu@intel.com>
  3 files changed, 16 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index cf689150dbf7..b0073edbe4a4 100644
+index cf689150d..b0073edbe 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -240,6 +240,7 @@ struct intel_vgpu {
@@ -28,7 +28,7 @@ index cf689150dbf7..b0073edbe4a4 100644
  
  /* validating GM healthy status*/
 diff --git a/drivers/gpu/drm/i915/gvt/mpt.h b/drivers/gpu/drm/i915/gvt/mpt.h
-index 14fa2ea047fa..6030e41cc6bb 100644
+index 14fa2ea04..6030e41cc 100644
 --- a/drivers/gpu/drm/i915/gvt/mpt.h
 +++ b/drivers/gpu/drm/i915/gvt/mpt.h
 @@ -129,7 +129,21 @@ static inline int intel_gvt_hypervisor_inject_msi(struct intel_vgpu *vgpu)
@@ -54,7 +54,7 @@ index 14fa2ea047fa..6030e41cc6bb 100644
  	addr = *(u32 *)(vgpu_cfg_space(vgpu) + MSI_CAP_ADDRESS(offset));
  	data = *(u16 *)(vgpu_cfg_space(vgpu) + MSI_CAP_DATA(offset));
 diff --git a/drivers/gpu/drm/i915/gvt/vgpu.c b/drivers/gpu/drm/i915/gvt/vgpu.c
-index 08e99dd14344..b28bc3af3eaf 100644
+index 08e99dd14..b28bc3af3 100644
 --- a/drivers/gpu/drm/i915/gvt/vgpu.c
 +++ b/drivers/gpu/drm/i915/gvt/vgpu.c
 @@ -511,6 +511,7 @@ struct intel_vgpu *intel_gvt_create_vgpu(struct intel_gvt *gvt,

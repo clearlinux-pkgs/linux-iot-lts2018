@@ -21,7 +21,7 @@ Acked-by: Anthony Xu <anthony.xu@intel.com>
  5 files changed, 96 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index f730467ca8d9..a2217949ec74 100644
+index f730467ca..a2217949e 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -395,47 +395,6 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -73,7 +73,7 @@ index f730467ca8d9..a2217949ec74 100644
  		ret = hcall_set_irqline(vm->vmid, ioctl_param);
  		if (ret < 0) {
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 6c67d04dd77e..55289bd70e16 100644
+index 6c67d04dd..55289bd70 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -127,21 +127,6 @@ inline long hcall_notify_req_finish(unsigned long vmid, unsigned long vcpu)
@@ -99,7 +99,7 @@ index 6c67d04dd77e..55289bd70e16 100644
  {
  	return acrn_hypercall2(HC_SET_IRQLINE, vmid, op);
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 179957d273e9..d28ce51ff271 100644
+index 179957d27..d28ce51ff 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -354,40 +354,6 @@ struct acrn_set_ioreq_buffer {
@@ -144,7 +144,7 @@ index 179957d273e9..d28ce51ff271 100644
   * @brief Info to inject a MSI interrupt to VM
   *
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index d9160221f657..af00025953c2 100644
+index d9160221f..af0002595 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -87,9 +87,6 @@
@@ -158,7 +158,7 @@ index d9160221f657..af00025953c2 100644
  #define HC_VM_INTR_MONITOR          _HC_ID(HC_ID, HC_ID_IRQ_BASE + 0x04)
  #define HC_SET_IRQLINE              _HC_ID(HC_ID, HC_ID_IRQ_BASE + 0x05)
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 73be2dde243d..19ebf54e57f3 100644
+index 73be2dde2..19ebf54e5 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -77,9 +77,6 @@

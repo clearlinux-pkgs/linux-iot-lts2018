@@ -18,7 +18,7 @@ Signed-off-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
  1 file changed, 18 insertions(+)
 
 diff --git a/drivers/usb/host/xhci-ext-caps.c b/drivers/usb/host/xhci-ext-caps.c
-index 399113f9fc5c..b4129dd6a64a 100644
+index 399113f9f..b4129dd6a 100644
 --- a/drivers/usb/host/xhci-ext-caps.c
 +++ b/drivers/usb/host/xhci-ext-caps.c
 @@ -6,11 +6,20 @@

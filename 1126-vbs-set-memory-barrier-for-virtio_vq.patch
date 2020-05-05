@@ -17,7 +17,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 4 insertions(+)
 
 diff --git a/drivers/vbs/vq.c b/drivers/vbs/vq.c
-index 3a714441f11a..180d1b223d28 100644
+index 3a714441f..180d1b223 100644
 --- a/drivers/vbs/vq.c
 +++ b/drivers/vbs/vq.c
 @@ -145,6 +145,7 @@ int virtio_vq_getchain(struct virtio_vq_info *vq, uint16_t *pidx,

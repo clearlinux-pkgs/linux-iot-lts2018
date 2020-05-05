@@ -22,7 +22,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  4 files changed, 23 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-csi2.c b/drivers/media/pci/intel/ipu-isys-csi2.c
-index 3ebe555ecedb..1e0400c90e40 100644
+index 3ebe555ec..1e0400c90 100644
 --- a/drivers/media/pci/intel/ipu-isys-csi2.c
 +++ b/drivers/media/pci/intel/ipu-isys-csi2.c
 @@ -913,8 +913,7 @@ void ipu_isys_csi2_wait_last_eof(struct ipu_isys_csi2 *csi2)
@@ -36,7 +36,7 @@ index 3ebe555ecedb..1e0400c90e40 100644
  			dev_err(&csi2->isys->adev->dev,
  				"csi2-%d: timeout at sync to eof of vc %d\n",
 diff --git a/drivers/media/pci/intel/ipu-isys-csi2.h b/drivers/media/pci/intel/ipu-isys-csi2.h
-index 6c39745d3a89..c1e6f34eff14 100644
+index 6c39745d3..c1e6f34ef 100644
 --- a/drivers/media/pci/intel/ipu-isys-csi2.h
 +++ b/drivers/media/pci/intel/ipu-isys-csi2.h
 @@ -186,5 +186,6 @@ int ipu_isys_csi2_set_skew_cal(struct ipu_isys_csi2 *csi2, int enable);
@@ -47,7 +47,7 @@ index 6c39745d3a89..c1e6f34eff14 100644
  
  #endif /* IPU_ISYS_CSI2_H */
 diff --git a/drivers/media/pci/intel/ipu-isys-video.c b/drivers/media/pci/intel/ipu-isys-video.c
-index 1c70e5c54ca7..409301960596 100644
+index 1c70e5c54..409301960 100644
 --- a/drivers/media/pci/intel/ipu-isys-video.c
 +++ b/drivers/media/pci/intel/ipu-isys-video.c
 @@ -169,6 +169,8 @@ const struct ipu_isys_pixelformat ipu_isys_pfmts_packed[] = {
@@ -119,7 +119,7 @@ index 1c70e5c54ca7..409301960596 100644
  
  void
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c b/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
-index cee0afce2411..ad06e5de374a 100644
+index cee0afce2..ad06e5de3 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
 +++ b/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
 @@ -50,6 +50,15 @@ static void trigger_error(struct ipu_isys_csi2 *csi2)

@@ -18,7 +18,7 @@ Signed-off-by: Yang, Zhonghua <zhonghuax.yang@intel.com>
  2 files changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-core.c b/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
-index 612065625853..d6fbcb486f02 100644
+index 612065625..d6fbcb486 100644
 --- a/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
 @@ -2206,7 +2206,7 @@ static int crlmodule_set_power(
@@ -31,7 +31,7 @@ index 612065625853..d6fbcb486f02 100644
  			pm_runtime_put(&client->dev);
  			return ret;
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index d2acd90dabeb..9ece9615ff26 100644
+index d2acd90da..9ece9615f 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -1220,7 +1220,6 @@ static int stream_fop_release(struct inode *inode, struct file *file)

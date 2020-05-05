@@ -20,7 +20,7 @@ Signed-off-by: Yael Samet <yael.samet@intel.com>
  create mode 100644 drivers/misc/mei/dal/dal_cdev.h
 
 diff --git a/drivers/misc/mei/dal/Makefile b/drivers/misc/mei/dal/Makefile
-index e073531bc88d..705f53e12a61 100644
+index e073531bc..705f53e12 100644
 --- a/drivers/misc/mei/dal/Makefile
 +++ b/drivers/misc/mei/dal/Makefile
 @@ -7,3 +7,4 @@ mei_dal-objs := dal_class.o
@@ -30,7 +30,7 @@ index e073531bc88d..705f53e12a61 100644
 +mei_dal-objs += dal_cdev.o
 diff --git a/drivers/misc/mei/dal/dal_cdev.c b/drivers/misc/mei/dal/dal_cdev.c
 new file mode 100644
-index 000000000000..48f209af4909
+index 000000000..48f209af4
 --- /dev/null
 +++ b/drivers/misc/mei/dal/dal_cdev.c
 @@ -0,0 +1,243 @@
@@ -279,7 +279,7 @@ index 000000000000..48f209af4909
 +}
 diff --git a/drivers/misc/mei/dal/dal_cdev.h b/drivers/misc/mei/dal/dal_cdev.h
 new file mode 100644
-index 000000000000..2547701cdfca
+index 000000000..2547701cd
 --- /dev/null
 +++ b/drivers/misc/mei/dal/dal_cdev.h
 @@ -0,0 +1,13 @@
@@ -297,7 +297,7 @@ index 000000000000..2547701cdfca
 +void dal_dev_exit(void);
 +#endif /* __MEI_DAL_DEV_H__ */
 diff --git a/drivers/misc/mei/dal/dal_class.c b/drivers/misc/mei/dal/dal_class.c
-index 607c63c3dca9..ccdf973a7895 100644
+index 607c63c3d..ccdf973a7 100644
 --- a/drivers/misc/mei/dal/dal_class.c
 +++ b/drivers/misc/mei/dal/dal_class.c
 @@ -22,6 +22,7 @@

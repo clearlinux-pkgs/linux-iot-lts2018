@@ -15,7 +15,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_lrc.c b/drivers/gpu/drm/i915/intel_lrc.c
-index ba63a6384e93..bc2fdc7d2f91 100644
+index ba63a6384..bc2fdc7d2 100644
 --- a/drivers/gpu/drm/i915/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/intel_lrc.c
 @@ -1231,6 +1231,7 @@ static void __update_queue(struct intel_engine_cs *engine,

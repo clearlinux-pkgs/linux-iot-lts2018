@@ -10,7 +10,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 18be70b87728..a124dabc353a 100644
+index 18be70b87..a124dabc3 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -288,6 +288,7 @@ static int cnl_set_dsp_D0(struct sst_dsp *ctx, unsigned int core_id)

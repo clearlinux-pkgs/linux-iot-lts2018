@@ -15,7 +15,7 @@ Signed-off-by: Gopal, Puunithaaraj <puunithaaraj.gopal@intel.com>
  2 files changed, 18 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys.c b/drivers/media/pci/intel/ici/ici-isys.c
-index ecae4d560317..848fac9d1b06 100644
+index ecae4d560..848fac9d1 100644
 --- a/drivers/media/pci/intel/ici/ici-isys.c
 +++ b/drivers/media/pci/intel/ici/ici-isys.c
 @@ -458,7 +458,7 @@ static void isys_unregister_subdevices(struct ici_isys *isys)
@@ -55,7 +55,7 @@ index ecae4d560317..848fac9d1b06 100644
  				&isys->ici_tpg[i].asd.node, TPG_PAD_SOURCE,
  				&isys->ici_csi2_be[j].asd.node,
 diff --git a/drivers/media/pci/intel/ici/ici-isys.h b/drivers/media/pci/intel/ici/ici-isys.h
-index ffd21a9810ea..db46d7e6935a 100644
+index ffd21a981..db46d7e69 100644
 --- a/drivers/media/pci/intel/ici/ici-isys.h
 +++ b/drivers/media/pci/intel/ici/ici-isys.h
 @@ -57,10 +57,10 @@

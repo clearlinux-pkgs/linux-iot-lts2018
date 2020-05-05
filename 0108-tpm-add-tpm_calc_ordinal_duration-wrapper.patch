@@ -32,7 +32,7 @@ Tested-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  8 files changed, 25 insertions(+), 17 deletions(-)
 
 diff --git a/drivers/char/tpm/st33zp24/st33zp24.c b/drivers/char/tpm/st33zp24/st33zp24.c
-index be4d82974a96..694fc58888c1 100644
+index be4d82974..694fc5888 100644
 --- a/drivers/char/tpm/st33zp24/st33zp24.c
 +++ b/drivers/char/tpm/st33zp24/st33zp24.c
 @@ -430,7 +430,7 @@ static int st33zp24_send(struct tpm_chip *chip, unsigned char *buf,
@@ -45,7 +45,7 @@ index be4d82974a96..694fc58888c1 100644
  		if (ret < 0)
  			goto out_err;
 diff --git a/drivers/char/tpm/tpm-interface.c b/drivers/char/tpm/tpm-interface.c
-index 5540c9c23cca..ad8e4a29184e 100644
+index 5540c9c23..ad8e4a291 100644
 --- a/drivers/char/tpm/tpm-interface.c
 +++ b/drivers/char/tpm/tpm-interface.c
 @@ -47,6 +47,25 @@ module_param_named(suspend_pcr, tpm_suspend_pcr, uint, 0644);
@@ -87,7 +87,7 @@ index 5540c9c23cca..ad8e4a29184e 100644
  		u8 status = chip->ops->status(chip);
  		if ((status & chip->ops->req_complete_mask) ==
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index c59d2c20c339..73511cd89bef 100644
+index eacc8df67..91c80f7a3 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
 @@ -547,6 +547,7 @@ int tpm_get_timeouts(struct tpm_chip *);
@@ -99,7 +99,7 @@ index c59d2c20c339..73511cd89bef 100644
  int tpm_pm_resume(struct device *dev);
  
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
-index 991260134659..dfbe9c60cbcf 100644
+index 991260134..dfbe9c60c 100644
 --- a/drivers/char/tpm/tpm1-cmd.c
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -307,4 +307,3 @@ unsigned long tpm1_calc_ordinal_duration(struct tpm_chip *chip, u32 ordinal)
@@ -108,7 +108,7 @@ index 991260134659..dfbe9c60cbcf 100644
  }
 -EXPORT_SYMBOL_GPL(tpm1_calc_ordinal_duration);
 diff --git a/drivers/char/tpm/tpm2-cmd.c b/drivers/char/tpm/tpm2-cmd.c
-index 9f0daaf3711a..56ad80a91aa1 100644
+index 9f0daaf37..56ad80a91 100644
 --- a/drivers/char/tpm/tpm2-cmd.c
 +++ b/drivers/char/tpm/tpm2-cmd.c
 @@ -132,7 +132,6 @@ unsigned long tpm2_calc_ordinal_duration(struct tpm_chip *chip, u32 ordinal)
@@ -120,7 +120,7 @@ index 9f0daaf3711a..56ad80a91aa1 100644
  
  struct tpm2_pcr_read_out {
 diff --git a/drivers/char/tpm/tpm_i2c_nuvoton.c b/drivers/char/tpm/tpm_i2c_nuvoton.c
-index 289ccca35feb..315a3b4548f7 100644
+index 289ccca35..315a3b454 100644
 --- a/drivers/char/tpm/tpm_i2c_nuvoton.c
 +++ b/drivers/char/tpm/tpm_i2c_nuvoton.c
 @@ -454,10 +454,7 @@ static int i2c_nuvoton_send(struct tpm_chip *chip, u8 *buf, size_t len)
@@ -136,10 +136,10 @@ index 289ccca35feb..315a3b4548f7 100644
  	rc = i2c_nuvoton_wait_for_data_avail(chip, duration, &priv->read_queue);
  	if (rc) {
 diff --git a/drivers/char/tpm/tpm_tis_core.c b/drivers/char/tpm/tpm_tis_core.c
-index 43ce94b6c6e4..169c7c66b93c 100644
+index 4cab8ca03..5243c5c29 100644
 --- a/drivers/char/tpm/tpm_tis_core.c
 +++ b/drivers/char/tpm/tpm_tis_core.c
-@@ -473,11 +473,7 @@ static int tpm_tis_send_main(struct tpm_chip *chip, const u8 *buf, size_t len)
+@@ -476,11 +476,7 @@ static int tpm_tis_send_main(struct tpm_chip *chip, const u8 *buf, size_t len)
  	if (chip->flags & TPM_CHIP_FLAG_IRQ) {
  		ordinal = be32_to_cpu(*((__be32 *) (buf + 6)));
  
@@ -153,7 +153,7 @@ index 43ce94b6c6e4..169c7c66b93c 100644
  		    (chip, TPM_STS_DATA_AVAIL | TPM_STS_VALID, dur,
  		     &priv->read_queue, false) < 0) {
 diff --git a/drivers/char/tpm/xen-tpmfront.c b/drivers/char/tpm/xen-tpmfront.c
-index 5bb2fb3e72ba..5a327eb7f63a 100644
+index 5bb2fb3e7..5a327eb7f 100644
 --- a/drivers/char/tpm/xen-tpmfront.c
 +++ b/drivers/char/tpm/xen-tpmfront.c
 @@ -164,7 +164,7 @@ static int vtpm_send(struct tpm_chip *chip, u8 *buf, size_t count)

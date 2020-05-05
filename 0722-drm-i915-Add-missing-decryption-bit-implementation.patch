@@ -18,7 +18,7 @@ Signed-off-by: Romli, Khairul Anuar <khairul.anuar.romli@intel.com>
  2 files changed, 7 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/drm_blend.c b/drivers/gpu/drm/drm_blend.c
-index 273fdf3b0e0f..183a7f6488c7 100644
+index 273fdf3b0..183a7f648 100644
 --- a/drivers/gpu/drm/drm_blend.c
 +++ b/drivers/gpu/drm/drm_blend.c
 @@ -142,6 +142,8 @@ int drm_plane_create_decryption_property(struct drm_plane *plane)
@@ -31,7 +31,7 @@ index 273fdf3b0e0f..183a7f6488c7 100644
   * drm_plane_create_alpha_property - create a new alpha property
   * @plane: drm plane
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index 2bd2ed846d39..d5d978b57076 100644
+index 2bd2ed846..d5d978b57 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -13875,11 +13875,15 @@ intel_primary_plane_create(struct drm_i915_private *dev_priv, enum pipe pipe)

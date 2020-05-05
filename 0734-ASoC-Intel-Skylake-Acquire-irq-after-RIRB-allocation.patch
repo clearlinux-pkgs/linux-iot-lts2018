@@ -23,7 +23,7 @@ Signed-off-by: Kamil Kulesza <kamil.kulesza@intel.com>
  1 file changed, 6 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 8ade8955fe5c..7979367c4429 100644
+index 8ade8955f..7979367c4 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -921,11 +921,7 @@ static int skl_first_init(struct hdac_bus *bus)

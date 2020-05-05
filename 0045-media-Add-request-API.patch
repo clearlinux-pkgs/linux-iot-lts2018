@@ -18,7 +18,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  5 files changed, 619 insertions(+), 10 deletions(-)
 
 diff --git a/drivers/media/media-device.c b/drivers/media/media-device.c
-index ed518b1f82e4..cd83409b4275 100644
+index ed518b1f8..cd83409b4 100644
 --- a/drivers/media/media-device.c
 +++ b/drivers/media/media-device.c
 @@ -26,6 +26,8 @@
@@ -665,7 +665,7 @@ index ed518b1f82e4..cd83409b4275 100644
  	mdev->devnode = NULL;
  }
 diff --git a/drivers/media/media-devnode.c b/drivers/media/media-devnode.c
-index 6b87a721dc49..86e92cb4289c 100644
+index 6b87a721d..86e92cb42 100644
 --- a/drivers/media/media-devnode.c
 +++ b/drivers/media/media-devnode.c
 @@ -149,6 +149,7 @@ static long media_compat_ioctl(struct file *filp, unsigned int cmd,
@@ -687,7 +687,7 @@ index 6b87a721dc49..86e92cb4289c 100644
  }
  
 diff --git a/include/media/media-device.h b/include/media/media-device.h
-index bcc6ec434f1f..6f398006b54c 100644
+index bcc6ec434..6f398006b 100644
 --- a/include/media/media-device.h
 +++ b/include/media/media-device.h
 @@ -19,6 +19,8 @@
@@ -803,7 +803,7 @@ index bcc6ec434f1f..6f398006b54c 100644
 +
  #endif
 diff --git a/include/media/media-devnode.h b/include/media/media-devnode.h
-index dc2f64e1b08f..2ece17356b33 100644
+index dc2f64e1b..2ece17356 100644
 --- a/include/media/media-devnode.h
 +++ b/include/media/media-devnode.h
 @@ -63,6 +63,20 @@ struct media_file_operations {
@@ -839,7 +839,7 @@ index dc2f64e1b08f..2ece17356b33 100644
  
  /**
 diff --git a/include/uapi/linux/media.h b/include/uapi/linux/media.h
-index 36f76e777ef9..4506519c7b38 100644
+index 36f76e777..4506519c7 100644
 --- a/include/uapi/linux/media.h
 +++ b/include/uapi/linux/media.h
 @@ -364,11 +364,49 @@ struct media_v2_topology {

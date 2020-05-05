@@ -14,7 +14,7 @@ Signed-off-by: Jason Chen CJ <jason.cj.chen@intel.com>
  1 file changed, 47 insertions(+), 15 deletions(-)
 
 diff --git a/drivers/vhm/vhm_hugetlb.c b/drivers/vhm/vhm_hugetlb.c
-index afab8ab52567..9c39f9167f77 100644
+index afab8ab52..9c39f9167 100644
 --- a/drivers/vhm/vhm_hugetlb.c
 +++ b/drivers/vhm/vhm_hugetlb.c
 @@ -120,10 +120,11 @@ static int add_guest_map(struct vhm_vm *vm, unsigned long vm0_gpa,

@@ -32,7 +32,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  3 files changed, 55 insertions(+), 44 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/core.c b/drivers/hwtracing/stm/core.c
-index eeba421dc823..15faebca1a41 100644
+index eeba421dc..15faebca1 100644
 --- a/drivers/hwtracing/stm/core.c
 +++ b/drivers/hwtracing/stm/core.c
 @@ -295,15 +295,15 @@ static int stm_output_assign(struct stm_device *stm, unsigned int width,
@@ -182,7 +182,7 @@ index eeba421dc823..15faebca1a41 100644
  	if (err)
  		goto fail_detach;
 diff --git a/drivers/hwtracing/stm/policy.c b/drivers/hwtracing/stm/policy.c
-index 3fd07e275b34..15d35d891643 100644
+index 3fd07e275..15d35d891 100644
 --- a/drivers/hwtracing/stm/policy.c
 +++ b/drivers/hwtracing/stm/policy.c
 @@ -392,7 +392,7 @@ static struct configfs_subsystem stp_policy_subsys = {
@@ -225,7 +225,7 @@ index 3fd07e275b34..15d35d891643 100644
  }
  
 diff --git a/drivers/hwtracing/stm/stm.h b/drivers/hwtracing/stm/stm.h
-index 923571adc6f4..e5df08ae59cf 100644
+index 923571adc..e5df08ae5 100644
 --- a/drivers/hwtracing/stm/stm.h
 +++ b/drivers/hwtracing/stm/stm.h
 @@ -57,7 +57,6 @@ struct stm_output {

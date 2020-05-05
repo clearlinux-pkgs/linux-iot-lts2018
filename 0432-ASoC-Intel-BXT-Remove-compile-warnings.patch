@@ -19,7 +19,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  1 file changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index 47b2a24f84dc..bac77f8fc0d4 100644
+index 47b2a24f8..bac77f8fc 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -277,14 +277,14 @@ static int bxt_load_base_firmware(struct sst_dsp *ctx)

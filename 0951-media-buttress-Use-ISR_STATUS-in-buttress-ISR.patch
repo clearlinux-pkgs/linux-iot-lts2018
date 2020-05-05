@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-buttress.c b/drivers/media/pci/intel/ipu-buttress.c
-index b823c0fc541e..d19e965543c4 100644
+index b823c0fc5..d19e96554 100644
 --- a/drivers/media/pci/intel/ipu-buttress.c
 +++ b/drivers/media/pci/intel/ipu-buttress.c
 @@ -404,10 +404,10 @@ irqreturn_t ipu_buttress_isr(int irq, void *isp_ptr)

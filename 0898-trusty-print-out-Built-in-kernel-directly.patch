@@ -15,7 +15,7 @@ Reviewed-by: Ilkka Koskinen <ilkka.koskinen@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index 8daf817634d8..cfef965402c4 100644
+index 8daf81763..cfef96540 100644
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -401,7 +401,7 @@ static void trusty_init_version(struct trusty_state *s, struct device *dev)

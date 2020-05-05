@@ -24,7 +24,7 @@ Signed-off-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  5 files changed, 237 insertions(+), 191 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index f9a819ae8fd4..64e2071f948b 100644
+index f9a819ae8..64e2071f9 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -637,76 +637,6 @@ static int vbe_skl_pcm_hw_params(const struct skl *sdev, int vm_id,
@@ -262,7 +262,7 @@ index f9a819ae8fd4..64e2071f948b 100644
  		return vbe_skl_msg_cfg_handle(vbe, sdev, vm_id, &msg);
  	}
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.h b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
-index 0d6f95007d92..42e5c2b79fa9 100644
+index 0d6f95007..42e5c2b79 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 @@ -89,6 +89,7 @@ struct snd_skl_vbe_client {
@@ -274,7 +274,7 @@ index 0d6f95007d92..42e5c2b79fa9 100644
  
  struct vskl {
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index 64e98049e9f9..85908679fe65 100644
+index 64e98049e..85908679f 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -9,6 +9,7 @@
@@ -371,7 +371,7 @@ index 64e98049e9f9..85908679fe65 100644
  
  struct kctl_wrapper {
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 2c33bcf70abc..96c230972ed4 100644
+index 2c33bcf70..96c230972 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -556,6 +556,23 @@ int vfe_send_msg(struct snd_skl_vfe *vfe,
@@ -613,7 +613,7 @@ index 2c33bcf70abc..96c230972ed4 100644
  
  	vfe_init_irq_queue(vfe);
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index afd042d04ddc..4c05e3acc00b 100644
+index afd042d04..4c05e3acc 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -15,7 +15,7 @@

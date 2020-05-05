@@ -17,7 +17,7 @@ Signed-off-by: Fei Jiang <fei.jiang@intel.com>
  1 file changed, 21 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/acrngt.c b/drivers/gpu/drm/i915/gvt/acrngt.c
-index c6fff10a1679..abde541b76f8 100644
+index c6fff10a1..abde541b7 100644
 --- a/drivers/gpu/drm/i915/gvt/acrngt.c
 +++ b/drivers/gpu/drm/i915/gvt/acrngt.c
 @@ -787,13 +787,33 @@ static int acrngt_write_gpa(unsigned long handle, unsigned long gpa,

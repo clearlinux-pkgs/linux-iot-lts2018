@@ -17,7 +17,7 @@ Signed-off-by: Puunithaaraj Gopal <puunithaaraj.gopal@intel.com>
  1 file changed, 8 insertions(+)
 
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h
-index 489a3eb97878..8c2c3d494ba0 100644
+index 489a3eb97..8c2c3d494 100644
 --- a/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h
 +++ b/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h
 @@ -836,6 +836,14 @@ static struct crl_csi_data_fmt adv7481_hdmi_crl_csi_data_fmt[] = {

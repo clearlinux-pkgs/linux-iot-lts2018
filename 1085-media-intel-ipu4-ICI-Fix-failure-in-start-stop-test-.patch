@@ -21,7 +21,7 @@ Signed-off-by: Poluri, Sarat Chandra <sarat.chandra.poluri@intel.com>
  1 file changed, 12 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-pipeline-device.c b/drivers/media/pci/intel/ici/ici-isys-pipeline-device.c
-index a4e4d77b2a64..f5cb1178ad54 100644
+index a4e4d77b2..f5cb1178a 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-pipeline-device.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-pipeline-device.c
 @@ -191,6 +191,8 @@ static int ici_setup_link(struct file *file, void *fh,

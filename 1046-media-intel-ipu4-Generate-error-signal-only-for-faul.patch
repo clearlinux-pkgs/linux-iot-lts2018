@@ -17,7 +17,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  1 file changed, 7 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c b/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
-index 5292575db411..2c87487b2e81 100644
+index 5292575db..2c87487b2 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
 +++ b/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
 @@ -54,6 +54,12 @@ static void trigger_error(struct ipu_isys_csi2 *csi2)

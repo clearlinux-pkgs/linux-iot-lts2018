@@ -23,7 +23,7 @@ Tracked-On: PKT-1696
  3 files changed, 20 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index 8390d7f794f9..4f6a133cd6d0 100644
+index 8390d7f79..4f6a133cd 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -49,6 +49,7 @@
@@ -48,7 +48,7 @@ index 8390d7f794f9..4f6a133cd6d0 100644
  {
  	return acrn_hypercall1(HC_PM_SET_SSTATE_DATA, sx_data_addr);
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index af00025953c2..bb60888fb59e 100644
+index af0002595..bb60888fb 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -115,6 +115,7 @@
@@ -113,7 +113,7 @@ index af00025953c2..bb60888fb59e 100644
  
  enum profiling_cmd_type {
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 5041f5ace282..33acc64a4cbf 100644
+index 5041f5ace..33acc64a4 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -148,6 +148,7 @@ inline long hcall_reset_vm(unsigned long vmid);

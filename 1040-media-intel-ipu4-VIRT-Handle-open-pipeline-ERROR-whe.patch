@@ -16,7 +16,7 @@ Signed-off-by: Poluri, Sarat Chandra <sarat.chandra.poluri@intel.com>
  1 file changed, 18 insertions(+), 9 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
-index 2297bf6ceefa..7c96f2dff889 100644
+index 2297bf6ce..7c96f2dff 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 @@ -31,9 +31,10 @@ int process_pipeline_open(struct ipu4_virtio_req_info *req_info)

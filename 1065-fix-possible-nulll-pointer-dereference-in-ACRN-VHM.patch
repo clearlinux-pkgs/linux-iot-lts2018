@@ -15,7 +15,7 @@ Tracked-On: PKT-2115
  1 file changed, 1 insertion(+)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 3647d1ef1962..9deb720062c8 100644
+index 3647d1ef1..9deb72006 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -547,6 +547,7 @@ struct vhm_request *acrn_ioreq_get_reqbuf(int client_id)

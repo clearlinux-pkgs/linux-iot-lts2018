@@ -17,7 +17,7 @@ Signed-off-by: Yin, Zhiye <zhiyex.yin@intel.com>
  2 files changed, 7 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index ff497f8fdd5e..39f3ad39aefc 100644
+index ff497f8fd..39f3ad39a 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -830,6 +830,12 @@ int ici_isys_frame_buf_add_next(
@@ -34,7 +34,7 @@ index ff497f8fdd5e..39f3ad39aefc 100644
  		(uint32_t)buf->kframe_info.planes[0].dma_addr;
  	css_buf->output_pins[buf_list->fw_output].out_buf_id =
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 33fec29e6ad1..f5b6e3964ec2 100644
+index 33fec29e6..f5b6e3964 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -545,7 +545,7 @@ static int start_stream_firmware(struct ici_isys_stream *as)

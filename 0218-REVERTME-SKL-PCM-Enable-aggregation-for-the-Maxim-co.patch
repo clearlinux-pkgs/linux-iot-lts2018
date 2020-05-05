@@ -15,7 +15,7 @@ Reviewed-on:
  1 file changed, 26 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sdw-pcm.c b/sound/soc/intel/skylake/skl-sdw-pcm.c
-index 504228e2cba5..e41a3b38aa81 100644
+index 504228e2c..e41a3b38a 100644
 --- a/sound/soc/intel/skylake/skl-sdw-pcm.c
 +++ b/sound/soc/intel/skylake/skl-sdw-pcm.c
 @@ -46,7 +46,10 @@ struct sdw_dma_data {

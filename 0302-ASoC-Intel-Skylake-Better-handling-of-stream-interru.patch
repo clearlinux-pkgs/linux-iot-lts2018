@@ -28,7 +28,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 26 insertions(+), 3 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 46fc036c01f8..251fa4f3fd65 100644
+index 46fc036c0..251fa4f3f 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -216,16 +216,18 @@ static irqreturn_t skl_interrupt(int irq, void *dev_id)

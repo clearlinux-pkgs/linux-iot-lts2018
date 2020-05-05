@@ -14,7 +14,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/sound/soc/intel/skylake/skl-fwlog.c b/sound/soc/intel/skylake/skl-fwlog.c
-index 96c5d245849d..1aacf8625658 100644
+index 96c5d2458..1aacf8625 100644
 --- a/sound/soc/intel/skylake/skl-fwlog.c
 +++ b/sound/soc/intel/skylake/skl-fwlog.c
 @@ -125,6 +125,7 @@ void skl_dsp_write_log(struct sst_dsp *sst, void __iomem *src, int core,

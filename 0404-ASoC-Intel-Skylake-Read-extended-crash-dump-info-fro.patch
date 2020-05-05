@@ -27,7 +27,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  3 files changed, 106 insertions(+), 7 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index 13917d54dc32..e36160b1173f 100644
+index 13917d54d..e36160b11 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -202,6 +202,9 @@
@@ -55,7 +55,7 @@ index 13917d54dc32..e36160b1173f 100644
  				dev_err(ipc->dev,
  					"dsp crash dump read fail:%d\n", ret);
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 4b3c7e283030..36e699a1765b 100644
+index 4b3c7e283..36e699a17 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -470,7 +470,7 @@ int skl_ipc_process_notification(struct sst_generic_ipc *ipc,
@@ -68,7 +68,7 @@ index 4b3c7e283030..36e699a1765b 100644
  void skl_ipc_set_fw_cfg(struct sst_generic_ipc *ipc, u8 instance_id,
  			u16 module_id, u32 *data);
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 8f4056ebf670..a420d702f689 100644
+index 8f4056ebf..a420d702f 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -32,6 +32,7 @@

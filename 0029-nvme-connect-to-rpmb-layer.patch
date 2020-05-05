@@ -21,7 +21,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/nvme/host/rpmb.c
 
 diff --git a/drivers/nvme/host/Kconfig b/drivers/nvme/host/Kconfig
-index 88a8b5916624..a0027cebf2db 100644
+index 88a8b5916..a0027cebf 100644
 --- a/drivers/nvme/host/Kconfig
 +++ b/drivers/nvme/host/Kconfig
 @@ -5,6 +5,7 @@ config BLK_DEV_NVME
@@ -33,7 +33,7 @@ index 88a8b5916624..a0027cebf2db 100644
  	  The NVM Express driver is for solid state drives directly
  	  connected to the PCI or PCI Express bus.  If you know you
 diff --git a/drivers/nvme/host/Makefile b/drivers/nvme/host/Makefile
-index aea459c65ae1..99f99e87b82b 100644
+index aea459c65..99f99e87b 100644
 --- a/drivers/nvme/host/Makefile
 +++ b/drivers/nvme/host/Makefile
 @@ -15,6 +15,7 @@ nvme-core-$(CONFIG_NVM)			+= lightnvm.o
@@ -45,7 +45,7 @@ index aea459c65ae1..99f99e87b82b 100644
  nvme-fabrics-y				+= fabrics.o
  
 diff --git a/drivers/nvme/host/core.c b/drivers/nvme/host/core.c
-index a8132e8d72bb..41341c3cbf2b 100644
+index d5359c7c8..2d104fa07 100644
 --- a/drivers/nvme/host/core.c
 +++ b/drivers/nvme/host/core.c
 @@ -11,7 +11,6 @@
@@ -123,7 +123,7 @@ index a8132e8d72bb..41341c3cbf2b 100644
  EXPORT_SYMBOL_GPL(nvme_sec_submit);
  #endif /* CONFIG_BLK_SED_OPAL */
  
-@@ -2538,7 +2569,10 @@ int nvme_init_identify(struct nvme_ctrl *ctrl)
+@@ -2549,7 +2580,10 @@ int nvme_init_identify(struct nvme_ctrl *ctrl)
  		ctrl->hmmaxd = le16_to_cpu(id->hmmaxd);
  	}
  
@@ -135,7 +135,7 @@ index a8132e8d72bb..41341c3cbf2b 100644
  
  	if (ret < 0)
 diff --git a/drivers/nvme/host/nvme.h b/drivers/nvme/host/nvme.h
-index cc4273f11989..1fbce6e949ad 100644
+index cc4273f11..1fbce6e94 100644
 --- a/drivers/nvme/host/nvme.h
 +++ b/drivers/nvme/host/nvme.h
 @@ -21,6 +21,7 @@
@@ -176,7 +176,7 @@ index cc4273f11989..1fbce6e949ad 100644
  void nvme_remove_namespaces(struct nvme_ctrl *ctrl);
  
 diff --git a/drivers/nvme/host/pci.c b/drivers/nvme/host/pci.c
-index 3c68a5b35ec1..66fcf86a7e34 100644
+index 3c68a5b35..66fcf86a7 100644
 --- a/drivers/nvme/host/pci.c
 +++ b/drivers/nvme/host/pci.c
 @@ -2306,6 +2306,10 @@ static void nvme_reset_work(struct work_struct *work)
@@ -192,7 +192,7 @@ index 3c68a5b35ec1..66fcf86a7e34 100644
  			dev->ctrl.opal_dev =
 diff --git a/drivers/nvme/host/rpmb.c b/drivers/nvme/host/rpmb.c
 new file mode 100644
-index 000000000000..34e807bfc4f9
+index 000000000..34e807bfc
 --- /dev/null
 +++ b/drivers/nvme/host/rpmb.c
 @@ -0,0 +1,119 @@

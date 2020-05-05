@@ -17,7 +17,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  5 files changed, 25 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/media/common/videobuf2/videobuf2-v4l2.c b/drivers/media/common/videobuf2/videobuf2-v4l2.c
-index 9d4a81bb0e59..550f0c002839 100644
+index 9d4a81bb0..550f0c002 100644
 --- a/drivers/media/common/videobuf2/videobuf2-v4l2.c
 +++ b/drivers/media/common/videobuf2/videobuf2-v4l2.c
 @@ -177,6 +177,11 @@ static int vb2_queue_or_prepare_buf(struct vb2_queue *q, struct v4l2_buffer *b,
@@ -52,7 +52,7 @@ index 9d4a81bb0e59..550f0c002839 100644
  	if (V4L2_TYPE_IS_MULTIPLANAR(b->type)) {
  		if (b->memory == VB2_MEMORY_USERPTR) {
 diff --git a/drivers/media/v4l2-core/v4l2-compat-ioctl32.c b/drivers/media/v4l2-core/v4l2-compat-ioctl32.c
-index 3efe4e0a80a4..5261bad11953 100644
+index 3efe4e0a8..5261bad11 100644
 --- a/drivers/media/v4l2-core/v4l2-compat-ioctl32.c
 +++ b/drivers/media/v4l2-core/v4l2-compat-ioctl32.c
 @@ -481,7 +481,7 @@ struct v4l2_buffer32 {
@@ -107,7 +107,7 @@ index 3efe4e0a80a4..5261bad11953 100644
  
  	if (V4L2_TYPE_IS_MULTIPLANAR(type)) {
 diff --git a/include/media/videobuf2-core.h b/include/media/videobuf2-core.h
-index bddd86c11f5f..cd004892b61b 100644
+index bddd86c11..cd004892b 100644
 --- a/include/media/videobuf2-core.h
 +++ b/include/media/videobuf2-core.h
 @@ -516,6 +516,7 @@ struct vb2_queue {
@@ -119,7 +119,7 @@ index bddd86c11f5f..cd004892b61b 100644
  	struct mutex			*lock;
  	void				*owner;
 diff --git a/include/media/videobuf2-v4l2.h b/include/media/videobuf2-v4l2.h
-index 3d5e2d739f05..317c2b7fe105 100644
+index 3d5e2d739..317c2b7fe 100644
 --- a/include/media/videobuf2-v4l2.h
 +++ b/include/media/videobuf2-v4l2.h
 @@ -43,6 +43,8 @@ struct vb2_v4l2_buffer {
@@ -132,7 +132,7 @@ index 3d5e2d739f05..317c2b7fe105 100644
  
  /*
 diff --git a/include/uapi/linux/videodev2.h b/include/uapi/linux/videodev2.h
-index 1aae2e4b8f10..fef1758ae2e4 100644
+index 1aae2e4b8..fef1758ae 100644
 --- a/include/uapi/linux/videodev2.h
 +++ b/include/uapi/linux/videodev2.h
 @@ -928,6 +928,7 @@ struct v4l2_plane {

@@ -18,7 +18,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  1 file changed, 25 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index e3eb142de07c..b02b9897b7cf 100644
+index e3eb142de..b02b9897b 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -751,6 +751,10 @@ static int skl_get_compr_core(struct snd_compr_stream *stream)

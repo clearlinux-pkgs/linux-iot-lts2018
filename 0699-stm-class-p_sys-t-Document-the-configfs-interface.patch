@@ -16,7 +16,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 
 diff --git a/Documentation/ABI/testing/configfs-stp-policy-p_sys-t b/Documentation/ABI/testing/configfs-stp-policy-p_sys-t
 new file mode 100644
-index 000000000000..b290d1c00dcf
+index 000000000..b290d1c00
 --- /dev/null
 +++ b/Documentation/ABI/testing/configfs-stp-policy-p_sys-t
 @@ -0,0 +1,41 @@

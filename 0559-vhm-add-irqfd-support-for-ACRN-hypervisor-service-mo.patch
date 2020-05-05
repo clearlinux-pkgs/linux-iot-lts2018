@@ -24,7 +24,7 @@ Reviewed-by: Yu Wang <yu1.wang@intel.com>
  create mode 100644 drivers/vhm/vhm_irqfd.c
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 672b58a29a1f..4d76905e616d 100644
+index 672b58a29..4d76905e6 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -238,6 +238,7 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -60,7 +60,7 @@ index 672b58a29a1f..4d76905e616d 100644
  		pr_warn("Unknown IOCTL 0x%x\n", ioctl_num);
  		ret = 0;
 diff --git a/drivers/vhm/Makefile b/drivers/vhm/Makefile
-index 193f7692c9e3..4abfbfcba4aa 100644
+index 193f7692c..4abfbfcba 100644
 --- a/drivers/vhm/Makefile
 +++ b/drivers/vhm/Makefile
 @@ -1,2 +1,2 @@
@@ -69,7 +69,7 @@ index 193f7692c9e3..4abfbfcba4aa 100644
 +obj-y += vhm_mm.o vhm_hugetlb.o vhm_ioreq.o vhm_vm_mngt.o vhm_msi.o vhm_hypercall.o vhm_ioeventfd.o vhm_irqfd.o
 diff --git a/drivers/vhm/vhm_irqfd.c b/drivers/vhm/vhm_irqfd.c
 new file mode 100644
-index 000000000000..b8c122d5ea1f
+index 000000000..b8c122d5e
 --- /dev/null
 +++ b/drivers/vhm/vhm_irqfd.c
 @@ -0,0 +1,381 @@
@@ -455,7 +455,7 @@ index 000000000000..b8c122d5ea1f
 +	put_irqfd_info(info);
 +}
 diff --git a/include/linux/vhm/vhm_eventfd.h b/include/linux/vhm/vhm_eventfd.h
-index 3c73194cd1a1..7ee5843eca0e 100644
+index 3c73194cd..7ee5843ec 100644
 --- a/include/linux/vhm/vhm_eventfd.h
 +++ b/include/linux/vhm/vhm_eventfd.h
 @@ -7,4 +7,10 @@ int acrn_ioeventfd_init(int vmid);
@@ -470,7 +470,7 @@ index 3c73194cd1a1..7ee5843eca0e 100644
 +
  #endif
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 4ab6b02aced8..2007d58faa3f 100644
+index 4ab6b02ac..2007d58fa 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -113,6 +113,7 @@

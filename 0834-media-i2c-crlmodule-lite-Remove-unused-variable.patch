@@ -14,7 +14,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  1 file changed, 1 deletion(-)
 
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-core.c b/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
-index efc00151ccdd..bd04ae9974ff 100644
+index efc00151c..bd04ae997 100644
 --- a/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
 @@ -2246,7 +2246,6 @@ static int crlmodule_init_subdevs(

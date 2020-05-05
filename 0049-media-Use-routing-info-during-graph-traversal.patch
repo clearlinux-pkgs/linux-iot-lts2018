@@ -16,7 +16,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 72 insertions(+), 20 deletions(-)
 
 diff --git a/drivers/media/media-entity.c b/drivers/media/media-entity.c
-index 3498551e618e..0ad584518db7 100644
+index 3498551e6..0ad584518 100644
 --- a/drivers/media/media-entity.c
 +++ b/drivers/media/media-entity.c
 @@ -237,18 +237,38 @@ EXPORT_SYMBOL_GPL(media_entity_pads_init);
@@ -165,7 +165,7 @@ index 3498551e618e..0ad584518db7 100644
  			continue;
  
 diff --git a/include/media/media-entity.h b/include/media/media-entity.h
-index 3aa3d58d1d58..0faaf936302b 100644
+index 3aa3d58d1..0faaf9363 100644
 --- a/include/media/media-entity.h
 +++ b/include/media/media-entity.h
 @@ -97,6 +97,8 @@ struct media_graph {

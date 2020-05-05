@@ -26,7 +26,7 @@ Reviewed-by: Eddie Dong <eddie.dong@intel.com>
  3 files changed, 18 insertions(+), 20 deletions(-)
 
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 712860b5f5af..87d668f735dc 100644
+index 712860b5f..87d668f73 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -80,12 +80,10 @@ static inline unsigned long  acrn_hpa2gpa(unsigned long hpa)
@@ -72,7 +72,7 @@ index 712860b5f5af..87d668f735dc 100644
   *                    MEM_TYPE_WT
   *                    MEM_TYPE_UC
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index a9e71616cc80..9a7189ffffc4 100644
+index a9e71616c..9a7189fff 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -52,11 +52,11 @@
@@ -117,7 +117,7 @@ index a9e71616cc80..9a7189ffffc4 100644
   * @client_id: client id to identify ioreq client
   * @vcpu: identify the ioreq submitter
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index f0a7e1cf7b05..14e9fe7a4d5f 100644
+index f0a7e1cf7..14e9fe7a4 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -88,6 +88,7 @@ extern struct mutex vhm_vm_list_lock;

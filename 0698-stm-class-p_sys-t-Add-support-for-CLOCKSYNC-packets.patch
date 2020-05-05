@@ -16,7 +16,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  1 file changed, 80 insertions(+)
 
 diff --git a/drivers/hwtracing/stm/p_sys-t.c b/drivers/hwtracing/stm/p_sys-t.c
-index ffeb057b777c..b178a5495b67 100644
+index ffeb057b7..b178a5495 100644
 --- a/drivers/hwtracing/stm/p_sys-t.c
 +++ b/drivers/hwtracing/stm/p_sys-t.c
 @@ -72,15 +72,20 @@ enum sys_t_message_string_subtype {

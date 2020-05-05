@@ -16,7 +16,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 4 insertions(+)
 
 diff --git a/drivers/media/pci/intel/ipu.c b/drivers/media/pci/intel/ipu.c
-index b235de1be6ec..39dfb7b519de 100644
+index b235de1be..39dfb7b51 100644
 --- a/drivers/media/pci/intel/ipu.c
 +++ b/drivers/media/pci/intel/ipu.c
 @@ -334,6 +334,10 @@ int request_cpd_fw(const struct firmware **firmware_p, const char *name,

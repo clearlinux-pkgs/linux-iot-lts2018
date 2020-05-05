@@ -21,7 +21,7 @@ Signed-off-by: Jeremy Compostella <jeremy.compostella@intel.com>
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/drivers/tty/serial/8250/8250_port.c b/drivers/tty/serial/8250/8250_port.c
-index 5a04d4ddca73..4881420f9a27 100644
+index 5a04d4ddc..4881420f9 100644
 --- a/drivers/tty/serial/8250/8250_port.c
 +++ b/drivers/tty/serial/8250/8250_port.c
 @@ -1845,9 +1845,8 @@ static bool handle_rx_dma(struct uart_8250_port *up, unsigned int iir)

@@ -15,7 +15,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 7 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/misc/mei/dal/dal_cdev.c b/drivers/misc/mei/dal/dal_cdev.c
-index 7b1aa55f7e79..2172a09289ce 100644
+index 7b1aa55f7..2172a0928 100644
 --- a/drivers/misc/mei/dal/dal_cdev.c
 +++ b/drivers/misc/mei/dal/dal_cdev.c
 @@ -124,14 +124,18 @@ static ssize_t dal_dev_read(struct file *fp, char __user *buf,

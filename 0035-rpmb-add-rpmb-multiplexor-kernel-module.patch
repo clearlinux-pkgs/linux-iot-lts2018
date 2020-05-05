@@ -24,7 +24,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  create mode 100644 drivers/char/rpmb/mux/mux.c
 
 diff --git a/drivers/char/rpmb/Kconfig b/drivers/char/rpmb/Kconfig
-index 48f11c19bbda..568ba9adb117 100644
+index 48f11c19b..568ba9adb 100644
 --- a/drivers/char/rpmb/Kconfig
 +++ b/drivers/char/rpmb/Kconfig
 @@ -40,3 +40,5 @@ config VIRTIO_RPMB
@@ -34,7 +34,7 @@ index 48f11c19bbda..568ba9adb117 100644
 +
 +source "drivers/char/rpmb/mux/Kconfig"
 diff --git a/drivers/char/rpmb/Makefile b/drivers/char/rpmb/Makefile
-index 281c012712ca..20cf088d2476 100644
+index 281c01271..20cf088d2 100644
 --- a/drivers/char/rpmb/Makefile
 +++ b/drivers/char/rpmb/Makefile
 @@ -6,3 +6,5 @@ obj-$(CONFIG_RPMB_SIM) += rpmb_sim.o
@@ -45,7 +45,7 @@ index 281c012712ca..20cf088d2476 100644
 +obj-$(CONFIG_RPMB_MUX) += mux/
 diff --git a/drivers/char/rpmb/mux/Kconfig b/drivers/char/rpmb/mux/Kconfig
 new file mode 100644
-index 000000000000..8087f9b797f8
+index 000000000..8087f9b79
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/Kconfig
 @@ -0,0 +1,14 @@
@@ -65,7 +65,7 @@ index 000000000000..8087f9b797f8
 +	  in such a RPMB virtualization use case could enable it.
 diff --git a/drivers/char/rpmb/mux/Makefile b/drivers/char/rpmb/mux/Makefile
 new file mode 100644
-index 000000000000..7afc458a0dd2
+index 000000000..7afc458a0
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/Makefile
 @@ -0,0 +1,3 @@
@@ -74,7 +74,7 @@ index 000000000000..7afc458a0dd2
 +ccflags-y += -D__CHECK_ENDIAN__
 diff --git a/drivers/char/rpmb/mux/mux.c b/drivers/char/rpmb/mux/mux.c
 new file mode 100644
-index 000000000000..55901197d0a5
+index 000000000..55901197d
 --- /dev/null
 +++ b/drivers/char/rpmb/mux/mux.c
 @@ -0,0 +1,742 @@

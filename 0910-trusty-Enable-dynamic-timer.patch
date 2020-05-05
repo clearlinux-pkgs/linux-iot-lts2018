@@ -19,7 +19,7 @@ Signed-off-by: Zhong,Fangjian <fangjian.zhong@intel.com>
  2 files changed, 100 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index 93c73882b00c..647031dacb4e 100644
+index 93c73882b..647031dac 100644
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -25,9 +25,10 @@
@@ -178,7 +178,7 @@ index 93c73882b00c..647031dacb4e 100644
  		device_remove_file(&pdev->dev, &dev_attr_trusty_version);
  		kfree(s->version_str);
 diff --git a/include/linux/trusty/smcall.h b/include/linux/trusty/smcall.h
-index 1160890a3d90..974b7b3e753d 100644
+index 1160890a3..974b7b3e7 100644
 --- a/include/linux/trusty/smcall.h
 +++ b/include/linux/trusty/smcall.h
 @@ -123,6 +123,23 @@

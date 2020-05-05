@@ -39,7 +39,7 @@ Reviewed-by: He, Min <min.he@intel.com>
  5 files changed, 320 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/cfg_space.c b/drivers/gpu/drm/i915/gvt/cfg_space.c
-index f6bcfcb571b7..fd461db48a8d 100644
+index f6bcfcb57..fd461db48 100644
 --- a/drivers/gpu/drm/i915/gvt/cfg_space.c
 +++ b/drivers/gpu/drm/i915/gvt/cfg_space.c
 @@ -138,6 +138,47 @@ static int map_aperture(struct intel_vgpu *vgpu, bool map)
@@ -91,7 +91,7 @@ index f6bcfcb571b7..fd461db48a8d 100644
  {
  	u64 start, end;
 diff --git a/drivers/gpu/drm/i915/gvt/gtt.c b/drivers/gpu/drm/i915/gvt/gtt.c
-index 901d7fa82d98..ddc725728bf8 100644
+index 901d7fa82..ddc725728 100644
 --- a/drivers/gpu/drm/i915/gvt/gtt.c
 +++ b/drivers/gpu/drm/i915/gvt/gtt.c
 @@ -1569,6 +1569,106 @@ int intel_vgpu_sync_oos_pages(struct intel_vgpu *vgpu)
@@ -389,7 +389,7 @@ index 901d7fa82d98..ddc725728bf8 100644
 +	return 0;
 +}
 diff --git a/drivers/gpu/drm/i915/gvt/gtt.h b/drivers/gpu/drm/i915/gvt/gtt.h
-index 87ca63b763d0..5af949d8b316 100644
+index 87ca63b76..5af949d8b 100644
 --- a/drivers/gpu/drm/i915/gvt/gtt.h
 +++ b/drivers/gpu/drm/i915/gvt/gtt.h
 @@ -280,4 +280,9 @@ int intel_vgpu_g2v_pv_ppgtt_clear_4lvl(struct intel_vgpu *vgpu,
@@ -403,7 +403,7 @@ index 87ca63b763d0..5af949d8b316 100644
 +
  #endif /* _GVT_GTT_H_ */
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.h b/drivers/gpu/drm/i915/gvt/gvt.h
-index 1a287ba76923..9344293ed692 100644
+index 1a287ba76..9344293ed 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.h
 +++ b/drivers/gpu/drm/i915/gvt/gvt.h
 @@ -85,6 +85,7 @@ struct intel_gvt_device_info {
@@ -424,7 +424,7 @@ index 1a287ba76923..9344293ed692 100644
  int intel_vgpu_init_opregion(struct intel_vgpu *vgpu);
  int intel_vgpu_opregion_base_write_handler(struct intel_vgpu *vgpu, u32 gpa);
 diff --git a/drivers/gpu/drm/i915/gvt/handlers.c b/drivers/gpu/drm/i915/gvt/handlers.c
-index 16e2d41174bd..8fa3bed75d61 100644
+index 16e2d4117..8fa3bed75 100644
 --- a/drivers/gpu/drm/i915/gvt/handlers.c
 +++ b/drivers/gpu/drm/i915/gvt/handlers.c
 @@ -1277,6 +1277,12 @@ static int handle_g2v_notification(struct intel_vgpu *vgpu, int notification)

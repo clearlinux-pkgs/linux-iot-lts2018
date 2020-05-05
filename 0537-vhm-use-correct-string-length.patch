@@ -18,7 +18,7 @@ Reviewed-by: Jason Chen CJ <jason.cj.chen@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index c91a60598114..5cb15b5badd8 100644
+index c91a60598..5cb15b5ba 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -204,7 +204,7 @@ int acrn_ioreq_create_client(unsigned long vmid, ioreq_handler_t handler,

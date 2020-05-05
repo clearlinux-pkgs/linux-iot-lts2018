@@ -15,7 +15,7 @@ Signed-off-by: Jeeja KP <jeeja.kp@intel.com>
  3 files changed, 42 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 57d5a79a6318..d2eb212c2875 100644
+index 57d5a79a6..d2eb212c2 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -46,6 +46,27 @@ struct skl_debug {
@@ -47,7 +47,7 @@ index 57d5a79a6318..d2eb212c2875 100644
  					   size_t count, loff_t *ppos)
  {
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 96cb7e1d45ce..bece49909e64 100644
+index 96cb7e1d4..bece49909 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -1888,10 +1888,22 @@ static int skl_tplg_be_fill_pipe_params(struct snd_soc_dai *dai,
@@ -75,7 +75,7 @@ index 96cb7e1d45ce..bece49909e64 100644
  		mconfig->formats_config.caps_size = cfg->size;
  		mconfig->formats_config.caps = (u32 *) &cfg->caps;
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index 28c62dda07db..05561be0efe6 100644
+index 28c62dda0..05561be0e 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -165,6 +165,9 @@ struct skl_debug *skl_debugfs_init(struct skl *skl);

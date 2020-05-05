@@ -21,7 +21,7 @@ Tested-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  4 files changed, 149 insertions(+), 67 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index c46d3964e7ae..8125cbde26df 100644
+index c46d3964e..8125cbde2 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -636,7 +636,7 @@ static int vbe_skl_pcm_trigger(struct skl *sdev, int vm_id,
@@ -96,7 +96,7 @@ index c46d3964e7ae..8125cbde26df 100644
  		return vbe_skl_cfg_hda(sdev, vm_id, msg);
  	default:
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index 97cb00e222ca..0ddb833aebc8 100644
+index 97cb00e22..0ddb833ae 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -219,18 +219,24 @@ typedef int (*kctl_send_op)(struct snd_kcontrol *kcontrol,
@@ -129,7 +129,7 @@ index 97cb00e222ca..0ddb833aebc8 100644
  
  struct kctl_proxy *get_kctl_proxy(void);
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 0e4505bd55ca..c530ccc7fc08 100644
+index 0e4505bd5..c530ccc7f 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -240,12 +240,6 @@ static int vfe_send_kctl_msg(struct snd_kcontrol *kcontrol,
@@ -202,7 +202,7 @@ index 0e4505bd55ca..c530ccc7fc08 100644
  
  no_mem:
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-kctl.c b/sound/soc/intel/skylake/virtio/skl-virtio-kctl.c
-index 01283716996e..c57ab912309e 100644
+index 012837169..c57ab9123 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-kctl.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-kctl.c
 @@ -15,17 +15,52 @@

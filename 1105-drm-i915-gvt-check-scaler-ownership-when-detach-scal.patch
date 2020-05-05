@@ -14,7 +14,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 6 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index b465bcacfc2d..b62645c050f5 100644
+index b465bcacf..b62645c05 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -3474,6 +3474,12 @@ static void skl_detach_scaler(struct intel_crtc *intel_crtc, int id)

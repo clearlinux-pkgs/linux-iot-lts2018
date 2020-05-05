@@ -29,7 +29,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  2 files changed, 140 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 44730c2b83f0..9b7b6f555ffe 100644
+index 44730c2b8..9b7b6f555 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -60,6 +60,9 @@ static const int mic_quatro_list[][SKL_CH_QUATRO] = {
@@ -210,7 +210,7 @@ index 44730c2b83f0..9b7b6f555ffe 100644
  	return 0;
  }
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index adf35fa0d75c..0c6b5c6b9c99 100644
+index adf35fa0d..0c6b5c6b9 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -28,6 +28,10 @@

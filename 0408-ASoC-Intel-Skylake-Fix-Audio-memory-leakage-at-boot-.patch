@@ -46,7 +46,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  1 file changed, 4 insertions(+), 3 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 668e7d020a9c..7c867426b39b 100644
+index 668e7d020..7c867426b 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -1178,10 +1178,11 @@ int skl_module_sysfs_init(struct skl_sst *ctx, struct kobject *kobj)

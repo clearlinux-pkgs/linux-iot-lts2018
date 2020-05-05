@@ -21,7 +21,7 @@ Signed-off-by: Bandi,Kushal <kushal.bandi@intel.com>
  2 files changed, 15 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
-index 9025b9586d67..7958fd836a12 100644
+index 9025b9586..7958fd836 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 @@ -20,7 +20,7 @@
@@ -77,7 +77,7 @@ index 9025b9586d67..7958fd836a12 100644
  
  int process_set_format_thread(void *data)
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
-index 39e2e556a008..5a02b8275de4 100644
+index 39e2e556a..5a02b8275 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
 @@ -15,7 +15,7 @@

@@ -21,7 +21,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  1 file changed, 7 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_csr.c b/drivers/gpu/drm/i915/intel_csr.c
-index ca1a578d790d..ddcc51f5e8be 100644
+index ca1a578d7..ddcc51f5e 100644
 --- a/drivers/gpu/drm/i915/intel_csr.c
 +++ b/drivers/gpu/drm/i915/intel_csr.c
 @@ -471,7 +471,13 @@ void intel_csr_ucode_init(struct drm_i915_private *dev_priv)

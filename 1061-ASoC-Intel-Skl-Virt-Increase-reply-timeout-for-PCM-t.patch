@@ -22,7 +22,7 @@ Tested-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  2 files changed, 54 insertions(+), 10 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index c9475a0852e1..c41292b8fe2a 100644
+index c9475a085..c41292b8f 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -139,9 +139,34 @@ const struct snd_pcm *vfe_skl_find_pcm_by_name(struct skl *skl, char *pcm_name)
@@ -124,7 +124,7 @@ index c9475a0852e1..c41292b8fe2a 100644
  
  int vfe_pcm_prepare(struct snd_pcm_substream *substream)
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index fcc2dc29c3f7..7f62b6cb2474 100644
+index fcc2dc29c..7f62b6cb2 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -13,6 +13,8 @@

@@ -22,7 +22,7 @@ Acked-by: Anthony Xu <anthony.xu@intel.com>
  2 files changed, 41 insertions(+), 23 deletions(-)
 
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 9c50d94f0565..7e067ac4923d 100644
+index 9c50d94f0..7e067ac49 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -659,6 +659,32 @@ static void acrn_ioreq_notify_client(struct ioreq_client *client)
@@ -114,7 +114,7 @@ index 9c50d94f0565..7e067ac4923d 100644
  EXPORT_SYMBOL_GPL(acrn_ioreq_complete_request);
  
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index d28ce51ff271..330af7110a42 100644
+index d28ce51ff..330af7110 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -184,9 +184,17 @@ struct vhm_request {

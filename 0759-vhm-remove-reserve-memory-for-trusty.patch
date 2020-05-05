@@ -21,7 +21,7 @@ Signed-off-by: Li, Fei1 <fei1.li@intel.com>
  6 files changed, 2 insertions(+), 88 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 33df39be0dbd..59dd49b6c84c 100644
+index 33df39be0..59dd49b6c 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -224,18 +224,10 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -65,7 +65,7 @@ index 33df39be0dbd..59dd49b6c84c 100644
  		break;
  	}
 diff --git a/drivers/vhm/Kconfig b/drivers/vhm/Kconfig
-index 4ddb1314709a..42ae26937acb 100644
+index 4ddb13147..42ae26937 100644
 --- a/drivers/vhm/Kconfig
 +++ b/drivers/vhm/Kconfig
 @@ -1,7 +1,6 @@
@@ -77,7 +77,7 @@ index 4ddb1314709a..42ae26937acb 100644
  	depends on HUGETLBFS
  	depends on !VMAP_STACK
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index 0b9168f5672b..494461b05490 100644
+index 0b9168f56..494461b05 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -53,22 +53,8 @@
@@ -169,7 +169,7 @@ index 0b9168f5672b..494461b05490 100644
  {
  	struct vhm_vm *vm;
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 330af7110a42..1c47a529918f 100644
+index 330af7110..1c47a5299 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -76,9 +76,6 @@
@@ -183,7 +183,7 @@ index 330af7110a42..1c47a529918f 100644
   * @brief Hypercall
   *
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 7b6b1b40615b..49c429921e05 100644
+index 7b6b1b406..49c429921 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -180,9 +180,6 @@ int map_guest_memseg(struct vhm_vm *vm, struct vm_memmap *memmap);
@@ -197,7 +197,7 @@ index 7b6b1b40615b..49c429921e05 100644
  void hugepage_free_guest(struct vhm_vm *vm);
  void *hugepage_map_guest_phys(struct vhm_vm *vm, u64 guest_phys, size_t size);
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index d3b26bdbc675..65f647451fb8 100644
+index d3b26bdbc..65f647451 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -75,7 +75,6 @@ extern struct mutex vhm_vm_list_lock;

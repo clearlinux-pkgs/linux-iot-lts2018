@@ -18,7 +18,7 @@ Signed-off-by: spoluri <sarat.chandra.poluri@intel.com>
  1 file changed, 5 insertions(+)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
-index e906f14b42bf..309929a9f530 100644
+index e906f14b4..309929a9f 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
 @@ -3,6 +3,7 @@

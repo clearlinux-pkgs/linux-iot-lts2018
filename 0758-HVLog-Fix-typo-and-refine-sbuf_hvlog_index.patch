@@ -16,7 +16,7 @@ Reviewed-by: Yan, Like <like.yan@intel.com>
  1 file changed, 15 insertions(+), 15 deletions(-)
 
 diff --git a/drivers/acrn/acrn_hvlog.c b/drivers/acrn/acrn_hvlog.c
-index 6d27b79cb1a1..84e04ee32819 100644
+index 6d27b79cb..84e04ee32 100644
 --- a/drivers/acrn/acrn_hvlog.c
 +++ b/drivers/acrn/acrn_hvlog.c
 @@ -74,9 +74,9 @@
