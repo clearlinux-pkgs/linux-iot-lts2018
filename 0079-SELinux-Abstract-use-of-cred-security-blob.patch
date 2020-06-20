@@ -14,7 +14,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  3 files changed, 34 insertions(+), 29 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index c57428596..3cbb76828 100644
+index 452254fd8..a3531637a 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -228,7 +228,7 @@ static inline u32 cred_sid(const struct cred *cred)
@@ -218,7 +218,7 @@ index c57428596..3cbb76828 100644
  	tsid = __tsec->sid;
  
  	return avc_has_perm(&selinux_state,
-@@ -6424,7 +6424,7 @@ static int selinux_getprocattr(struct task_struct *p,
+@@ -6444,7 +6444,7 @@ static int selinux_getprocattr(struct task_struct *p,
  	unsigned len;
  
  	rcu_read_lock();
@@ -227,7 +227,7 @@ index c57428596..3cbb76828 100644
  
  	if (current != p) {
  		error = avc_has_perm(&selinux_state,
-@@ -6547,7 +6547,7 @@ static int selinux_setprocattr(const char *name, void *value, size_t size)
+@@ -6567,7 +6567,7 @@ static int selinux_setprocattr(const char *name, void *value, size_t size)
  	   operation.  See selinux_bprm_set_creds for the execve
  	   checks and may_create for the file creation checks. The
  	   operation will then fail if the context is not permitted. */
@@ -236,7 +236,7 @@ index c57428596..3cbb76828 100644
  	if (!strcmp(name, "exec")) {
  		tsec->exec_sid = sid;
  	} else if (!strcmp(name, "fscreate")) {
-@@ -6680,7 +6680,7 @@ static int selinux_key_alloc(struct key *k, const struct cred *cred,
+@@ -6700,7 +6700,7 @@ static int selinux_key_alloc(struct key *k, const struct cred *cred,
  	if (!ksec)
  		return -ENOMEM;
  

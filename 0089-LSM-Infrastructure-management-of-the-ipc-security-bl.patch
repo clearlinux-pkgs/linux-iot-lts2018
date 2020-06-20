@@ -202,10 +202,10 @@ index 55dfdc0c4..c94b0aa70 100644
  
  int security_sem_associate(struct kern_ipc_perm *sma, int semflg)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 267448545..91c3a61eb 100644
+index f2eea05c9..85a78643a 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
-@@ -5860,51 +5860,22 @@ static int selinux_netlink_send(struct sock *sk, struct sk_buff *skb)
+@@ -5880,51 +5880,22 @@ static int selinux_netlink_send(struct sock *sk, struct sk_buff *skb)
  	return selinux_nlmsg_perm(sk, skb);
  }
  
@@ -259,7 +259,7 @@ index 267448545..91c3a61eb 100644
  static int ipc_has_perm(struct kern_ipc_perm *ipc_perms,
  			u32 perms)
  {
-@@ -5912,7 +5883,7 @@ static int ipc_has_perm(struct kern_ipc_perm *ipc_perms,
+@@ -5932,7 +5903,7 @@ static int ipc_has_perm(struct kern_ipc_perm *ipc_perms,
  	struct common_audit_data ad;
  	u32 sid = current_sid();
  
@@ -268,7 +268,7 @@ index 267448545..91c3a61eb 100644
  
  	ad.type = LSM_AUDIT_DATA_IPC;
  	ad.u.ipc_id = ipc_perms->key;
-@@ -5926,11 +5897,6 @@ static int selinux_msg_msg_alloc_security(struct msg_msg *msg)
+@@ -5946,11 +5917,6 @@ static int selinux_msg_msg_alloc_security(struct msg_msg *msg)
  	return msg_msg_alloc_security(msg);
  }
  
@@ -280,7 +280,7 @@ index 267448545..91c3a61eb 100644
  /* message queue security operations */
  static int selinux_msg_queue_alloc_security(struct kern_ipc_perm *msq)
  {
-@@ -5939,11 +5905,8 @@ static int selinux_msg_queue_alloc_security(struct kern_ipc_perm *msq)
+@@ -5959,11 +5925,8 @@ static int selinux_msg_queue_alloc_security(struct kern_ipc_perm *msq)
  	u32 sid = current_sid();
  	int rc;
  
@@ -294,7 +294,7 @@ index 267448545..91c3a61eb 100644
  
  	ad.type = LSM_AUDIT_DATA_IPC;
  	ad.u.ipc_id = msq->key;
-@@ -5951,16 +5914,7 @@ static int selinux_msg_queue_alloc_security(struct kern_ipc_perm *msq)
+@@ -5971,16 +5934,7 @@ static int selinux_msg_queue_alloc_security(struct kern_ipc_perm *msq)
  	rc = avc_has_perm(&selinux_state,
  			  sid, isec->sid, SECCLASS_MSGQ,
  			  MSGQ__CREATE, &ad);
@@ -312,7 +312,7 @@ index 267448545..91c3a61eb 100644
  }
  
  static int selinux_msg_queue_associate(struct kern_ipc_perm *msq, int msqflg)
-@@ -5969,7 +5923,7 @@ static int selinux_msg_queue_associate(struct kern_ipc_perm *msq, int msqflg)
+@@ -5989,7 +5943,7 @@ static int selinux_msg_queue_associate(struct kern_ipc_perm *msq, int msqflg)
  	struct common_audit_data ad;
  	u32 sid = current_sid();
  
@@ -321,7 +321,7 @@ index 267448545..91c3a61eb 100644
  
  	ad.type = LSM_AUDIT_DATA_IPC;
  	ad.u.ipc_id = msq->key;
-@@ -6018,8 +5972,8 @@ static int selinux_msg_queue_msgsnd(struct kern_ipc_perm *msq, struct msg_msg *m
+@@ -6038,8 +5992,8 @@ static int selinux_msg_queue_msgsnd(struct kern_ipc_perm *msq, struct msg_msg *m
  	u32 sid = current_sid();
  	int rc;
  
@@ -332,7 +332,7 @@ index 267448545..91c3a61eb 100644
  
  	/*
  	 * First time through, need to assign label to the message
-@@ -6066,8 +6020,8 @@ static int selinux_msg_queue_msgrcv(struct kern_ipc_perm *msq, struct msg_msg *m
+@@ -6086,8 +6040,8 @@ static int selinux_msg_queue_msgrcv(struct kern_ipc_perm *msq, struct msg_msg *m
  	u32 sid = task_sid(target);
  	int rc;
  
@@ -343,7 +343,7 @@ index 267448545..91c3a61eb 100644
  
  	ad.type = LSM_AUDIT_DATA_IPC;
  	ad.u.ipc_id = msq->key;
-@@ -6090,11 +6044,8 @@ static int selinux_shm_alloc_security(struct kern_ipc_perm *shp)
+@@ -6110,11 +6064,8 @@ static int selinux_shm_alloc_security(struct kern_ipc_perm *shp)
  	u32 sid = current_sid();
  	int rc;
  
@@ -357,7 +357,7 @@ index 267448545..91c3a61eb 100644
  
  	ad.type = LSM_AUDIT_DATA_IPC;
  	ad.u.ipc_id = shp->key;
-@@ -6102,16 +6053,7 @@ static int selinux_shm_alloc_security(struct kern_ipc_perm *shp)
+@@ -6122,16 +6073,7 @@ static int selinux_shm_alloc_security(struct kern_ipc_perm *shp)
  	rc = avc_has_perm(&selinux_state,
  			  sid, isec->sid, SECCLASS_SHM,
  			  SHM__CREATE, &ad);
@@ -375,7 +375,7 @@ index 267448545..91c3a61eb 100644
  }
  
  static int selinux_shm_associate(struct kern_ipc_perm *shp, int shmflg)
-@@ -6120,7 +6062,7 @@ static int selinux_shm_associate(struct kern_ipc_perm *shp, int shmflg)
+@@ -6140,7 +6082,7 @@ static int selinux_shm_associate(struct kern_ipc_perm *shp, int shmflg)
  	struct common_audit_data ad;
  	u32 sid = current_sid();
  
@@ -384,7 +384,7 @@ index 267448545..91c3a61eb 100644
  
  	ad.type = LSM_AUDIT_DATA_IPC;
  	ad.u.ipc_id = shp->key;
-@@ -6187,11 +6129,8 @@ static int selinux_sem_alloc_security(struct kern_ipc_perm *sma)
+@@ -6207,11 +6149,8 @@ static int selinux_sem_alloc_security(struct kern_ipc_perm *sma)
  	u32 sid = current_sid();
  	int rc;
  
@@ -398,7 +398,7 @@ index 267448545..91c3a61eb 100644
  
  	ad.type = LSM_AUDIT_DATA_IPC;
  	ad.u.ipc_id = sma->key;
-@@ -6199,16 +6138,7 @@ static int selinux_sem_alloc_security(struct kern_ipc_perm *sma)
+@@ -6219,16 +6158,7 @@ static int selinux_sem_alloc_security(struct kern_ipc_perm *sma)
  	rc = avc_has_perm(&selinux_state,
  			  sid, isec->sid, SECCLASS_SEM,
  			  SEM__CREATE, &ad);
@@ -416,7 +416,7 @@ index 267448545..91c3a61eb 100644
  }
  
  static int selinux_sem_associate(struct kern_ipc_perm *sma, int semflg)
-@@ -6217,7 +6147,7 @@ static int selinux_sem_associate(struct kern_ipc_perm *sma, int semflg)
+@@ -6237,7 +6167,7 @@ static int selinux_sem_associate(struct kern_ipc_perm *sma, int semflg)
  	struct common_audit_data ad;
  	u32 sid = current_sid();
  
@@ -425,7 +425,7 @@ index 267448545..91c3a61eb 100644
  
  	ad.type = LSM_AUDIT_DATA_IPC;
  	ad.u.ipc_id = sma->key;
-@@ -6303,7 +6233,7 @@ static int selinux_ipc_permission(struct kern_ipc_perm *ipcp, short flag)
+@@ -6323,7 +6253,7 @@ static int selinux_ipc_permission(struct kern_ipc_perm *ipcp, short flag)
  
  static void selinux_ipc_getsecid(struct kern_ipc_perm *ipcp, u32 *secid)
  {
@@ -434,7 +434,7 @@ index 267448545..91c3a61eb 100644
  	*secid = isec->sid;
  }
  
-@@ -6845,6 +6775,8 @@ struct lsm_blob_sizes selinux_blob_sizes = {
+@@ -6865,6 +6795,8 @@ struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_cred = sizeof(struct task_security_struct),
  	.lbs_file = sizeof(struct file_security_struct),
  	.lbs_inode = sizeof(struct inode_security_struct),
@@ -443,7 +443,7 @@ index 267448545..91c3a61eb 100644
  	.lbs_sock = sizeof(struct sk_security_struct),
  	.lbs_superblock = sizeof(struct superblock_security_struct),
  };
-@@ -6956,24 +6888,20 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -6976,24 +6908,20 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(ipc_getsecid, selinux_ipc_getsecid),
  
  	LSM_HOOK_INIT(msg_msg_alloc_security, selinux_msg_msg_alloc_security),

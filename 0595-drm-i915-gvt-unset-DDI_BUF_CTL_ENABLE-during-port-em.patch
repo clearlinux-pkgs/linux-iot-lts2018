@@ -15,10 +15,10 @@ Change-Id: Ic8c738baa472d7f1086081cb1b634670327aae97
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/display.c b/drivers/gpu/drm/i915/gvt/display.c
-index 40ecca217..58b32dbd5 100644
+index 39b255985..9a41756c7 100644
 --- a/drivers/gpu/drm/i915/gvt/display.c
 +++ b/drivers/gpu/drm/i915/gvt/display.c
-@@ -228,7 +228,7 @@ static void emulate_monitor_status_change(struct intel_vgpu *vgpu)
+@@ -255,7 +255,7 @@ static void emulate_monitor_status_change(struct intel_vgpu *vgpu)
  			vgpu_vreg_t(vgpu, PORT_CLK_SEL(PORT_B)) |=
  				PORT_CLK_SEL_LCPLL_810;
  		}
@@ -27,7 +27,7 @@ index 40ecca217..58b32dbd5 100644
  		vgpu_vreg_t(vgpu, DDI_BUF_CTL(PORT_B)) &= ~DDI_BUF_IS_IDLE;
  		vgpu_vreg_t(vgpu, SDEISR) |= SDE_PORTB_HOTPLUG_CPT;
  	}
-@@ -248,7 +248,7 @@ static void emulate_monitor_status_change(struct intel_vgpu *vgpu)
+@@ -281,7 +281,7 @@ static void emulate_monitor_status_change(struct intel_vgpu *vgpu)
  			vgpu_vreg_t(vgpu, PORT_CLK_SEL(PORT_C)) |=
  				PORT_CLK_SEL_LCPLL_810;
  		}
@@ -36,7 +36,7 @@ index 40ecca217..58b32dbd5 100644
  		vgpu_vreg_t(vgpu, DDI_BUF_CTL(PORT_C)) &= ~DDI_BUF_IS_IDLE;
  		vgpu_vreg_t(vgpu, SFUSE_STRAP) |= SFUSE_STRAP_DDIC_DETECTED;
  	}
-@@ -268,7 +268,7 @@ static void emulate_monitor_status_change(struct intel_vgpu *vgpu)
+@@ -307,7 +307,7 @@ static void emulate_monitor_status_change(struct intel_vgpu *vgpu)
  			vgpu_vreg_t(vgpu, PORT_CLK_SEL(PORT_D)) |=
  				PORT_CLK_SEL_LCPLL_810;
  		}

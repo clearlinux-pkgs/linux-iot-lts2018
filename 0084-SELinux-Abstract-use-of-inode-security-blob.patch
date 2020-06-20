@@ -14,7 +14,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  3 files changed, 21 insertions(+), 15 deletions(-)
 
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 635af1cbd..4c3623abf 100644
+index 6961c8e1e..75c65c4b8 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -276,7 +276,7 @@ static int __inode_security_revalidate(struct inode *inode,
@@ -124,7 +124,7 @@ index 635af1cbd..4c3623abf 100644
  	u32 sid = task_sid(p);
  
  	spin_lock(&isec->lock);
-@@ -6575,7 +6575,7 @@ static void selinux_release_secctx(char *secdata, u32 seclen)
+@@ -6595,7 +6595,7 @@ static void selinux_release_secctx(char *secdata, u32 seclen)
  
  static void selinux_inode_invalidate_secctx(struct inode *inode)
  {

@@ -116,7 +116,7 @@ index d9aa521b5..0447d9d8c 100644
  	bool "Enable the securityfs filesystem"
  	help
 diff --git a/security/apparmor/domain.c b/security/apparmor/domain.c
-index bdf9e4cef..4fca9dac4 100644
+index b9d5b3459..2990d36fe 100644
 --- a/security/apparmor/domain.c
 +++ b/security/apparmor/domain.c
 @@ -979,7 +979,7 @@ int apparmor_bprm_set_creds(struct linux_binprm *bprm)
@@ -423,7 +423,7 @@ index 44416ebec..eee803e1a 100644
  
  void security_transfer_creds(struct cred *new, const struct cred *old)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 3cbb76828..a47ff07fa 100644
+index a3531637a..78eb0b04d 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -213,12 +213,9 @@ static void cred_init_security(void)
@@ -498,7 +498,7 @@ index 3cbb76828..a47ff07fa 100644
  	return 0;
  }
  
-@@ -6943,6 +6904,10 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
+@@ -6963,6 +6924,10 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
  }
  #endif
  
@@ -509,7 +509,7 @@ index 3cbb76828..a47ff07fa 100644
  static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(binder_set_context_mgr, selinux_binder_set_context_mgr),
  	LSM_HOOK_INIT(binder_transaction, selinux_binder_transaction),
-@@ -7025,8 +6990,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -7045,8 +7010,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(file_open, selinux_file_open),
  
  	LSM_HOOK_INIT(task_alloc, selinux_task_alloc),
@@ -518,7 +518,7 @@ index 3cbb76828..a47ff07fa 100644
  	LSM_HOOK_INIT(cred_prepare, selinux_cred_prepare),
  	LSM_HOOK_INIT(cred_transfer, selinux_cred_transfer),
  	LSM_HOOK_INIT(cred_getsecid, selinux_cred_getsecid),
-@@ -7182,11 +7145,19 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -7202,11 +7165,19 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  
  static __init int selinux_init(void)
  {

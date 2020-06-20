@@ -18,10 +18,10 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  5 files changed, 89 insertions(+), 45 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 1fc8ea0f5..42f2e3021 100644
+index 763b31645..6dbe8d856 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -386,6 +386,7 @@ static struct mei_cl_cb *mei_io_cb_init(struct mei_cl *cl,
+@@ -388,6 +388,7 @@ static struct mei_cl_cb *mei_io_cb_init(struct mei_cl *cl,
  	cb->cl = cl;
  	cb->buf_idx = 0;
  	cb->fop_type = type;
@@ -29,7 +29,7 @@ index 1fc8ea0f5..42f2e3021 100644
  	return cb;
  }
  
-@@ -1528,16 +1529,29 @@ int mei_cl_read_start(struct mei_cl *cl, size_t length, const struct file *fp)
+@@ -1530,16 +1531,29 @@ int mei_cl_read_start(struct mei_cl *cl, size_t length, const struct file *fp)
   *
   * @mei_hdr: mei message header
   * @cb: message callback structure
@@ -64,7 +64,7 @@ index 1fc8ea0f5..42f2e3021 100644
  }
  
  /**
-@@ -1555,8 +1569,9 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1557,8 +1571,9 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  {
  	struct mei_device *dev;
  	struct mei_msg_data *buf;
@@ -76,7 +76,7 @@ index 1fc8ea0f5..42f2e3021 100644
  	size_t len;
  	size_t hbuf_len, dr_len;
  	int hbuf_slots;
-@@ -1596,36 +1611,36 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1598,36 +1613,36 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  	dr_slots = mei_dma_ring_empty_slots(dev);
  	dr_len = mei_slots2data(dr_slots);
  
@@ -122,7 +122,7 @@ index 1fc8ea0f5..42f2e3021 100644
  	if (rets)
  		goto err;
  
-@@ -1640,7 +1655,7 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1642,7 +1657,7 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  		}
  	}
  
@@ -131,7 +131,7 @@ index 1fc8ea0f5..42f2e3021 100644
  		list_move_tail(&cb->list, &dev->write_waiting_list);
  
  	return 0;
-@@ -1664,8 +1679,9 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1666,8 +1681,9 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  {
  	struct mei_device *dev;
  	struct mei_msg_data *buf;
@@ -143,7 +143,7 @@ index 1fc8ea0f5..42f2e3021 100644
  	size_t len, hbuf_len, dr_len;
  	int hbuf_slots;
  	u32 dr_slots;
-@@ -1705,7 +1721,7 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1707,7 +1723,7 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  	if (rets < 0)
  		goto err;
  
@@ -152,7 +152,7 @@ index 1fc8ea0f5..42f2e3021 100644
  
  	if (rets == 0) {
  		cl_dbg(dev, cl, "No flow control credentials: not sending.\n");
-@@ -1730,28 +1746,28 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1732,28 +1748,28 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  	dr_len =  mei_slots2data(dr_slots);
  
  	if (len + hdr_len <= hbuf_len) {
@@ -190,7 +190,7 @@ index 1fc8ea0f5..42f2e3021 100644
  	if (rets)
  		goto err;
  
-@@ -1765,7 +1781,7 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1767,7 +1783,7 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  	len = buf->size;
  
  out:

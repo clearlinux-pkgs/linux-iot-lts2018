@@ -15,10 +15,10 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  5 files changed, 320 insertions(+), 27 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 24dc7aee8..07bd98b84 100644
+index 989fc73d2..11749f1e9 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -362,6 +362,19 @@ static inline void mei_tx_cb_dequeue(struct mei_cl_cb *cb)
+@@ -364,6 +364,19 @@ static inline void mei_tx_cb_dequeue(struct mei_cl_cb *cb)
  	mei_io_cb_free(cb);
  }
  
@@ -38,7 +38,7 @@ index 24dc7aee8..07bd98b84 100644
  /**
   * mei_io_cb_init - allocate and initialize io callback
   *
-@@ -387,6 +400,7 @@ static struct mei_cl_cb *mei_io_cb_init(struct mei_cl *cl,
+@@ -389,6 +402,7 @@ static struct mei_cl_cb *mei_io_cb_init(struct mei_cl *cl,
  	cb->buf_idx = 0;
  	cb->fop_type = type;
  	cb->vtag = 0;
@@ -46,7 +46,7 @@ index 24dc7aee8..07bd98b84 100644
  	return cb;
  }
  
-@@ -569,6 +583,7 @@ static void mei_cl_init(struct mei_cl *cl, struct mei_device *dev)
+@@ -571,6 +585,7 @@ static void mei_cl_init(struct mei_cl *cl, struct mei_device *dev)
  	init_waitqueue_head(&cl->rx_wait);
  	init_waitqueue_head(&cl->tx_wait);
  	init_waitqueue_head(&cl->ev_wait);
@@ -54,7 +54,7 @@ index 24dc7aee8..07bd98b84 100644
  	spin_lock_init(&cl->rd_completed_lock);
  	INIT_LIST_HEAD(&cl->rd_completed);
  	INIT_LIST_HEAD(&cl->rd_pending);
-@@ -1241,6 +1256,61 @@ static int mei_cl_tx_flow_ctrl_creds_reduce(struct mei_cl *cl)
+@@ -1243,6 +1258,61 @@ static int mei_cl_tx_flow_ctrl_creds_reduce(struct mei_cl *cl)
  	return 0;
  }
  
@@ -116,7 +116,7 @@ index 24dc7aee8..07bd98b84 100644
  /**
   *  mei_cl_notify_fop2req - convert fop to proper request
   *
-@@ -1496,13 +1566,17 @@ int mei_cl_read_start(struct mei_cl *cl, size_t length, const struct file *fp)
+@@ -1498,13 +1568,17 @@ int mei_cl_read_start(struct mei_cl *cl, size_t length, const struct file *fp)
  		return 0;
  
  	/* HW currently supports only one pending read */
@@ -135,7 +135,7 @@ index 24dc7aee8..07bd98b84 100644
  	rets = pm_runtime_get(dev->dev);
  	if (rets < 0 && rets != -EINPROGRESS) {
  		pm_runtime_put_noidle(dev->dev);
-@@ -1620,6 +1694,9 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1622,6 +1696,9 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  
  	hdr_len = mei_msg_hdr_init(mei_hdr, cb);
  
@@ -145,7 +145,7 @@ index 24dc7aee8..07bd98b84 100644
  	/**
  	 * Split the message only if we can write the whole host buffer
  	 * otherwise wait for next time the host buffer is empty.
-@@ -1730,6 +1807,9 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1732,6 +1809,9 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  
  	hdr_len = mei_msg_hdr_init(mei_hdr, cb);
  

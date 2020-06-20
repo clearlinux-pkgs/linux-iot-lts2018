@@ -41,10 +41,10 @@ index 17d7444a2..cb135822f 100644
 +		POWER_DOWN
 +		POWER_UP
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 657973beb..d46960fb5 100644
+index d6e871fb2..e6833acb8 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -720,7 +720,7 @@ int mei_cl_unlink(struct mei_cl *cl)
+@@ -722,7 +722,7 @@ int mei_cl_unlink(struct mei_cl *cl)
  
  void mei_host_client_init(struct mei_device *dev)
  {

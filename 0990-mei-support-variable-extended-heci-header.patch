@@ -17,10 +17,10 @@ Signed-off-by: Aviad Nissel <aviad.nissel@intel.com>
  4 files changed, 267 insertions(+), 96 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index d46960fb5..763e44374 100644
+index e6833acb8..0c3dc9581 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -1662,31 +1662,53 @@ int mei_cl_read_start(struct mei_cl *cl, size_t length, const struct file *fp)
+@@ -1664,31 +1664,53 @@ int mei_cl_read_start(struct mei_cl *cl, size_t length, const struct file *fp)
  /**
   * mei_msg_hdr_init - initialize mei message header
   *
@@ -89,7 +89,7 @@ index d46960fb5..763e44374 100644
  }
  
  /**
-@@ -1704,11 +1726,11 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1706,11 +1728,11 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  {
  	struct mei_device *dev;
  	struct mei_msg_data *buf;
@@ -104,7 +104,7 @@ index d46960fb5..763e44374 100644
  	int hbuf_slots;
  	u32 dr_slots;
  	u32 dma_len;
-@@ -1734,7 +1756,7 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1736,7 +1758,7 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  		return 0;
  	}
  
@@ -113,7 +113,7 @@ index d46960fb5..763e44374 100644
  	data = buf->data + cb->buf_idx;
  	hbuf_slots = mei_hbuf_empty_slots(dev);
  	if (hbuf_slots < 0) {
-@@ -1746,45 +1768,54 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1748,45 +1770,54 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  	dr_slots = mei_dma_ring_empty_slots(dev);
  	dr_len = mei_slots2data(dr_slots);
  
@@ -180,7 +180,7 @@ index d46960fb5..763e44374 100644
  
  	if (first_chunk) {
  		if (mei_cl_tx_flow_ctrl_creds_reduce(cl)) {
-@@ -1796,9 +1827,11 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1798,9 +1829,11 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  	if (mei_hdr->msg_complete)
  		list_move_tail(&cb->list, &dev->write_waiting_list);
  
@@ -192,7 +192,7 @@ index d46960fb5..763e44374 100644
  	cl->status = rets;
  	list_move_tail(&cb->list, cmpl_list);
  	return rets;
-@@ -1817,10 +1850,11 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1819,10 +1852,11 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  {
  	struct mei_device *dev;
  	struct mei_msg_data *buf;
@@ -207,7 +207,7 @@ index d46960fb5..763e44374 100644
  	int hbuf_slots;
  	u32 dr_slots;
  	u32 dma_len;
-@@ -1837,9 +1871,9 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1839,9 +1873,9 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  	dev = cl->dev;
  
  	buf = &cb->buf;
@@ -219,7 +219,7 @@ index d46960fb5..763e44374 100644
  
  	blocking = cb->blocking;
  	data = buf->data;
-@@ -1859,20 +1893,27 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1861,20 +1895,27 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  	if (rets < 0)
  		goto err;
  
@@ -250,7 +250,7 @@ index d46960fb5..763e44374 100644
  		goto out;
  	}
  
-@@ -1886,29 +1927,30 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1888,29 +1929,30 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  	dr_slots = mei_dma_ring_empty_slots(dev);
  	dr_len =  mei_slots2data(dr_slots);
  
@@ -292,7 +292,7 @@ index d46960fb5..763e44374 100644
  	if (rets)
  		goto err;
  
-@@ -1917,9 +1959,9 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1919,9 +1961,9 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  		goto err;
  
  	cl->writing_state = MEI_WRITING;
@@ -304,7 +304,7 @@ index d46960fb5..763e44374 100644
  
  out:
  	if (mei_hdr->msg_complete)
-@@ -1947,7 +1989,7 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1949,7 +1991,7 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  		}
  	}
  
@@ -313,7 +313,7 @@ index d46960fb5..763e44374 100644
  err:
  	cl_dbg(dev, cl, "rpm: autosuspend\n");
  	pm_runtime_mark_last_busy(dev->dev);
-@@ -1955,6 +1997,8 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1957,6 +1999,8 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  free:
  	mei_io_cb_free(cb);
  

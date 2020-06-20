@@ -750,7 +750,7 @@ index 4ad5fe27e..afc61be75 100644
  		pr_info_ratelimited("unable to obtain relabeling permission\n");
  		return err;
 diff --git a/net/netlabel/netlabel_kapi.c b/net/netlabel/netlabel_kapi.c
-index 9fc319de9..c383fd54a 100644
+index 551bf3be9..190999503 100644
 --- a/net/netlabel/netlabel_kapi.c
 +++ b/net/netlabel/netlabel_kapi.c
 @@ -244,7 +244,7 @@ int netlbl_cfg_unlbl_static_add(struct net *net,
@@ -962,10 +962,10 @@ index 2318e2e27..991fe3a69 100644
  #else
  static inline void unix_get_secdata(struct scm_cookie *scm, struct sk_buff *skb)
 diff --git a/net/xfrm/xfrm_policy.c b/net/xfrm/xfrm_policy.c
-index 12a268b75..0a962b671 100644
+index 6a12efb4c..51cbf8428 100644
 --- a/net/xfrm/xfrm_policy.c
 +++ b/net/xfrm/xfrm_policy.c
-@@ -1085,7 +1085,7 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
+@@ -1080,7 +1080,7 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
  	match = xfrm_selector_match(sel, fl, family);
  	if (match)
  		ret = security_xfrm_policy_lookup(pol->security,
@@ -974,7 +974,7 @@ index 12a268b75..0a962b671 100644
  						  dir);
  
  	return ret;
-@@ -1204,7 +1204,7 @@ static struct xfrm_policy *xfrm_sk_policy_lookup(const struct sock *sk, int dir,
+@@ -1199,7 +1199,7 @@ static struct xfrm_policy *xfrm_sk_policy_lookup(const struct sock *sk, int dir,
  				goto out;
  			}
  			err = security_xfrm_policy_lookup(pol->security,
@@ -983,7 +983,7 @@ index 12a268b75..0a962b671 100644
  						      dir);
  			if (!err) {
  				if (!xfrm_pol_hold_rcu(pol))
-@@ -2304,7 +2304,7 @@ int __xfrm_decode_session(struct sk_buff *skb, struct flowi *fl,
+@@ -2299,7 +2299,7 @@ int __xfrm_decode_session(struct sk_buff *skb, struct flowi *fl,
  
  	afinfo->decode_session(skb, fl, reverse);
  

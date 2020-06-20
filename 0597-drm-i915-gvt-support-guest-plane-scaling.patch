@@ -26,10 +26,10 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  8 files changed, 130 insertions(+), 37 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/display.c b/drivers/gpu/drm/i915/gvt/display.c
-index 58b32dbd5..73a2dbbaf 100644
+index 9a41756c7..2a13e7395 100644
 --- a/drivers/gpu/drm/i915/gvt/display.c
 +++ b/drivers/gpu/drm/i915/gvt/display.c
-@@ -478,15 +478,33 @@ static void intel_gvt_vblank_work(struct work_struct *w)
+@@ -517,15 +517,33 @@ static void intel_gvt_vblank_work(struct work_struct *w)
  	mutex_unlock(&gvt->lock);
  }
  

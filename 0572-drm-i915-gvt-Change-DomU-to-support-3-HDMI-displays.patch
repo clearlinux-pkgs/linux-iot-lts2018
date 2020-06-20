@@ -26,10 +26,10 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  3 files changed, 30 insertions(+), 13 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/display.c b/drivers/gpu/drm/i915/gvt/display.c
-index 2e01c3888..40ecca217 100644
+index 82068a7f0..39b255985 100644
 --- a/drivers/gpu/drm/i915/gvt/display.c
 +++ b/drivers/gpu/drm/i915/gvt/display.c
-@@ -314,8 +314,8 @@ static void clean_virtual_dp_monitor(struct intel_vgpu *vgpu, int port_num)
+@@ -353,8 +353,8 @@ static void clean_virtual_dp_monitor(struct intel_vgpu *vgpu, int port_num)
  	port->dpcd = NULL;
  }
  
@@ -40,7 +40,7 @@ index 2e01c3888..40ecca217 100644
  {
  	struct intel_vgpu_port *port = intel_vgpu_port(vgpu, port_num);
  	int valid_extensions = 1;
-@@ -356,9 +356,11 @@ static int setup_virtual_dp_monitor(struct intel_vgpu *vgpu, int port_num,
+@@ -395,9 +395,11 @@ static int setup_virtual_dp_monitor(struct intel_vgpu *vgpu, int port_num,
  
  	port->edid->data_valid = true;
  
@@ -55,7 +55,7 @@ index 2e01c3888..40ecca217 100644
  	port->type = type;
  
  	emulate_monitor_status_change(vgpu);
-@@ -488,22 +490,36 @@ void intel_gvt_init_pipe_info(struct intel_gvt *gvt)
+@@ -527,22 +529,36 @@ void intel_gvt_init_pipe_info(struct intel_gvt *gvt)
  	}
  }
  
@@ -95,7 +95,7 @@ index 2e01c3888..40ecca217 100644
  		}
  	}
  	drm_connector_list_iter_end(&conn_iter);
-@@ -560,11 +576,11 @@ int intel_vgpu_init_display(struct intel_vgpu *vgpu, u64 resolution)
+@@ -599,11 +615,11 @@ int intel_vgpu_init_display(struct intel_vgpu *vgpu, u64 resolution)
  	if (IS_BROXTON(dev_priv) || IS_KABYLAKE(dev_priv))
  		return setup_virtual_monitors(vgpu);
  	else if (IS_SKYLAKE(dev_priv))

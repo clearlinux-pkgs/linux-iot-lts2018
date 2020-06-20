@@ -8222,10 +8222,10 @@ index c7708feaa..97e88e5ba 100644
  	  SoundWire is a 2-Pin interface with data and clock line ratified
  	  by the MIPI Alliance. SoundWire is used for transporting data
 diff --git a/include/linux/mod_devicetable.h b/include/linux/mod_devicetable.h
-index 867db9b93..56dba16ab 100644
+index 84e4e2035..5aa8310b7 100644
 --- a/include/linux/mod_devicetable.h
 +++ b/include/linux/mod_devicetable.h
-@@ -762,4 +762,17 @@ struct typec_device_id {
+@@ -768,4 +768,17 @@ struct typec_device_id {
  	kernel_ulong_t driver_data;
  };
  

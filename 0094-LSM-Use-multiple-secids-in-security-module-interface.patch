@@ -287,10 +287,10 @@ index 40b3af05c..87c0d6944 100644
  		fl6.flowi6_uid = sock_net_uid(net, NULL);
  
 diff --git a/net/ipv4/cipso_ipv4.c b/net/ipv4/cipso_ipv4.c
-index 1c21dc5d6..6be71b158 100644
+index 5535b722f..cc7e8c107 100644
 --- a/net/ipv4/cipso_ipv4.c
 +++ b/net/ipv4/cipso_ipv4.c
-@@ -1481,7 +1481,7 @@ static int cipso_v4_gentag_loc(const struct cipso_v4_doi *doi_def,
+@@ -1483,7 +1483,7 @@ static int cipso_v4_gentag_loc(const struct cipso_v4_doi *doi_def,
  
  	buffer[0] = CIPSO_V4_TAG_LOCAL;
  	buffer[1] = CIPSO_V4_TAG_LOC_BLEN;
@@ -299,7 +299,7 @@ index 1c21dc5d6..6be71b158 100644
  
  	return CIPSO_V4_TAG_LOC_BLEN;
  }
-@@ -1501,7 +1501,7 @@ static int cipso_v4_parsetag_loc(const struct cipso_v4_doi *doi_def,
+@@ -1503,7 +1503,7 @@ static int cipso_v4_parsetag_loc(const struct cipso_v4_doi *doi_def,
  				 const unsigned char *tag,
  				 struct netlbl_lsm_secattr *secattr)
  {
@@ -309,7 +309,7 @@ index 1c21dc5d6..6be71b158 100644
  
  	return 0;
 diff --git a/net/netlabel/netlabel_kapi.c b/net/netlabel/netlabel_kapi.c
-index ee3e5b647..9fc319de9 100644
+index 15fe2120b..551bf3be9 100644
 --- a/net/netlabel/netlabel_kapi.c
 +++ b/net/netlabel/netlabel_kapi.c
 @@ -224,7 +224,7 @@ int netlbl_cfg_unlbl_static_add(struct net *net,
@@ -490,10 +490,10 @@ index 4a397cde1..782ee194f 100644
  	audit_info->sessionid = audit_get_sessionid(current);
  }
 diff --git a/net/xfrm/xfrm_policy.c b/net/xfrm/xfrm_policy.c
-index b30c07416..12a268b75 100644
+index 939f3adf0..6a12efb4c 100644
 --- a/net/xfrm/xfrm_policy.c
 +++ b/net/xfrm/xfrm_policy.c
-@@ -1084,7 +1084,8 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
+@@ -1079,7 +1079,8 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
  
  	match = xfrm_selector_match(sel, fl, family);
  	if (match)
@@ -503,7 +503,7 @@ index b30c07416..12a268b75 100644
  						  dir);
  
  	return ret;
-@@ -1203,7 +1204,7 @@ static struct xfrm_policy *xfrm_sk_policy_lookup(const struct sock *sk, int dir,
+@@ -1198,7 +1199,7 @@ static struct xfrm_policy *xfrm_sk_policy_lookup(const struct sock *sk, int dir,
  				goto out;
  			}
  			err = security_xfrm_policy_lookup(pol->security,
@@ -512,7 +512,7 @@ index b30c07416..12a268b75 100644
  						      dir);
  			if (!err) {
  				if (!xfrm_pol_hold_rcu(pol))
-@@ -2303,7 +2304,7 @@ int __xfrm_decode_session(struct sk_buff *skb, struct flowi *fl,
+@@ -2298,7 +2299,7 @@ int __xfrm_decode_session(struct sk_buff *skb, struct flowi *fl,
  
  	afinfo->decode_session(skb, fl, reverse);
  
@@ -536,10 +536,10 @@ index 47a8ff972..811a8b0a9 100644
  			x->km.state = XFRM_STATE_DEAD;
  			to_put = x;
 diff --git a/security/apparmor/audit.c b/security/apparmor/audit.c
-index eeaddfe0c..d67faf77d 100644
+index 70b9730c0..4b26b37c8 100644
 --- a/security/apparmor/audit.c
 +++ b/security/apparmor/audit.c
-@@ -225,14 +225,14 @@ int aa_audit_rule_known(struct audit_krule *rule)
+@@ -226,14 +226,14 @@ int aa_audit_rule_known(struct audit_krule *rule)
  	return 0;
  }
  
@@ -833,7 +833,7 @@ index 468695df6..26511761d 100644
  }
  #endif /* CONFIG_AUDIT */
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index c5314e535..bae16e643 100644
+index 6ca571f1e..e5c202a18 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -3464,15 +3464,15 @@ static int selinux_inode_listsecurity(struct inode *inode, char *buffer, size_t
@@ -979,7 +979,7 @@ index c5314e535..bae16e643 100644
  }
  
  static int selinux_tun_dev_alloc_security(void **security)
-@@ -6232,10 +6234,11 @@ static int selinux_ipc_permission(struct kern_ipc_perm *ipcp, short flag)
+@@ -6252,10 +6254,11 @@ static int selinux_ipc_permission(struct kern_ipc_perm *ipcp, short flag)
  	return ipc_has_perm(ipcp, av);
  }
  
@@ -993,7 +993,7 @@ index c5314e535..bae16e643 100644
  }
  
  static void selinux_d_instantiate(struct dentry *dentry, struct inode *inode)
-@@ -6442,16 +6445,18 @@ static int selinux_ismaclabel(const char *name)
+@@ -6462,16 +6465,18 @@ static int selinux_ismaclabel(const char *name)
  	return (strcmp(name, XATTR_SELINUX_SUFFIX) == 0);
  }
  

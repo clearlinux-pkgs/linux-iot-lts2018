@@ -85,7 +85,7 @@ index 6902fd2da..5c71bf364 100644
  		I915_STATE_WARN(1, "pipe state doesn't match!\n");
  		intel_dump_pipe_config(intel_crtc, pipe_config,
 diff --git a/drivers/gpu/drm/i915/intel_dp.c b/drivers/gpu/drm/i915/intel_dp.c
-index e76412b5a..735592abb 100644
+index da00b594d..9474585fc 100644
 --- a/drivers/gpu/drm/i915/intel_dp.c
 +++ b/drivers/gpu/drm/i915/intel_dp.c
 @@ -2075,7 +2075,12 @@ static void wait_panel_status(struct intel_dp *intel_dp,

@@ -14,10 +14,10 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  2 files changed, 43 insertions(+), 10 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 07bd98b84..01fbbe393 100644
+index 11749f1e9..3ef495fb7 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -453,6 +453,20 @@ static void mei_io_list_free_fp(struct list_head *head, const struct file *fp)
+@@ -455,6 +455,20 @@ static void mei_io_list_free_fp(struct list_head *head, const struct file *fp)
  			mei_io_cb_free(cb);
  }
  
@@ -38,7 +38,7 @@ index 07bd98b84..01fbbe393 100644
  /**
   * mei_cl_alloc_cb - a convenient wrapper for allocating read cb
   *
-@@ -562,7 +576,8 @@ int mei_cl_flush_queues(struct mei_cl *cl, const struct file *fp)
+@@ -564,7 +578,8 @@ int mei_cl_flush_queues(struct mei_cl *cl, const struct file *fp)
  	mei_io_tx_list_free_cl(&cl->dev->write_waiting_list, cl);
  	mei_io_list_flush_cl(&cl->dev->ctrl_wr_list, cl);
  	mei_io_list_flush_cl(&cl->dev->ctrl_rd_list, cl);
@@ -48,7 +48,7 @@ index 07bd98b84..01fbbe393 100644
  	spin_lock(&cl->rd_completed_lock);
  	mei_io_list_free_fp(&cl->rd_completed, fp);
  	spin_unlock(&cl->rd_completed_lock);
-@@ -1295,20 +1310,38 @@ static void mei_cl_read_vtag_add_fc(struct mei_cl *cl)
+@@ -1297,20 +1312,38 @@ static void mei_cl_read_vtag_add_fc(struct mei_cl *cl)
  	}
  }
  

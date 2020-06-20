@@ -21,10 +21,10 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  3 files changed, 144 insertions(+), 13 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 5d15501af..1fc8ea0f5 100644
+index d85e62286..763b31645 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -1558,10 +1558,13 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1560,10 +1560,13 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  	struct mei_msg_hdr mei_hdr;
  	size_t hdr_len = sizeof(mei_hdr);
  	size_t len;
@@ -39,7 +39,7 @@ index 5d15501af..1fc8ea0f5 100644
  
  	if (WARN_ON(!cl || !cl->dev))
  		return -ENODEV;
-@@ -1582,6 +1585,7 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1584,6 +1587,7 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  	}
  
  	len = buf->size - cb->buf_idx;
@@ -47,7 +47,7 @@ index 5d15501af..1fc8ea0f5 100644
  	hbuf_slots = mei_hbuf_empty_slots(dev);
  	if (hbuf_slots < 0) {
  		rets = -EOVERFLOW;
-@@ -1589,6 +1593,8 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1591,6 +1595,8 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  	}
  
  	hbuf_len = mei_slots2data(hbuf_slots);
@@ -56,7 +56,7 @@ index 5d15501af..1fc8ea0f5 100644
  
  	mei_msg_hdr_init(&mei_hdr, cb);
  
-@@ -1599,23 +1605,33 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
+@@ -1601,23 +1607,33 @@ int mei_cl_irq_write(struct mei_cl *cl, struct mei_cl_cb *cb,
  	if (len + hdr_len <= hbuf_len) {
  		mei_hdr.length = len;
  		mei_hdr.msg_complete = 1;
@@ -96,7 +96,7 @@ index 5d15501af..1fc8ea0f5 100644
  
  	if (first_chunk) {
  		if (mei_cl_tx_flow_ctrl_creds_reduce(cl)) {
-@@ -1650,11 +1666,13 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1652,11 +1668,13 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  	struct mei_msg_data *buf;
  	struct mei_msg_hdr mei_hdr;
  	size_t hdr_len = sizeof(mei_hdr);
@@ -112,7 +112,7 @@ index 5d15501af..1fc8ea0f5 100644
  
  	if (WARN_ON(!cl || !cl->dev))
  		return -ENODEV;
-@@ -1666,10 +1684,12 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1668,10 +1686,12 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  
  	buf = &cb->buf;
  	len = buf->size;
@@ -126,7 +126,7 @@ index 5d15501af..1fc8ea0f5 100644
  	rets = pm_runtime_get(dev->dev);
  	if (rets < 0 && rets != -EINPROGRESS) {
  		pm_runtime_put_noidle(dev->dev);
-@@ -1706,16 +1726,32 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1708,16 +1728,32 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  	}
  
  	hbuf_len = mei_slots2data(hbuf_slots);
@@ -161,7 +161,7 @@ index 5d15501af..1fc8ea0f5 100644
  	if (rets)
  		goto err;
  
-@@ -1724,7 +1760,9 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1726,7 +1762,9 @@ ssize_t mei_cl_write(struct mei_cl *cl, struct mei_cl_cb *cb)
  		goto err;
  
  	cl->writing_state = MEI_WRITING;

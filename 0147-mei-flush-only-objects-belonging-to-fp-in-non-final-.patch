@@ -10,10 +10,10 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
  1 file changed, 12 insertions(+), 9 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 01fbbe393..b598561ab 100644
+index 3ef495fb7..c00be9d5b 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -426,14 +426,16 @@ static void mei_io_list_flush_cl(struct list_head *head,
+@@ -428,14 +428,16 @@ static void mei_io_list_flush_cl(struct list_head *head,
   *
   * @head: An instance of our list structure
   * @cl: host client
@@ -32,7 +32,7 @@ index 01fbbe393..b598561ab 100644
  			mei_tx_cb_dequeue(cb);
  	}
  }
-@@ -572,12 +574,13 @@ int mei_cl_flush_queues(struct mei_cl *cl, const struct file *fp)
+@@ -574,12 +576,13 @@ int mei_cl_flush_queues(struct mei_cl *cl, const struct file *fp)
  	dev = cl->dev;
  
  	cl_dbg(dev, cl, "remove list entry belonging to cl\n");
@@ -51,7 +51,7 @@ index 01fbbe393..b598561ab 100644
  	spin_lock(&cl->rd_completed_lock);
  	mei_io_list_free_fp(&cl->rd_completed, fp);
  	spin_unlock(&cl->rd_completed_lock);
-@@ -795,8 +798,8 @@ static void mei_cl_set_disconnected(struct mei_cl *cl)
+@@ -797,8 +800,8 @@ static void mei_cl_set_disconnected(struct mei_cl *cl)
  		return;
  
  	cl->state = MEI_FILE_DISCONNECTED;

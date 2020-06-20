@@ -49,10 +49,10 @@ index ae915a516..e4c437318 100644
  	mutex_unlock(&bus->device_lock);
  
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 42f2e3021..24dc7aee8 100644
+index 6dbe8d856..989fc73d2 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -511,15 +511,19 @@ struct mei_cl_cb *mei_cl_enqueue_ctrl_wr_cb(struct mei_cl *cl, size_t length,
+@@ -513,15 +513,19 @@ struct mei_cl_cb *mei_cl_enqueue_ctrl_wr_cb(struct mei_cl *cl, size_t length,
   *
   * Return: cb on success, NULL if cb is not found
   */
@@ -77,7 +77,7 @@ index 42f2e3021..24dc7aee8 100644
  }
  
  /**
-@@ -545,7 +549,9 @@ int mei_cl_flush_queues(struct mei_cl *cl, const struct file *fp)
+@@ -547,7 +551,9 @@ int mei_cl_flush_queues(struct mei_cl *cl, const struct file *fp)
  	mei_io_list_flush_cl(&cl->dev->ctrl_wr_list, cl);
  	mei_io_list_flush_cl(&cl->dev->ctrl_rd_list, cl);
  	mei_io_list_free_fp(&cl->rd_pending, fp);
@@ -87,7 +87,7 @@ index 42f2e3021..24dc7aee8 100644
  
  	return 0;
  }
-@@ -563,6 +569,7 @@ static void mei_cl_init(struct mei_cl *cl, struct mei_device *dev)
+@@ -565,6 +571,7 @@ static void mei_cl_init(struct mei_cl *cl, struct mei_device *dev)
  	init_waitqueue_head(&cl->rx_wait);
  	init_waitqueue_head(&cl->tx_wait);
  	init_waitqueue_head(&cl->ev_wait);
@@ -95,7 +95,7 @@ index 42f2e3021..24dc7aee8 100644
  	INIT_LIST_HEAD(&cl->rd_completed);
  	INIT_LIST_HEAD(&cl->rd_pending);
  	INIT_LIST_HEAD(&cl->link);
-@@ -1841,7 +1848,7 @@ void mei_cl_complete(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1843,7 +1850,7 @@ void mei_cl_complete(struct mei_cl *cl, struct mei_cl_cb *cb)
  		break;
  
  	case MEI_FOP_READ:

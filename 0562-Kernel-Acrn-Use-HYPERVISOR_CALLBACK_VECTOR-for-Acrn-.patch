@@ -90,10 +90,10 @@ index eea9db84c..12ebc4f93 100644
 +EXPORT_SYMBOL(acrn_setup_intr_irq);
 +EXPORT_SYMBOL(acrn_remove_intr_irq);
 diff --git a/arch/x86/entry/entry_64.S b/arch/x86/entry/entry_64.S
-index ccb5e3486..1d1456a30 100644
+index dfe26f3cf..8ad43a7c9 100644
 --- a/arch/x86/entry/entry_64.S
 +++ b/arch/x86/entry/entry_64.S
-@@ -1191,6 +1191,11 @@ apicinterrupt3 HYPERV_STIMER0_VECTOR \
+@@ -1192,6 +1192,11 @@ apicinterrupt3 HYPERV_STIMER0_VECTOR \
  	hv_stimer0_callback_vector hv_stimer0_vector_handler
  #endif /* CONFIG_HYPERV */
  

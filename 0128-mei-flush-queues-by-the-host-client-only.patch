@@ -16,10 +16,10 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 2 insertions(+), 19 deletions(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index ebdcf0b45..ee58561ce 100644
+index 524b8c0d3..2774737c1 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -317,23 +317,6 @@ void mei_me_cl_rm_all(struct mei_device *dev)
+@@ -319,23 +319,6 @@ void mei_me_cl_rm_all(struct mei_device *dev)
  	up_write(&dev->me_clients_rwsem);
  }
  
@@ -43,7 +43,7 @@ index ebdcf0b45..ee58561ce 100644
  /**
   * mei_io_cb_free - free mei_cb_private related memory
   *
-@@ -418,7 +401,7 @@ static void mei_io_list_flush_cl(struct list_head *head,
+@@ -420,7 +403,7 @@ static void mei_io_list_flush_cl(struct list_head *head,
  	struct mei_cl_cb *cb, *next;
  
  	list_for_each_entry_safe(cb, next, head, list) {
@@ -52,7 +52,7 @@ index ebdcf0b45..ee58561ce 100644
  			list_del_init(&cb->list);
  	}
  }
-@@ -435,7 +418,7 @@ static void mei_io_tx_list_free_cl(struct list_head *head,
+@@ -437,7 +420,7 @@ static void mei_io_tx_list_free_cl(struct list_head *head,
  	struct mei_cl_cb *cb, *next;
  
  	list_for_each_entry_safe(cb, next, head, list) {

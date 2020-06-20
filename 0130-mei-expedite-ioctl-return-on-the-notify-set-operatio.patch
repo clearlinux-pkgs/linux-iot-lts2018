@@ -16,10 +16,10 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index ee58561ce..1fe9426ce 100644
+index 2774737c1..63183e361 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -1357,7 +1357,9 @@ int mei_cl_notify_request(struct mei_cl *cl,
+@@ -1359,7 +1359,9 @@ int mei_cl_notify_request(struct mei_cl *cl,
  
  	mutex_unlock(&dev->device_lock);
  	wait_event_timeout(cl->wait,

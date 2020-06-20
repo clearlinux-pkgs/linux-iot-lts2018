@@ -43,7 +43,7 @@ index 42e89060c..96c7ff631 100644
  	help
  	  Say Y here to enable the MMC block device driver support.
 diff --git a/drivers/mmc/core/block.c b/drivers/mmc/core/block.c
-index 60eac66dc..eff40c2a6 100644
+index c723a1e54..c3f38b652 100644
 --- a/drivers/mmc/core/block.c
 +++ b/drivers/mmc/core/block.c
 @@ -44,6 +44,7 @@
@@ -272,7 +272,7 @@ index 60eac66dc..eff40c2a6 100644
  static void mmc_blk_issue_discard_rq(struct mmc_queue *mq, struct request *req)
  {
  	struct mmc_blk_data *md = mq->blkdata;
-@@ -2915,6 +3127,9 @@ static int mmc_blk_probe(struct mmc_card *card)
+@@ -2916,6 +3128,9 @@ static int mmc_blk_probe(struct mmc_card *card)
  			goto out;
  	}
  
@@ -282,7 +282,7 @@ index 60eac66dc..eff40c2a6 100644
  	/* Add two debugfs entries */
  	mmc_blk_add_debugfs(card, md);
  
-@@ -2943,6 +3158,7 @@ static void mmc_blk_remove(struct mmc_card *card)
+@@ -2944,6 +3159,7 @@ static void mmc_blk_remove(struct mmc_card *card)
  	struct mmc_blk_data *md = dev_get_drvdata(&card->dev);
  
  	mmc_blk_remove_debugfs(card, md);

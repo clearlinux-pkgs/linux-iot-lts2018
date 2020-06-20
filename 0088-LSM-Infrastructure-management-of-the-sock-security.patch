@@ -226,7 +226,7 @@ index f6238c848..55dfdc0c4 100644
  
  void security_sk_clone(const struct sock *sk, struct sock *newsk)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 3f9c0299b..267448545 100644
+index bf568d4e2..f2eea05c9 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -4467,7 +4467,7 @@ static int socket_sockcreate_sid(const struct task_security_struct *tsec,
@@ -450,16 +450,16 @@ index 3f9c0299b..267448545 100644
  
  	/* we don't currently perform any NetLabel based labeling here and it
  	 * isn't clear that we would want to do so anyway; while we could apply
-@@ -5501,7 +5496,7 @@ static int selinux_nlmsg_perm(struct sock *sk, struct sk_buff *skb)
- 	int err = 0;
- 	u32 perm;
+@@ -5503,7 +5498,7 @@ static int selinux_nlmsg_perm(struct sock *sk, struct sk_buff *skb)
+ 	unsigned int data_len = skb->len;
+ 	unsigned char *data = skb->data;
  	struct nlmsghdr *nlh;
 -	struct sk_security_struct *sksec = sk->sk_security;
 +	struct sk_security_struct *sksec = selinux_sock(sk);
+ 	u16 sclass = sksec->sclass;
+ 	u32 perm;
  
- 	if (skb->len < NLMSG_HDRLEN) {
- 		err = -EINVAL;
-@@ -5642,7 +5637,7 @@ static unsigned int selinux_ip_output(struct sk_buff *skb,
+@@ -5662,7 +5657,7 @@ static unsigned int selinux_ip_output(struct sk_buff *skb,
  			return NF_ACCEPT;
  
  		/* standard practice, label using the parent socket */
@@ -468,7 +468,7 @@ index 3f9c0299b..267448545 100644
  		sid = sksec->sid;
  	} else
  		sid = SECINITSID_KERNEL;
-@@ -5681,7 +5676,7 @@ static unsigned int selinux_ip_postroute_compat(struct sk_buff *skb,
+@@ -5701,7 +5696,7 @@ static unsigned int selinux_ip_postroute_compat(struct sk_buff *skb,
  
  	if (sk == NULL)
  		return NF_ACCEPT;
@@ -477,7 +477,7 @@ index 3f9c0299b..267448545 100644
  
  	ad.type = LSM_AUDIT_DATA_NET;
  	ad.u.net = &net;
-@@ -5773,7 +5768,7 @@ static unsigned int selinux_ip_postroute(struct sk_buff *skb,
+@@ -5793,7 +5788,7 @@ static unsigned int selinux_ip_postroute(struct sk_buff *skb,
  		u32 skb_sid;
  		struct sk_security_struct *sksec;
  
@@ -486,7 +486,7 @@ index 3f9c0299b..267448545 100644
  		if (selinux_skb_peerlbl_sid(skb, family, &skb_sid))
  			return NF_DROP;
  		/* At this point, if the returned skb peerlbl is SECSID_NULL
-@@ -5802,7 +5797,7 @@ static unsigned int selinux_ip_postroute(struct sk_buff *skb,
+@@ -5822,7 +5817,7 @@ static unsigned int selinux_ip_postroute(struct sk_buff *skb,
  	} else {
  		/* Locally generated packet, fetch the security label from the
  		 * associated socket. */
@@ -495,7 +495,7 @@ index 3f9c0299b..267448545 100644
  		peer_sid = sksec->sid;
  		secmark_perm = PACKET__SEND;
  	}
-@@ -6850,6 +6845,7 @@ struct lsm_blob_sizes selinux_blob_sizes = {
+@@ -6870,6 +6865,7 @@ struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_cred = sizeof(struct task_security_struct),
  	.lbs_file = sizeof(struct file_security_struct),
  	.lbs_inode = sizeof(struct inode_security_struct),

@@ -49,10 +49,10 @@ index c62346fdc..707b0a50d 100644
  						   *(u32 *)p_data);
  		if (ret)
 diff --git a/drivers/gpu/drm/i915/gvt/display.c b/drivers/gpu/drm/i915/gvt/display.c
-index 3019dbc39..2e01c3888 100644
+index 83f30d7b6..82068a7f0 100644
 --- a/drivers/gpu/drm/i915/gvt/display.c
 +++ b/drivers/gpu/drm/i915/gvt/display.c
-@@ -315,14 +315,19 @@ static void clean_virtual_dp_monitor(struct intel_vgpu *vgpu, int port_num)
+@@ -354,14 +354,19 @@ static void clean_virtual_dp_monitor(struct intel_vgpu *vgpu, int port_num)
  }
  
  static int setup_virtual_dp_monitor(struct intel_vgpu *vgpu, int port_num,
@@ -74,7 +74,7 @@ index 3019dbc39..2e01c3888 100644
  	if (!port->edid)
  		return -ENOMEM;
  
-@@ -332,8 +337,23 @@ static int setup_virtual_dp_monitor(struct intel_vgpu *vgpu, int port_num,
+@@ -371,8 +376,23 @@ static int setup_virtual_dp_monitor(struct intel_vgpu *vgpu, int port_num,
  		return -ENOMEM;
  	}
  
@@ -100,7 +100,7 @@ index 3019dbc39..2e01c3888 100644
  	port->edid->data_valid = true;
  
  	memcpy(port->dpcd->data, dpcd_fix_data, DPCD_HEADER_SIZE);
-@@ -442,6 +462,66 @@ void intel_gvt_emulate_vblank(struct intel_gvt *gvt)
+@@ -481,6 +501,66 @@ void intel_gvt_emulate_vblank(struct intel_gvt *gvt)
  	mutex_unlock(&gvt->lock);
  }
  
@@ -167,7 +167,7 @@ index 3019dbc39..2e01c3888 100644
  /**
   * intel_vgpu_clean_display - clean vGPU virtual display emulation
   * @vgpu: a vGPU
-@@ -453,7 +533,9 @@ void intel_vgpu_clean_display(struct intel_vgpu *vgpu)
+@@ -492,7 +572,9 @@ void intel_vgpu_clean_display(struct intel_vgpu *vgpu)
  {
  	struct drm_i915_private *dev_priv = vgpu->gvt->dev_priv;
  
@@ -178,7 +178,7 @@ index 3019dbc39..2e01c3888 100644
  		clean_virtual_dp_monitor(vgpu, PORT_D);
  	else
  		clean_virtual_dp_monitor(vgpu, PORT_B);
-@@ -475,12 +557,14 @@ int intel_vgpu_init_display(struct intel_vgpu *vgpu, u64 resolution)
+@@ -514,12 +596,14 @@ int intel_vgpu_init_display(struct intel_vgpu *vgpu, u64 resolution)
  
  	intel_vgpu_init_i2c_edid(vgpu);
  
@@ -499,7 +499,7 @@ index 298779693..0b16775e2 100644
  }
  
 diff --git a/drivers/gpu/drm/i915/intel_dp.c b/drivers/gpu/drm/i915/intel_dp.c
-index 20cd4c8ac..e76412b5a 100644
+index 77a2f7fc2..da00b594d 100644
 --- a/drivers/gpu/drm/i915/intel_dp.c
 +++ b/drivers/gpu/drm/i915/intel_dp.c
 @@ -509,7 +509,7 @@ uint32_t intel_dp_pack_aux(const uint8_t *src, int src_bytes)

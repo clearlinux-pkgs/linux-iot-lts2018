@@ -40,10 +40,10 @@ Change-Id: I293c490be8994bb525e511c8d1b8324b3c70932c
  11 files changed, 504 insertions(+), 32 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/display.c b/drivers/gpu/drm/i915/gvt/display.c
-index 73a2dbbaf..b013d1be6 100644
+index 2a13e7395..7398d6560 100644
 --- a/drivers/gpu/drm/i915/gvt/display.c
 +++ b/drivers/gpu/drm/i915/gvt/display.c
-@@ -485,6 +485,22 @@ static void intel_gvt_vblank_work(struct work_struct *w)
+@@ -524,6 +524,22 @@ static void intel_gvt_vblank_work(struct work_struct *w)
  	((((owner) >> (pipe) * BITS_PER_DOMAIN * MAX_SCALERS_PER_DOMAIN) >>  \
  	BITS_PER_DOMAIN * (scaler)) & 0xf)
  
@@ -66,7 +66,7 @@ index 73a2dbbaf..b013d1be6 100644
  void intel_gvt_init_pipe_info(struct intel_gvt *gvt)
  {
  	enum pipe pipe;
-@@ -528,6 +544,10 @@ int setup_virtual_monitors(struct intel_vgpu *vgpu)
+@@ -567,6 +583,10 @@ int setup_virtual_monitors(struct intel_vgpu *vgpu)
  	for_each_intel_connector_iter(connector, &conn_iter) {
  		if (connector->encoder->get_hw_state(connector->encoder, &pipe)
  				&& connector->detect_edid) {

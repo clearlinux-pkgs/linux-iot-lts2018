@@ -105,7 +105,7 @@ index 4d2f1d88e..f6238c848 100644
  
  int security_sb_copy_data(char *orig, char *copy)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 77166f117..3f9c0299b 100644
+index 72b4c75a5..bf568d4e2 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -333,7 +333,8 @@ static struct inode_security_struct *backing_inode_security(struct dentry *dentr
@@ -285,7 +285,7 @@ index 77166f117..3f9c0299b 100644
  	if (!(sbsec->flags & SBLABEL_MNT))
  		return -EOPNOTSUPP;
  
-@@ -6864,6 +6850,7 @@ struct lsm_blob_sizes selinux_blob_sizes = {
+@@ -6884,6 +6870,7 @@ struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_cred = sizeof(struct task_security_struct),
  	.lbs_file = sizeof(struct file_security_struct),
  	.lbs_inode = sizeof(struct inode_security_struct),
@@ -293,7 +293,7 @@ index 77166f117..3f9c0299b 100644
  };
  
  static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
-@@ -6889,7 +6876,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -6909,7 +6896,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(bprm_committed_creds, selinux_bprm_committed_creds),
  
  	LSM_HOOK_INIT(sb_alloc_security, selinux_sb_alloc_security),

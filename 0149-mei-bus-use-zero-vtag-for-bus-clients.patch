@@ -85,10 +85,10 @@ index e4c437318..0327827f1 100644
  		dev_dbg(bus->dev, "Already disconnected\n");
  		err = 0;
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index ef2623339..657973beb 100644
+index 893af8985..d6e871fb2 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
-@@ -1277,6 +1277,21 @@ static int mei_cl_tx_flow_ctrl_creds_reduce(struct mei_cl *cl)
+@@ -1279,6 +1279,21 @@ static int mei_cl_tx_flow_ctrl_creds_reduce(struct mei_cl *cl)
  	return 0;
  }
  
@@ -110,7 +110,7 @@ index ef2623339..657973beb 100644
  const struct file *mei_cl_fp_by_vtag(const struct mei_cl *cl, u8 vtag)
  {
  	struct mei_cl_vtag *vtag_l;
-@@ -1285,7 +1300,7 @@ const struct file *mei_cl_fp_by_vtag(const struct mei_cl *cl, u8 vtag)
+@@ -1287,7 +1302,7 @@ const struct file *mei_cl_fp_by_vtag(const struct mei_cl *cl, u8 vtag)
  		if (vtag_l->vtag == vtag)
  			return vtag_l->fp;
  
@@ -119,7 +119,7 @@ index ef2623339..657973beb 100644
  }
  
  static void mei_cl_reset_read_by_vtag(const struct mei_cl *cl, u8 vtag)
-@@ -1335,7 +1350,7 @@ void mei_cl_add_rd_completed(struct mei_cl *cl, struct mei_cl_cb *cb)
+@@ -1337,7 +1352,7 @@ void mei_cl_add_rd_completed(struct mei_cl *cl, struct mei_cl_cb *cb)
  
  	if (!mei_cl_vm_support_check(cl)) {
  		fp = mei_cl_fp_by_vtag(cl, cb->vtag);

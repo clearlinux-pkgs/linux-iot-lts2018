@@ -109,10 +109,10 @@ index c94b0aa70..ae6ec9980 100644
  
  int security_key_permission(key_ref_t key_ref,
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 91c3a61eb..07dbe56b1 100644
+index 85a78643a..5d8f74de5 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
-@@ -6502,11 +6502,7 @@ static int selinux_key_alloc(struct key *k, const struct cred *cred,
+@@ -6522,11 +6522,7 @@ static int selinux_key_alloc(struct key *k, const struct cred *cred,
  			     unsigned long flags)
  {
  	const struct task_security_struct *tsec;
@@ -125,7 +125,7 @@ index 91c3a61eb..07dbe56b1 100644
  
  	tsec = selinux_cred(cred);
  	if (tsec->keycreate_sid)
-@@ -6514,18 +6510,9 @@ static int selinux_key_alloc(struct key *k, const struct cred *cred,
+@@ -6534,18 +6530,9 @@ static int selinux_key_alloc(struct key *k, const struct cred *cred,
  	else
  		ksec->sid = tsec->sid;
  
@@ -144,7 +144,7 @@ index 91c3a61eb..07dbe56b1 100644
  static int selinux_key_permission(key_ref_t key_ref,
  				  const struct cred *cred,
  				  unsigned perm)
-@@ -6543,7 +6530,7 @@ static int selinux_key_permission(key_ref_t key_ref,
+@@ -6563,7 +6550,7 @@ static int selinux_key_permission(key_ref_t key_ref,
  	sid = cred_sid(cred);
  
  	key = key_ref_to_ptr(key_ref);
@@ -153,7 +153,7 @@ index 91c3a61eb..07dbe56b1 100644
  
  	return avc_has_perm(&selinux_state,
  			    sid, ksec->sid, SECCLASS_KEY, perm, NULL);
-@@ -6551,7 +6538,7 @@ static int selinux_key_permission(key_ref_t key_ref,
+@@ -6571,7 +6558,7 @@ static int selinux_key_permission(key_ref_t key_ref,
  
  static int selinux_key_getsecurity(struct key *key, char **_buffer)
  {
@@ -162,7 +162,7 @@ index 91c3a61eb..07dbe56b1 100644
  	char *context = NULL;
  	unsigned len;
  	int rc;
-@@ -6776,6 +6763,9 @@ struct lsm_blob_sizes selinux_blob_sizes = {
+@@ -6796,6 +6783,9 @@ struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_file = sizeof(struct file_security_struct),
  	.lbs_inode = sizeof(struct inode_security_struct),
  	.lbs_ipc = sizeof(struct ipc_security_struct),
@@ -172,7 +172,7 @@ index 91c3a61eb..07dbe56b1 100644
  	.lbs_msg_msg = sizeof(struct msg_security_struct),
  	.lbs_sock = sizeof(struct sk_security_struct),
  	.lbs_superblock = sizeof(struct superblock_security_struct),
-@@ -6987,7 +6977,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -7007,7 +6997,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  
  #ifdef CONFIG_KEYS
  	LSM_HOOK_INIT(key_alloc, selinux_key_alloc),
