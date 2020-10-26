@@ -15,7 +15,7 @@ Signed-off-by: Shahina Shaik <shahinax.shaik@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/boards/cnl_rt274.c b/sound/soc/intel/boards/cnl_rt274.c
-index 557047480..890e474ce 100644
+index 5570474806ab..890e474ce597 100644
 --- a/sound/soc/intel/boards/cnl_rt274.c
 +++ b/sound/soc/intel/boards/cnl_rt274.c
 @@ -188,7 +188,7 @@ static const struct snd_soc_dapm_route cnl_map[] = {

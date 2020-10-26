@@ -14,7 +14,7 @@ Tracked-On: PKT-472
  2 files changed, 12 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/trusty/trusty-timer.c b/drivers/trusty/trusty-timer.c
-index 0998e0279..e88dc5f4c 100644
+index 0998e027984b..e88dc5f4cdf8 100644
 --- a/drivers/trusty/trusty-timer.c
 +++ b/drivers/trusty/trusty-timer.c
 @@ -79,10 +79,15 @@ static int trusty_timer_call_notify(struct notifier_block *nb,
@@ -43,7 +43,7 @@ index 0998e0279..e88dc5f4c 100644
  	struct trusty_timer *tt;
  
 diff --git a/drivers/trusty/trusty-wall.c b/drivers/trusty/trusty-wall.c
-index 3c33d724b..64368480c 100644
+index 3c33d724b3fa..64368480c309 100644
 --- a/drivers/trusty/trusty-wall.c
 +++ b/drivers/trusty/trusty-wall.c
 @@ -147,6 +147,12 @@ static int trusty_wall_probe(struct platform_device *pdev)

@@ -22,7 +22,7 @@ Signed-off-by: Li, Fei1 <fei1.li@intel.com>
  create mode 100644 drivers/acrn/sbuf.h
 
 diff --git a/drivers/Kconfig b/drivers/Kconfig
-index 97c8a6f9b..08e4c4194 100644
+index 97c8a6f9b032..08e4c4194fa1 100644
 --- a/drivers/Kconfig
 +++ b/drivers/Kconfig
 @@ -222,4 +222,5 @@ source "drivers/slimbus/Kconfig"
@@ -32,7 +32,7 @@ index 97c8a6f9b..08e4c4194 100644
 +source "drivers/acrn/Kconfig"
  endmenu
 diff --git a/drivers/Makefile b/drivers/Makefile
-index 6095e80d7..5794c0972 100644
+index 6095e80d7fa9..5794c097204c 100644
 --- a/drivers/Makefile
 +++ b/drivers/Makefile
 @@ -185,6 +185,7 @@ obj-$(CONFIG_FSI)		+= fsi/
@@ -45,7 +45,7 @@ index 6095e80d7..5794c0972 100644
  obj-$(CONFIG_GNSS)		+= gnss/
 diff --git a/drivers/acrn/Kconfig b/drivers/acrn/Kconfig
 new file mode 100644
-index 000000000..f25f0ae77
+index 000000000000..f25f0ae77727
 --- /dev/null
 +++ b/drivers/acrn/Kconfig
 @@ -0,0 +1,5 @@
@@ -56,14 +56,14 @@ index 000000000..f25f0ae77
 +	  Help ACRN performance profiling.
 diff --git a/drivers/acrn/Makefile b/drivers/acrn/Makefile
 new file mode 100644
-index 000000000..bc475f811
+index 000000000000..bc475f8116e3
 --- /dev/null
 +++ b/drivers/acrn/Makefile
 @@ -0,0 +1 @@
 +obj-$(CONFIG_ACRN_SHARED_BUFFER) += sbuf.o
 diff --git a/drivers/acrn/sbuf.c b/drivers/acrn/sbuf.c
 new file mode 100644
-index 000000000..dcf203222
+index 000000000000..dcf203222c5b
 --- /dev/null
 +++ b/drivers/acrn/sbuf.c
 @@ -0,0 +1,188 @@
@@ -257,7 +257,7 @@ index 000000000..dcf203222
 +EXPORT_SYMBOL(sbuf_construct);
 diff --git a/drivers/acrn/sbuf.h b/drivers/acrn/sbuf.h
 new file mode 100644
-index 000000000..7f3694920
+index 000000000000..7f3694920232
 --- /dev/null
 +++ b/drivers/acrn/sbuf.h
 @@ -0,0 +1,119 @@

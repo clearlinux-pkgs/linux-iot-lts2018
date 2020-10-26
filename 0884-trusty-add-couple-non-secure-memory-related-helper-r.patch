@@ -23,7 +23,7 @@ Signed-off-by: Michael Ryleev <gmar@google.com>
  create mode 100644 drivers/trusty/trusty-mem.c
 
 diff --git a/drivers/trusty/Makefile b/drivers/trusty/Makefile
-index 641ee2a6e..e527a237c 100644
+index 641ee2a6e830..e527a237cb5d 100644
 --- a/drivers/trusty/Makefile
 +++ b/drivers/trusty/Makefile
 @@ -8,3 +8,4 @@ obj-$(CONFIG_TRUSTY_FIQ)	+= trusty-fiq.o
@@ -33,7 +33,7 @@ index 641ee2a6e..e527a237c 100644
 +obj-$(CONFIG_TRUSTY)		+= trusty-mem.o
 diff --git a/drivers/trusty/trusty-mem.c b/drivers/trusty/trusty-mem.c
 new file mode 100644
-index 000000000..c55ace25b
+index 000000000000..c55ace25beed
 --- /dev/null
 +++ b/drivers/trusty/trusty-mem.c
 @@ -0,0 +1,134 @@
@@ -172,7 +172,7 @@ index 000000000..c55ace25b
 +}
 +
 diff --git a/include/linux/trusty/trusty.h b/include/linux/trusty/trusty.h
-index abb77f1db..d084d9d68 100644
+index abb77f1db74d..d084d9d68a7b 100644
 --- a/include/linux/trusty/trusty.h
 +++ b/include/linux/trusty/trusty.h
 @@ -16,6 +16,9 @@

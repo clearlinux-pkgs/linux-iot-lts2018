@@ -13,7 +13,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/hwtracing/stm/heartbeat.c b/drivers/hwtracing/stm/heartbeat.c
-index 7db42395e..3e7df1c04 100644
+index 7db42395e131..3e7df1c0477f 100644
 --- a/drivers/hwtracing/stm/heartbeat.c
 +++ b/drivers/hwtracing/stm/heartbeat.c
 @@ -76,7 +76,7 @@ static int stm_heartbeat_init(void)

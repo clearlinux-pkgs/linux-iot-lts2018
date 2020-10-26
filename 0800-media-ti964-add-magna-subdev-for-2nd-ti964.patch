@@ -14,7 +14,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 48 insertions(+)
 
 diff --git a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
-index 8bdbddace..de76065d6 100644
+index 8bdbddace9cf..de76065d6699 100644
 --- a/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 +++ b/drivers/media/platform/intel/ipu4-bxt-p-pdata.c
 @@ -828,6 +828,30 @@ static struct ti964_subdev_info ti964_subdevs_2[] = {

@@ -21,7 +21,7 @@ Signed-off-by: Cezary Rojewski <cezary.rojewski@intel.com>
  9 files changed, 40 insertions(+), 104 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index f66aae4c2..cd7fbabef 100644
+index f66aae4c229f..cd7fbabef8ee 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -311,16 +311,6 @@ static int bxt_load_base_firmware(struct sst_dsp *ctx)
@@ -69,7 +69,7 @@ index f66aae4c2..cd7fbabef 100644
  	sst->fw_ops = bxt_fw_ops;
  	sst->addr.lpe = mmio_base;
 diff --git a/sound/soc/intel/skylake/cnl-sst-dsp.h b/sound/soc/intel/skylake/cnl-sst-dsp.h
-index 7bc24ee5e..5f0653b36 100644
+index 7bc24ee5eecc..5f0653b36308 100644
 --- a/sound/soc/intel/skylake/cnl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/cnl-sst-dsp.h
 @@ -117,7 +117,7 @@ bool cnl_ipc_int_status(struct sst_dsp *ctx);
@@ -82,7 +82,7 @@ index 7bc24ee5e..5f0653b36 100644
  int cnl_sst_init_fw(struct device *dev, struct skl_sst *ctx);
  void cnl_sst_dsp_cleanup(struct device *dev, struct skl_sst *ctx);
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 52565423c..19398e200 100644
+index 52565423c83e..19398e200cb0 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -273,10 +273,6 @@ static int cnl_load_base_firmware(struct sst_dsp *ctx)
@@ -125,7 +125,7 @@ index 52565423c..19398e200 100644
  	sst->fw_ops = cnl_fw_ops;
  	sst->addr.lpe = mmio_base;
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 74833f0cd..a1d9c8426 100644
+index 74833f0cddfb..a1d9c842646a 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -277,8 +277,7 @@ static const struct skl_dsp_ops dsp_ops[] = {
@@ -213,7 +213,7 @@ index 74833f0cd..a1d9c8426 100644
  	cores->count = ops->num_cores;
  
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index fa3a47183..dc793d503 100644
+index fa3a47183916..dc793d503115 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -178,13 +178,6 @@ enum skl_hw_info_type {
@@ -279,7 +279,7 @@ index fa3a47183..dc793d503 100644
 -const struct skl_dsp_ops *skl_get_dsp_ops(int pci_id);
  #endif /*__SKL_SST_DSP_H__*/
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 4eef4a386..ee32aaa68 100644
+index 4eef4a386996..ee32aaa68490 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -152,6 +152,13 @@ struct bra_conf {
@@ -297,7 +297,7 @@ index 4eef4a386..ee32aaa68 100644
  	u32 min_size_bytes;
  	u32 max_size_bytes;
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index a495cea49..7c867426b 100644
+index a495cea49b05..7c867426b39b 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -1246,28 +1246,3 @@ int skl_module_sysfs_init(struct skl_sst *ctx, struct kobject *kobj)
@@ -330,7 +330,7 @@ index a495cea49..7c867426b 100644
 -	return -EINVAL;
 -}
 diff --git a/sound/soc/intel/skylake/skl-sst.c b/sound/soc/intel/skylake/skl-sst.c
-index 77cf3f2ba..277e972eb 100644
+index 77cf3f2ba95f..277e972eb858 100644
 --- a/sound/soc/intel/skylake/skl-sst.c
 +++ b/sound/soc/intel/skylake/skl-sst.c
 @@ -152,17 +152,6 @@ static int skl_load_base_firmware(struct sst_dsp *ctx)
@@ -378,7 +378,7 @@ index 77cf3f2ba..277e972eb 100644
  	sst->addr.lpe = mmio_base;
  	sst->addr.shim = mmio_base;
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index d00a8b19d..01053c4cd 100644
+index d00a8b19d054..01053c4cdf6e 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -188,6 +188,19 @@ struct skl_machine_pdata {

@@ -8,20 +8,21 @@ This reverts commit 73504f095df344ad50be94c760d7c6188ad68c15.
 
 Tracked-On: PKT-3178
 ---
- drivers/base/dd.c | 5 +----
- 1 file changed, 1 insertion(+), 4 deletions(-)
+ drivers/base/dd.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
 
 diff --git a/drivers/base/dd.c b/drivers/base/dd.c
-index caaeb7910..38a3107e0 100644
+index b3c569412f4e..dc2bc3723af8 100644
 --- a/drivers/base/dd.c
 +++ b/drivers/base/dd.c
-@@ -470,10 +470,7 @@ static int really_probe(struct device *dev, struct device_driver *drv)
+@@ -470,11 +470,7 @@ static int really_probe(struct device *dev, struct device_driver *drv)
  	atomic_inc(&probe_count);
  	pr_debug("bus: '%s': %s: probing driver %s with device %s\n",
  		 drv->bus->name, __func__, drv->name, dev_name(dev));
 -	if (!list_empty(&dev->devres_head)) {
 -		dev_crit(dev, "Resources present before probing\n");
--		return -EBUSY;
+-		ret = -EBUSY;
+-		goto done;
 -	}
 +	WARN_ON(!list_empty(&dev->devres_head));
  

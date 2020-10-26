@@ -16,7 +16,7 @@ Signed-off-by: Wood, Brian J <brian.j.wood@intel.com>
  1 file changed, 8 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_initial_modeset.c b/drivers/gpu/drm/i915/intel_initial_modeset.c
-index 4a3a6e7b0..746305336 100644
+index 4a3a6e7b0f9b..746305336a98 100644
 --- a/drivers/gpu/drm/i915/intel_initial_modeset.c
 +++ b/drivers/gpu/drm/i915/intel_initial_modeset.c
 @@ -241,7 +241,6 @@ static int update_atomic_state(struct drm_device *dev,

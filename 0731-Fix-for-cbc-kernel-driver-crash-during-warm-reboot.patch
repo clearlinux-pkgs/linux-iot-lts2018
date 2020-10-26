@@ -16,7 +16,7 @@ Tracked-On: PKT-1554
  3 files changed, 18 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/tty/cbc/cbc_device.c b/drivers/tty/cbc/cbc_device.c
-index 1933a8527..23728c04d 100644
+index 1933a8527015..23728c04dd6e 100644
 --- a/drivers/tty/cbc/cbc_device.c
 +++ b/drivers/tty/cbc/cbc_device.c
 @@ -18,8 +18,10 @@
@@ -32,7 +32,7 @@ index 1933a8527..23728c04d 100644
  
  void cbc_file_init(struct cbc_file_data *file)
 diff --git a/drivers/tty/cbc/cbc_device.h b/drivers/tty/cbc/cbc_device.h
-index deb0cd922..09c806716 100644
+index deb0cd922316..09c806716557 100644
 --- a/drivers/tty/cbc/cbc_device.h
 +++ b/drivers/tty/cbc/cbc_device.h
 @@ -22,6 +22,7 @@
@@ -53,7 +53,7 @@ index deb0cd922..09c806716 100644
  };
  
 diff --git a/drivers/tty/cbc/cbc_device_manager.c b/drivers/tty/cbc/cbc_device_manager.c
-index 0e74183d9..2c8c1cf96 100644
+index 0e74183d9828..2c8c1cf966ca 100644
 --- a/drivers/tty/cbc/cbc_device_manager.c
 +++ b/drivers/tty/cbc/cbc_device_manager.c
 @@ -234,6 +234,7 @@ static int cbc_device_open(struct inode *inode, struct file *file)

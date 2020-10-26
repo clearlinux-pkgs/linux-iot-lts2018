@@ -21,7 +21,7 @@ Tracked-On: PKT-1617
  3 files changed, 14 insertions(+), 55 deletions(-)
 
 diff --git a/drivers/vbs/vq.c b/drivers/vbs/vq.c
-index 4ea44c47b..3a714441f 100644
+index 4ea44c47b871..3a714441f11a 100644
 --- a/drivers/vbs/vq.c
 +++ b/drivers/vbs/vq.c
 @@ -75,7 +75,7 @@ void * paddr_guest2host(struct ctx *ctx, uintptr_t gaddr, size_t len)
@@ -93,7 +93,7 @@ index 4ea44c47b..3a714441f 100644
  	/* ... immediately followed by "avail" ring (entirely uint16_t's) */
  	vq->avail = (struct vring_avail *)base;
 diff --git a/include/linux/vbs/vbs.h b/include/linux/vbs/vbs.h
-index a72bb9612..765dc9c33 100644
+index a72bb9612d1e..765dc9c33a07 100644
 --- a/include/linux/vbs/vbs.h
 +++ b/include/linux/vbs/vbs.h
 @@ -62,6 +62,8 @@
@@ -146,7 +146,7 @@ index a72bb9612..765dc9c33 100644
  	volatile struct vring_avail *avail;
  	/* private: the "used" ring */
 diff --git a/include/linux/vbs/vq.h b/include/linux/vbs/vq.h
-index ca14f8f34..45e462920 100644
+index ca14f8f34888..45e462920506 100644
 --- a/include/linux/vbs/vq.h
 +++ b/include/linux/vbs/vq.h
 @@ -77,27 +77,8 @@

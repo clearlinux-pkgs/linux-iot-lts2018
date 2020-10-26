@@ -16,7 +16,7 @@ Signed-off-by: mingdaxu <mingda.xu@intel.com>
  4 files changed, 120 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ipu-fw-isys.c b/drivers/media/pci/intel/ipu-fw-isys.c
-index e68e03e3a..130d2ca4a 100644
+index e68e03e3a752..130d2ca4a438 100644
 --- a/drivers/media/pci/intel/ipu-fw-isys.c
 +++ b/drivers/media/pci/intel/ipu-fw-isys.c
 @@ -156,6 +156,10 @@ ipu_fw_isys_dump_stream_cfg(struct device *dev,
@@ -31,7 +31,7 @@ index e68e03e3a..130d2ca4a 100644
  	}
  
 diff --git a/drivers/media/pci/intel/ipu-fw-isys.h b/drivers/media/pci/intel/ipu-fw-isys.h
-index 7b49648c2..2853e1e1c 100644
+index 7b49648c263f..2853e1e1c9d9 100644
 --- a/drivers/media/pci/intel/ipu-fw-isys.h
 +++ b/drivers/media/pci/intel/ipu-fw-isys.h
 @@ -148,6 +148,51 @@ enum ipu_fw_isys_stream_source {
@@ -87,7 +87,7 @@ index 7b49648c2..2853e1e1c 100644
  #define IPU_FW_ISYS_STREAM_SRC_CSI2_PORT1 IPU_FW_ISYS_STREAM_SRC_PORT_1
  #define IPU_FW_ISYS_STREAM_SRC_CSI2_PORT2 IPU_FW_ISYS_STREAM_SRC_PORT_2
 diff --git a/drivers/media/pci/intel/ipu-isys-video.c b/drivers/media/pci/intel/ipu-isys-video.c
-index 57d96a2cd..d3815d37b 100644
+index 57d96a2cde88..d3815d37b608 100644
 --- a/drivers/media/pci/intel/ipu-isys-video.c
 +++ b/drivers/media/pci/intel/ipu-isys-video.c
 @@ -961,6 +961,10 @@ static void csi_short_packet_prepare_firmware_stream_cfg(
@@ -182,7 +182,7 @@ index 57d96a2cd..d3815d37b 100644
  
  static unsigned int ipu_isys_get_compression_scheme(u32 code)
 diff --git a/drivers/media/pci/intel/ipu-isys.h b/drivers/media/pci/intel/ipu-isys.h
-index 30d3b9b53..847961062 100644
+index 30d3b9b53a2e..847961062c9f 100644
 --- a/drivers/media/pci/intel/ipu-isys.h
 +++ b/drivers/media/pci/intel/ipu-isys.h
 @@ -109,6 +109,10 @@ struct ipu_isys {

@@ -21,7 +21,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/sound/soc/intel/boards/bxt_tdf8532.c b/sound/soc/intel/boards/bxt_tdf8532.c
-index 325b59ada..c7b7fe3f9 100644
+index 325b59adaf1c..c7b7fe3f9ed7 100644
 --- a/sound/soc/intel/boards/bxt_tdf8532.c
 +++ b/sound/soc/intel/boards/bxt_tdf8532.c
 @@ -240,6 +240,7 @@ static struct platform_driver broxton_tdf8532_audio = {

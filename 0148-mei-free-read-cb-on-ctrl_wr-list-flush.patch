@@ -16,7 +16,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 4 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index c00be9d5b..893af8985 100644
+index c00be9d5bfad..893af8985620 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -418,8 +418,11 @@ static void mei_io_list_flush_cl(struct list_head *head,

@@ -12,7 +12,7 @@ Signed-off-by: Yang Zhonghua <zhonghuax.yang@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 33101efcc..e45aa537c 100644
+index 33101efcc2a3..e45aa537c16b 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -55,7 +55,7 @@ const struct ici_isys_pixelformat ici_isys_pfmts[] = {

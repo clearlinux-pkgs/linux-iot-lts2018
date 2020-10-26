@@ -13,7 +13,7 @@ Signed-off-by: Gopal, Puunithaaraj <puunithaaraj.gopal@intel.com>
  1 file changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index a01e135b0..4523ce9ed 100644
+index a01e135b0dee..4523ce9ed0b0 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -1015,10 +1015,10 @@ const struct ici_isys_pixelformat

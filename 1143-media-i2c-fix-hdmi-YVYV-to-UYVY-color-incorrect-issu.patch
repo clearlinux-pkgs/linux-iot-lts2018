@@ -15,7 +15,7 @@ Signed-off-by: Yang, Zhonghua <zhonghuax.yang@intel.com>
  2 files changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h
-index 8c2c3d494..ba65aaf96 100644
+index 8c2c3d494ba0..ba65aaf96299 100644
 --- a/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h
 +++ b/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h
 @@ -180,10 +180,11 @@ static struct crl_register_write_rep adv7481_hdmi_mode_rgb888[] = {
@@ -33,7 +33,7 @@ index 8c2c3d494..ba65aaf96 100644
  	{0x0C, CRL_REG_LEN_08BIT, 0xE0, 0xE0}, //Enable LLC_DLL & Double LLC Timing
  	{0x0E, CRL_REG_LEN_08BIT, 0xDD, 0xE0}, //LLC/PIX/SPI PINS TRISTATED AUD Outputs Enabled
 diff --git a/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h b/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
-index 0a3394569..b4089752c 100644
+index 0a3394569509..b4089752c179 100644
 --- a/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
 +++ b/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
 @@ -197,6 +197,7 @@ static struct crl_register_write_rep adv7481_hdmi_mode_uyvy[] = {

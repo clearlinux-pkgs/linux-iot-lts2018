@@ -27,7 +27,7 @@ Signed-off-by: Jon Moeller <jon.moeller@intel.com>
  13 files changed, 526 insertions(+), 254 deletions(-)
 
 diff --git a/drivers/platform/x86/sepdk/include/error_reporting_utils.h b/drivers/platform/x86/sepdk/include/error_reporting_utils.h
-index c1e90c441..9df1bf338 100644
+index c1e90c441cc1..9df1bf3380cd 100644
 --- a/drivers/platform/x86/sepdk/include/error_reporting_utils.h
 +++ b/drivers/platform/x86/sepdk/include/error_reporting_utils.h
 @@ -1,14 +1,27 @@
@@ -70,7 +70,7 @@ index c1e90c441..9df1bf338 100644
  #ifndef __ERROR_REPORTING_UTILS_H__
  #define __ERROR_REPORTING_UTILS_H__
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_chipset.h b/drivers/platform/x86/sepdk/include/lwpmudrv_chipset.h
-index 82531312a..755d2799b 100644
+index 82531312af75..755d2799bcd5 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_chipset.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_chipset.h
 @@ -1,13 +1,27 @@
@@ -112,7 +112,7 @@ index 82531312a..755d2799b 100644
  #ifndef _LWPMUDRV_CHIPSET_UTILS_H_
  #define _LWPMUDRV_CHIPSET_UTILS_H_
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h b/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
-index d6889982a..aeee9516b 100644
+index d6889982ada0..aeee9516bef2 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_defines.h
 @@ -1,13 +1,27 @@
@@ -154,7 +154,7 @@ index d6889982a..aeee9516b 100644
  #ifndef _LWPMUDRV_DEFINES_H_
  #define _LWPMUDRV_DEFINES_H_
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_ecb.h b/drivers/platform/x86/sepdk/include/lwpmudrv_ecb.h
-index 792ae6519..a8b5fced8 100644
+index 792ae65191b3..a8b5fced897d 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_ecb.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_ecb.h
 @@ -1,14 +1,27 @@
@@ -197,7 +197,7 @@ index 792ae6519..a8b5fced8 100644
  #ifndef _LWPMUDRV_ECB_UTILS_H_
  #define _LWPMUDRV_ECB_UTILS_H_
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_gfx.h b/drivers/platform/x86/sepdk/include/lwpmudrv_gfx.h
-index fe6583e2c..3d8cf5290 100644
+index fe6583e2c44c..3d8cf5290f72 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_gfx.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_gfx.h
 @@ -1,13 +1,27 @@
@@ -239,7 +239,7 @@ index fe6583e2c..3d8cf5290 100644
  #ifndef _LWPMUDRV_GFX_H_
  #define _LWPMUDRV_GFX_H_
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_ioctl.h b/drivers/platform/x86/sepdk/include/lwpmudrv_ioctl.h
-index a8d32466a..3b6027482 100644
+index a8d32466a4bd..3b60274826c6 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_ioctl.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_ioctl.h
 @@ -1,13 +1,27 @@
@@ -281,7 +281,7 @@ index a8d32466a..3b6027482 100644
  #ifndef _LWPMUDRV_IOCTL_H_
  #define _LWPMUDRV_IOCTL_H_
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_pwr.h b/drivers/platform/x86/sepdk/include/lwpmudrv_pwr.h
-index e26a478a9..d67f5ea1f 100644
+index e26a478a9bb1..d67f5ea1ffa4 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_pwr.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_pwr.h
 @@ -1,13 +1,27 @@
@@ -323,7 +323,7 @@ index e26a478a9..d67f5ea1f 100644
  #ifndef _LWPMUDRV_PWR_H_
  #define _LWPMUDRV_PWR_H_
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h b/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h
-index c76ef5fa0..82819e5e1 100644
+index c76ef5fa0e67..82819e5e11b7 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_struct.h
 @@ -1,13 +1,27 @@
@@ -365,7 +365,7 @@ index c76ef5fa0..82819e5e1 100644
  #ifndef _LWPMUDRV_STRUCT_UTILS_H_
  #define _LWPMUDRV_STRUCT_UTILS_H_
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_types.h b/drivers/platform/x86/sepdk/include/lwpmudrv_types.h
-index 7fe842eee..05574ada8 100644
+index 7fe842eee890..05574ada85ec 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_types.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_types.h
 @@ -1,13 +1,27 @@
@@ -407,7 +407,7 @@ index 7fe842eee..05574ada8 100644
  #ifndef _LWPMUDRV_TYPES_H_
  #define _LWPMUDRV_TYPES_H_
 diff --git a/drivers/platform/x86/sepdk/include/lwpmudrv_version.h b/drivers/platform/x86/sepdk/include/lwpmudrv_version.h
-index a2cbedd44..364fcc380 100644
+index a2cbedd44573..364fcc38048b 100644
 --- a/drivers/platform/x86/sepdk/include/lwpmudrv_version.h
 +++ b/drivers/platform/x86/sepdk/include/lwpmudrv_version.h
 @@ -1,15 +1,26 @@
@@ -450,7 +450,7 @@ index a2cbedd44..364fcc380 100644
  
  #ifndef _LWPMUDRV_VERSION_H_
 diff --git a/drivers/platform/x86/sepdk/include/pax_shared.h b/drivers/platform/x86/sepdk/include/pax_shared.h
-index a706232c9..6f35197a5 100644
+index a706232c9b4a..6f35197a51fc 100644
 --- a/drivers/platform/x86/sepdk/include/pax_shared.h
 +++ b/drivers/platform/x86/sepdk/include/pax_shared.h
 @@ -1,13 +1,27 @@
@@ -492,7 +492,7 @@ index a706232c9..6f35197a5 100644
  /*
   *
 diff --git a/drivers/platform/x86/sepdk/include/rise_errors.h b/drivers/platform/x86/sepdk/include/rise_errors.h
-index 29fb278de..7db811e85 100644
+index 29fb278def7d..7db811e855d6 100644
 --- a/drivers/platform/x86/sepdk/include/rise_errors.h
 +++ b/drivers/platform/x86/sepdk/include/rise_errors.h
 @@ -1,13 +1,27 @@
@@ -534,7 +534,7 @@ index 29fb278de..7db811e85 100644
  #ifndef _RISE_ERRORS_H_
  #define _RISE_ERRORS_H_
 diff --git a/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c b/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
-index a20e0566c..d6ff34b65 100644
+index a20e0566cfca..d6ff34b65638 100644
 --- a/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
 +++ b/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
 @@ -53,7 +53,7 @@

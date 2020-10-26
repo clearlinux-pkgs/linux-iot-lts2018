@@ -14,7 +14,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  1 file changed, 27 insertions(+), 9 deletions(-)
 
 diff --git a/Documentation/trace/stm.rst b/Documentation/trace/stm.rst
-index 2c22ddb7f..944994fd6 100644
+index 2c22ddb7fd3e..944994fd6368 100644
 --- a/Documentation/trace/stm.rst
 +++ b/Documentation/trace/stm.rst
 @@ -53,12 +53,30 @@ under "user" directory from the example above and this new rule will

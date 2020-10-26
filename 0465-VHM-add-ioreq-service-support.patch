@@ -48,7 +48,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  create mode 100644 include/linux/vhm/acrn_vhm_ioreq.h
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 3ea8de27c..3129a8f15 100644
+index 3ea8de27cb3e..3129a8f1503b 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -78,6 +78,7 @@
@@ -199,14 +199,14 @@ index 3ea8de27c..3129a8f15 100644
  	class_unregister(vhm_class);
  	class_destroy(vhm_class);
 diff --git a/drivers/vhm/Makefile b/drivers/vhm/Makefile
-index 7e5ec421f..4bd960d56 100644
+index 7e5ec421fbc7..4bd960d564b3 100644
 --- a/drivers/vhm/Makefile
 +++ b/drivers/vhm/Makefile
 @@ -1 +1 @@
 -obj-y += vhm_mm.o vhm_vm_mngt.o vhm_hypercall.o
 +obj-y += vhm_mm.o vhm_ioreq.o vhm_vm_mngt.o vhm_hypercall.o
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index d80087bcb..1b25f4ec4 100644
+index d80087bcb5fb..1b25f4ec4d06 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -53,6 +53,16 @@
@@ -228,7 +228,7 @@ index d80087bcb..1b25f4ec4 100644
  	return acrn_hypercall2(HC_VM_SET_MEMMAP, vmid, memmap);
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
 new file mode 100644
-index 000000000..6054e3d00
+index 000000000000..6054e3d00eb2
 --- /dev/null
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -0,0 +1,922 @@
@@ -1155,7 +1155,7 @@ index 000000000..6054e3d00
 +	}
 +}
 diff --git a/drivers/vhm/vhm_vm_mngt.c b/drivers/vhm/vhm_vm_mngt.c
-index 3c4e6d2b2..564435f2b 100644
+index 3c4e6d2b2f23..564435f2bb40 100644
 --- a/drivers/vhm/vhm_vm_mngt.c
 +++ b/drivers/vhm/vhm_vm_mngt.c
 @@ -58,6 +58,7 @@
@@ -1175,7 +1175,7 @@ index 3c4e6d2b2..564435f2b 100644
  		pr_info("vhm: freed vm\n");
  	}
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 08e47732f..bc2237331 100644
+index 08e47732f4d0..bc2237331231 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -56,10 +56,127 @@
@@ -1307,7 +1307,7 @@ index 08e47732f..bc2237331 100644
 +
  #endif /* ACRN_COMMON_H */
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index ab6554d01..f57f2b62e 100644
+index ab6554d017cb..f57f2b62e972 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -74,6 +74,11 @@
@@ -1324,7 +1324,7 @@ index ab6554d01..f57f2b62e 100644
  #define HC_VM_SET_MEMMAP            _HC_ID(HC_ID, HC_ID_MEM_BASE + 0x00)
 diff --git a/include/linux/vhm/acrn_vhm_ioreq.h b/include/linux/vhm/acrn_vhm_ioreq.h
 new file mode 100644
-index 000000000..0daf46dcf
+index 000000000000..0daf46dcf9f7
 --- /dev/null
 +++ b/include/linux/vhm/acrn_vhm_ioreq.h
 @@ -0,0 +1,86 @@
@@ -1415,7 +1415,7 @@ index 000000000..0daf46dcf
 +
 +#endif
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index e098a1f95..86b5f5796 100644
+index e098a1f959bf..86b5f579687a 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -139,6 +139,9 @@ static inline long acrn_hypercall4(unsigned long hyp_id, unsigned long param1,
@@ -1429,7 +1429,7 @@ index e098a1f95..86b5f5796 100644
  inline long vhm_create_vm(struct vhm_vm *vm, unsigned long ioctl_param);
  inline long vhm_resume_vm(struct vhm_vm *vm);
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 872092490..01adcfade 100644
+index 872092490259..01adcfade99c 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -64,6 +64,14 @@
@@ -1448,7 +1448,7 @@ index 872092490..01adcfade 100644
  #define IC_ID_MEM_BASE                  0x300UL
  #define IC_ALLOC_MEMSEG                 _IC_ID(IC_ID, IC_ID_MEM_BASE + 0x00)
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index 4f1a0db2c..eb4100241 100644
+index 4f1a0db2c54d..eb410024157f 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -65,9 +65,14 @@ struct vhm_vm {

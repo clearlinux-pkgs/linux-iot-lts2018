@@ -64,10 +64,10 @@ Tested-by: Avri Altman <avri.altman@sandisk.com>
  create mode 100644 include/linux/rpmb.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index b9f9da0b8..f6067825c 100644
+index 1061db6fbc32..99151984b46c 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -12533,6 +12533,13 @@ F:	include/net/rose.h
+@@ -12542,6 +12542,13 @@ F:	include/net/rose.h
  F:	include/uapi/linux/rose.h
  F:	net/rose/
  
@@ -82,7 +82,7 @@ index b9f9da0b8..f6067825c 100644
  M:	Antti Palosaari <crope@iki.fi>
  L:	linux-media@vger.kernel.org
 diff --git a/drivers/char/Kconfig b/drivers/char/Kconfig
-index 1df9cb8e6..1780743c5 100644
+index 1df9cb8e659e..1780743c5d11 100644
 --- a/drivers/char/Kconfig
 +++ b/drivers/char/Kconfig
 @@ -552,6 +552,8 @@ config ADI
@@ -95,7 +95,7 @@ index 1df9cb8e6..1780743c5 100644
  
  config RANDOM_TRUST_CPU
 diff --git a/drivers/char/Makefile b/drivers/char/Makefile
-index b8d42b4e9..88764b76d 100644
+index b8d42b4e979b..88764b76d975 100644
 --- a/drivers/char/Makefile
 +++ b/drivers/char/Makefile
 @@ -58,3 +58,4 @@ js-rtc-y = rtc.o
@@ -105,7 +105,7 @@ index b8d42b4e9..88764b76d 100644
 +obj-$(CONFIG_RPMB)		+= rpmb/
 diff --git a/drivers/char/rpmb/Kconfig b/drivers/char/rpmb/Kconfig
 new file mode 100644
-index 000000000..b5cd02de9
+index 000000000000..b5cd02de91bb
 --- /dev/null
 +++ b/drivers/char/rpmb/Kconfig
 @@ -0,0 +1,9 @@
@@ -120,7 +120,7 @@ index 000000000..b5cd02de9
 +	  If unsure, select N.
 diff --git a/drivers/char/rpmb/Makefile b/drivers/char/rpmb/Makefile
 new file mode 100644
-index 000000000..badc1cd94
+index 000000000000..badc1cd9428b
 --- /dev/null
 +++ b/drivers/char/rpmb/Makefile
 @@ -0,0 +1,5 @@
@@ -131,7 +131,7 @@ index 000000000..badc1cd94
 +ccflags-y += -D__CHECK_ENDIAN__
 diff --git a/drivers/char/rpmb/core.c b/drivers/char/rpmb/core.c
 new file mode 100644
-index 000000000..69a590106
+index 000000000000..69a590106ae1
 --- /dev/null
 +++ b/drivers/char/rpmb/core.c
 @@ -0,0 +1,333 @@
@@ -470,7 +470,7 @@ index 000000000..69a590106
 +MODULE_LICENSE("Dual BSD/GPL");
 diff --git a/include/linux/rpmb.h b/include/linux/rpmb.h
 new file mode 100644
-index 000000000..6acd9b1e7
+index 000000000000..6acd9b1e70f6
 --- /dev/null
 +++ b/include/linux/rpmb.h
 @@ -0,0 +1,250 @@

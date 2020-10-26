@@ -14,7 +14,7 @@ Signed-off-by: Yang, Dong <dong.yang@intel.com>
  1 file changed, 5 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/gpu/drm/drm_ioctl.c b/drivers/gpu/drm/drm_ioctl.c
-index b92682f03..fae57a3c7 100644
+index b92682f037b2..fae57a3c7b2f 100644
 --- a/drivers/gpu/drm/drm_ioctl.c
 +++ b/drivers/gpu/drm/drm_ioctl.c
 @@ -563,7 +563,7 @@ static const struct drm_ioctl_desc drm_ioctls[] = {

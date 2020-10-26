@@ -20,7 +20,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 8 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 2da571f9c..6ad99373e 100644
+index 2da571f9c5f4..6ad99373e007 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1330,7 +1330,11 @@ static struct snd_soc_dai_driver skl_platform_dai[] = {

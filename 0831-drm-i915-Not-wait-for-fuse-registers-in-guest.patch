@@ -17,7 +17,7 @@ Change-Id: I80f871678f7697e7eae8bf730ed8dedc76b57e83
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/intel_runtime_pm.c b/drivers/gpu/drm/i915/intel_runtime_pm.c
-index 6b5aa3b07..c7cea8925 100644
+index 6b5aa3b074ec..c7cea892525d 100644
 --- a/drivers/gpu/drm/i915/intel_runtime_pm.c
 +++ b/drivers/gpu/drm/i915/intel_runtime_pm.c
 @@ -387,7 +387,8 @@ static void hsw_power_well_enable(struct drm_i915_private *dev_priv,

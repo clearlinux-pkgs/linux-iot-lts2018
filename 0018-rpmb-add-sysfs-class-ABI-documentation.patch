@@ -23,7 +23,7 @@ Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
 
 diff --git a/Documentation/ABI/testing/sysfs-class-rpmb b/Documentation/ABI/testing/sysfs-class-rpmb
 new file mode 100644
-index 000000000..a9d45aa77
+index 000000000000..a9d45aa77f77
 --- /dev/null
 +++ b/Documentation/ABI/testing/sysfs-class-rpmb
 @@ -0,0 +1,20 @@
@@ -48,10 +48,10 @@ index 000000000..a9d45aa77
 +		The /sys/class/rpmb/rpmbN directory is created for
 +		each RPMB registered device.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index f6067825c..626602d34 100644
+index 99151984b46c..c48553a07ce6 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -12539,6 +12539,7 @@ L:	linux-kernel@vger.kernel.org
+@@ -12548,6 +12548,7 @@ L:	linux-kernel@vger.kernel.org
  S:	Supported
  F:	drivers/char/rpmb/*
  F:	include/linux/rpmb.h

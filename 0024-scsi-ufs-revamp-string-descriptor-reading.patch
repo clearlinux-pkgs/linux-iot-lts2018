@@ -21,7 +21,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  4 files changed, 114 insertions(+), 80 deletions(-)
 
 diff --git a/drivers/scsi/ufs/ufs-sysfs.c b/drivers/scsi/ufs/ufs-sysfs.c
-index 8d9332bb7..0b221c5a2 100644
+index 8d9332bb7d0c..0b221c5a244c 100644
 --- a/drivers/scsi/ufs/ufs-sysfs.c
 +++ b/drivers/scsi/ufs/ufs-sysfs.c
 @@ -570,10 +570,11 @@ static ssize_t _name##_show(struct device *dev,				\
@@ -61,7 +61,7 @@ index 8d9332bb7..0b221c5a2 100644
  	kfree(desc_buf);						\
  	return ret;							\
 diff --git a/drivers/scsi/ufs/ufs.h b/drivers/scsi/ufs/ufs.h
-index c3bcaaec0..348471f55 100644
+index c3bcaaec0fc5..348471f55bf9 100644
 --- a/drivers/scsi/ufs/ufs.h
 +++ b/drivers/scsi/ufs/ufs.h
 @@ -617,7 +617,7 @@ struct ufs_dev_info {
@@ -74,10 +74,10 @@ index c3bcaaec0..348471f55 100644
  
  /**
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 803d67b3a..2296417ff 100644
+index b2cbdd01ab10..77fa110d5f74 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
-@@ -305,16 +305,6 @@ static void ufshcd_scsi_block_requests(struct ufs_hba *hba)
+@@ -307,16 +307,6 @@ static void ufshcd_scsi_block_requests(struct ufs_hba *hba)
  		scsi_block_requests(hba->host);
  }
  
@@ -94,7 +94,7 @@ index 803d67b3a..2296417ff 100644
  static void ufshcd_add_cmd_upiu_trace(struct ufs_hba *hba, unsigned int tag,
  		const char *str)
  {
-@@ -3164,7 +3154,7 @@ int ufshcd_read_desc_param(struct ufs_hba *hba,
+@@ -3169,7 +3159,7 @@ int ufshcd_read_desc_param(struct ufs_hba *hba,
  			   enum desc_idn desc_id,
  			   int desc_index,
  			   u8 param_offset,
@@ -103,7 +103,7 @@ index 803d67b3a..2296417ff 100644
  			   u8 param_size)
  {
  	int ret;
-@@ -3232,7 +3222,7 @@ int ufshcd_read_desc_param(struct ufs_hba *hba,
+@@ -3237,7 +3227,7 @@ int ufshcd_read_desc_param(struct ufs_hba *hba,
  static inline int ufshcd_read_desc(struct ufs_hba *hba,
  				   enum desc_idn desc_id,
  				   int desc_index,
@@ -112,7 +112,7 @@ index 803d67b3a..2296417ff 100644
  				   u32 size)
  {
  	return ufshcd_read_desc_param(hba, desc_id, desc_index, 0, buf, size);
-@@ -3250,49 +3240,77 @@ static int ufshcd_read_device_desc(struct ufs_hba *hba, u8 *buf, u32 size)
+@@ -3255,49 +3245,77 @@ static int ufshcd_read_device_desc(struct ufs_hba *hba, u8 *buf, u32 size)
  	return ufshcd_read_desc(hba, QUERY_DESC_IDN_DEVICE, 0, buf, size);
  }
  
@@ -217,7 +217,7 @@ index 803d67b3a..2296417ff 100644
  			goto out;
  		}
  
-@@ -3300,22 +3318,29 @@ int ufshcd_read_string_desc(struct ufs_hba *hba, int desc_index,
+@@ -3305,22 +3323,29 @@ int ufshcd_read_string_desc(struct ufs_hba *hba, int desc_index,
  		 * the descriptor contains string in UTF16 format
  		 * we need to convert to utf-8 so it can be displayed
  		 */
@@ -258,7 +258,7 @@ index 803d67b3a..2296417ff 100644
  }
  
  /**
-@@ -6302,6 +6327,9 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
+@@ -6307,6 +6332,9 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
  	u8 model_index;
  	u8 *desc_buf;
  
@@ -268,7 +268,7 @@ index 803d67b3a..2296417ff 100644
  	buff_len = max_t(size_t, hba->desc_size.dev_desc,
  			 QUERY_DESC_MAX_SIZE + 1);
  	desc_buf = kmalloc(buff_len, GFP_KERNEL);
-@@ -6325,31 +6353,31 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
+@@ -6330,31 +6358,31 @@ static int ufs_get_device_desc(struct ufs_hba *hba,
  				     desc_buf[DEVICE_DESC_PARAM_MANF_ID + 1];
  
  	model_index = desc_buf[DEVICE_DESC_PARAM_PRDCT_NAME];
@@ -314,7 +314,7 @@ index 803d67b3a..2296417ff 100644
  static void ufs_fixup_device_setup(struct ufs_hba *hba,
  				   struct ufs_dev_desc *dev_desc)
  {
-@@ -6358,8 +6386,9 @@ static void ufs_fixup_device_setup(struct ufs_hba *hba,
+@@ -6363,8 +6391,9 @@ static void ufs_fixup_device_setup(struct ufs_hba *hba,
  	for (f = ufs_fixups; f->quirk; f++) {
  		if ((f->card.wmanufacturerid == dev_desc->wmanufacturerid ||
  		     f->card.wmanufacturerid == UFS_ANY_VENDOR) &&
@@ -326,7 +326,7 @@ index 803d67b3a..2296417ff 100644
  			hba->dev_quirks |= f->quirk;
  	}
  }
-@@ -6642,6 +6671,8 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
+@@ -6647,6 +6676,8 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
  	}
  
  	ufs_fixup_device_setup(hba, &card);
@@ -336,7 +336,7 @@ index 803d67b3a..2296417ff 100644
  
  	ret = ufshcd_set_vccq_rail_unused(hba,
 diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
-index 4554a4b72..34b7d3546 100644
+index 4554a4b725b5..34b7d3546bdc 100644
 --- a/drivers/scsi/ufs/ufshcd.h
 +++ b/drivers/scsi/ufs/ufshcd.h
 @@ -877,14 +877,17 @@ int ufshcd_read_desc_param(struct ufs_hba *hba,

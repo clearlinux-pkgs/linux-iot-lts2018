@@ -19,7 +19,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  create mode 100644 drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-psys-32compat.c
 
 diff --git a/drivers/media/pci/intel/virtio/Makefile.virt b/drivers/media/pci/intel/virtio/Makefile.virt
-index 232027011..df41ac23a 100644
+index 232027011136..df41ac23a501 100644
 --- a/drivers/media/pci/intel/virtio/Makefile.virt
 +++ b/drivers/media/pci/intel/virtio/Makefile.virt
 @@ -20,6 +20,9 @@ else
@@ -34,7 +34,7 @@ index 232027011..df41ac23a 100644
  obj-$(CONFIG_VIDEO_INTEL_IPU_ACRN) += $(TARGET_MODULE).o
 \ No newline at end of file
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
-index 7751f471a..f2f57b086 100644
+index 7751f471af1d..f2f57b086739 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 @@ -37,6 +37,12 @@
@@ -69,7 +69,7 @@ index 7751f471a..f2f57b086 100644
  {
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-psys-32compat.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-psys-32compat.c
 new file mode 100644
-index 000000000..6756dd333
+index 000000000000..6756dd333cf8
 --- /dev/null
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-psys-32compat.c
 @@ -0,0 +1,225 @@

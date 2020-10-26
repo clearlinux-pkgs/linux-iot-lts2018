@@ -26,7 +26,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  3 files changed, 14 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/media/i2c/crlmodule/crl_ox03a10_common.h b/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
-index 2d8d67f54..7ed721c64 100644
+index 2d8d67f548f5..7ed721c64730 100644
 --- a/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
 +++ b/drivers/media/i2c/crlmodule/crl_ox03a10_common.h
 @@ -552,8 +552,6 @@ static struct crl_register_write_rep ox03a10_1920_1088_12DCG[] = {
@@ -111,7 +111,7 @@ index 2d8d67f54..7ed721c64 100644
  	{
  		.op = CRL_ASSIGNMENT,
 diff --git a/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h b/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h
-index cb2c89cbf..63e86480b 100644
+index cb2c89cbfb9b..63e86480b813 100644
 --- a/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h
 +++ b/drivers/media/i2c/crlmodule/crl_ox03a10_configuration.h
 @@ -49,6 +49,9 @@ struct crl_sensor_configuration ox03a10_crl_configuration = {
@@ -125,7 +125,7 @@ index cb2c89cbf..63e86480b 100644
  	.frame_desc_type = CRL_V4L2_MBUS_FRAME_DESC_TYPE_CSI2,
  	.frame_desc = ox03a10_frame_desc,
 diff --git a/drivers/media/i2c/crlmodule/crl_ox03a10_ficosa_configuration.h b/drivers/media/i2c/crlmodule/crl_ox03a10_ficosa_configuration.h
-index eaf262852..a52462341 100644
+index eaf262852608..a52462341770 100644
 --- a/drivers/media/i2c/crlmodule/crl_ox03a10_ficosa_configuration.h
 +++ b/drivers/media/i2c/crlmodule/crl_ox03a10_ficosa_configuration.h
 @@ -49,6 +49,9 @@ struct crl_sensor_configuration ox03a10_ficosa_crl_configuration = {

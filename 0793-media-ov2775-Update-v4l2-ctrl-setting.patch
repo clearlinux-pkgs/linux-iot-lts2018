@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 148 insertions(+), 97 deletions(-)
 
 diff --git a/drivers/media/i2c/crlmodule/crl_ov2775_configuration.h b/drivers/media/i2c/crlmodule/crl_ov2775_configuration.h
-index cffc0cccb..917891371 100644
+index cffc0cccb865..917891371ebe 100644
 --- a/drivers/media/i2c/crlmodule/crl_ov2775_configuration.h
 +++ b/drivers/media/i2c/crlmodule/crl_ov2775_configuration.h
 @@ -7306,6 +7306,13 @@ static struct crl_arithmetic_ops ov2775_ana_gain_vs_ops[] = {
@@ -455,7 +455,7 @@ index cffc0cccb..917891371 100644
  	.powerup_regs = ov2775_powerup_standby_regset,
  
 diff --git a/include/uapi/linux/crlmodule.h b/include/uapi/linux/crlmodule.h
-index 8bcb8c928..f13d2788b 100644
+index 8bcb8c92830f..f13d2788b88c 100644
 --- a/include/uapi/linux/crlmodule.h
 +++ b/include/uapi/linux/crlmodule.h
 @@ -73,4 +73,7 @@ struct crl_registers_info {

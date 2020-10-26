@@ -27,7 +27,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  3 files changed, 105 insertions(+)
 
 diff --git a/include/uapi/sound/skl-tplg-interface.h b/include/uapi/sound/skl-tplg-interface.h
-index 2dceadfbc..89844fb10 100644
+index 2dceadfbc1f5..89844fb10aa5 100644
 --- a/include/uapi/sound/skl-tplg-interface.h
 +++ b/include/uapi/sound/skl-tplg-interface.h
 @@ -19,6 +19,7 @@
@@ -39,7 +39,7 @@ index 2dceadfbc..89844fb10 100644
  #define HDA_SST_CFG_MAX	900 /* size of copier cfg*/
  #define MAX_IN_QUEUE 8
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 4343f9968..5f51debc4 100644
+index 4343f99689fa..5f51debc4638 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -60,6 +60,14 @@ static const int mic_quatro_list[][SKL_CH_QUATRO] = {
@@ -187,7 +187,7 @@ index 4343f9968..5f51debc4 100644
  
  static int skl_tplg_fill_pipe_cfg(struct device *dev,
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 02256d70f..07d041fc8 100644
+index 02256d70f60f..07d041fc8b72 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -342,6 +342,7 @@ struct skl_pipe {

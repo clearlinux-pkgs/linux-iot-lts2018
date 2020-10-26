@@ -22,7 +22,7 @@ Signed-off-by: Bandi, Kushal <kushal.bandi@intel.com>
  create mode 100644 drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.h
 
 diff --git a/drivers/media/pci/intel/virtio/Makefile.virt b/drivers/media/pci/intel/virtio/Makefile.virt
-index 75f481b3b..7264898c4 100644
+index 75f481b3b71d..7264898c43bf 100644
 --- a/drivers/media/pci/intel/virtio/Makefile.virt
 +++ b/drivers/media/pci/intel/virtio/Makefile.virt
 @@ -19,6 +19,7 @@ else
@@ -34,7 +34,7 @@ index 75f481b3b..7264898c4 100644
  
  obj-$(CONFIG_VIDEO_INTEL_IPU_ACRN) := $(TARGET_MODULE).o
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
-index 06572eab9..212132f5e 100644
+index 06572eab985b..212132f5edc0 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 @@ -1255,7 +1255,7 @@ static int virt_ici_pipeline_init(void)
@@ -86,7 +86,7 @@ index 06572eab9..212132f5e 100644
  MODULE_LICENSE("Dual BSD/GPL");
  MODULE_DESCRIPTION("Intel IPU Para virtualize ici input system driver");
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.h b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.h
-index d6d9210d9..f32c3e9bb 100644
+index d6d9210d937a..f32c3e9bb30b 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.h
 @@ -17,7 +17,7 @@
@@ -100,7 +100,7 @@ index d6d9210d9..f32c3e9bb 100644
  	struct ici_stream_device strm_dev;
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 new file mode 100644
-index 000000000..6e040794a
+index 000000000000..6e040794aef0
 --- /dev/null
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 @@ -0,0 +1,216 @@
@@ -322,7 +322,7 @@ index 000000000..6e040794a
 +
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.h b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.h
 new file mode 100644
-index 000000000..f84c1e2ba
+index 000000000000..f84c1e2baf31
 --- /dev/null
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.h
 @@ -0,0 +1,38 @@

@@ -23,7 +23,7 @@ Tested-by: Madiwalar, MadiwalappaX <madiwalappax.madiwalar@intel.com>
  2 files changed, 13 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.c b/sound/soc/intel/skylake/skl-sst-dsp.c
-index b34f7b73e..0b1cc44c9 100644
+index b34f7b73e24e..0b1cc44c901d 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.c
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.c
 @@ -54,6 +54,18 @@ void skl_dsp_init_core_state(struct sst_dsp *ctx)
@@ -46,7 +46,7 @@ index b34f7b73e..0b1cc44c9 100644
  unsigned int skl_dsp_get_enabled_cores(struct sst_dsp *ctx)
  {
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index 807f5b7db..ef9bf4a4a 100644
+index 807f5b7db0ae..ef9bf4a4a1b7 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -273,6 +273,7 @@ bool is_skl_dsp_running(struct sst_dsp *ctx);

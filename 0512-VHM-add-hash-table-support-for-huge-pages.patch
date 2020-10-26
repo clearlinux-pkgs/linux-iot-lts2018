@@ -22,7 +22,7 @@ Reviewed-on:
  create mode 100644 drivers/vhm/vhm_hugetlb.c
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 8d083a09b..f4d2ec2b7 100644
+index 8d083a09bf06..f4d2ec2b7e23 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -112,6 +112,7 @@ static DEFINE_MUTEX(table_iomems_lock);
@@ -45,7 +45,7 @@ index 8d083a09b..f4d2ec2b7 100644
  	spin_lock_init(&vm->ioreq_client_lock);
  
 diff --git a/drivers/vhm/Makefile b/drivers/vhm/Makefile
-index b4d58a92d..23f17ae24 100644
+index b4d58a92dcfd..23f17ae24f78 100644
 --- a/drivers/vhm/Makefile
 +++ b/drivers/vhm/Makefile
 @@ -1 +1 @@
@@ -53,7 +53,7 @@ index b4d58a92d..23f17ae24 100644
 +obj-y += vhm_mm.o vhm_hugetlb.o vhm_ioreq.o vhm_vm_mngt.o vhm_msi.o vhm_hypercall.o
 diff --git a/drivers/vhm/vhm_hugetlb.c b/drivers/vhm/vhm_hugetlb.c
 new file mode 100644
-index 000000000..afab8ab52
+index 000000000000..afab8ab52567
 --- /dev/null
 +++ b/drivers/vhm/vhm_hugetlb.c
 @@ -0,0 +1,273 @@
@@ -331,7 +331,7 @@ index 000000000..afab8ab52
 +	return -ESRCH;
 +}
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index 728998d03..070327e61 100644
+index 728998d0341d..070327e616d6 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -156,7 +156,7 @@ int alloc_guest_memseg(struct vhm_vm *vm, struct vm_memseg *memseg)
@@ -464,7 +464,7 @@ index 728998d03..070327e61 100644
  	return ret;
  }
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index ba383b354..9be6749d1 100644
+index ba383b354986..9be6749d12e2 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -199,4 +199,12 @@ int alloc_guest_memseg(struct vhm_vm *vm, struct vm_memseg *memseg);
@@ -481,7 +481,7 @@ index ba383b354..9be6749d1 100644
 +int hugepage_unmap_guest_phys(struct vhm_vm *vm, u64 guest_phys);
  #endif
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index 306bd54c4..f0a7e1cf7 100644
+index 306bd54c4103..f0a7e1cf7b05 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -67,6 +67,10 @@

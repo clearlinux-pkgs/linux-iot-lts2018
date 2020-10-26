@@ -11,11 +11,11 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  security/smack/smack.h        | 14 +++++++--
  security/smack/smack_access.c |  4 +--
  security/smack/smack_lsm.c    | 55 +++++++++++++++++------------------
- security/smack/smackfs.c      | 18 ++++++------
- 4 files changed, 49 insertions(+), 42 deletions(-)
+ security/smack/smackfs.c      | 16 +++++-----
+ 4 files changed, 48 insertions(+), 41 deletions(-)
 
 diff --git a/security/smack/smack.h b/security/smack/smack.h
-index f7db791fb..0b55d6a55 100644
+index f7db791fb566..0b55d6a55b26 100644
 --- a/security/smack/smack.h
 +++ b/security/smack/smack.h
 @@ -356,6 +356,11 @@ extern struct list_head smack_onlycap_list;
@@ -59,7 +59,7 @@ index f7db791fb..0b55d6a55 100644
  
  /*
 diff --git a/security/smack/smack_access.c b/security/smack/smack_access.c
-index a7855c61c..485ccd117 100644
+index a7855c61c05c..485ccd117781 100644
 --- a/security/smack/smack_access.c
 +++ b/security/smack/smack_access.c
 @@ -275,7 +275,7 @@ int smk_tskacc(struct task_smack *tsp, struct smack_known *obj_known,
@@ -81,7 +81,7 @@ index a7855c61c..485ccd117 100644
  	struct smack_known_list_elem *sklep;
  	int rc;
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 221de4c75..9d5d5584d 100644
+index 221de4c755c3..9d5d5584d2fa 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -122,7 +122,7 @@ static int smk_bu_note(char *note, struct smack_known *sskp,
@@ -318,10 +318,10 @@ index 221de4c75..9d5d5584d 100644
  	int may;
  
 diff --git a/security/smack/smackfs.c b/security/smack/smackfs.c
-index f6482e53d..9d2dde608 100644
+index accd3846f1e3..09fee3e8df9c 100644
 --- a/security/smack/smackfs.c
 +++ b/security/smack/smackfs.c
-@@ -2208,14 +2208,14 @@ static const struct file_operations smk_logging_ops = {
+@@ -2222,14 +2222,14 @@ static const struct file_operations smk_logging_ops = {
  
  static void *load_self_seq_start(struct seq_file *s, loff_t *pos)
  {
@@ -338,7 +338,7 @@ index f6482e53d..9d2dde608 100644
  
  	return smk_seq_next(s, v, pos, &tsp->smk_rules);
  }
-@@ -2262,7 +2262,7 @@ static int smk_open_load_self(struct inode *inode, struct file *file)
+@@ -2276,7 +2276,7 @@ static int smk_open_load_self(struct inode *inode, struct file *file)
  static ssize_t smk_write_load_self(struct file *file, const char __user *buf,
  			      size_t count, loff_t *ppos)
  {
@@ -347,7 +347,7 @@ index f6482e53d..9d2dde608 100644
  
  	return smk_write_rules_list(file, buf, count, ppos, &tsp->smk_rules,
  				    &tsp->smk_rules_lock, SMK_FIXED24_FMT);
-@@ -2414,14 +2414,14 @@ static const struct file_operations smk_load2_ops = {
+@@ -2428,14 +2428,14 @@ static const struct file_operations smk_load2_ops = {
  
  static void *load_self2_seq_start(struct seq_file *s, loff_t *pos)
  {
@@ -364,7 +364,7 @@ index f6482e53d..9d2dde608 100644
  
  	return smk_seq_next(s, v, pos, &tsp->smk_rules);
  }
-@@ -2467,7 +2467,7 @@ static int smk_open_load_self2(struct inode *inode, struct file *file)
+@@ -2481,7 +2481,7 @@ static int smk_open_load_self2(struct inode *inode, struct file *file)
  static ssize_t smk_write_load_self2(struct file *file, const char __user *buf,
  			      size_t count, loff_t *ppos)
  {
@@ -373,7 +373,7 @@ index f6482e53d..9d2dde608 100644
  
  	return smk_write_rules_list(file, buf, count, ppos, &tsp->smk_rules,
  				    &tsp->smk_rules_lock, SMK_LONG_FMT);
-@@ -2681,14 +2681,14 @@ static const struct file_operations smk_syslog_ops = {
+@@ -2695,14 +2695,14 @@ static const struct file_operations smk_syslog_ops = {
  
  static void *relabel_self_seq_start(struct seq_file *s, loff_t *pos)
  {
@@ -390,15 +390,6 @@ index f6482e53d..9d2dde608 100644
  
  	return smk_seq_next(s, v, pos, &tsp->smk_relabel);
  }
-@@ -2736,7 +2736,7 @@ static int smk_open_relabel_self(struct inode *inode, struct file *file)
- static ssize_t smk_write_relabel_self(struct file *file, const char __user *buf,
- 				size_t count, loff_t *ppos)
- {
--	struct task_smack *tsp = current_security();
-+	struct task_smack *tsp = smack_cred(current_cred());
- 	char *data;
- 	int rc;
- 	LIST_HEAD(list_tmp);
 -- 
 https://clearlinux.org
 

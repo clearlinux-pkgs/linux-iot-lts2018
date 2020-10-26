@@ -22,7 +22,7 @@ Reviewed-on: #574947
  6 files changed, 47 insertions(+)
 
 diff --git a/drivers/trusty/trusty-ipc.c b/drivers/trusty/trusty-ipc.c
-index 9d6f6bf94..a05c5f957 100644
+index 9d6f6bf94f97..a05c5f957146 100644
 --- a/drivers/trusty/trusty-ipc.c
 +++ b/drivers/trusty/trusty-ipc.c
 @@ -31,6 +31,7 @@
@@ -47,7 +47,7 @@ index 9d6f6bf94..a05c5f957 100644
  
  	vds = kzalloc(sizeof(*vds), GFP_KERNEL);
 diff --git a/drivers/trusty/trusty-irq.c b/drivers/trusty/trusty-irq.c
-index 363b302de..afdea66c2 100644
+index 363b302dec0a..afdea66c23c2 100644
 --- a/drivers/trusty/trusty-irq.c
 +++ b/drivers/trusty/trusty-irq.c
 @@ -587,6 +587,12 @@ static int trusty_irq_probe(struct platform_device *pdev)
@@ -64,7 +64,7 @@ index 363b302de..afdea66c2 100644
  
  	is = kzalloc(sizeof(*is), GFP_KERNEL);
 diff --git a/drivers/trusty/trusty-log.c b/drivers/trusty/trusty-log.c
-index 4200e901d..c977d33cc 100644
+index 4200e901d925..c977d33ccde5 100644
 --- a/drivers/trusty/trusty-log.c
 +++ b/drivers/trusty/trusty-log.c
 @@ -254,6 +254,12 @@ static int trusty_log_probe(struct platform_device *pdev)
@@ -81,7 +81,7 @@ index 4200e901d..c977d33cc 100644
  	if (!trusty_supports_logging(pdev->dev.parent)) {
  		return -ENXIO;
 diff --git a/drivers/trusty/trusty-virtio.c b/drivers/trusty/trusty-virtio.c
-index 3d1a9aabe..2ce818cef 100644
+index 3d1a9aabef83..2ce818cef175 100644
 --- a/drivers/trusty/trusty-virtio.c
 +++ b/drivers/trusty/trusty-virtio.c
 @@ -628,6 +628,12 @@ static int trusty_virtio_probe(struct platform_device *pdev)
@@ -98,7 +98,7 @@ index 3d1a9aabe..2ce818cef 100644
  
  	tctx = kzalloc(sizeof(*tctx), GFP_KERNEL);
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index 679c5a9a7..93c73882b 100644
+index 679c5a9a7acf..93c73882b00c 100644
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -450,6 +450,12 @@ static int trusty_probe(struct platform_device *pdev)
@@ -115,7 +115,7 @@ index 679c5a9a7..93c73882b 100644
  		dev_err(&pdev->dev, "of_node required\n");
  		return -EINVAL;
 diff --git a/include/linux/trusty/trusty.h b/include/linux/trusty/trusty.h
-index 74598389c..7dc2dad40 100644
+index 74598389c308..7dc2dad40daa 100644
 --- a/include/linux/trusty/trusty.h
 +++ b/include/linux/trusty/trusty.h
 @@ -69,4 +69,20 @@ int trusty_call32_mem_buf(struct device *dev, u32 smcnr,

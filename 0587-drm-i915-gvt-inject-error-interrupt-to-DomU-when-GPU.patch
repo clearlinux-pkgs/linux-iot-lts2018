@@ -22,7 +22,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  4 files changed, 37 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/interrupt.c b/drivers/gpu/drm/i915/gvt/interrupt.c
-index d749d46bc..06ce906b6 100644
+index d749d46bc05b..06ce906b6673 100644
 --- a/drivers/gpu/drm/i915/gvt/interrupt.c
 +++ b/drivers/gpu/drm/i915/gvt/interrupt.c
 @@ -69,6 +69,7 @@ static const char * const irq_name[INTEL_GVT_EVENT_MAX] = {
@@ -69,7 +69,7 @@ index d749d46bc..06ce906b6 100644
  	SET_BIT_INFO(irq, 8, VECS_AS_CONTEXT_SWITCH, INTEL_GVT_IRQ_INFO_GT3);
  
 diff --git a/drivers/gpu/drm/i915/gvt/interrupt.h b/drivers/gpu/drm/i915/gvt/interrupt.h
-index f7d7ade4f..6ec761a84 100644
+index f7d7ade4f13c..6ec761a84557 100644
 --- a/drivers/gpu/drm/i915/gvt/interrupt.h
 +++ b/drivers/gpu/drm/i915/gvt/interrupt.h
 @@ -53,6 +53,7 @@ enum intel_gvt_event_type {
@@ -89,7 +89,7 @@ index f7d7ade4f..6ec761a84 100644
  	VECS_AS_CONTEXT_SWITCH,
  
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.c b/drivers/gpu/drm/i915/gvt/scheduler.c
-index bddd7ce94..1d25ee3c1 100644
+index bddd7ce94d0d..1d25ee3c1277 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.c
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.c
 @@ -682,6 +682,7 @@ static int dispatch_workload(struct intel_vgpu_workload *workload)
@@ -148,7 +148,7 @@ index bddd7ce94..1d25ee3c1 100644
  		gvt_dbg_sched("will complete workload %p, status: %d\n",
  				workload, workload->status);
 diff --git a/drivers/gpu/drm/i915/gvt/scheduler.h b/drivers/gpu/drm/i915/gvt/scheduler.h
-index ca5529d0e..043c2ff07 100644
+index ca5529d0e48e..043c2ff07a7c 100644
 --- a/drivers/gpu/drm/i915/gvt/scheduler.h
 +++ b/drivers/gpu/drm/i915/gvt/scheduler.h
 @@ -84,6 +84,7 @@ struct intel_vgpu_workload {

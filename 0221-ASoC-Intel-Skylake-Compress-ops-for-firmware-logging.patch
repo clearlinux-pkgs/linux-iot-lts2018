@@ -21,7 +21,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  4 files changed, 192 insertions(+)
 
 diff --git a/sound/soc/intel/Kconfig b/sound/soc/intel/Kconfig
-index 221283d83..2f56dbfea 100644
+index 221283d83619..2f56dbfea444 100644
 --- a/sound/soc/intel/Kconfig
 +++ b/sound/soc/intel/Kconfig
 @@ -111,6 +111,7 @@ config SND_SOC_INTEL_SKYLAKE
@@ -33,7 +33,7 @@ index 221283d83..2f56dbfea 100644
  	help
  	  If you have a Intel Skylake/Broxton/ApolloLake/KabyLake/
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index a9eaa4aed..d0121984c 100644
+index a9eaa4aed643..d0121984cf4b 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -66,6 +66,28 @@ void skl_dsp_set_astate_cfg(struct skl_sst *ctx, u32 cnt, void *data)
@@ -66,7 +66,7 @@ index a9eaa4aed..d0121984c 100644
  #define NOTIFICATION_MASK 0xf
  
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 80480eb94..7745b339d 100644
+index 80480eb94846..7745b339de5b 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -29,6 +29,7 @@
@@ -255,7 +255,7 @@ index 80480eb94..7745b339d 100644
  	.pcm_free	= skl_pcm_free,
  };
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 10a486939..a8de8cfac 100644
+index 10a486939515..a8de8cfac6ee 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -161,6 +161,16 @@ struct skl_ipc_d0ix_msg {

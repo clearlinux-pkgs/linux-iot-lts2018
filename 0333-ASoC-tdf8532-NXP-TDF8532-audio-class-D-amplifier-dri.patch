@@ -24,7 +24,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  create mode 100644 sound/soc/codecs/tdf8532.h
 
 diff --git a/sound/soc/codecs/Kconfig b/sound/soc/codecs/Kconfig
-index b002d79d9..006be9a90 100644
+index b002d79d910e..006be9a90286 100644
 --- a/sound/soc/codecs/Kconfig
 +++ b/sound/soc/codecs/Kconfig
 @@ -163,6 +163,7 @@ config SND_SOC_ALL_CODECS
@@ -47,7 +47,7 @@ index b002d79d9..006be9a90 100644
  	tristate "NXP Semiconductors TFA9879 amplifier"
  	depends on I2C
 diff --git a/sound/soc/codecs/Makefile b/sound/soc/codecs/Makefile
-index 5aed74a73..b9ec39dfc 100644
+index 5aed74a73acf..b9ec39dfc960 100644
 --- a/sound/soc/codecs/Makefile
 +++ b/sound/soc/codecs/Makefile
 @@ -179,6 +179,7 @@ snd-soc-tas571x-objs := tas571x.o
@@ -68,7 +68,7 @@ index 5aed74a73..b9ec39dfc 100644
  obj-$(CONFIG_SND_SOC_TLV320AIC23_I2C)	+= snd-soc-tlv320aic23-i2c.o
 diff --git a/sound/soc/codecs/tdf8532.c b/sound/soc/codecs/tdf8532.c
 new file mode 100644
-index 000000000..7a3cca073
+index 000000000000..7a3cca073845
 --- /dev/null
 +++ b/sound/soc/codecs/tdf8532.c
 @@ -0,0 +1,377 @@
@@ -451,7 +451,7 @@ index 000000000..7a3cca073
 +MODULE_LICENSE("GPL v2");
 diff --git a/sound/soc/codecs/tdf8532.h b/sound/soc/codecs/tdf8532.h
 new file mode 100644
-index 000000000..6e3f2c147
+index 000000000000..6e3f2c147eac
 --- /dev/null
 +++ b/sound/soc/codecs/tdf8532.h
 @@ -0,0 +1,101 @@

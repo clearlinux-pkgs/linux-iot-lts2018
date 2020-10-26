@@ -23,7 +23,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  1 file changed, 4 insertions(+)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-video.c b/drivers/media/pci/intel/ipu-isys-video.c
-index 942ad1755..6684b011f 100644
+index 942ad1755ae8..6684b011f9f9 100644
 --- a/drivers/media/pci/intel/ipu-isys-video.c
 +++ b/drivers/media/pci/intel/ipu-isys-video.c
 @@ -1779,7 +1779,11 @@ static const struct v4l2_ioctl_ops ioctl_ops_splane = {

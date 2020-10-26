@@ -21,7 +21,7 @@ Tested-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  4 files changed, 35 insertions(+), 7 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index b3bef03e9..229958f7f 100644
+index b3bef03e9946..229958f7f96f 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1411,7 +1411,7 @@ static struct snd_soc_dai_driver skl_fe_dai[] = {
@@ -34,7 +34,7 @@ index b3bef03e9..229958f7f 100644
  {
  	.name = "SSP5 Pin",
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 551598ea8..5cdec13bb 100644
+index 551598ea8e6d..5cdec13bbe50 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -252,6 +252,8 @@ struct skl_notify_kctrl_info {
@@ -47,7 +47,7 @@ index 551598ea8..5cdec13bb 100644
  struct skl_sst {
  	struct device *dev;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 08c43caf0..fd0dccde2 100644
+index 08c43caf0ca5..fd0dccde2801 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -35,6 +35,12 @@
@@ -110,7 +110,7 @@ index 08c43caf0..fd0dccde2 100644
  	w = vbe_skl_find_kcontrol_widget(sdev, kcontrol);
  	if (w) {
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.h b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
-index cbe621e41..9ccfed507 100644
+index cbe621e41d2d..9ccfed50792a 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 @@ -34,6 +34,8 @@ struct snd_skl_vbe;

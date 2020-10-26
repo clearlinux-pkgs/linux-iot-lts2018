@@ -15,7 +15,7 @@ Tested-by: Slawinski, AmadeuszX <amadeuszx.slawinski@intel.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index daa3b374f..8f897fdaf 100644
+index daa3b374f646..8f897fdafd4a 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -526,9 +526,9 @@ int snd_skl_parse_uuids(struct sst_dsp *ctx, const struct firmware *fw,

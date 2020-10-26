@@ -22,7 +22,7 @@ Tested-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  5 files changed, 120 insertions(+), 45 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 062ead5c3..08c43caf0 100644
+index 062ead5c31c2..08c43caf0ca5 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -246,31 +246,27 @@ int vbe_send_kctl_msg(struct snd_kcontrol *kcontrol,
@@ -162,7 +162,7 @@ index 062ead5c3..08c43caf0 100644
  	case SKL_VIRTIO_IPC_NOT_TX_VQ:
  		/* IPC notification reply from FE to DSP */
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.h b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
-index af2643a5e..cbe621e41 100644
+index af2643a5e134..cbe621e41d2d 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 @@ -54,6 +54,7 @@ struct vbe_substream_info {
@@ -174,7 +174,7 @@ index af2643a5e..cbe621e41 100644
  	struct snd_skl_vbe *vbe;
  	struct list_head list;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index bde10f93d..3fada1fb3 100644
+index bde10f93df8a..3fada1fb3c8e 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -31,6 +31,12 @@
@@ -201,7 +201,7 @@ index bde10f93d..3fada1fb3 100644
  
  
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 422526b16..900956133 100644
+index 422526b162a5..900956133940 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -93,6 +93,7 @@ inline int vfe_is_valid_fe_substream(struct snd_pcm_substream *substream)
@@ -392,7 +392,7 @@ index 422526b16..900956133 100644
  }
  #endif
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index 7456b53c5..243fdc8d5 100644
+index 7456b53c5672..243fdc8d533e 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -21,7 +21,7 @@ struct vfe_substream_info {

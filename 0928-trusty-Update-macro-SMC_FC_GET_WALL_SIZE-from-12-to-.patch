@@ -13,7 +13,7 @@ Signed-off-by: Ding,XinX <xinx.ding@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/include/linux/trusty/smcall.h b/include/linux/trusty/smcall.h
-index ee5dda256..3ab2f688c 100644
+index ee5dda2560b6..3ab2f688cb33 100644
 --- a/include/linux/trusty/smcall.h
 +++ b/include/linux/trusty/smcall.h
 @@ -139,7 +139,7 @@

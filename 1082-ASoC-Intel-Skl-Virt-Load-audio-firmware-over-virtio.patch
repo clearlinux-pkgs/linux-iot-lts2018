@@ -19,7 +19,7 @@ Signed-off-by: Wojciech Jablonski <wojciech.jablonski@intel.com>
  4 files changed, 60 insertions(+), 5 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 64e2071f9..fff230ccc 100644
+index 64e2071f948b..fff230cccf7a 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -33,6 +33,7 @@
@@ -74,7 +74,7 @@ index 64e2071f9..fff230ccc 100644
  		fw = NULL;
  	}
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 96c230972..28ca02fa6 100644
+index 96c230972ed4..28ca02fa675a 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -1550,6 +1550,7 @@ static int vfe_init(struct virtio_device *vdev)
@@ -86,7 +86,7 @@ index 96c230972..28ca02fa6 100644
  	ret = vfe_register_domain(vfe);
  	if (ret < 0)
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index 4c05e3acc..ad1ca78dd 100644
+index 4c05e3acc00b..ad1ca78dd493 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -65,6 +65,8 @@ struct snd_skl_vfe {
@@ -99,7 +99,7 @@ index 4c05e3acc..ad1ca78dd 100644
  		struct platform_device *pdev, struct snd_soc_card *card);
  };
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-sst.c b/sound/soc/intel/skylake/virtio/skl-virtio-sst.c
-index c3b3b4d6c..6f2c2e110 100644
+index c3b3b4d6cd02..6f2c2e110550 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-sst.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-sst.c
 @@ -31,16 +31,42 @@ static unsigned int vfe_get_errorcode(struct sst_dsp *ctx)

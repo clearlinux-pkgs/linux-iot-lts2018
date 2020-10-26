@@ -19,7 +19,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 5db66e257..30ba9a9e7 100644
+index 5db66e257887..30ba9a9e708d 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -472,4 +472,6 @@ int skl_ipc_process_notification(struct sst_generic_ipc *ipc,
@@ -30,7 +30,7 @@ index 5db66e257..30ba9a9e7 100644
 +
  #endif /* __SKL_IPC_H */
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 4c09a0896..12639e4bb 100644
+index 4c09a0896e42..12639e4bba76 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -613,8 +613,6 @@ int skl_tplg_dsp_log_set(struct snd_kcontrol *kcontrol,

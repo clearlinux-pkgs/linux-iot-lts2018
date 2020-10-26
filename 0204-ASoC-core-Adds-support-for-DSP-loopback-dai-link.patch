@@ -14,7 +14,7 @@ Signed-off-by: Jeeja KP <jeeja.kp@intel.com>
  2 files changed, 19 insertions(+), 4 deletions(-)
 
 diff --git a/include/sound/soc.h b/include/sound/soc.h
-index 88aa48e54..d26d1d188 100644
+index 88aa48e5485f..d26d1d188b81 100644
 --- a/include/sound/soc.h
 +++ b/include/sound/soc.h
 @@ -920,6 +920,9 @@ struct snd_soc_dai_link {
@@ -28,7 +28,7 @@ index 88aa48e54..d26d1d188 100644
  
  	enum snd_soc_dpcm_trigger trigger[2]; /* trigger type for DPCM */
 diff --git a/sound/soc/soc-core.c b/sound/soc/soc-core.c
-index f5291b2ea..a7048d872 100644
+index 39056ff80dc9..f4d344cd2834 100644
 --- a/sound/soc/soc-core.c
 +++ b/sound/soc/soc-core.c
 @@ -1444,8 +1444,14 @@ static int soc_link_dai_widgets(struct snd_soc_card *card,

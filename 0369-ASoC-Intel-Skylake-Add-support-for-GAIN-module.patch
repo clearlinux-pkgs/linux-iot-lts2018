@@ -31,7 +31,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  4 files changed, 521 insertions(+), 1 deletion(-)
 
 diff --git a/include/uapi/sound/skl-tplg-interface.h b/include/uapi/sound/skl-tplg-interface.h
-index a3f0890c7..5e284a4b6 100644
+index a3f0890c75bd..5e284a4b6ce0 100644
 --- a/include/uapi/sound/skl-tplg-interface.h
 +++ b/include/uapi/sound/skl-tplg-interface.h
 @@ -20,6 +20,9 @@
@@ -69,7 +69,7 @@ index a3f0890c7..5e284a4b6 100644
  	SKL_DIR_IN,
  	SKL_DIR_OUT
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 02b3aad15..ba6026925 100644
+index 02b3aad155f1..ba60269255f6 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -36,6 +36,7 @@
@@ -137,7 +137,7 @@ index 02b3aad15..ba6026925 100644
  		skl_set_base_module_format(ctx, module_config, *param_data);
  		break;
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 26cc13646..c3e5ff494 100644
+index 26cc13646dd6..c3e5ff49467f 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -32,6 +32,8 @@
@@ -643,7 +643,7 @@ index 26cc13646..c3e5ff494 100644
  
  bind_event:
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index f9ac42cdc..cc23a18fb 100644
+index f9ac42cdc64d..cc23a18fb2b4 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -55,6 +55,7 @@

@@ -25,7 +25,7 @@ Signed-off-by: Hui Xia <hui.xia@intel.com>
  create mode 120000 drivers/media/pci/intel/ipu4/ipu4p-css/ipu-wrapper.c
 
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-css/Makefile.isyslib b/drivers/media/pci/intel/ipu4/ipu4-css/Makefile.isyslib
-index c99c9a898..33a3df896 100644
+index c99c9a898c69..33a3df896919 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-css/Makefile.isyslib
 +++ b/drivers/media/pci/intel/ipu4/ipu4-css/Makefile.isyslib
 @@ -10,11 +10,6 @@ IPU_ISYSLIB_ROOT = $(srcpath)/$(src)/$(IPU_ISYSLIB_ROOT_REL)
@@ -42,7 +42,7 @@ index c99c9a898..33a3df896 100644
  			$(IPU_ISYSLIB_SRC)
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-css/ipu-wrapper.c b/drivers/media/pci/intel/ipu4/ipu4-css/ipu-wrapper.c
 deleted file mode 100644
-index 9e06887dd..000000000
+index 9e06887dd857..000000000000
 --- a/drivers/media/pci/intel/ipu4/ipu4-css/ipu-wrapper.c
 +++ /dev/null
 @@ -1,514 +0,0 @@
@@ -562,14 +562,14 @@ index 9e06887dd..000000000
 -}
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-css/ipu-wrapper.c b/drivers/media/pci/intel/ipu4/ipu4-css/ipu-wrapper.c
 new file mode 120000
-index 000000000..3167dda06
+index 000000000000..3167dda06f06
 --- /dev/null
 +++ b/drivers/media/pci/intel/ipu4/ipu4-css/ipu-wrapper.c
 @@ -0,0 +1 @@
 +../../ipu-wrapper.c
 \ No newline at end of file
 diff --git a/drivers/media/pci/intel/ipu4/ipu4p-css/Makefile.isyslib b/drivers/media/pci/intel/ipu4/ipu4p-css/Makefile.isyslib
-index f0b540d78..d0816c508 100644
+index f0b540d78d2b..d0816c508ed9 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4p-css/Makefile.isyslib
 +++ b/drivers/media/pci/intel/ipu4/ipu4p-css/Makefile.isyslib
 @@ -10,11 +10,6 @@ IPU_ISYSLIB_ROOT = $(srcpath)/$(src)/$(IPU_ISYSLIB_ROOT_REL)
@@ -586,7 +586,7 @@ index f0b540d78..d0816c508 100644
  		$(IPU_ISYSLIB_SRC)
 diff --git a/drivers/media/pci/intel/ipu4/ipu4p-css/ipu-wrapper.c b/drivers/media/pci/intel/ipu4/ipu4p-css/ipu-wrapper.c
 new file mode 120000
-index 000000000..3167dda06
+index 000000000000..3167dda06f06
 --- /dev/null
 +++ b/drivers/media/pci/intel/ipu4/ipu4p-css/ipu-wrapper.c
 @@ -0,0 +1 @@

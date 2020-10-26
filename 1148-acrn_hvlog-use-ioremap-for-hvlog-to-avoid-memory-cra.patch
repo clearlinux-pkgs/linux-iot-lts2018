@@ -20,7 +20,7 @@ Reviewed-by: Li Fei1 <fei1.li@intel.com>
  4 files changed, 50 insertions(+), 42 deletions(-)
 
 diff --git a/drivers/acrn/acrn_hvlog.c b/drivers/acrn/acrn_hvlog.c
-index 87b1cb23d..c6b2a981f 100644
+index 87b1cb23ddc9..c6b2a981f1df 100644
 --- a/drivers/acrn/acrn_hvlog.c
 +++ b/drivers/acrn/acrn_hvlog.c
 @@ -95,7 +95,8 @@ struct acrn_hvlog {
@@ -153,7 +153,7 @@ index 87b1cb23d..c6b2a981f 100644
  	ret = hcall_get_hw_info(virt_to_phys(&hw_info));
  	if (!ret)
 diff --git a/drivers/acrn/acrn_trace.c b/drivers/acrn/acrn_trace.c
-index 010acb987..136564da6 100644
+index 010acb9872c4..136564da644f 100644
 --- a/drivers/acrn/acrn_trace.c
 +++ b/drivers/acrn/acrn_trace.c
 @@ -207,7 +207,8 @@ static int __init acrn_trace_init(void)
@@ -185,7 +185,7 @@ index 010acb987..136564da6 100644
  		/* free sbuf, per-cpu sbuf should be set NULL */
  		sbuf_free(acrn_trace_devs[cpu].sbuf);
 diff --git a/drivers/acrn/sbuf.c b/drivers/acrn/sbuf.c
-index b51ee04e1..018e1f4df 100644
+index b51ee04e12fa..018e1f4df72b 100644
 --- a/drivers/acrn/sbuf.c
 +++ b/drivers/acrn/sbuf.c
 @@ -167,7 +167,7 @@ int sbuf_get(shared_buf_t *sbuf, uint8_t *data)
@@ -258,7 +258,7 @@ index b51ee04e1..018e1f4df 100644
  }
  EXPORT_SYMBOL(sbuf_construct);
 diff --git a/drivers/acrn/sbuf.h b/drivers/acrn/sbuf.h
-index d08bf9fed..f8bed41bb 100644
+index d08bf9fedf70..f8bed41bbb58 100644
 --- a/drivers/acrn/sbuf.h
 +++ b/drivers/acrn/sbuf.h
 @@ -121,11 +121,11 @@ static inline void sbuf_add_flags(shared_buf_t *sbuf, uint64_t flags)

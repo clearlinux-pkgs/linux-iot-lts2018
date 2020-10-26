@@ -22,7 +22,7 @@ Tested-by: Lewandowski, Gustaw <gustaw.lewandowski@intel.com>
  3 files changed, 142 insertions(+), 46 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virt-audio.c b/sound/soc/intel/skylake/virtio/skl-virt-audio.c
-index 718658b8d..0b712db04 100644
+index 718658b8dc87..0b712db04fe9 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virt-audio.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virt-audio.c
 @@ -32,7 +32,7 @@ struct vskl *get_virtio_audio(void)
@@ -112,7 +112,7 @@ index 718658b8d..0b712db04 100644
  
  	return 0;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.c b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
-index 5f59c373c..062ead5c3 100644
+index 5f59c373c8d1..062ead5c31c2 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.c
 @@ -46,11 +46,11 @@ struct kctl_proxy *get_kctl_proxy(void)
@@ -408,7 +408,7 @@ index 5f59c373c..062ead5c3 100644
 +	vbe->sdev = NULL;
 +}
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-be.h b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
-index 1a5840f85..af2643a5e 100644
+index 1a5840f85d72..af2643a5e134 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-be.h
 @@ -40,6 +40,8 @@ extern void vbe_skl_handle_kick(const struct snd_skl_vbe *vbe, int vq_idx);

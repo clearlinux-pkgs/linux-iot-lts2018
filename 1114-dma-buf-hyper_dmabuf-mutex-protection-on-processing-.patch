@@ -13,7 +13,7 @@ Signed-off-by: Dongwon Kim <dongwon.kim@intel.com>
  1 file changed, 3 insertions(+)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
-index d5a0afdca..03efbcf6f 100644
+index d5a0afdcaa7f..03efbcf6fd6a 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_msg.c
 @@ -314,6 +314,7 @@ int hyper_dmabuf_msg_parse(int domid, struct hyper_dmabuf_req *req)

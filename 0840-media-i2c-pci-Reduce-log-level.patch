@@ -16,7 +16,7 @@ Signed-off-by: khaiwenn <khai.wen.ng@intel.com>
  2 files changed, 39 insertions(+), 38 deletions(-)
 
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-core.c b/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
-index bd04ae997..612065625 100644
+index bd04ae9974ff..612065625853 100644
 --- a/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
 @@ -2203,10 +2203,10 @@ static int crlmodule_set_power(
@@ -51,7 +51,7 @@ index bd04ae997..612065625 100644
  }
  
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index f764b2a06..8d4ac4c1b 100644
+index f764b2a06d07..8d4ac4c1bf03 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -109,7 +109,7 @@ static int pipeline_set_node_power(void* cb_data,

@@ -21,7 +21,7 @@ Signed-off-by: Yael Samet <yael.samet@intel.com>
  create mode 100644 drivers/misc/mei/dal/uapi/kdi_cmd_defs.h
 
 diff --git a/drivers/misc/mei/dal/Kconfig b/drivers/misc/mei/dal/Kconfig
-index 5d8356ae9..8943d4f7f 100644
+index 5d8356ae931e..8943d4f7f7e4 100644
 --- a/drivers/misc/mei/dal/Kconfig
 +++ b/drivers/misc/mei/dal/Kconfig
 @@ -5,3 +5,11 @@ config INTEL_MEI_DAL
@@ -37,7 +37,7 @@ index 5d8356ae9..8943d4f7f 100644
 +	  kernel space api from a user space client. The test module
 +	  calls the kernel space api functions of DAL module.
 diff --git a/drivers/misc/mei/dal/Makefile b/drivers/misc/mei/dal/Makefile
-index b8d5456c9..fa3f81501 100644
+index b8d5456c94a1..fa3f8150131e 100644
 --- a/drivers/misc/mei/dal/Makefile
 +++ b/drivers/misc/mei/dal/Makefile
 @@ -10,3 +10,5 @@ mei_dal-objs += bh_internal.o
@@ -48,7 +48,7 @@ index b8d5456c9..fa3f81501 100644
 +obj-$(CONFIG_INTEL_MEI_DAL_TEST) += dal_test.o
 diff --git a/drivers/misc/mei/dal/dal_test.c b/drivers/misc/mei/dal/dal_test.c
 new file mode 100644
-index 000000000..56da059e5
+index 000000000000..56da059e5cc6
 --- /dev/null
 +++ b/drivers/misc/mei/dal/dal_test.c
 @@ -0,0 +1,775 @@
@@ -829,7 +829,7 @@ index 000000000..56da059e5
 +MODULE_LICENSE("GPL v2");
 diff --git a/drivers/misc/mei/dal/uapi/kdi_cmd_defs.h b/drivers/misc/mei/dal/uapi/kdi_cmd_defs.h
 new file mode 100644
-index 000000000..13717df1a
+index 000000000000..13717df1ae54
 --- /dev/null
 +++ b/drivers/misc/mei/dal/uapi/kdi_cmd_defs.h
 @@ -0,0 +1,176 @@

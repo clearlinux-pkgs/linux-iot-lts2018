@@ -17,7 +17,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  2 files changed, 12 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index a692f480f..7969d6b7a 100644
+index a692f480fe0e..7969d6b7a85e 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -2144,7 +2144,8 @@ static struct snd_soc_dai_driver ssp_dai_info = {
@@ -54,7 +54,7 @@ index a692f480f..7969d6b7a 100644
  int skl_platform_unregister(struct device *dev)
  {
 diff --git a/sound/soc/intel/skylake/skl.h b/sound/soc/intel/skylake/skl.h
-index a1536d326..94cabe5b8 100644
+index a1536d326c62..94cabe5b8afa 100644
 --- a/sound/soc/intel/skylake/skl.h
 +++ b/sound/soc/intel/skylake/skl.h
 @@ -222,6 +222,8 @@ struct skl_module_cfg;

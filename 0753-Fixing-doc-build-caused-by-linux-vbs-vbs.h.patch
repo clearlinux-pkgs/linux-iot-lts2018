@@ -11,7 +11,7 @@ Signed-off-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/include/linux/vbs/vbs.h b/include/linux/vbs/vbs.h
-index d9d932c49..a72bb9612 100644
+index d9d932c49e88..a72bb9612d1e 100644
 --- a/include/linux/vbs/vbs.h
 +++ b/include/linux/vbs/vbs.h
 @@ -159,7 +159,7 @@ struct virtio_vq_info {

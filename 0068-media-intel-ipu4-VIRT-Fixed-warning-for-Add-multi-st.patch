@@ -13,7 +13,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  3 files changed, 3 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
-index 086421151..322d8ea2a 100644
+index 086421151f28..322d8ea2afc3 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-pipeline.c
 @@ -14,8 +14,8 @@
@@ -27,7 +27,7 @@ index 086421151..322d8ea2a 100644
  static struct file *pipeline;
  static int guestID = -1;
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
-index c3257ea0d..ab06be71a 100644
+index c3257ea0dbd1..ab06be71a4c4 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 @@ -329,7 +329,6 @@ int process_get_buf(struct ipu4_virtio_req_info *req_info)
@@ -39,7 +39,7 @@ index c3257ea0d..ab06be71a 100644
  	int err, found;
  	struct ipu4_virtio_req *req = req_info->request;
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
-index 4359d7b99..cb642f41e 100644
+index 4359d7b99c70..cb642f41e4b6 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 @@ -156,7 +156,7 @@ static void handle_vq_kick(int client_id, int vq_idx)

@@ -47,7 +47,7 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  1 file changed, 23 insertions(+), 4 deletions(-)
 
 diff --git a/arch/x86/mm/pageattr.c b/arch/x86/mm/pageattr.c
-index 6fc4b0508..01da2a571 100644
+index 6fc4b05082a6..01da2a571a33 100644
 --- a/arch/x86/mm/pageattr.c
 +++ b/arch/x86/mm/pageattr.c
 @@ -854,10 +854,28 @@ static int __should_split_large_page(pte_t *kpte, unsigned long address,

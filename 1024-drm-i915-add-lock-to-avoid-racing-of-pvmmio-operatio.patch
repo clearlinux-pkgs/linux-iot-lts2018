@@ -24,7 +24,7 @@ Tracked-On: PKT-1748
  3 files changed, 14 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.c b/drivers/gpu/drm/i915/i915_drv.c
-index e1391951e..cf328eed2 100644
+index e1391951e244..cf328eed2437 100644
 --- a/drivers/gpu/drm/i915/i915_drv.c
 +++ b/drivers/gpu/drm/i915/i915_drv.c
 @@ -899,6 +899,8 @@ static int i915_driver_init_early(struct drm_i915_private *dev_priv,
@@ -37,7 +37,7 @@ index e1391951e..cf328eed2 100644
  	mutex_init(&dev_priv->backlight_lock);
  	spin_lock_init(&dev_priv->uncore.lock);
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index baab05dad..c7fdcd256 100644
+index baab05dad59a..c7fdcd2563c5 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -1612,6 +1612,8 @@ struct drm_i915_private {
@@ -50,7 +50,7 @@ index baab05dad..c7fdcd256 100644
  	struct intel_uncore uncore;
  
 diff --git a/drivers/gpu/drm/i915/i915_gem_gtt.c b/drivers/gpu/drm/i915/i915_gem_gtt.c
-index d6baa2d63..7dbf95a77 100644
+index d6baa2d63a58..7dbf95a77e61 100644
 --- a/drivers/gpu/drm/i915/i915_gem_gtt.c
 +++ b/drivers/gpu/drm/i915/i915_gem_gtt.c
 @@ -1020,10 +1020,12 @@ static void gen8_ppgtt_clear_4lvl(struct i915_address_space *vm,

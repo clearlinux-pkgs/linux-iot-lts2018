@@ -18,7 +18,7 @@ Signed-off-by: Dominik Bozek <dominikx.bozek@intel.com>
  1 file changed, 65 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index b158883ef..887a43bcd 100644
+index b158883ef7b6..887a43bcd43b 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -144,6 +144,69 @@ bxt_load_library(struct sst_dsp *ctx, struct skl_lib_info *linfo, int lib_count)

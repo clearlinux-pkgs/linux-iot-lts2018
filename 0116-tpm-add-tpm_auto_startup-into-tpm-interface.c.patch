@@ -21,10 +21,10 @@ Tested-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  3 files changed, 19 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm-chip.c b/drivers/char/tpm/tpm-chip.c
-index 4946c5b37..41719c6a7 100644
+index f79f87794273..72bc2bd270af 100644
 --- a/drivers/char/tpm/tpm-chip.c
 +++ b/drivers/char/tpm/tpm-chip.c
-@@ -452,14 +452,9 @@ int tpm_chip_register(struct tpm_chip *chip)
+@@ -447,14 +447,9 @@ int tpm_chip_register(struct tpm_chip *chip)
  {
  	int rc;
  
@@ -43,7 +43,7 @@ index 4946c5b37..41719c6a7 100644
  	tpm_sysfs_add_device(chip);
  
 diff --git a/drivers/char/tpm/tpm-interface.c b/drivers/char/tpm/tpm-interface.c
-index df3cd2cb7..d9d90628a 100644
+index df3cd2cb77ac..d9d90628aa51 100644
 --- a/drivers/char/tpm/tpm-interface.c
 +++ b/drivers/char/tpm/tpm-interface.c
 @@ -554,6 +554,21 @@ int tpm_send(struct tpm_chip *chip, void *cmd, size_t buflen)
@@ -69,10 +69,10 @@ index df3cd2cb7..d9d90628a 100644
   * We are about to suspend. Save the TPM state
   * so that it can be restored.
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index ccd649998..fff009922 100644
+index 75a01033a87a..8cd57dbc6607 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
-@@ -541,6 +541,7 @@ ssize_t tpm_transmit_cmd(struct tpm_chip *chip, struct tpm_space *space,
+@@ -545,6 +545,7 @@ ssize_t tpm_transmit_cmd(struct tpm_chip *chip, struct tpm_space *space,
  			 size_t min_rsp_body_length, unsigned int flags,
  			 const char *desc);
  int tpm_get_timeouts(struct tpm_chip *);

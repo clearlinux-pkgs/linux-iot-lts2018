@@ -18,7 +18,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  2 files changed, 25 insertions(+), 4 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 642a1c051..66a57d548 100644
+index 642a1c05113b..66a57d548ab0 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -351,6 +351,7 @@ static void vfe_not_handle_rx(struct virtqueue *vq)
@@ -126,7 +126,7 @@ index 642a1c051..66a57d548 100644
  
  	/* find virt queue for vfe to send/receive IPC message. */
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index 4b8e09e2c..5656d0b6a 100644
+index 4b8e09e2c09a..5656d0b6a6ab 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -51,6 +51,8 @@ struct snd_skl_vfe {

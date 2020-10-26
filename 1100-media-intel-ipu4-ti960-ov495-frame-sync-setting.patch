@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 59 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/media/i2c/ti960-reg.h b/drivers/media/i2c/ti960-reg.h
-index 0f34651aa..60d9bf29a 100644
+index 0f34651aaa03..60d9bf29a9b8 100644
 --- a/drivers/media/i2c/ti960-reg.h
 +++ b/drivers/media/i2c/ti960-reg.h
 @@ -18,15 +18,15 @@ static const struct ti960_register_write ti960_frame_sync_settings[2][5] = {
@@ -58,7 +58,7 @@ index 0f34651aa..60d9bf29a 100644
 +
  #endif
 diff --git a/drivers/media/i2c/ti960.c b/drivers/media/i2c/ti960.c
-index 381351baf..2430fcc85 100644
+index 381351baff4a..2430fcc85527 100644
 --- a/drivers/media/i2c/ti960.c
 +++ b/drivers/media/i2c/ti960.c
 @@ -288,8 +288,9 @@ static int ti960_map_ser_alias_addr(struct ti960 *va, unsigned short rx_port,

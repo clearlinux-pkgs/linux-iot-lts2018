@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 6 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-queue.c b/drivers/media/pci/intel/ipu-isys-queue.c
-index 2f0db1af3..a88c0d7e9 100644
+index 2f0db1af3744..a88c0d7e9ca9 100644
 --- a/drivers/media/pci/intel/ipu-isys-queue.c
 +++ b/drivers/media/pci/intel/ipu-isys-queue.c
 @@ -488,11 +488,15 @@ void ipu_isys_buffer_list_to_ipu_fw_isys_frame_buff_set(

@@ -20,7 +20,7 @@ Signed-off-by: Anil Bhawangirkar <anil.k.bhawangirkar@intel.com>
  1 file changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index c5ad9fde2..18be70b87 100644
+index c5ad9fde2fed..18be70b87728 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -583,7 +583,12 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,

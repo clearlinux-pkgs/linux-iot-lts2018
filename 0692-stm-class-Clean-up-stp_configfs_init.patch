@@ -13,7 +13,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  1 file changed, 1 insertion(+), 5 deletions(-)
 
 diff --git a/drivers/hwtracing/stm/policy.c b/drivers/hwtracing/stm/policy.c
-index 530448bd5..a505f055f 100644
+index 530448bd5a34..a505f055f464 100644
 --- a/drivers/hwtracing/stm/policy.c
 +++ b/drivers/hwtracing/stm/policy.c
 @@ -461,13 +461,9 @@ void stp_policy_node_put(struct stp_policy_node *policy_node)

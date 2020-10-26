@@ -18,7 +18,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  4 files changed, 31 insertions(+), 23 deletions(-)
 
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index b2738474a..741b8bd83 100644
+index b2738474afaf..741b8bd837cc 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -52,9 +52,14 @@
@@ -38,7 +38,7 @@ index b2738474a..741b8bd83 100644
  
  inline long hcall_start_vm(unsigned long vmid)
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 23f80acd9..a6f46648c 100644
+index 23f80acd92f6..a6f46648c853 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -141,11 +141,11 @@ struct vhm_request_buffer {
@@ -59,7 +59,7 @@ index 23f80acd9..a6f46648c 100644
  
  struct acrn_create_vcpu {
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index eb1d4c974..bb57fb4f5 100644
+index eb1d4c974a3e..bb57fb4f5cdd 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -63,49 +63,51 @@
@@ -132,7 +132,7 @@ index eb1d4c974..bb57fb4f5 100644
  
  /* Generic memory attributes */
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index b40f8f898..f4a5793f3 100644
+index b40f8f898046..f4a5793f3ef7 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -137,6 +137,7 @@ static inline long acrn_hypercall4(unsigned long hcall_id, unsigned long param1,

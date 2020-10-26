@@ -15,7 +15,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  3 files changed, 31 insertions(+), 9 deletions(-)
 
 diff --git a/drivers/vbs/vbs.c b/drivers/vbs/vbs.c
-index c2d8a5262..0e0516ad8 100644
+index c2d8a5262a8d..0e0516ad8794 100644
 --- a/drivers/vbs/vbs.c
 +++ b/drivers/vbs/vbs.c
 @@ -148,9 +148,12 @@ long virtio_dev_deregister(struct virtio_dev_info *dev)
@@ -70,7 +70,7 @@ index c2d8a5262..0e0516ad8 100644
  
  static long virtio_vqs_info_set(struct virtio_dev_info *dev,
 diff --git a/drivers/vbs/vbs_rng.c b/drivers/vbs/vbs_rng.c
-index fd2bb27af..c5e28cc12 100644
+index fd2bb27af66e..c5e28cc12c55 100644
 --- a/drivers/vbs/vbs_rng.c
 +++ b/drivers/vbs/vbs_rng.c
 @@ -268,7 +268,7 @@ static int handle_kick(int client_id, unsigned long *ioreqs_map)
@@ -83,7 +83,7 @@ index fd2bb27af..c5e28cc12 100644
  	if (val >= 0)
  		handle_vq_kick(rng, val);
 diff --git a/include/linux/vbs/vbs.h b/include/linux/vbs/vbs.h
-index 30df8ebf6..d9d932c49 100644
+index 30df8ebf68a0..d9d932c49e88 100644
 --- a/include/linux/vbs/vbs.h
 +++ b/include/linux/vbs/vbs.h
 @@ -262,7 +262,7 @@ long virtio_dev_register(struct virtio_dev_info *dev);

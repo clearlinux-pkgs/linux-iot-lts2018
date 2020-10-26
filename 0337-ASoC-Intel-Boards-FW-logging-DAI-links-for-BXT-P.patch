@@ -22,7 +22,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  1 file changed, 22 insertions(+)
 
 diff --git a/sound/soc/intel/boards/bxt_rt298.c b/sound/soc/intel/boards/bxt_rt298.c
-index 27308337a..a06f50464 100644
+index ba76e37a4b09..1c568e811b86 100644
 --- a/sound/soc/intel/boards/bxt_rt298.c
 +++ b/sound/soc/intel/boards/bxt_rt298.c
 @@ -428,6 +428,28 @@ static struct snd_soc_dai_link broxton_rt298_dais[] = {

@@ -22,7 +22,7 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  3 files changed, 30 insertions(+), 10 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 53459d547..60860858c 100644
+index 53459d5475b5..60860858cb51 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
 @@ -3224,8 +3224,10 @@ int i915_gem_object_wait(struct drm_i915_gem_object *obj,
@@ -38,7 +38,7 @@ index 53459d547..60860858c 100644
  int __must_check
  i915_gem_object_set_to_wc_domain(struct drm_i915_gem_object *obj, bool write);
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index 406b5879a..89b8e64ec 100644
+index 406b5879a455..89b8e64ec08d 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
 @@ -1425,7 +1425,8 @@ i915_gem_object_wait_reservation(struct reservation_object *resv,
@@ -108,7 +108,7 @@ index 406b5879a..89b8e64ec 100644
  	}
  	return 0;
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index d5d978b57..d11d5b361 100644
+index d5d978b57076..d11d5b3618d5 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -13082,7 +13082,8 @@ static void fb_obj_bump_render_priority(struct drm_i915_gem_object *obj)

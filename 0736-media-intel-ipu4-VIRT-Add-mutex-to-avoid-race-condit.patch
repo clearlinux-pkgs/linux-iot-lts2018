@@ -16,7 +16,7 @@ Signed-off-by: Bandi, Kushal <kushal.bandi@intel.com>
  1 file changed, 37 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
-index dc0be874c..06572eab9 100644
+index dc0be874c93b..06572eab985b 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 @@ -34,6 +34,8 @@ static int virt_stream_devs_registered;

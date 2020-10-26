@@ -28,7 +28,7 @@ Tested-by: Yin, FengWei <fengwei.yin@intel.com>
  3 files changed, 136 insertions(+), 58 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 59dd49b6c..e6aa6f5d5 100644
+index 59dd49b6c84c..e6aa6f5d5aa3 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -815,6 +815,7 @@ static int __init vhm_init(void)
@@ -40,7 +40,7 @@ index 59dd49b6c..e6aa6f5d5 100644
  	return 0;
  }
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index b0ca41a40..9d77bc3be 100644
+index b0ca41a402ea..9d77bc3be95c 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -65,6 +65,10 @@
@@ -572,7 +572,7 @@ index b0ca41a40..9d77bc3be 100644
 +	idr_init(&idr_client);
 +}
 diff --git a/include/linux/vhm/acrn_vhm_ioreq.h b/include/linux/vhm/acrn_vhm_ioreq.h
-index 70349223c..401bcdc85 100644
+index 70349223c55b..401bcdc85460 100644
 --- a/include/linux/vhm/acrn_vhm_ioreq.h
 +++ b/include/linux/vhm/acrn_vhm_ioreq.h
 @@ -198,4 +198,5 @@ void acrn_ioreq_free(struct vhm_vm *vm);

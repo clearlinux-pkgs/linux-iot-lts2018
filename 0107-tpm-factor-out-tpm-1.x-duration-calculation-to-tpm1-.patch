@@ -28,7 +28,7 @@ Tested-by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  create mode 100644 drivers/char/tpm/tpm1-cmd.c
 
 diff --git a/drivers/char/tpm/Makefile b/drivers/char/tpm/Makefile
-index efc785053..a01c4cab9 100644
+index efc785053627..a01c4cab902a 100644
 --- a/drivers/char/tpm/Makefile
 +++ b/drivers/char/tpm/Makefile
 @@ -7,6 +7,7 @@ tpm-y := tpm-chip.o
@@ -40,7 +40,7 @@ index efc785053..a01c4cab9 100644
  tpm-y += tpmrm-dev.o
  tpm-y += tpm2-space.o
 diff --git a/drivers/char/tpm/st33zp24/st33zp24.c b/drivers/char/tpm/st33zp24/st33zp24.c
-index 694fc5888..be4d82974 100644
+index 694fc58888c1..be4d82974a96 100644
 --- a/drivers/char/tpm/st33zp24/st33zp24.c
 +++ b/drivers/char/tpm/st33zp24/st33zp24.c
 @@ -430,7 +430,7 @@ static int st33zp24_send(struct tpm_chip *chip, unsigned char *buf,
@@ -53,7 +53,7 @@ index 694fc5888..be4d82974 100644
  		if (ret < 0)
  			goto out_err;
 diff --git a/drivers/char/tpm/tpm-interface.c b/drivers/char/tpm/tpm-interface.c
-index 2f66b80b7..5540c9c23 100644
+index 2f66b80b786e..5540c9c23cca 100644
 --- a/drivers/char/tpm/tpm-interface.c
 +++ b/drivers/char/tpm/tpm-interface.c
 @@ -33,7 +33,6 @@
@@ -369,10 +369,10 @@ index 2f66b80b7..5540c9c23 100644
  	loops = jiffies_to_msecs(duration) / delay_msec;
  
 diff --git a/drivers/char/tpm/tpm.h b/drivers/char/tpm/tpm.h
-index 63b121617..eacc8df67 100644
+index 12b33ae5ac29..92b630760d57 100644
 --- a/drivers/char/tpm/tpm.h
 +++ b/drivers/char/tpm/tpm.h
-@@ -546,7 +546,7 @@ ssize_t tpm_getcap(struct tpm_chip *chip, u32 subcap_id, cap_t *cap,
+@@ -550,7 +550,7 @@ ssize_t tpm_getcap(struct tpm_chip *chip, u32 subcap_id, cap_t *cap,
  int tpm_get_timeouts(struct tpm_chip *);
  int tpm1_auto_startup(struct tpm_chip *chip);
  int tpm_do_selftest(struct tpm_chip *chip);
@@ -383,7 +383,7 @@ index 63b121617..eacc8df67 100644
  
 diff --git a/drivers/char/tpm/tpm1-cmd.c b/drivers/char/tpm/tpm1-cmd.c
 new file mode 100644
-index 000000000..991260134
+index 000000000000..991260134659
 --- /dev/null
 +++ b/drivers/char/tpm/tpm1-cmd.c
 @@ -0,0 +1,310 @@
@@ -698,7 +698,7 @@ index 000000000..991260134
 +}
 +EXPORT_SYMBOL_GPL(tpm1_calc_ordinal_duration);
 diff --git a/drivers/char/tpm/tpm_i2c_nuvoton.c b/drivers/char/tpm/tpm_i2c_nuvoton.c
-index 280308009..289ccca35 100644
+index 280308009784..289ccca35feb 100644
 --- a/drivers/char/tpm/tpm_i2c_nuvoton.c
 +++ b/drivers/char/tpm/tpm_i2c_nuvoton.c
 @@ -457,11 +457,12 @@ static int i2c_nuvoton_send(struct tpm_chip *chip, u8 *buf, size_t len)
@@ -717,7 +717,7 @@ index 280308009..289ccca35 100644
  		return rc;
  	}
 diff --git a/drivers/char/tpm/tpm_tis_core.c b/drivers/char/tpm/tpm_tis_core.c
-index 5d8f8f018..4cab8ca03 100644
+index 280d60cba1f8..fcb4326d230c 100644
 --- a/drivers/char/tpm/tpm_tis_core.c
 +++ b/drivers/char/tpm/tpm_tis_core.c
 @@ -479,7 +479,7 @@ static int tpm_tis_send_main(struct tpm_chip *chip, const u8 *buf, size_t len)
@@ -730,7 +730,7 @@ index 5d8f8f018..4cab8ca03 100644
  		if (wait_for_tpm_stat
  		    (chip, TPM_STS_DATA_AVAIL | TPM_STS_VALID, dur,
 diff --git a/drivers/char/tpm/xen-tpmfront.c b/drivers/char/tpm/xen-tpmfront.c
-index 5a327eb7f..5bb2fb3e7 100644
+index 5a327eb7f63a..5bb2fb3e72ba 100644
 --- a/drivers/char/tpm/xen-tpmfront.c
 +++ b/drivers/char/tpm/xen-tpmfront.c
 @@ -164,7 +164,7 @@ static int vtpm_send(struct tpm_chip *chip, u8 *buf, size_t count)

@@ -19,7 +19,7 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  1 file changed, 9 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/misc/mei/hbm.c b/drivers/misc/mei/hbm.c
-index d635f6519..bf3e530c7 100644
+index d635f6519961..bf3e530c76a8 100644
 --- a/drivers/misc/mei/hbm.c
 +++ b/drivers/misc/mei/hbm.c
 @@ -1276,9 +1276,15 @@ int mei_hbm_dispatch(struct mei_device *dev, struct mei_msg_hdr *hdr)

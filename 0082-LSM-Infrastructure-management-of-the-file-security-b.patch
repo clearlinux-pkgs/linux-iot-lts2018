@@ -19,7 +19,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  6 files changed, 78 insertions(+), 52 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 2b4d55c97..a8bf4c14a 100644
+index 2b4d55c973ab..a8bf4c14a219 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -2031,6 +2031,7 @@ struct security_hook_list {
@@ -31,7 +31,7 @@ index 2b4d55c97..a8bf4c14a 100644
  
  /*
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index 2faea1563..d77d451a0 100644
+index c0f6c6351e0d..de690ecbd0c8 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -431,21 +431,21 @@ static int apparmor_file_open(struct file *file)
@@ -65,7 +65,7 @@ index 2faea1563..d77d451a0 100644
  }
  
  static int common_file_perm(const char *op, struct file *file, u32 mask)
-@@ -1131,6 +1131,7 @@ static void apparmor_sock_graft(struct sock *sk, struct socket *parent)
+@@ -1136,6 +1136,7 @@ static void apparmor_sock_graft(struct sock *sk, struct socket *parent)
   */
  struct lsm_blob_sizes apparmor_blob_sizes = {
  	.lbs_cred = sizeof(struct aa_task_ctx *),
@@ -74,7 +74,7 @@ index 2faea1563..d77d451a0 100644
  
  static struct security_hook_list apparmor_hooks[] __lsm_ro_after_init = {
 diff --git a/security/security.c b/security/security.c
-index eee803e1a..51d4a0285 100644
+index eee803e1a250..51d4a0285b28 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -40,6 +40,8 @@
@@ -186,7 +186,7 @@ index eee803e1a..51d4a0285 100644
  	return rc;
  }
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 628b119d6..6961c8e1e 100644
+index 0a28281c7c4b..11c05ade9404 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -149,7 +149,6 @@ static int __init checkreqprot_setup(char *str)
@@ -226,7 +226,7 @@ index 628b119d6..6961c8e1e 100644
  static int superblock_alloc_security(struct super_block *sb)
  {
  	struct superblock_security_struct *sbsec;
-@@ -3597,11 +3584,6 @@ static int selinux_file_alloc_security(struct file *file)
+@@ -3609,11 +3596,6 @@ static int selinux_file_alloc_security(struct file *file)
  	return file_alloc_security(file);
  }
  
@@ -238,7 +238,7 @@ index 628b119d6..6961c8e1e 100644
  /*
   * Check whether a task has the ioctl permission and cmd
   * operation to an inode.
-@@ -6926,6 +6908,7 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
+@@ -6938,6 +6920,7 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
  
  struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_cred = sizeof(struct task_security_struct),
@@ -246,7 +246,7 @@ index 628b119d6..6961c8e1e 100644
  };
  
  static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
-@@ -6996,7 +6979,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -7008,7 +6991,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  
  	LSM_HOOK_INIT(file_permission, selinux_file_permission),
  	LSM_HOOK_INIT(file_alloc_security, selinux_file_alloc_security),
@@ -254,7 +254,7 @@ index 628b119d6..6961c8e1e 100644
  	LSM_HOOK_INIT(file_ioctl, selinux_file_ioctl),
  	LSM_HOOK_INIT(mmap_file, selinux_mmap_file),
  	LSM_HOOK_INIT(mmap_addr, selinux_mmap_addr),
-@@ -7199,9 +7181,6 @@ static __init int selinux_init(void)
+@@ -7211,9 +7193,6 @@ static __init int selinux_init(void)
  	sel_inode_cache = kmem_cache_create("selinux_inode_security",
  					    sizeof(struct inode_security_struct),
  					    0, SLAB_PANIC, NULL);
@@ -265,7 +265,7 @@ index 628b119d6..6961c8e1e 100644
  
  	avtab_cache_init();
 diff --git a/security/smack/smack.h b/security/smack/smack.h
-index 0c6dce446..043525a52 100644
+index 0c6dce446825..043525a52e94 100644
 --- a/security/smack/smack.h
 +++ b/security/smack/smack.h
 @@ -362,6 +362,11 @@ static inline struct task_smack *smack_cred(const struct cred *cred)
@@ -281,7 +281,7 @@ index 0c6dce446..043525a52 100644
   * Is the directory transmuting?
   */
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 8e093cda0..4a3eca346 100644
+index 8e093cda01b3..4a3eca346c8f 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -1574,24 +1574,12 @@ static void smack_inode_getsecid(struct inode *inode, u32 *secid)

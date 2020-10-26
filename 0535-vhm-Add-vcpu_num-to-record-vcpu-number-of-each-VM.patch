@@ -18,7 +18,7 @@ Reviewed-by: Jason Chen CJ <jason.cj.chen@intel.com>
  3 files changed, 6 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 39204b5d7..5884fd2b2 100644
+index 39204b5d7898..5884fd2b259e 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -285,6 +285,7 @@ static long vhm_dev_ioctl(struct file *filep,
@@ -30,7 +30,7 @@ index 39204b5d7..5884fd2b2 100644
  		return ret;
  	}
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index b570b826b..bf55a0138 100644
+index b570b826be95..bf55a0138943 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -783,10 +783,10 @@ int acrn_ioreq_distribute_request(struct vhm_vm *vm)
@@ -48,7 +48,7 @@ index b570b826b..bf55a0138 100644
  		if (req->valid && (req->processed == REQ_STATE_PENDING)) {
  			if (handle_cf8cfc(vm, req, i))
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index 29fee8fe0..d3b26bdbc 100644
+index 29fee8fe0a7b..d3b26bdbc675 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -80,6 +80,7 @@ extern struct mutex vhm_vm_list_lock;

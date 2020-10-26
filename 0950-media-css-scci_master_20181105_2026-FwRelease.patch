@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 2 insertions(+)
 
 diff --git a/drivers/media/pci/intel/ipu-fw-isys.h b/drivers/media/pci/intel/ipu-fw-isys.h
-index d338d3282..7b49648c2 100644
+index d338d32829c0..7b49648c263f 100644
 --- a/drivers/media/pci/intel/ipu-fw-isys.h
 +++ b/drivers/media/pci/intel/ipu-fw-isys.h
 @@ -551,6 +551,8 @@ struct ipu_fw_isys_output_pin_info_abi {

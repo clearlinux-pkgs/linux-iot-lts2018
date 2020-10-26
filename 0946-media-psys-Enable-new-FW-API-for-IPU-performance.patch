@@ -15,7 +15,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  2 files changed, 6 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-fw-psys.c b/drivers/media/pci/intel/ipu-fw-psys.c
-index 5f0f60117..9ffe8cae1 100644
+index 5f0f601170ac..9ffe8cae1d88 100644
 --- a/drivers/media/pci/intel/ipu-fw-psys.c
 +++ b/drivers/media/pci/intel/ipu-fw-psys.c
 @@ -30,6 +30,8 @@ int ipu_fw_psys_pg_processing_cycles(struct ipu_psys_kcmd *kcmd)
@@ -28,7 +28,7 @@ index 5f0f60117..9ffe8cae1 100644
  {
  	struct ipu_fw_psys_cmd *psys_cmd;
 diff --git a/drivers/media/pci/intel/ipu-trace-event.h b/drivers/media/pci/intel/ipu-trace-event.h
-index b5e8d4be4..fe61ac27a 100644
+index b5e8d4be42ed..fe61ac27a580 100644
 --- a/drivers/media/pci/intel/ipu-trace-event.h
 +++ b/drivers/media/pci/intel/ipu-trace-event.h
 @@ -62,8 +62,8 @@ TRACE_EVENT(ipu_pg_kcmd,

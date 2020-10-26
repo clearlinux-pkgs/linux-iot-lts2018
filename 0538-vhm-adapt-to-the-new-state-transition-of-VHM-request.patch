@@ -46,7 +46,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  3 files changed, 108 insertions(+), 21 deletions(-)
 
 diff --git a/drivers/vbs/vbs.c b/drivers/vbs/vbs.c
-index 1d2e1b407..9b7a279bc 100644
+index 1d2e1b40728e..9b7a279bca90 100644
 --- a/drivers/vbs/vbs.c
 +++ b/drivers/vbs/vbs.c
 @@ -161,7 +161,7 @@ int virtio_vq_index_get(struct virtio_dev_info *dev, unsigned long *ioreqs_map)
@@ -69,7 +69,7 @@ index 1d2e1b407..9b7a279bc 100644
  		}
  	}
 diff --git a/drivers/vhm/vhm_ioreq.c b/drivers/vhm/vhm_ioreq.c
-index 5cb15b5ba..5716bc596 100644
+index 5cb15b5badd8..5716bc5968d5 100644
 --- a/drivers/vhm/vhm_ioreq.c
 +++ b/drivers/vhm/vhm_ioreq.c
 @@ -707,7 +707,8 @@ static int handle_cf8cfc(struct vhm_vm *vm, struct vhm_request *req, int vcpu)
@@ -106,7 +106,7 @@ index 5cb15b5ba..5716bc596 100644
  			}
  		}
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 91951b7e1..6269b07dc 100644
+index 91951b7e1fc3..6269b07dcea4 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -52,6 +52,8 @@

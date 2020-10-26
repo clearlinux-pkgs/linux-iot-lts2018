@@ -15,7 +15,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  2 files changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/misc/mei/bus.c b/drivers/misc/mei/bus.c
-index bb2e1387b..ae915a516 100644
+index 57b5868c9e8b..b8496942c533 100644
 --- a/drivers/misc/mei/bus.c
 +++ b/drivers/misc/mei/bus.c
 @@ -28,7 +28,6 @@
@@ -27,7 +27,7 @@ index bb2e1387b..ae915a516 100644
  /**
   * __mei_cl_send - internal client send (write)
 diff --git a/include/linux/mei_cl_bus.h b/include/linux/mei_cl_bus.h
-index 7fde40e17..03b6ba2a6 100644
+index 7fde40e17c8b..03b6ba2a63f8 100644
 --- a/include/linux/mei_cl_bus.h
 +++ b/include/linux/mei_cl_bus.h
 @@ -55,6 +55,8 @@ struct mei_cl_device {

@@ -18,7 +18,7 @@ Signed-off-by: Manisha Chinthapally <manisha.chinthapally@intel.com>
  4 files changed, 20 insertions(+)
 
 diff --git a/drivers/acrn/sbuf.h b/drivers/acrn/sbuf.h
-index 4fae7a258..d08bf9fed 100644
+index 4fae7a258bce..d08bf9fedf70 100644
 --- a/drivers/acrn/sbuf.h
 +++ b/drivers/acrn/sbuf.h
 @@ -70,6 +70,8 @@
@@ -31,7 +31,7 @@ index 4fae7a258..d08bf9fed 100644
  };
  /**
 diff --git a/drivers/vhm/vhm_hypercall.c b/drivers/vhm/vhm_hypercall.c
-index f3348f7e3..6c67d04dd 100644
+index f3348f7e3903..6c67d04dd77e 100644
 --- a/drivers/vhm/vhm_hypercall.c
 +++ b/drivers/vhm/vhm_hypercall.c
 @@ -183,6 +183,11 @@ inline long hcall_vm_gpa2hpa(unsigned long vmid, unsigned long addr)
@@ -47,7 +47,7 @@ index f3348f7e3..6c67d04dd 100644
  {
  	return  acrn_hypercall2(HC_VM_INTR_MONITOR, vmid, addr);
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index c13257fca..d9160221f 100644
+index c13257fcaaa1..d9160221f657 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -117,6 +117,7 @@
@@ -75,7 +75,7 @@ index c13257fca..d9160221f 100644
 +};
  #endif /* ACRN_HV_DEFS_H */
 diff --git a/include/linux/vhm/vhm_hypercall.h b/include/linux/vhm/vhm_hypercall.h
-index 130069926..2c79bf3df 100644
+index 130069926786..2c79bf3df6b4 100644
 --- a/include/linux/vhm/vhm_hypercall.h
 +++ b/include/linux/vhm/vhm_hypercall.h
 @@ -170,5 +170,6 @@ inline long hcall_reset_ptdev_intr_info(unsigned long vmid,

@@ -16,7 +16,7 @@ Signed-off-by: Gopal, Puunithaaraj <puunithaaraj.gopal@intel.com>
  1 file changed, 22 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index 5d3c87612..ff497f8fd 100644
+index 5d3c87612a7d..ff497f8fdd5e 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -698,10 +698,12 @@ void ici_isys_frame_buf_ready(struct ici_isys_pipeline

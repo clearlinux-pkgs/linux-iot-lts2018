@@ -18,7 +18,7 @@ Signed-off-by: Mohit Sinha <mohit.sinha@intel.com>
  1 file changed, 5 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index 508382d52..14802ab7e 100644
+index 508382d52e04..14802ab7ea20 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -1031,7 +1031,11 @@ int skl_ipc_get_large_config(struct sst_generic_ipc *ipc,

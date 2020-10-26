@@ -24,7 +24,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/drivers/media/pci/intel/ipu.c b/drivers/media/pci/intel/ipu.c
-index 39dfb7b51..04293f411 100644
+index 39dfb7b519de..04293f411748 100644
 --- a/drivers/media/pci/intel/ipu.c
 +++ b/drivers/media/pci/intel/ipu.c
 @@ -364,6 +364,7 @@ static int ipu_pci_probe(struct pci_dev *pdev, const struct pci_device_id *id)

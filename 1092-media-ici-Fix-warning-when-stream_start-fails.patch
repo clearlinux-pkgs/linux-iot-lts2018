@@ -15,7 +15,7 @@ Signed-off-by: Poluri, Sarat Chandra <sarat.chandra.poluri@intel.com>
  1 file changed, 5 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index 1384fc3d0..a01e135b0 100644
+index 1384fc3d0f37..a01e135b0dee 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -898,8 +898,6 @@ static int ici_isys_stream_on(struct file *file, void *fh)

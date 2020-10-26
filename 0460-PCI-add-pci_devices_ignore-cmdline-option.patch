@@ -21,7 +21,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  1 file changed, 69 insertions(+)
 
 diff --git a/drivers/pci/probe.c b/drivers/pci/probe.c
-index fa4c386c8..19feb2818 100644
+index 9a5b6a8e2502..eea4fd4b30e7 100644
 --- a/drivers/pci/probe.c
 +++ b/drivers/pci/probe.c
 @@ -42,6 +42,70 @@ struct pci_domain_busn_res {
@@ -95,7 +95,7 @@ index fa4c386c8..19feb2818 100644
  static struct resource *get_pci_domain_busn_res(int domain_nr)
  {
  	struct pci_domain_busn_res *r;
-@@ -2457,6 +2521,11 @@ struct pci_dev *pci_scan_single_device(struct pci_bus *bus, int devfn)
+@@ -2530,6 +2594,11 @@ struct pci_dev *pci_scan_single_device(struct pci_bus *bus, int devfn)
  		return dev;
  	}
  

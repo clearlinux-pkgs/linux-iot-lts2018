@@ -31,7 +31,7 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  5 files changed, 118 insertions(+), 7 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index f2f819ebe..406b5879a 100644
+index f2f819ebedf5..406b5879a455 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
 @@ -1439,7 +1439,7 @@ static void __fence_set_priority(struct dma_fence *fence,
@@ -44,7 +44,7 @@ index f2f819ebe..406b5879a 100644
  	local_bh_enable(); /* kick the tasklets if queues were reprioritised */
  }
 diff --git a/drivers/gpu/drm/i915/i915_request.c b/drivers/gpu/drm/i915/i915_request.c
-index 1bd2a7ef1..b8b922f89 100644
+index 1bd2a7ef1885..b8b922f8977e 100644
 --- a/drivers/gpu/drm/i915/i915_request.c
 +++ b/drivers/gpu/drm/i915/i915_request.c
 @@ -1128,7 +1128,7 @@ void i915_request_add(struct i915_request *request)
@@ -57,7 +57,7 @@ index 1bd2a7ef1..b8b922f89 100644
  	i915_sw_fence_commit(&request->submit);
  	local_bh_enable(); /* Kick the execlists tasklet if just scheduled */
 diff --git a/drivers/gpu/drm/i915/intel_lrc.c b/drivers/gpu/drm/i915/intel_lrc.c
-index 7ac79e1a4..28c9fc6cb 100644
+index 7ac79e1a4e9c..28c9fc6cb392 100644
 --- a/drivers/gpu/drm/i915/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/intel_lrc.c
 @@ -1305,7 +1305,8 @@ sched_lock_engine(struct i915_sched_node *node, struct intel_engine_cs *locked)
@@ -80,7 +80,7 @@ index 7ac79e1a4..28c9fc6cb 100644
  		}
  	}
 diff --git a/drivers/gpu/drm/i915/intel_ringbuffer.h b/drivers/gpu/drm/i915/intel_ringbuffer.h
-index 5b169112c..f6ed5b400 100644
+index 5b169112c226..f6ed5b4007e6 100644
 --- a/drivers/gpu/drm/i915/intel_ringbuffer.h
 +++ b/drivers/gpu/drm/i915/intel_ringbuffer.h
 @@ -490,14 +490,16 @@ struct intel_engine_cs {
@@ -103,7 +103,7 @@ index 5b169112c..f6ed5b400 100644
  	/*
  	 * Cancel all requests on the hardware, or queued for execution.
 diff --git a/drivers/gpu/drm/i915/selftests/intel_lrc.c b/drivers/gpu/drm/i915/selftests/intel_lrc.c
-index 9d5672b2e..4a89662e7 100644
+index 9d5672b2ea38..4a89662e7e07 100644
 --- a/drivers/gpu/drm/i915/selftests/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/selftests/intel_lrc.c
 @@ -413,7 +413,7 @@ static int live_late_preempt(void *arg)

@@ -16,7 +16,7 @@ Signed-off-by: Paul, Subhankar <subhankar.paul@intel.com>
  1 file changed, 54 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/sdw/sdw_cnl.c b/drivers/sdw/sdw_cnl.c
-index 95eb7a8fa..c754edbe6 100644
+index 95eb7a8fab2b..c754edbe6564 100644
 --- a/drivers/sdw/sdw_cnl.c
 +++ b/drivers/sdw/sdw_cnl.c
 @@ -485,7 +485,7 @@ static int sdw_init(struct cnl_sdw *sdw, bool is_first_init)

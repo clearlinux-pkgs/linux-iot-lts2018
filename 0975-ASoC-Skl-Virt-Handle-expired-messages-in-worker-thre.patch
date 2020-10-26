@@ -21,7 +21,7 @@ Tested-by: Rojewski, Cezary <cezary.rojewski@intel.com>
  3 files changed, 30 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-common.h b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
-index 98941bfd2..cb3d04edb 100644
+index 98941bfd28fb..cb3d04edb0ce 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-common.h
 @@ -72,6 +72,8 @@ struct vfe_ipc_msg {
@@ -34,7 +34,7 @@ index 98941bfd2..cb3d04edb 100644
  
  struct vbe_ipc_msg {
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index 0ae0bba2b..0ec32be1c 100644
+index 0ae0bba2b376..0ec32be1cd06 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -316,6 +316,26 @@ static void vfe_cmd_handle_rx(struct virtqueue *vq)
@@ -86,7 +86,7 @@ index 0ae0bba2b..0ec32be1c 100644
  	vfe->send_dsp_ipc_msg = vfe_send_dsp_ipc_msg;
  	vfe->notify_machine_probe = vfe_wrap_native_driver;
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index 1fec99031..77ddd7cfd 100644
+index 1fec99031659..77ddd7cfde95 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -39,6 +39,7 @@ struct snd_skl_vfe {

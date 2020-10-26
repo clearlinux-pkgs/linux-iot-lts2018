@@ -19,7 +19,7 @@ Signed-off-by: Yin.ZhiyeX <zhiyeyix@intel.com>
  2 files changed, 60 insertions(+), 49 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index 6c2b60841..5d3c87612 100644
+index 6c2b608415bf..5d3c87612a7d 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -77,9 +77,9 @@ static void ici_put_userpages(struct device *dev,
@@ -279,7 +279,7 @@ index 6c2b60841..5d3c87612 100644
  	buf_list->short_packet_bufs = kzalloc(
  		sizeof(struct ici_frame_short_buf) *
 diff --git a/drivers/media/pci/intel/ici/ici-isys-stream.c b/drivers/media/pci/intel/ici/ici-isys-stream.c
-index dc17cfbc0..33fec29e6 100644
+index dc17cfbc0290..33fec29e6ad1 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-stream.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-stream.c
 @@ -139,6 +139,7 @@ static int pipeline_set_power(struct ici_isys_stream *as,

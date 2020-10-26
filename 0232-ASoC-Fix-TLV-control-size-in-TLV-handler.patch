@@ -19,7 +19,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  1 file changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/soc-ops.c b/sound/soc/soc-ops.c
-index 95fc24580..4cf3ffad3 100644
+index 95fc24580f85..4cf3ffad3e18 100644
 --- a/sound/soc/soc-ops.c
 +++ b/sound/soc/soc-ops.c
 @@ -764,11 +764,16 @@ int snd_soc_bytes_info_ext(struct snd_kcontrol *kcontrol,

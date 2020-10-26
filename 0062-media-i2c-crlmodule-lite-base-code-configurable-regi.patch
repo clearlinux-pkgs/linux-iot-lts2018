@@ -71,7 +71,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  create mode 100644 include/media/lm3643.h
 
 diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
-index 5dda368ad..4d3ee27b8 100644
+index 5dda368ad88c..4d3ee27b80ba 100644
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
 @@ -949,6 +949,7 @@ config VIDEO_S5K5BAF
@@ -83,7 +83,7 @@ index 5dda368ad..4d3ee27b8 100644
  config VIDEO_S5C73M3
  	tristate "Samsung S5C73M3 sensor support"
 diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
-index b23bd05aa..f1e412a8c 100644
+index b23bd05aab9c..f1e412a8ca89 100644
 --- a/drivers/media/i2c/Makefile
 +++ b/drivers/media/i2c/Makefile
 @@ -115,3 +115,4 @@ obj-$(CONFIG_VIDEO_CRLMODULE) += crlmodule/
@@ -93,7 +93,7 @@ index b23bd05aa..f1e412a8c 100644
 +obj-$(CONFIG_VIDEO_CRLMODULE_LITE) += crlmodule-lite/
 diff --git a/drivers/media/i2c/crlmodule-lite/Kconfig b/drivers/media/i2c/crlmodule-lite/Kconfig
 new file mode 100644
-index 000000000..5f6b506ae
+index 000000000000..5f6b506ae749
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/Kconfig
 @@ -0,0 +1,7 @@
@@ -106,7 +106,7 @@ index 000000000..5f6b506ae
 +	  This is a generic driver for CRL based camera modules.
 diff --git a/drivers/media/i2c/crlmodule-lite/Makefile b/drivers/media/i2c/crlmodule-lite/Makefile
 new file mode 100644
-index 000000000..de5f5e4d3
+index 000000000000..de5f5e4d3ccb
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/Makefile
 @@ -0,0 +1,9 @@
@@ -121,7 +121,7 @@ index 000000000..de5f5e4d3
 +ccflags-y += -Idrivers/media/i2c
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_adv7481_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_adv7481_configuration.h
 new file mode 100644
-index 000000000..4ebe85478
+index 000000000000..4ebe85478a24
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crl_adv7481_configuration.h
 @@ -0,0 +1,703 @@
@@ -830,7 +830,7 @@ index 000000000..4ebe85478
 +#endif  /* __CRLMODULE_ADV7481_CONFIGURATION_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h
 new file mode 100644
-index 000000000..5ea1f7c01
+index 000000000000..5ea1f7c01f19
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crl_adv7481_cvbs_configuration.h
 @@ -0,0 +1,264 @@
@@ -1100,7 +1100,7 @@ index 000000000..5ea1f7c01
 +#endif  /* __CRLMODULE_ADV7481_CVBS_CONFIGURATION_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_adv7481_eval_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_adv7481_eval_configuration.h
 new file mode 100644
-index 000000000..575d2db42
+index 000000000000..575d2db42edc
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crl_adv7481_eval_configuration.h
 @@ -0,0 +1,531 @@
@@ -1637,7 +1637,7 @@ index 000000000..575d2db42
 +#endif  /* __CRLMODULE_ADV7481_EVAL_CONFIGURATION_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.c b/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.c
 new file mode 100644
-index 000000000..80f668a46
+index 000000000000..80f668a462ea
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.c
 @@ -0,0 +1,624 @@
@@ -2267,7 +2267,7 @@ index 000000000..80f668a46
 +}
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h b/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h
 new file mode 100644
-index 000000000..489a3eb97
+index 000000000000..489a3eb97878
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crl_adv7481_hdmi_configuration.h
 @@ -0,0 +1,942 @@
@@ -3215,7 +3215,7 @@ index 000000000..489a3eb97
 +#endif  /* __CRLMODULE_ADV7481_HDMI_CONFIGURATION_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crl_magna_configuration_ti964.h b/drivers/media/i2c/crlmodule-lite/crl_magna_configuration_ti964.h
 new file mode 100644
-index 000000000..c8d0d7b35
+index 000000000000..c8d0d7b3550d
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crl_magna_configuration_ti964.h
 @@ -0,0 +1,297 @@
@@ -3518,7 +3518,7 @@ index 000000000..c8d0d7b35
 +#endif  /* __CRLMODULE_MAGNA_TI964_CONFIGURATION_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-core.c b/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
 new file mode 100644
-index 000000000..59896f45b
+index 000000000000..59896f45b0db
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-core.c
 @@ -0,0 +1,2696 @@
@@ -6220,7 +6220,7 @@ index 000000000..59896f45b
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-data.c b/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
 new file mode 100644
-index 000000000..c22dc1fbf
+index 000000000000..c22dc1fbf87a
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-data.c
 @@ -0,0 +1,73 @@
@@ -6299,7 +6299,7 @@ index 000000000..c22dc1fbf
 +
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-msrlist.c b/drivers/media/i2c/crlmodule-lite/crlmodule-msrlist.c
 new file mode 100644
-index 000000000..c2ad74e59
+index 000000000000..c2ad74e59be9
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-msrlist.c
 @@ -0,0 +1,160 @@
@@ -6465,7 +6465,7 @@ index 000000000..c2ad74e59
 +}
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-msrlist.h b/drivers/media/i2c/crlmodule-lite/crlmodule-msrlist.h
 new file mode 100644
-index 000000000..2b296c9f9
+index 000000000000..2b296c9f9d74
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-msrlist.h
 @@ -0,0 +1,53 @@
@@ -6524,7 +6524,7 @@ index 000000000..2b296c9f9
 +#endif /* ifndef __CRLMODULE_MSRLIST_H__ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-nvm.c b/drivers/media/i2c/crlmodule-lite/crlmodule-nvm.c
 new file mode 100644
-index 000000000..935a967a5
+index 000000000000..935a967a525a
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-nvm.c
 @@ -0,0 +1,139 @@
@@ -6669,7 +6669,7 @@ index 000000000..935a967a5
 +}
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-nvm.h b/drivers/media/i2c/crlmodule-lite/crlmodule-nvm.h
 new file mode 100644
-index 000000000..9cbabfa95
+index 000000000000..9cbabfa950bd
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-nvm.h
 @@ -0,0 +1,21 @@
@@ -6696,7 +6696,7 @@ index 000000000..9cbabfa95
 +#endif /* __CRLMODULE_NVM_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-regs.c b/drivers/media/i2c/crlmodule-lite/crlmodule-regs.c
 new file mode 100644
-index 000000000..d7b6d0181
+index 000000000000..d7b6d0181410
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-regs.c
 @@ -0,0 +1,330 @@
@@ -7032,7 +7032,7 @@ index 000000000..d7b6d0181
 +}
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-regs.h b/drivers/media/i2c/crlmodule-lite/crlmodule-regs.h
 new file mode 100644
-index 000000000..45341a160
+index 000000000000..45341a16025d
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-regs.h
 @@ -0,0 +1,24 @@
@@ -7062,7 +7062,7 @@ index 000000000..45341a160
 +#endif /* __CRLMODULE_REGS_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule-sensor-ds.h b/drivers/media/i2c/crlmodule-lite/crlmodule-sensor-ds.h
 new file mode 100644
-index 000000000..e8a6a6f85
+index 000000000000..e8a6a6f85ae7
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule-sensor-ds.h
 @@ -0,0 +1,552 @@
@@ -7620,7 +7620,7 @@ index 000000000..e8a6a6f85
 +#endif /* __CRLMODULE_SENSOR_DS_H_ */
 diff --git a/drivers/media/i2c/crlmodule-lite/crlmodule.h b/drivers/media/i2c/crlmodule-lite/crlmodule.h
 new file mode 100644
-index 000000000..f522409cb
+index 000000000000..f522409cb22e
 --- /dev/null
 +++ b/drivers/media/i2c/crlmodule-lite/crlmodule.h
 @@ -0,0 +1,114 @@
@@ -7740,7 +7740,7 @@ index 000000000..f522409cb
 +#endif /* __CRLMODULE_PRIV_H_ */
 diff --git a/include/media/as3638.h b/include/media/as3638.h
 new file mode 100644
-index 000000000..8e847efaa
+index 000000000000..8e847efaac9f
 --- /dev/null
 +++ b/include/media/as3638.h
 @@ -0,0 +1,33 @@
@@ -7779,7 +7779,7 @@ index 000000000..8e847efaa
 +#endif /* __AS3638_H__ */
 diff --git a/include/media/crlmodule-lite.h b/include/media/crlmodule-lite.h
 new file mode 100644
-index 000000000..ce812e8d9
+index 000000000000..ce812e8d909d
 --- /dev/null
 +++ b/include/media/crlmodule-lite.h
 @@ -0,0 +1,25 @@
@@ -7810,7 +7810,7 @@ index 000000000..ce812e8d9
 +#endif /* __CRLMODULE_LITE_H  */
 diff --git a/include/media/dw9714.h b/include/media/dw9714.h
 new file mode 100755
-index 000000000..11737c6ca
+index 000000000000..11737c6ca824
 --- /dev/null
 +++ b/include/media/dw9714.h
 @@ -0,0 +1,32 @@
@@ -7848,7 +7848,7 @@ index 000000000..11737c6ca
 +#endif
 diff --git a/include/media/lc898122.h b/include/media/lc898122.h
 new file mode 100644
-index 000000000..5c426407b
+index 000000000000..5c426407b5ed
 --- /dev/null
 +++ b/include/media/lc898122.h
 @@ -0,0 +1,14 @@
@@ -7868,7 +7868,7 @@ index 000000000..5c426407b
 +#endif /* __LC898122_HEADER__ */
 diff --git a/include/media/lm3643.h b/include/media/lm3643.h
 new file mode 100644
-index 000000000..58acf6f96
+index 000000000000..58acf6f9662a
 --- /dev/null
 +++ b/include/media/lm3643.h
 @@ -0,0 +1,50 @@

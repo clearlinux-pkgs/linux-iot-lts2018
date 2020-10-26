@@ -18,7 +18,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  4 files changed, 62 insertions(+), 27 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index a8bf4c14a..2cd999bf9 100644
+index a8bf4c14a219..2cd999bf9d70 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -2032,6 +2032,7 @@ struct security_hook_list {
@@ -38,7 +38,7 @@ index a8bf4c14a..2cd999bf9 100644
  
  #endif /* ! __LINUX_LSM_HOOKS_H */
 diff --git a/security/apparmor/include/task.h b/security/apparmor/include/task.h
-index 55edaa1d8..039c1e608 100644
+index 55edaa1d83f8..039c1e60887a 100644
 --- a/security/apparmor/include/task.h
 +++ b/security/apparmor/include/task.h
 @@ -14,7 +14,10 @@
@@ -81,7 +81,7 @@ index 55edaa1d8..039c1e608 100644
  }
  
 diff --git a/security/apparmor/lsm.c b/security/apparmor/lsm.c
-index d77d451a0..0569735e3 100644
+index de690ecbd0c8..710302865228 100644
 --- a/security/apparmor/lsm.c
 +++ b/security/apparmor/lsm.c
 @@ -91,19 +91,14 @@ static void apparmor_task_free(struct task_struct *task)
@@ -105,7 +105,7 @@ index d77d451a0..0569735e3 100644
  
  	return 0;
  }
-@@ -1132,6 +1127,7 @@ static void apparmor_sock_graft(struct sock *sk, struct socket *parent)
+@@ -1137,6 +1132,7 @@ static void apparmor_sock_graft(struct sock *sk, struct socket *parent)
  struct lsm_blob_sizes apparmor_blob_sizes = {
  	.lbs_cred = sizeof(struct aa_task_ctx *),
  	.lbs_file = sizeof(struct aa_file_ctx),
@@ -113,7 +113,7 @@ index d77d451a0..0569735e3 100644
  };
  
  static struct security_hook_list apparmor_hooks[] __lsm_ro_after_init = {
-@@ -1457,15 +1453,10 @@ static int param_set_mode(const char *val, const struct kernel_param *kp)
+@@ -1462,15 +1458,10 @@ static int param_set_mode(const char *val, const struct kernel_param *kp)
  static int __init set_init_ctx(void)
  {
  	struct cred *cred = (struct cred *)current->real_cred;
@@ -131,7 +131,7 @@ index d77d451a0..0569735e3 100644
  	return 0;
  }
 diff --git a/security/security.c b/security/security.c
-index 51d4a0285..bc10f55ff 100644
+index 51d4a0285b28..bc10f55ffd58 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -111,6 +111,7 @@ int __init security_init(void)

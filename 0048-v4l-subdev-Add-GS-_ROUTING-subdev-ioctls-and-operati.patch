@@ -16,7 +16,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  5 files changed, 169 insertions(+)
 
 diff --git a/drivers/media/v4l2-core/v4l2-compat-ioctl32.c b/drivers/media/v4l2-core/v4l2-compat-ioctl32.c
-index 5261bad11..e29d03f42 100644
+index 5261bad11953..e29d03f42c3e 100644
 --- a/drivers/media/v4l2-core/v4l2-compat-ioctl32.c
 +++ b/drivers/media/v4l2-core/v4l2-compat-ioctl32.c
 @@ -1051,6 +1051,57 @@ static int put_v4l2_event32(struct v4l2_event __user *p64,
@@ -125,7 +125,7 @@ index 5261bad11..e29d03f42 100644
  	if (err)
  		return err;
 diff --git a/drivers/media/v4l2-core/v4l2-ioctl.c b/drivers/media/v4l2-core/v4l2-ioctl.c
-index f75d892b6..adbd57296 100644
+index f75d892b6f03..adbd5729639d 100644
 --- a/drivers/media/v4l2-core/v4l2-ioctl.c
 +++ b/drivers/media/v4l2-core/v4l2-ioctl.c
 @@ -2929,6 +2929,22 @@ static int check_array_args(unsigned int cmd, void *parg, size_t *array_size,
@@ -152,7 +152,7 @@ index f75d892b6..adbd57296 100644
  
  	return ret;
 diff --git a/drivers/media/v4l2-core/v4l2-subdev.c b/drivers/media/v4l2-core/v4l2-subdev.c
-index 12eb646c4..5d0ee2fd3 100644
+index 12eb646c4bc7..5d0ee2fd384a 100644
 --- a/drivers/media/v4l2-core/v4l2-subdev.c
 +++ b/drivers/media/v4l2-core/v4l2-subdev.c
 @@ -522,6 +522,40 @@ static long subdev_do_ioctl(struct file *file, unsigned int cmd, void *arg)
@@ -197,7 +197,7 @@ index 12eb646c4..5d0ee2fd3 100644
  	default:
  		return v4l2_subdev_call(sd, core, ioctl, cmd, arg);
 diff --git a/include/media/v4l2-subdev.h b/include/media/v4l2-subdev.h
-index 6f87e7f81..4bd777a68 100644
+index 6f87e7f81759..4bd777a68d64 100644
 --- a/include/media/v4l2-subdev.h
 +++ b/include/media/v4l2-subdev.h
 @@ -719,6 +719,10 @@ struct v4l2_subdev_pad_ops {
@@ -212,7 +212,7 @@ index 6f87e7f81..4bd777a68 100644
  
  /**
 diff --git a/include/uapi/linux/v4l2-subdev.h b/include/uapi/linux/v4l2-subdev.h
-index 51f637dff..2ed7ebae6 100644
+index 51f637dff468..2ed7ebae6e83 100644
 --- a/include/uapi/linux/v4l2-subdev.h
 +++ b/include/uapi/linux/v4l2-subdev.h
 @@ -168,6 +168,49 @@ struct v4l2_subdev_selection {

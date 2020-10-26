@@ -12,7 +12,7 @@ Signed-off-by: Jon Moeller <jon.moeller@intel.com>
  1 file changed, 5 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c b/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
-index 0c414423d..a20e0566c 100644
+index 0c414423de09..a20e0566cfca 100644
 --- a/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
 +++ b/drivers/platform/x86/socwatch/sw_trace_notifier_provider.c
 @@ -123,7 +123,7 @@ struct cpu_workqueue_struct; // Forward declaration to avoid compiler warnings

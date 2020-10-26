@@ -14,7 +14,7 @@ Signed-off-by: Hardik T Shah <hardik.t.shah@intel.com>
  2 files changed, 5 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-nhlt.h b/sound/soc/intel/skylake/skl-nhlt.h
-index 116534e7b..fc17da503 100644
+index 116534e7b3c5..fc17da503b4d 100644
 --- a/sound/soc/intel/skylake/skl-nhlt.h
 +++ b/sound/soc/intel/skylake/skl-nhlt.h
 @@ -48,6 +48,7 @@ enum nhlt_link_type {
@@ -26,7 +26,7 @@ index 116534e7b..fc17da503 100644
  };
  
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index f99c600f8..67e8a1f14 100644
+index f99c600f86e4..67e8a1f14138 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -1850,7 +1850,9 @@ static u8 skl_tplg_be_link_type(int dev_type)

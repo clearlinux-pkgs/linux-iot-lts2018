@@ -16,7 +16,7 @@ Tested-by: Shah, Hardik T <hardik.t.shah@intel.com>
  1 file changed, 18 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index f70d70d08..b82de714c 100644
+index f70d70d0822a..b82de714c916 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -37,6 +37,7 @@

@@ -26,7 +26,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  8 files changed, 78 insertions(+), 50 deletions(-)
 
 diff --git a/sound/soc/intel/baytrail/sst-baytrail-ipc.c b/sound/soc/intel/baytrail/sst-baytrail-ipc.c
-index 260447da3..403dac3a5 100644
+index 260447da32b8..403dac3a514b 100644
 --- a/sound/soc/intel/baytrail/sst-baytrail-ipc.c
 +++ b/sound/soc/intel/baytrail/sst-baytrail-ipc.c
 @@ -420,13 +420,14 @@ int sst_byt_stream_commit(struct sst_byt *byt, struct sst_byt_stream *stream)
@@ -64,7 +64,7 @@ index 260447da3..403dac3a5 100644
  		return sst_ipc_tx_message_nowait(&byt->ipc, header,
  						NULL, 0);
 diff --git a/sound/soc/intel/common/sst-ipc.c b/sound/soc/intel/common/sst-ipc.c
-index 771734fd7..4270e8fd0 100644
+index 771734fd7707..4270e8fd017a 100644
 --- a/sound/soc/intel/common/sst-ipc.c
 +++ b/sound/soc/intel/common/sst-ipc.c
 @@ -52,7 +52,7 @@ static struct ipc_message *msg_get_empty(struct sst_generic_ipc *ipc)
@@ -162,7 +162,7 @@ index 771734fd7..4270e8fd0 100644
  EXPORT_SYMBOL_GPL(sst_ipc_tx_message_nopm);
  
 diff --git a/sound/soc/intel/common/sst-ipc.h b/sound/soc/intel/common/sst-ipc.h
-index 7ed42a640..4cfa9e37a 100644
+index 7ed42a640ad6..4cfa9e37ac28 100644
 --- a/sound/soc/intel/common/sst-ipc.h
 +++ b/sound/soc/intel/common/sst-ipc.h
 @@ -75,7 +75,8 @@ struct sst_generic_ipc {
@@ -176,7 +176,7 @@ index 7ed42a640..4cfa9e37a 100644
  int sst_ipc_tx_message_nowait(struct sst_generic_ipc *ipc, u64 header,
  	void *tx_data, size_t tx_bytes);
 diff --git a/sound/soc/intel/haswell/sst-haswell-ipc.c b/sound/soc/intel/haswell/sst-haswell-ipc.c
-index d33bdaf92..557f7800f 100644
+index d33bdaf92c57..557f7800f373 100644
 --- a/sound/soc/intel/haswell/sst-haswell-ipc.c
 +++ b/sound/soc/intel/haswell/sst-haswell-ipc.c
 @@ -826,10 +826,11 @@ int sst_hsw_fw_get_version(struct sst_hsw *hsw,
@@ -316,7 +316,7 @@ index d33bdaf92..557f7800f 100644
  		dev_err(dev, "ipc: module set parameter failed - %d\n", ret);
  
 diff --git a/sound/soc/intel/skylake/skl-debug.c b/sound/soc/intel/skylake/skl-debug.c
-index 08e57ace2..cda607835 100644
+index 08e57ace2030..cda607835e1c 100644
 --- a/sound/soc/intel/skylake/skl-debug.c
 +++ b/sound/soc/intel/skylake/skl-debug.c
 @@ -231,10 +231,12 @@ static ssize_t mod_control_write(struct file *file,
@@ -364,7 +364,7 @@ index 08e57ace2..cda607835 100644
  	memset(&d->fw_ipc_data.mailbx[0], 0, DSP_BUF);
  
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 79451737b..4a0ad2916 100644
+index 79451737be9e..4a0ad2916388 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -2347,5 +2347,6 @@ int skl_get_module_params(struct skl_sst *ctx, u32 *params, int size,
@@ -376,7 +376,7 @@ index 79451737b..4a0ad2916 100644
 +			0, NULL);
  }
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index 7b6ce92c9..bf9f97bb3 100644
+index 7b6ce92c9d0e..bf9f97bb36de 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -676,7 +676,7 @@ int skl_ipc_create_pipeline(struct sst_generic_ipc *ipc,
@@ -519,7 +519,7 @@ index 7b6ce92c9..bf9f97bb3 100644
  		ret = sst_ipc_tx_message_nowait(ipc, *ipc_header, NULL, 0);
  
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 6c037d2c8..bc02740e5 100644
+index 6c037d2c8a3c..bc02740e5525 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -259,7 +259,7 @@ int skl_ipc_set_large_config(struct sst_generic_ipc *ipc,

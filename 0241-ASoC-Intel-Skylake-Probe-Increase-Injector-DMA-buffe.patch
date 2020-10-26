@@ -19,7 +19,7 @@ Tested-by: Jayanti, Satya Charitardha <satya.charitardha.jayanti@intel.com>
  1 file changed, 7 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 49f8404fd..a27112b6c 100644
+index 49f8404fd381..a27112b6c3dc 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -37,6 +37,12 @@

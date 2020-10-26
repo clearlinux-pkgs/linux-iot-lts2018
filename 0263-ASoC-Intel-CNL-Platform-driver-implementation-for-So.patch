@@ -13,7 +13,7 @@ Signed-off-by: Sanyog Kale <sanyog.r.kale@intel.com>
  2 files changed, 754 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 6fcd68c7b..28d990450 100644
+index 6fcd68c7bd1e..28d990450463 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -22,6 +22,7 @@
@@ -789,7 +789,7 @@ index 6fcd68c7b..28d990450 100644
  	base_cfg->audio_fmt.channel_map = format->ch_map;
  
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index e969ac964..0cde541f9 100644
+index e969ac964daa..0cde541f900c 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -17,6 +17,7 @@

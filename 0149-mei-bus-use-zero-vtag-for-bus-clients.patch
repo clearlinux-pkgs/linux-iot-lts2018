@@ -17,7 +17,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  4 files changed, 48 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/misc/mei/bus.c b/drivers/misc/mei/bus.c
-index e4c437318..0327827f1 100644
+index 26bf76108950..24282139a261 100644
 --- a/drivers/misc/mei/bus.c
 +++ b/drivers/misc/mei/bus.c
 @@ -504,6 +504,16 @@ static void mei_cl_bus_module_put(struct mei_cl_device *cldev)
@@ -85,7 +85,7 @@ index e4c437318..0327827f1 100644
  		dev_dbg(bus->dev, "Already disconnected\n");
  		err = 0;
 diff --git a/drivers/misc/mei/client.c b/drivers/misc/mei/client.c
-index 893af8985..d6e871fb2 100644
+index 893af8985620..d6e871fb25af 100644
 --- a/drivers/misc/mei/client.c
 +++ b/drivers/misc/mei/client.c
 @@ -1279,6 +1279,21 @@ static int mei_cl_tx_flow_ctrl_creds_reduce(struct mei_cl *cl)
@@ -129,7 +129,7 @@ index 893af8985..d6e871fb2 100644
  			mei_io_cb_free(cb);
  			return;
 diff --git a/drivers/misc/mei/client.h b/drivers/misc/mei/client.h
-index 1ac297f7c..eb147094b 100644
+index 1ac297f7c81c..eb147094b459 100644
 --- a/drivers/misc/mei/client.h
 +++ b/drivers/misc/mei/client.h
 @@ -114,6 +114,7 @@ struct mei_cl_cb *mei_cl_enqueue_ctrl_wr_cb(struct mei_cl *cl, size_t length,
@@ -141,7 +141,7 @@ index 1ac297f7c..eb147094b 100644
  /*
   *  MEI input output function prototype
 diff --git a/drivers/misc/mei/main.c b/drivers/misc/mei/main.c
-index 7e6c3586c..59a6a7a19 100644
+index 7e6c3586cbcf..59a6a7a19621 100644
 --- a/drivers/misc/mei/main.c
 +++ b/drivers/misc/mei/main.c
 @@ -458,21 +458,6 @@ static int mei_vm_support_check(struct mei_device *dev, const uuid_le *uuid)

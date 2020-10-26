@@ -23,7 +23,7 @@ Tested-by: Babu, Ramesh <ramesh.babu@intel.com>
  2 files changed, 22 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/skl-probe.c b/sound/soc/intel/skylake/skl-probe.c
-index 7c206ec1b..7c6e3779c 100644
+index 7c206ec1b6a7..7c6e3779c213 100644
 --- a/sound/soc/intel/skylake/skl-probe.c
 +++ b/sound/soc/intel/skylake/skl-probe.c
 @@ -68,6 +68,9 @@ int skl_probe_compr_open(struct snd_compr_stream *substream,
@@ -49,7 +49,7 @@ index 7c206ec1b..7c6e3779c 100644
  
  #if USE_SPIB
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 7aefd1cce..49f8404fd 100644
+index 7aefd1cce3b3..49f8404fd381 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -530,6 +530,9 @@ int skl_tplg_set_probe_params(struct snd_soc_dapm_widget *w,

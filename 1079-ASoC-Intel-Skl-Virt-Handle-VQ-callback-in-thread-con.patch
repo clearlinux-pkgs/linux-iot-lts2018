@@ -15,7 +15,7 @@ Signed-off-by: Pawel Furtak <pawel.furtak@intel.com>
  2 files changed, 60 insertions(+), 49 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
-index e4b43b835..5cbfc1cac 100644
+index e4b43b835289..5cbfc1cac333 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.c
 @@ -87,29 +87,26 @@ inline int vfe_is_valid_fe_substream(struct snd_pcm_substream *substream)
@@ -198,7 +198,7 @@ index e4b43b835..5cbfc1cac 100644
  }
  
 diff --git a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
-index 3a9f9979b..afd042d04 100644
+index 3a9f9979bcad..afd042d04ddc 100644
 --- a/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 +++ b/sound/soc/intel/skylake/virtio/skl-virtio-fe.h
 @@ -51,11 +51,13 @@ struct snd_skl_vfe {

@@ -47,7 +47,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  27 files changed, 221 insertions(+), 214 deletions(-)
 
 diff --git a/include/linux/cred.h b/include/linux/cred.h
-index 1dc351d85..09ec6ff30 100644
+index 1dc351d8548b..09ec6ff305b4 100644
 --- a/include/linux/cred.h
 +++ b/include/linux/cred.h
 @@ -23,6 +23,7 @@
@@ -68,7 +68,7 @@ index 1dc351d85..09ec6ff30 100644
  extern int set_create_files_as(struct cred *, struct inode *);
  extern void __init cred_init(void);
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 615f136a3..a30887c37 100644
+index 615f136a32f2..a30887c379db 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -355,7 +355,7 @@ int security_inode_killpriv(struct dentry *dentry);
@@ -301,7 +301,7 @@ index 615f136a3..a30887c37 100644
  	return 0;
  }
 diff --git a/include/net/scm.h b/include/net/scm.h
-index 1ce365f4c..43236b02d 100644
+index 1ce365f4c256..43236b02ddcd 100644
 --- a/include/net/scm.h
 +++ b/include/net/scm.h
 @@ -33,7 +33,7 @@ struct scm_cookie {
@@ -323,7 +323,7 @@ index 1ce365f4c..43236b02d 100644
  		if (!err) {
  			put_cmsg(msg, SOL_SOCKET, SCM_SECURITY, seclen, secdata);
 diff --git a/kernel/audit.c b/kernel/audit.c
-index 7afec5f43..760711b45 100644
+index 45741c3c48a4..fdde19d100eb 100644
 --- a/kernel/audit.c
 +++ b/kernel/audit.c
 @@ -138,7 +138,7 @@ static u32	audit_backlog_wait_time = AUDIT_BACKLOG_WAIT_TIME;
@@ -335,7 +335,7 @@ index 7afec5f43..760711b45 100644
  
  /* Records can be lost in several ways:
     0) [suppressed in audit_alloc]
-@@ -1422,20 +1422,21 @@ static int audit_receive_msg(struct sk_buff *skb, struct nlmsghdr *nlh)
+@@ -1430,20 +1430,21 @@ static int audit_receive_msg(struct sk_buff *skb, struct nlmsghdr *nlh)
  	}
  	case AUDIT_SIGNAL_INFO:
  		len = 0;
@@ -361,7 +361,7 @@ index 7afec5f43..760711b45 100644
  			memcpy(sig_data->ctx, ctx, len);
  			security_release_secctx(ctx, len);
  		}
-@@ -2167,12 +2168,12 @@ void audit_log_name(struct audit_context *context, struct audit_names *n,
+@@ -2175,12 +2176,12 @@ void audit_log_name(struct audit_context *context, struct audit_names *n,
  				 from_kgid(&init_user_ns, n->gid),
  				 MAJOR(n->rdev),
  				 MINOR(n->rdev));
@@ -377,7 +377,7 @@ index 7afec5f43..760711b45 100644
  			if (call_panic)
  				*call_panic = 2;
  		} else {
-@@ -2210,13 +2211,13 @@ int audit_log_task_context(struct audit_buffer *ab)
+@@ -2218,13 +2219,13 @@ int audit_log_task_context(struct audit_buffer *ab)
  	char *ctx = NULL;
  	unsigned len;
  	int error;
@@ -395,7 +395,7 @@ index 7afec5f43..760711b45 100644
  		if (error != -EINVAL)
  			goto error_path;
 diff --git a/kernel/audit.h b/kernel/audit.h
-index 214e14948..246a47215 100644
+index 99badd7ba56f..4277d04f7c2b 100644
 --- a/kernel/audit.h
 +++ b/kernel/audit.h
 @@ -21,6 +21,7 @@
@@ -443,10 +443,10 @@ index 214e14948..246a47215 100644
  extern int audit_filter(int msgtype, unsigned int listtype);
  
 diff --git a/kernel/auditfilter.c b/kernel/auditfilter.c
-index 1c8a48abd..482cdd440 100644
+index b2cc63ca0068..bfbfc5828a0e 100644
 --- a/kernel/auditfilter.c
 +++ b/kernel/auditfilter.c
-@@ -1332,7 +1332,7 @@ int audit_filter(int msgtype, unsigned int listtype)
+@@ -1330,7 +1330,7 @@ int audit_filter(int msgtype, unsigned int listtype)
  		for (i = 0; i < e->rule.field_count; i++) {
  			struct audit_field *f = &e->rule.fields[i];
  			pid_t pid;
@@ -455,7 +455,7 @@ index 1c8a48abd..482cdd440 100644
  
  			switch (f->type) {
  			case AUDIT_PID:
-@@ -1363,7 +1363,7 @@ int audit_filter(int msgtype, unsigned int listtype)
+@@ -1361,7 +1361,7 @@ int audit_filter(int msgtype, unsigned int listtype)
  			case AUDIT_SUBJ_CLR:
  				if (f->lsm_rule) {
  					security_task_getsecid(current, &sid);
@@ -465,7 +465,7 @@ index 1c8a48abd..482cdd440 100644
  				}
  				break;
 diff --git a/kernel/auditsc.c b/kernel/auditsc.c
-index 1513873e2..8018f6cbd 100644
+index 1513873e23bd..8018f6cbd9be 100644
 --- a/kernel/auditsc.c
 +++ b/kernel/auditsc.c
 @@ -112,7 +112,7 @@ struct audit_aux_data_pids {
@@ -592,7 +592,7 @@ index 1513873e2..8018f6cbd 100644
  	context->type = 0;
  	context->fds[0] = -1;
 diff --git a/kernel/cred.c b/kernel/cred.c
-index ec0413389..46825adc8 100644
+index ec0413389723..46825adc8816 100644
 --- a/kernel/cred.c
 +++ b/kernel/cred.c
 @@ -676,7 +676,7 @@ EXPORT_SYMBOL(prepare_kernel_cred);
@@ -622,7 +622,7 @@ index ec0413389..46825adc8 100644
  EXPORT_SYMBOL(set_security_override_from_ctx);
  
 diff --git a/net/ipv4/ip_sockglue.c b/net/ipv4/ip_sockglue.c
-index 82f341e84..d336d403c 100644
+index 82f341e84fae..d336d403cb88 100644
 --- a/net/ipv4/ip_sockglue.c
 +++ b/net/ipv4/ip_sockglue.c
 @@ -131,14 +131,16 @@ static void ip_cmsg_recv_checksum(struct msghdr *msg, struct sk_buff *skb,
@@ -645,7 +645,7 @@ index 82f341e84..d336d403c 100644
  		return;
  
 diff --git a/net/netfilter/nf_conntrack_netlink.c b/net/netfilter/nf_conntrack_netlink.c
-index 31fa94064..5c85e3c6c 100644
+index 0b89609a6e9d..e0746858bc96 100644
 --- a/net/netfilter/nf_conntrack_netlink.c
 +++ b/net/netfilter/nf_conntrack_netlink.c
 @@ -333,8 +333,12 @@ static int ctnetlink_dump_secctx(struct sk_buff *skb, const struct nf_conn *ct)
@@ -677,7 +677,7 @@ index 31fa94064..5c85e3c6c 100644
  		return 0;
  
 diff --git a/net/netfilter/nf_conntrack_standalone.c b/net/netfilter/nf_conntrack_standalone.c
-index 4c94f3ba2..9ebd932f1 100644
+index 4c94f3ba2ae4..9ebd932f15e0 100644
 --- a/net/netfilter/nf_conntrack_standalone.c
 +++ b/net/netfilter/nf_conntrack_standalone.c
 @@ -171,8 +171,12 @@ static void ct_show_secctx(struct seq_file *s, const struct nf_conn *ct)
@@ -695,7 +695,7 @@ index 4c94f3ba2..9ebd932f1 100644
  		return;
  
 diff --git a/net/netfilter/nfnetlink_queue.c b/net/netfilter/nfnetlink_queue.c
-index d33094f4e..0904b7a73 100644
+index f81a3ce0fe48..e91fabdbe9e0 100644
 --- a/net/netfilter/nfnetlink_queue.c
 +++ b/net/netfilter/nfnetlink_queue.c
 @@ -309,13 +309,18 @@ static u32 nfqnl_get_sk_secctx(struct sk_buff *skb, char **secdata)
@@ -720,7 +720,7 @@ index d33094f4e..0904b7a73 100644
  	read_unlock_bh(&skb->sk->sk_callback_lock);
  #endif
 diff --git a/net/netfilter/xt_SECMARK.c b/net/netfilter/xt_SECMARK.c
-index 4ad5fe27e..afc61be75 100644
+index 4ad5fe27e08b..afc61be750ef 100644
 --- a/net/netfilter/xt_SECMARK.c
 +++ b/net/netfilter/xt_SECMARK.c
 @@ -52,12 +52,15 @@ secmark_tg(struct sk_buff *skb, const struct xt_action_param *par)
@@ -750,7 +750,7 @@ index 4ad5fe27e..afc61be75 100644
  		pr_info_ratelimited("unable to obtain relabeling permission\n");
  		return err;
 diff --git a/net/netlabel/netlabel_kapi.c b/net/netlabel/netlabel_kapi.c
-index 551bf3be9..190999503 100644
+index 551bf3be961b..1909995037c1 100644
 --- a/net/netlabel/netlabel_kapi.c
 +++ b/net/netlabel/netlabel_kapi.c
 @@ -244,7 +244,7 @@ int netlbl_cfg_unlbl_static_add(struct net *net,
@@ -763,7 +763,7 @@ index 551bf3be9..190999503 100644
  
  /**
 diff --git a/net/netlabel/netlabel_unlabeled.c b/net/netlabel/netlabel_unlabeled.c
-index 780e4b932..c14bdb2ab 100644
+index 780e4b932eb8..c14bdb2ab5e5 100644
 --- a/net/netlabel/netlabel_unlabeled.c
 +++ b/net/netlabel/netlabel_unlabeled.c
 @@ -379,7 +379,7 @@ int netlbl_unlhsh_add(struct net *net,
@@ -898,7 +898,7 @@ index 780e4b932..c14bdb2ab 100644
  	audit_info.sessionid = 0;
  
 diff --git a/net/netlabel/netlabel_unlabeled.h b/net/netlabel/netlabel_unlabeled.h
-index 3a9e5dc95..2c68e9f9d 100644
+index 3a9e5dc9511b..2c68e9f9de13 100644
 --- a/net/netlabel/netlabel_unlabeled.h
 +++ b/net/netlabel/netlabel_unlabeled.h
 @@ -225,7 +225,7 @@ int netlbl_unlhsh_add(struct net *net,
@@ -911,7 +911,7 @@ index 3a9e5dc95..2c68e9f9d 100644
  int netlbl_unlhsh_remove(struct net *net,
  			 const char *dev_name,
 diff --git a/net/netlabel/netlabel_user.c b/net/netlabel/netlabel_user.c
-index d5b5ce7e9..22474f5c9 100644
+index d5b5ce7e9aa2..22474f5c93d7 100644
 --- a/net/netlabel/netlabel_user.c
 +++ b/net/netlabel/netlabel_user.c
 @@ -113,7 +113,7 @@ struct audit_buffer *netlbl_audit_start_common(int type,
@@ -924,7 +924,7 @@ index d5b5ce7e9..22474f5c9 100644
  				     &secctx_len) == 0) {
  		audit_log_format(audit_buf, " subj=%s", secctx);
 diff --git a/net/netlabel/netlabel_user.h b/net/netlabel/netlabel_user.h
-index 782ee194f..4a397cde1 100644
+index 782ee194fdbd..4a397cde1a48 100644
 --- a/net/netlabel/netlabel_user.h
 +++ b/net/netlabel/netlabel_user.h
 @@ -48,7 +48,7 @@
@@ -937,7 +937,7 @@ index 782ee194f..4a397cde1 100644
  	audit_info->sessionid = audit_get_sessionid(current);
  }
 diff --git a/net/unix/af_unix.c b/net/unix/af_unix.c
-index 2318e2e27..991fe3a69 100644
+index 2020306468af..bd6c63d6a5bc 100644
 --- a/net/unix/af_unix.c
 +++ b/net/unix/af_unix.c
 @@ -141,17 +141,17 @@ static struct hlist_head *unix_sockets_unbound(void *addr)
@@ -962,7 +962,7 @@ index 2318e2e27..991fe3a69 100644
  #else
  static inline void unix_get_secdata(struct scm_cookie *scm, struct sk_buff *skb)
 diff --git a/net/xfrm/xfrm_policy.c b/net/xfrm/xfrm_policy.c
-index 6a12efb4c..51cbf8428 100644
+index 6a12efb4cbbe..51cbf842851f 100644
 --- a/net/xfrm/xfrm_policy.c
 +++ b/net/xfrm/xfrm_policy.c
 @@ -1080,7 +1080,7 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
@@ -993,10 +993,10 @@ index 6a12efb4c..51cbf8428 100644
  	return err;
  }
 diff --git a/net/xfrm/xfrm_state.c b/net/xfrm/xfrm_state.c
-index 811a8b0a9..c378b1826 100644
+index f513c6d95592..cb8cc3900250 100644
 --- a/net/xfrm/xfrm_state.c
 +++ b/net/xfrm/xfrm_state.c
-@@ -1030,7 +1030,7 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,
+@@ -1033,7 +1033,7 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,
  		x->if_id = if_id;
  
  		error = security_xfrm_state_alloc_acquire(x, pol->security,
@@ -1006,10 +1006,10 @@ index 811a8b0a9..c378b1826 100644
  			x->km.state = XFRM_STATE_DEAD;
  			to_put = x;
 diff --git a/security/integrity/ima/ima.h b/security/integrity/ima/ima.h
-index 67db9d945..f28b1b1e1 100644
+index d12b07eb3a58..dc4980d1110e 100644
 --- a/security/integrity/ima/ima.h
 +++ b/security/integrity/ima/ima.h
-@@ -191,8 +191,9 @@ enum ima_hooks {
+@@ -193,8 +193,9 @@ enum ima_hooks {
  };
  
  /* LIM API function definitions */
@@ -1021,7 +1021,7 @@ index 67db9d945..f28b1b1e1 100644
  int ima_must_measure(struct inode *inode, int mask, enum ima_hooks func);
  int ima_collect_measurement(struct integrity_iint_cache *iint,
  			    struct file *file, void *buf, loff_t size,
-@@ -212,8 +213,9 @@ void ima_free_template_entry(struct ima_template_entry *entry);
+@@ -214,8 +215,9 @@ void ima_free_template_entry(struct ima_template_entry *entry);
  const char *ima_d_path(const struct path *path, char **pathbuf, char *filename);
  
  /* IMA policy related functions */
@@ -1034,7 +1034,7 @@ index 67db9d945..f28b1b1e1 100644
  void ima_update_policy(void);
  void ima_update_policy_flag(void);
 diff --git a/security/integrity/ima/ima_api.c b/security/integrity/ima/ima_api.c
-index a02c5acfd..7f64aa200 100644
+index a02c5acfd403..7f64aa20086d 100644
 --- a/security/integrity/ima/ima_api.c
 +++ b/security/integrity/ima/ima_api.c
 @@ -175,8 +175,9 @@ void ima_add_violation(struct file *file, const unsigned char *filename,
@@ -1050,7 +1050,7 @@ index a02c5acfd..7f64aa200 100644
  	int flags = IMA_MEASURE | IMA_AUDIT | IMA_APPRAISE | IMA_HASH;
  
 diff --git a/security/integrity/ima/ima_appraise.c b/security/integrity/ima/ima_appraise.c
-index deec1804a..fa5ffe893 100644
+index deec1804a00a..fa5ffe893916 100644
 --- a/security/integrity/ima/ima_appraise.c
 +++ b/security/integrity/ima/ima_appraise.c
 @@ -50,13 +50,13 @@ bool is_ima_appraise_enabled(void)
@@ -1070,7 +1070,7 @@ index deec1804a..fa5ffe893 100644
  }
  
 diff --git a/security/integrity/ima/ima_main.c b/security/integrity/ima/ima_main.c
-index 2d31921fb..7567c7f21 100644
+index 2d31921fbda4..7567c7f21e7b 100644
 --- a/security/integrity/ima/ima_main.c
 +++ b/security/integrity/ima/ima_main.c
 @@ -167,8 +167,8 @@ void ima_file_free(struct file *file)
@@ -1150,7 +1150,7 @@ index 2d31921fb..7567c7f21 100644
  }
  
 diff --git a/security/integrity/ima/ima_policy.c b/security/integrity/ima/ima_policy.c
-index 93babb60b..f7e753b72 100644
+index 2d5a3daa02f9..99c4e64f8450 100644
 --- a/security/integrity/ima/ima_policy.c
 +++ b/security/integrity/ima/ima_policy.c
 @@ -278,7 +278,7 @@ static void ima_lsm_update_rules(void)
@@ -1193,7 +1193,7 @@ index 93babb60b..f7e753b72 100644
  	struct ima_rule_entry *entry;
  	int action = 0, actmask = flags | (flags << 1);
 diff --git a/security/security.c b/security/security.c
-index 26511761d..4158d6d88 100644
+index 26511761d824..4158d6d88d67 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -1249,12 +1249,10 @@ int security_inode_listsecurity(struct inode *inode, char *buffer, size_t buffer

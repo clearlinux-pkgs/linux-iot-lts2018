@@ -27,7 +27,7 @@ Tracked-On: PKT-1617
  2 files changed, 135 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/block/virtio_blk.c b/drivers/block/virtio_blk.c
-index 9be54e5ef..e3f3040a3 100644
+index 075523777a4a..8a20c2775167 100644
 --- a/drivers/block/virtio_blk.c
 +++ b/drivers/block/virtio_blk.c
 @@ -18,6 +18,7 @@
@@ -155,7 +155,7 @@ index 9be54e5ef..e3f3040a3 100644
  	virtblk_update_capacity(vblk, false);
  	virtio_device_ready(vdev);
  
-@@ -964,14 +1043,14 @@ static unsigned int features_legacy[] = {
+@@ -965,14 +1044,14 @@ static unsigned int features_legacy[] = {
  	VIRTIO_BLK_F_SCSI,
  #endif
  	VIRTIO_BLK_F_FLUSH, VIRTIO_BLK_F_TOPOLOGY, VIRTIO_BLK_F_CONFIG_WCE,
@@ -173,7 +173,7 @@ index 9be54e5ef..e3f3040a3 100644
  
  static struct virtio_driver virtio_blk = {
 diff --git a/include/uapi/linux/virtio_blk.h b/include/uapi/linux/virtio_blk.h
-index 9ebe4d968..0f99d7b49 100644
+index 9ebe4d968dd5..0f99d7b49ede 100644
 --- a/include/uapi/linux/virtio_blk.h
 +++ b/include/uapi/linux/virtio_blk.h
 @@ -38,6 +38,8 @@

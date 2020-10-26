@@ -18,7 +18,7 @@ Signed-off-by: Junhao Gao <junhao.gao@intel.com>
  2 files changed, 2 insertions(+), 36 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
-index 27f8631ff..19ffac6e2 100644
+index 27f8631ffaa9..19ffac6e2110 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-bridge.c
 @@ -49,7 +49,6 @@ int intel_ipu4_virtio_msg_parse(struct ipu4_virtio_req_info *req_info)
@@ -237,7 +237,7 @@ index 27f8631ff..19ffac6e2 100644
  	return ret;
  }
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
-index c29294b18..a4b950a12 100644
+index c29294b186fe..a4b950a128d7 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be.c
 @@ -209,17 +209,11 @@ static void handle_vq_kick(int client_id, int vq_idx)

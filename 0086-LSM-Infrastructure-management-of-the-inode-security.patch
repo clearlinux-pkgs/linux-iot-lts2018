@@ -19,7 +19,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  5 files changed, 99 insertions(+), 96 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 2cd999bf9..ee77a6dc1 100644
+index 2cd999bf9d70..ee77a6dc1c37 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -2032,6 +2032,7 @@ struct security_hook_list {
@@ -44,7 +44,7 @@ index 2cd999bf9..ee77a6dc1 100644
  
  #endif /* ! __LINUX_LSM_HOOKS_H */
 diff --git a/security/security.c b/security/security.c
-index bc10f55ff..4d2f1d88e 100644
+index bc10f55ffd58..4d2f1d88eef8 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -41,6 +41,7 @@ struct security_hook_heads security_hook_heads __lsm_ro_after_init;
@@ -182,7 +182,7 @@ index bc10f55ff..4d2f1d88e 100644
  
  int security_dentry_init_security(struct dentry *dentry, int mode,
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 75c65c4b8..72b4c75a5 100644
+index 0a030c421b66..ef9d0507f5ef 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -148,8 +148,6 @@ static int __init checkreqprot_setup(char *str)
@@ -250,7 +250,7 @@ index 75c65c4b8..72b4c75a5 100644
  }
  
  static int file_alloc_security(struct file *file)
-@@ -6909,6 +6883,7 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
+@@ -6921,6 +6895,7 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
  struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_cred = sizeof(struct task_security_struct),
  	.lbs_file = sizeof(struct file_security_struct),
@@ -258,7 +258,7 @@ index 75c65c4b8..72b4c75a5 100644
  };
  
  static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
-@@ -7178,9 +7153,6 @@ static __init int selinux_init(void)
+@@ -7190,9 +7165,6 @@ static __init int selinux_init(void)
  
  	default_noexec = !(VM_DATA_DEFAULT_FLAGS & VM_EXEC);
  
@@ -269,7 +269,7 @@ index 75c65c4b8..72b4c75a5 100644
  
  	avtab_cache_init();
 diff --git a/security/selinux/include/objsec.h b/security/selinux/include/objsec.h
-index 3304a1ee5..7a3d18fa9 100644
+index 3304a1ee58a4..7a3d18fa9b13 100644
 --- a/security/selinux/include/objsec.h
 +++ b/security/selinux/include/objsec.h
 @@ -59,10 +59,7 @@ enum label_initialized {
@@ -285,7 +285,7 @@ index 3304a1ee5..7a3d18fa9 100644
  	u32 sid;		/* SID of this object */
  	u16 sclass;		/* security class of this object */
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index 45468d3ee..cf2a441b7 100644
+index 45468d3ee394..cf2a441b7a00 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -288,24 +288,18 @@ static struct smack_known *smk_fetch(const char *name, struct inode *ip,

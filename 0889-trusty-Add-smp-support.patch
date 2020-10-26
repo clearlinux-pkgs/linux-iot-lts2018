@@ -22,7 +22,7 @@ Signed-off-by: Arve Hjønnevåg <arve@android.com>
  4 files changed, 70 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/trusty/trusty-irq.c b/drivers/trusty/trusty-irq.c
-index ae9535af7..1f14f7f48 100644
+index ae9535af77dd..1f14f7f48bed 100644
 --- a/drivers/trusty/trusty-irq.c
 +++ b/drivers/trusty/trusty-irq.c
 @@ -154,7 +154,7 @@ static int trusty_irq_call_notify(struct notifier_block *nb,
@@ -91,7 +91,7 @@ index ae9535af7..1f14f7f48 100644
  
  	for (irq = 0; irq >= 0;)
 diff --git a/drivers/trusty/trusty.c b/drivers/trusty/trusty.c
-index 4b5d35527..2a7aeb472 100644
+index 4b5d3552720b..2a7aeb4725c5 100644
 --- a/drivers/trusty/trusty.c
 +++ b/drivers/trusty/trusty.c
 @@ -28,6 +28,7 @@
@@ -164,7 +164,7 @@ index 4b5d35527..2a7aeb472 100644
  
  	trusty_init_version(s, &pdev->dev);
 diff --git a/include/linux/trusty/sm_err.h b/include/linux/trusty/sm_err.h
-index 7de09b46f..32ee08e49 100644
+index 7de09b46fddb..32ee08e499c3 100644
 --- a/include/linux/trusty/sm_err.h
 +++ b/include/linux/trusty/sm_err.h
 @@ -36,5 +36,8 @@
@@ -177,7 +177,7 @@ index 7de09b46f..32ee08e49 100644
  
  #endif
 diff --git a/include/linux/trusty/smcall.h b/include/linux/trusty/smcall.h
-index 7d8950a88..2e43803d9 100644
+index 7d8950a8890e..2e43803d9333 100644
 --- a/include/linux/trusty/smcall.h
 +++ b/include/linux/trusty/smcall.h
 @@ -56,7 +56,7 @@

@@ -12,7 +12,7 @@ Signed-off-by: mark gross<mark.gross@intel.com>
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/staging/igb_avb/e1000_phy.c b/drivers/staging/igb_avb/e1000_phy.c
-index 0534e4a34..46ab8d5ae 100644
+index 0534e4a34af2..46ab8d5ae2ab 100644
 --- a/drivers/staging/igb_avb/e1000_phy.c
 +++ b/drivers/staging/igb_avb/e1000_phy.c
 @@ -3291,12 +3291,13 @@ s32 e1000_read_phy_reg_mphy(struct e1000_hw *hw, u32 address, u32 *data)

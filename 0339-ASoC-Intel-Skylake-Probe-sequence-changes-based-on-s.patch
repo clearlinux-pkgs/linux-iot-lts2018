@@ -45,7 +45,7 @@ Tested-by: Avati, Santosh Kumar <santosh.kumar.avati@intel.com>
  7 files changed, 495 insertions(+), 169 deletions(-)
 
 diff --git a/include/uapi/sound/skl-tplg-interface.h b/include/uapi/sound/skl-tplg-interface.h
-index e5656fc0c..2dceadfbc 100644
+index e5656fc0ca02..2dceadfbc1f5 100644
 --- a/include/uapi/sound/skl-tplg-interface.h
 +++ b/include/uapi/sound/skl-tplg-interface.h
 @@ -151,17 +151,33 @@ enum skl_module_param_type {
@@ -86,7 +86,7 @@ index e5656fc0c..2dceadfbc 100644
  	u32 alh_stream_num;
  	u32 channel_mask;
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index dc648b7db..b52f1c08d 100644
+index dc648b7db934..b52f1c08d0a5 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -2008,33 +2008,83 @@ static void skl_dump_bind_info(struct skl_sst *ctx, struct skl_module_cfg
@@ -182,7 +182,7 @@ index dc648b7db..b52f1c08d 100644
  /*
   * On module freeup, we need to unbind the module with modules
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 5a2985b9b..32c97d4b6 100644
+index 5a2985b9bd7e..32c97d4b696d 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -1783,6 +1783,7 @@ static int skl_get_probe_widget(struct snd_soc_component *component,
@@ -214,7 +214,7 @@ index 5a2985b9b..32c97d4b6 100644
  	return 0;
  }
 diff --git a/sound/soc/intel/skylake/skl-probe.c b/sound/soc/intel/skylake/skl-probe.c
-index b4f5fe422..9ccd19d32 100644
+index b4f5fe4220cf..9ccd19d32ef3 100644
 --- a/sound/soc/intel/skylake/skl-probe.c
 +++ b/sound/soc/intel/skylake/skl-probe.c
 @@ -40,6 +40,37 @@
@@ -393,7 +393,7 @@ index b4f5fe422..9ccd19d32 100644
  			return -EINVAL;
  	}
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index bc9b27884..d6866bc15 100644
+index bc9b27884120..d6866bc15469 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -20,6 +20,7 @@
@@ -447,7 +447,7 @@ index bc9b27884..d6866bc15 100644
  	int edma_type;
  	int edma_buffsize;
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 3eb388ca0..4343f9968 100644
+index 3eb388ca0141..4343f99689fa 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -495,7 +495,7 @@ static void skl_tplg_update_module_params(struct snd_soc_dapm_widget *w,
@@ -964,7 +964,7 @@ index 3eb388ca0..4343f9968 100644
  
  /*
 diff --git a/sound/soc/intel/skylake/skl-topology.h b/sound/soc/intel/skylake/skl-topology.h
-index 0c6b5c6b9..02256d70f 100644
+index 0c6b5c6b9c99..02256d70f60f 100644
 --- a/sound/soc/intel/skylake/skl-topology.h
 +++ b/sound/soc/intel/skylake/skl-topology.h
 @@ -468,13 +468,15 @@ struct skl_algo_data {

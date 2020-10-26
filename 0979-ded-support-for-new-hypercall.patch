@@ -13,7 +13,7 @@ Signed-off-by: Manisha Chinthapally <manisha.chinthapally@intel.com>
  1 file changed, 9 insertions(+), 8 deletions(-)
 
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 030aed2bb..0dec250bb 100644
+index 030aed2bb7cc..0dec250bb47b 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -251,13 +251,14 @@ struct hc_api_version {

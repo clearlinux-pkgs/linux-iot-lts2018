@@ -15,7 +15,7 @@ Signed-off-by: Ramalingam C <ramalingam.c@intel.com>
  1 file changed, 49 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_hdcp.c b/drivers/gpu/drm/i915/intel_hdcp.c
-index ca2c73469..20f78b572 100644
+index ca2c73469cb2..20f78b572d1b 100644
 --- a/drivers/gpu/drm/i915/intel_hdcp.c
 +++ b/drivers/gpu/drm/i915/intel_hdcp.c
 @@ -185,6 +185,45 @@ struct intel_digital_port *conn_to_dig_port(struct intel_connector *connector)

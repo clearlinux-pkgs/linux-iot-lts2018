@@ -23,7 +23,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  4 files changed, 289 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 4a0ad2916..e0d6f74a8 100644
+index 4a0ad2916388..e0d6f74a8fd5 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -1158,6 +1158,8 @@ int skl_free_dsp(struct skl *skl)
@@ -46,7 +46,7 @@ index 4a0ad2916..e0d6f74a8 100644
  }
  
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index ea6e57e68..df3776585 100644
+index ea6e57e6899f..df37765858c4 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -127,8 +127,40 @@ struct skl_lib_info;
@@ -91,7 +91,7 @@ index ea6e57e68..df3776585 100644
  enum skl_dsp_states {
  	SKL_DSP_RUNNING = 1,
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 074014668..7700b5c54 100644
+index 074014668f0a..7700b5c54934 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -133,6 +133,61 @@ struct bra_conf {
@@ -167,7 +167,7 @@ index 074014668..7700b5c54 100644
  
  struct skl_ipc_init_instance_msg {
 diff --git a/sound/soc/intel/skylake/skl-sst-utils.c b/sound/soc/intel/skylake/skl-sst-utils.c
-index 59fb24bc0..2bd5565d5 100644
+index 59fb24bc0adc..2bd5565d5f80 100644
 --- a/sound/soc/intel/skylake/skl-sst-utils.c
 +++ b/sound/soc/intel/skylake/skl-sst-utils.c
 @@ -446,6 +446,192 @@ void skl_release_library(struct skl_lib_info *linfo, int lib_count)

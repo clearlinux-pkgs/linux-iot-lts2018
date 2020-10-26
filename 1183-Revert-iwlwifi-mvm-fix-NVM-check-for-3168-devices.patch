@@ -11,7 +11,7 @@ Tracked-On: PKT-3177
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/nvm.c b/drivers/net/wireless/intel/iwlwifi/mvm/nvm.c
-index 875557ce0..56713f170 100644
+index 875557ce0d66..56713f170d7b 100644
 --- a/drivers/net/wireless/intel/iwlwifi/mvm/nvm.c
 +++ b/drivers/net/wireless/intel/iwlwifi/mvm/nvm.c
 @@ -286,7 +286,7 @@ iwl_parse_nvm_sections(struct iwl_mvm *mvm)

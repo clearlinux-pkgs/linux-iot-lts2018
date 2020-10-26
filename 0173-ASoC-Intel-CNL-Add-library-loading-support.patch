@@ -14,7 +14,7 @@ Signed-off-by: Guneshwor Singh <guneshwor.o.singh@intel.com>
  3 files changed, 12 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/bxt-sst.c b/sound/soc/intel/skylake/bxt-sst.c
-index 440bca7af..924c0dfa6 100644
+index 440bca7afbf1..924c0dfa6ad7 100644
 --- a/sound/soc/intel/skylake/bxt-sst.c
 +++ b/sound/soc/intel/skylake/bxt-sst.c
 @@ -53,7 +53,7 @@ static unsigned int bxt_get_errorcode(struct sst_dsp *ctx)
@@ -27,7 +27,7 @@ index 440bca7af..924c0dfa6 100644
  {
  	struct snd_dma_buffer dmab;
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 2969e57e3..a66ed9487 100644
+index 2969e57e3e93..a66ed94870b4 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -357,6 +357,7 @@ static const struct skl_dsp_fw_ops cnl_fw_ops = {
@@ -58,7 +58,7 @@ index 2969e57e3..a66ed9487 100644
  
  	return 0;
 diff --git a/sound/soc/intel/skylake/skl-sst-dsp.h b/sound/soc/intel/skylake/skl-sst-dsp.h
-index e1d6f6719..33de8c939 100644
+index e1d6f6719f7e..33de8c939bc4 100644
 --- a/sound/soc/intel/skylake/skl-sst-dsp.h
 +++ b/sound/soc/intel/skylake/skl-sst-dsp.h
 @@ -238,6 +238,7 @@ int skl_sst_init_fw(struct device *dev, struct skl_sst *ctx);

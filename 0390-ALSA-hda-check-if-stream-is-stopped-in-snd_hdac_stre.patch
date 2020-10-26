@@ -17,7 +17,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 5 insertions(+)
 
 diff --git a/sound/hda/hdac_stream.c b/sound/hda/hdac_stream.c
-index 0fdb6dd7f..67d672192 100644
+index 0fdb6dd7f316..67d672192606 100644
 --- a/sound/hda/hdac_stream.c
 +++ b/sound/hda/hdac_stream.c
 @@ -91,6 +91,11 @@ void snd_hdac_stream_clear(struct hdac_stream *azx_dev)

@@ -13,7 +13,7 @@ Signed-off-by: Hardik T Shah <hardik.t.shah@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 335ec68b6..c90870ee8 100644
+index 335ec68b6a32..c90870ee8a61 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -509,7 +509,7 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,

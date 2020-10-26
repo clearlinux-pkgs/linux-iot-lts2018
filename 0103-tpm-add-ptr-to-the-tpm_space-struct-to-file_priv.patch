@@ -18,7 +18,7 @@ Signed-off--by: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
  4 files changed, 12 insertions(+), 25 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm-dev-common.c b/drivers/char/tpm/tpm-dev-common.c
-index e4a04b2d3..f0c033b69 100644
+index e4a04b2d3c32..f0c033b69b62 100644
 --- a/drivers/char/tpm/tpm-dev-common.c
 +++ b/drivers/char/tpm/tpm-dev-common.c
 @@ -43,9 +43,11 @@ static void timeout_work(struct work_struct *work)
@@ -53,7 +53,7 @@ index e4a04b2d3..f0c033b69 100644
  
  	tpm_put_ops(priv->chip);
 diff --git a/drivers/char/tpm/tpm-dev.c b/drivers/char/tpm/tpm-dev.c
-index ebd74ab5a..98b9630c3 100644
+index ebd74ab5abef..98b9630c3a36 100644
 --- a/drivers/char/tpm/tpm-dev.c
 +++ b/drivers/char/tpm/tpm-dev.c
 @@ -39,7 +39,7 @@ static int tpm_open(struct inode *inode, struct file *file)
@@ -87,7 +87,7 @@ index ebd74ab5a..98b9630c3 100644
  	.release = tpm_release,
  };
 diff --git a/drivers/char/tpm/tpm-dev.h b/drivers/char/tpm/tpm-dev.h
-index b24cfb4d3..4048677bb 100644
+index b24cfb4d3ee1..4048677bbd78 100644
 --- a/drivers/char/tpm/tpm-dev.h
 +++ b/drivers/char/tpm/tpm-dev.h
 @@ -6,6 +6,7 @@
@@ -113,7 +113,7 @@ index b24cfb4d3..4048677bb 100644
  
  #endif
 diff --git a/drivers/char/tpm/tpmrm-dev.c b/drivers/char/tpm/tpmrm-dev.c
-index 1a0e97a5d..96006c6b9 100644
+index 162fb16243d0..11b607040729 100644
 --- a/drivers/char/tpm/tpmrm-dev.c
 +++ b/drivers/char/tpm/tpmrm-dev.c
 @@ -28,7 +28,7 @@ static int tpmrm_open(struct inode *inode, struct file *file)

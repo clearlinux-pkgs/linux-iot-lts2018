@@ -22,7 +22,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  7 files changed, 183 insertions(+), 64 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-psys-virt.c b/drivers/media/pci/intel/ipu-psys-virt.c
-index 8b7bc678d..995f7f09c 100644
+index 8b7bc678d850..995f7f09c462 100644
 --- a/drivers/media/pci/intel/ipu-psys-virt.c
 +++ b/drivers/media/pci/intel/ipu-psys-virt.c
 @@ -50,6 +50,8 @@
@@ -179,7 +179,7 @@ index 8b7bc678d..995f7f09c 100644
 +	.poll = virt_ipu_psys_poll,
  };
 diff --git a/drivers/media/pci/intel/ipu-psys-virt.h b/drivers/media/pci/intel/ipu-psys-virt.h
-index 3e2488b53..91a7bd32d 100644
+index 3e2488b537cf..91a7bd32d035 100644
 --- a/drivers/media/pci/intel/ipu-psys-virt.h
 +++ b/drivers/media/pci/intel/ipu-psys-virt.h
 @@ -19,11 +19,19 @@ struct psys_fops_virt {
@@ -205,7 +205,7 @@ index 3e2488b53..91a7bd32d 100644
  #endif
 \ No newline at end of file
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
-index 6a6735785..b1ff094ea 100644
+index 6a67357856e2..b1ff094eab4a 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 @@ -598,11 +598,10 @@ static unsigned int stream_fop_poll(struct file *file, struct ici_stream_device
@@ -241,7 +241,7 @@ index 6a6735785..b1ff094ea 100644
  
  static int virt_stream_fop_open(struct inode *inode, struct file *file)
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
-index 0af0614b2..67602a966 100644
+index 0af0614b2d74..67602a96626f 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-psys.c
 @@ -49,21 +49,29 @@ int ipu_get_manifest(struct ipu_psys_manifest *m,
@@ -411,7 +411,7 @@ index 0af0614b2..67602a966 100644
  
  	intel_ipu4_virtio_create_req(req, IPU4_CMD_PSYS_CLOSE, NULL);
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
-index 86d9d347c..de6053b29 100644
+index 86d9d347cba5..de6053b293fd 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-psys.c
 @@ -68,7 +68,15 @@ int process_psys_qcmd(struct ipu4_virtio_req_info *req_info)
@@ -458,7 +458,7 @@ index 86d9d347c..de6053b29 100644
  
  int process_psys_mapbuf_thread(void *data)
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
-index a09af6a93..5da50e8e1 100644
+index a09af6a931a8..5da50e8e1f8e 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-be-stream.c
 @@ -185,7 +185,7 @@ int process_poll(struct ipu4_virtio_req_info *req_info)
@@ -471,7 +471,7 @@ index a09af6a93..5da50e8e1 100644
  		} else {
  			pr_err("%s poll timeout! %d", __func__, req->op[0]);
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common-psys.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common-psys.h
-index a8b905f20..737a2bd4c 100644
+index a8b905f20ec2..737a2bd4ce0e 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common-psys.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common-psys.h
 @@ -8,11 +8,7 @@

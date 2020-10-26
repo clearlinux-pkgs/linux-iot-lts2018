@@ -25,7 +25,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index 7018e7654..f8117e614 100644
+index 7018e7654de2..f8117e61469b 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -687,7 +687,7 @@ static void io_req_tasklet(unsigned long data)

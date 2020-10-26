@@ -25,7 +25,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.c b/sound/soc/intel/skylake/skl-sst-ipc.c
-index 1c53ba3c6..508382d52 100644
+index 1c53ba3c6172..508382d52e04 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.c
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.c
 @@ -394,7 +394,7 @@ skl_process_log_buffer(struct sst_dsp *sst, struct skl_ipc_header header)

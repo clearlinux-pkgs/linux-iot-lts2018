@@ -14,7 +14,7 @@ Signed-off-by: Michal Wasko <michal.wasko@intel.com>
  1 file changed, 1 insertion(+)
 
 diff --git a/sound/soc/intel/skylake/skl.c b/sound/soc/intel/skylake/skl.c
-index 5d1cbe428..777e7bf87 100644
+index 5d1cbe428472..777e7bf87379 100644
 --- a/sound/soc/intel/skylake/skl.c
 +++ b/sound/soc/intel/skylake/skl.c
 @@ -466,6 +466,7 @@ static int skl_resume(struct device *dev)

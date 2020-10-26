@@ -31,7 +31,7 @@ Tested-by: Avri Altman <avri.altman@sandisk.com>
  2 files changed, 217 insertions(+)
 
 diff --git a/drivers/mmc/core/Kconfig b/drivers/mmc/core/Kconfig
-index 42e89060c..96c7ff631 100644
+index 42e89060cd41..96c7ff63178c 100644
 --- a/drivers/mmc/core/Kconfig
 +++ b/drivers/mmc/core/Kconfig
 @@ -36,6 +36,7 @@ config PWRSEQ_SIMPLE
@@ -43,7 +43,7 @@ index 42e89060c..96c7ff631 100644
  	help
  	  Say Y here to enable the MMC block device driver support.
 diff --git a/drivers/mmc/core/block.c b/drivers/mmc/core/block.c
-index c723a1e54..c3f38b652 100644
+index c723a1e54b18..c3f38b652f53 100644
 --- a/drivers/mmc/core/block.c
 +++ b/drivers/mmc/core/block.c
 @@ -44,6 +44,7 @@

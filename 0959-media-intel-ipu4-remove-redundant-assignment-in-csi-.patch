@@ -14,7 +14,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 1 deletion(-)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-csi2-be.c b/drivers/media/pci/intel/ipu-isys-csi2-be.c
-index deaf2a553..028c2debc 100644
+index deaf2a55362a..028c2debc3d8 100644
 --- a/drivers/media/pci/intel/ipu-isys-csi2-be.c
 +++ b/drivers/media/pci/intel/ipu-isys-csi2-be.c
 @@ -255,7 +255,6 @@ int ipu_isys_csi2_be_init(struct ipu_isys_csi2_be *csi2_be,

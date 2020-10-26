@@ -28,7 +28,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-topology.c b/sound/soc/intel/skylake/skl-topology.c
-index 9b7b6f555..3eb388ca0 100644
+index 9b7b6f555ffe..3eb388ca0141 100644
 --- a/sound/soc/intel/skylake/skl-topology.c
 +++ b/sound/soc/intel/skylake/skl-topology.c
 @@ -2936,6 +2936,7 @@ static int skl_tplg_get_token(struct device *dev,

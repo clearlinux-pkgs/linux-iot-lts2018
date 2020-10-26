@@ -18,7 +18,7 @@ Signed-off-by: spoluri <sarat.chandra.poluri@intel.com>
  4 files changed, 5 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ici/ici-isys-csi2.c b/drivers/media/pci/intel/ici/ici-isys-csi2.c
-index 65416dd6d..e03417b34 100644
+index 65416dd6d83b..e03417b349df 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-csi2.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-csi2.c
 @@ -11,7 +11,6 @@
@@ -30,7 +30,7 @@ index 65416dd6d..e03417b34 100644
  #define CSI2_ACCINV 8
  
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
-index c8451b28e..1dc8899e5 100644
+index c8451b28e8d5..1dc8899e5e7b 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.c
 @@ -1042,7 +1042,6 @@ int ici_isys_frame_buf_init(
@@ -42,7 +42,7 @@ index c8451b28e..1dc8899e5 100644
  	spin_lock_init(&buf_list->short_packet_queue_lock);
  	INIT_LIST_HEAD(&buf_list->getbuf_list);
 diff --git a/drivers/media/pci/intel/ici/ici-isys-frame-buf.h b/drivers/media/pci/intel/ici/ici-isys-frame-buf.h
-index 771967ce5..5072e925e 100644
+index 771967ce5360..5072e925e4ba 100644
 --- a/drivers/media/pci/intel/ici/ici-isys-frame-buf.h
 +++ b/drivers/media/pci/intel/ici/ici-isys-frame-buf.h
 @@ -75,7 +75,6 @@ struct ici_frame_short_buf {
@@ -54,7 +54,7 @@ index 771967ce5..5072e925e 100644
  	struct list_head putbuf_list;
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
-index 5b4bac23f..3a210dd5c 100644
+index 5b4bac23f089..3a210dd5c17e 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-para-virt-drv.c
 @@ -290,6 +290,7 @@ struct ici_frame_buf_wrapper *get_buf(struct virtual_stream *vstream, struct ici

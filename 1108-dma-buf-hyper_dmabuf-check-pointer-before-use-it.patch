@@ -73,7 +73,7 @@ Signed-off-by: Liu Xinyun <xinyun.liu@intel.com>
  2 files changed, 16 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
-index 3bd13c584..3864f4b6a 100644
+index 3bd13c584ffc..3864f4b6a856 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_ops.c
 @@ -132,6 +132,11 @@ static struct sg_table *hyper_dmabuf_ops_map(
@@ -104,7 +104,7 @@ index 3bd13c584..3864f4b6a 100644
  	return fd;
  }
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_sgl_proc.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_sgl_proc.c
-index c1887d1ad..0bf21ca86 100644
+index c1887d1ad709..0bf21ca864b1 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_sgl_proc.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_sgl_proc.c
 @@ -72,6 +72,11 @@ struct pages_info *hyper_dmabuf_ext_pgs(struct sg_table *sgt)

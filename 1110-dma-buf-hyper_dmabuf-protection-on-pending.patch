@@ -15,7 +15,7 @@ Signed-off-by: Liu Xinyun <xinyun.liu@intel.com>
  2 files changed, 8 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_drv.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_drv.c
-index f1afce29d..7c69a7e5e 100644
+index f1afce29d6af..7c69a7e5eb49 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_drv.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_drv.c
 @@ -201,7 +201,11 @@ static ssize_t hyper_dmabuf_event_read(struct file *filp, char __user *buffer,
@@ -31,7 +31,7 @@ index f1afce29d..7c69a7e5e 100644
  		}
  	}
 diff --git a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_event.c b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_event.c
-index 392ea99e0..33ef6954d 100644
+index 392ea99e0784..33ef6954d832 100644
 --- a/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_event.c
 +++ b/drivers/dma-buf/hyper_dmabuf/hyper_dmabuf_event.c
 @@ -58,6 +58,10 @@ static void send_event(struct hyper_dmabuf_event *e)

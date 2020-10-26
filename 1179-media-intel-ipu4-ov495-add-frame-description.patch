@@ -15,7 +15,7 @@ Signed-off-by: yangz1x <zhonghuax.yang@intel.com>
  1 file changed, 41 insertions(+)
 
 diff --git a/drivers/media/i2c/crlmodule/crl_ov495_configuration.h b/drivers/media/i2c/crlmodule/crl_ov495_configuration.h
-index 6884cf503..97c16a0ab 100644
+index 6884cf503bb4..97c16a0abe23 100644
 --- a/drivers/media/i2c/crlmodule/crl_ov495_configuration.h
 +++ b/drivers/media/i2c/crlmodule/crl_ov495_configuration.h
 @@ -131,6 +131,44 @@ static struct crl_register_write_rep ov495_1280x1080_regs[] = {

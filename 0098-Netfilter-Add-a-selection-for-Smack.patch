@@ -34,7 +34,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  15 files changed, 175 insertions(+), 40 deletions(-)
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
-index 1b27b8bcc..381dae9c3 100644
+index 1b27b8bcc779..381dae9c3ec5 100644
 --- a/include/linux/lsm_hooks.h
 +++ b/include/linux/lsm_hooks.h
 @@ -1703,8 +1703,8 @@ union security_list_options {
@@ -49,7 +49,7 @@ index 1b27b8bcc..381dae9c3 100644
  					struct flowi *fl);
  	int (*tun_dev_alloc_security)(void **security);
 diff --git a/include/linux/security.h b/include/linux/security.h
-index aed637676..2a95fcfc4 100644
+index aed6376768bb..2a95fcfc4b14 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -83,15 +83,9 @@ enum lsm_event {
@@ -103,7 +103,7 @@ index aed637676..2a95fcfc4 100644
  {
  	return 0;
 diff --git a/include/uapi/linux/netfilter/xt_SECMARK.h b/include/uapi/linux/netfilter/xt_SECMARK.h
-index 1f2a70841..5245a9748 100644
+index 1f2a708413f5..5245a9748599 100644
 --- a/include/uapi/linux/netfilter/xt_SECMARK.h
 +++ b/include/uapi/linux/netfilter/xt_SECMARK.h
 @@ -12,6 +12,7 @@
@@ -115,10 +115,10 @@ index 1f2a70841..5245a9748 100644
  
  struct xt_secmark_target_info {
 diff --git a/kernel/audit.c b/kernel/audit.c
-index 760711b45..9bae822a6 100644
+index fdde19d100eb..4b227a99fc85 100644
 --- a/kernel/audit.c
 +++ b/kernel/audit.c
-@@ -2173,7 +2173,9 @@ void audit_log_name(struct audit_context *context, struct audit_names *n,
+@@ -2181,7 +2181,9 @@ void audit_log_name(struct audit_context *context, struct audit_names *n,
  		u32 len;
  		if (security_secid_to_secctx(
  			&n->osid, &ctx, &len)) {
@@ -129,7 +129,7 @@ index 760711b45..9bae822a6 100644
  				*call_panic = 2;
  		} else {
 diff --git a/kernel/auditsc.c b/kernel/auditsc.c
-index 8018f6cbd..498d8942c 100644
+index 8018f6cbd9be..498d8942c344 100644
 --- a/kernel/auditsc.c
 +++ b/kernel/auditsc.c
 @@ -1214,7 +1214,9 @@ static void show_special(struct audit_context *context, int *call_panic)
@@ -143,7 +143,7 @@ index 8018f6cbd..498d8942c 100644
  			} else {
  				audit_log_format(ab, " obj=%s", ctx);
 diff --git a/net/netfilter/nf_conntrack_netlink.c b/net/netfilter/nf_conntrack_netlink.c
-index 5c85e3c6c..2e4646b27 100644
+index e0746858bc96..97d0252284b0 100644
 --- a/net/netfilter/nf_conntrack_netlink.c
 +++ b/net/netfilter/nf_conntrack_netlink.c
 @@ -335,8 +335,13 @@ static int ctnetlink_dump_secctx(struct sk_buff *skb, const struct nf_conn *ct)
@@ -175,7 +175,7 @@ index 5c85e3c6c..2e4646b27 100644
  	ret = security_secid_to_secctx(&secid, NULL, &len);
  	if (ret)
 diff --git a/net/netfilter/nf_conntrack_standalone.c b/net/netfilter/nf_conntrack_standalone.c
-index 9ebd932f1..c85c2e1a3 100644
+index 9ebd932f15e0..c85c2e1a3e74 100644
 --- a/net/netfilter/nf_conntrack_standalone.c
 +++ b/net/netfilter/nf_conntrack_standalone.c
 @@ -173,8 +173,13 @@ static void ct_show_secctx(struct seq_file *s, const struct nf_conn *ct)
@@ -193,7 +193,7 @@ index 9ebd932f1..c85c2e1a3 100644
  	ret = security_secid_to_secctx(&secid, &secctx, &len);
  	if (ret)
 diff --git a/net/netfilter/nfnetlink_queue.c b/net/netfilter/nfnetlink_queue.c
-index 0904b7a73..c65bdff19 100644
+index e91fabdbe9e0..b5fe7f87f180 100644
 --- a/net/netfilter/nfnetlink_queue.c
 +++ b/net/netfilter/nfnetlink_queue.c
 @@ -317,8 +317,13 @@ static u32 nfqnl_get_sk_secctx(struct sk_buff *skb, char **secdata)
@@ -211,7 +211,7 @@ index 0904b7a73..c65bdff19 100644
  	}
  
 diff --git a/net/netfilter/xt_SECMARK.c b/net/netfilter/xt_SECMARK.c
-index 6af1f4fc8..a4646c301 100644
+index 6af1f4fc837d..a4646c301307 100644
 --- a/net/netfilter/xt_SECMARK.c
 +++ b/net/netfilter/xt_SECMARK.c
 @@ -41,6 +41,9 @@ secmark_tg(struct sk_buff *skb, const struct xt_action_param *par)
@@ -296,7 +296,7 @@ index 6af1f4fc8..a4646c301 100644
  
  static struct xt_target secmark_tg_reg __read_mostly = {
 diff --git a/net/netlabel/netlabel_user.c b/net/netlabel/netlabel_user.c
-index 22474f5c9..42ee220f6 100644
+index 22474f5c93d7..42ee220f6940 100644
 --- a/net/netlabel/netlabel_user.c
 +++ b/net/netlabel/netlabel_user.c
 @@ -112,7 +112,7 @@ struct audit_buffer *netlbl_audit_start_common(int type,
@@ -309,7 +309,7 @@ index 22474f5c9..42ee220f6 100644
  				     &secctx,
  				     &secctx_len) == 0) {
 diff --git a/net/unix/af_unix.c b/net/unix/af_unix.c
-index 27cd4c078..cdd733be7 100644
+index 991d3540f50d..a7b3dc16cde6 100644
 --- a/net/unix/af_unix.c
 +++ b/net/unix/af_unix.c
 @@ -141,9 +141,10 @@ static struct hlist_head *unix_sockets_unbound(void *addr)
@@ -338,7 +338,7 @@ index 27cd4c078..cdd733be7 100644
  #else
  static inline void unix_get_secdata(struct scm_cookie *scm, struct sk_buff *skb)
 diff --git a/security/security.c b/security/security.c
-index 96e795600..5a8047fcb 100644
+index 96e795600adb..5a8047fcb9cd 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -351,10 +351,9 @@ void __init security_add_blobs(struct lsm_blob_sizes *needed)
@@ -412,7 +412,7 @@ index 96e795600..5a8047fcb 100644
  {
  	return call_int_hook(tun_dev_alloc_security, 0, security);
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 98d2d6c3f..f754c21c5 100644
+index 35f8a839de72..8f807054b58f 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -50,6 +50,7 @@
@@ -423,7 +423,7 @@ index 98d2d6c3f..f754c21c5 100644
  #include <linux/tty.h>
  #include <net/icmp.h>
  #include <net/ip.h>		/* for local_port_range[] */
-@@ -5387,13 +5388,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
+@@ -5399,13 +5400,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
  			    PACKET__RELABELTO, NULL);
  }
  
@@ -448,7 +448,7 @@ index 98d2d6c3f..f754c21c5 100644
  }
  
 diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
-index dd0313001..bf2e6537d 100644
+index dd0313001e5e..bf2e6537dce7 100644
 --- a/security/smack/smack_lsm.c
 +++ b/security/smack/smack_lsm.c
 @@ -35,6 +35,7 @@
@@ -578,7 +578,7 @@ index dd0313001..bf2e6537d 100644
   /* key management security hooks */
  #ifdef CONFIG_KEYS
 diff --git a/security/smack/smack_netfilter.c b/security/smack/smack_netfilter.c
-index 701a1cc1b..596aba2e4 100644
+index 701a1cc1bdcc..596aba2e4d6b 100644
 --- a/security/smack/smack_netfilter.c
 +++ b/security/smack/smack_netfilter.c
 @@ -16,6 +16,7 @@

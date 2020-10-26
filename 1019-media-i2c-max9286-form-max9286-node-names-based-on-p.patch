@@ -17,7 +17,7 @@ Signed-off-by: kgopala2 <karthik.l.gopalakrishnan@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/i2c/ici/max9286_ici.c b/drivers/media/i2c/ici/max9286_ici.c
-index 4345c705b..cc8289242 100644
+index 4345c705b081..cc828924271c 100644
 --- a/drivers/media/i2c/ici/max9286_ici.c
 +++ b/drivers/media/i2c/ici/max9286_ici.c
 @@ -497,7 +497,7 @@ static int init_ext_sd(struct i2c_client *client, struct max9286_subdev *max_sd,

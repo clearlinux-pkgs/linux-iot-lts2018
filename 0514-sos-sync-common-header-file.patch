@@ -13,7 +13,7 @@ Reviewed-on:
  1 file changed, 138 insertions(+), 31 deletions(-)
 
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index d48fe80f6..40f3444b7 100644
+index d48fe80f6fab..40f3444b7e73 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -74,6 +74,16 @@

@@ -31,7 +31,7 @@ Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
  6 files changed, 6 insertions(+), 205 deletions(-)
 
 diff --git a/drivers/media/pci/intel/ipu-isys-csi2.c b/drivers/media/pci/intel/ipu-isys-csi2.c
-index 1e0400c90..0f3e12243 100644
+index 1e0400c90e40..0f3e122439c0 100644
 --- a/drivers/media/pci/intel/ipu-isys-csi2.c
 +++ b/drivers/media/pci/intel/ipu-isys-csi2.c
 @@ -871,9 +871,6 @@ void ipu_isys_csi2_eof_event(struct ipu_isys_csi2 *csi2, unsigned int vc)
@@ -55,7 +55,7 @@ index 1e0400c90..0f3e12243 100644
  			dev_err(&csi2->isys->adev->dev,
  				"csi2-%d: timeout at sync to eof of vc %d\n",
 diff --git a/drivers/media/pci/intel/ipu-isys-csi2.h b/drivers/media/pci/intel/ipu-isys-csi2.h
-index c6f513c50..d7f2df3eb 100644
+index c6f513c50f12..d7f2df3eb805 100644
 --- a/drivers/media/pci/intel/ipu-isys-csi2.h
 +++ b/drivers/media/pci/intel/ipu-isys-csi2.h
 @@ -6,10 +6,6 @@
@@ -94,7 +94,7 @@ index c6f513c50..d7f2df3eb 100644
  
  #endif /* IPU_ISYS_CSI2_H */
 diff --git a/drivers/media/pci/intel/ipu-isys-queue.c b/drivers/media/pci/intel/ipu-isys-queue.c
-index e601b1c92..a88c0d7e9 100644
+index e601b1c92372..a88c0d7e9ca9 100644
 --- a/drivers/media/pci/intel/ipu-isys-queue.c
 +++ b/drivers/media/pci/intel/ipu-isys-queue.c
 @@ -1164,9 +1164,7 @@ void ipu_isys_queue_buf_done(struct ipu_isys_buffer *ib)
@@ -109,7 +109,7 @@ index e601b1c92..a88c0d7e9 100644
  }
  
 diff --git a/drivers/media/pci/intel/ipu-isys-video.c b/drivers/media/pci/intel/ipu-isys-video.c
-index e3d10544e..942ad1755 100644
+index e3d10544ef6e..942ad1755ae8 100644
 --- a/drivers/media/pci/intel/ipu-isys-video.c
 +++ b/drivers/media/pci/intel/ipu-isys-video.c
 @@ -39,18 +39,6 @@ static unsigned int num_stream_support = IPU_ISYS_NUM_STREAMS;
@@ -246,7 +246,7 @@ index e3d10544e..942ad1755 100644
  		close_streaming_firmware(av);
  		av->ip.stream_id = 0;
 diff --git a/drivers/media/pci/intel/ipu-isys.h b/drivers/media/pci/intel/ipu-isys.h
-index 5b0961b84..847961062 100644
+index 5b0961b84a4b..847961062c9f 100644
 --- a/drivers/media/pci/intel/ipu-isys.h
 +++ b/drivers/media/pci/intel/ipu-isys.h
 @@ -109,7 +109,6 @@ struct ipu_isys {
@@ -258,7 +258,7 @@ index 5b0961b84..847961062 100644
  	unsigned int sensor_types[N_IPU_FW_ISYS_SENSOR_TYPE];
  #endif
 diff --git a/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c b/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
-index 2c87487b2..50eb7a9ab 100644
+index 2c87487b2e81..50eb7a9ab6e4 100644
 --- a/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
 +++ b/drivers/media/pci/intel/ipu4/ipu4-isys-csi2.c
 @@ -1,7 +1,6 @@

@@ -31,7 +31,7 @@ Signed-off-by: Zhao Yakui <yakui.zhao@intel.com>
  2 files changed, 9 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
-index da537980a..72eacb504 100644
+index da537980a936..72eacb50442e 100644
 --- a/drivers/gpu/drm/i915/intel_display.c
 +++ b/drivers/gpu/drm/i915/intel_display.c
 @@ -13786,6 +13786,9 @@ intel_primary_plane_create(struct drm_i915_private *dev_priv, enum pipe pipe)
@@ -55,7 +55,7 @@ index da537980a..72eacb504 100644
  
  	/*
 diff --git a/drivers/gpu/drm/i915/intel_sprite.c b/drivers/gpu/drm/i915/intel_sprite.c
-index e10a64a62..7b8e2c7c9 100644
+index e10a64a6265c..7b8e2c7c9f8d 100644
 --- a/drivers/gpu/drm/i915/intel_sprite.c
 +++ b/drivers/gpu/drm/i915/intel_sprite.c
 @@ -1629,6 +1629,9 @@ intel_sprite_plane_create(struct drm_i915_private *dev_priv,

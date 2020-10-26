@@ -20,7 +20,7 @@ Signed-off-by: Alek Du <alek.du@intel.com>
  1 file changed, 11 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_gem.c b/drivers/gpu/drm/i915/i915_gem.c
-index e9aad26ee..f2f819ebe 100644
+index e9aad26ee653..f2f819ebedf5 100644
 --- a/drivers/gpu/drm/i915/i915_gem.c
 +++ b/drivers/gpu/drm/i915/i915_gem.c
 @@ -4721,7 +4721,17 @@ int i915_gem_wait_for_idle(struct drm_i915_private *i915,

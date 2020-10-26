@@ -20,7 +20,7 @@ Tested-by: Shah, Hardik T <hardik.t.shah@intel.com>
  create mode 100644 sound/soc/intel/fpga/hda_intel_cnl_fpga.c
 
 diff --git a/sound/soc/intel/Makefile b/sound/soc/intel/Makefile
-index 8160520fd..ece7c2b22 100644
+index 8160520fd74c..ece7c2b228d1 100644
 --- a/sound/soc/intel/Makefile
 +++ b/sound/soc/intel/Makefile
 @@ -10,3 +10,6 @@ obj-$(CONFIG_SND_SOC_INTEL_SKYLAKE) += skylake/
@@ -32,7 +32,7 @@ index 8160520fd..ece7c2b22 100644
 +obj-$(CONFIG_SND_SOC_INTEL_CNL_FPGA) += fpga/
 diff --git a/sound/soc/intel/fpga/Makefile b/sound/soc/intel/fpga/Makefile
 new file mode 100644
-index 000000000..f434f7bcf
+index 000000000000..f434f7bcfd62
 --- /dev/null
 +++ b/sound/soc/intel/fpga/Makefile
 @@ -0,0 +1,4 @@
@@ -42,7 +42,7 @@ index 000000000..f434f7bcf
 +
 diff --git a/sound/soc/intel/fpga/hda_intel_cnl_fpga.c b/sound/soc/intel/fpga/hda_intel_cnl_fpga.c
 new file mode 100644
-index 000000000..934a1a98b
+index 000000000000..934a1a98b64a
 --- /dev/null
 +++ b/sound/soc/intel/fpga/hda_intel_cnl_fpga.c
 @@ -0,0 +1,274 @@

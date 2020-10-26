@@ -23,7 +23,7 @@ Signed-off-by: Ong Hock Yu <ong.hock.yu@intel.com>
  3 files changed, 19 insertions(+), 9 deletions(-)
 
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
-index 52a80cc79..1909e026f 100644
+index 52a80cc7941d..1909e026ff1e 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-common.h
 @@ -34,7 +34,8 @@ struct ipu4_virtio_req {
@@ -37,7 +37,7 @@ index 52a80cc79..1909e026f 100644
  };
  struct test_payload {
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.c
-index b419fd606..b03438c03 100644
+index b419fd606c89..b03438c03a8c 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe-request-queue.c
 @@ -25,8 +25,8 @@ int ipu4_virtio_fe_req_queue_init(void)
@@ -61,7 +61,7 @@ index b419fd606..b03438c03 100644
  }
  
 diff --git a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
-index a21d44720..39e2e556a 100644
+index a21d447207de..39e2e556a008 100644
 --- a/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
 +++ b/drivers/media/pci/intel/virtio/intel-ipu4-virtio-fe.c
 @@ -15,6 +15,8 @@

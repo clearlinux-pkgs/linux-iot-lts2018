@@ -12,7 +12,7 @@ Signed-off-by: Sinha, Mohit <mohit.sinha@intel.com>
  1 file changed, 21 insertions(+)
 
 diff --git a/sound/soc/intel/boards/bxt_tdf8532.c b/sound/soc/intel/boards/bxt_tdf8532.c
-index 1e2b8be00..325b59ada 100644
+index 1e2b8be00127..325b59adaf1c 100644
 --- a/sound/soc/intel/boards/bxt_tdf8532.c
 +++ b/sound/soc/intel/boards/bxt_tdf8532.c
 @@ -99,6 +99,27 @@ static struct snd_soc_dai_link broxton_tdf8532_dais[] = {

@@ -15,7 +15,7 @@ Signed-off-by: Hui Xia <hui.xia@intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/pci/intel/Kconfig b/drivers/media/pci/intel/Kconfig
-index 714a668d6..8168fd41f 100644
+index 714a668d6a2d..8168fd41ffed 100644
 --- a/drivers/media/pci/intel/Kconfig
 +++ b/drivers/media/pci/intel/Kconfig
 @@ -70,7 +70,7 @@ config VIDEO_INTEL_UOS

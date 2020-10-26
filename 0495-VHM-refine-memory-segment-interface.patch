@@ -16,7 +16,7 @@ Signed-off-by: Jason Chen CJ <jason.cj.chen@intel.com>
  2 files changed, 37 insertions(+), 84 deletions(-)
 
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index 712a90504..a9ba810a7 100644
+index 712a905040a4..a9ba810a7fd7 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -78,12 +78,9 @@
@@ -237,7 +237,7 @@ index 712a90504..a9ba810a7 100644
  			guest_phys < seg->gpa + seg->len) {
  			mutex_unlock(&vm->seg_lock);
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index 258ec3982..494213a9f 100644
+index 258ec3982da9..494213a9f9f0 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -82,7 +82,6 @@

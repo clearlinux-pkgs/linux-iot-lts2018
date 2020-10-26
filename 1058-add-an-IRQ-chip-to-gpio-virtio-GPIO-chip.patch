@@ -22,7 +22,7 @@ Tracked-On: PKT-1852
  1 file changed, 206 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/gpio/gpio-virtio.c b/drivers/gpio/gpio-virtio.c
-index 4cb45737e..befcea14a 100644
+index 4cb45737e639..befcea14a2e8 100644
 --- a/drivers/gpio/gpio-virtio.c
 +++ b/drivers/gpio/gpio-virtio.c
 @@ -33,6 +33,17 @@ enum gpio_virtio_request_command {

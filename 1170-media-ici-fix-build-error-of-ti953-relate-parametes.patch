@@ -18,7 +18,7 @@ Signed-off-by: Yang Zhonghua<zhonghuax.yang@intel.com>
 
 diff --git a/drivers/media/i2c/ici/ti960-reg-ici.h b/drivers/media/i2c/ici/ti960-reg-ici.h
 new file mode 100755
-index 000000000..97fb6dfc1
+index 000000000000..97fb6dfc1fa2
 --- /dev/null
 +++ b/drivers/media/i2c/ici/ti960-reg-ici.h
 @@ -0,0 +1,244 @@
@@ -267,7 +267,7 @@ index 000000000..97fb6dfc1
 +
 +#endif
 diff --git a/drivers/media/i2c/ici/ti960_ici.c b/drivers/media/i2c/ici/ti960_ici.c
-index 02eb8d773..71b85f9f2 100644
+index 02eb8d7739d6..71b85f9f20a5 100644
 --- a/drivers/media/i2c/ici/ti960_ici.c
 +++ b/drivers/media/i2c/ici/ti960_ici.c
 @@ -14,7 +14,7 @@

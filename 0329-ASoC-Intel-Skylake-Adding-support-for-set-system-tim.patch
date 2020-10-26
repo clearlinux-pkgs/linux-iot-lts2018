@@ -28,7 +28,7 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  3 files changed, 86 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/skl-messages.c b/sound/soc/intel/skylake/skl-messages.c
-index 31384afe4..dc648b7db 100644
+index 31384afe42b3..dc648b7db934 100644
 --- a/sound/soc/intel/skylake/skl-messages.c
 +++ b/sound/soc/intel/skylake/skl-messages.c
 @@ -71,6 +71,8 @@ void skl_dsp_set_astate_cfg(struct skl_sst *ctx, u32 cnt, void *data)
@@ -85,7 +85,7 @@ index 31384afe4..dc648b7db 100644
  #define NOTIFICATION_MASK 0xf
  
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index 80fa279f3..5a2985b9b 100644
+index 80fa279f3583..5a2985b9bd7e 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -856,6 +856,12 @@ static int skl_trace_compr_set_params(struct snd_compr_stream *stream,
@@ -102,7 +102,7 @@ index 80fa279f3..5a2985b9b 100644
  	sst->trace_wind.flags |= BIT(core);
  	ret = skl_dsp_enable_logging(ipc, core, 1);
 diff --git a/sound/soc/intel/skylake/skl-sst-ipc.h b/sound/soc/intel/skylake/skl-sst-ipc.h
-index 43d3eedad..bc9b27884 100644
+index 43d3eedad780..bc9b27884120 100644
 --- a/sound/soc/intel/skylake/skl-sst-ipc.h
 +++ b/sound/soc/intel/skylake/skl-sst-ipc.h
 @@ -27,6 +27,7 @@ struct sst_generic_ipc;

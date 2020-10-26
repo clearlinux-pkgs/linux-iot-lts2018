@@ -39,7 +39,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  2 files changed, 46 insertions(+), 25 deletions(-)
 
 diff --git a/include/linux/vhm/acrn_common.h b/include/linux/vhm/acrn_common.h
-index 7482320a3..91951b7e1 100644
+index 7482320a36a8..91951b7e1fc3 100644
 --- a/include/linux/vhm/acrn_common.h
 +++ b/include/linux/vhm/acrn_common.h
 @@ -87,17 +87,17 @@
@@ -168,7 +168,7 @@ index 7482320a3..91951b7e1 100644
  	/** if the pass-through PCI device is MSI-X, this field contains
  	 *  Vector Control for MSI-X Entry, field defined in MSI-X spec
 diff --git a/include/linux/vhm/acrn_hv_defs.h b/include/linux/vhm/acrn_hv_defs.h
-index 31cdebefe..67316fb49 100644
+index 31cdebefedf2..67316fb49999 100644
 --- a/include/linux/vhm/acrn_hv_defs.h
 +++ b/include/linux/vhm/acrn_hv_defs.h
 @@ -170,7 +170,10 @@ struct memory_map {

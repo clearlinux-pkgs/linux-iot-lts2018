@@ -18,7 +18,7 @@ Acked-by: Anthony Xu <anthony.xu@intel.com>
  5 files changed, 15 insertions(+), 269 deletions(-)
 
 diff --git a/drivers/char/vhm/vhm_dev.c b/drivers/char/vhm/vhm_dev.c
-index a67ba6c58..3dca3b367 100644
+index a67ba6c589f9..3dca3b3679a2 100644
 --- a/drivers/char/vhm/vhm_dev.c
 +++ b/drivers/char/vhm/vhm_dev.c
 @@ -122,9 +122,6 @@ static int vhm_dev_open(struct inode *inodep, struct file *filep)
@@ -57,7 +57,7 @@ index a67ba6c58..3dca3b367 100644
  	.unlocked_ioctl = vhm_dev_ioctl,
  	.poll = vhm_dev_poll,
 diff --git a/drivers/vhm/vhm_mm.c b/drivers/vhm/vhm_mm.c
-index bff448208..3c0c2acbe 100644
+index bff448208836..3c0c2acbe522 100644
 --- a/drivers/vhm/vhm_mm.c
 +++ b/drivers/vhm/vhm_mm.c
 @@ -76,14 +76,6 @@
@@ -390,7 +390,7 @@ index bff448208..3c0c2acbe 100644
  	put_vm(vm);
  	return ret;
 diff --git a/include/linux/vhm/acrn_vhm_mm.h b/include/linux/vhm/acrn_vhm_mm.h
-index 21269e47b..645a8a565 100644
+index 21269e47b26a..645a8a56531e 100644
 --- a/include/linux/vhm/acrn_vhm_mm.h
 +++ b/include/linux/vhm/acrn_vhm_mm.h
 @@ -163,8 +163,6 @@ int update_memmap_attr(unsigned long vmid, unsigned long guest_gpa,
@@ -421,7 +421,7 @@ index 21269e47b..645a8a565 100644
   * map_guest_memseg - set guest mmapping of memory according to
   * pre-defined memory mapping info
 diff --git a/include/linux/vhm/vhm_ioctl_defs.h b/include/linux/vhm/vhm_ioctl_defs.h
-index ec560621c..cf4f63211 100644
+index ec560621ca73..cf4f63211aa2 100644
 --- a/include/linux/vhm/vhm_ioctl_defs.h
 +++ b/include/linux/vhm/vhm_ioctl_defs.h
 @@ -91,6 +91,7 @@
@@ -433,7 +433,7 @@ index ec560621c..cf4f63211 100644
  #define IC_SET_MEMSEG                   _IC_ID(IC_ID, IC_ID_MEM_BASE + 0x01)
  
 diff --git a/include/linux/vhm/vhm_vm_mngt.h b/include/linux/vhm/vhm_vm_mngt.h
-index e89b78c7f..91cd13dad 100644
+index e89b78c7fff5..91cd13dad69a 100644
 --- a/include/linux/vhm/vhm_vm_mngt.h
 +++ b/include/linux/vhm/vhm_vm_mngt.h
 @@ -78,8 +78,6 @@ extern struct mutex vhm_vm_list_lock;

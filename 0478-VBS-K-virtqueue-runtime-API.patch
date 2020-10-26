@@ -24,7 +24,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  2 files changed, 343 insertions(+)
 
 diff --git a/drivers/vbs/vq.c b/drivers/vbs/vq.c
-index 95a6757a1..886f48225 100644
+index 95a6757a1c85..886f48225de9 100644
 --- a/drivers/vbs/vq.c
 +++ b/drivers/vbs/vq.c
 @@ -71,6 +71,276 @@ void * paddr_guest2host(struct ctx *ctx, uintptr_t gaddr, size_t len)
@@ -305,7 +305,7 @@ index 95a6757a1..886f48225 100644
   * Initialize the currently-selected virtqueue.
   * The guest just gave us a page frame number, from which we can
 diff --git a/include/linux/vbs/vq.h b/include/linux/vbs/vq.h
-index 55ff810fa..9ebde05e4 100644
+index 55ff810fa094..9ebde05e4663 100644
 --- a/include/linux/vbs/vq.h
 +++ b/include/linux/vbs/vq.h
 @@ -64,6 +64,7 @@

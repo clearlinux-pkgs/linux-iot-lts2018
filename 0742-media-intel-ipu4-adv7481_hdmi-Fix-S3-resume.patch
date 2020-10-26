@@ -14,7 +14,7 @@ Signed-off-by: Meng Wei <wei.meng@intel.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h b/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
-index 1926bf4a1..0a3394569 100644
+index 1926bf4a168f..0a3394569509 100644
 --- a/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
 +++ b/drivers/media/i2c/crlmodule/crl_adv7481_hdmi_configuration.h
 @@ -1014,7 +1014,7 @@ static struct crl_sensor_configuration adv7481_hdmi_crl_configuration = {

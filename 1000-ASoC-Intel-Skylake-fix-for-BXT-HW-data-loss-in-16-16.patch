@@ -29,7 +29,7 @@ Tested-by: gkblditp <gkblditp@intel.com>
  1 file changed, 10 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/skl-pcm.c b/sound/soc/intel/skylake/skl-pcm.c
-index e94178440..6e170b3d1 100644
+index e94178440194..6e170b3d1fc4 100644
 --- a/sound/soc/intel/skylake/skl-pcm.c
 +++ b/sound/soc/intel/skylake/skl-pcm.c
 @@ -37,6 +37,8 @@
