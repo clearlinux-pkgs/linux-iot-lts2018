@@ -1,13 +1,13 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.128 Kernel Configuration
+# Linux/x86 4.19.152 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 10.1.1 20200610 releases/gcc-10.1.0-162-g5bb75908cb
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 10.2.1 20201019 releases/gcc-10.2.0-397-g634ee90804
 #
 CONFIG_CC_IS_GCC=y
-CONFIG_GCC_VERSION=100101
+CONFIG_GCC_VERSION=100201
 CONFIG_CLANG_VERSION=0
 CONFIG_CC_HAS_ASM_GOTO=y
 CONFIG_IRQ_WORK=y
@@ -649,6 +649,7 @@ CONFIG_EFI_CAPSULE_LOADER=y
 # CONFIG_EFI_TEST is not set
 # CONFIG_APPLE_PROPERTIES is not set
 # CONFIG_RESET_ATTACK_MITIGATION is not set
+CONFIG_EFI_CUSTOM_SSDT_OVERLAYS=y
 CONFIG_UEFI_CPER=y
 CONFIG_UEFI_CPER_X86=y
 
@@ -1753,7 +1754,6 @@ CONFIG_BLK_DEV_SD=y
 # CONFIG_CHR_DEV_ST is not set
 # CONFIG_CHR_DEV_OSST is not set
 CONFIG_BLK_DEV_SR=y
-CONFIG_BLK_DEV_SR_VENDOR=y
 CONFIG_CHR_DEV_SG=y
 # CONFIG_CHR_DEV_SCH is not set
 CONFIG_SCSI_CONSTANTS=y
@@ -2775,6 +2775,7 @@ CONFIG_SPI_PXA2XX_PCI=y
 # CONFIG_SPI_LOOPBACK_TEST is not set
 # CONFIG_SPI_TLE62X0 is not set
 # CONFIG_SPI_SLAVE is not set
+CONFIG_SPI_DYNAMIC=y
 # CONFIG_SPMI is not set
 # CONFIG_HSI is not set
 CONFIG_PPS=y
