@@ -1,0 +1,20 @@
+# IOT 2018LTS kernel
+
+This kernel is an **enterprise style** kernel with a significant list of
+backported features
+
+This package has a main package "standard" and a subpackage "sos"
+
+The "standard"  kernel  (the main package) is meant for running on
+bare metal systems as well as running as a "normal" guest in
+various hypervisors. This
+
+The "sos" kernel is specifically meant to run as DOM0 in an
+ACRN hypervisor setup.
+
+
+# Update steps
+
+1. Clone https://github.com/intel/linux-intel-quilt.git
+2. Check out 4.19/base 
+3. Use patch/series file to apply new patches
