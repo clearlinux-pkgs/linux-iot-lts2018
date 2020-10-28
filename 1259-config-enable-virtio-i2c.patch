@@ -1,0 +1,29 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Conghui Chen <conghui.chen@intel.com>
+Date: Wed, 3 Jul 2019 23:18:46 +0800
+Subject: [PATCH] config: enable virtio-i2c
+
+Add CONFIG_I2C_VIRTIO to kernel_config_uos.
+
+Tracked-On: projectacrn/acrn-hypervisor#3357
+Signed-off-by: Conghui Chen <conghui.chen@intel.com>
+Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
+---
+ kernel_config_uos | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/kernel_config_uos b/kernel_config_uos
+index aa75aab5dfd1..0d3493bd30b2 100644
+--- a/kernel_config_uos
++++ b/kernel_config_uos
+@@ -2620,6 +2620,7 @@ CONFIG_I2C_DESIGNWARE_BAYTRAIL=y
+ # CONFIG_I2C_SIMTEC is not set
+ # CONFIG_I2C_XILINX is not set
+ 
++CONFIG_I2C_VIRTIO=y
+ #
+ # External I2C/SMBus adapter drivers
+ #
+-- 
+https://clearlinux.org
+
