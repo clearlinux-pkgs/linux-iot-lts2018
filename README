@@ -18,6 +18,7 @@ ACRN hypervisor setup.
 1. Clone https://github.com/intel/linux-intel-quilt.git
 2. Check out 4.19/base 
 3. Use patch/series file to apply new patches
+4. update kconfigs
 
 # format patch
 
