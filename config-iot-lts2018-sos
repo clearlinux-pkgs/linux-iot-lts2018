@@ -2690,6 +2690,7 @@ CONFIG_I2C_ALGOBIT=y
 # PC SMBus host controller drivers
 #
 # CONFIG_I2C_ALI1535 is not set
+# CONFIG_I2C_VIRTIO is not set
 # CONFIG_I2C_ALI1563 is not set
 # CONFIG_I2C_ALI15X3 is not set
 # CONFIG_I2C_AMD756 is not set
@@ -4883,6 +4884,7 @@ CONFIG_VIRTIO_PCI_LEGACY=y
 CONFIG_VIRTIO_MMIO=y
 CONFIG_VIRTIO_MMIO_CMDLINE_DEVICES=y
 CONFIG_ACRN_VIRTIO_DEVICES=y
+# CONFIG_VIRTIO_PMD is not set
 
 #
 # Microsoft Hyper-V guest support
