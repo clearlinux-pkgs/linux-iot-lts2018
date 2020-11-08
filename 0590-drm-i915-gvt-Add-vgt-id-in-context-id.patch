@@ -28,10 +28,10 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  2 files changed, 19 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index db2e9af49ae6..0f2fceefb8c2 100644
+index 37c80cfecd09..ab2599624db7 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -1838,6 +1838,10 @@ struct drm_i915_private {
+@@ -1840,6 +1840,10 @@ struct drm_i915_private {
  		 * This is limited in execlists to 21 bits.
  		 */
  		struct ida hw_ida;

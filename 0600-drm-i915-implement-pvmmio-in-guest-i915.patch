@@ -40,10 +40,10 @@ index f5190c530dc2..2202dfcdf5a3 100644
  	mutex_init(&dev_priv->backlight_lock);
  	spin_lock_init(&dev_priv->uncore.lock);
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index c129605ab9a7..65ff6dd2c5a8 100644
+index 91623d77a9f6..3b7e5160b7ca 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -55,6 +55,7 @@
+@@ -57,6 +57,7 @@
  
  #include "i915_params.h"
  #include "i915_reg.h"
@@ -51,7 +51,7 @@ index c129605ab9a7..65ff6dd2c5a8 100644
  #include "i915_utils.h"
  
  #include "intel_bios.h"
-@@ -1592,6 +1593,7 @@ struct drm_i915_private {
+@@ -1594,6 +1595,7 @@ struct drm_i915_private {
  
  	void __iomem *regs;
  	struct gvt_shared_page *shared_page;
@@ -59,7 +59,7 @@ index c129605ab9a7..65ff6dd2c5a8 100644
  
  	struct intel_uncore uncore;
  
-@@ -2797,7 +2799,7 @@ static inline bool intel_gvt_active(struct drm_i915_private *dev_priv)
+@@ -2801,7 +2803,7 @@ static inline bool intel_gvt_active(struct drm_i915_private *dev_priv)
  	return dev_priv->gvt;
  }
  
@@ -68,7 +68,7 @@ index c129605ab9a7..65ff6dd2c5a8 100644
  {
  	return dev_priv->vgpu.active;
  }
-@@ -3607,7 +3609,11 @@ static inline u64 intel_rc6_residency_us(struct drm_i915_private *dev_priv,
+@@ -3611,7 +3613,11 @@ static inline u64 intel_rc6_residency_us(struct drm_i915_private *dev_priv,
  static inline uint##x##_t __raw_i915_read##x(const struct drm_i915_private *dev_priv, \
  					     i915_reg_t reg) \
  { \

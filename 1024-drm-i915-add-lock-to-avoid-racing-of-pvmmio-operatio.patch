@@ -37,10 +37,10 @@ index e1391951e244..cf328eed2437 100644
  	mutex_init(&dev_priv->backlight_lock);
  	spin_lock_init(&dev_priv->uncore.lock);
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index baab05dad59a..c7fdcd2563c5 100644
+index 374e589f0691..b3bde94ee3ab 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -1612,6 +1612,8 @@ struct drm_i915_private {
+@@ -1614,6 +1614,8 @@ struct drm_i915_private {
  	void __iomem *regs;
  	struct gvt_shared_page *shared_page;
  	spinlock_t shared_page_lock;

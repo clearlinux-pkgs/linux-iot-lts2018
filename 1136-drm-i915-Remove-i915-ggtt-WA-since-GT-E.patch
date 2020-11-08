@@ -14,10 +14,10 @@ Signed-off-by: Yang, Dong <dong.yang@intel.com>
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index c7fdcd2563c5..3f1a37f787d4 100644
+index b3bde94ee3ab..71c8dca55f6b 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -2477,6 +2477,8 @@ intel_info(const struct drm_i915_private *dev_priv)
+@@ -2479,6 +2479,8 @@ intel_info(const struct drm_i915_private *dev_priv)
  #define BXT_REVID_B0		0x3
  #define BXT_REVID_B_LAST	0x8
  #define BXT_REVID_C0		0x9
@@ -26,7 +26,7 @@ index c7fdcd2563c5..3f1a37f787d4 100644
  
  #define IS_BXT_REVID(dev_priv, since, until) \
  	(IS_BROXTON(dev_priv) && IS_REVID(dev_priv, since, until))
-@@ -2735,7 +2737,7 @@ static inline bool intel_scanout_needs_vtd_wa(struct drm_i915_private *dev_priv)
+@@ -2739,7 +2741,7 @@ static inline bool intel_scanout_needs_vtd_wa(struct drm_i915_private *dev_priv)
  static inline bool
  intel_ggtt_update_needs_vtd_wa(struct drm_i915_private *dev_priv)
  {

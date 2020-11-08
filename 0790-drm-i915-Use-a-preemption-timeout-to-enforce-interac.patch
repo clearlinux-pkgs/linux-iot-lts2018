@@ -22,10 +22,10 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  3 files changed, 30 insertions(+), 10 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 53459d5475b5..60860858cb51 100644
+index 972b25e62711..3114060cc117 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -3224,8 +3224,10 @@ int i915_gem_object_wait(struct drm_i915_gem_object *obj,
+@@ -3228,8 +3228,10 @@ int i915_gem_object_wait(struct drm_i915_gem_object *obj,
  			 struct intel_rps_client *rps);
  int i915_gem_object_wait_priority(struct drm_i915_gem_object *obj,
  				  unsigned int flags,

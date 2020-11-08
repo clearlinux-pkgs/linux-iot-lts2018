@@ -33,10 +33,10 @@ Change-Id: Iccf6b54c254e2b3d7053620c1b64ad8dda7632b8
  8 files changed, 87 insertions(+), 30 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 65ff6dd2c5a8..f573f6ff51c4 100644
+index 3b7e5160b7ca..7fbffa47fc37 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -2833,18 +2833,18 @@ ilk_disable_display_irq(struct drm_i915_private *dev_priv, uint32_t bits)
+@@ -2837,18 +2837,18 @@ ilk_disable_display_irq(struct drm_i915_private *dev_priv, uint32_t bits)
  	ilk_update_display_irq(dev_priv, bits, 0);
  }
  void bdw_update_pipe_irq(struct drm_i915_private *dev_priv,

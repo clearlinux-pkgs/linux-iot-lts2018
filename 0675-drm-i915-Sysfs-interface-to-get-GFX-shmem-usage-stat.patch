@@ -136,10 +136,10 @@ index 5fa2da278670..7a91c1e6974e 100644
  	.gem_free_object_unlocked = i915_gem_free_object,
  	.gem_vm_ops = &i915_gem_vm_ops,
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 13f693f8432d..d3a7100b32f6 100644
+index 1b61ed91687f..3cd14d171c61 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -79,6 +79,9 @@
+@@ -81,6 +81,9 @@
  #include "i915_scheduler.h"
  #include "i915_timeline.h"
  #include "i915_vma.h"
@@ -149,7 +149,7 @@ index 13f693f8432d..d3a7100b32f6 100644
  
  #include "intel_gvt.h"
  
-@@ -334,6 +337,11 @@ struct drm_i915_file_private {
+@@ -336,6 +339,11 @@ struct drm_i915_file_private {
  	struct drm_i915_private *dev_priv;
  	struct drm_file *file;
  
@@ -161,7 +161,7 @@ index 13f693f8432d..d3a7100b32f6 100644
  	struct {
  		spinlock_t lock;
  		struct list_head request_list;
-@@ -352,6 +360,10 @@ struct drm_i915_file_private {
+@@ -354,6 +362,10 @@ struct drm_i915_file_private {
  
  	unsigned int bsd_engine;
  
@@ -172,7 +172,7 @@ index 13f693f8432d..d3a7100b32f6 100644
  /*
   * Every context ban increments per client ban score. Also
   * hangs in short succession increments ban score. If ban threshold
-@@ -998,6 +1010,10 @@ struct i915_gem_mm {
+@@ -1000,6 +1012,10 @@ struct i915_gem_mm {
  	spinlock_t object_stat_lock;
  	u64 object_memory;
  	u32 object_count;
@@ -183,7 +183,7 @@ index 13f693f8432d..d3a7100b32f6 100644
  };
  
  #define I915_IDLE_ENGINES_TIMEOUT (200) /* in ms */
-@@ -1671,6 +1687,10 @@ struct drm_i915_private {
+@@ -1673,6 +1689,10 @@ struct drm_i915_private {
  
  	bool preserve_bios_swizzle;
  
@@ -194,7 +194,7 @@ index 13f693f8432d..d3a7100b32f6 100644
  	/* overlay */
  	struct intel_overlay *overlay;
  
-@@ -2922,6 +2942,11 @@ i915_gem_object_create(struct drm_i915_private *dev_priv, u64 size);
+@@ -2926,6 +2946,11 @@ i915_gem_object_create(struct drm_i915_private *dev_priv, u64 size);
  struct drm_i915_gem_object *
  i915_gem_object_create_from_data(struct drm_i915_private *dev_priv,
  				 const void *data, size_t size);
@@ -206,7 +206,7 @@ index 13f693f8432d..d3a7100b32f6 100644
  void i915_gem_close_object(struct drm_gem_object *gem, struct drm_file *file);
  void i915_gem_free_object(struct drm_gem_object *obj);
  
-@@ -3361,6 +3386,19 @@ u32 i915_gem_fence_size(struct drm_i915_private *dev_priv, u32 size,
+@@ -3365,6 +3390,19 @@ u32 i915_gem_fence_size(struct drm_i915_private *dev_priv, u32 size,
  u32 i915_gem_fence_alignment(struct drm_i915_private *dev_priv, u32 size,
  			     unsigned int tiling, unsigned int stride);
  
@@ -226,7 +226,7 @@ index 13f693f8432d..d3a7100b32f6 100644
  /* i915_debugfs.c */
  #ifdef CONFIG_DEBUG_FS
  int i915_debugfs_register(struct drm_i915_private *dev_priv);
-@@ -3402,6 +3440,13 @@ extern int i915_restore_state(struct drm_i915_private *dev_priv);
+@@ -3406,6 +3444,13 @@ extern int i915_restore_state(struct drm_i915_private *dev_priv);
  void i915_setup_sysfs(struct drm_i915_private *dev_priv);
  void i915_teardown_sysfs(struct drm_i915_private *dev_priv);
  

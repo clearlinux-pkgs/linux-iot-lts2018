@@ -43,10 +43,10 @@ Signed-off-by: kimsehun <se.hun.kim@intel.com>
  5 files changed, 48 insertions(+), 12 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 52adbd4fbacd..baab05dad59a 100644
+index 11a71f83b36f..374e589f0691 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -558,6 +558,8 @@ struct intel_fbc {
+@@ -560,6 +560,8 @@ struct intel_fbc {
  			int adjusted_y;
  
  			int y;

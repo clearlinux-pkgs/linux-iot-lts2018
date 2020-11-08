@@ -204,7 +204,7 @@ index 4609b94142d4..b49a55cf775f 100644
  {
  	return -ENODEV;
 diff --git a/security/integrity/ima/ima_crypto.c b/security/integrity/ima/ima_crypto.c
-index c5dd05ace28c..0c9446df344f 100644
+index f4f3de5f06ca..0b0ecf5351c5 100644
 --- a/security/integrity/ima/ima_crypto.c
 +++ b/security/integrity/ima/ima_crypto.c
 @@ -651,7 +651,7 @@ int ima_calc_buffer_hash(const void *buf, loff_t len,

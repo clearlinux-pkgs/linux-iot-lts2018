@@ -18,10 +18,10 @@ Tracked-On: PKT-1679
  5 files changed, 18 insertions(+), 69 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index baab05dad59a..52adbd4fbacd 100644
+index 374e589f0691..11a71f83b36f 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -558,8 +558,6 @@ struct intel_fbc {
+@@ -560,8 +560,6 @@ struct intel_fbc {
  			int adjusted_y;
  
  			int y;

@@ -29,10 +29,10 @@ Signed-off-by: Badiuzzaman Iskhandar <badiuzzaman.azzarfan.bin.iskhandar@intel.c
  4 files changed, 88 insertions(+), 14 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index d3a7100b32f6..53459d5475b5 100644
+index 3cd14d171c61..972b25e62711 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -2146,6 +2146,8 @@ struct drm_i915_private {
+@@ -2148,6 +2148,8 @@ struct drm_i915_private {
  
  	struct i915_pmu pmu;
  
@@ -41,7 +41,7 @@ index d3a7100b32f6..53459d5475b5 100644
  	/*
  	 * NOTE: This is the dri1/ums dungeon, don't add stuff here. Your patch
  	 * will be rejected. Instead look for a better place.
-@@ -3206,6 +3208,7 @@ void i915_gem_reset_engine(struct intel_engine_cs *engine,
+@@ -3210,6 +3212,7 @@ void i915_gem_reset_engine(struct intel_engine_cs *engine,
  void i915_gem_init_mmio(struct drm_i915_private *i915);
  int __must_check i915_gem_init(struct drm_i915_private *dev_priv);
  int __must_check i915_gem_init_hw(struct drm_i915_private *dev_priv);

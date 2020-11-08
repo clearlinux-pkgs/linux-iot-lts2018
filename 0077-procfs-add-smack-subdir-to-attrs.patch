@@ -62,7 +62,7 @@ index c980dfe9abf1..9842e21afd4a 100644
     :maxdepth: 1
  
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index 3b9b726b1a6c..126c6696bd70 100644
+index 5e705fa9a913..e919aee77d40 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -140,9 +140,13 @@ struct pid_entry {
@@ -80,7 +80,7 @@ index 3b9b726b1a6c..126c6696bd70 100644
  
  /*
   * Count the number of hardlinks for the pid_entry table, excluding the .
-@@ -2547,7 +2551,7 @@ static ssize_t proc_pid_attr_read(struct file * file, char __user * buf,
+@@ -2546,7 +2550,7 @@ static ssize_t proc_pid_attr_read(struct file * file, char __user * buf,
  	if (!task)
  		return -ESRCH;
  
@@ -89,7 +89,7 @@ index 3b9b726b1a6c..126c6696bd70 100644
  				      (char*)file->f_path.dentry->d_name.name,
  				      &p);
  	put_task_struct(task);
-@@ -2601,7 +2605,9 @@ static ssize_t proc_pid_attr_write(struct file * file, const char __user * buf,
+@@ -2600,7 +2604,9 @@ static ssize_t proc_pid_attr_write(struct file * file, const char __user * buf,
  	if (rv < 0)
  		goto out_free;
  
@@ -100,7 +100,7 @@ index 3b9b726b1a6c..126c6696bd70 100644
  	mutex_unlock(&current->signal->cred_guard_mutex);
  out_free:
  	kfree(page);
-@@ -2615,13 +2621,53 @@ static const struct file_operations proc_pid_attr_operations = {
+@@ -2614,13 +2620,53 @@ static const struct file_operations proc_pid_attr_operations = {
  	.llseek		= generic_file_llseek,
  };
  

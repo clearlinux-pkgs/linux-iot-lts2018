@@ -20,7 +20,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  create mode 100644 drivers/i2c/busses/i2c-virtio.c
 
 diff --git a/drivers/i2c/busses/Kconfig b/drivers/i2c/busses/Kconfig
-index ee6dd1b84fac..879d5577a614 100644
+index 017aec34a238..afd909560705 100644
 --- a/drivers/i2c/busses/Kconfig
 +++ b/drivers/i2c/busses/Kconfig
 @@ -20,6 +20,17 @@ config I2C_ALI1535

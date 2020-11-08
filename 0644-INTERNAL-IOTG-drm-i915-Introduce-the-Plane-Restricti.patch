@@ -196,10 +196,10 @@ index 2202dfcdf5a3..5fa2da278670 100644
  			goto out_cleanup_hw;
  	}
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index f573f6ff51c4..969b45cb88ba 100644
+index 7fbffa47fc37..bed0e3ca4399 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -2683,6 +2683,11 @@ intel_info(const struct drm_i915_private *dev_priv)
+@@ -2685,6 +2685,11 @@ intel_info(const struct drm_i915_private *dev_priv)
  #define GT_FREQUENCY_MULTIPLIER 50
  #define GEN9_FREQ_SCALER 3
  

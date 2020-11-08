@@ -83,10 +83,10 @@ index 258278fba559..f5190c530dc2 100644
  err_bridge:
  	pci_dev_put(dev_priv->bridge_dev);
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 90968b05597d..c129605ab9a7 100644
+index b9b3c9c2eb8d..91623d77a9f6 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -1591,6 +1591,7 @@ struct drm_i915_private {
+@@ -1593,6 +1593,7 @@ struct drm_i915_private {
  	resource_size_t stolen_usable_size;	/* Total size minus reserved ranges */
  
  	void __iomem *regs;

@@ -175,10 +175,10 @@ index b0d76a7a0946..258278fba559 100644
  
  static struct drm_driver driver = {
 diff --git a/drivers/gpu/drm/i915/i915_drv.h b/drivers/gpu/drm/i915/i915_drv.h
-index 0f2fceefb8c2..33b564c07c56 100644
+index ab2599624db7..0808350d8cc1 100644
 --- a/drivers/gpu/drm/i915/i915_drv.h
 +++ b/drivers/gpu/drm/i915/i915_drv.h
-@@ -3265,6 +3265,8 @@ int i915_perf_remove_config_ioctl(struct drm_device *dev, void *data,
+@@ -3269,6 +3269,8 @@ int i915_perf_remove_config_ioctl(struct drm_device *dev, void *data,
  void i915_oa_init_reg_state(struct intel_engine_cs *engine,
  			    struct i915_gem_context *ctx,
  			    uint32_t *reg_state);
