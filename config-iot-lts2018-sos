@@ -1,10 +1,10 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.19.152 Kernel Configuration
+# Linux/x86 4.19.155 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 10.2.1 20201019 releases/gcc-10.2.0-397-g634ee90804
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 10.2.1 20201030 releases/gcc-10.2.0-447-g28aaad48d5
 #
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=100201
