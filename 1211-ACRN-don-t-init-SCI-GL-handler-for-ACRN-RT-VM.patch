@@ -18,12 +18,12 @@ Signed-off-by: Yan, Like <like.yan@intel.com>
  1 file changed, 5 insertions(+)
 
 diff --git a/drivers/acpi/bus.c b/drivers/acpi/bus.c
-index 92a146861086..7eea8aa6cccd 100644
+index d60e57d14c85..f78f3e33775c 100644
 --- a/drivers/acpi/bus.c
 +++ b/drivers/acpi/bus.c
-@@ -1154,7 +1154,12 @@ static int __init acpi_bus_init(void)
- 		}
- 	}
+@@ -1142,7 +1142,12 @@ static int __init acpi_bus_init(void)
+ 	 */
+ 	acpi_ec_ecdt_probe();
  
 +#if defined(CONFIG_ACRN) && defined(CONFIG_PREEMPT_RT_BASE)
 +	status = acpi_enable_subsystem(ACPI_NO_ACPI_ENABLE |

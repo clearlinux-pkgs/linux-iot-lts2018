@@ -27,10 +27,10 @@ Change-Id: Ie16c4bdd19a3df25ca5c4241ded12b87ca5a106a
  8 files changed, 71 insertions(+), 22 deletions(-)
 
 diff --git a/drivers/gpu/drm/drm_atomic_helper.c b/drivers/gpu/drm/drm_atomic_helper.c
-index c22062cc9992..9390a332ad65 100644
+index 6060b69fa618..44ed41c19baa 100644
 --- a/drivers/gpu/drm/drm_atomic_helper.c
 +++ b/drivers/gpu/drm/drm_atomic_helper.c
-@@ -1074,7 +1074,7 @@ drm_atomic_helper_update_legacy_modeset_state(struct drm_device *dev,
+@@ -1093,7 +1093,7 @@ drm_atomic_helper_update_legacy_modeset_state(struct drm_device *dev,
  		crtc->enabled = new_crtc_state->enable;
  
  		new_plane_state =
@@ -39,7 +39,7 @@ index c22062cc9992..9390a332ad65 100644
  
  		if (new_plane_state && new_plane_state->crtc == crtc) {
  			crtc->x = new_plane_state->src_x >> 16;
-@@ -2939,6 +2939,9 @@ int __drm_atomic_helper_set_config(struct drm_mode_set *set,
+@@ -2958,6 +2958,9 @@ int __drm_atomic_helper_set_config(struct drm_mode_set *set,
  	int hdisplay, vdisplay;
  	int ret;
  

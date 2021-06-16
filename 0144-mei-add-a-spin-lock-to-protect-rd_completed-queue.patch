@@ -105,7 +105,7 @@ index 6dbe8d856fb8..989fc73d241c 100644
  		    !WARN_ON(!cl->rx_flow_ctrl_creds))
  			cl->rx_flow_ctrl_creds--;
 diff --git a/drivers/misc/mei/client.h b/drivers/misc/mei/client.h
-index 64e318f589b4..13223b549165 100644
+index 0d23efcc74ff..bb74eea3dba5 100644
 --- a/drivers/misc/mei/client.h
 +++ b/drivers/misc/mei/client.h
 @@ -95,8 +95,24 @@ int mei_cl_unlink(struct mei_cl *cl);

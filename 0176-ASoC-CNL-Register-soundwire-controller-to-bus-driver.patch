@@ -71,7 +71,7 @@ index 09bd218df5c4..323cebc4e389 100644
  void cnl_ipc_op_int_disable(struct sst_dsp *ctx);
  bool cnl_ipc_int_status(struct sst_dsp *ctx);
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index a66ed94870b4..335ec68b6a32 100644
+index b508426113a7..797a3053399d 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -27,6 +27,8 @@
@@ -83,7 +83,7 @@ index a66ed94870b4..335ec68b6a32 100644
  #include <asm/set_memory.h>
  
  #include "../common/sst-dsp.h"
-@@ -497,6 +499,118 @@ static int cnl_ipc_init(struct device *dev, struct skl_sst *cnl)
+@@ -498,6 +500,118 @@ static int cnl_ipc_init(struct device *dev, struct skl_sst *cnl)
  	return 0;
  }
  
@@ -202,7 +202,7 @@ index a66ed94870b4..335ec68b6a32 100644
  int cnl_sst_dsp_init(struct device *dev, void __iomem *mmio_base, int irq,
  		     const char *fw_name, struct skl_dsp_loader_ops dsp_ops,
  		     struct skl_sst **dsp)
-@@ -544,6 +658,12 @@ int cnl_sst_dsp_init(struct device *dev, void __iomem *mmio_base, int irq,
+@@ -545,6 +659,12 @@ int cnl_sst_dsp_init(struct device *dev, void __iomem *mmio_base, int irq,
  		return ret;
  	}
  
@@ -215,7 +215,7 @@ index a66ed94870b4..335ec68b6a32 100644
  	return 0;
  }
  EXPORT_SYMBOL_GPL(cnl_sst_dsp_init);
-@@ -575,6 +695,7 @@ void cnl_sst_dsp_cleanup(struct device *dev, struct skl_sst *ctx)
+@@ -576,6 +696,7 @@ void cnl_sst_dsp_cleanup(struct device *dev, struct skl_sst *ctx)
  		release_firmware(ctx->dsp->fw);
  
  	skl_freeup_uuid_list(ctx);

@@ -33,7 +33,7 @@ the security modules.
 Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
 ---
  include/linux/lsm_hooks.h    |   8 +
- include/linux/security.h     |  46 ++++-
+ include/linux/security.h     |  34 +++-
  include/net/netlabel.h       |   8 +
  include/uapi/linux/prctl.h   |   4 +
  kernel/fork.c                |   3 +
@@ -48,7 +48,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  security/selinux/netlabel.c  |   8 +
  security/smack/smack_lsm.c   |  66 +++++--
  security/stacking.c          | 119 ++++++++++++
- 16 files changed, 635 insertions(+), 86 deletions(-)
+ 16 files changed, 626 insertions(+), 83 deletions(-)
  create mode 100644 security/stacking.c
 
 diff --git a/include/linux/lsm_hooks.h b/include/linux/lsm_hooks.h
@@ -76,7 +76,7 @@ index 687159d80911..1b27b8bcc779 100644
 +
  #endif /* ! __LINUX_LSM_HOOKS_H */
 diff --git a/include/linux/security.h b/include/linux/security.h
-index fd9fbd3ee81f..aed6376768bb 100644
+index a17d7d7517b9..ad146916f19b 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -53,6 +53,7 @@ struct msg_msg;
@@ -138,34 +138,7 @@ index fd9fbd3ee81f..aed6376768bb 100644
  struct sock;
  struct sockaddr;
  struct socket;
-@@ -828,17 +857,23 @@ static inline int security_inode_killpriv(struct dentry *dentry)
- 	return cap_inode_killpriv(dentry);
- }
- 
--static inline int security_inode_getsecurity(struct inode *inode, const char *name, void **buffer, bool alloc)
-+static inline int security_inode_getsecurity(struct inode *inode,
-+					     const char *name, void **buffer,
-+					     bool alloc)
- {
- 	return -EOPNOTSUPP;
- }
- 
--static inline int security_inode_setsecurity(struct inode *inode, const char *name, const void *value, size_t size, int flags)
-+static inline int security_inode_setsecurity(struct inode *inode,
-+					     const char *name,
-+					     const void *value, size_t size,
-+					     int flags)
- {
- 	return -EOPNOTSUPP;
- }
- 
--static inline int security_inode_listsecurity(struct inode *inode, char *buffer, size_t buffer_size)
-+static inline int security_inode_listsecurity(struct inode *inode, char *buffer,
-+					      size_t buffer_size)
- {
- 	return 0;
- }
-@@ -1080,7 +1115,8 @@ static inline int security_task_prctl(int option, unsigned long arg2,
+@@ -1080,7 +1109,8 @@ static inline int security_task_prctl(int option, unsigned long arg2,
  	return cap_task_prctl(option, arg2, arg3, arg4, arg5);
  }
  
@@ -215,10 +188,10 @@ index b17201edfa09..a10d54910652 100644
 +
  #endif /* _LINUX_PRCTL_H */
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 3ed29bf8eb29..f670b4bd93f2 100644
+index cf535b9d5db7..3651cf9144b5 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
-@@ -1881,6 +1881,9 @@ static __latent_entropy struct task_struct *copy_process(
+@@ -1877,6 +1877,9 @@ static __latent_entropy struct task_struct *copy_process(
  	p->sequential_io	= 0;
  	p->sequential_io_avg	= 0;
  #endif
@@ -229,7 +202,7 @@ index 3ed29bf8eb29..f670b4bd93f2 100644
  	/* Perform scheduler related setup. Assign this task to a CPU. */
  	retval = sched_fork(clone_flags, p);
 diff --git a/net/ipv4/cipso_ipv4.c b/net/ipv4/cipso_ipv4.c
-index cc7e8c1072bb..386523eadbb3 100644
+index be8a88084508..6694d30cd470 100644
 --- a/net/ipv4/cipso_ipv4.c
 +++ b/net/ipv4/cipso_ipv4.c
 @@ -43,6 +43,7 @@
@@ -269,7 +242,7 @@ index cc7e8c1072bb..386523eadbb3 100644
  
  /*
   * Helper Functions
-@@ -1483,7 +1496,7 @@ static int cipso_v4_gentag_loc(const struct cipso_v4_doi *doi_def,
+@@ -1474,7 +1487,7 @@ static int cipso_v4_gentag_loc(const struct cipso_v4_doi *doi_def,
  
  	buffer[0] = CIPSO_V4_TAG_LOCAL;
  	buffer[1] = CIPSO_V4_TAG_LOC_BLEN;
@@ -278,7 +251,7 @@ index cc7e8c1072bb..386523eadbb3 100644
  
  	return CIPSO_V4_TAG_LOC_BLEN;
  }
-@@ -1503,7 +1516,7 @@ static int cipso_v4_parsetag_loc(const struct cipso_v4_doi *doi_def,
+@@ -1494,7 +1507,7 @@ static int cipso_v4_parsetag_loc(const struct cipso_v4_doi *doi_def,
  				 const unsigned char *tag,
  				 struct netlbl_lsm_secattr *secattr)
  {
@@ -288,10 +261,10 @@ index cc7e8c1072bb..386523eadbb3 100644
  
  	return 0;
 diff --git a/net/netfilter/xt_SECMARK.c b/net/netfilter/xt_SECMARK.c
-index afc61be750ef..6af1f4fc837d 100644
+index 5e921c451084..08ad57b503b8 100644
 --- a/net/netfilter/xt_SECMARK.c
 +++ b/net/netfilter/xt_SECMARK.c
-@@ -59,7 +59,7 @@ static int checkentry_lsm(struct xt_secmark_target_info *info)
+@@ -58,7 +58,7 @@ static int checkentry_lsm(struct xt_secmark_target_info_v1 *info)
  
  	err = security_secctx_to_secid(info->secctx, strlen(info->secctx),
  				       &secid);
@@ -953,10 +926,10 @@ index 65e01da41ab9..96e795600adb 100644
  EXPORT_SYMBOL(security_secmark_relabel_packet);
  
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 4a1bb5dbf443..35f8a839de72 100644
+index 49aa28c0cd07..666f2b631614 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
-@@ -3240,13 +3240,12 @@ static int selinux_inode_setxattr(struct dentry *dentry, const char *name,
+@@ -3248,13 +3248,12 @@ static int selinux_inode_setxattr(struct dentry *dentry, const char *name,
  	int rc = 0;
  
  	if (strcmp(name, XATTR_NAME_SELINUX)) {

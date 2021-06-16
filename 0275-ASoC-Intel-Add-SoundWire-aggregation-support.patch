@@ -21,10 +21,10 @@ Reviewed-by: Kp, Jeeja <jeeja.kp@intel.com>
  2 files changed, 6 insertions(+), 10 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index ae3c6aa5557e..790af2489d0e 100644
+index 344454a0de3e..ab7e5fe36673 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
-@@ -526,11 +526,7 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
+@@ -527,11 +527,7 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
  	struct cnl_bra_operation *p_ptr = ptr;
  	int ret = 0, i, j, k, wl = 0;
  	/* TODO: This number 4 should come from ACPI */
@@ -36,7 +36,7 @@ index ae3c6aa5557e..790af2489d0e 100644
  	master = devm_kzalloc(dev,
  			(sizeof(*master) * dsp->num_sdw_controllers),
  			GFP_KERNEL);
-@@ -636,18 +632,18 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
+@@ -637,18 +633,18 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
  		switch (i) {
  		case 0:
  			p_data->sdw_regs = mmio_base + CNL_SDW_LINK_0_BASE;

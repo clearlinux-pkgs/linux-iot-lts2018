@@ -48,7 +48,7 @@ index f259cb09958f..687159d80911 100644
  					struct sk_buff *skb,
  					struct secids *secid);
 diff --git a/include/linux/security.h b/include/linux/security.h
-index a30887c379db..fd9fbd3ee81f 100644
+index b24bb0240bbd..a17d7d7517b9 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -1403,8 +1403,10 @@ static inline int security_sock_rcv_skb(struct sock *sk,
@@ -141,10 +141,10 @@ index 4158d6d88d67..65e01da41ab9 100644
  
  int security_socket_getpeersec_dgram(struct socket *sock, struct sk_buff *skb,
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 2dfcf74a10bd..4a1bb5dbf443 100644
+index e3317111ac9b..49aa28c0cd07 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
-@@ -5050,10 +5050,8 @@ static int selinux_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
+@@ -5058,10 +5058,8 @@ static int selinux_socket_sock_rcv_skb(struct sock *sk, struct sk_buff *skb)
  	return err;
  }
  
@@ -157,7 +157,7 @@ index 2dfcf74a10bd..4a1bb5dbf443 100644
  {
  	int err = 0;
  	char *scontext;
-@@ -5074,18 +5072,12 @@ static int selinux_socket_getpeersec_stream(struct socket *sock,
+@@ -5082,18 +5080,12 @@ static int selinux_socket_getpeersec_stream(struct socket *sock,
  		return err;
  
  	if (scontext_len > len) {

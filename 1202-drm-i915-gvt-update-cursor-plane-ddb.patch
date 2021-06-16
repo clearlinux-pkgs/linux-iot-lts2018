@@ -20,7 +20,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  2 files changed, 6 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.c b/drivers/gpu/drm/i915/gvt/gvt.c
-index 72b7dca9f4eb..d6b034bb9bcf 100644
+index 9e256a1519ce..89e29b20a538 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.c
 +++ b/drivers/gpu/drm/i915/gvt/gvt.c
 @@ -351,6 +351,8 @@ void intel_gvt_allocate_ddb(struct intel_gvt *gvt,
@@ -33,7 +33,7 @@ index 72b7dca9f4eb..d6b034bb9bcf 100644
  }
  
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 7390dea98910..de444355dd0c 100644
+index 57a676e8dfe5..c2ff096bd547 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -5650,6 +5650,10 @@ static void skl_atomic_update_crtc_wm(struct intel_atomic_state *state,

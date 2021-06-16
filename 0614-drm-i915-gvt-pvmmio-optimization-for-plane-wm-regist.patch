@@ -62,7 +62,7 @@ index 9c76cab07010..82ab32e87805 100644
  };
  
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 607500b78c72..81900532f7ff 100644
+index 0fc9fdc4b4a0..bf08b3bc6741 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -5008,6 +5008,70 @@ static void skl_write_wm_level(struct drm_i915_private *dev_priv,

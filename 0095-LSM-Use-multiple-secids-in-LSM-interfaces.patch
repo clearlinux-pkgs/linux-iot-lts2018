@@ -68,7 +68,7 @@ index 1dc351d8548b..09ec6ff305b4 100644
  extern int set_create_files_as(struct cred *, struct inode *);
  extern void __init cred_init(void);
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 615f136a32f2..a30887c379db 100644
+index 2ff982167d57..b24bb0240bbd 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -355,7 +355,7 @@ int security_inode_killpriv(struct dentry *dentry);
@@ -645,7 +645,7 @@ index 82f341e84fae..d336d403cb88 100644
  		return;
  
 diff --git a/net/netfilter/nf_conntrack_netlink.c b/net/netfilter/nf_conntrack_netlink.c
-index 0b89609a6e9d..e0746858bc96 100644
+index 15c9fbcd32f2..157425412d1e 100644
 --- a/net/netfilter/nf_conntrack_netlink.c
 +++ b/net/netfilter/nf_conntrack_netlink.c
 @@ -333,8 +333,12 @@ static int ctnetlink_dump_secctx(struct sk_buff *skb, const struct nf_conn *ct)
@@ -677,7 +677,7 @@ index 0b89609a6e9d..e0746858bc96 100644
  		return 0;
  
 diff --git a/net/netfilter/nf_conntrack_standalone.c b/net/netfilter/nf_conntrack_standalone.c
-index 4c94f3ba2ae4..9ebd932f15e0 100644
+index da0c9fa381d2..b9dd474c25de 100644
 --- a/net/netfilter/nf_conntrack_standalone.c
 +++ b/net/netfilter/nf_conntrack_standalone.c
 @@ -171,8 +171,12 @@ static void ct_show_secctx(struct seq_file *s, const struct nf_conn *ct)
@@ -720,11 +720,11 @@ index f81a3ce0fe48..e91fabdbe9e0 100644
  	read_unlock_bh(&skb->sk->sk_callback_lock);
  #endif
 diff --git a/net/netfilter/xt_SECMARK.c b/net/netfilter/xt_SECMARK.c
-index 4ad5fe27e08b..afc61be750ef 100644
+index 097534dbc622..5e921c451084 100644
 --- a/net/netfilter/xt_SECMARK.c
 +++ b/net/netfilter/xt_SECMARK.c
-@@ -52,12 +52,15 @@ secmark_tg(struct sk_buff *skb, const struct xt_action_param *par)
- static int checkentry_lsm(struct xt_secmark_target_info *info)
+@@ -51,12 +51,15 @@ secmark_tg(struct sk_buff *skb, const struct xt_secmark_target_info_v1 *info)
+ static int checkentry_lsm(struct xt_secmark_target_info_v1 *info)
  {
  	int err;
 +	struct secids secid;
@@ -740,7 +740,7 @@ index 4ad5fe27e08b..afc61be750ef 100644
  	if (err) {
  		if (err == -EINVAL)
  			pr_info_ratelimited("invalid security context \'%s\'\n",
-@@ -71,7 +74,7 @@ static int checkentry_lsm(struct xt_secmark_target_info *info)
+@@ -70,7 +73,7 @@ static int checkentry_lsm(struct xt_secmark_target_info_v1 *info)
  		return -ENOENT;
  	}
  
@@ -763,7 +763,7 @@ index 551bf3be961b..1909995037c1 100644
  
  /**
 diff --git a/net/netlabel/netlabel_unlabeled.c b/net/netlabel/netlabel_unlabeled.c
-index 780e4b932eb8..c14bdb2ab5e5 100644
+index 86c3c1611641..716b7b2a260c 100644
 --- a/net/netlabel/netlabel_unlabeled.c
 +++ b/net/netlabel/netlabel_unlabeled.c
 @@ -379,7 +379,7 @@ int netlbl_unlhsh_add(struct net *net,
@@ -888,7 +888,7 @@ index 780e4b932eb8..c14bdb2ab5e5 100644
  	if (ret_val != 0)
  		goto list_cb_failure;
  	ret_val = nla_put(cb_arg->skb,
-@@ -1547,7 +1544,7 @@ int __init netlbl_unlabel_defconf(void)
+@@ -1554,7 +1551,7 @@ int __init netlbl_unlabel_defconf(void)
  	/* Only the kernel is allowed to call this function and the only time
  	 * it is called is at bootup before the audit subsystem is reporting
  	 * messages so don't worry to much about these values. */
@@ -962,7 +962,7 @@ index 2020306468af..bd6c63d6a5bc 100644
  #else
  static inline void unix_get_secdata(struct scm_cookie *scm, struct sk_buff *skb)
 diff --git a/net/xfrm/xfrm_policy.c b/net/xfrm/xfrm_policy.c
-index 6a12efb4cbbe..51cbf842851f 100644
+index df6bed189d45..ecc56d6db80e 100644
 --- a/net/xfrm/xfrm_policy.c
 +++ b/net/xfrm/xfrm_policy.c
 @@ -1080,7 +1080,7 @@ static int xfrm_policy_match(const struct xfrm_policy *pol,
@@ -993,10 +993,10 @@ index 6a12efb4cbbe..51cbf842851f 100644
  	return err;
  }
 diff --git a/net/xfrm/xfrm_state.c b/net/xfrm/xfrm_state.c
-index f513c6d95592..cb8cc3900250 100644
+index c34c87049536..4adad4bf7cc4 100644
 --- a/net/xfrm/xfrm_state.c
 +++ b/net/xfrm/xfrm_state.c
-@@ -1033,7 +1033,7 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,
+@@ -1032,7 +1032,7 @@ xfrm_state_find(const xfrm_address_t *daddr, const xfrm_address_t *saddr,
  		x->if_id = if_id;
  
  		error = security_xfrm_state_alloc_acquire(x, pol->security,

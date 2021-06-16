@@ -1313,7 +1313,7 @@ index 83e5e01fa9ea..338709b6640e 100644
  	struct drm_dma_handle *phys_handle;
  
 diff --git a/drivers/gpu/drm/i915/i915_gpu_error.c b/drivers/gpu/drm/i915/i915_gpu_error.c
-index a262a64f5625..a803449498f8 100644
+index ba24ac698e8b..550359f8c351 100644
 --- a/drivers/gpu/drm/i915/i915_gpu_error.c
 +++ b/drivers/gpu/drm/i915/i915_gpu_error.c
 @@ -91,6 +91,13 @@ static bool __i915_error_ok(struct drm_i915_error_state_buf *e)
@@ -1339,7 +1339,7 @@ index a262a64f5625..a803449498f8 100644
  			    const char *str)
  {
  	unsigned len;
-@@ -871,6 +878,22 @@ int i915_error_state_buf_init(struct drm_i915_error_state_buf *ebuf,
+@@ -874,6 +881,22 @@ int i915_error_state_buf_init(struct drm_i915_error_state_buf *ebuf,
  	return 0;
  }
  

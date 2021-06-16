@@ -22,7 +22,7 @@ Signed-off-by: Casey Schaufler <casey@schaufler-ca.com>
  5 files changed, 124 insertions(+), 92 deletions(-)
 
 diff --git a/fs/btrfs/super.c b/fs/btrfs/super.c
-index 40f5b4dcb927..41b0fb3de711 100644
+index 521f6c2091ad..feea936c5619 100644
 --- a/fs/btrfs/super.c
 +++ b/fs/btrfs/super.c
 @@ -1503,15 +1503,15 @@ static int setup_security_options(struct btrfs_fs_info *fs_info,
@@ -47,7 +47,7 @@ index 40f5b4dcb927..41b0fb3de711 100644
  		security_free_mnt_opts(sec_opts);
  	}
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 96eb8d4cf764..43f221c253f2 100644
+index 3c854e63d41d..a29decd3f9d1 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -185,34 +185,55 @@ static inline const char *kernel_load_data_id_str(enum kernel_load_data_id id)
@@ -144,7 +144,7 @@ index d642befd1e0c..468695df6559 100644
  EXPORT_SYMBOL(security_sb_set_mnt_opts);
  
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index f4db0d210fa4..4d8a213b21c4 100644
+index 441aacf17a9a..78dfe2fdd7ff 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -590,21 +590,23 @@ static int selinux_get_mnt_opts(const struct super_block *sb,
@@ -339,7 +339,7 @@ index f4db0d210fa4..4d8a213b21c4 100644
  		if (has_comma)
  			seq_putc(m, '\"');
  	}
-@@ -2835,10 +2836,10 @@ static int selinux_sb_remount(struct super_block *sb, void *data)
+@@ -2843,10 +2844,10 @@ static int selinux_sb_remount(struct super_block *sb, void *data)
  	if (rc)
  		goto out_free_secdata;
  

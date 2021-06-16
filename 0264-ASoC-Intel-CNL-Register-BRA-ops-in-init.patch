@@ -41,10 +41,10 @@ index 323cebc4e389..5f0653b36308 100644
  void cnl_sst_dsp_cleanup(struct device *dev, struct skl_sst *ctx);
  
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 784d92df7ac3..ae3c6aa5557e 100644
+index 19e007e39c94..344454a0de3e 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
-@@ -516,13 +516,14 @@ static int cnl_ipc_init(struct device *dev, struct skl_sst *cnl)
+@@ -517,13 +517,14 @@ static int cnl_ipc_init(struct device *dev, struct skl_sst *cnl)
  
  #if IS_ENABLED(CONFIG_SND_SOC_RT700)
  static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
@@ -60,7 +60,7 @@ index 784d92df7ac3..ae3c6aa5557e 100644
  	int ret = 0, i, j, k, wl = 0;
  	/* TODO: This number 4 should come from ACPI */
  #if defined(CONFIG_SDW_MAXIM_SLAVE) || defined(CONFIG_SND_SOC_MXFPGA)
-@@ -538,11 +539,18 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
+@@ -539,11 +540,18 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
  			dsp->num_sdw_controllers = 0;
  	}
  	dsp->mstr = master;
@@ -79,7 +79,7 @@ index 784d92df7ac3..ae3c6aa5557e 100644
  		/* PCI Device is parent of the SoundWire master device */
  		/* TODO: All these hardcoding should come from ACPI */
  		master[i].dev.parent = dev;
-@@ -651,6 +659,11 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
+@@ -652,6 +660,11 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
  		p_data->alh_base = mmio_base + CNL_ALH_BASE;
  		p_data->inst_id = i;
  		p_data->irq = irq;
@@ -91,7 +91,7 @@ index 784d92df7ac3..ae3c6aa5557e 100644
  		ret = sdw_add_master_controller(&master[i]);
  		if (ret) {
  			dev_err(dev, "Failed to register soundwire master\n");
-@@ -676,7 +689,7 @@ static void skl_unregister_sdw_masters(struct skl_sst *ctx)
+@@ -677,7 +690,7 @@ static void skl_unregister_sdw_masters(struct skl_sst *ctx)
  
  int cnl_sst_dsp_init(struct device *dev, void __iomem *mmio_base, int irq,
  		     const char *fw_name, struct skl_dsp_loader_ops dsp_ops,
@@ -100,7 +100,7 @@ index 784d92df7ac3..ae3c6aa5557e 100644
  {
  	struct skl_sst *cnl;
  	struct sst_dsp *sst;
-@@ -731,7 +744,7 @@ int cnl_sst_dsp_init(struct device *dev, void __iomem *mmio_base, int irq,
+@@ -732,7 +745,7 @@ int cnl_sst_dsp_init(struct device *dev, void __iomem *mmio_base, int irq,
  	}
  
  #if IS_ENABLED(CONFIG_SND_SOC_RT700)

@@ -125,7 +125,7 @@ index 5261bad11953..e29d03f42c3e 100644
  	if (err)
  		return err;
 diff --git a/drivers/media/v4l2-core/v4l2-ioctl.c b/drivers/media/v4l2-core/v4l2-ioctl.c
-index f75d892b6f03..adbd5729639d 100644
+index 76ef79733a4e..487781d045ee 100644
 --- a/drivers/media/v4l2-core/v4l2-ioctl.c
 +++ b/drivers/media/v4l2-core/v4l2-ioctl.c
 @@ -2929,6 +2929,22 @@ static int check_array_args(unsigned int cmd, void *parg, size_t *array_size,

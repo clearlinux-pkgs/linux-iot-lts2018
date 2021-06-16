@@ -186,7 +186,7 @@ index eee803e1a250..51d4a0285b28 100644
  	return rc;
  }
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 0a28281c7c4b..11c05ade9404 100644
+index 55c32ac3760a..415fde8bdc1b 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -149,7 +149,6 @@ static int __init checkreqprot_setup(char *str)
@@ -226,7 +226,7 @@ index 0a28281c7c4b..11c05ade9404 100644
  static int superblock_alloc_security(struct super_block *sb)
  {
  	struct superblock_security_struct *sbsec;
-@@ -3609,11 +3596,6 @@ static int selinux_file_alloc_security(struct file *file)
+@@ -3617,11 +3604,6 @@ static int selinux_file_alloc_security(struct file *file)
  	return file_alloc_security(file);
  }
  
@@ -238,7 +238,7 @@ index 0a28281c7c4b..11c05ade9404 100644
  /*
   * Check whether a task has the ioctl permission and cmd
   * operation to an inode.
-@@ -6938,6 +6920,7 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
+@@ -6946,6 +6928,7 @@ static void selinux_bpf_prog_free(struct bpf_prog_aux *aux)
  
  struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_cred = sizeof(struct task_security_struct),
@@ -246,7 +246,7 @@ index 0a28281c7c4b..11c05ade9404 100644
  };
  
  static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
-@@ -7008,7 +6991,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -7016,7 +6999,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  
  	LSM_HOOK_INIT(file_permission, selinux_file_permission),
  	LSM_HOOK_INIT(file_alloc_security, selinux_file_alloc_security),
@@ -254,7 +254,7 @@ index 0a28281c7c4b..11c05ade9404 100644
  	LSM_HOOK_INIT(file_ioctl, selinux_file_ioctl),
  	LSM_HOOK_INIT(mmap_file, selinux_mmap_file),
  	LSM_HOOK_INIT(mmap_addr, selinux_mmap_addr),
-@@ -7211,9 +7193,6 @@ static __init int selinux_init(void)
+@@ -7219,9 +7201,6 @@ static __init int selinux_init(void)
  	sel_inode_cache = kmem_cache_create("selinux_inode_security",
  					    sizeof(struct inode_security_struct),
  					    0, SLAB_PANIC, NULL);

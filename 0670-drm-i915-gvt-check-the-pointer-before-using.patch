@@ -51,7 +51,7 @@ index d73183a23c7d..f3a65581b9fb 100644
  	case DRM_FORMAT_RGB565:
  	case DRM_FORMAT_XBGR8888:
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index b218b1a2c7f8..dcf4941aeb9a 100644
+index 54979509e44c..39cef1485a2e 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -824,6 +824,11 @@ static bool intel_wm_plane_visible(const struct intel_crtc_state *crtc_state,

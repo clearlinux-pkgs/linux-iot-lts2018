@@ -108,7 +108,7 @@ index 24282139a261..289663d76abc 100644
  };
  ATTRIBUTE_GROUPS(mei_cldev);
 diff --git a/drivers/misc/mei/client.h b/drivers/misc/mei/client.h
-index eb147094b459..6c9986dfd5a0 100644
+index 234b75ddf427..df3f5f65fea2 100644
 --- a/drivers/misc/mei/client.h
 +++ b/drivers/misc/mei/client.h
 @@ -79,6 +79,54 @@ static inline u8 mei_me_cl_ver(const struct mei_me_client *me_cl)

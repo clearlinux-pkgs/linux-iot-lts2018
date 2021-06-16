@@ -18,7 +18,7 @@ Tracked-On: PKT-1679
  5 files changed, 143 deletions(-)
 
 diff --git a/drivers/gpu/drm/drm_atomic.c b/drivers/gpu/drm/drm_atomic.c
-index 7c45d746e936..aeda2b5fe2ac 100644
+index f2b173d07e41..d3c3c65bf5b7 100644
 --- a/drivers/gpu/drm/drm_atomic.c
 +++ b/drivers/gpu/drm/drm_atomic.c
 @@ -910,8 +910,6 @@ static int drm_atomic_plane_set_property(struct drm_plane *plane,
@@ -40,10 +40,10 @@ index 7c45d746e936..aeda2b5fe2ac 100644
  		*val = state->rotation;
  	} else if (property == plane->zpos_property) {
 diff --git a/drivers/gpu/drm/drm_atomic_helper.c b/drivers/gpu/drm/drm_atomic_helper.c
-index 9a6763ac9c2c..34e1225bd254 100644
+index 915def756af8..198de948bb3f 100644
 --- a/drivers/gpu/drm/drm_atomic_helper.c
 +++ b/drivers/gpu/drm/drm_atomic_helper.c
-@@ -3613,7 +3613,6 @@ void drm_atomic_helper_plane_reset(struct drm_plane *plane)
+@@ -3632,7 +3632,6 @@ void drm_atomic_helper_plane_reset(struct drm_plane *plane)
  		/* Reset the alpha value to fully opaque if it matters */
  		if (plane->alpha_property)
  			plane->state->alpha = plane->alpha_property->values[1];

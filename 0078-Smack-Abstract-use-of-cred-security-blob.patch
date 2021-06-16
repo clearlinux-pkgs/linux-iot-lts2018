@@ -318,10 +318,10 @@ index 221de4c755c3..9d5d5584d2fa 100644
  	int may;
  
 diff --git a/security/smack/smackfs.c b/security/smack/smackfs.c
-index accd3846f1e3..09fee3e8df9c 100644
+index 4f8c1a272df0..5f415224a6b3 100644
 --- a/security/smack/smackfs.c
 +++ b/security/smack/smackfs.c
-@@ -2222,14 +2222,14 @@ static const struct file_operations smk_logging_ops = {
+@@ -2232,14 +2232,14 @@ static const struct file_operations smk_logging_ops = {
  
  static void *load_self_seq_start(struct seq_file *s, loff_t *pos)
  {
@@ -338,7 +338,7 @@ index accd3846f1e3..09fee3e8df9c 100644
  
  	return smk_seq_next(s, v, pos, &tsp->smk_rules);
  }
-@@ -2276,7 +2276,7 @@ static int smk_open_load_self(struct inode *inode, struct file *file)
+@@ -2286,7 +2286,7 @@ static int smk_open_load_self(struct inode *inode, struct file *file)
  static ssize_t smk_write_load_self(struct file *file, const char __user *buf,
  			      size_t count, loff_t *ppos)
  {
@@ -347,7 +347,7 @@ index accd3846f1e3..09fee3e8df9c 100644
  
  	return smk_write_rules_list(file, buf, count, ppos, &tsp->smk_rules,
  				    &tsp->smk_rules_lock, SMK_FIXED24_FMT);
-@@ -2428,14 +2428,14 @@ static const struct file_operations smk_load2_ops = {
+@@ -2438,14 +2438,14 @@ static const struct file_operations smk_load2_ops = {
  
  static void *load_self2_seq_start(struct seq_file *s, loff_t *pos)
  {
@@ -364,7 +364,7 @@ index accd3846f1e3..09fee3e8df9c 100644
  
  	return smk_seq_next(s, v, pos, &tsp->smk_rules);
  }
-@@ -2481,7 +2481,7 @@ static int smk_open_load_self2(struct inode *inode, struct file *file)
+@@ -2491,7 +2491,7 @@ static int smk_open_load_self2(struct inode *inode, struct file *file)
  static ssize_t smk_write_load_self2(struct file *file, const char __user *buf,
  			      size_t count, loff_t *ppos)
  {
@@ -373,7 +373,7 @@ index accd3846f1e3..09fee3e8df9c 100644
  
  	return smk_write_rules_list(file, buf, count, ppos, &tsp->smk_rules,
  				    &tsp->smk_rules_lock, SMK_LONG_FMT);
-@@ -2695,14 +2695,14 @@ static const struct file_operations smk_syslog_ops = {
+@@ -2709,14 +2709,14 @@ static const struct file_operations smk_syslog_ops = {
  
  static void *relabel_self_seq_start(struct seq_file *s, loff_t *pos)
  {

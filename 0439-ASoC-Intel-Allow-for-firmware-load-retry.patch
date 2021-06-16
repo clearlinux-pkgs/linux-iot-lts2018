@@ -39,7 +39,7 @@ index 859f0de00339..92150322496c 100644
  
  /*
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index df42b2157b21..19398e200cb0 100644
+index 59448c1ba37c..c5a89c3e4eb6 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -212,49 +212,56 @@ static int cnl_load_base_firmware(struct sst_dsp *ctx)

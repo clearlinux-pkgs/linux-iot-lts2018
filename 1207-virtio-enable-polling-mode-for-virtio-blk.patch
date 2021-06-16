@@ -14,10 +14,10 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 3 insertions(+)
 
 diff --git a/drivers/block/virtio_blk.c b/drivers/block/virtio_blk.c
-index 8a20c2775167..563e5dbac3f6 100644
+index 0805da631515..2a2593d1478c 100644
 --- a/drivers/block/virtio_blk.c
 +++ b/drivers/block/virtio_blk.c
-@@ -1062,6 +1062,9 @@ static struct virtio_driver virtio_blk = {
+@@ -1072,6 +1072,9 @@ static struct virtio_driver virtio_blk = {
  	.driver.name			= KBUILD_MODNAME,
  	.driver.owner			= THIS_MODULE,
  	.id_table			= id_table,

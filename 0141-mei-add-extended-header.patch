@@ -277,7 +277,7 @@ index 46843bc224a0..b4e00028ad0a 100644
  struct mei_bus_message {
  	u8 hbm_cmd;
 diff --git a/drivers/misc/mei/interrupt.c b/drivers/misc/mei/interrupt.c
-index 055c2d89b310..6531e036bb00 100644
+index 6617ba3f7d95..d215289edcb1 100644
 --- a/drivers/misc/mei/interrupt.c
 +++ b/drivers/misc/mei/interrupt.c
 @@ -101,6 +101,7 @@ static int mei_cl_irq_read_msg(struct mei_cl *cl,
@@ -314,7 +314,7 @@ index 055c2d89b310..6531e036bb00 100644
  
  	buf_sz = length + cb->buf_idx;
  	/* catch for integer overflow */
-@@ -303,9 +315,13 @@ int mei_irq_read_handler(struct mei_device *dev,
+@@ -306,9 +318,13 @@ int mei_irq_read_handler(struct mei_device *dev,
  		goto end;
  	}
  

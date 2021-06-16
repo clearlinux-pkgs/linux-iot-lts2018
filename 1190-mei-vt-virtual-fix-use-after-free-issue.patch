@@ -475,7 +475,7 @@ index beb7561556e9..42a64f26a0b9 100644
   * mei_cl_complete - processes completed operation for a client
   *
 diff --git a/drivers/misc/mei/client.h b/drivers/misc/mei/client.h
-index ccce56a1bd10..64143d4ec758 100644
+index 71e6e39882cf..9e08a9843bba 100644
 --- a/drivers/misc/mei/client.h
 +++ b/drivers/misc/mei/client.h
 @@ -1,7 +1,7 @@
@@ -847,7 +847,7 @@ index 5b4141028e5f..d4f721a356cc 100644
  	u8 hbm_cmd;
  	u8 capability_granted[3];
 diff --git a/drivers/misc/mei/interrupt.c b/drivers/misc/mei/interrupt.c
-index 5275e7c64e32..1f4fc392caa4 100644
+index 7390e0d0cf60..c81165d5f0e2 100644
 --- a/drivers/misc/mei/interrupt.c
 +++ b/drivers/misc/mei/interrupt.c
 @@ -1,7 +1,7 @@

@@ -27,10 +27,10 @@ Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  create mode 100644 lib/test_memcat_p.c
 
 diff --git a/include/linux/string.h b/include/linux/string.h
-index 4db285b83f44..7f6b8c23c73d 100644
+index 1e0c442b941e..b8c2f80e858f 100644
 --- a/include/linux/string.h
 +++ b/include/linux/string.h
-@@ -131,6 +131,13 @@ static inline void *memset_p(void **p, void *v, __kernel_size_t n)
+@@ -135,6 +135,13 @@ static inline void *memset_p(void **p, void *v, __kernel_size_t n)
  		return memset64((uint64_t *)p, (uintptr_t)v, n);
  }
  
@@ -76,7 +76,7 @@ index 1d7a705d7207..d77eea2b94c4 100644
  ifeq ($(CONFIG_DEBUG_KOBJECT),y)
  CFLAGS_kobject.o += -DDEBUG
 diff --git a/lib/string.c b/lib/string.c
-index edf4907ec946..7f82c67266f8 100644
+index f7f7770444bf..274b8593ecdf 100644
 --- a/lib/string.c
 +++ b/lib/string.c
 @@ -27,6 +27,7 @@
@@ -87,7 +87,7 @@ index edf4907ec946..7f82c67266f8 100644
  
  #include <asm/byteorder.h>
  #include <asm/word-at-a-time.h>
-@@ -934,6 +935,36 @@ void *memscan(void *addr, int c, size_t size)
+@@ -967,6 +968,36 @@ void *memscan(void *addr, int c, size_t size)
  EXPORT_SYMBOL(memscan);
  #endif
  

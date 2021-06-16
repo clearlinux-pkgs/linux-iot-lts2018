@@ -105,7 +105,7 @@ index 4d2f1d88eef8..f6238c8489be 100644
  
  int security_sb_copy_data(char *orig, char *copy)
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index ef9d0507f5ef..f837dcea3ac6 100644
+index 77e1663a15b7..c59135f92089 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -333,7 +333,8 @@ static struct inode_security_struct *backing_inode_security(struct dentry *dentr
@@ -218,7 +218,7 @@ index ef9d0507f5ef..f837dcea3ac6 100644
  	if (!(sbsec->flags & SE_SBINITIALIZED)) {
  		/* Defer initialization until selinux_complete_init,
  		   after the initial policy is loaded and the security
-@@ -1914,7 +1904,8 @@ selinux_determine_inode_label(const struct task_security_struct *tsec,
+@@ -1922,7 +1912,8 @@ selinux_determine_inode_label(const struct task_security_struct *tsec,
  				 const struct qstr *name, u16 tclass,
  				 u32 *_new_isid)
  {
@@ -228,7 +228,7 @@ index ef9d0507f5ef..f837dcea3ac6 100644
  
  	if ((sbsec->flags & SE_SBINITIALIZED) &&
  	    (sbsec->behavior == SECURITY_FS_USE_MNTPOINT)) {
-@@ -1945,7 +1936,7 @@ static int may_create(struct inode *dir,
+@@ -1953,7 +1944,7 @@ static int may_create(struct inode *dir,
  	int rc;
  
  	dsec = inode_security(dir);
@@ -237,7 +237,7 @@ index ef9d0507f5ef..f837dcea3ac6 100644
  
  	sid = tsec->sid;
  
-@@ -2094,7 +2085,7 @@ static int superblock_has_perm(const struct cred *cred,
+@@ -2102,7 +2093,7 @@ static int superblock_has_perm(const struct cred *cred,
  	struct superblock_security_struct *sbsec;
  	u32 sid = cred_sid(cred);
  
@@ -246,7 +246,7 @@ index ef9d0507f5ef..f837dcea3ac6 100644
  	return avc_has_perm(&selinux_state,
  			    sid, sbsec->sid, SECCLASS_FILESYSTEM, perms, ad);
  }
-@@ -2725,11 +2716,6 @@ static int selinux_sb_alloc_security(struct super_block *sb)
+@@ -2733,11 +2724,6 @@ static int selinux_sb_alloc_security(struct super_block *sb)
  	return superblock_alloc_security(sb);
  }
  
@@ -258,7 +258,7 @@ index ef9d0507f5ef..f837dcea3ac6 100644
  static inline int match_prefix(char *prefix, int plen, char *option, int olen)
  {
  	if (plen > olen)
-@@ -2826,7 +2812,7 @@ static int selinux_sb_remount(struct super_block *sb, void *data)
+@@ -2834,7 +2820,7 @@ static int selinux_sb_remount(struct super_block *sb, void *data)
  	int rc, i, *flags;
  	struct security_mnt_opts opts;
  	char *secdata, **mount_options;
@@ -267,7 +267,7 @@ index ef9d0507f5ef..f837dcea3ac6 100644
  
  	if (!(sbsec->flags & SE_SBINITIALIZED))
  		return 0;
-@@ -3020,7 +3006,7 @@ static int selinux_inode_init_security(struct inode *inode, struct inode *dir,
+@@ -3028,7 +3014,7 @@ static int selinux_inode_init_security(struct inode *inode, struct inode *dir,
  	int rc;
  	char *context;
  
@@ -276,7 +276,7 @@ index ef9d0507f5ef..f837dcea3ac6 100644
  
  	newsid = tsec->create_sid;
  
-@@ -3265,7 +3251,7 @@ static int selinux_inode_setxattr(struct dentry *dentry, const char *name,
+@@ -3273,7 +3259,7 @@ static int selinux_inode_setxattr(struct dentry *dentry, const char *name,
  	if (!selinux_state.initialized)
  		return (inode_owner_or_capable(inode) ? 0 : -EPERM);
  
@@ -285,7 +285,7 @@ index ef9d0507f5ef..f837dcea3ac6 100644
  	if (!(sbsec->flags & SBLABEL_MNT))
  		return -EOPNOTSUPP;
  
-@@ -6896,6 +6882,7 @@ struct lsm_blob_sizes selinux_blob_sizes = {
+@@ -6904,6 +6890,7 @@ struct lsm_blob_sizes selinux_blob_sizes = {
  	.lbs_cred = sizeof(struct task_security_struct),
  	.lbs_file = sizeof(struct file_security_struct),
  	.lbs_inode = sizeof(struct inode_security_struct),
@@ -293,7 +293,7 @@ index ef9d0507f5ef..f837dcea3ac6 100644
  };
  
  static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
-@@ -6921,7 +6908,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
+@@ -6929,7 +6916,6 @@ static struct security_hook_list selinux_hooks[] __lsm_ro_after_init = {
  	LSM_HOOK_INIT(bprm_committed_creds, selinux_bprm_committed_creds),
  
  	LSM_HOOK_INIT(sb_alloc_security, selinux_sb_alloc_security),

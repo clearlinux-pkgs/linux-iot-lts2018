@@ -579,7 +579,7 @@ index db823eb92126..5d1cbe428472 100644
  #if !IS_ENABLED(CONFIG_SND_SOC_INTEL_CNL_FPGA)
  	skl_dmic_data.dmic_num = skl_get_dmic_geo(skl);
 diff --git a/sound/soc/soc-pcm.c b/sound/soc/soc-pcm.c
-index 8a8ed30cb514..beb226f6e066 100644
+index f0408a350cba..0d03cd870a8a 100644
 --- a/sound/soc/soc-pcm.c
 +++ b/sound/soc/soc-pcm.c
 @@ -863,7 +863,7 @@ int soc_dai_hw_params(struct snd_pcm_substream *substream,

@@ -62,7 +62,7 @@ index c980dfe9abf1..9842e21afd4a 100644
     :maxdepth: 1
  
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index 5e705fa9a913..e919aee77d40 100644
+index 317a0762fc5f..1d3ec810afc1 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -140,9 +140,13 @@ struct pid_entry {
@@ -80,7 +80,7 @@ index 5e705fa9a913..e919aee77d40 100644
  
  /*
   * Count the number of hardlinks for the pid_entry table, excluding the .
-@@ -2546,7 +2550,7 @@ static ssize_t proc_pid_attr_read(struct file * file, char __user * buf,
+@@ -2553,7 +2557,7 @@ static ssize_t proc_pid_attr_read(struct file * file, char __user * buf,
  	if (!task)
  		return -ESRCH;
  
@@ -89,7 +89,7 @@ index 5e705fa9a913..e919aee77d40 100644
  				      (char*)file->f_path.dentry->d_name.name,
  				      &p);
  	put_task_struct(task);
-@@ -2600,7 +2604,9 @@ static ssize_t proc_pid_attr_write(struct file * file, const char __user * buf,
+@@ -2611,7 +2615,9 @@ static ssize_t proc_pid_attr_write(struct file * file, const char __user * buf,
  	if (rv < 0)
  		goto out_free;
  
@@ -100,8 +100,8 @@ index 5e705fa9a913..e919aee77d40 100644
  	mutex_unlock(&current->signal->cred_guard_mutex);
  out_free:
  	kfree(page);
-@@ -2614,13 +2620,53 @@ static const struct file_operations proc_pid_attr_operations = {
- 	.llseek		= generic_file_llseek,
+@@ -2627,13 +2633,53 @@ static const struct file_operations proc_pid_attr_operations = {
+ 	.release	= mem_release,
  };
  
 +#define LSM_DIR_OPS(LSM) \
@@ -161,7 +161,7 @@ index 5e705fa9a913..e919aee77d40 100644
  
  static int proc_attr_dir_readdir(struct file *file, struct dir_context *ctx)
 diff --git a/fs/proc/internal.h b/fs/proc/internal.h
-index 95b14196f284..f8579787852e 100644
+index 4f14906ef16b..07835bd93562 100644
 --- a/fs/proc/internal.h
 +++ b/fs/proc/internal.h
 @@ -82,6 +82,7 @@ union proc_op {
@@ -173,7 +173,7 @@ index 95b14196f284..f8579787852e 100644
  
  struct proc_inode {
 diff --git a/include/linux/security.h b/include/linux/security.h
-index d2240605edc4..96eb8d4cf764 100644
+index 454cc963d145..3c854e63d41d 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -393,8 +393,10 @@ int security_sem_semctl(struct kern_ipc_perm *sma, int cmd);

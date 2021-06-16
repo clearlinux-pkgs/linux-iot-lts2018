@@ -460,7 +460,7 @@ index 90d118ae8434..64f8a934cb7d 100644
   */
  struct hbm_notification_response {
 diff --git a/drivers/misc/mei/interrupt.c b/drivers/misc/mei/interrupt.c
-index 6531e036bb00..750de6d02819 100644
+index d215289edcb1..4c1c98b9637a 100644
 --- a/drivers/misc/mei/interrupt.c
 +++ b/drivers/misc/mei/interrupt.c
 @@ -72,16 +72,21 @@ static inline int mei_cl_hbm_equal(struct mei_cl *cl,
@@ -602,7 +602,7 @@ index 6531e036bb00..750de6d02819 100644
  	return 0;
  }
  
-@@ -288,11 +332,16 @@ int mei_irq_read_handler(struct mei_device *dev,
+@@ -291,11 +335,16 @@ int mei_irq_read_handler(struct mei_device *dev,
  			 struct list_head *cmpl_list, s32 *slots)
  {
  	struct mei_msg_hdr *mei_hdr;
@@ -619,7 +619,7 @@ index 6531e036bb00..750de6d02819 100644
  		(*slots)--;
  		dev_dbg(dev->dev, "slots =%08x.\n", *slots);
  
-@@ -315,14 +364,34 @@ int mei_irq_read_handler(struct mei_device *dev,
+@@ -318,14 +367,34 @@ int mei_irq_read_handler(struct mei_device *dev,
  		goto end;
  	}
  
@@ -658,7 +658,7 @@ index 6531e036bb00..750de6d02819 100644
  	}
  
  	/*  HBM message */
-@@ -353,7 +422,7 @@ int mei_irq_read_handler(struct mei_device *dev,
+@@ -356,7 +425,7 @@ int mei_irq_read_handler(struct mei_device *dev,
  		 */
  		if (hdr_is_fixed(mei_hdr) ||
  		    dev->dev_state == MEI_DEV_POWER_DOWN) {
@@ -667,7 +667,7 @@ index 6531e036bb00..750de6d02819 100644
  			ret = 0;
  			goto reset_slots;
  		}
-@@ -363,12 +432,13 @@ int mei_irq_read_handler(struct mei_device *dev,
+@@ -366,12 +435,13 @@ int mei_irq_read_handler(struct mei_device *dev,
  		goto end;
  	}
  

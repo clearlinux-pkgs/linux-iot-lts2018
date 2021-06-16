@@ -26,7 +26,7 @@ Tested-by: Dong, Eddie <eddie.dong@intel.com>
  5 files changed, 31 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.c b/drivers/gpu/drm/i915/gvt/gvt.c
-index 8523fbc1e494..25e0a58a24a5 100644
+index 383281a26a2f..8091582adbb5 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.c
 +++ b/drivers/gpu/drm/i915/gvt/gvt.c
 @@ -511,6 +511,14 @@ int intel_gvt_init_device(struct drm_i915_private *dev_priv)

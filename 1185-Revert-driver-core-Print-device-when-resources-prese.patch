@@ -12,10 +12,10 @@ Tracked-On: PKT-3178
  1 file changed, 1 insertion(+), 5 deletions(-)
 
 diff --git a/drivers/base/dd.c b/drivers/base/dd.c
-index b3c569412f4e..dc2bc3723af8 100644
+index 26ba7a99b7d5..54368365cef1 100644
 --- a/drivers/base/dd.c
 +++ b/drivers/base/dd.c
-@@ -470,11 +470,7 @@ static int really_probe(struct device *dev, struct device_driver *drv)
+@@ -472,11 +472,7 @@ static int really_probe(struct device *dev, struct device_driver *drv)
  	atomic_inc(&probe_count);
  	pr_debug("bus: '%s': %s: probing driver %s with device %s\n",
  		 drv->bus->name, __func__, drv->name, dev_name(dev));

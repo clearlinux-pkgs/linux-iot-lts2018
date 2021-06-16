@@ -19,10 +19,10 @@ Tested-by: Sm, Bhadur A <bhadur.a.sm@intel.com>
  1 file changed, 2 insertions(+)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index c99b2c931202..813cd73545e4 100644
+index b84957d1e8a2..4aa65f4e313d 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
-@@ -638,6 +638,8 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
+@@ -639,6 +639,8 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
  			dpn_cap->word_length_buffer =
  					kzalloc(((sizeof(unsigned int)) *
  					dpn_cap->num_word_length), GFP_KERNEL);

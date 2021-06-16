@@ -89,10 +89,10 @@ index 000000000000..b810fbc66962
 +EXPORT_SYMBOL_GPL(__memcat_p);
 +
 diff --git a/lib/string.c b/lib/string.c
-index 7f82c67266f8..37b975125eeb 100644
+index 274b8593ecdf..1a0f5799b7cb 100644
 --- a/lib/string.c
 +++ b/lib/string.c
-@@ -935,36 +935,6 @@ void *memscan(void *addr, int c, size_t size)
+@@ -968,36 +968,6 @@ void *memscan(void *addr, int c, size_t size)
  EXPORT_SYMBOL(memscan);
  #endif
  

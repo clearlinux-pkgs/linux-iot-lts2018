@@ -13,7 +13,7 @@ Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
  1 file changed, 2 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/char/tpm/tpm2-cmd.c b/drivers/char/tpm/tpm2-cmd.c
-index cd8261a8dcf7..09516fba5f93 100644
+index 310f4abddc98..e5876cf9fc1f 100644
 --- a/drivers/char/tpm/tpm2-cmd.c
 +++ b/drivers/char/tpm/tpm2-cmd.c
 @@ -343,10 +343,9 @@ int tpm2_get_random(struct tpm_chip *chip, u8 *dest, size_t max)

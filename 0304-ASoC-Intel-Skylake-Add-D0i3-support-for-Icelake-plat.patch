@@ -55,10 +55,10 @@ index 6f9b24c8c211..c1f6d8b6ab79 100644
  	int ret;
  	struct skl_ipc_d0ix_msg msg;
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index d5e2c32b3f83..5ee7b350eb7f 100644
+index bdbbf3d63f86..e4f7a643252b 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
-@@ -389,6 +389,8 @@ static unsigned int cnl_get_errno(struct sst_dsp *ctx)
+@@ -390,6 +390,8 @@ static unsigned int cnl_get_errno(struct sst_dsp *ctx)
  static const struct skl_dsp_fw_ops cnl_fw_ops = {
  	.set_state_D0 = cnl_set_dsp_D0,
  	.set_state_D3 = cnl_set_dsp_D3,
@@ -67,7 +67,7 @@ index d5e2c32b3f83..5ee7b350eb7f 100644
  	.load_fw = cnl_load_base_firmware,
  	.get_fw_errcode = cnl_get_errno,
  	.load_library = bxt_load_library,
-@@ -743,9 +745,14 @@ int cnl_sst_dsp_init(struct device *dev, void __iomem *mmio_base, int irq,
+@@ -744,9 +746,14 @@ int cnl_sst_dsp_init(struct device *dev, void __iomem *mmio_base, int irq,
  		return ret;
  	}
  

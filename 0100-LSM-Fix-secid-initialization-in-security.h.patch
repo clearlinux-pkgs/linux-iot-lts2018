@@ -13,10 +13,10 @@ Signed-off-by: Casey Schaufler <casey.schaufler@intel.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 2a95fcfc4b14..e98b45ab7a1e 100644
+index bb4b8ac9e1b2..c5e7097ea713 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
-@@ -875,7 +875,7 @@ static inline int security_inode_listsecurity(struct inode *inode, char *buffer,
+@@ -869,7 +869,7 @@ static inline int security_inode_listsecurity(struct inode *inode, char *buffer,
  static inline void security_inode_getsecid(struct inode *inode,
  					   struct secids *secid)
  {
@@ -25,7 +25,7 @@ index 2a95fcfc4b14..e98b45ab7a1e 100644
  }
  
  static inline int security_inode_copy_up(struct dentry *src, struct cred **new)
-@@ -1047,7 +1047,7 @@ static inline int security_task_getsid(struct task_struct *p)
+@@ -1041,7 +1041,7 @@ static inline int security_task_getsid(struct task_struct *p)
  static inline void security_task_getsecid(struct task_struct *p,
  					  struct secids *secid)
  {
@@ -34,7 +34,7 @@ index 2a95fcfc4b14..e98b45ab7a1e 100644
  }
  
  static inline int security_task_setnice(struct task_struct *p, int nice)
-@@ -1122,7 +1122,7 @@ static inline int security_ipc_permission(struct kern_ipc_perm *ipcp,
+@@ -1116,7 +1116,7 @@ static inline int security_ipc_permission(struct kern_ipc_perm *ipcp,
  static inline void security_ipc_getsecid(struct kern_ipc_perm *ipcp,
  					 struct secids *secid)
  {

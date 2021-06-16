@@ -304,10 +304,10 @@ index ec242397e6dc..3bd079587ef5 100644
 +}
 +EXPORT_SYMBOL_GPL(tpm1_getcap);
 diff --git a/drivers/char/tpm/tpm_tis_core.c b/drivers/char/tpm/tpm_tis_core.c
-index 72f9ca7157fa..3ceebc0a19a8 100644
+index 104726bc6492..0f5e47d58df7 100644
 --- a/drivers/char/tpm/tpm_tis_core.c
 +++ b/drivers/char/tpm/tpm_tis_core.c
-@@ -667,7 +667,7 @@ static int tpm_tis_gen_interrupt(struct tpm_chip *chip)
+@@ -623,7 +623,7 @@ static int tpm_tis_gen_interrupt(struct tpm_chip *chip)
  	if (chip->flags & TPM_CHIP_FLAG_TPM2)
  		return tpm2_get_tpm_pt(chip, 0x100, &cap2, desc);
  	else

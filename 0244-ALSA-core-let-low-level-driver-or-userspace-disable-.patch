@@ -46,7 +46,7 @@ index ed0a120d4f08..ff57e4c89de4 100644
  struct snd_interval {
  	unsigned int min, max;
 diff --git a/sound/core/pcm_native.c b/sound/core/pcm_native.c
-index 7c12b0deb4eb..1180a0dbed69 100644
+index db62dbe7eaa8..56ab147c8429 100644
 --- a/sound/core/pcm_native.c
 +++ b/sound/core/pcm_native.c
 @@ -727,6 +727,8 @@ static int snd_pcm_hw_params(struct snd_pcm_substream *substream,
@@ -58,7 +58,7 @@ index 7c12b0deb4eb..1180a0dbed69 100644
  
  	bits = snd_pcm_format_physical_width(runtime->format);
  	runtime->sample_bits = bits;
-@@ -2668,11 +2670,15 @@ static snd_pcm_sframes_t rewind_appl_ptr(struct snd_pcm_substream *substream,
+@@ -2673,11 +2675,15 @@ static snd_pcm_sframes_t rewind_appl_ptr(struct snd_pcm_substream *substream,
  static snd_pcm_sframes_t snd_pcm_rewind(struct snd_pcm_substream *substream,
  					snd_pcm_uframes_t frames)
  {

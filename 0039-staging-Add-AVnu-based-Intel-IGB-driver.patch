@@ -105,10 +105,10 @@ Signed-off-by: Tarun Vyas <tarun.vyas@intel.com>
  create mode 100755 drivers/staging/igb_avb/startup.sh
 
 diff --git a/drivers/staging/Kconfig b/drivers/staging/Kconfig
-index 1abf76be2aa8..89735a5fd9e1 100644
+index 58e8140c1f57..c1d6d7740117 100644
 --- a/drivers/staging/Kconfig
 +++ b/drivers/staging/Kconfig
-@@ -126,4 +126,6 @@ source "drivers/staging/axis-fifo/Kconfig"
+@@ -124,4 +124,6 @@ source "drivers/staging/axis-fifo/Kconfig"
  
  source "drivers/staging/erofs/Kconfig"
  
@@ -116,10 +116,10 @@ index 1abf76be2aa8..89735a5fd9e1 100644
 +
  endif # STAGING
 diff --git a/drivers/staging/Makefile b/drivers/staging/Makefile
-index ab0cbe8815b1..f7d9b0acf361 100644
+index 6f3065569fa0..82743da3327f 100644
 --- a/drivers/staging/Makefile
 +++ b/drivers/staging/Makefile
-@@ -53,3 +53,4 @@ obj-$(CONFIG_SOC_MT7621)	+= mt7621-dts/
+@@ -52,3 +52,4 @@ obj-$(CONFIG_SOC_MT7621)	+= mt7621-dts/
  obj-$(CONFIG_STAGING_GASKET_FRAMEWORK)	+= gasket/
  obj-$(CONFIG_XIL_AXIS_FIFO)	+= axis-fifo/
  obj-$(CONFIG_EROFS_FS)		+= erofs/

@@ -49,7 +49,7 @@ index 1b27b8bcc779..381dae9c3ec5 100644
  					struct flowi *fl);
  	int (*tun_dev_alloc_security)(void **security);
 diff --git a/include/linux/security.h b/include/linux/security.h
-index aed6376768bb..2a95fcfc4b14 100644
+index ad146916f19b..bb4b8ac9e1b2 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -83,15 +83,9 @@ enum lsm_event {
@@ -68,7 +68,7 @@ index aed6376768bb..2a95fcfc4b14 100644
  	u32 flags;
  };
  
-@@ -1321,8 +1315,9 @@ void security_inet_csk_clone(struct sock *newsk,
+@@ -1315,8 +1309,9 @@ void security_inet_csk_clone(struct sock *newsk,
  void security_inet_conn_established(struct sock *sk,
  			struct sk_buff *skb);
  int security_secmark_relabel_packet(struct secids *secid);
@@ -80,7 +80,7 @@ index aed6376768bb..2a95fcfc4b14 100644
  int security_tun_dev_alloc_security(void **security);
  void security_tun_dev_free_security(void *security);
  int security_tun_dev_create(void);
-@@ -1500,14 +1495,19 @@ static inline int security_secmark_relabel_packet(struct secids *secid)
+@@ -1494,14 +1489,19 @@ static inline int security_secmark_relabel_packet(struct secids *secid)
  	return 0;
  }
  
@@ -103,7 +103,7 @@ index aed6376768bb..2a95fcfc4b14 100644
  {
  	return 0;
 diff --git a/include/uapi/linux/netfilter/xt_SECMARK.h b/include/uapi/linux/netfilter/xt_SECMARK.h
-index 1f2a708413f5..5245a9748599 100644
+index beb2cadba8a9..1f9f1b912d22 100644
 --- a/include/uapi/linux/netfilter/xt_SECMARK.h
 +++ b/include/uapi/linux/netfilter/xt_SECMARK.h
 @@ -12,6 +12,7 @@
@@ -143,7 +143,7 @@ index 8018f6cbd9be..498d8942c344 100644
  			} else {
  				audit_log_format(ab, " obj=%s", ctx);
 diff --git a/net/netfilter/nf_conntrack_netlink.c b/net/netfilter/nf_conntrack_netlink.c
-index e0746858bc96..97d0252284b0 100644
+index 157425412d1e..a3c80402f7a8 100644
 --- a/net/netfilter/nf_conntrack_netlink.c
 +++ b/net/netfilter/nf_conntrack_netlink.c
 @@ -335,8 +335,13 @@ static int ctnetlink_dump_secctx(struct sk_buff *skb, const struct nf_conn *ct)
@@ -175,7 +175,7 @@ index e0746858bc96..97d0252284b0 100644
  	ret = security_secid_to_secctx(&secid, NULL, &len);
  	if (ret)
 diff --git a/net/netfilter/nf_conntrack_standalone.c b/net/netfilter/nf_conntrack_standalone.c
-index 9ebd932f15e0..c85c2e1a3e74 100644
+index b9dd474c25de..24df21902d81 100644
 --- a/net/netfilter/nf_conntrack_standalone.c
 +++ b/net/netfilter/nf_conntrack_standalone.c
 @@ -173,8 +173,13 @@ static void ct_show_secctx(struct seq_file *s, const struct nf_conn *ct)
@@ -211,10 +211,10 @@ index e91fabdbe9e0..b5fe7f87f180 100644
  	}
  
 diff --git a/net/netfilter/xt_SECMARK.c b/net/netfilter/xt_SECMARK.c
-index 6af1f4fc837d..a4646c301307 100644
+index 08ad57b503b8..d46fd431e785 100644
 --- a/net/netfilter/xt_SECMARK.c
 +++ b/net/netfilter/xt_SECMARK.c
-@@ -41,6 +41,9 @@ secmark_tg(struct sk_buff *skb, const struct xt_action_param *par)
+@@ -40,6 +40,9 @@ secmark_tg(struct sk_buff *skb, const struct xt_secmark_target_info_v1 *info)
  	case SECMARK_MODE_SEL:
  		secmark = info->secid;
  		break;
@@ -224,7 +224,7 @@ index 6af1f4fc837d..a4646c301307 100644
  	default:
  		BUG();
  	}
-@@ -59,7 +62,16 @@ static int checkentry_lsm(struct xt_secmark_target_info *info)
+@@ -58,7 +61,16 @@ static int checkentry_lsm(struct xt_secmark_target_info_v1 *info)
  
  	err = security_secctx_to_secid(info->secctx, strlen(info->secctx),
  				       &secid);
@@ -242,7 +242,7 @@ index 6af1f4fc837d..a4646c301307 100644
  
  	if (err) {
  		if (err == -EINVAL)
-@@ -80,7 +92,8 @@ static int checkentry_lsm(struct xt_secmark_target_info *info)
+@@ -79,7 +91,8 @@ static int checkentry_lsm(struct xt_secmark_target_info_v1 *info)
  		return err;
  	}
  
@@ -252,7 +252,7 @@ index 6af1f4fc837d..a4646c301307 100644
  	return 0;
  }
  
-@@ -96,15 +109,23 @@ static int secmark_tg_check(const struct xt_tgchk_param *par)
+@@ -95,15 +108,23 @@ secmark_tg_check(const char *table, struct xt_secmark_target_info_v1 *info)
  		return -EINVAL;
  	}
  
@@ -279,7 +279,7 @@ index 6af1f4fc837d..a4646c301307 100644
  	default:
  		pr_info_ratelimited("invalid mode: %hu\n", info->mode);
  		return -EINVAL;
-@@ -123,8 +144,14 @@ static void secmark_tg_destroy(const struct xt_tgdtor_param *par)
+@@ -122,8 +143,14 @@ static void secmark_tg_destroy(const struct xt_tgdtor_param *par)
  {
  	switch (mode) {
  	case SECMARK_MODE_SEL:
@@ -294,7 +294,7 @@ index 6af1f4fc837d..a4646c301307 100644
 +	security_secmark_refcount_dec(mode);
  }
  
- static struct xt_target secmark_tg_reg __read_mostly = {
+ static int secmark_tg_check_v0(const struct xt_tgchk_param *par)
 diff --git a/net/netlabel/netlabel_user.c b/net/netlabel/netlabel_user.c
 index 22474f5c93d7..42ee220f6940 100644
 --- a/net/netlabel/netlabel_user.c
@@ -412,7 +412,7 @@ index 96e795600adb..5a8047fcb9cd 100644
  {
  	return call_int_hook(tun_dev_alloc_security, 0, security);
 diff --git a/security/selinux/hooks.c b/security/selinux/hooks.c
-index 35f8a839de72..8f807054b58f 100644
+index 666f2b631614..02a9aab5e901 100644
 --- a/security/selinux/hooks.c
 +++ b/security/selinux/hooks.c
 @@ -50,6 +50,7 @@
@@ -423,7 +423,7 @@ index 35f8a839de72..8f807054b58f 100644
  #include <linux/tty.h>
  #include <net/icmp.h>
  #include <net/ip.h>		/* for local_port_range[] */
-@@ -5399,13 +5400,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
+@@ -5407,13 +5408,21 @@ static int selinux_secmark_relabel_packet(struct secids *secid)
  			    PACKET__RELABELTO, NULL);
  }
  

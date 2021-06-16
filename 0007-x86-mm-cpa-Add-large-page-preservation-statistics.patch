@@ -33,10 +33,10 @@ Signed-off-by: Lili Li <lili.li@intel.com>
  2 files changed, 105 insertions(+), 2 deletions(-)
 
 diff --git a/arch/x86/Kconfig b/arch/x86/Kconfig
-index af35f5caadbe..f9139407fdb5 100644
+index d994501d9179..58e65440a9fd 100644
 --- a/arch/x86/Kconfig
 +++ b/arch/x86/Kconfig
-@@ -1481,6 +1481,14 @@ config X86_DIRECT_GBPAGES
+@@ -1482,6 +1482,14 @@ config X86_DIRECT_GBPAGES
  	  supports them), so don't confuse the user by printing
  	  that we have them enabled.
  

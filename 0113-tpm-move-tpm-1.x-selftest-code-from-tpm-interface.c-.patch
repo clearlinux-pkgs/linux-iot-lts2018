@@ -408,10 +408,10 @@ index e02f0c1c822f..a69a02366c32 100644
 +	return rc;
 +}
 diff --git a/drivers/char/tpm/tpm_tis_core.c b/drivers/char/tpm/tpm_tis_core.c
-index 3ceebc0a19a8..6113a5b77371 100644
+index 0f5e47d58df7..c8a11aaa6757 100644
 --- a/drivers/char/tpm/tpm_tis_core.c
 +++ b/drivers/char/tpm/tpm_tis_core.c
-@@ -1062,7 +1062,7 @@ int tpm_tis_resume(struct device *dev)
+@@ -1018,7 +1018,7 @@ int tpm_tis_resume(struct device *dev)
  	 * an error code but for unknown reason it isn't handled.
  	 */
  	if (!(chip->flags & TPM_CHIP_FLAG_TPM2))

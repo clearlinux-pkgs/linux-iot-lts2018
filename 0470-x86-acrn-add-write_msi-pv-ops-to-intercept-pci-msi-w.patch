@@ -155,7 +155,7 @@ index 23a363fd4c59..5f0d8827645d 100644
  	struct pci_dev *dev = msi_desc_to_pci_dev(entry);
  
 diff --git a/drivers/pci/pci.h b/drivers/pci/pci.h
-index e9ede82ee2c2..77c831f33f58 100644
+index 39725b71300f..5ff2488aa8cc 100644
 --- a/drivers/pci/pci.h
 +++ b/drivers/pci/pci.h
 @@ -170,6 +170,8 @@ static inline void pci_msix_clear_and_set_ctrl(struct pci_dev *dev, u16 clear, u
@@ -316,10 +316,10 @@ index 000000000000..73affd60fc46
 +	entry->msg = *msg;
 +}
 diff --git a/include/linux/msi.h b/include/linux/msi.h
-index be8ec813dbfb..9b0de9ed5387 100644
+index 5dd171849a27..2dd6c83b991c 100644
 --- a/include/linux/msi.h
 +++ b/include/linux/msi.h
-@@ -141,7 +141,15 @@ struct msi_desc *alloc_msi_entry(struct device *dev, int nvec,
+@@ -147,7 +147,15 @@ struct msi_desc *alloc_msi_entry(struct device *dev, int nvec,
  				 const struct cpumask *affinity);
  void free_msi_entry(struct msi_desc *entry);
  void __pci_read_msi_msg(struct msi_desc *entry, struct msi_msg *msg);

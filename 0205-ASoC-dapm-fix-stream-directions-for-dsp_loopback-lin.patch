@@ -11,10 +11,10 @@ Signed-off-by: Omair M Abdullah <omair.m.abdullah@intel.com>
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/soc-dapm.c b/sound/soc/soc-dapm.c
-index 96800b7c82f6..90a0af79f4f9 100644
+index 4e99d9986f11..6667da1bc9b8 100644
 --- a/sound/soc/soc-dapm.c
 +++ b/sound/soc/soc-dapm.c
-@@ -3762,7 +3762,8 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
+@@ -3763,7 +3763,8 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
  
  	switch (event) {
  	case SND_SOC_DAPM_PRE_PMU:
@@ -24,7 +24,7 @@ index 96800b7c82f6..90a0af79f4f9 100644
  		if (source->driver->ops->startup) {
  			ret = source->driver->ops->startup(&substream, source);
  			if (ret < 0) {
-@@ -3776,7 +3777,8 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
+@@ -3777,7 +3778,8 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
  		if (ret < 0)
  			goto out;
  

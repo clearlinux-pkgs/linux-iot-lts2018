@@ -332,7 +332,7 @@ index 77c123cc8817..83ed6f56ed56 100644
  
  static void ibx_set_fifo_underrun_reporting(struct drm_device *dev,
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 220990e23ac5..96a0269e80b3 100644
+index 6f27daf76ef5..62d8ab6aabab 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -3757,7 +3757,6 @@ bool intel_can_enable_sagv(struct drm_atomic_state *state)

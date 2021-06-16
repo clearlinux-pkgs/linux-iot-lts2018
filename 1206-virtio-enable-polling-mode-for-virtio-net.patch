@@ -14,10 +14,10 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 3 insertions(+)
 
 diff --git a/drivers/net/virtio_net.c b/drivers/net/virtio_net.c
-index b21223be93c8..38f94f334a5d 100644
+index 0b1c6a8906b9..2336199b8ed2 100644
 --- a/drivers/net/virtio_net.c
 +++ b/drivers/net/virtio_net.c
-@@ -3228,6 +3228,9 @@ static struct virtio_driver virtio_net_driver = {
+@@ -3242,6 +3242,9 @@ static struct virtio_driver virtio_net_driver = {
  	.driver.owner =	THIS_MODULE,
  	.id_table =	id_table,
  	.validate =	virtnet_validate,

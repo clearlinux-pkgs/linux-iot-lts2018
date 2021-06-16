@@ -19,7 +19,7 @@ Signed-off-by: Junxiao Chang <junxiao.chang@intel.com>
  2 files changed, 5 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.c b/drivers/gpu/drm/i915/gvt/gvt.c
-index d6b034bb9bcf..d9eb3ccc4799 100644
+index 89e29b20a538..0c2e61ebabfb 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.c
 +++ b/drivers/gpu/drm/i915/gvt/gvt.c
 @@ -339,15 +339,16 @@ void intel_gvt_allocate_ddb(struct intel_gvt *gvt,

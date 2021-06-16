@@ -55,10 +55,10 @@ index cde519de05dd..b158883ef7b6 100644
  	if (ret < 0) {
  		dev_err(dev, "Load base fw failed: %x\n", ret);
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 19398e200cb0..dc4a295a0e11 100644
+index c5a89c3e4eb6..41fa58928b3d 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
-@@ -803,13 +803,6 @@ int cnl_sst_init_fw(struct device *dev, struct skl_sst *ctx)
+@@ -804,13 +804,6 @@ int cnl_sst_init_fw(struct device *dev, struct skl_sst *ctx)
  	struct sst_dsp *sst = ctx->dsp;
  	int ret;
  

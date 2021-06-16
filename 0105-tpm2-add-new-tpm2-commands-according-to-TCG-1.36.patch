@@ -78,7 +78,7 @@ index b36cdeedb602..12b33ae5ac29 100644
  
  enum tpm2_permanent_handles {
 diff --git a/drivers/char/tpm/tpm2-cmd.c b/drivers/char/tpm/tpm2-cmd.c
-index ef381caf5f43..9f0daaf3711a 100644
+index e71c6b24aed1..18e8268a0997 100644
 --- a/drivers/char/tpm/tpm2-cmd.c
 +++ b/drivers/char/tpm/tpm2-cmd.c
 @@ -40,129 +40,100 @@ static struct tpm2_hash tpm2_hash_map[] = {

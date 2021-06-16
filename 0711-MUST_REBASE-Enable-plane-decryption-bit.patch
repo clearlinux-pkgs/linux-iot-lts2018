@@ -21,7 +21,7 @@ Signed-off-by: Hoong Tee, Yeoh <hoong.tee.yeoh@intel.com>
  6 files changed, 62 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/gpu/drm/drm_atomic.c b/drivers/gpu/drm/drm_atomic.c
-index 7857ffbb9113..aeda2b5fe2ac 100644
+index b1fcc77e2add..d3c3c65bf5b7 100644
 --- a/drivers/gpu/drm/drm_atomic.c
 +++ b/drivers/gpu/drm/drm_atomic.c
 @@ -919,6 +919,8 @@ static int drm_atomic_plane_set_property(struct drm_plane *plane,

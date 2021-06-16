@@ -37,7 +37,7 @@ index 5165e3b30899..db4e6382725e 100644
  void snd_soc_dapm_shutdown(struct snd_soc_card *card);
  
 diff --git a/sound/soc/soc-dapm.c b/sound/soc/soc-dapm.c
-index 90a0af79f4f9..004643582dbd 100644
+index 6667da1bc9b8..2564dd84c508 100644
 --- a/sound/soc/soc-dapm.c
 +++ b/sound/soc/soc-dapm.c
 @@ -1476,11 +1476,11 @@ static void dapm_seq_insert(struct snd_soc_dapm_widget *new_widget,
@@ -297,7 +297,7 @@ index 90a0af79f4f9..004643582dbd 100644
  
  	return found;
  }
-@@ -3086,6 +3110,7 @@ int snd_soc_dapm_new_widgets(struct snd_soc_card *card)
+@@ -3087,6 +3111,7 @@ int snd_soc_dapm_new_widgets(struct snd_soc_card *card)
  {
  	struct snd_soc_dapm_widget *w;
  	unsigned int val;
@@ -305,7 +305,7 @@ index 90a0af79f4f9..004643582dbd 100644
  
  	mutex_lock_nested(&card->dapm_mutex, SND_SOC_DAPM_CLASS_INIT);
  
-@@ -3140,9 +3165,9 @@ int snd_soc_dapm_new_widgets(struct snd_soc_card *card)
+@@ -3141,9 +3166,9 @@ int snd_soc_dapm_new_widgets(struct snd_soc_card *card)
  		dapm_debugfs_add_widget(w);
  	}
  
@@ -317,7 +317,7 @@ index 90a0af79f4f9..004643582dbd 100644
  }
  EXPORT_SYMBOL_GPL(snd_soc_dapm_new_widgets);
  
-@@ -4256,7 +4281,7 @@ void snd_soc_dapm_connect_dai_link_widgets(struct snd_soc_card *card)
+@@ -4257,7 +4282,7 @@ void snd_soc_dapm_connect_dai_link_widgets(struct snd_soc_card *card)
  	}
  }
  
@@ -326,7 +326,7 @@ index 90a0af79f4f9..004643582dbd 100644
  	int event)
  {
  	int i;
-@@ -4265,7 +4290,7 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
+@@ -4266,7 +4291,7 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
  	for (i = 0; i < rtd->num_codecs; i++)
  		soc_dapm_dai_stream_event(rtd->codec_dais[i], stream, event);
  
@@ -335,7 +335,7 @@ index 90a0af79f4f9..004643582dbd 100644
  }
  
  /**
-@@ -4279,14 +4304,17 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
+@@ -4280,14 +4305,17 @@ static void soc_dapm_stream_event(struct snd_soc_pcm_runtime *rtd, int stream,
   *
   * Returns 0 for success else error.
   */
@@ -356,7 +356,7 @@ index 90a0af79f4f9..004643582dbd 100644
  
  /**
 diff --git a/sound/soc/soc-pcm.c b/sound/soc/soc-pcm.c
-index beb226f6e066..0912120e789c 100644
+index 0d03cd870a8a..c8ceb20ecb09 100644
 --- a/sound/soc/soc-pcm.c
 +++ b/sound/soc/soc-pcm.c
 @@ -831,8 +831,10 @@ static int soc_pcm_prepare(struct snd_pcm_substream *substream)

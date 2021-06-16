@@ -14,10 +14,10 @@ Reviewed-on:
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 0caf9bf070a3..f70d70d0822a 100644
+index 191270e8ac49..7acc3c19ae70 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
-@@ -538,7 +538,8 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
+@@ -539,7 +539,8 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
  		master[i].retries = CNL_SDW_MAX_CMD_RETRIES;
  		m_cap->base_clk_freq = 9.6 * 1000 * 1000;
  		strcpy(master[i].name, "cnl_sdw_mstr");

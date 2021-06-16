@@ -299,7 +299,7 @@ index dfbe9c60cbcf..978946748ea3 100644
 +	return 0;
 +}
 diff --git a/drivers/char/tpm/tpm2-cmd.c b/drivers/char/tpm/tpm2-cmd.c
-index 56ad80a91aa1..c366a200f03b 100644
+index ac9d3f97b956..954dca7a9c74 100644
 --- a/drivers/char/tpm/tpm2-cmd.c
 +++ b/drivers/char/tpm/tpm2-cmd.c
 @@ -40,6 +40,28 @@ static struct tpm2_hash tpm2_hash_map[] = {

@@ -103,7 +103,7 @@ index 0c3dc9581747..beb7561556e9 100644
  
  #include <linux/sched/signal.h>
 diff --git a/drivers/misc/mei/client.h b/drivers/misc/mei/client.h
-index 6c9986dfd5a0..ccce56a1bd10 100644
+index df3f5f65fea2..71e6e39882cf 100644
 --- a/drivers/misc/mei/client.h
 +++ b/drivers/misc/mei/client.h
 @@ -1,17 +1,7 @@
@@ -487,7 +487,7 @@ index d75173dc1b23..13ff645ba830 100644
  
  #include <linux/export.h>
 diff --git a/drivers/misc/mei/interrupt.c b/drivers/misc/mei/interrupt.c
-index 750de6d02819..5275e7c64e32 100644
+index 4c1c98b9637a..7390e0d0cf60 100644
 --- a/drivers/misc/mei/interrupt.c
 +++ b/drivers/misc/mei/interrupt.c
 @@ -1,20 +1,9 @@

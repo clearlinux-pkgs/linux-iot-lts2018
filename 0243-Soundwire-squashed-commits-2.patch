@@ -7502,10 +7502,10 @@ index 312c0437ac15..23c1f6437cda 100644
  	snd_mask_set(hw_param_mask(params, SNDRV_PCM_HW_PARAM_FORMAT),
  						SNDRV_PCM_FORMAT_S16_LE);
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index b82de714c916..d888d31d0ea2 100644
+index 911246d6f5d2..02e4ccc5200a 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
-@@ -516,7 +516,7 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
+@@ -517,7 +517,7 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
  	struct sdw_mstr_dpn_capabilities *dpn_cap;
  	struct sdw_master *master;
  	struct cnl_sdw_data *p_data;
@@ -7514,7 +7514,7 @@ index b82de714c916..d888d31d0ea2 100644
  	/* TODO: This number 4 should come from ACPI */
  #if defined(CONFIG_SDW_MAXIM_SLAVE) || defined(CONFIG_SND_SOC_MXFPGA)
  	dsp->num_sdw_controllers = 3;
-@@ -561,14 +561,20 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
+@@ -562,14 +562,20 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
  		if (!m_cap->sdw_dpn_cap)
  			return -ENOMEM;
  		for (j = 0; j < m_cap->num_data_ports; j++) {

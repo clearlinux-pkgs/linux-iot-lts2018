@@ -45,7 +45,7 @@ index 363145716a6d..acf06a4f5144 100644
  
  /* Size optimised DRAM/IRAM memcpy */
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 245df1067ba8..f7c832b300d0 100644
+index 7b429c0fb4e5..27884c176dc6 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -27,6 +27,7 @@
@@ -156,7 +156,7 @@ index 245df1067ba8..f7c832b300d0 100644
  
  	return ret;
  }
-@@ -490,6 +565,7 @@ void cnl_sst_dsp_cleanup(struct device *dev, struct skl_sst *ctx)
+@@ -491,6 +566,7 @@ void cnl_sst_dsp_cleanup(struct device *dev, struct skl_sst *ctx)
  	cnl_ipc_free(&ctx->ipc);
  
  	ctx->dsp->ops->free(ctx->dsp);

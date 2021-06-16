@@ -129,7 +129,7 @@ index 893af8985620..d6e871fb25af 100644
  			mei_io_cb_free(cb);
  			return;
 diff --git a/drivers/misc/mei/client.h b/drivers/misc/mei/client.h
-index 1ac297f7c81c..eb147094b459 100644
+index 656eadea32a4..234b75ddf427 100644
 --- a/drivers/misc/mei/client.h
 +++ b/drivers/misc/mei/client.h
 @@ -114,6 +114,7 @@ struct mei_cl_cb *mei_cl_enqueue_ctrl_wr_cb(struct mei_cl *cl, size_t length,

@@ -156,7 +156,7 @@ index 989fc73d241c..11749f1e90c7 100644
  		cl_dbg(dev, cl, "No flow control credentials: not sending.\n");
  		rets = len;
 diff --git a/drivers/misc/mei/client.h b/drivers/misc/mei/client.h
-index 13223b549165..1ac297f7c81c 100644
+index bb74eea3dba5..656eadea32a4 100644
 --- a/drivers/misc/mei/client.h
 +++ b/drivers/misc/mei/client.h
 @@ -96,14 +96,7 @@ int mei_cl_unlink(struct mei_cl *cl);

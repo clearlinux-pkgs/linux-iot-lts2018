@@ -18,7 +18,7 @@ Reviewed-by: Zhao Yakui <yakui.zhao@intel.com>
  1 file changed, 27 insertions(+)
 
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index dcf4941aeb9a..7390dea98910 100644
+index 39cef1485a2e..57a676e8dfe5 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -5599,6 +5599,28 @@ skl_compute_wm(struct drm_atomic_state *state)

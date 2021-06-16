@@ -141,7 +141,7 @@ index 4888ebc076b7..eb026e2a0537 100644
  	if (ret) {
  		dev_err(dev->dev, "hw_reset failed ret = %d\n", ret);
 diff --git a/drivers/misc/mei/interrupt.c b/drivers/misc/mei/interrupt.c
-index 5a661cbdf2ae..055c2d89b310 100644
+index 66f4d12d0060..6617ba3f7d95 100644
 --- a/drivers/misc/mei/interrupt.c
 +++ b/drivers/misc/mei/interrupt.c
 @@ -75,6 +75,8 @@ static inline int mei_cl_hbm_equal(struct mei_cl *cl,
@@ -197,7 +197,7 @@ index 5a661cbdf2ae..055c2d89b310 100644
  
  	if (mei_hdr->msg_complete) {
  		cl_dbg(dev, cl, "completed read length = %zu\n", cb->buf_idx);
-@@ -247,6 +256,9 @@ static inline int hdr_is_valid(u32 msg_hdr)
+@@ -250,6 +259,9 @@ static inline int hdr_is_valid(u32 msg_hdr)
  	if (!msg_hdr || mei_hdr->reserved)
  		return -EBADMSG;
  
@@ -207,7 +207,7 @@ index 5a661cbdf2ae..055c2d89b310 100644
  	return 0;
  }
  
-@@ -267,20 +279,20 @@ int mei_irq_read_handler(struct mei_device *dev,
+@@ -270,20 +282,20 @@ int mei_irq_read_handler(struct mei_device *dev,
  	struct mei_cl *cl;
  	int ret;
  
@@ -233,7 +233,7 @@ index 5a661cbdf2ae..055c2d89b310 100644
  	dev_dbg(dev->dev, MEI_HDR_FMT, MEI_HDR_PRM(mei_hdr));
  
  	if (mei_slots2data(*slots) < mei_hdr->length) {
-@@ -291,6 +303,12 @@ int mei_irq_read_handler(struct mei_device *dev,
+@@ -294,6 +306,12 @@ int mei_irq_read_handler(struct mei_device *dev,
  		goto end;
  	}
  
@@ -246,7 +246,7 @@ index 5a661cbdf2ae..055c2d89b310 100644
  	/*  HBM message */
  	if (hdr_is_hbm(mei_hdr)) {
  		ret = mei_hbm_dispatch(dev, mei_hdr);
-@@ -324,7 +342,7 @@ int mei_irq_read_handler(struct mei_device *dev,
+@@ -327,7 +345,7 @@ int mei_irq_read_handler(struct mei_device *dev,
  			goto reset_slots;
  		}
  		dev_err(dev->dev, "no destination client found 0x%08X\n",
@@ -255,7 +255,7 @@ index 5a661cbdf2ae..055c2d89b310 100644
  		ret = -EBADMSG;
  		goto end;
  	}
-@@ -334,9 +352,8 @@ int mei_irq_read_handler(struct mei_device *dev,
+@@ -337,9 +355,8 @@ int mei_irq_read_handler(struct mei_device *dev,
  
  reset_slots:
  	/* reset the number of slots and header */

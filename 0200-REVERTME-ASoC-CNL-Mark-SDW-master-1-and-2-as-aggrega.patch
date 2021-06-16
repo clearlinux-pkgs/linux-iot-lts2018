@@ -14,10 +14,10 @@ Reviewed-on:
  1 file changed, 8 insertions(+), 2 deletions(-)
 
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index e4d531680a5a..0caf9bf070a3 100644
+index 4f13eb5e9fae..191270e8ac49 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
-@@ -509,8 +509,7 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
+@@ -510,8 +510,7 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
  	struct cnl_sdw_data *p_data;
  	int ret = 0, i, j;
  	/* TODO: This number 4 should come from ACPI */
@@ -27,7 +27,7 @@ index e4d531680a5a..0caf9bf070a3 100644
  	dsp->num_sdw_controllers = 3;
  #else
  	dsp->num_sdw_controllers = 4;
-@@ -574,12 +573,19 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
+@@ -575,12 +574,19 @@ static int skl_register_sdw_masters(struct device *dev, struct skl_sst *dsp,
  				SDW_PORT_BLK_PKG_MODE_BLK_PER_PORT |
  				SDW_PORT_BLK_PKG_MODE_BLK_PER_CH;
  		}

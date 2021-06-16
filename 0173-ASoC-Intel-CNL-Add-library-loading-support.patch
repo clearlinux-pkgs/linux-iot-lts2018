@@ -27,10 +27,10 @@ index 440bca7afbf1..924c0dfa6ad7 100644
  {
  	struct snd_dma_buffer dmab;
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 2969e57e3e93..a66ed94870b4 100644
+index 5eb5ba5e5806..b508426113a7 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
-@@ -357,6 +357,7 @@ static const struct skl_dsp_fw_ops cnl_fw_ops = {
+@@ -358,6 +358,7 @@ static const struct skl_dsp_fw_ops cnl_fw_ops = {
  	.set_state_D3 = cnl_set_dsp_D3,
  	.load_fw = cnl_load_base_firmware,
  	.get_fw_errcode = cnl_get_errno,
@@ -38,7 +38,7 @@ index 2969e57e3e93..a66ed94870b4 100644
  };
  
  static struct sst_ops cnl_ops = {
-@@ -550,9 +551,18 @@ EXPORT_SYMBOL_GPL(cnl_sst_dsp_init);
+@@ -551,9 +552,18 @@ EXPORT_SYMBOL_GPL(cnl_sst_dsp_init);
  int cnl_sst_init_fw(struct device *dev, struct skl_sst *ctx)
  {
  	struct sst_dsp *sst = ctx->dsp;

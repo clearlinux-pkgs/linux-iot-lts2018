@@ -78,7 +78,7 @@ index 2a13e739569d..7398d6560cf5 100644
  			port = enc_to_dig_port(
  					&(connector->encoder->base))->base.port;
 diff --git a/drivers/gpu/drm/i915/gvt/gvt.c b/drivers/gpu/drm/i915/gvt/gvt.c
-index 940443f08dfd..3105afe1a6e5 100644
+index b80f510427b7..7e6c459739ee 100644
 --- a/drivers/gpu/drm/i915/gvt/gvt.c
 +++ b/drivers/gpu/drm/i915/gvt/gvt.c
 @@ -389,6 +389,12 @@ void intel_gvt_clean_device(struct drm_i915_private *dev_priv)
@@ -628,7 +628,7 @@ index a4b6325c219e..3ed637377ed7 100644
  		      const struct intel_crtc_state *crtc_state,
  		      const struct intel_plane_state *plane_state);
 diff --git a/drivers/gpu/drm/i915/intel_pm.c b/drivers/gpu/drm/i915/intel_pm.c
-index 96a0269e80b3..b4cdb3d85354 100644
+index 62d8ab6aabab..b395f1f8802f 100644
 --- a/drivers/gpu/drm/i915/intel_pm.c
 +++ b/drivers/gpu/drm/i915/intel_pm.c
 @@ -815,11 +815,14 @@ static int intel_wm_num_levels(struct drm_i915_private *dev_priv)

@@ -91,7 +91,7 @@ index 924c0dfa6ad7..2b169b40e6c4 100644
  	return ret;
  }
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index a81e1b032a96..784d92df7ac3 100644
+index bb722c55dcd3..19e007e39c94 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -127,7 +127,8 @@ static int cnl_prepare_fw(struct sst_dsp *ctx, const void *fwdata, u32 fwsize)

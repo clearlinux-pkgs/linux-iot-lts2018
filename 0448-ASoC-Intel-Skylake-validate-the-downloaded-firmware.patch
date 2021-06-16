@@ -94,7 +94,7 @@ index 5f0653b36308..7bc24ee5eecc 100644
  int cnl_sst_init_fw(struct device *dev, struct skl_sst *ctx);
  void cnl_sst_dsp_cleanup(struct device *dev, struct skl_sst *ctx);
 diff --git a/sound/soc/intel/skylake/cnl-sst.c b/sound/soc/intel/skylake/cnl-sst.c
-index 19398e200cb0..52565423c83e 100644
+index c5a89c3e4eb6..b6672f9c6bba 100644
 --- a/sound/soc/intel/skylake/cnl-sst.c
 +++ b/sound/soc/intel/skylake/cnl-sst.c
 @@ -273,6 +273,10 @@ static int cnl_load_base_firmware(struct sst_dsp *ctx)
@@ -108,7 +108,7 @@ index 19398e200cb0..52565423c83e 100644
  	fw_property = cnl->fw_property;
  	if (fw_property.memory_reclaimed <= 0) {
  		dev_err(ctx->dev, "Memory reclaim not enabled:%d\n",
-@@ -725,22 +729,25 @@ static void skl_unregister_sdw_masters(struct skl_sst *ctx)
+@@ -726,22 +730,25 @@ static void skl_unregister_sdw_masters(struct skl_sst *ctx)
  }
  
  int cnl_sst_dsp_init(struct device *dev, void __iomem *mmio_base, int irq,

@@ -25,7 +25,7 @@ Signed-off-by: Romli, Khairul Anuar <khairul.anuar.romli@intel.com>
  4 files changed, 115 insertions(+), 9 deletions(-)
 
 diff --git a/drivers/gpu/drm/drm_atomic.c b/drivers/gpu/drm/drm_atomic.c
-index 1a4b44923aec..6df269924ac1 100644
+index 281cf9cbb44c..c52be07dbac7 100644
 --- a/drivers/gpu/drm/drm_atomic.c
 +++ b/drivers/gpu/drm/drm_atomic.c
 @@ -1511,11 +1511,9 @@ drm_atomic_connector_get_property(struct drm_connector *connector,
@@ -44,7 +44,7 @@ index 1a4b44923aec..6df269924ac1 100644
  		return connector->funcs->atomic_get_property(connector,
  				state, property, val);
 diff --git a/drivers/gpu/drm/drm_connector.c b/drivers/gpu/drm/drm_connector.c
-index 6011d769d50b..8b21a017edaa 100644
+index 7bb68ca4aa0b..a729c800af43 100644
 --- a/drivers/gpu/drm/drm_connector.c
 +++ b/drivers/gpu/drm/drm_connector.c
 @@ -241,6 +241,7 @@ int drm_connector_init(struct drm_device *dev,
@@ -55,7 +55,7 @@ index 6011d769d50b..8b21a017edaa 100644
  	connector->status = connector_status_unknown;
  	connector->display_info.panel_orientation =
  		DRM_MODE_PANEL_ORIENTATION_UNKNOWN;
-@@ -1346,6 +1347,42 @@ int drm_connector_attach_content_protection_property(
+@@ -1347,6 +1348,42 @@ int drm_connector_attach_content_protection_property(
  }
  EXPORT_SYMBOL(drm_connector_attach_content_protection_property);
  
@@ -98,7 +98,7 @@ index 6011d769d50b..8b21a017edaa 100644
  /**
   * drm_mode_create_aspect_ratio_property - create aspect ratio property
   * @dev: DRM device
-@@ -1578,6 +1615,38 @@ void drm_connector_set_link_status_property(struct drm_connector *connector,
+@@ -1579,6 +1616,38 @@ void drm_connector_set_link_status_property(struct drm_connector *connector,
  }
  EXPORT_SYMBOL(drm_connector_set_link_status_property);
  
@@ -138,10 +138,10 @@ index 6011d769d50b..8b21a017edaa 100644
   * drm_connector_init_panel_orientation_property -
   *	initialize the connecters panel_orientation property
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index 97ea41dc678f..9fd96c96d598 100644
+index e5f641cdab5a..e268f80578fe 100644
 --- a/include/drm/drm_connector.h
 +++ b/include/drm/drm_connector.h
-@@ -915,6 +915,13 @@ struct drm_connector {
+@@ -964,6 +964,13 @@ struct drm_connector {
  	 */
  	struct drm_property *content_protection_property;
  
@@ -155,7 +155,7 @@ index 97ea41dc678f..9fd96c96d598 100644
  	/**
  	 * @path_blob_ptr:
  	 *
-@@ -1184,20 +1191,24 @@ int drm_connector_attach_scaling_mode_property(struct drm_connector *connector,
+@@ -1251,20 +1258,24 @@ int drm_connector_attach_scaling_mode_property(struct drm_connector *connector,
  					       u32 scaling_mode_mask);
  int drm_connector_attach_content_protection_property(
  		struct drm_connector *connector);
